@@ -1,4 +1,4 @@
 ![Izenda Logo](/Home/Izenda_logo.png "Izenda Logo")
-CONFIDENTIAL
+WIKI
 
-> Broken gets fixed. Shoddy lasts forever.
+> Self Service Reporting
