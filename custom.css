@@ -1,6 +1,6 @@
 body {background-color:#1F74B5;}
 
-#wiki-wrapper.edit, #wiki-wrapper.page {
+#wiki-wrapper.edit, #wiki-wrapper.create, #wiki-wrapper.page {
   margin: 0 auto;
   width: auto;
   overflow: visible;
