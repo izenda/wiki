@@ -1,0 +1,19 @@
+body {background-color:#1F74B5;}
+
+#wiki-wrapper.edit, #wiki-wrapper.page {
+  margin: 0 auto;
+  width: auto;
+  overflow: visible;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#wiki-wrapper.results, #pages, #footer, .markdown-body {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 1em;
+
+  border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+}
