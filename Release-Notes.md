@@ -2,7 +2,7 @@
 
 # 6.7.0.257
 * FB-11687: Resolved a problem with MVC4R2 Instant Reports where the field properties gear was not clickable
-* FB-11691: Fixed a bug that caused drop-down lists to jump to the top of the list when selecting values
+* FB-11691: Resolved issue where drop-down lists of equals multiple filters would jump to the top of the list when selecting values
 * FB-11619: Added separator support for HTMLCHARTS pie chart
 * FB-11621: Fixed chart parameters initialization and extended chart margins to full width
 * FB-11621: Format htmlchart numbers from "0000" to "0,000"
