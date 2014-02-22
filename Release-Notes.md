@@ -7,8 +7,8 @@
 * HTMLcharts: Increased right and left margin for line, bar and area chart
 * HTMLcharts: Changed top offset of gauge
 * HTMLcharts: Changed generation of description in filters
-* FB-11678: Fixed error which sometimes occurred in scheduler. Cause of error was incorrect resource url generation, with consequent downloading via WebClient without try/catch construction.
-* FB-11808: Fixed styles of VisualGroups to make them again bolder as they were
+* FB-11678: Fixed intermittent "Unable to connect to the remote server" scheduler error
+* FB-11808: Fixed styles of VisualGroups to make them bolder
 * FB-11610: Support of CustomizeChart implemented for htmlCharts
 * FB-11781: Issue of filter values mixing up was fixed, by fixing bug which caused occasional treating numeric/string values as dates.
 * FB-11703: Fix of bug which didn't allow to switch PDF outputGenerator to ITextSharp
