@@ -2,15 +2,15 @@
 
 # 6.7.0.257
 
-* FB-11619: Implementation of separator support in HTML pie chart
-* FB-11621: Fix wrong chart parameters initialization in some cases.  Fix full width chart margins
+* FB-11619: Implementation of separator support for HTMLCHARTS pie chart
+* FB-11621: Fixed wrong chart parameters initialization and full width chart margins
 * FB-11621: Format htmlchart numbers with comma "0,000"
-* HTMLcharts: Fixed tooltip formatting for Funnel chart
-* HTMLcharts: Fixed Axis labels cut in half for line chart
-* HTMLCharts: Fixed Pie Chart 'CombineBottom%' functionality erroneously renaming single smallest slice 'Other' which has not been combined with another slice
-* HTMLcharts: Increased right and left margin for line, bar and area chart
-* HTMLcharts: Changed top offset of gauge
-* HTMLcharts: Changed generation of description in filters
+* HTMLCHARTS: Fixed tooltip formatting for Funnel chart
+* HTMLCHARTS: Resolved issue where axis label was cut in half on line charts
+* HTMLCHARTS: Fixed Pie Chart 'CombineBottom%' functionality erroneously renaming single smallest slice 'Other' which has not been combined with another slice
+* HTMLCHARTS: Increased right and left margin for line, bar and area chart
+* HTMLCHARTS: Changed top offset of gauges
+* HTMLCHARTS: Resolved bug where the description of an applied filter was listed multiple times
 * FB-11678: Fixed intermittent "Unable to connect to the remote server" scheduler error
 * FB-11808: Fixed styles of VisualGroups to make them bolder
 * FB-11610: Support of CustomizeChart implemented for htmlCharts
