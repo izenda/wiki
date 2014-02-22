@@ -1,6 +1,6 @@
 * FB-11619: Implementation of separator support in HTML pie chart
 * FB-11621: Fix wrong chart parameters initialization in some cases.  Fix full width chart margins
-* FB-11621: fix "0,000" number format for htmlcharts
+* FB-11621: Format htmlchart numbers with comma "0,000"
 * HTMLcharts: Fixed tooltip formatting for Funnel chart
 * HTMLcharts: Fixed Axis labels cut in half for line chart
 * HTMLCharts: Fixed Pie Chart 'CombineBottom%' functionality erroneously renaming single smallest slice 'Other' which has not been combined with another slice
@@ -8,7 +8,6 @@
 * HTMLcharts: Changed top offset of gauge
 * HTMLcharts: Changed generation of description in filters
 * FB-11678: Fixed error which sometimes occurred in scheduler. Cause of error was incorrect resource url generation, with consequent downloading via WebClient without try/catch construction.
-* FB-11808: Fixed styles of VisualGroups to make them again bolder as they were
 * FB-11808: Fixed styles of VisualGroups to make them again bolder as they were
 * FB-11610: Support of CustomizeChart implemented for htmlCharts
 * FB-11781: Issue of filter values mixing up was fixed, by fixing bug which caused occasional treating numeric/string values as dates.
