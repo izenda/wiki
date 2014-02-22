@@ -1,7 +1,7 @@
 [[_TOC_]]
 
 # 6.7.0.257
-
+* FB-11687: Resolved problem with MVC4R2 Instant Reports where field properties gear was not clickable
 * FB-11691: Fixed bug that caused multi select box to scroll back to top
 * FB-11619: Implementation of separator support for HTMLCHARTS pie chart
 * FB-11621: Fixed wrong chart parameters initialization and full width chart margins
