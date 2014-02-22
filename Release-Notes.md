@@ -1,4 +1,7 @@
+[[_TOC_]]
+
 # 6.7.0.257
+
 * FB-11619: Implementation of separator support in HTML pie chart
 * FB-11621: Fix wrong chart parameters initialization in some cases.  Fix full width chart margins
 * FB-11621: Format htmlchart numbers with comma "0,000"
