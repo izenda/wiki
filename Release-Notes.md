@@ -13,7 +13,7 @@
 * HTMLCHARTS: Changed top offset of gauges
 * HTMLCHARTS: Resolved bug where the description of an applied filter was listed multiple times
 * FB-11678: Fixed intermittent "Unable to connect to the remote server" scheduler error
-* FB-11808: Fixed styles of VisualGroups to make them bolder
+* FB-11808: Changed styles of VisualGroups to make them bolder
 * FB-11610: Added support for CustomizeChart to htmlCharts
 * FB-11781: Fixed a problem where string filter values were misidentified as dates
 * FB-11703: Fixed a bug which prevented switching the PDF outputGenerator to ITextSharp
