@@ -22,4 +22,4 @@
 * FB-11710: Changed export to respect the formatting of datetime
 * FB-11684: Changed rs.aspx?clear=1 to clear schema, fusion, and reports caches
 * FB-11682: Resolved concurrency issues when caching reports on load balanced systems
-* FB-11726: Fixed bug where "TimeClass" was being erroneously shown as a filter description
+* FB-11726: Fixed bug where "TimeClass" was erroneously shown as a filter description
