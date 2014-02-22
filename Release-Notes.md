@@ -1,0 +1,24 @@
+[[_TOC_]]
+
+# 6.7.0.257
+
+* FB-11619: Implementation of separator support for HTMLCHARTS pie chart
+* FB-11621: Fixed wrong chart parameters initialization and full width chart margins
+* FB-11621: Format htmlchart numbers with comma "0,000"
+* HTMLCHARTS: Fixed tooltip formatting for Funnel chart
+* HTMLCHARTS: Resolved issue where axis label was cut in half on line charts
+* HTMLCHARTS: Fixed Pie Chart 'CombineBottom%' functionality erroneously renaming single smallest slice 'Other' which has not been combined with another slice
+* HTMLCHARTS: Increased right and left margin for line, bar and area chart
+* HTMLCHARTS: Changed top offset of gauges
+* HTMLCHARTS: Resolved bug where the description of an applied filter was listed multiple times
+* FB-11678: Fixed intermittent "Unable to connect to the remote server" scheduler error
+* FB-11808: Fixed styles of VisualGroups to make them bolder
+* FB-11610: Support of CustomizeChart implemented for htmlCharts
+* FB-11781: Issue of filter values mixing up was fixed, by fixing bug which caused occasional treating numeric/string values as dates.
+* FB-11703: Fix of bug which didn't allow to switch PDF outputGenerator to ITextSharp
+* FB-11566: Fix iframe ReportPart where an object reference was not being set to an instance of an object
+* FB-11700: Update user property on report save
+* FB-11710: Change export to respect formatting of datetime
+* FB-11684: Change rs.aspx?clear=1 to clear all caches - schema, fusion, and reports
+* FB-11682: Resolved concurrency issues when caching reports on load balanced systems
+* FB-11726: Fixed "TimeClass" being erroneously shown as filter description
