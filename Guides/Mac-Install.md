@@ -7,5 +7,5 @@
 1. Save your changes and close the text editor
 1. Open a terminal window and change directory to the location you extracted webforms-cs to
 1. At the root of the webforms-cs directory, run xsp2
-1. Within your web browser, go to http://localhost:8080
+1. Within your web browser, go to [http://localhost:8080](http://localhost:8080)
 
