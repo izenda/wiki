@@ -4,4 +4,5 @@
 1. Change INSERT_LICENSE_KEY_HERE to your trial key
 1. Change INSERT_CONNECTION_STRING_HERE to Server=66.29.211.132,41433;Database=northwind;User ID=northwind;Password=traders;
 1. Change AdHocSettings.GenerateThumbnails from true to false
+1. Save your changes and close the editor
 
