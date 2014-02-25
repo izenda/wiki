@@ -5,7 +5,7 @@
 1. Change INSERT_CONNECTION_STRING_HERE to Server=66.29.211.132,41433;Database=northwind;User ID=northwind;Password=traders;
 1. Change AdHocSettings.GenerateThumbnails from true to false
 1. Save your changes and close the text editor
-1. Open a terminal window and change directory to the location you extracted webforms-cs to
+1. Open a terminal window and change directory to the location you extracted webforms-cs
 1. At the root of the webforms-cs directory, run xsp2
 1. Open [http://localhost:8080](http://localhost:8080) in your web browser
 
