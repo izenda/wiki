@@ -1,8 +1,10 @@
 [[_TOC_]]
 
+<!--
 * FB-12843: Remove extra empty table after the report content. Wrap report content in the extra table instead so all Reports in the ReportSet will have different and independent widths.
 * FB-11792: Implementation of arbitrary columns order in the case of executing report against Stored Proc without "insert into exec" operation
 * FB-11517: ReportSet.Owner property is changed according to the AdHocSettings.CurrentUserName when report saved using "Save As"
+-->
 
 # 6.7.0.257
 * FB-11687: Resolved issue with MVC4R2 Instant Reports where the field properties gear was not clickable
