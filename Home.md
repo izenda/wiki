@@ -1,1 +1,2 @@
-[[Release Notes]]
+* [[Release Notes]]
+* [[Izenda Guides]]
