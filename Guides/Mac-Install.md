@@ -1,0 +1,1 @@
+Izenda is implemented in Microsoft .NET.  Mono is an open source implementation of Microsoft's .NET Framework.  To run Izenda on a Mac, you will first need to download and install [Mono for Mac](http://download.mono-project.com/archive/3.2.6/macos-10-x86/MonoFramework-MDK-3.2.6.macos10.xamarin.x86.pkg).
