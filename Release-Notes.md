@@ -1,6 +1,8 @@
+# Release Notes
 [[_TOC_]]
 
 <!--
+# 6.7.0.258
 * FB-12933: Make Instant Reports respect AdHocSettings.HiddenColumns
 * FB-11781: Fixed bug causing server resources to not be found in Instant Reports and Report Viewer
 * FB-12919: Disable default selection of Separator dropdown
