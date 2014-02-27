@@ -1,7 +1,7 @@
 [[_TOC_]]
 
 <!--
-* FB-11692: Fixed automatic drilldown reportset issue "Report loading error: Report (AUTO) is not found" which impacted gauges in pure HTML
+* FB-11692: Fixed automatic drilldown ReportSet issue "Report loading error: Report (AUTO) is not found" which impacted gauges in pure HTML
 * FB-12834: Fixed "Response canceled: 500 Internal Server Error" when rendering HTML charts to RTF
 * FB-12887: Fixed add report part to dashboard modal dialog
 * FB-11697: Fixed "Page breaks after visual group" setting for pdf printing
