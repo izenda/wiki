@@ -7,7 +7,7 @@
 * 
 * 
 * 
-* 
+* FB-11792: Fixed bug affecting loading of ReportSets that could result in null pointer exceptions
 * FB-12930: Enable HTML Charts for all License Keys. Remove restriction on "+HTMLCHARTS" LK flag.
 * FB-12901: Removed extraneous warning message from Dashboard Designer
 * FB-12904: Fix Between filter when values are numeric that can be parsed as dates.
