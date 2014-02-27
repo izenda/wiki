@@ -6,7 +6,7 @@
 * FB-12919: Disable default selection of Separator dropdown
 * FB-12914: Fixed style issue where custom grid styles subtotals did not apply border color
 * FB-11792: Fixed bug affecting loading of ReportSets that could result in null pointer exceptions
-* FB-12930: Enable HTML Charts for all License Keys
+FB-12930: No longer require +HTMLCHARTS in license key to utilize HTML Charts
 * FB-12901: Removed extraneous warning message from Dashboard Designer
 * FB-12904: Fixed Between filter when values are numeric that can be parsed as dates
 FB-12912: Fixed problem where preview would cache dashboards
