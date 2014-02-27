@@ -1,6 +1,11 @@
 [[_TOC_]]
 
 <!--
+* FB-11781: Fixed bug causing server resources to not be found in Instant Reports and Report Viewer
+* 
+* 
+* 
+* 
 * FB-11692: Fixed automatic drilldown ReportSet issue "Report loading error: Report (AUTO) is not found" which impacted gauges in pure HTML
 * FB-12834: Fixed "Response canceled: 500 Internal Server Error" when rendering HTML charts to RTF
 * FB-12887: Fixed add report part to dashboard modal dialog
