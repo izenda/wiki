@@ -14,9 +14,9 @@
 * FB-12834: Fixed "Response canceled: 500 Internal Server Error" when rendering HTML charts to RTF
 * FB-12887: Fixed add report part to dashboard modal dialog
 * FB-11697: Fixed "Page breaks after visual group" setting for pdf printing
-* FB-11807: Enable proper output to CSV format for Visual Groups of the following styles: CommaDelimited, CommaDelimitedWithLabels, LineDelimited, LineDelimitedWithLabels
-* FB-12843: Remove extra empty table after the report content. Wrap report content in the extra table instead so all Reports in the ReportSet will have different and independent widths.
-* FB-11792: Implementation of arbitrary columns order in the case of executing report against Stored Proc without "insert into exec" operation
+* FB-11807: Enable output to CSV format for Visual Groups of the following styles: CommaDelimited, CommaDelimitedWithLabels, LineDelimited, LineDelimitedWithLabels
+* FB-12843: Remove extra empty table after report content. Wrap report content in the extra table so all Reports in the ReportSet will have different and independent widths.
+* FB-11792: Added support for arbitrary ordering of columns when executing report against a stored proc without "insert into exec"
 * FB-11517: ReportSet.Owner property is changed according to the AdHocSettings.CurrentUserName when report saved using "Save As"
 
 # 6.7.0.257
