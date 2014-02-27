@@ -1,5 +1,3 @@
-# Release Notes
-
 [[_TOC_]]
 
 # 6.7.0.258
