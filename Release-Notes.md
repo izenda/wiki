@@ -6,6 +6,12 @@
 * 
 * 
 * 
+* 
+* 
+* FB-12930: Enable HTML Charts for all License Keys. Remove restriction on "+HTMLCHARTS" LK flag.
+* FB-12901: Removed extraneous warning message from Dashboard Designer
+* FB-12904: Fix Between filter when values are numeric that can be parsed as dates.
+* FB-12912: Fixed preview to not cache dashboards
 * FB-11692: Fixed automatic drilldown ReportSet issue "Report loading error: Report (AUTO) is not found" which impacted gauges in pure HTML
 * FB-12834: Fixed "Response canceled: 500 Internal Server Error" when rendering HTML charts to RTF
 * FB-12887: Fixed add report part to dashboard modal dialog
