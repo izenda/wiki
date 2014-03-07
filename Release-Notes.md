@@ -1,4 +1,62 @@
 [[_TOC_]]
+# 6.7.0.259 *Not Released Yet*
+
+    FB-13035: Fixed erroneous adding of excess parameter to SqlCommand when drilldown filter with equals operator presents in reportSet
+
+commit 63daf9e42bc2af31b773abc62eae9d3a8299a892
+Author: Alex <alexey_pam@mail.ru>
+Date:   Fri Mar 7 15:14:10 2014 +0600
+
+    FB-13034: Fixed spontaneous loss of database connections
+
+commit 6171cc55dcb33375237dccf0727f84823e4f4d2a
+Author: Alex <alexey_pam@mail.ru>
+Date:   Fri Mar 7 03:09:10 2014 +0600
+
+    FB-13026: Added currentUserName verification routine to CheckLimitations routine, to make pure html pages respect RequireLogin setting.
+
+commit 64800828011fd88d59def8cafbfead0bb1ab42b4
+Author: Alex <alexey_pam@mail.ru>
+Date:   Thu Mar 6 19:13:15 2014 +0600
+
+    FB-13012: Fixed unsafe operation on possible null string, which caused error in case of rendering gauges
+
+commit dec5b69b4315391becb24830706a41d0b116fbae
+Author: Alex <alexey_pam@mail.ru>
+Date:   Thu Mar 6 13:21:10 2014 +0600
+
+    FB-12969: Optimized static memory mode to minimize whole memory usage by minimizing objects kept in session and resolved bugs related to CurrentReportSet in static memory mode
+
+commit a6ad1652e6c68f1c668ca838d17bb8255df246b2
+Author: Sergey Tananov <tananovsi@gmail.com>
+Date:   Wed Mar 5 15:54:43 2014 +0600
+
+    FB-13042: Fix drill-downs with Dates and different grouping types. For example, correct value will be passes to the subreport if drill-down key is a Date field with Group(Year & MN) Function.
+
+commit f8e706ba7907757443bd4232d36856579b08654e
+Author: Alex Yarmolchuk <alex.yarmolchuk@izenda.com>
+Date:   Wed Mar 5 14:07:42 2014 +0600
+
+    FB-11707: Added LinkedColumns property for Filter and Filter ICloneable interface implementation.
+
+commit baa3d5d9d0eedce134320bfc8bcbf5dd2499d192
+Author: Scott McLeod <halcyonblue@gmail.com>
+Date:   Fri Feb 28 13:48:10 2014 -0500
+
+    FB-12979: Default DataCacheInterval to 0 so the HTML cache is disabled by default
+
+commit c9749fa2e15ef0e3bddc218c73864a4e02becfc5
+Author: dkarpushkin <dmitry.karpushkin@izenda.com>
+Date:   Fri Feb 28 19:54:31 2014 +0600
+
+    FB-12957: Added additional PostgreSQL type mappings
+
+commit e4c145a46d2a9c27a9123d80f6be73646d73c358
+Author: Alex <alexey_pam@mail.ru>
+Date:   Fri Feb 28 12:48:17 2014 +0500
+
+    FB-12836: FusionConnections getter was made public
+
 
 # 6.7.0.258
 * FB-12933: Make Instant Reports respect AdHocSettings.HiddenColumns
