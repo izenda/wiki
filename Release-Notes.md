@@ -1,5 +1,5 @@
 [[_TOC_]]
-# 6.7.0.259 **Not Released Yet**
+# 6.7.0.259 - *Not Released Yet*
 * FB-13035: Fixed erroneous adding of excess parameter to SqlCommand when drilldown filter with equals operator presents in reportSet
 * FB-13034: Fixed spontaneous loss of database connections
 * FB-13026: Added currentUserName verification routine to CheckLimitations routine, to make pure html pages respect RequireLogin setting.
