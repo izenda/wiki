@@ -1,5 +1,13 @@
 [[_TOC_]]
 # 6.7.0.260 (Release Pending)
+* FB-13177: Changed "Reset to default" button on Style tab in reportDesigner to standard button control which is used across all designers
+* FB-13025: Resolved issue where HighCharts auto-sizing and auto-centering didn't work because chart as an inner element couldn't detect dimensions of outer container. Implemented support for specifying dimensions in pixels in chart property, so highcharts can rely on those values.
+* FB-13181: Fixed inverted Summary grid styling. This makes styles for headers items and alts the same as the normal grid.
+* FB-13189: Waiting timeout removed if renderer detects an error at the the beginning of rendering process
+* FB-13113: Removed "default" series name in HtmlCharts if only one series has been selected
+* FB-13180: Correct and update copyright in response server
+* FB-13164: URL encode fields when updating field properties in report viewer
+* FB-13160: Marked FilteredReportListCache as serializable
 * FB-11598: Added fusion support for Postgres
 * FB-12943: Add support to stored procedures for sql_variant data type as a parameter
 * FB-11720: Fixed glitch in htmlcharts, which could result in generation of malformed JSON data
