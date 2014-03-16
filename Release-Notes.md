@@ -1,11 +1,12 @@
 [[_TOC_]]
 # 6.7.0.260 (Release Pending)
 * FB-13177: Changed "Reset to default" button on Style tab in reportDesigner to standard button control which is used across all designers
+* FB-13113: Fixed empty jquery formatNumber result for 0 value
 * FB-13025: Resolved issue where HighCharts auto-sizing and auto-centering didn't work because chart as an inner element couldn't detect dimensions of outer container. Implemented support for specifying dimensions in pixels in chart property, so highcharts can rely on those values.
 * FB-13181: Fixed inverted Summary grid styling. This makes styles for headers items and alts the same as the normal grid.
 * FB-13189: Waiting timeout removed if renderer detects an error at the the beginning of rendering process
 * FB-13113: Removed "default" series name in HtmlCharts if only one series has been selected
-* FB-13180: Correct and update copyright in response server
+* FB-13180: Updated copyright in response server
 * FB-13164: URL encode fields when updating field properties in report viewer
 * FB-13160: Marked FilteredReportListCache as serializable
 * FB-11598: Added fusion support for Postgres
@@ -16,7 +17,7 @@
 * FB-13132: Changed formatting of dates (from filters values) in reportset description to respect AdHocSettings.Culture
 * FB-13115: Resolved issue where thumbnails would remain in the "Generating" state
 * FB-11684: Added disk/reports cache cleanup functionality to Driver.InvalidateSchemaCache()
-* FB-13114: Resolved regression in AdHocSettings.ReloadStrings().
+* FB-13114: Resolved regression in AdHocSettings.ReloadStrings()
 * FB-13081: Resolved redirect loop when AdHocUserKey is specified
 * FB-13116: Fixed Equals(Popup) filter when one of the values is empty string. Empty string can now be selected as any other not empty value.
 * FB-13103: Fixed "(blank)" value in the filters. "(blank)" value is now interpreted as NULL when selected for example in the Equals(Popup) or Equals(Checkboxes) filter.
