@@ -1,4 +1,8 @@
 [[_TOC_]]
+# 6.7.0.260 (Upcoming Release)
+* FB-13116: Fixed Equals(Popup) filter when one of the values is empty string. Empty string can now be selected as any other not empty
+value.
+* FB-13103: Fixed "(blank)" value in the filters. "(blank)" value is now interpreted as NULL when selected for example in the Equals(Popup) or Equals(Checkboxes) filter.
 # 6.7.0.259
 * FB-13036: URL Encode '&' when processed in a drill-down value
 * FB-13035: Fixed erroneous adding of excess parameter to SqlCommand when drilldown filter with equals operator presents in reportSet
