@@ -1,7 +1,11 @@
 [[_TOC_]]
 # 6.7.0.260 (Release Pending)
-* FB-13116: Fixed Equals(Popup) filter when one of the values is empty string. Empty string can now be selected as any other not empty
-value.
+* FB-13132: Changed formatting of dates (from filters values) in reportset description to respect AdHocSettings.Culture
+* FB-13115: Resolved issue where thumbnails would remain in the "Generating" state
+* FB-11684: Added disk/reports cache cleanup functionality to Driver.InvalidateSchemaCache()
+* FB-13114: Resolved regression in AdHocSettings.ReloadStrings().
+* FB-13081: Resolved redirect loop when AdHocUserKey is specified
+* FB-13116: Fixed Equals(Popup) filter when one of the values is empty string. Empty string can now be selected as any other not empty value.
 * FB-13103: Fixed "(blank)" value in the filters. "(blank)" value is now interpreted as NULL when selected for example in the Equals(Popup) or Equals(Checkboxes) filter.
 
 # 6.7.0.259
