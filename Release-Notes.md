@@ -1,5 +1,10 @@
 [[_TOC_]]
 # 6.7.0.260 (Release Pending)
+* FB-11598: Added fusion support for Postgres
+* FB-12943: Add support to stored procedures for sql_variant data type as a parameter
+* FB-11720: Fixed glitch in htmlcharts, which could result in generation of malformed JSON data
+* FB-12970: Removed Templates (Forms), and custom entities from session in staticmemory mode. Basic report designing/viewing no longer stores anything in session
+* FB-12970: Added support for logging session contents
 * FB-13132: Changed formatting of dates (from filters values) in reportset description to respect AdHocSettings.Culture
 * FB-13115: Resolved issue where thumbnails would remain in the "Generating" state
 * FB-11684: Added disk/reports cache cleanup functionality to Driver.InvalidateSchemaCache()
