@@ -1,5 +1,5 @@
 [[_TOC_]]
-# 6.7.0.260 (Release Pending)
+# 6.7.0.260
 * FB-13177: Changed "Reset to default" button on Style tab in reportDesigner to standard button control which is used across all designers
 * FB-13113: Fixed empty jquery formatNumber result for 0 value
 * FB-13025: Resolved issue where HighCharts auto-sizing and auto-centering didn't work because chart as an inner element couldn't detect dimensions of outer container. Implemented support for specifying dimensions in pixels in chart property, so highcharts can rely on those values.
