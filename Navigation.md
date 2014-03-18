@@ -50,4 +50,9 @@ It is also possible that you may want to pass a query string to Izenda which has
 You can combine all the filters together and add an output type. Examine this example:
 
 * ReportViewer.aspx?rn=Product+List&p1value=1/1/2005& p1value2=1/1/2008&p2value=USA&p3value=SomeCompany& p4value=15&output=pdf
+
+#####rs.aspx
+
+All of the above commands can also be accomplished by replacing ReportViewer.aspx with rs.aspx and appending the appropriate query string
+
 Continue to [[Appearance]].
