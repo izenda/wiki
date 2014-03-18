@@ -1,4 +1,9 @@
 [[_TOC_]]
+# 6.7.0.261
+* FB-12970: Removed unnecessary ActivateNewDashboardViewerControls() calls from reportViewer
+* FB-13193: Fixed problems with previewing reports after modifying Filter Logic
+* FB-13106: Resolved issue where tabs were greyed out on the report designer page when VisibleDataSources have been changed
+
 # 6.7.0.260
 * FB-13177: Changed "Reset to default" button on Style tab in reportDesigner to standard button control which is used across all designers
 * FB-13113: Fixed empty jquery formatNumber result for 0 value
