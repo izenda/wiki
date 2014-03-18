@@ -38,7 +38,7 @@ Simple Mode disables the ability in the Report Viewer to load another report, ex
 
 It is also possible that you may want to pass a query string to Izenda which has a filter field parameter already set for the user. To accomplish this you can use the p1value, p2value, p3value, p4value, and p5value parameters. Each of the parameters corresponds to the actual order of filters on the report viewer page. So in this example we see the filter field labels in red next to the filters. Call the filters using the following naming convention:
 
-![]()
+![](http://wiki.izenda.us/Navigation/Filterexample.png)
 
 **Note: The values in "Red" (p1value, etc.) above are for reference to the information below only. The Value(s) spaces need to remain "Blank" in the Report Designer. 
 
