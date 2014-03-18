@@ -1,4 +1,7 @@
 #####Navigation
+
+[[_TOC_]]
+
 ###Introduction
 
 Navigation can be customized globally, for all users, by using the settings.aspx page. It can also be customized on a per-user basis. The two pages which are generally affected most by navigation are the report viewer and the report list.
