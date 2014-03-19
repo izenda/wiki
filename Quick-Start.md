@@ -8,7 +8,7 @@
 
 Izenda reports includes a flexible API that can be configured to integrate with your application. This guide covers most of the basic elements that are needed to apply branding and security to the majority of applications. Before beginning make sure that Izenda Reports can properly connect to your database when setup as a stand-alone virtual directory. 
 
-**Configuring Settings**
+####Configuring Settings
 
 
 
@@ -18,7 +18,7 @@ The Izenda Reports API contains specific settings that alter the behavior of the
 
 
 
-**Creating Views**
+####Creating Views
 
 
 
@@ -28,7 +28,7 @@ Some databases contain complex field names that may be confusing to users. In th
 
 
 
-**Applying Branding**
+####Applying Branding
 
 
 
@@ -50,7 +50,7 @@ IFRAMES or Frames : The Izenda reports pages may be placed inside an IFRAME or F
 
 
 
-**Building Core Reports**
+####Building Core Reports
 
 
 
@@ -60,7 +60,7 @@ The best way to deploy Izenda is to create a small set of base reports that user
 
 
 
-**Enforcing Security and User Limitations **
+####Enforcing Security and User Limitations
 
 
 
@@ -68,7 +68,7 @@ The Izenda Reports platform includes a robust and flexible security model which 
 
 
 
-*Assumptions - These will vary based on your application*
+####*Assumptions - These will vary based on your application*
 
   * The username is stored in a session variable called "UserName"
   * The users role is stored in a session variable called "Role" 
@@ -78,7 +78,7 @@ The Izenda Reports platform includes a robust and flexible security model which 
 
 
 
-*Limitations Enforced*
+####*Limitations Enforced*
 
   * The user is logged In
   * The user can only see records for their ClientID
