@@ -12,7 +12,7 @@ Type of security|Example|Implementation Details
 [Altering Capabilities by Role](#AlteringCapabilities)|Only power users should see the modify report button on the report viewer. Others will only access the report viewer.|[[ShowDesignLinks]] [[ShowModifyButton]] [[AllowOverwritingReports]] [[ShowAdminButton]]
 [Field/Record or Tenant Level Security](#TenantSecurity)|Salespeople look at the same report but see different data based on their territory and credentials. In a multi-tenant environment, reports and data for each customer, group, or tenant should be isolated.|PreExecuteReportSet - [[Hidden Filters]] [[ProcessEqualsSelectList]] [[Field & Record Level Security]]
 
-###<a name="Login">Login Security</a> [Top](#Top)
+###<a name="Login">Login Security</a> | [Top](#Top)
 
 To enable basic login security, add the following code to the PostLogin() method of your CustomAdHocConfig class. This is normally found in Global.asax file. The code should look up user credentials from your application, database or windows authentication and provide it to the Izenda Reports API. Furthermore, specifying your login page will ensure that users do not see reports without being logged in.
 
@@ -32,7 +32,7 @@ The method will need to be called from your login process with the following lin
 Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin()
 ```
 
-###<a name="DataSources">Data Sources</a> [Top](#Top)
+###<a name="DataSources">Data Sources</a> | [Top](#Top)
 
 The API allows control over which data sources a user sees based on their credentials. In the following example, members of the "Sales" role would see additional data sources that normal users would not. Any reports that utilize these data sources would only be visible to members of the sales role.
 
@@ -54,7 +54,7 @@ The method will need to be called from your login process with the following lin
 Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin()
 ```
 
-###<a name="ReportSharing">User Driven Report Sharing</a> [Top](#Top)
+###<a name="ReportSharing">User Driven Report Sharing</a> | [Top](#Top)
 
 Once the login security is implemented, users can set the shared and read only status of a report. If a report is shared, other members of that tenant will be able to see it. If it is marked read-only, users will be able to load the report, but any modifications will need to be saved as a different report name. These limitations do not apply to users with admin rights enabled via CurrentUserIsAdmin.
 
@@ -67,7 +67,7 @@ public override void PostLogin()
 
 **This is a screen shot of the Misc tab in the Report Designer showing the "Shared" & "Read Only" checkboxes that a user can select on a per report basis.**
 
-###<a name="ReportControl">Custom Report Control</a> [Top](#Top)
+###<a name="ReportControl">Custom Report Control</a> | [Top](#Top)
 
 To apply additional constraints to which users see what reports, it is necessary to override the ListReports method. See Report Management for additional details.
 
@@ -88,7 +88,7 @@ The API allows control of deleting or modifying reports. Reports can be accessed
 }
 ```
 
-###<a name="AlteringCapabilities">Altering Capabilities by Role</a> [Top](#Top)
+###<a name="AlteringCapabilities">Altering Capabilities by Role</a> | [Top](#Top)
 
 The API allows for over a hundred features of Izenda reports to be hidden or altered based on the user's role. All settings get applied on a per-user basis. 
 The following code applies properties like the connection string, where reports are stored and visibility of the modify button modify button based on the user.
@@ -117,7 +117,7 @@ The method will need to be called from your login process with the following lin
 	Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin()
 ```
 
-###<a name="TenantSecurity">Field/Record or Tenant Level Security</a> [Top](#Top)
+###<a name="TenantSecurity">Field/Record or Tenant Level Security</a> | [Top](#Top)
 
 Many applications limit users to specific records based on their credentials. The HiddenFilters API Setting may be used to add hidden filters to reports which limit the results based on the user, their credentials and their tenant. In this example, anyone reporting on the AcmeWidgetSales view will be limited to data in their TerritoryID.
 
