@@ -68,14 +68,14 @@ Web forms are made up of two components: the visual portion (the ASPX file such 
 
 ASP.NET controls are components that are created and run on the server and encapsulate the user-interface and other related functionality. They are used in ASP.NET pages (ASPX) and in ASP.NET code-behind classes ( ASPX.CS or .CS ).
 
-After performing whatever operation they are designed to do, the control renders the appropriate HTML and sends that HTML into the output stream. For example, a DropDownList control will allow you to bind to a data source, yet the output that is rendered is standard <SELECT> and <OPTION> tags when sent to a browser.
+After performing whatever operation they are designed to do, the control renders the appropriate HTML and sends that HTML into the output stream. For example, a DropDownList control will allow you to bind to a data source, yet the output that is rendered is standard ``` <SELECT> ``` and ``` <OPTION> ``` tags when sent to a browser.
 
 However, the same DropDownList control might render WML if the target is a portable phone. ASP.NET controls do not necessarily map to any one markup language, but have the flexibility to target the appropriate markup language. 
 
 ###How Izenda Reports Uses Web Forms and Controls
 
 
-Each page in our application is a web form which contains the appropriate controls. As an example, let's examine the Report List ASPX page. It can be found in the root Izenda Reports application directory (ReportList.aspx). The page contains an include directive so that the code behind (ReportList.aspx.cs) is used if modified. It contains the standard html tags, then it includes a header user control which can be customized to our application's specifications. The server controls are placed between the <FORM> </FORM> tags.
+Each page in our application is a web form which contains the appropriate controls. As an example, let's examine the Report List ASPX page. It can be found in the root Izenda Reports application directory (ReportList.aspx). The page contains an include directive so that the code behind (ReportList.aspx.cs) is used if modified. It contains the standard html tags, then it includes a header user control which can be customized to our application's specifications. The server controls are placed between the ``` <FORM> </FORM> ``` tags.
 
 When overriding the default behavior of pages, you may include other user or server controls by editing the code behind for the pages or by recompiling Izenda Reports into your web application.
 
