@@ -20,23 +20,27 @@ Russian (ru-RU)
 Bulgarian (bg-BG)
 Chinese (zh-CN) Chinese Traditional
 Chinese (zh-TW) Taiwanese
-What Are The Codes Next To The Language Names?
+
+**What Are The Codes Next To The Language Names?**
 
 The Izenda localization capability is built on top of Microsoft’s .NET localization API. The Microsoft .NET localization API assignes a specific culture code to each language. For example, American English spoken in the United States is en-US.
-What Is “Resources”?
 
-For localization Izenda uses .Net managed resources Files (*.resx) which is standard resources for .Net. Resources file is XML-formatted text file, so you can edit it in XML editor or even any plain text editor.
-How To Install The Language Pack?
+**What Is “Resources”?**
 
-The language pack consists of a set of *.resx files inside “Resources” folder. In addition, you will need a special license key that enables localization. Please contact your account manager to get these resources.
-Installing Izenda Language Pack consists of two steps:
-Copying localization resources
-Set up localization in the code
+For localization, Izenda uses .Net managed resources Files (*.resx), which are standard resources for .Net. Resource files are XML-formatted text files, so you can edit it in an XML editor or even any plain text editor.
+
+**How To Install The Language Pack?**
+
+The language pack consists of a set of *.resx files inside the “Resources” folder. In addition, you will need a special license key that enables localization. Please contact your account manager to get these resources.
+Installing Izenda Language Pack consists of **two** steps:
+  1. Copying localization resources
+  2. Set up localization in the code
+
 1. Copying localization resources
 
 The language pack consists of a set of *.resx files inside “Resources” folder. You should copy this folder **to the “bin” folder of your website**(Izenda.AdHoc.dll should be in that folder). It's easy to find it, just locate the folder where Izenda.AdHoc.dll is.
 
- > 
+
 
 2. Set up localization in the code
 
