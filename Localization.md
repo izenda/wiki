@@ -23,7 +23,7 @@ The following languages are currently supported. More are being added based on c
 
 **What Are The Codes Next To The Language Names?**
 
-The Izenda localization capability is built on top of Microsoft’s .NET localization API. The Microsoft .NET localization API assignes a specific culture code to each language. For example, American English spoken in the United States is en-US.
+The Izenda localization capability is built on top of Microsoft’s .NET localization API. The Microsoft .NET localization API assigns a specific culture code to each language. For example, American English spoken in the United States is en-US.
 
 **What Is “Resources”?**
 
@@ -35,7 +35,7 @@ The language pack consists of a set of *.resx files inside the “Resources” f
 Installing Izenda Language Pack consists of **two** steps:
   1. Copying localization resources
   2. Set up localization in the code
->
+
 1. Copying localization resources
 
 The language pack consists of a set of *.resx files inside “Resources” folder. You should copy this folder **to the “bin” folder of your website**(Izenda.AdHoc.dll should be in that folder). It's easy to find it, just locate the folder where Izenda.AdHoc.dll is.
