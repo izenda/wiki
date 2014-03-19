@@ -35,7 +35,7 @@ The language pack consists of a set of *.resx files inside the “Resources” f
 Installing Izenda Language Pack consists of **two** steps:
   1. Copying localization resources
   2. Set up localization in the code
-
+>
 1. Copying localization resources
 
 The language pack consists of a set of *.resx files inside “Resources” folder. You should copy this folder **to the “bin” folder of your website**(Izenda.AdHoc.dll should be in that folder). It's easy to find it, just locate the folder where Izenda.AdHoc.dll is.
