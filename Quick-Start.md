@@ -1,6 +1,6 @@
 **Quick Start Guide**
 
-#**Integration Quick Start Guide **
+#**Integration Quick Start Guide**
 
 
 
@@ -66,7 +66,7 @@ The Izenda Reports platform includes a robust and flexible security model which 
 
 
 
-*Assumptions - These will vary based on your application *
+*Assumptions - These will vary based on your application*
 
   * The username is stored in a session variable called "UserName"
   * The users role is stored in a session variable called "Role" 
@@ -76,7 +76,7 @@ The Izenda Reports platform includes a robust and flexible security model which 
 
 
 
-*Limitations Enforced *
+*Limitations Enforced*
 
   * The user is logged In
   * The user can only see records for their ClientID
