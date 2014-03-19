@@ -40,7 +40,9 @@ Installing Izenda Language Pack consists of **two** steps:
 
 The language pack consists of a set of *.resx files inside “Resources” folder. You should copy this folder **to the “bin” folder of your website**(Izenda.AdHoc.dll should be in that folder). It's easy to find it, just locate the folder where Izenda.AdHoc.dll is.
 
+![](http://wiki.izenda.us/Localization/resources_folder_1.png)
 
+![](http://wiki.izenda.us/Localization/resources_folder_2.png)
 
 2. Set up localization in the code
 
