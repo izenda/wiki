@@ -29,6 +29,6 @@ Although the html element styles are hard coded into the application, it is poss
 
 ###Customer Integration Samples
 
-We have screenshots of our customers' integrated solutions available [[here]].
+We have screenshots of our customers' integrated solutions available [here](http://www.izenda.com/Site/Pages/Clients.aspx).
 
 Continue to [[Localization]]
