@@ -26,7 +26,7 @@ After resetting and clearing the cache, the CSS changes should reflect in Izenda
 
 Although the html element styles are hard coded into the application, it is possible to change them by simply placing a style tag into the page right after the end of the form. [[Please see this example]]. 
 
-3##Customer Integration Samples
+###Customer Integration Samples
 
 We have screenshots of our customers' integrated solutions available [[here]].
 
