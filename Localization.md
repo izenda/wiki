@@ -152,6 +152,7 @@ Now you should add some code to the master page code behind file. Since you may 
 
 The result is below:
 
+![](http://wiki.izenda.us/Localization/resources_rtl_1.png)
 ###What Needs To Be Installed on The Server and Browser?
 
 The Microsoft Language must be installed on the server as well as the browser for the fonts to display properly. Please [download the language file](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=507d4589-ca97-4c5a-9c0f-bb9a3c68cc49) from Microsoft’s web site. The Izenda Localization Pack assumes that the server and user have the proper resources installed.
