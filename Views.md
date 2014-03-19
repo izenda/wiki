@@ -22,7 +22,7 @@ Izenda recommends creating views that use Camel Case (i.e. FirstName) or undersc
 
 ###View Code Samples
 
-A Basic View
+**A Basic View**
 
 A view is generally created by adding the create view statement to a standard SQL statement.
 
@@ -33,7 +33,7 @@ CREATE VIEW SampleView AS SELECT FirstName FROM User
 This article will use a fictitious database to provide samples on how to best utilize views.
 
 
-Table and Column Aliasing
+**Table and Column Aliasing**
 
 Tables and columns are often named in ways that are not intuitive to the user. Izenda recommends aliasing in such situations.
 
@@ -41,7 +41,7 @@ Tables and columns are often named in ways that are not intuitive to the user. I
 CREATE VIEW Persons AS SELECT ctx_fname  AS FirstName, ctx_lname AS LastName FROM ctx_usrs
 ```
 
-Combining Columns
+**Combining Columns**
 
 ``` sql
 CREATE VIEW Events AS
