@@ -9,7 +9,7 @@ This is the name specified for the report (e.g. a report named Cost Analysis wou
 This will generate the desired export of the tabular data in the report (e.g. rs.aspx?rn=Cost+Analysis&output=pdf)
 Alternately called export
 
-**run_scheduled_reports=[Minutes]
+**run_scheduled_reports=[Minutes]**
 Schedules a report to run in the Windows Scheduler after a certain period of time
 
 **reportonly=[0 or 1]**
