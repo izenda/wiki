@@ -6,20 +6,20 @@ To use Language Pack you should have Izenda AdHoc of version 6.4.4314 or higher
 ###<a name="IncludedLanguages"></a>What Languages Are Included?
 
 The following languages are currently supported. More are being added based on customer demand and are available upon request. Please contact your sales rep or sales@izenda.com if you need additional languages.
-Arabic (ar-SA)
-German (de-DE)
-English (en-US)
-Spanish (es-ES)
-French (fr-FR)
-Hindi (hi)
-Italian (it-IT)
-Japanese (ja-JP)
-Korean (ko-KR)
-Portuguese (pt-PT)
-Russian (ru-RU)
-Bulgarian (bg-BG)
-Chinese (zh-CN) Chinese Traditional
-Chinese (zh-TW) Taiwanese
+* Arabic (ar-SA)
+* German (de-DE)
+* English (en-US)
+* Spanish (es-ES)
+* French (fr-FR)
+* Hindi (hi)
+* Italian (it-IT)
+* Japanese (ja-JP)
+* Korean (ko-KR)
+* Portuguese (pt-PT)
+* Russian (ru-RU)
+* Bulgarian (bg-BG)
+* Chinese (zh-CN) Chinese Traditional
+* Chinese (zh-TW) Taiwanese
 
 **What Are The Codes Next To The Language Names?**
 
