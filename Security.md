@@ -4,15 +4,15 @@ Izenda Reports fully integrates with the security of existing ASP.NET applicatio
 
 Type of security|Example|Implementation Details
 ----------------|-------|----------------------
-[[Login]] |Users must login before gaining access to reports.|[[RequireLogin]] [[CurrentUserName]] [[CurrentUserIsAdmin]] [[Your Login Page Integration]]
-[[Data Sources]]|A specific user can only see certain data sources.|[[RequireLogin]] [[Basic Report Sharing]] [[VisibleDataSource]] [[Database Security]]
-[[User Driven Report Sharing]]|A user can save a report and decide if they want other users to see this report. They can also mark a report read-only meaning it can be viewed but not saved over.|[[Basic Report Sharing]] [[CurrentUserIsAdmin]] [[ReportsPath]] [[Read-Only & Shared Checkboxes]]
-[[Custom Report Control]]|Different departments can see different base reports.|[[VisibleDataSources hides reports for non-accessible datasources]] [[ReportsList may be overridden]] [[Storing Reports]] [[ReportsPath]]
-[[Overwriting and Deleting Reports]]|Users can load shared or base reports, but should not be able to delete them or overwrite them.|[[AllowOverwritingReports]] [[AllowDeletingReports]] [[CurrentUserIsAdmin]]
+[Login](#Login) |Users must login before gaining access to reports.|[[RequireLogin]] [[CurrentUserName]] [[CurrentUserIsAdmin]] [[Your Login Page Integration]]
+[Data Sources](#DataSources)|A specific user can only see certain data sources.|[[RequireLogin]] [[Basic Report Sharing]] [[VisibleDataSource]] [[Database Security]]
+[User Driven Report Sharing](#ReportSharing)|A user can save a report and decide if they want other users to see this report. They can also mark a report read-only meaning it can be viewed but not saved over.|[[Basic Report Sharing]] [[CurrentUserIsAdmin]] [[ReportsPath]] [[Read-Only & Shared Checkboxes]]
+[Custom Report Control](#ReportControl)|Different departments can see different base reports.|[[VisibleDataSources hides reports for non-accessible datasources]] [[ReportsList may be overridden]] [[Storing Reports]] [[ReportsPath]]
+[Overwriting and Deleting Reports](#DeletingReports)|Users can load shared or base reports, but should not be able to delete them or overwrite them.|[[AllowOverwritingReports]] [[AllowDeletingReports]] [[CurrentUserIsAdmin]]
 [[Altering Capabilities by Role]]|Only power users should see the modify report button on the report viewer. Others will only access the report viewer.|[[ShowDesignLinks]] [[ShowModifyButton]] [[AllowOverwritingReports]] [[ShowAdminButton]]
 [[Field/Record or Tenant Level Security]]|Salespeople look at the same report but see different data based on their territory and credentials. In a multi-tenant environment, reports and data for each customer, group, or tenant should be isolated.|PreExecuteReportSet - [[Hidden Filters]] [[ProcessEqualsSelectList]] [[Field & Record Level Security]]
 
-###Login Security
+###<a name="Login">Login Security</a>
 
 To enable basic login security, add the following code to the PostLogin() method of your CustomAdHocConfig class. This is normally found in Global.asax file. The code should look up user credentials from your application, database or windows authentication and provide it to the Izenda Reports API. Furthermore, specifying your login page will ensure that users do not see reports without being logged in.
 
@@ -32,7 +32,7 @@ The method will need to be called from your login process with the following lin
 Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin()
 ```
 
-###Data Sources
+###<a href="DataSources">Data Sources</a>
 
 The API allows control over which data sources a user sees based on their credentials. In the following example, members of the "Sales" role would see additional data sources that normal users would not. Any reports that utilize these data sources would only be visible to members of the sales role.
 
@@ -54,7 +54,7 @@ The method will need to be called from your login process with the following lin
 Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin()
 ```
 
-User Driven Report Sharing
+###<a href="ReportSharing">User Driven Report Sharing</a>
 
 Once the login security is implemented, users can set the shared and read only status of a report. If a report is shared, other members of that tenant will be able to see it. If it is marked read-only, users will be able to load the report, but any modifications will need to be saved as a different report name. These limitations do not apply to users with admin rights enabled via CurrentUserIsAdmin.
 
@@ -67,7 +67,7 @@ public override void PostLogin()
 
 **This is a screen shot of the Misc tab in the Report Designer showing the "Shared" & "Read Only" checkboxes that a user can select on a per report basis.**
 
-###**Custom Report Control**
+###<a href="ReportControl">Custom Report Control</a>
 
 To apply additional constraints to which users see what reports, it is necessary to override the ListReports method. See Report Management for additional details.
 
@@ -76,7 +76,7 @@ public override Izenda.AdHoc.ReportInfo[] ListReports()
 { Return filtered list}
 ```
 
-###Overwriting and Deleting Reports
+###<a href="DeletingReports">Overwriting and Deleting Reports</a>
 
 The API allows control of deleting or modifying reports. Reports can be accessed as Read-Only and can not be modified or deleted. 
 
