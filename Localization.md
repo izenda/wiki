@@ -1,4 +1,7 @@
-Izenda Language Pack
+**Izenda Language Pack**
+
+[[_TOC_]]
+
 Izenda provides an add-on localization package capable of localizing the Izenda UI, Field Names as well as the data itself into other languages.
 What version of AdHoc supports Language Pack?
 
@@ -36,7 +39,7 @@ Installing Izenda Language Pack consists of **two** steps:
   1. Copying localization resources
   2. Set up localization in the code
 
-1. Copying localization resources
+###Copying localization resources
 
 The language pack consists of a set of *.resx files inside “Resources” folder. You should copy this folder **to the “bin” folder of your website**(Izenda.AdHoc.dll should be in that folder). It's easy to find it, just locate the folder where Izenda.AdHoc.dll is.
 
@@ -44,7 +47,7 @@ The language pack consists of a set of *.resx files inside “Resources” folde
 
 ![](http://wiki.izenda.us/Localization/resources_folder_2.png)
 
-2. Set up localization in the code
+###Set up localization in the code
 
 You can set up the localization language almost anywhere in the code by specifying the AdHocSettings.Language setting.
 But normally you would like to set localization in the PostLogin() method of the CustomAdHocConfig class in the Global.asax file because different users might like to use different languages:
