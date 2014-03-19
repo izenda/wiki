@@ -67,6 +67,8 @@ public override void PostLogin()
 
 **This is a screen shot of the Misc tab in the Report Designer showing the "Shared" & "Read Only" checkboxes that a user can select on a per report basis.**
 
+![](http://wiki.izenda.us/Integration/Share-and-Read_only.png)
+
 ###<a name="ReportControl">Custom Report Control</a> | [Top](#Top)
 
 To apply additional constraints to which users see what reports, it is necessary to override the ListReports method. See Report Management for additional details.
