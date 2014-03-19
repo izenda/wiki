@@ -16,7 +16,7 @@ To set custom CSS:
   * save the edited files to your server where they can be access via absolute urls
   * navigate to the settings.aspx page
   * navigate to the "Images & CSS" tab 
-
+    ![](http://wiki.izenda.us/Appearance/ImagesCssTab.png)
   * enter the new absolute URLs of the CSS files
   * fully clear your cache and restart the application
 
