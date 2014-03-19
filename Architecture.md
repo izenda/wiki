@@ -14,35 +14,37 @@ Izenda Reports was designed with end-user performance in mind. We are 100% AJAX,
 
 For optimal performance of your views, and database we suggest indexing any field that maybe joined in views, sorted, or filtered by. For example in SQL this can be done using the index tuning wizard.
 
-Report List Page (ReportList.aspx)
+###Report List Page (ReportList.aspx)
 
 Report List (ReportList.aspx, example here) is first page the user typically interacts with unless given a link to a specific report. This page displays the list of reports. By default, it displays uncategorized reports first (in alphabetical order) and then displays an alphabetized list of the reports by category. If allowed, users may:
 
-Click the report to view the report in the report viewer page,
-Click modify icon to load the report in the report designer
-Click the delete icon to delete the report
-Report Viewer Page (ReportViewer.aspx)
+  * Click the report to view the report in the report viewer page
+  * Click the modify icon to load the report in the report designer
+  * Click the delete icon to delete the report
 
-Report Viewer (ReportViewer.aspx, example: here) The user uses this page to view a report which has already been designed. Modifications to the report can be made without permanently altering or overwriting the report in any way. If permitted, users may:
+###Report Viewer Page (ReportViewer.aspx)
 
-Add fields to the report,
-Filter the report using fields
-Export the report.
-Navigate to the report list page
-Load the report into the report designer page
-Report Designer Page (ReportDesigner.aspx)
+Report Viewer (ReportViewer.aspx, example: here) is used to view a report that has already been designed. Modifications to the report can be made without permanently altering or overwriting the report in any way. If permitted, users may:
 
-Report Designer (ReportDesigner.aspx, example: here) The user creates and modifies reports using this page. The page structure is a tabbed menu at top, followed by a toolbar of icons, and then the page content. Using this page, users will be able to:
+  * Add fields to the report
+  * Filter the report using fields
+  * Export the report
+  * Navigate to the report list page
+  * Load the report into the report designer page
 
-Choose data sources for a report
-Choose fields which are shown in a report grid and perform simple operations on the fields
-Create filters to filter report data
-Create a summary grid using fields and perform simple operations on the fields
-Create a chart to display data
-Create gauges to display data
-Schedule a report for emailing
-Change visual elements of the report, titles, descriptions, colors etc
-Preview the report after selecting all of the above
+###Report Designer Page (ReportDesigner.aspx)
+
+Report Designer (ReportDesigner.aspx, example: here) is used to create and modify reports. The page structure is a tabbed menu at the top, followed by a toolbar of icons, and then the page content. Using this page, users will be able to:
+
+  * Choose data sources for a report
+  * Choose fields that are shown in a report grid and perform simple operations on the fields
+  * Create filters to filter report data
+  * Create a summary grid using fields and perform simple operations on the fields
+  * Create a chart to display data
+  * Create gauges to display data
+  * Schedule a report for emailing
+  * Change visual elements of the report, titles, descriptions, colors, etc.
+  * Preview the report after selecting all of the above
 
 ###Settings Page (Settings.aspx)
 
