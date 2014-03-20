@@ -1,5 +1,5 @@
 [[_TOC_]]
-# 6.7.0.262 (Pending Release)
+# 6.7.0.262 (Release Pending)
 * FB-13193: Fix filter logic when hidden filters are used.
 * FB-13139: Output of basic cache usage statistics in static memory mode added
 * FB-13017: Significantly increase performance in paginated reports with many rows of data (10k+).
