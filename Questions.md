@@ -16,4 +16,4 @@
 * [[How To Apply Advanced Logic Filters]]
 * [[How To Set ReportParts]]
 * [[How to Remove Buttons from Dashboard Designer]]
-* [[Query String Keys for rs.aspx]]
+* [Query String Keys for rs.aspx](http://wiki.izenda.us/Query-String-Keys-for-rs-dot-aspx)
