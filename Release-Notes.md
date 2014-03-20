@@ -1,7 +1,7 @@
 [[_TOC_]]
 # 6.7.0.262 (Release Pending)
-* FB-13193: Fix filter logic when hidden filters are used.
-* FB-13139: Output of basic cache usage statistics in static memory mode added
+* FB-13193: Fix filter logic when hidden filters are used
+* FB-13139: Add Output of basic cache usage statistics in static memory mode
 * FB-13017: Significantly increase performance in paginated reports with many rows of data (10k+).
 * FB-13243: Fix Inverted Grid CSS so it stays up-to-date when modified in the Designer and refreshed in the Viewer.
 * FB-13240: Provide a separate rendering path when exporting when using HtmlCharts charting engine
