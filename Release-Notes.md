@@ -1,4 +1,14 @@
 [[_TOC_]]
+# 6.7.0.262 (Pending Release)
+FB-13193: Fix filter logic when hidden filters are used.
+FB-13139: Output of basic cache usage statistics in static memory mode added
+FB-13017: Significantly increase performance in paginated reports with many rows of data (10k+).
+FB-13243: Fix Inverted Grid CSS so it stays up-to-date when modified in the Designer and refreshed in the Viewer.
+FB-13240: Fixed wrong highchart rendering.
+FB-13237: Gauges rendered without needles on thumbnails because needle image was not embedded into HTMLs prepared for thumbnails. Fixed by embedding needle image into HTMLs for thumbnails.
+FB-13028: Implemented passing POST parameters to the reportSet being loaded by ReportPart control.
+FB-13119: Fix Text Highlight and Cell Highlight in the paginated report. Background color and text color should work fine now on all pages when report is paginated.
+
 # 6.7.0.261
 * FB-12970: Removed unnecessary ActivateNewDashboardViewerControls() calls from reportViewer
 * FB-13193: Fixed problems with previewing reports after modifying Filter Logic
