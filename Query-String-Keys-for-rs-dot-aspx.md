@@ -5,8 +5,7 @@ This is the current list of useful rs.aspx query string keys:
 **rn=[reportName]**
 This is the name specified for the report (e.g. a report named Cost Analysis would be accessed with rs.aspx?rn=Cost+Analysis)
 
-**output=[ExportFormat]**, 
-**export=[ExportFormat]**
+**output=[ExportFormat], export=[ExportFormat]**
 This will generate the desired export of the tabular data in the report (e.g. rs.aspx?rn=Cost+Analysis&output=pdf)
 
 **run_scheduled_reports=[Minutes]**
