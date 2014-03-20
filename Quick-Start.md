@@ -89,3 +89,47 @@ The Izenda Reports platform includes a robust and flexible security model which 
 
 
 *Basic Login Security - Place in PostLogin() or InitializeReporting() method of CustomAdHocConfig which is normally found in Global.asax.*
+
+``` c#
+//Pass User Credentials
+AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
+AdHocSettings.CurrentUserName = GetUserName();
+AdHocSettings.CurrentUserTenantId = GetTenantID();
+AdHocSettings.CurrentUserIsAdmin = true; 
+AdHocSettings.VisibleDataSources = new string[]  { "Products", "Orders", "Customers" }; 
+```
+
+*Multi-Role Scenario - Apply specific limitations to certain roles*
+ 
+``` c#
+string role = GetUserRoleFromApp()
+if(role == "Admin")
+{
+	Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Purchasing.Vendor", "Products", "Orders", "Order Details", "Customers" };
+}
+else
+{
+	Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Products", "Orders", "Customers" };
+	Izenda.AdHoc.AdHocSettings.CurrentUserIsAdmin = false;
+	Izenda.AdHoc.AdHocSettings.ShowSettingsButton = false;
+    Izenda.AdHoc.AdHocSettings.ShowSqlOutputIcon = false;
+	Izenda.AdHoc.AdHocSettings.HiddenFilters["ShipCountry"] = GetUserCountry();
+}
+```
+
+*The PostLogin() method needs to be called at the end of your authentication process after user credentials are added to the session.*
+
+``` c#
+// Call the Izenda PostLogin() from your login page after authentication is complete
+Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin(); 
+```
+
+*Once security is fully configured, add the following code to ConfigureSettings() method to prevent users from navigating to reports without logging in first.*
+
+``` c# 
+// Require Login once security configured. 
+AdHocSettings.RequireLogin = false; 
+AdHocSettings.LoginUrl = "INSERT_YOUR_LOGIN_PAGE_HERE"; 
+```
+
+Continue to [[Security]]
