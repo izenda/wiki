@@ -1,5 +1,7 @@
 <a name="Top">Security Guide</a>
 
+[[_TOC_]]
+
 Izenda Reports fully integrates with the security of existing ASP.NET applications allowing for trusted self-service reporting in multi-tenant environments. Using the API, security can be applied on-the-fly based on the requirements of the application and user credentials.
 
 Type of security|Example|Implementation Details
@@ -12,7 +14,7 @@ Type of security|Example|Implementation Details
 [Altering Capabilities by Role](#AlteringCapabilities)|Only power users should see the modify report button on the report viewer. Others will only access the report viewer.|[[ShowDesignLinks]] [[ShowModifyButton]] [[AllowOverwritingReports]] [[ShowAdminButton]]
 [Field/Record or Tenant Level Security](#TenantSecurity)|Salespeople look at the same report but see different data based on their territory and credentials. In a multi-tenant environment, reports and data for each customer, group, or tenant should be isolated.|[[PreExecuteReportSet - Hidden Filters]] [[ProcessEqualsSelectList]] [[Field & Record Level Security]]
 
-###<a name="Login">Login Security</a> | [Top](#Top)
+###<a name="Login"></a>Login Security
 
 To enable basic login security, add the following code to the PostLogin() method of your CustomAdHocConfig class. This is normally found in Global.asax file. The code should look up user credentials from your application, database or windows authentication and provide it to the Izenda Reports API. Furthermore, specifying your login page will ensure that users do not see reports without being logged in.
 
@@ -32,7 +34,7 @@ The method will need to be called from your login process with the following lin
 Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin()
 ```
 
-###<a name="DataSources">Data Sources</a> | [Top](#Top)
+###<a name="DataSources"></a>Data Sources
 
 The API allows control over which data sources a user sees based on their credentials. In the following example, members of the "Sales" role would see additional data sources that normal users would not. Any reports that utilize these data sources would only be visible to members of the sales role.
 
@@ -54,7 +56,7 @@ The method will need to be called from your login process with the following lin
 Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin()
 ```
 
-###<a name="ReportSharing">User Driven Report Sharing</a> | [Top](#Top)
+###<a name="ReportSharing"></a>User Driven Report Sharing
 
 Once the login security is implemented, users can set the shared and read only status of a report. If a report is shared, other members of that tenant will be able to see it. If it is marked read-only, users will be able to load the report, but any modifications will need to be saved as a different report name. These limitations do not apply to users with admin rights enabled via CurrentUserIsAdmin.
 
