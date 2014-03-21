@@ -1,4 +1,4 @@
-<a name="Top">Security Guide</a>
+Security Guide
 
 [[_TOC_]]
 
@@ -34,7 +34,7 @@ The method will need to be called from your login process with the following lin
 Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin()
 ```
 
-###</a>Data Sources
+###Data Sources
 
 The API allows control over which data sources a user sees based on their credentials. In the following example, members of the "Sales" role would see additional data sources that normal users would not. Any reports that utilize these data sources would only be visible to members of the sales role.
 
@@ -143,5 +143,3 @@ public override void PostLogin()
 	}
 }
 ```
-
-Continue to [[Views]]
