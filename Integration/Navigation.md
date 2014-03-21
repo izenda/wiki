@@ -45,14 +45,14 @@ It is also possible that you may want to pass a query string to Izenda which has
 
 **Note: The values in "Red" (p1value, etc.) above are for reference to the information below only. The Value(s) spaces need to remain "Blank" in the Report Designer. 
 
-* p1value,p1value2: "Between" filter operator, ReportViewer.aspx?rn=SomeReport&p1value=1/1/2005&p1value2=1/1/2008
-* p2value: "Equals" filter operator,ReportViewer.aspx?rn=SomeReport&p2value=USA
-* p3value: "Equals" filter operatorReportViewer.aspx?rn=SomeReport&p3value=SomeCompany
-* p4value: "Greater Than" filter operatorReportViewer.aspx?rn=SomeReport&p4value=15
-* p5value: not used
-You can combine all the filters together and add an output type. Examine this example:
+* **p1value,p1value2**: "Between" filter operator, ReportViewer.aspx?rn=SomeReport&p1value=1/1/2005&p1value2=1/1/2008
+* **p2value**: "Equals" filter operator,ReportViewer.aspx?rn=SomeReport&p2value=USA
+* **p3value**: "Equals" filter operatorReportViewer.aspx?rn=SomeReport&p3value=SomeCompany
+* **p4value**: "Greater Than" filter operatorReportViewer.aspx?rn=SomeReport&p4value=15
+* **p5value**: not used in this example (maximum amount of parameters reached)
+You can combine filters together and add an output type. Examine this example:
 
-* ReportViewer.aspx?rn=Product+List&p1value=1/1/2005& p1value2=1/1/2008&p2value=USA&p3value=SomeCompany& p4value=15&output=pdf
+* ReportViewer.aspx?rn=Product+List&p1value=1/1/2005&p1value2=1/1/2008&p2value=USA&output=pdf
 
 ###Get just the report
 
