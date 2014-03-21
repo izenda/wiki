@@ -1,4 +1,3 @@
-
 #**Integration Quick Start Guide**
 
 [[_TOC_]]
@@ -131,5 +130,3 @@ Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin();
 AdHocSettings.RequireLogin = false; 
 AdHocSettings.LoginUrl = "INSERT_YOUR_LOGIN_PAGE_HERE"; 
 ```
-
-Continue to [[Security]]
