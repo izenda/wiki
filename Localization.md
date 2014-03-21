@@ -1,4 +1,4 @@
-**Izenda Language Pack**
+<a name="Top"></a>**Izenda Language Pack**
 
 [[_TOC_]]
 
@@ -6,7 +6,7 @@ Izenda provides an add-on localization package capable of localizing the Izenda 
 What version of AdHoc supports Language Pack?
 
 To use Language Pack you should have Izenda AdHoc of version 6.4.4314 or higher
-###<a name="IncludedLanguages"></a>What Languages Are Included?
+###<a name="IncludedLanguages"></a>What Languages Are Included? | [Top](#Top)
 
 The following languages are currently supported. More are being added based on customer demand and are available upon request. Please contact your sales rep or sales@izenda.com if you need additional languages.
 * Arabic (ar-SA)
@@ -41,7 +41,7 @@ Installing Izenda Language Pack consists of **two** steps:
   1. Copying localization resources
   2. Set up localization in the code
 
-###Copying localization resources
+###Copying localization resources | [Top](#Top)
 
 The language pack consists of a set of *.resx files inside “Resources” folder. You should copy this folder **to the “bin” folder of your website**(Izenda.AdHoc.dll should be in that folder). It's easy to find it, just locate the folder where Izenda.AdHoc.dll is.
 
@@ -49,7 +49,7 @@ The language pack consists of a set of *.resx files inside “Resources” folde
 
 ![](http://wiki.izenda.us/Localization/resources_folder_2.png)
 
-###Set up localization in the code
+###Set up localization in the code | [Top](#Top)
 
 You can set up the localization language almost anywhere in the code by specifying the AdHocSettings.Language setting.
 But normally you would like to set localization in the PostLogin() method of the CustomAdHocConfig class in the Global.asax file because different users might like to use different languages:
@@ -68,7 +68,7 @@ Let’s suppose you need Izenda Reports in French. Here is a step-by-step list o
   4. Copy that file from the localization pack into the previously created “..\bin\Resources” folder of your website (in our case the full file path will be “..\bin\Resources\French.resx”).
   5. Replace your license key with one supporting localization. Please contact support@izenda.com or your account manager for details.
 
-###How To Set The Language I Want To Use?
+###How To Set The Language I Want To Use? | [Top](#Top)
 
 You should specify the AdHocSettings.Language setting in the code. Normally it’s done in the PostLogin() method (or ConfigureSettings() method if you’d like to all users use the same language) of CustomAdHocConfig in the Global.asax file:
 
@@ -80,7 +80,7 @@ public override void PostLogin()
 
 ```
 
-###Can I Change Some Or All Of The Resources?
+###Can I Change Some Or All Of The Resources? | [Top](#Top)
 
 Yes, you can change the localization by yourself.
 All you have to do is to change the target *.resx resource file. Resource files are XML-formatted files, so you can change them easily using any XML or text editor.
@@ -103,11 +103,11 @@ The “name” attribute should be as it is. You can change values inside ``` <v
 That’s it. Save the file and restart IIS and you’ll see the changes immediately.
 Note: If a modified *.resx file is not in the “bin\Resources” folder of your site, you should copy it there.
 
-###Can I Use Language That Is Not In The Language Pack?
+###Can I Use Language That Is Not In The Language Pack? | [Top](#Top)
 
 If you didn’t find the language you want to use in Language Pack (see “What Languages Are Included?” section) you can contact your sales rep or sales@izenda.com to get it.
 
-###What Code Do I Need to Localize The User Interface and Field Names?
+###What Code Do I Need to Localize The User Interface and Field Names? | [Top](#Top)
 
 The following settings need to be applied to the PostLogin() method of the CustomAdHocConfig class. 
   * Add an alias for every field that needs to be localized or perform a dynamic lookup from the database.
@@ -117,15 +117,15 @@ Example:
   * Set AdHocSettings.Language = AdHocLanguage.Spanish (or the appropriate language) in the PostLogin() method
   * Set Izenda.AdHoc.FieldAliases[“ShipCity”] = “Cuidad” to localize individual field names in PostLogin()
 
-###How Do I Refine The Provided Localization?
+###How Do I Refine The Provided Localization? | [Top](#Top)
 
 The Izenda.AdHoc.AdHocSettings.LabelAliases[] collection may be used to provide more granular UI localization if the provided localization is not sufficient.
 
-###What Code Do I Need to Localize Actual Report Data?
+###What Code Do I Need to Localize Actual Report Data? | [Top](#Top)
 
 Data may be localized by overriding the AdHocConfig.ProcessDataSet() method and dynamically changing the DataSet returned by the database.
 
-###Does It Support Right-To-Left Languages?
+###Does It Support Right-To-Left Languages? | [Top](#Top)
 
 Yes. Right-to-left languages are supported.
 First you should add a new css class to the master page (or separately to the all pages if you don't use master page)
