@@ -50,6 +50,9 @@ It is also possible that you may want to pass a query string to Izenda which has
 * **p3value**: "Equals" filter operatorReportViewer.aspx?rn=SomeReport&p3value=SomeCompany
 * **p4value**: "Greater Than" filter operatorReportViewer.aspx?rn=SomeReport&p4value=15
 * **p5value**: not used in this example (maximum amount of parameters reached)
+
+*Note: p1value2 is only valid due to using the "Between" operator and would not be valid when working with other operators.*
+
 You can combine filters together and add an output type. Examine this example:
 
 * ReportViewer.aspx?rn=Product+List&p1value=1/1/2005&p1value2=1/1/2008&p2value=USA&output=pdf
