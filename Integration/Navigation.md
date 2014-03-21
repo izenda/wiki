@@ -1,4 +1,4 @@
-**Navigation**
+#**Navigation**
 
 [[_TOC_]]
 
@@ -57,5 +57,3 @@ You can combine all the filters together and add an output type. Examine this ex
 ###Get just the report
 
 All of the above commands can also be accomplished by replacing ReportViewer.aspx with rs.aspx and appending the appropriate query string. This will generate the same report seen in ReportViewer.aspx but without any of the menu items.
-
-Continue to [[Appearance]].
