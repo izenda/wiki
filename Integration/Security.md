@@ -6,7 +6,7 @@ Izenda Reports fully integrates with the security of existing ASP.NET applicatio
 
 Type of security|Example|Implementation Details
 ----------------|-------|----------------------
-[Login](#Login) |Users must login before gaining access to reports.|[[RequireLogin]] [[CurrentUserName]] [[CurrentUserIsAdmin]] [[Your Login Page Integration]]
+[Login](#Login-Security) |Users must login before gaining access to reports.|[[RequireLogin]] [[CurrentUserName]] [[CurrentUserIsAdmin]] [[Your Login Page Integration]]
 [Data Sources](#DataSources)|A specific user can only see certain data sources.|[[RequireLogin]] [[Basic Report Sharing]] [[VisibleDataSource]] [[Database Security]]
 [User Driven Report Sharing](#ReportSharing)|A user can save a report and decide if they want other users to see this report. They can also mark a report read-only meaning it can be viewed but not saved over.|[[Basic Report Sharing]] [[CurrentUserIsAdmin]] [[ReportsPath]] [[Read-Only & Shared Checkboxes]]
 [Custom Report Control](#ReportControl)|Different departments can see different base reports.|[[VisibleDataSources hides reports for non-accessible datasources]] [[ReportsList may be overridden]] [[Storing Reports]] [[ReportsPath]]
@@ -14,7 +14,7 @@ Type of security|Example|Implementation Details
 [Altering Capabilities by Role](#AlteringCapabilities)|Only power users should see the modify report button on the report viewer. Others will only access the report viewer.|[[ShowDesignLinks]] [[ShowModifyButton]] [[AllowOverwritingReports]] [[ShowAdminButton]]
 [Field/Record or Tenant Level Security](#TenantSecurity)|Salespeople look at the same report but see different data based on their territory and credentials. In a multi-tenant environment, reports and data for each customer, group, or tenant should be isolated.|[[PreExecuteReportSet - Hidden Filters]] [[ProcessEqualsSelectList]] [[Field & Record Level Security]]
 
-###<a name="Login"></a>Login Security
+###Login Security
 
 To enable basic login security, add the following code to the PostLogin() method of your CustomAdHocConfig class. This is normally found in Global.asax file. The code should look up user credentials from your application, database or windows authentication and provide it to the Izenda Reports API. Furthermore, specifying your login page will ensure that users do not see reports without being logged in.
 
