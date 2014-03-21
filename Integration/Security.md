@@ -11,8 +11,8 @@ Type of security|Example|Implementation Details
 [User Driven Report Sharing](#User-Driven-Report-Sharing)|A user can save a report and decide if they want other users to see this report. They can also mark a report read-only meaning it can be viewed but not saved over.|[[Basic Report Sharing]] [[CurrentUserIsAdmin]] [[ReportsPath]] [[Read-Only & Shared Checkboxes]]
 [Custom Report Control](#ReportControl)|Different departments can see different base reports.|[[VisibleDataSources hides reports for non-accessible datasources]] [[ReportsList may be overridden]] [[Storing Reports]] [[ReportsPath]]
 [Overwriting and Deleting Reports](#Overwriting-and-Deleting-Reports)|Users can load shared or base reports, but should not be able to delete them or overwrite them.|[[AllowOverwritingReports]] [[AllowDeletingReports]] [[CurrentUserIsAdmin]]
-[Altering Capabilities by Role](#AlteringCapabilities)|Only power users should see the modify report button on the report viewer. Others will only access the report viewer.|[[ShowDesignLinks]] [[ShowModifyButton]] [[AllowOverwritingReports]] [[ShowAdminButton]]
-[Field/Record or Tenant Level Security](#TenantSecurity)|Salespeople look at the same report but see different data based on their territory and credentials. In a multi-tenant environment, reports and data for each customer, group, or tenant should be isolated.|[[PreExecuteReportSet - Hidden Filters]] [[ProcessEqualsSelectList]] [[Field & Record Level Security]]
+[Altering Capabilities by Role](#Altering-Capabilities-by-Role)|Only power users should see the modify report button on the report viewer. Others will only access the report viewer.|[[ShowDesignLinks]] [[ShowModifyButton]] [[AllowOverwritingReports]] [[ShowAdminButton]]
+[Field/Record or Tenant Level Security](#Field/Record-or-Tenant-Level-Security)|Salespeople look at the same report but see different data based on their territory and credentials. In a multi-tenant environment, reports and data for each customer, group, or tenant should be isolated.|[[PreExecuteReportSet - Hidden Filters]] [[ProcessEqualsSelectList]] [[Field & Record Level Security]]
 
 ###Login Security
 
@@ -92,7 +92,7 @@ The API allows control of deleting or modifying reports. Reports can be accessed
 }
 ```
 
-###<a name="AlteringCapabilities">Altering Capabilities by Role</a> | [Top](#Top)
+###Altering Capabilities by Role
 
 The API allows for over a hundred features of Izenda reports to be hidden or altered based on the user's role. All settings get applied on a per-user basis. 
 The following code applies properties like the connection string, where reports are stored and visibility of the modify button modify button based on the user.
@@ -121,7 +121,7 @@ The method will need to be called from your login process with the following lin
 	Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin()
 ```
 
-###<a name="TenantSecurity">Field/Record or Tenant Level Security</a> | [Top](#Top)
+###Field/Record or Tenant Level Security
 
 Many applications limit users to specific records based on their credentials. The HiddenFilters API Setting may be used to add hidden filters to reports which limit the results based on the user, their credentials and their tenant. In this example, anyone reporting on the AcmeWidgetSales view will be limited to data in their TerritoryID.
 
