@@ -32,11 +32,11 @@ The Izenda localization capability is built on top of Microsoft’s .NET localiz
 
 **What Is “Resources”?**
 
-For localization, Izenda uses .Net managed resources Files (*.resx), which are standard resources for .Net. Resource files are XML-formatted text files, so you can edit it in an XML editor or even any plain text editor.
+For localization, Izenda uses .Net managed resources Files (\*.resx), which are standard resources for .Net. Resource files are XML-formatted text files, so you can edit it in an XML editor or even any plain text editor.
 
 **How Do I Install The Language Pack?**
 
-The language pack consists of a set of *.resx files inside the “Resources” folder. In addition, you will need a special license key that enables localization. Please contact your account manager to get these resources.
+The language pack consists of a set of \*.resx files inside the “Resources” folder. In addition, you will need a special license key that enables localization. Please contact your account manager to get these resources.
 Installing the Izenda Language Pack consists of **two** steps:
   1. Copying localization resources
   2. Set up localization in the code
