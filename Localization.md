@@ -3,9 +3,9 @@
 [[_TOC_]]
 
 Izenda provides an add-on localization package capable of localizing the Izenda UI, Field Names as well as the data itself into other languages.
-What version of AdHoc supports Language Pack?
+What version of AdHoc supports the Language Pack?
 
-To use Language Pack you should have Izenda AdHoc of version 6.4.4314 or higher
+To use the Language Pack you should have Izenda AdHoc of version 6.4.4314 or higher
 ###<a name="IncludedLanguages"></a>What Languages Are Included? | [Top](#Top)
 
 The following languages are currently supported. More are being added based on customer demand and are available upon request. Please contact your sales rep or sales@izenda.com if you need additional languages.
