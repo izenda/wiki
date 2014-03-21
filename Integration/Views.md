@@ -166,5 +166,3 @@ SELECT [ShipCountry],SUM(Freight) AS Total,SUM(CASE DATEPART(yyyy,[OrderDate])
 FROM [Orders]
 GROUP BY [ShipCountry]
 ```
-
-Continue to [[Architecture]].
