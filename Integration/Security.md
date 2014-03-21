@@ -9,7 +9,7 @@ Type of security|Example|Implementation Details
 [Login](#Login-Security) |Users must login before gaining access to reports.|[[RequireLogin]] [[CurrentUserName]] [[CurrentUserIsAdmin]] [[Your Login Page Integration]]
 [Data Sources](#Data-Sources)|A specific user can only see certain data sources.|[[RequireLogin]] [[Basic Report Sharing]] [[VisibleDataSource]] [[Database Security]]
 [User Driven Report Sharing](#User-Driven-Report-Sharing)|A user can save a report and decide if they want other users to see this report. They can also mark a report read-only meaning it can be viewed but not saved over.|[[Basic Report Sharing]] [[CurrentUserIsAdmin]] [[ReportsPath]] [[Read-Only & Shared Checkboxes]]
-[Custom Report Control](#ReportControl)|Different departments can see different base reports.|[[VisibleDataSources hides reports for non-accessible datasources]] [[ReportsList may be overridden]] [[Storing Reports]] [[ReportsPath]]
+[Custom Report Control](#Custom-Report-Control)|Different departments can see different base reports.|[[VisibleDataSources hides reports for non-accessible datasources]] [[ReportsList may be overridden]] [[Storing Reports]] [[ReportsPath]]
 [Overwriting and Deleting Reports](#Overwriting-and-Deleting-Reports)|Users can load shared or base reports, but should not be able to delete them or overwrite them.|[[AllowOverwritingReports]] [[AllowDeletingReports]] [[CurrentUserIsAdmin]]
 [Altering Capabilities by Role](#Altering-Capabilities-by-Role)|Only power users should see the modify report button on the report viewer. Others will only access the report viewer.|[[ShowDesignLinks]] [[ShowModifyButton]] [[AllowOverwritingReports]] [[ShowAdminButton]]
 [Field/Record or Tenant Level Security](#Field/Record-or-Tenant-Level-Security)|Salespeople look at the same report but see different data based on their territory and credentials. In a multi-tenant environment, reports and data for each customer, group, or tenant should be isolated.|[[PreExecuteReportSet - Hidden Filters]] [[ProcessEqualsSelectList]] [[Field & Record Level Security]]
@@ -71,7 +71,7 @@ public override void PostLogin()
 
 ![](http://wiki.izenda.us/Integration/Share-and-Read_only.png)
 
-###<a name="ReportControl">Custom Report Control</a> | [Top](#Top)
+###Custom Report Control
 
 To apply additional constraints to which users see what reports, it is necessary to override the ListReports method. See Report Management for additional details.
 
