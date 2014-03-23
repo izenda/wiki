@@ -4,7 +4,7 @@
 * FB-13139: Add basic cache usage statistics for static memory mode
 * FB-13017: Significantly increase performance in paginated reports with many rows of data (10k+)
 * FB-13243: Fix Inverted Grid CSS so it stays up-to-date when modified in the Designer and refreshed in the Viewer
-* FB-13240: Provide a separate rendering path when exporting when using HtmlCharts charting engine
+* FB-13240: Provide separate rendering path for exporting when using HtmlCharts charting engine
 * FB-13237: Fixed rendering of gauges in thumbnails to include the needle
 * FB-13028: Use POST parameters when loading ReportParts
 * FB-13119: Fix Text Highlight and Cell Highlight in the paginated report
