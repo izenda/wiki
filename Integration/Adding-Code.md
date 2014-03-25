@@ -1,4 +1,4 @@
-**Adding Code**
+#Adding Code
 
 [[_TOC_]]
 
@@ -116,5 +116,3 @@ We recommend setting this at the start of the user's session.
 **Izenda Reports API **
 
 Izenda also provides customers with access to its API Source code and to various pages with the purchase of our product. To access our API and browse through it, click access the Izenda Reports API. 
-
-Continue to [[Appearance]].
