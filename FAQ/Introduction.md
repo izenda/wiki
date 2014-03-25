@@ -23,15 +23,27 @@ The training walks through the features available in the various tabs of Izenda 
     * Insert field above: Creates a new field above the current one.
     * Insert field below: Creates a new field below the current one.
     * Advanced Field Settings: Learn more about advanced field settings [[here]]
+    * Add Subtotals: Creates a total line between each report and highlights the value in bold
 * **Summary tab:**
-    Here you can define a new set of data separate from the field list you selected that can act as a synopsis of your data. It is displayed above the table you defined on the Fields tab on the report viewer.
-    * 
-Chart tab
-Gauge tab
-Misc tab
-Style tab
-Filters Tab
-Pivots Feature
+    Here you can define a new set of data separate from the field list you selected that can act as a synopsis of your data. It is displayed above the table you defined on the Fields tab on the report viewer. Identical to the fields tab with a few exceptions.
+    * No visual grouping (VG checkbox)
+    * No arithmetic checkbox
+    * Has the option to show the changes in your data (handy for quarterly report summaries)
+* **Chart tab:**
+    You can define a chart to use here from a list of Izenda-supported charts. Selecting a chart will update the settings form directly below, which can be filled out with labels and other options. The standard ones include:
+    *Title
+    *Records
+    *Target report
+* **Gauge tab:**
+    *
+* **Misc tab:**
+    *
+* **Style tab:**
+
+* **Filters Tab:**
+
+* **Pivots Feature:**
+
 The training lessons focus on creating reports with these features: 
 [[Lesson 1: The Basics]]
 [[Lesson 2: Trend Charts]]
