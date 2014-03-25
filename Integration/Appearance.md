@@ -13,7 +13,7 @@ An example of how to set custom CSS:
   * download the archive
     * [CSS.ZIP](http://wiki.izenda.us/Integration/Appearance/css.zip)
   * edit the CSS files, **but do not change the selector names or the filenames**
-  * save the edited files to your server where they can be access via absolute urls
+  * save the edited files to your server where they can be accessed via absolute urls
   * navigate to the settings.aspx page
   * navigate to the "Images & CSS" tab
 
