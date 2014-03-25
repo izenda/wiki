@@ -1,7 +1,9 @@
 #Localization
-<a name="Top"></a>**Izenda Language Pack**
+<a name="Top"></a>
 
 [[_TOC_]]
+
+###Izenda Language Pack
 
 Izenda provides an add-on localization package capable of localizing the Izenda UI, Field Names as well as the data itself into other languages.
 What version of AdHoc supports the Language Pack?
