@@ -1,4 +1,4 @@
-###Architecture
+##Architecture
 
 [[_TOC_]]
 
@@ -88,5 +88,3 @@ By default, Izenda Reports allows many different settings customizations. Howeve
 By default, it uses an AdHocConfig class. When you add code for customization (for example see [[Adding Code]]) you are adding code to a class called CustomAdHocConfig which extends either the Database or File System storage mode base class. The definition for the CustomAdHocConfig class is found in the global.asax file, which is also where custom code is added. All of the methods and properties of the current class are exposed through the Izenda.AdHoc.AdHocSettings.AdHocConfig setting.
 
 Our structure enables you to access all of the relevant methods and properties without having to understand our object model.
-
-Continue to [[Adding Code]].
