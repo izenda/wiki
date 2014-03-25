@@ -1,5 +1,11 @@
 [[_TOC_]]
 # 6.7.0.262 (Release Pending)
+* FB-13006: Use a filestream to write thumbnail data to improve error reporting when permissions are not set correctly
+* FB-13282: Apply AdHocSettings.TenantField filter to the request for the Equals(Select) filter.
+* FB-13166: Added support of the MSSQL CASE-WHEN-ELSE-END clause in the Expressions.
+* FB-13240: Add trim() function to javascript output used by highcharts
+* FB-13267: Fix Equals(Checkboxes) and Equals(Multiple) filters behavior in the Report Viewer. It was impossible to check/select value if it is a single digit or single char
+* FB-13223: Prevented PIVOT tabs from showing in ReportViewer if reportSet is Locked
 * FB-13193: Fix filter logic when hidden filters are used
 * FB-13139: Add basic cache usage statistics for static memory mode
 * FB-13017: Significantly increase performance in paginated reports with many rows of data (10k+)
