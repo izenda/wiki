@@ -1,5 +1,5 @@
 [[_TOC_]]
-# 6.7.0.262 (Release Pending)
+# 6.7.0.262
 * FB-13006: Use a filestream to write thumbnail data to improve error reporting when permissions are not set correctly
 * FB-13282: Apply AdHocSettings.TenantField filter to the request for the Equals(Select) filter.
 * FB-13166: Added support of the MSSQL CASE-WHEN-ELSE-END clause in the Expressions.
