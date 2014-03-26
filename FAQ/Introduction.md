@@ -47,13 +47,19 @@ Here you can define a new set of data separate from the field list you selected 
 
 You can define a [chart](http://www.izenda.com/bi/ReportViewer.aspx?rn=Accounting) to use here from a list of Izenda-supported charts. Selecting a chart will update the settings form directly below, which can be filled out with labels and other options. The selectable chart types are:
 
-* **Trend:** Creates a standard line plot graph in your report. Line display options include straight line and smooth curve.
-    * **Title:** The chart title
-    * **Label Title:** The label for the X-axis data 
-    * **Value Title:** The label for the Y-axis data
+* **Trend:** Creates a standard line plot graph in your report.
+    * **Label Title:** The label for the X-axis data.
+    * **Value Title:** The label for the Y-axis data.
     * **Show Legend:** 
-    * **Scale %:** 
+    * **Smooth:** Leaving this unchecked shows straight lines between data points. Checking it displays the chart with smooth interpolated lines.
+    * **Scale %:** Scales the chart's height by the input percentage.
 * **Pie:** Creates a circular pie graph in your report. 
+    * **Label:** The data column to use as the titles for each pie slice.
+    * **Show as 3D:** Toggles whether the chart is displayed in 3D.
+    * **Explode Largest Slice:** Causes the largest slice of the pie graph to separate from the pie when the graph is displayed.
+    * **Show Percentage:** Shows the percentage of the graph that each sector represents rounded to two decimal places.
+    * **Show Value Labels:** 
+    * **Combine Bottom %:** Displays a pie slice called "Other" as the aggregation of the remaining data.
 * **Bar:** 
 * **Funnel:**
 * **Visualization:**
