@@ -1,10 +1,14 @@
-**Introduction**
+#Introduction
+
+[[_TOC_]]
 
 We are continually developing online Izenda Reports training materials focused on the needs of novice users. The materials will include a basic overview of building reports which utilize bar, pie, and trend charts as well as some advanced topics. These materials include both video and printable formats.
 
 All training materials are available on the Izenda Reports site at no charge. The presentations and lessons assume the availability of a working copy of Izenda Reports connected to a database containing both text and numerical data. You may print and re-distribute these materials to any users within the organization or company that licenses Izenda Reports. 
 
-The training walks through the features available in the various tabs of Izenda Reports in order to familiarize the users with the options available: 
+###Report Designer
+
+The training walks through the features available in the various tabs of the Izenda Report Designer in order to familiarize the users with the options available: 
 * **Datasources tab:**
     Here you can select the data sources (tables and views) to use in your report.  There are two ways to view this.
     * **Basic:** The basic view of the data sources tab will let you choose from a list of recent data sources or choose one data source from a list.
