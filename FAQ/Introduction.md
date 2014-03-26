@@ -54,11 +54,13 @@ You can define a [chart](http://www.izenda.com/bi/ReportViewer.aspx?rn=Accountin
     * **Smooth:** Leaving this unchecked shows straight lines between data points. Checking it displays the chart with smooth interpolated lines.
     * **Scale %:** Scales the chart's height by the input percentage.
 * **Pie:** Creates a circular pie graph in your report. 
-    * **Label:** The data column to use as the titles for each pie slice.
+    * **Label:** The data column to use as the titles for each pie slice. Only shown by hovering the mouse over the pie slice by default.
     * **Show as 3D:** Toggles whether the chart is displayed in 3D.
     * **Explode Largest Slice:** Causes the largest slice of the pie graph to separate from the pie when the graph is displayed.
     * **Show Percentage:** Shows the percentage of the graph that each sector represents rounded to two decimal places.
+    * **Chart Type:** Allows users to specify whether the graph is represented as a pie chart or a doughnut chart.
     * **Show Value Labels:** 
+    * **Show Slice Labels:** Displays the Label for each pie slice on the outside of the chart.
     * **Combine Bottom %:** Displays a pie slice called "Other" as the aggregation of the remaining data.
 * **Bar:** 
 * **Funnel:**
