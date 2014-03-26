@@ -47,14 +47,14 @@ Here you can define a new set of data separate from the field list you selected 
 
 You can define a chart to use here from a list of Izenda-supported charts. Selecting a chart will update the settings form directly below, which can be filled out with labels and other options. The selectable chart types are:
 
-* **Trend:** Creates a standard line plot graph in your report.
+* **Trend:** Creates a standard line plot graph in your report with any of the following options:
     * **Label Title:** The label for the X-axis data.
     * **Value Title:** The label for the Y-axis data.
     * **Show Legend:** 
     * **Smooth:** Leaving this unchecked shows straight lines between data points. Checking it displays the chart with smooth interpolated lines.
     * **Scale %:** Scales the chart's height by the input percentage.
     * [See An Example](http://www.izenda.com/bi/ReportViewer.aspx?rn=Accounting)
-* **Pie:** Creates a circular pie graph in your report. 
+* **Pie:** Creates a circular pie graph in your report with any of the following options:
     * **Label:** The data column to use as the titles for each pie slice. Only shown by hovering the mouse over the pie slice by default.
     * **Show as 3D:** Toggles whether the chart is displayed in 3D.
     * **Explode Largest Slice:** Causes the largest slice of the pie graph to separate from the pie when the graph is displayed.
@@ -63,15 +63,30 @@ You can define a chart to use here from a list of Izenda-supported charts. Selec
     * **Show Value Labels:** 
     * **Show Slice Labels:** Displays the Label for each pie slice on the outside of the chart.
     * **Combine Bottom %:** Displays a pie slice called "Other" as the aggregation of the remaining data.
-* **Bar:** 
+    * [See an example](http://izenda.com/bi/ReportViewer.aspx?rn=Product+List)
+* **Bar:** Creates a bar graph in your report with any of the following options:
     * **Separator:** This field causes the chart to create multiple bars per data category based on the column selected.
     * **Line Value:** Determines the value to use for a trend graph that is overlaid on top of the bar chart.
     * **Show Pareto:** Overlays a trend graph on top of the bar chart. Line Value is required for the value of the trend.
     * **Stacked:** Changes the bar graph from individual bars to a single bar stacked using the Separator field value. Disabled if not using the Separator field.
     * **Horizontal:** Causes the graph to be re-oriented 90 degrees.
     * **Shade Area Under Line:** Produces a shading effect underneath the trend chart line. The shading is color-coded with the line color.
-* **Funnel:**
-* **Visualization:**
+    * **Label Title(Bottom):** Applies a label to the bottom of the chart (x-axis).
+    * **Label Title(Left):** Applies a label to the left of the chart (y-axis, describes the data displayed with the bar chart).
+    * **Label Title(Right):** Applies a label to the right of the chart (y-axis, describes the data displayed with the trend chart).
+    * [See an example](http://izenda.com/bi/ReportViewer.aspx?rn=Human+Resources)
+* **Funnel:** Displays a funnel graph in your report with any of the following options:
+    * **Show Percent:** Displays the percentage of the funnel that the section represents.
+    * **Mode:** Determines if the y-axis value is used for width or for height.
+* **Visualization:** Adds an advanced type of chart into your report. While these do not have any options, there are a variety of templates you can use:
+    * **Arc Map:** Displays a map with bubbles sized based on your data. When the bubbles are moused over, segments are drawn connecting the related data points. Can be used to show where on the map real world items have traveled.
+    * **Auto Chart:** Combines several different types of charts that are selectable from a drop-down menu. These charts include, bar, trend, pie, funnel, and bubble charts. Offers more dynamic interaction with your data than the standard charts above.
+    * **Time Bubble:** Creates an animated bubble chart that displays change over time.
+    * **Transitions:** Combines many different charts into one fluid animation of data, displaying it in various metrics.
+    * **Bubble Grid:** Displays a chart with bubbles sized based on the magnitude of the data. The categories can be moused over to show the actual numbers behind the bubbles.
+    * **Polar:** A type of radial graph that is good for multi-variate data of three or more quantitative values. The farther from the center the point is, the larger the value of the data.
+    * **Sunburst:** Another type of radial graph that is good for displaying hierarchical data. Data on the inside is broader while data on the outside is more specific.
+    * **
 
 ####Gauge tab
 
