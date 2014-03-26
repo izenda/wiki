@@ -45,7 +45,7 @@ Here you can define a new set of data separate from the field list you selected 
 
 ####Chart tab
 
-You can define a [chart](http://www.izenda.com/bi/ReportViewer.aspx?rn=Accounting) to use here from a list of Izenda-supported charts. Selecting a chart will update the settings form directly below, which can be filled out with labels and other options. The selectable chart types are:
+You can define a chart to use here from a list of Izenda-supported charts. Selecting a chart will update the settings form directly below, which can be filled out with labels and other options. The selectable chart types are:
 
 * **Trend:** Creates a standard line plot graph in your report.
     * **Label Title:** The label for the X-axis data.
@@ -53,6 +53,7 @@ You can define a [chart](http://www.izenda.com/bi/ReportViewer.aspx?rn=Accountin
     * **Show Legend:** 
     * **Smooth:** Leaving this unchecked shows straight lines between data points. Checking it displays the chart with smooth interpolated lines.
     * **Scale %:** Scales the chart's height by the input percentage.
+    * [See An Example](http://www.izenda.com/bi/ReportViewer.aspx?rn=Accounting)
 * **Pie:** Creates a circular pie graph in your report. 
     * **Label:** The data column to use as the titles for each pie slice. Only shown by hovering the mouse over the pie slice by default.
     * **Show as 3D:** Toggles whether the chart is displayed in 3D.
@@ -63,12 +64,18 @@ You can define a [chart](http://www.izenda.com/bi/ReportViewer.aspx?rn=Accountin
     * **Show Slice Labels:** Displays the Label for each pie slice on the outside of the chart.
     * **Combine Bottom %:** Displays a pie slice called "Other" as the aggregation of the remaining data.
 * **Bar:** 
+    * **Separator:** This field causes the chart to create multiple bars per data category based on the column selected.
+    * **Line Value:** Determines the value to use for a trend graph that is overlaid on top of the bar chart.
+    * **Show Pareto:** Overlays a trend graph on top of the bar chart. Line Value is required for the value of the trend.
+    * **Stacked:** Changes the bar graph from individual bars to a single bar stacked using the Separator field value. Disabled if not using the Separator field.
+    * **Horizontal:** Causes the graph to be re-oriented 90 degrees.
+    * **Shade Area Under Line:** Produces a shading effect underneath the trend chart line. The shading is color-coded with the line color.
 * **Funnel:**
 * **Visualization:**
 
 ####Gauge tab
 
-Applies a gauge control to your report that can give useful information about min/average/max load capacity and other magnitude-based data [Example](http://www.izenda.com/bi/ReportViewer.aspx?rn=Human+Resources)
+Applies a gauge control to your report that can give useful information about min/average/max load capacity and other magnitude-based data. [See An Example](http://www.izenda.com/bi/ReportViewer.aspx?rn=Human+Resources)
 
     * 
 ####Misc tab
