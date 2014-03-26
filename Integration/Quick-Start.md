@@ -7,15 +7,15 @@ Izenda reports includes a flexible API that can be configured to integrate with 
 ###Izenda Reports Quick Setup
 To integrate Izenda into your own website, you will first need a development environment, such as Visual Studio. Once you have a development environment, you can get our website template from [here](http://www.izenda.com/Site/DownloadComplete.aspx?msgId=0). Once you have followed the steps there, return here and find out more about how you can get started using Izenda Reports.
 
-####Configuring Settings
+###Configuring Settings
 
 The Izenda Reports API contains specific settings that alter the behavior of the tool on a per-user basis. Settings can be applied through the Settings.aspx page or via a CustomAdHocConfig class which is normally found in the Global.asax file. Examples of important settings include the license key or the user name. 
 
-####Creating Views
+###Creating Views
 
 Some databases contain complex field names that may be confusing to users. In these situations it may be necessary to create reporting views that simplify the data model for the user. Users can be limited to specific views using the "Visible DataSources" setting. See the [[Views]] article for more details. 
 
-####Applying Branding
+###Applying Branding
 
 There are a few different ways to apply your branding, logo or header controls to Izenda Reports. 
 
@@ -25,15 +25,15 @@ Master Pages : If you already have an ASP.NET master page, you can apply it to R
 
 IFRAMES or Frames : The Izenda reports pages may be placed inside an IFRAME or FRAME. This would need to be done for ReportDesigner.aspx, ReportList.aspx, and ReportViewer.aspx. 
 
-####Building Core Reports
+###Building Core Reports
 
 The best way to deploy Izenda is to create a small set of base reports that user can then customize. Ideally initial reports should contain the most relevant data sources and fields. It may be beneficial to add summaries and charts to them as well. See the training section for details on how to create various types of reports. 
 
-####Enforcing Security and User Limitations
+###Enforcing Security and User Limitations
 
 The Izenda Reports platform includes a robust and flexible security model which inherits rich security credentials from your application. This example covers how to apply security for most common scenarios by using the PostLogin() to pass user credentials to the Izenda API. This method is normally found in the [CustomAdHocConfig](http://wiki.izenda.us/Adding-Code) class in the Global.asax file. 
 
-####*Assumptions - These will vary based on your application*
+###*Assumptions - These will vary based on your application*
 
   * The username is stored in a session variable called "UserName"
   * The users role is stored in a session variable called "Role" 
@@ -41,7 +41,7 @@ The Izenda Reports platform includes a robust and flexible security model which 
   * The database contains tables and views with a field named "ClientID"
   * Reports will be created and saved to a category called "Admin Reports" 
 
-####*Limitations Enforced*
+###*Limitations Enforced*
 
   * The user is logged In
   * The user can only see records for their ClientID
