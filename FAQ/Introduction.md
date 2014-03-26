@@ -10,9 +10,9 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 The training walks through the features available in the various tabs of the Izenda Report Designer in order to familiarize the users with the options available: 
 ####Datasources tab
-    Here you can select the data sources (tables and views) to use in your report.  There are two ways to view this.
-    * **Basic:** The basic view of the data sources tab will let you choose from a list of recent data sources or choose one data source from a list.
-    * **Advanced:** This view will let you choose any number of data sources and define their relationships. This acts as an SQL join would.
+Here you can select the data sources (tables and views) to use in your report.  There are two ways to view this.
+* **Basic:** The basic view of the data sources tab will let you choose from a list of recent data sources or choose one data source from a list.
+* **Advanced:** This view will let you choose any number of data sources and define their relationships. This acts as an SQL join would.
 ####Field tab
     Here you can select how many records to display, as well as define which data you wish to be included in your report. Here is a list of controls and their descriptions.
     * **Records:** Defines the maximum amount of results to display.
