@@ -81,12 +81,19 @@ You can define a chart to use here from a list of Izenda-supported charts. Selec
 * **Visualization:** Adds an advanced type of chart into your report. While these do not have any options, there are a variety of templates you can use:
     * **Arc Map:** Displays a map with bubbles sized based on your data. When the bubbles are moused over, segments are drawn connecting the related data points. Can be used to show where on the map real world items have traveled.
     * **Auto Chart:** Combines several different types of charts that are selectable from a drop-down menu. These charts include, bar, trend, pie, funnel, and bubble charts. Offers more dynamic interaction with your data than the standard charts above.
-    * **Time Bubble:** Creates an animated bubble chart that displays change over time.
-    * **Transitions:** Combines many different charts into one fluid animation of data, displaying it in various metrics.
     * **Bubble Grid:** Displays a chart with bubbles sized based on the magnitude of the data. The categories can be moused over to show the actual numbers behind the bubbles.
+    * **Combo Grid:** Creates a pareto chart with much more dynamic and granular control of your data than the standard pareto chart.
+    * **Crossfilter:** Creates a bar chart with a slider that you can use to select specific groups of your data dynamically.
+    * **Heatmap:** Creates a heatmap with cells sized based on the magnitude of your data. The chart can be interacted with and clicking on any category will enact a drill-down of the data to the selected level. Clicking at the lowest level will send you back to the highest level. Great for massive amounts of hierarchical data.
+    * **Matrix:** Creates a heatmap with cells of a uniform size that are shaded darker or lighter based on the magnitude of the data. Great for discerning where in your data the greatest concentration exists.
     * **Polar:** A type of radial graph that is good for multi-variate data of three or more quantitative values. The farther from the center the point is, the larger the value of the data.
+    * **Projected Map:** Displays an Eckert map projection that is good for world geographical data and uses latitude/longitude to produce bubbles on the map sized to the data metric that is being measured. Use the mouse-wheel to zoom in or out of the map.
     * **Sunburst:** Another type of radial graph that is good for displaying hierarchical data. Data on the inside is broader while data on the outside is more specific.
-    * **
+    * **Time Bubble:** Creates an animated bubble chart that displays change over time.
+    * **Timeline:** Displays data in a timeline format, with the x-axis being time. Timelines that overlap are shaded with a darker color. Great for project management or shipping metrics.
+    * **Transitions:** Combines many different charts into one fluid animation of data, displaying it in various metrics.
+    * **Tree:** Displays bubbles sized in comparison with your data that aggregates it into the "trunk" of the tree.
+    * **Waterfall:** Displays a chart that can relate both positive and negative change for specific periods of time. Great for quarterly or yearly numeric data.
 
 ####Gauge tab
 
