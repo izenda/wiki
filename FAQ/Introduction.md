@@ -13,21 +13,22 @@ The training walks through the features available in the various tabs of the Ize
 Here you can select the data sources (tables and views) to use in your report.  There are two ways to view this.
 * **Basic:** The basic view of the data sources tab will let you choose from a list of recent data sources or choose one data source from a list.
 * **Advanced:** This view will let you choose any number of data sources and define their relationships. This acts as an SQL join would.
+
 ####Field tab
-    Here you can select how many records to display, as well as define which data you wish to be included in your report. Here is a list of controls and their descriptions.
-    * **Records:** Defines the maximum amount of results to display.
-    * **Field:** Allows selection of the table columns from the data set(s) chosen in the previous tab.
-    * **Description:** A name for the data column. This is filled in with the column name by default.
-    * **Sort:** Allows sorting of the data in ascending order when the report is generated
-    * **VG:** With this selected, a grid will be created for each unique value in the chosen field when the report is generated
-    * **A:** Allows arithmetic operations to be performed (+,-,*,/). This is context sensitive to the function being performed
-    * **Function:** Specifies an aggregate or grouping function to be performed, such as COUNT, SUM, and AVG
-    * **Format:** Specifies the format to be used when displaying the data. Applies to dates and numeric data. This is also context sensitive.
-    * **Delete:** Removes the field from the report.
-    * **Insert field above:** Creates a new field above the current one.
-    * **Insert field below:** Creates a new field below the current one.
-    * **Advanced Field Settings:** Learn more about advanced field settings [[here]]
-    * **Add Subtotals:** Creates a total line between each report and highlights the value in bold
+Here you can select how many records to display, as well as define which data you wish to be included in your report. Here is a list of controls and their descriptions.
+* **Records:** Defines the maximum amount of results to display.
+* **Field:** Allows selection of the table columns from the data set(s) chosen in the previous tab.
+* **Description:** A name for the data column. This is filled in with the column name by default.
+* **Sort:** Allows sorting of the data in ascending order when the report is generated
+* **VG:** With this selected, a grid will be created for each unique value in the chosen field when the report is generated
+* **A:** Allows arithmetic operations to be performed (+,-,*,/). This is context sensitive to the function being performed
+* **Function:** Specifies an aggregate or grouping function to be performed, such as COUNT, SUM, and AVG
+* **Format:** Specifies the format to be used when displaying the data. Applies to dates and numeric data. This is also context sensitive.
+* **Delete:** Removes the field from the report.
+* **Insert field above:** Creates a new field above the current one.
+* **Insert field below:** Creates a new field below the current one.
+* **Advanced Field Settings:** Learn more about advanced field settings [[here]]
+* **Add Subtotals:** Creates a total line between each report and highlights the value in bold
 ####Summary tab
     Here you can define a new set of data separate from the field list you selected that can act as a synopsis of your data. It is displayed above the table you defined on the Fields tab on the report viewer. Identical to the fields tab with a few exceptions.
     * No visual grouping (VG checkbox)
