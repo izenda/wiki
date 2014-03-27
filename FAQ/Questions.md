@@ -19,4 +19,4 @@
 * [[Using Stored Procedures In Izenda 6]]
 * [[Using the hidden columns setting]]
 * [What Are the Valid Query String Keys for rs.aspx](http://wiki.izenda.us/Query-String-Keys-for-rs-dot-aspx)
-* [[What does "Repeat Types" and "Send Email As" mean?]]
+* [What does "Repeat Types" and "Send Email As" mean?](http://wiki.izenda.us/What-does-Repeat-Types-and-Send-Email-As-mean)
