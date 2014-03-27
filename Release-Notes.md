@@ -1,5 +1,5 @@
 [[_TOC_]]
-# 6.7.0.262
+# 6.7.0.262 (Mar 25, 2014)
 * FB-13006: Use a filestream to write thumbnail data to improve error reporting when permissions are not set correctly
 * FB-13282: Apply AdHocSettings.TenantField filter to the request for the Equals(Select) filter.
 * FB-13166: Added support of the MSSQL CASE-WHEN-ELSE-END clause in the Expressions.
@@ -15,12 +15,12 @@
 * FB-13028: Use POST parameters when loading ReportParts
 * FB-13119: Fix Text Highlight and Cell Highlight in the paginated report
 
-# 6.7.0.261
+# 6.7.0.261 (Mar 17, 2014)
 * FB-12970: Removed unnecessary ActivateNewDashboardViewerControls() calls from reportViewer
 * FB-13193: Fixed problems with previewing reports after modifying Filter Logic
 * FB-13106: Resolved issue where tabs were greyed out on the report designer page when VisibleDataSources have been changed
 
-# 6.7.0.260
+# 6.7.0.260 (Mar 16, 2014)
 * FB-13177: Changed "Reset to default" button on Style tab in reportDesigner to standard button control which is used across all designers
 * FB-13113: Fixed empty jquery formatNumber result for 0 value
 * FB-13025: Resolved issue where HighCharts auto-sizing and auto-centering didn't work because chart as an inner element couldn't detect dimensions of outer container. Implemented support for specifying dimensions in pixels in chart property, so highcharts can rely on those values.
@@ -43,7 +43,7 @@
 * FB-13116: Fixed Equals(Popup) filter when one of the values is empty string. Empty string can now be selected as any other not empty value.
 * FB-13103: Fixed "(blank)" value in the filters. "(blank)" value is now interpreted as NULL when selected for example in the Equals(Popup) or Equals(Checkboxes) filter.
 
-# 6.7.0.259
+# 6.7.0.259 (Mar 9, 2014)
 * FB-13036: URL Encode '&' when processed in a drill-down value
 * FB-13035: Fixed erroneous adding of excess parameter to SqlCommand when drilldown filter with equals operator presents in reportSet
 * FB-13034: Fixed spontaneous loss of database connections
@@ -56,7 +56,7 @@
 * FB-12957: Added additional PostgreSQL type mappings
 * FB-12836: FusionConnections getter was made public
 
-# 6.7.0.258
+# 6.7.0.258 (Feb 27, 2014)
 * FB-12933: Make Instant Reports respect AdHocSettings.HiddenColumns
 * FB-11781: Fixed bug causing server resources to not be found in Instant Reports and Report Viewer
 * FB-12919: Disable default selection of Separator dropdown
@@ -75,7 +75,7 @@
 * FB-11792: Added support for arbitrary ordering of columns when executing report against a stored proc without "insert into exec"
 * FB-11517: ReportSet.Owner property is changed according to the AdHocSettings.CurrentUserName when report saved using "Save As"
 
-# 6.7.0.257
+# 6.7.0.257 (Feb 22, 2014)
 * FB-11687: Resolved issue with MVC4R2 Instant Reports where the field properties gear was not clickable
 * FB-11691: Resolved issue where drop-down lists of equals multiple filters would jump to the top of the list when selecting values
 * FB-11619: Added separator support for HTMLCHARTS pie chart
