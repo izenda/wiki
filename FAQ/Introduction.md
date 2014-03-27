@@ -6,18 +6,18 @@ We are continually developing online Izenda Reports training materials focused o
 
 All training materials are available on the Izenda Reports site at no charge. The presentations and lessons assume the availability of a working copy of Izenda Reports connected to a database containing both text and numerical data. You may print and re-distribute these materials to any users within the organization or company that licenses Izenda Reports. 
 
-###Report Designer
+##Report Designer
 
 The training walks through the features available in the various tabs of the Izenda Report Designer in order to familiarize the users with the options available: 
 
-####Datasources tab
+###Datasources tab
 
 Here you can select the data sources (tables and views) to use in your report.  There are two ways to view this.
 
 * **Basic:** The basic view of the data sources tab will let you choose from a list of recent data sources or choose one data source from a list.
 * **Advanced:** This view will let you choose any number of data sources and define their relationships. This acts as an SQL join would.
 
-####Field tab
+###Field tab
 
 Here you can select how many records to display, as well as define which data you wish to be included in your report. Here is a list of controls and their descriptions.
 
@@ -35,7 +35,7 @@ Here you can select how many records to display, as well as define which data yo
 * **Advanced Field Settings:** Learn more about advanced field settings [[here]]
 * **Add Subtotals:** Creates a total line between each report and highlights the value in bold
 
-####Summary tab
+###Summary tab
 
 Here you can define a new set of data separate from the field list you selected that can act as a synopsis of your data. It is displayed above the table you defined on the Fields tab on the report viewer. Identical to the fields tab with a few exceptions.
 
@@ -43,7 +43,7 @@ Here you can define a new set of data separate from the field list you selected 
 * No arithmetic checkbox
 * **Show Deltas:** shows the changes in your data as a percentage (handy for quarterly report summaries)
 
-####Chart tab
+###Chart tab
 
 You can define a chart to use here from a list of Izenda-supported charts. Selecting a chart will update the settings form directly below, which can be filled out with labels and other options. The selectable chart types are:
 
@@ -99,29 +99,26 @@ You can define a chart to use here from a list of Izenda-supported charts. Selec
     * **Title::** Used to add a title to your chart that is displayed in bold.
     * **Records:** Determines how many records of your data will be displayed in the chart.
     * **Scale %:** Scales the chart's height by the input percentage. (All but visualizations)
-####Gauge tab
+###Gauge tab
 
 Applies one or more gauge controls to your report that can give useful information about min/average/max load capacity and other magnitude-based data.
 
 * **Title:** Adds a title to the chart displayed in bold above all the gauges.
 * **Records:** The amount of records to be used for this chart. Unlike in regular charts, this will add a new gauge for each record and is capped at twelve.
 * [See An Example](http://www.izenda.com/bi/ReportViewer.aspx?rn=Human+Resources)
-####Misc tab
+###Misc tab
 
+Here you can change properties concerning your general report. You can also schedule emails to send your report out via Izenda's custom scheduler.
+* **Report Header Image Justification:** Has three settings that can be cycled through by clicking (R - right, L - left, M - middle). The report header is set in the [Izenda Settings]() page.
+* **Title:** The report's title, displayed either left-aligned, right-aligned, or centered depending on what the box selection was to the right of the control. 
+* **Description:** The report's description, displayed below the title. Can also be re-aligned.
+* **Report Header:** Add a header to the report.
+* **Page Header:** Add a header to the page. 
+* **Footer:** Add a footer to the report.
+* *Hint: You can grab the first result of a field using [FieldName] and Izenda Reports will display the associated data! You can use this to make reports customized to individuals by putting these types of entities into the title and description fields.
 
-    *
-####Style tab
+###Style tab
 
 ####Filters Tab
 
 ####Pivots Feature
-
-The training lessons focus on creating reports with these features: 
-[[Lesson 1: The Basics]]
-[[Lesson 2: Trend Charts]]
-[[Lesson 3: Bar Charts]]
-[[Lesson 4: Pie Charts]]
-[[Lesson 5: Advanced Charting & Analysis]]
-[[Lesson 6: Pivot Feature Steps]]
-* [[Contacting Microsoft]]
-* [[Setting Up a Branded Izenda Demo in 15 Minutes]]
