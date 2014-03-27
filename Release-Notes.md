@@ -98,3 +98,5 @@
 * FB-11684: Changed rs.aspx?clear=1 to clear schema, fusion, and reports caches
 * FB-11682: Resolved concurrency issues when caching reports on load balanced systems
 * FB-11726: Fixed bug where "TimeClass" was erroneously shown as a filter description
+
+# 6.7.0.256 (Feb 8, 2014)
