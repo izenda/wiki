@@ -3,10 +3,11 @@
 Izenda Reports Supports both the current and previous versions of:
 
 * Microsoft Internet Explorer
-* Mozilla Firefox
+* Mozilla Firefox 
 * Google Chrome
 * Safari
 * Opera
+* Netscape
 
 We also offer support for mobile platforms as well:
 
