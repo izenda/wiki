@@ -1,5 +1,5 @@
 #How do I find out when my license will expire
 
-This information is available by default at the bottom of the ReportViewer and on the Dashboards.aspx page. If your key does not expire or you have more than a week before your license expires, you will not see this information.
+This information is available by default at the bottom of the ReportViewer and on the Dashboards.aspx page when your license is less than a week away from expiring.
 
 There is no way to access any license information in your own C# code.
