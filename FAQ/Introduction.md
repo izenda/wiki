@@ -122,6 +122,6 @@ Here you can change properties concerning your general report. You can also sche
 
 ###Style tab
 
-####Filters Tab
+###Filters Tab
 
-####Pivots Feature
+###Pivots Feature
