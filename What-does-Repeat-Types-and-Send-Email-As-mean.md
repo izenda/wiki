@@ -4,7 +4,7 @@
 
 ###What are "Repeat Types"?
 
-Repeat Types exist in the miscellaneous section of ReportDesigner.aspx and are simply expressions that reflect how often the email should be sent.
+Repeat Types exist in the "Misc" section of ReportDesigner.aspx and are simply expressions that reflect how often the email should be sent.
 
 ![Repeat Types & Send Email As](http://wiki.izenda.us/FAQ/FAQ/RepeatType_And_Link.png)
 
