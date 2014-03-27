@@ -1,3 +1,5 @@
+#Questions
+
 * [[What does "Repeat Types" and "Send Email As" mean?]]
 * [[How to calculate difference between dates?]]
 * [[Using the hidden columns setting]]
