@@ -52,7 +52,6 @@ You can define a chart to use here from a list of Izenda-supported charts. Selec
     * **Value Title:** The label for the Y-axis data.
     * **Show Legend:** 
     * **Smooth:** Leaving this unchecked shows straight lines between data points. Checking it displays the chart with smooth interpolated lines.
-    * **Scale %:** Scales the chart's height by the input percentage.
     * [See An Example](http://www.izenda.com/bi/ReportViewer.aspx?rn=Accounting)
 * **Pie:** Creates a circular pie graph in your report with any of the following options:
     * **Label:** The data column to use as the titles for each pie slice. Only shown by hovering the mouse over the pie slice by default.
@@ -78,6 +77,7 @@ You can define a chart to use here from a list of Izenda-supported charts. Selec
 * **Funnel:** Displays a funnel graph in your report with any of the following options:
     * **Show Percent:** Displays the percentage of the funnel that the section represents.
     * **Mode:** Determines if the y-axis value is used for width or for height.
+    * [See an example](http://www.izenda.com/bi/ReportViewer.aspx?rn=Charts\Simple+Funnel)
 * **Visualization:** Adds an advanced type of chart into your report. While these do not have any options, there are a variety of templates you can use:
     * **Arc Map:** Displays a map with bubbles sized based on your data. When the bubbles are moused over, segments are drawn connecting the related data points. Can be used to show where on the map real world items have traveled.
     * **Auto Chart:** Combines several different types of charts that are selectable from a drop-down menu. These charts include, bar, trend, pie, funnel, and bubble charts. Offers more dynamic interaction with your data than the standard charts above.
@@ -94,12 +94,18 @@ You can define a chart to use here from a list of Izenda-supported charts. Selec
     * **Transitions:** Combines many different charts into one fluid animation of data, displaying it in various metrics.
     * **Tree:** Displays bubbles sized in comparison with your data that aggregates it into the "trunk" of the tree.
     * **Waterfall:** Displays a chart that can relate both positive and negative change for specific periods of time. Great for quarterly or yearly numeric data.
-
+    * **World Tour:** This is a 3D spherical map of the entire world that animates itself to move around the world to your different datapoints. 
+* **Settings:** Here is a list of settings that are applicable to all charts:
+    * **Title::** Used to add a title to your chart that is displayed in bold.
+    * **Records:** Determines how many records of your data will be displayed in the chart.
+    * **Scale %:** Scales the chart's height by the input percentage. (All but visualizations)
 ####Gauge tab
 
-Applies a gauge control to your report that can give useful information about min/average/max load capacity and other magnitude-based data. [See An Example](http://www.izenda.com/bi/ReportViewer.aspx?rn=Human+Resources)
+Applies one or more gauge controls to your report that can give useful information about min/average/max load capacity and other magnitude-based data.
 
-    * 
+* **Title:** Adds a title to the chart displayed in bold above all the gauges.
+* **Records:** The amount of records to be used for this chart. Unlike in regular charts, this will add a new gauge for each record and is capped at twelve.
+* [See An Example](http://www.izenda.com/bi/ReportViewer.aspx?rn=Human+Resources)
 ####Misc tab
 
 
