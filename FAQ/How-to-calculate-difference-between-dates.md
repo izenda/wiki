@@ -14,3 +14,6 @@ AdHocSettings.DateArithmeticDecimalPlaces = 3;
 ```
 
 Please see the following simple example of date arithmetic use: 
+
+![](http://wiki.izenda.us/FAQ/FAQ/date_difference_example.png)
+![](http://wiki.izenda.us/FAQ/FAQ/date_difference_results.png)
