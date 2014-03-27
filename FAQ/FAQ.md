@@ -1,3 +1,5 @@
+#FAQ
+
 * [[Introduction]]
 * [[Questions]]
 * [[Platform]]
