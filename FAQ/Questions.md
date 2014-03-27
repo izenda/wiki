@@ -12,10 +12,11 @@
 * [[Using Stored Procedures In Izenda 6. Part 2]]
 * [[Using Stored Procedures In Izenda 6]]
 * [[How to Create a Drill-Down Report in V6.0]]
-* [[How do I find out how many COres I have?]]
+* [[How do I find out how many Cores I have?]]
 * [[How to Add Custom Timespan]]
 * [[How To Modify the Toolbar]]
 * [[How To Apply Advanced Logic Filters]]
 * [[How To Set ReportParts]]
 * [[How to Remove Buttons from Dashboard Designer]]
 * [Query String Keys for rs.aspx](http://wiki.izenda.us/Query-String-Keys-for-rs-dot-aspx)
+* [[How do I find out when my license will expire?]]
