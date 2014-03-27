@@ -16,4 +16,9 @@ AdHocSettings.DateArithmeticDecimalPlaces = 3;
 Please see the following simple example of date arithmetic use: 
 
 ![](http://wiki.izenda.us/FAQ/FAQ/date_difference_example.png)
+
+Here we establish our report fields. Note how the (-) operator is selected on the last "OrderDate" field and the field preceeding it will be named "Shipping Time(Days)".
+
 ![](http://wiki.izenda.us/FAQ/FAQ/date_difference_results.png)
+
+We can see that our data has appeared as we wanted it in our preview.
