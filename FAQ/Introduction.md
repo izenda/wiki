@@ -99,6 +99,7 @@ You can define a chart to use here from a list of Izenda-supported charts. Selec
     * **Title::** Used to add a title to your chart that is displayed in bold.
     * **Records:** Determines how many records of your data will be displayed in the chart.
     * **Scale %:** Scales the chart's height by the input percentage. (All but visualizations)
+
 ###Gauge tab
 
 Applies one or more gauge controls to your report that can give useful information about min/average/max load capacity and other magnitude-based data.
@@ -106,9 +107,11 @@ Applies one or more gauge controls to your report that can give useful informati
 * **Title:** Adds a title to the chart displayed in bold above all the gauges.
 * **Records:** The amount of records to be used for this chart. Unlike in regular charts, this will add a new gauge for each record and is capped at twelve.
 * [See An Example](http://www.izenda.com/bi/ReportViewer.aspx?rn=Human+Resources)
+
 ###Misc tab
 
 Here you can change properties concerning your general report. You can also schedule emails to send your report out via Izenda's custom scheduler.
+
 * **Report Header Image Justification:** Has three settings that can be cycled through by clicking (R - right, L - left, M - middle). The report header is set in the [Izenda Settings]() page.
 * **Title:** The report's title, displayed either left-aligned, right-aligned, or centered depending on what the box selection was to the right of the control. 
 * **Description:** The report's description, displayed below the title. Can also be re-aligned.
