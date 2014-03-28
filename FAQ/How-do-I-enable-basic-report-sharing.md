@@ -1,5 +1,7 @@
 #How do I enable basic report sharing?
 
+[[_TOC_]]
+
 Basic report sharing allows users to decide if they want to share a report or keep it in their private sandbox. It also enables sharing reports in read-only mode which act as templates. This mode allows other users to load a report but not overwrite it. Report creators can find these features in the "Misc" tab of the report designer. In order to use basic report sharing, you will need to set the username and admin status. This needs to happen as part of your application's post-login process. These settings should be set right after the user credentials are authenticated. This example shows the specific code that must called to enable basic report sharing.
 
 ```c#
