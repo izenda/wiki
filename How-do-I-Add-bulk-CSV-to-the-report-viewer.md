@@ -2,7 +2,7 @@
 
 This code will show the bulk csv option export type in the Report Viewer.
 
-```C#
+```csharp
 //show (unhide) the option for bulk csv
 
 AdHocSettings.OutputTypes["BULKCSV"].Hidden = false;
