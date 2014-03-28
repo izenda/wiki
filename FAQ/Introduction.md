@@ -22,7 +22,7 @@ Here you can select the data sources (tables and views) to use in your report.  
 Here you can select how many records to display, as well as define which data you wish to be included in your report. Here is a list of controls and their descriptions.
 
 * **Records:** Defines the maximum amount of results to display.
-* **Field:** Allows selection of the table columns from the data set(s) chosen in the previous tab.
+* **Field:** Allows selection of the table columns from the data set(s) chosen in the datasources tab.
 * **Description:** A name for the data column. This is filled in with the column name by default.
 * **Sort:** Allows sorting of the data in ascending order when the report is generated
 * **VG:** With this selected, a grid will be created for each unique value in the chosen field when the report is generated
@@ -139,6 +139,30 @@ Here you can add styling to your report. This affects the table that is displaye
 * **Page Break After Visual Groups:** This applies to PDFs and word documents.
 This will use the visual grouping feature to create a PDF or DOC file with one page per visual group.
 * **Minimize Grid Width:** 
+* **Visual Group Style:** 
+    * **Comma Delimited:**
+    * **Comma Delimited With Labels:**
+    * **Line Delimited:**
+    * **Line Delimited With Labels:**
+    * **Field Value:**
+    * **Multi Level:**
+    * **Multi Level With Labels:**
+    * **Analysis Grid:**
+    * **VG Hierarchy:**
+* **Items Per Page (In Viewer):** Limits the amount of items displayed on the report viewer to the number in the box. If visual grouping is used, all visual groups are added together for purposes of showing records. Subtotal lines are not included in the count.
+* **Report Order:** Allows you to change the order in which your report elements are shown in the viewer and in printed reports.
+* **Field|Value Column Pairs:** 
+* **Show Main Report In Field|Value Style:**
+* **Show Summary Report In Field|Value Style:**
+
 ###Filters Tab
 
-###Pivots Feature
+Here you can define filters for your data. These work as conditionals that are easier for non-technical users to use than the underlying queries. 
+* **Filter Field:** The database field to apply the operation to. This is populated from the selected datasources like the fields tab.
+* **Operator:** Applies the selected operation to the filter field. There are a number of options that are easily readable and understandable by average users. This field is context sensitive based on the type of data in the filter field.
+* **Values:** Here you can specify what values you want to use the selected operation to compare with the values in the filter field. You can either use a pre-defined list of values presented in several different formats, or you can define your own conditions. This is context sensitive with regards to the other filters already selected.
+* **Blank:** When checked, includes blank values in the list of acceptable values. Unchecked by default.
+* **Param:** When checked, specifies that the filter field is included in the report viewer. Checked by default.
+* **Show Filters In Report Description:** Displays the computed filter values in the report viewer. This can be used to more accurately see what the conditionals will look like when the data is sent to the server.
+* **Require X Parameters In Viewer:** 
+* **Filter Logic:**
