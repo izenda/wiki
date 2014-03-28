@@ -1,4 +1,4 @@
-#How do I find out how many Cores I have?
+#How do I find out how many Cores or Sockets I have?
 
 [[_TOC_]]
 
