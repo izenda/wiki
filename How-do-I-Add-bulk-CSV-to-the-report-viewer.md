@@ -1,5 +1,7 @@
 #How do I Add bulk CSV to the report viewer
 
+[[_TOC_]]
+
 This code will show the bulk csv option export type in the Report Viewer.
 
 ```csharp
@@ -13,7 +15,7 @@ AdHocSettings.OutputTypes["CSV"].Hidden = true;
 
 ```
 
-String keys for other output types
+##String keys for other output types
 
 The string keys which are available are:
 
