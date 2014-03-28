@@ -1,7 +1,7 @@
 #Questions
 
 * [How do I enable basic report sharing?](http://wiki.izenda.us/FAQ/How-do-I-enable-basic-report-sharing)
-* [How do I find out how many Cores I have?](http://wiki.izenda.us/How-do-I-find-out-how-many-Cores-I-have)
+* [How do I find out how many Cores I have?](http://wiki.izenda.us/FAQ/How-do-I-find-out-how-many-Cores-I-have)
 * [How do I find out when my license will expire?](http://wiki.izenda.us/FAQ/How-do-I-find-out-when-my-license-will-expire)
 * [[How do I use ExtendedFormats for European Date Formats]]
 * [[How do I use the Izenda Reports report email scheduler?]]
