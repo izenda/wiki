@@ -23,4 +23,4 @@ In the example above, Bob is a non-admin user who is assigned to the Sales role.
 * **Read Only** Report is available to the user to view, user can add or remove filters, and modify existing filters' values. Also user can modify(design) the report but cannot save it, however user could Save As this report. 
 * **View Only:** Report is available to the user to view, but not to modify in any way or save changes to the report. 
 * **Locked:** Report is available to the user to view, and user can modify existing filters' values, but user cannot add or remove filters or fields or save changes to the report. Note that modifying filter operator and/or filtered column is restricted as well. 
-None - Report is unavailable to (hidden from) the user.
+* **None:** Report is unavailable to (hidden from) the user.
