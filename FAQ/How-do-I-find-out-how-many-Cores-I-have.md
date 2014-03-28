@@ -1,6 +1,8 @@
 #How do I find out how many Cores I have?
 
-In order to discover how many Sockets and Cores you have:
+[[_TOC_]]
+
+In order to discover how many Cores you have:
 
 Windows Platforms:
 
