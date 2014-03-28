@@ -96,7 +96,7 @@ You can define a chart to use here from a list of Izenda-supported charts. Selec
     * **Waterfall:** Displays a chart that can relate both positive and negative change for specific periods of time. Great for quarterly or yearly numeric data.
     * **World Tour:** This is a 3D spherical map of the entire world that animates itself to move around the world to your different datapoints. 
 * **Settings:** Here is a list of settings that are applicable to all charts:
-    * **Title::** Used to add a title to your chart that is displayed in bold.
+    * **Title:** Used to add a title to your chart that is displayed in bold.
     * **Records:** Determines how many records of your data will be displayed in the chart.
     * **Scale %:** Scales the chart's height by the input percentage. (All but visualizations)
 
@@ -122,6 +122,23 @@ Here you can change properties concerning your general report. You can also sche
 
 ###Style tab
 
+Here you can add styling to your report. This affects the table that is displayed on the report viewer. A preview of what your table will look like is displayed here as well.
+* **Border Color:** This allows you to set the color of the border that splits your table cells. This applies to the whole table rather than individual rows or columns.
+* **Header Color:** This sets the background color for your table headers. The headers contain the titles of the columns in your report.
+* **Header Foreground Color:** This allows you to set the text color within the header cells.
+* **Item Color:** This allows you to set the background color of odd-numbered rows, starting with the first row below the header row.
+* **Item Foreground Color:** This will set the text color of all the data contained in your report (with the exception of the header).
+* **Alternating Item Color:** This sets the background color of eve-numbered rows, starting with the second row below the header row.
+* **Restore Default:** Reverts the styling back to the page defaults
+* **CSS:** You can define your own css classes and declarations to be used on your table for more customized control over your report.
+* **Landscape Printing:** Checking this property will cause any reports you print using the menu buttons to be printed in landscape mode. Unchecking it will print reports in portrait mode.
+* **Show Page Number:** Applies solely to printed reports. Displays the page number on each page of the report.
+* **Show Date and Time:** Also applies to printed reports. This will display the date and time on the header of the report when it's printed.
+* **Use pagination in web view:**
+* **Add bookmark for each visual group:** Applies to PDF exports. This will create a bookmark for each table that has been generated using the visual grouping feature on the fields tab.
+* **Page Break After Visual Groups:** This applies to PDFs and word documents.
+This will use the visual grouping feature to create a PDF or DOC file with one page per visual group.
+* **Minimize Grid Width:** 
 ###Filters Tab
 
 ###Pivots Feature
