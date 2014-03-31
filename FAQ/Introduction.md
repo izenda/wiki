@@ -17,7 +17,7 @@ Here you can select the data sources (tables and views) to use in your report.  
 * **Basic:** The basic view of the data sources tab will let you choose from a list of recent data sources or choose one data source from a list.
 * **Advanced:** This view will let you choose any number of data sources and define their relationships. This acts as an SQL join would.
 
-###Field tab
+###Fields tab
 
 Here you can select how many records to display, as well as define which data you wish to be included in your report. Here is a list of controls and their descriptions.
 
@@ -32,7 +32,7 @@ Here you can select how many records to display, as well as define which data yo
 * **Delete:** Removes the field from the report.
 * **Insert field above:** Creates a new field above the current one.
 * **Insert field below:** Creates a new field below the current one.
-* **Advanced Field Settings:** Learn more about advanced field settings [[here]]
+* **Advanced Field Settings:** Learn more about advanced field settings [[advanced field settings]]
 * **Add Subtotals:** Creates a total line between each report and highlights the value in bold
 
 ###Summary tab
