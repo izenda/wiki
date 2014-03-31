@@ -105,7 +105,20 @@ You can define a chart to use here from a list of Izenda-supported charts. Selec
 Applies one or more gauge controls to your report that can give useful information about min/average/max load capacity and other magnitude-based data.
 
 * **Title:** Adds a title to the chart displayed in bold above all the gauges.
-* **Records:** The amount of records to be used for this chart. Unlike in regular charts, this will add a new gauge for each record and is capped at twelve.
+* **Results:** The amount of records to be used for this chart. Unlike in regular charts, this will add a new gauge for each record and is capped at twelve.
+* **Minimum:** Defines the lower bound of the gauge's display range. Defaults to 0.
+* **Maximum:** Defines the upper bound of the gauge's display range. Defaults to the next order of magnitude beyond the range of your data. (e.g. if your data caps out at 15,146, 100,000 is the maximum value by default)
+* **Color:** Defines the color transition used for the gauge. The valid color options are any HTML safe color name. HTML color codes may not be used.
+* **Gauge Style:** This will change the graphic type used to display the gauge. There are four types:
+    * **Radial:** Standard gauge that has a needle that has a 90 degree range. Does not animate.
+    * **Radial 2:** Slightly more stylized version of the above gauge. Does not animate.
+    * **Animated half circle:** An animated gauge with a 180 degree range of motion. This also has some optional settings:
+        * **KPI Low:** Available on the animated half circle gauge only. This value will set the minimum for the target area of the gauge.
+        * **KPI High:** Available on the animated half circle gauge only. This will set the maximum value for the target area to enclose.
+        * **Update:** Allows a number input that represents the seconds the gauge will animate for.
+        * **Red Values:** Has three options: Hide, Low, and High. Red values can be seen as a "danger zone" of sorts. Use Hide when neither low nor high values indicate danger.
+    * **Linear:** This will produce a straight gauge with a bar on the inside to indicate the total value. Does not animate.
+* **Target Report:** Select from a list of sub-reports to use as drill-down data on the gauge. The gauge will use its "Name" field data as the drill-down key.
 * [See An Example](http://www.izenda.com/bi/ReportViewer.aspx?rn=Human+Resources)
 
 ###Misc tab
