@@ -19,11 +19,9 @@ Advanced field settings provide more granular control over what data is displaye
 * **Subreport:** Allows you to define a sub-report to use based on this field. More about [[subreports]].
 * **Drill-Down Style:** Allows you to choose how the sub-report will be displayed.
 * **Url:** Allows you to define a url to navigate to.
-* **Subtotal Function:** Allows you to create a sub-total line for individual fields using the selected function.
+* **Subtotal Function:** Allows you to change the function used when creating a sub-total line. The "Add Subtotals" box must be checked for this to have an effect.
 * **Gradient Cells Shading:** Allows you to use a gradient (smooth color transition) effect within your report cells using the Item Color and the Alternating Item Color found on the [Style tab](http://wiki.izenda.us/FAQ/Introduction#Style-tab).
 * **Text Highlight:** Alters the color of the text in the cells of the selected field based on the format given. (e.g. 1 to 10:green; 11 to 50:yellow;51 to 100:red)
 * **Cell Highlight:** Highlights the entire cell of the selected field based on the format given. (see example above)
 * **Value Ranges:** Allows you to define a substitute for ranges of values you define (e.g. 0 to 10:Under 10;10 to 100: 10-100)
 * **Expression:** Allows you to use mathematical expressions and conditionals for your selected field if the existing controls do not provide you the level of control you desire. This is formatted as an SQL statement and can accept database column names.
-
-*Note: These settings are available for both the fields tab and filters tab in the report designer.*
