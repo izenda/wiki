@@ -157,16 +157,16 @@ Here you can add styling to your report. This affects the table that is displaye
 * **Page Break After Visual Groups:** This applies to PDFs and word documents.
 This will use the visual grouping feature to create a PDF or DOC file with one page per visual group.
 * **Minimize Grid Width:** 
-* **Visual Group Style:** 
-    * **Comma Delimited:**
-    * **Comma Delimited With Labels:**
-    * **Line Delimited:**
-    * **Line Delimited With Labels:**
-    * **Field Value:**
-    * **Multi Level:**
-    * **Multi Level With Labels:**
-    * **Analysis Grid:**
-    * **VG Hierarchy:**
+* **Visual Group Style:** Changes how visual groups are displayed in the report viewer. There are a number of options here:
+    * **Comma Delimited:** Displays all levels of the visual group separated by commas. (E.g. if you have visual groups based on country and region code, the title of the visual group will be [Country], [RegionCode])
+    * **Comma Delimited With Labels:** Same as Comma Delimited, except it will display the field name description (E.g. Country:[Country], Region:[RegionCode])
+    * **Line Delimited:** Displays each level of the visual group on a new line.
+    * **Line Delimited With Labels:** As with the Comma Delimited With Labels style, except each label:value combination will be displayed on its own line.
+    * **Field Value:** Displays the field name left aligned and the field value right aligned for all levels of the visual grouping.
+    * **Multi Level:** Displays as the Line Delimited style except the highest level categories of the visual group are displayed as headers gradually decreasing in size.
+    * **Multi Level With Labels:** As the Multi-Level style except with the Label:Value format described above.
+    * **Analysis Grid:** Turns the datagrid into a dynamic drilldown list with the top-level data being an expandable row. Each sub-row will be expandable until the bottom-most item in the visual group is reached. (E.g. [Country] --click--> [RegionCode] --click--> [StateCode])
+    * **VG Hierarchy:** Turns the datagrid into a dynamic drilldown list with every level of drilldown already expanded. Instead of introducing a new level of drilldown on each line like the Analysis Grid, however, VG Hierarchy will put all the drilldowns it can onto one row.
 * **Items Per Page (In Viewer):** Limits the amount of items displayed on the report viewer to the number in the box. If visual grouping is used, all visual groups are added together for purposes of showing records. Subtotal lines are not included in the count.
 * **Report Order:** Allows you to change the order in which your report elements are shown in the viewer and in printed reports.
 * **Field|Value Column Pairs:** 
