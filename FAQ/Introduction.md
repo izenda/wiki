@@ -32,7 +32,7 @@ Here you can select how many records to display, as well as define which data yo
 * **Delete:** Removes the field from the report.
 * **Insert field above:** Creates a new field above the current one.
 * **Insert field below:** Creates a new field below the current one.
-* **Advanced Field Settings:** Learn more about advanced field settings [[advanced field settings]]
+* **Advanced Field Settings:** Learn more about [advanced field settings](http://wiki.izenda.us/FAQ/advanced-field-settings).
 * **Add Subtotals:** Creates a total line between each report and highlights the value in bold
 
 ###Summary tab
