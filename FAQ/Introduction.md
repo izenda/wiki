@@ -135,7 +135,7 @@ Here you can change properties concerning your general report. You can also sche
 * **Rights:** Choose what level of access the users in the selected role can have with the report.
 * **Owner:** The user who owns the report. Generally this will be the person who created the report.
 * **Drill-down key:** The field that this report will use to filter data if another report attempts to access it as a sub-report.
-* **Schedule:** Please see our documentation about the [Izenda Scheduler]() for more information about these fields.
+* **Schedule:** Please see our documentation about the [Izenda Scheduler](http://wiki.izenda.us/How-do-I-use-the-Izenda-Reports-report-email-scheduler) for more information about these fields.
 * *Hint: You can grab the first result of a field using [FieldName] and Izenda Reports will display the associated data! You can use this to make reports customized to individuals by putting these types of entities into the title and description fields.
 
 ###Style tab
