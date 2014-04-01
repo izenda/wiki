@@ -2,7 +2,7 @@
 
 [[_TOC_]]
 
-#Checking for broken CSS file references
+#C#hecking for broken CSS file references
 
 If you are losing formatting over a network session, please check the CSS tab on the settings page to make sure that none of the CSS urls are using localhost in the URL, also make sure the CSS tabs setting is not using localhost. 
 
