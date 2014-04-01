@@ -1,5 +1,7 @@
 #ODBC Connection String
 
+[[_TOC_]]
+
 ##Will My ODBC Connection String Work With Izenda Reports?
 
 Izenda Reports requires that a .NET provider and associated connection string be used.  This means that a .NET provider of some kind must be installed to access your database (e.g. Oracle.Net, MySQL.net provider, etc).  The provider will usually be installed on the web server (Microsoft IIS 5 or higher) that hosts the Izenda Reports application.  This will allow Izenda Reports to access the ADO.NET provider for the database that formerly used an ODBC connection.  Please note that installing a provider should not change any existing ODBC functionality, but it is always best to check with the provider vendor for full details.
