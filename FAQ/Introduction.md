@@ -193,7 +193,7 @@ Here you can define filters for your data. These work as conditionals that are e
 * **Param:** When checked, specifies that the filter field is included in the report viewer. Checked by default.
 * **Show Filters In Report Description:** Displays the computed filter values in the report viewer. This can be used to more accurately see what the conditionals will look like when the data is sent to the server.
 * **Require X Parameters In Viewer:** This value is used to set a lower limit on how many filter parameters are required for the report viewer.
-* **Filter Logic:** Used to control how your filters are handled. Following the default example in how to reference your filters is ideal. [Learn more](http://wiki.izenda.us/How-To-Apply-Advanced-Logic-Filters)
+* **Filter Logic:** Used to control how your filters are handled. Following the default example in how to reference your filters is ideal. [Learn more](http://wiki.izenda.us/FAQ/Questions/How-To-Apply-Advanced-Logic-Filters)
 
 ###Preview
 
