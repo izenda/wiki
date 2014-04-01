@@ -9,13 +9,13 @@ Here is an example of how to add custom time spans to the filters. Apply this co
 ```csharp
 CustomTimePeriod customTimePeriod = AdHocSettings.CustomTimePeriod[key];
 TimeSpan period = customTimePeriod.Period;
-if (period.Ticks >0)
+if (period.Ticks > 0)
 {
-  startDate=now+period;
+  startDate = now + period;
 }
 else
 {
-  endDate=now;
-  startDate=now.period;
+  endDate = now;
+  startDate = now.period;
 } 
 ```
