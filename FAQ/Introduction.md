@@ -6,9 +6,19 @@ We are continually developing online Izenda Reports training materials focused o
 
 All training materials are available on the Izenda Reports site at no charge. The presentations and lessons assume the availability of a working copy of Izenda Reports connected to a database containing both text and numerical data. You may print and re-distribute these materials to any users within the organization or company that licenses Izenda Reports. 
 
+##Setting Up a Branded Izenda Demo in 15 Minutes
+
+This tutorial shows you how to setup a privately branded version of Izenda Reports and build some stock reports. It contains:
+
+* Download and setup
+* Configuring the license and connection
+* Creating a view
+* Adding branding
+* Creating some initial reports
+
 ##Report Designer
 
-The training walks through the features available in the various tabs of the Izenda Report Designer in order to familiarize the users with the options available: 
+This section of the training walks through the features available in the various tabs of the Izenda Report Designer in order to familiarize the users with the options available: 
 
 ###Datasources tab
 
@@ -45,7 +55,7 @@ Here you can define a new set of data separate from the field list you selected 
 
 ###Chart tab
 
-You can define a chart to use here from a list of Izenda-supported charts. Selecting a chart will update the settings form directly below, which can be filled out with labels and other options. The selectable chart types are:
+You can define a chart to use here from a list of Izenda-supported charts. Selecting a chart will update the settings form directly below, which can be filled out with labels and other options.
 
 * **Trend:** Creates a standard line plot graph in your report with any of the following options:
     * **Label Title:** The label for the X-axis data.
@@ -188,3 +198,7 @@ Here you can define filters for your data. These work as conditionals that are e
 ###Preview
 
 Here you can preview the results of the report that you have created before you decide to publish it. You can also go back to any tab at any time and edit your report. Data will not be lost until you close the browser or navigate away from the page.
+
+##Contacting Microsoft
+
+Depending on what and how you purchased, Microsoft often provides full support for server products and development tools.  Any issues with server hardware, software, or configurations should be resolved via Microsoft's support channels and is not included in Izenda's support packages.
