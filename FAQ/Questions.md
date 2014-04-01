@@ -14,7 +14,7 @@
 * [[How To Set ReportParts]]
 * [[Scheduled reports security and hidden filters]]
 * [[Storing Reports]]
-* [[Using Share with, rights, roles properties in Izenda Reports 6+]]
+* [Using Share with, rights, roles properties in Izenda Reports 6+](http://wiki.izenda.us/FAQ/Questions/Using-Share-with-rights-roles-properties-in-Izenda-Reports-6)
 * [[Using Stored Procedures In Izenda 6. Part 2]]
 * [[Using Stored Procedures In Izenda 6]]
 * [[Using the hidden columns setting]]
