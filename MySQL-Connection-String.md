@@ -13,3 +13,7 @@ To set up your MySql Connection String, use the AdHocSettings property MySqlConn
 You will have to replace your port number (if different), databasename, 
 username, and password. Additionally, pooling=false may not be required 
 in your case.
+
+##Testing Your MySQL Connection String
+
+To test whether your MySQL connection string is working, there are some diagnostics on the Settings.aspx page that give a PASS/FAIL on various connectivity and permissions-based metrics.
