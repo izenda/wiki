@@ -5,7 +5,7 @@
 * [How do I find out when my license will expire?](http://wiki.izenda.us/FAQ/How-do-I-find-out-when-my-license-will-expire)
 * [How do I use extended formats for European Date Formats?](http://wiki.izenda.us/FAQ/How-do-I-use-ExtendedFormats-for-European-Date-Formats)
 * [How do I use the Izenda Reports report email scheduler?](http://wiki.izenda.us/How-do-I-use-the-Izenda-Reports-report-email-scheduler)
-* [[How to Add Custom Timespan]]
+* [[How to Add a Custom Timespan Type]]
 * [[How To Apply Advanced Logic Filters]]
 * [[How to calculate difference between dates?]]
 * [[How to Create a Drill-Down Report in V6.0]]
