@@ -1,13 +1,13 @@
 #Questions
 
-* [How do I enable basic report sharing?](http://wiki.izenda.us/FAQ/How-do-I-enable-basic-report-sharing)
-* [How do I find out how many Cores Or Sockets I have?](http://wiki.izenda.us/FAQ/How-do-I-find-out-how-many-Cores-I-have)
-* [How do I find out when my license will expire?](http://wiki.izenda.us/FAQ/How-do-I-find-out-when-my-license-will-expire)
-* [How do I use extended formats for European Date Formats?](http://wiki.izenda.us/FAQ/How-do-I-use-ExtendedFormats-for-European-Date-Formats)
-* [How do I use the Izenda Reports report email scheduler?](http://wiki.izenda.us/How-do-I-use-the-Izenda-Reports-report-email-scheduler)
+* [How do I enable basic report sharing?](http://wiki.izenda.us/FAQ/Questions/How-do-I-enable-basic-report-sharing)
+* [How do I find out how many Cores Or Sockets I have?](http://wiki.izenda.us/FAQ/Questions/How-do-I-find-out-how-many-Cores-I-have)
+* [How do I find out when my license will expire?](http://wiki.izenda.us/FAQ/Questions/How-do-I-find-out-when-my-license-will-expire)
+* [How do I use extended formats for European Date Formats?](http://wiki.izenda.us/FAQ/Questions/How-do-I-use-ExtendedFormats-for-European-Date-Formats)
+* [How do I use the Izenda Reports report email scheduler?](http://wiki.izenda.us/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler)
 * [[How to Add a Custom Timespan Filter]]
-* [How To Apply Advanced Logic Filters](http://wiki.izenda.us/How-To-Apply-Advanced-Logic-Filters)
-* [How to calculate difference between dates?](http://wiki.izenda.us/FAQ/How-to-calculate-difference-between-dates)
+* [How To Apply Advanced Logic Filters](http://wiki.izenda.us/FAQ/Questions/How-To-Apply-Advanced-Logic-Filters)
+* [How to calculate difference between dates?](http://wiki.izenda.us/FAQ/Questions/How-to-calculate-difference-between-dates)
 * [[How to Create a Drill-Down Report in V6.0]]
 * [[How To Modify the Toolbar]]
 * [[How to Remove Buttons from Dashboard Designer]]
