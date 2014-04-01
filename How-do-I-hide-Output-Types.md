@@ -1,12 +1,16 @@
 #How do I hide Output Types?
 
+[[_TOC_]]
+
+##Hiding Output Types
+
 In order the hide the output types THAT are located in the ReportViewer, you would need to add the below line of code in your ConfigureSettings().
 
 ```csharp
 AdHocSettings.OutputTypes["xxx"].Hidden=true;
 ```
 
-Example:
+###Example
 
 In order to hide OpenOffice from the export types in the ReportViewer you would add:
 
