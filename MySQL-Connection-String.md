@@ -7,7 +7,7 @@
 To set up your MySql Connection String, use the AdHocSettings property MySqlConnectionString.
 
 ```csharp
-    Izenda.AdHoc.AdHocSettings.MySqlConnectionString = "Driver={MySQL ODBC 3.51 Driver};Server=localhost;Port=3307;Database=databasename;Uid=user;Pwd=pass;pooling=false"; 
+    Izenda.AdHoc.AdHocSettings.MySqlConnectionString = "Driver={MySQL ODBC 3.51 Driver};Server=localhost;Port=3307;Database=databasename;Uid=username;Pwd=password;pooling=false"; 
 ```
 
 You will have to replace your port number (if different), databasename, 
