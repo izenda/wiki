@@ -125,7 +125,7 @@ Applies one or more gauge controls to your report that can give useful informati
 
 Here you can change properties concerning your general report. You can also schedule emails to send your report out via Izenda's custom scheduler.
 
-* **Report Header Image Justification:** Has three settings that can be cycled through by clicking (R - right, L - left, M - middle). The report header is set in the [Izenda Settings]() page.
+* **Report Header Image Justification:** The report header is set in the [Izenda Settings]() page. More on justification [here](http://wiki.izenda.us/FAQ/How-do-I-control-the-alignment-of-text-fields-or-justification-in-report-output).
 * **Title:** The report's title, displayed either left-aligned, right-aligned, or centered depending on what the box selection was to the right of the control. 
 * **Description:** The report's description, displayed below the title. Can also be re-aligned.
 * **Report Header:** Add a header to the report.
@@ -166,7 +166,7 @@ This will use the visual grouping feature to create a PDF or DOC file with one p
     * **Multi Level:** Displays as the Line Delimited style except the highest level categories of the visual group are displayed as headers gradually decreasing in size.
     * **Multi Level With Labels:** As the Multi-Level style except with the Label:Value format described above.
     * **Analysis Grid:** Turns the datagrid into a dynamic drilldown list with the top-level data being an expandable row. Each sub-row will be expandable until the bottom-most item in the visual group is reached. (E.g. [Country] --click--> [RegionCode] --click--> [StateCode])
-    * **VG Hierarchy:** Turns the datagrid into a dynamic drilldown list with every level of drilldown already expanded. Instead of introducing a new level of drilldown on each line like the Analysis Grid, however, VG Hierarchy will put all the drilldowns it can onto one row.
+    * **VG Hierarchy:** Turns the datagrid into a dynamic drilldown list with every level of drilldown already expanded. Instead of introducing a new level of drilldown on each line like the Analysis Grid, however, VG Hierarchy will put all the drilldowns it can onto one row. Generally, if a grouping has only one value for a given field, it will be displayed on the same line as its predecessor. If a grouping has more than one value for a given field, it will attribute as many rows as there are unique values for that field.
 * **Items Per Page (In Viewer):** Limits the amount of items displayed on the report viewer to the number in the box. If visual grouping is used, all visual groups are added together for purposes of showing records. Subtotal lines are not included in the count.
 * **Report Order:** Allows you to change the order in which your report elements are shown in the viewer and in printed reports.
 * **Field|Value Column Pairs:** 
