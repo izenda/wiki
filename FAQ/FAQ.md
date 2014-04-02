@@ -9,30 +9,30 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ###API
 
-- [[Izenda API Tip: Constraints & Joins Best Practices|Izenda-API-Tip-Constraints-Joins-Best-Practices]]
-- [[Izenda API Tip: Hidden Columns|Izenda-API-Tip-Hidden-Columns]]
-- [[ListReports()|ListReports]]
-- [[LoadReportSet()|LoadReportSet]]
-- [[PostLogin()|PostLogin]]
-- [[PreExecuteReportSet()|PreExecuteReportSet]]
-- [[ProcessEqualsSelectList()|ProcessEqualsSelectList]]
-- [[Switching databases via code|switching-databases-via-code]]
-- [[How do I hide the settings page button or aspx page from users?|hide-settings-page-button-or-aspx-page]]
-- [[How do I integrate with my login page?|integrate-login-page]]
-- [[How do I implement Field-Level Security|Field Level Security Integration|field-level-security]]
-- [[Izenda and UDFs (User Defined Functions)|izenda-and-udfs]]
-- [[How Do I Enable Izenda Vision?|enable-izenda-vision]]
-- [[How do I reset my Fusion Cache via code?|reset-fusion-cache]]
-- [[How do I implement Fully Qualified Hidden Filters?|implement-fully-qualified-hidden-filters]]
+- [[Izenda API Tip: Constraints & Joins Best Practices|FAQ/Izenda-API-Tip-Constraints-Joins-Best-Practices]]
+- [[Izenda API Tip: Hidden Columns|FAQ/Izenda-API-Tip-Hidden-Columns]]
+- [[ListReports()|FAQ/ListReports]]
+- [[LoadReportSet()|FAQ/LoadReportSet]]
+- [[PostLogin()|FAQ/PostLogin]]
+- [[PreExecuteReportSet()|FAQ/PreExecuteReportSet]]
+- [[ProcessEqualsSelectList()|FAQ/ProcessEqualsSelectList]]
+- [[Switching databases via code|FAQ/switching-databases-via-code]]
+- [[How do I hide the settings page button or aspx page from users?|FAQ/hide-settings-page-button-or-aspx-page]]
+- [[How do I integrate with my login page?|FAQ/integrate-login-page]]
+- [[How do I implement Field-Level Security|FAQ/Field-Level-Security-Integration]]
+- [[Izenda and UDFs (User Defined Functions)|FAQ/izenda-and-udfs]]
+- [[How Do I Enable Izenda Vision?|FAQ/enable-izenda-vision]]
+- [[How do I reset my Fusion Cache via code?|FAQ/reset-fusion-cache]]
+- [[How do I implement Fully Qualified Hidden Filters?|FAQ/implement-fully-qualified-hidden-filters]]
 
 ###Troubleshooting
 
-- [[Izenda Troubleshooting Tip: ReportList never loads. All other pages work fine.|troubleshooting-report-list]]
-- [[Izenda Troubleshooting Tip: 'WCFApplication' error|troubleshooting-wcf-application]]
-- [[Izenda Troubleshooting Tip: Transferring, Moving or Copying Report XML Manually|moving-report-xml-manually]]
-- [[Izenda Troubleshooting Tip: Enabling CSS in PDFs and high quality PDF exports|enabling-css-in-pdfs]]
-- [[Why do Chart Images not Render in my Report Thumbnails?|chart-images-not-rendering]] 
-- [[How to disable Protected Mode in Office 2010|disable-protected-mode-office-2010]]
+- [[Izenda Troubleshooting Tip: ReportList never loads. All other pages work fine.|FAQ/troubleshooting-report-list]]
+- [[Izenda Troubleshooting Tip: 'WCFApplication' error|FAQ/troubleshooting-wcf-application]]
+- [[Izenda Troubleshooting Tip: Transferring, Moving or Copying Report XML Manually|FAQ/moving-report-xml-manually]]
+- [[Izenda Troubleshooting Tip: Enabling CSS in PDFs and high quality PDF exports|FAQ/enabling-css-in-pdfs]]
+- [[Why do Chart Images not Render in my Report Thumbnails?|FAQ/chart-images-not-rendering]] 
+- [[How to disable Protected Mode in Office 2010|FAQ/disable-protected-mode-office-2010]]
 
 ###Report Design
 
