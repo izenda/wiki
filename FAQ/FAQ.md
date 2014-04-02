@@ -10,7 +10,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 ##Questions
 
 * [[How Do I Setup Izenda Reports On My Server?|http://www.izenda.com/Site/DownloadComplete.aspx?msgId=0]]
-* [What Can I Do With Izenda Reports?](http://wiki.izenda.us/FAQ/Introduction)
+* [What Can I Do With Izenda Reports?](http://wiki.izenda.us/FAQ/reporting-features)
 * [What Platform Does Izenda Reports Run On?](http://wiki.izenda.us/FAQ/Platform)
 * [[How Can I Format my Izenda Reports Implementation?|http://wiki.izenda.us/FAQ/Formatting]]
 * [[Where Can I Find Specific Answers to Questions About the Application?|http://wiki.izenda.us/FAQ/Questions]]
