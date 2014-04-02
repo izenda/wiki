@@ -2,19 +2,7 @@
 
 [[_TOC_]]
 
-We are continually developing online Izenda Reports training materials focused on the needs of novice users. The materials will include a basic overview of building reports which utilize bar, pie, and trend charts as well as some advanced topics. These materials include both video and printable formats.
-
-All training materials are available on the Izenda Reports site at no charge. The presentations and lessons assume the availability of a working copy of Izenda Reports connected to a database containing both text and numerical data. You may print and re-distribute these materials to any users within the organization or company that licenses Izenda Reports. 
-
-##Setting Up a Branded Izenda Demo in 15 Minutes
-
-This tutorial shows you how to setup a privately branded version of Izenda Reports and build some stock reports. It contains:
-
-* Download and setup
-* Configuring the license and connection
-* Creating a view
-* Adding branding
-* Creating some initial reports
+Welcome to Izenda Reports and Dashboards. Izenda offers a rich API of reporting options and features. The following section aims to provide an overview of core Izenda features and a detailed explanation of these features. We at Izenda believe in creating a rich environment for self-service reporting and aim to keep this FAQ up-to-date with the latest information available. Izenda is growing all the time, so please check our [Release Notes](wiki.izenda.us/Release-Notes) frequently for new updates and improvements to existing features. You can also visit other sections of our FAQ for more specific answers to other questions you may have.
 
 ##Report Designer
 
