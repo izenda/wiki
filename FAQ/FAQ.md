@@ -37,7 +37,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 ###Report Design
 
 - [[Izenda Report Design Tip: Running custom Javascript upon clicking a report element|FAQ/running-custom-javascript-on-click]]
-- [[How do I use Expressions?|15.0 Expressions in Izenda|FAQ/expressions-in-izenda]]
+- [[How do I use Expressions?|FAQ/UserGuides/15.0-Expressions-in-Izenda]]
 - [[How do I use FORMS?|14.0 Izenda FORMS|FAQ/izenda-forms]]
 - [[Why don't I see the number of resultant columns or rows I expect in my report?|FAQ/resultant-columns-or-rows-expected-in-report]]
 - [[How do I add Fixed Unit Conversions in Izenda, so users can easily access them?|FAQ/fixed-unit-conversions]]
