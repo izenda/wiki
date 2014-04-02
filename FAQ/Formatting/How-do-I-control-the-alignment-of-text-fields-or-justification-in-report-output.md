@@ -6,7 +6,7 @@
 
 The justification or alignment can be controlled through the Izenda Reports settings.aspx page (v5.4 and up) by setting the "Show Justification" setting on the "Features" tab.   The justification of certain headers and titles will then be customizable in the report designer. Justification controls are clickable boxes that cycle through the three options (R, M, L).
 
-##Controlling Alignment Through C\#
+##Controlling Alignment Through Code
 
 The justification or alignment can also be set in your C# code using the following line in your ConfigureSettings() method.
 
