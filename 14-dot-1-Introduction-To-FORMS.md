@@ -1,0 +1,47 @@
+#14.1 Introduction to FORMS
+
+### Preface
+
+Izenda FORMS is an add-on to Izenda REPORTS, Izenda’s core reporting and business intelligence platform. Izenda connects directly to relational and non-relational data sources. Through its .NET API, it loosely couples with Microsoft-based applications to integrate with the current security, branding, and navigation of your .NET applications. 
+
+Izenda FORMS allows the user to input HTML5 into a browser-based HTML designer and then use that code to build an Izenda form report. Izenda’s point-and-click interface is designed for the standard business user, with advanced options available for those with greater access and skill. Izenda FORMS is one of these advanced options. 
+
+*FORMS Design NOTE1:* Though a basic user can easily make changes to existing forms, 
+designing new forms does require a user who is comfortable with HTML5. Many users will 
+never design FORMS, but simply make modifications to current core FORMS.
+
+*FORMS Design NOTE2:* Izenda FORMS will override the normal reporting behavior within 
+Izenda when a FORM is attached to a report; the FORM is what the engine renders. To use a standard Izenda report in tandem with a FORM, you must call the report into the HTML 
+FORM itself.
+
+**With Izenda FORMS, you can:**
+
+- Create WYSIWYG forms using HTML.
+
+- Import existing HTML forms and push data from your database into specific form locations.
+
+- Utilize our high quality HTML->PDF rendering engine.
+
+- Create, and easily customize, pixel perfect, printer-friendly, dynamic web forms to deliver to your end users.
+
+- Create Master Detail Reports.
+
+- Embed Sub-Reports and use smart tags.
+
+- Employ flexible filters and high performance repeaters.
+
+- Customize the product through our rich API.
+
+###Introduction to using the Forms Tool
+
+This section of the user manual will walk you through the basic usage of the Izenda FORMS tool. Any data that your application developer has included in the database can be accessible to you in creating ad hoc forms.
+
+A form is an HTML document which you populate with data from a database.  As an example, let’s think of a form letter sent to every customer.  The letter has fixed copy, but also dynamic portions such as recipient name, address, etc.  If you have a database which contains those dynamic elements, then you can insert them directly into the fixed portion in order to produce publishable output. 
+
+*FORMS Design NOTE3:* The default behavior of forms is to generate one entry per ‘row’ of data until all rows are generated or the user-defined limit is reached.
+
+---
+
+[[14.0 Izenda FORMS]]
+
+[[UserGuides]]  
