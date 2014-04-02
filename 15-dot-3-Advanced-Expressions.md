@@ -5,9 +5,7 @@
 We can use arithmetic to get a percentage of one value compared to an aggregate value.  
 
 **The following expression determines the percentage of an order’s cost paid for shipping:**
-```
-([Orders].[Freight])/(([Order Details].[UnitPrice]) * ([Order Details].[Quantity])+([Orders].[Freight]))
-```
+``([Orders].[Freight])/(([Order Details].[UnitPrice]) * ([Order Details].[Quantity])+([Orders].[Freight]))``
 
 ![expressions5](http://wiki.izenda.us/FAQ/FAQ/expressions5.png)
 
@@ -21,11 +19,9 @@ However, this is where we encounter a limitation on expressions.  The above expr
 
 If we break the total equation into steps, the problem becomes clearer:
 
-1):  Calculate UnitPrice*Quantity for each ProductID within an OrderID.
-
-2):  Sum these calculated values into a hypothetical TotalUnitPrice for the OrderID.
-
-3):  Add Freight to TotalUnitPrice and divide Freight by this value to get a percentage freight cost of total order cost.
+1. Calculate UnitPrice*Quantity for each ProductID within an OrderID.
+2. Sum these calculated values into a hypothetical TotalUnitPrice for the OrderID.
+3. Add Freight to TotalUnitPrice and divide Freight by this value to get a percentage freight cost of total order cost.
 
 Since expressions cannot create fields, but only display calculations based on fields, expressions cannot execute step 2.  Steps 1 and 2 should be calculated in a view, which would create a computed column that can be used in an expression for step 3.
 
