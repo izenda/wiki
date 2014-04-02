@@ -14,24 +14,18 @@ If the data for a distance column was stored in meters lets say, and you wanted 
 
 **TO use Example 1 in tool once API work is done:**
 
-    1. User selects column 'Distance'.
-
-    2a. To display meters; user chooses no function, and chooses 'm' in format.
-
-    2b. To display in Miles; user chooses 'Miles' in function dropdown, and 'mi' in format.
-
-    2c. To display in Kilometers; user chooses 'Km' in function dropdown, and 'km' in format.
+1. User selects column 'Distance'.
+2. User selects the appropriate choices for their needs
+    * To display meters; user chooses no function, and chooses 'm' in format.
+    * To display in Miles; user chooses 'Miles' in function dropdown, and 'mi' in format.
+    * To display in Kilometers; user chooses 'Km' in function dropdown, and 'km' in format.
 
 -----
 
 **Example 2**: _Data stored in KpG (Kilometers/Gallon) - Output needed in both 'KpG' and 'MpG' (Miles/Gallon)._ 
 
-    1) Add custom Function to convert KpG -> MpG to DB.
-
-    2) Add custom Function from DB to Izenda (API)
-
-    3) Add custom Formats for 'MpG' and 'KpG'
-
-    4a) To display KpG: Choose mileage field, choose no function, choose 'KpG' format.
-
-    4b) To display MpG: Choose mileage field, choose 'MpG' function, choose 'MpG' format.
+1. Add custom Function to convert KpG -> MpG to DB.
+2. Add custom Function from DB to Izenda (API)
+3. Add custom Formats for 'MpG' and 'KpG'
+    * To display KpG: Choose mileage field, choose no function, choose 'KpG' format.
+    * To display MpG: Choose mileage field, choose 'MpG' function, choose 'MpG' format.
