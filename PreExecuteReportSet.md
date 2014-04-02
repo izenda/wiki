@@ -2,7 +2,7 @@
 
 [[_TOC_]]
 
-##Hidden Filter C/#
+##Hidden Filter C♯
 
 This is a code sample showing how to add a hidden filter to a report. The first filter uses the _strArray_, but you will need to write a function which returns the columns which you wish to filter upon.
 
@@ -60,7 +60,7 @@ End Sub
 
 ##Hidden Filter VB.NET
 
-```visualbasic
+```VB
 Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportSet) 
     MyBase.PreExecuteReportSet(reportSet)
     Dim emails(1) As String   
