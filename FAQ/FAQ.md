@@ -7,11 +7,13 @@ We are continually developing online Izenda Reports training materials focused o
 
 All training materials are available on the Izenda Reports site at no charge. The presentations and lessons assume the availability of a working copy of Izenda Reports connected to a database containing both text and numerical data. You may print and re-distribute these materials to any users within the organization or company that licenses Izenda Reports. 
 
+##Questions
+
 * [[How Do I Setup Izenda Reports On My Server?|http://www.izenda.com/Site/DownloadComplete.aspx?msgId=0]]
 * [What Can I Do With Izenda Reports?](http://wiki.izenda.us/FAQ/Introduction)
 * [What Platform Does Izenda Reports Run On?](http://wiki.izenda.us/FAQ/Platform)
 * [[How Can I Format my Izenda Reports Implementation?|http://wiki.izenda.us/FAQ/Formatting]]
-* [[Where Can I Get Specific Questions Answered?|http://wiki.izenda.us/FAQ/Questions]]
+* [[Where Can I Find Specific Answers to Questions About the Application?|http://wiki.izenda.us/FAQ/Questions]]
 * [[How Do I Change Settings in Izenda?|http://wiki.izenda.us/FAQ/Settings]]
 * [[What Databases Are Supported?|http://wiki.izenda.us/FAQ/Database]]
 * [[Where Can I Find the Latest Changes?|http://wiki.izenda.us/Release-Notes]]
