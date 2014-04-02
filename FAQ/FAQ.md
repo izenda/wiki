@@ -27,12 +27,12 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ###Troubleshooting
 
-- [[Izenda Troubleshooting Tip: ReportList never loads. All other pages work fine.]]
-- [[Izenda Troubleshooting Tip: 'WCFApplication' error]]
-- [[Izenda Troubleshooting Tip: Transferring, Moving or Copying Report XML Manually]]
-- [[Izenda Troubleshooting Tip: Enabling CSS in PDFs and high quality PDF exports]]
-- [[Why do Chart Images not Render in my Report Thumbnails?]] 
-- [[How to disable Protected Mode in Office 2010]]
+- [[Izenda Troubleshooting Tip: ReportList never loads. All other pages work fine.||troubleshooting-report-list]]
+- [[Izenda Troubleshooting Tip: 'WCFApplication' error|troubleshooting-wcf-application]]
+- [[Izenda Troubleshooting Tip: Transferring, Moving or Copying Report XML Manually|moving-report-xml-manually]]
+- [[Izenda Troubleshooting Tip: Enabling CSS in PDFs and high quality PDF exports|enabling-css-in-pdfs]]
+- [[Why do Chart Images not Render in my Report Thumbnails?|chart-images-not-rendering]] 
+- [[How to disable Protected Mode in Office 2010|disable-protected-mode-office-2010]]
 
 ###Report Design
 
