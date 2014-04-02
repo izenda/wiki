@@ -1,3 +1,5 @@
+#Izenda API Tip: Constraints & Joins Best Practices
+
 - All constraints are unidirectional (or anisotropic).
 
 - Do not use simple table name without brackets, e.g. ***"Cases-Status"*** instead of ***"[Cases-Status]"***.
