@@ -1,0 +1,29 @@
+#Concatenation
+
+### Text Concatenation
+
+We can also use expressions to manipulate text.  Let’s say that we have 'ShipCity' (e.g. Berlin), as well as 'ShipCountry' (e.g. Germany).  
+
+**Using the following expression:**
+
+``[ShipCity], + ‘, ‘ + [ShipCountry]``
+
+![expressions3](http://wiki.izenda.us/FAQ/FAQ/expressions3.png)
+
+This would combine ‘Berlin’ and ‘Germany’ to ‘Berlin, Germany’.  Note that in order to add text, we use single quotes.  Anything between single quotes will appear exactly as typed, in this case a comma and single space.
+
+![expressions4](http://wiki.izenda.us/FAQ/FAQ/expressions4.png)
+
+**In the same as in the example, we can add a static text denomination to a numerical value:**  
+
+``[Freight] + ‘USD’ -> xxxxUSD``
+
+**We could also write:**
+
+``‘$’ + [Freight] -> $xxxx``
+
+---
+
+[[15.0 Expressions in Izenda]]
+
+[[UserGuides]]
