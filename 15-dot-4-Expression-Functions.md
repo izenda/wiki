@@ -1,0 +1,42 @@
+#15.4 Expression Functions
+
+### Functions
+
+As you may have noticed, we can use some aggregate functions in expressions.  In order to prevent SQL injection, only a limited set of SQL functions are turned on by default.
+
+- avg(OrderID) produces the average of all OrderID values.
+
+- cast(OrderID, AS DATATYPE) ``e.g. "cast([OrderID] as varchar)"`` Converts a value from one data type to another. This should only be done when you do not want to make a permanent change to the data type, such as converting numeric to strings and concatenating them.  
+
+- convert (DATATYPE, [OrderID]) ``e.g. "convert(varchar, [OrderID])"``
+
+More information about using these functions can be found [[here|http://msdn.microsoft.com/en-us/library/aa226054(v=sql.80).aspx]] and [[here|http://dev.mysql.com/doc/refman/5.5/en/cast-functions.html#function_cast]]
+
+- count(OrderID) produces a count of all OrderID values.
+
+- distinct(OrderID) produces a list of all distinct OrderID values.
+
+- isnull(OrderID, x) checks to see if there is a null value in OrderID and replaces it with ‘x’.
+
+- length(OrderID) returns the length of a string. Length is used with an Oracle db. If you’re using SQL, see len(OrderID).
+
+- len(OrderID) returns the length of a string. Len is used with a SQL db. If you’re using Oracle, see length(OrderID).
+
+- max(OrderID) produces the maximum OrderID value within a given range.
+
+- min(OrderID) produces the minimum OrderID value within a given range.
+
+- round(OrderID, x) takes a decimal value and rounds it to x digits.
+
+- sum(OrderID) produces the sum of all OrderID values.
+
+It is possible to enable other SQL functions or write new functions.  Please see this link to our knowledge base for instructions:
+
+http://www.izenda.com/Site/CodeSample/CodeSample.aspx?setting=ExtendedFunctions 
+
+
+---
+
+[[15.0 Expressions in Izenda]]
+
+[[UserGuides]]
