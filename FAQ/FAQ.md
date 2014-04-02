@@ -56,3 +56,4 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[DatabaseAdHocConfig Table Structure|FAQ/databaseadhocconfig-table-structure]]
 - [[How are Thumbnails generated for the Izenda ReportList?|FAQ/thumbnail-generation-for-reportlist]]
 - [[Understanding Izenda Print Modes|FAQ/understanding-izenda-print-modes]]
+- [[What are the query string keys for rs.aspx?|http://wiki.izenda.us/FAQ/Questions/Query-String-Keys-for-rs.aspx]]
