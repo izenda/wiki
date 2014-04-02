@@ -4,7 +4,7 @@
 
 ##Hiding Output Types
 
-In order the hide the output types THAT are located in the ReportViewer, you would need to add the below line of code in your ConfigureSettings().
+In order the hide the output types that are located in the ReportViewer, you would need to add the below line of code in your ConfigureSettings().
 
 ```csharp
 AdHocSettings.OutputTypes["xxx"].Hidden=true;
