@@ -10,7 +10,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 ###API
 
 - [[Izenda API Tip: Constraints & Joins Best Practices|Izenda-API-Tip-Constraints-Joins-Best-Practices]]
-- [[Izenda API Tip: Hidden Columns]]
+- [[Izenda API Tip: Hidden Columns|Izenda-API-Tip-Hidden-Columns]]
 - [[ListReports()]]
 - [[LoadReportSet()]]
 - [[PostLogin()]]
