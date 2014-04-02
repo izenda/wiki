@@ -8,6 +8,6 @@ Izenda Reports is native to the Windows environment and works with many differen
 
 ##Questions
 
-* [[MySQL Connection String]]
-* [[ODBC Connection String]]
-* [[SQL Type Errors When Using ODBC with MySQL]]
+* [[How Do I Use a MySQL Connection String?|http://wiki.izenda.us/FAQ/Database/MySQL-Connection-String]]
+* [[Can Izenda Work With My DBMS System?|http://wiki.izenda.us/FAQ/Database/ODBC-Connection-String]]
+* [[SQL Type Errors When Using ODBC with MySQL|http://wiki.izenda.us/FAQ/Database/SQL-Type-Errors-When-Using-ODBC-with-MySQL]]
