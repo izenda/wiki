@@ -60,7 +60,7 @@ End Sub
 
 ##Hidden Filter VB.NET
 
-```VB
+```visualbasic
 Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportSet) 
     MyBase.PreExecuteReportSet(reportSet)
     Dim emails(1) As String   
@@ -72,7 +72,7 @@ Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportS
     filter.Values = emails   
     reportSet.Filters.AddHidden(filter)
 End Sub
-```
+
 
 ##Using a stored procedure
 
