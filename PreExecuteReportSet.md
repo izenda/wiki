@@ -1,8 +1,12 @@
-**Hidden Filter C#**
+#The PreExecuteReportSet() Method
+
+[[_TOC_]]
+
+##Hidden Filter C/#
 
 This is a code sample showing how to add a hidden filter to a report. The first filter uses the _strArray_, but you will need to write a function which returns the columns which you wish to filter upon.
 
-```
+```csharp
 public override void PreExecuteReportSet(Izenda.AdHoc.ReportSet reportSet) 
 
 {   
@@ -34,18 +38,13 @@ public override void PreExecuteReportSet(Izenda.AdHoc.ReportSet reportSet)
       } //end if 
 }//end method
 ```
-
-#The PreExecuteReportSet() Method
-
-[[_TOC_]]
-
 Essentially, to use a multi valued filter, you must use the In operator (basically an equals operator with comma separated values) and the .Values specifier.
 
 To use a single valued operator such as "Like" (basically a case sensitive contains), you can not use an array and must use the .Value specifier.
 
 ##Hidden Filter with sql override
 
-```
+```csharp
 Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportSet) 
 
     MyBase.PreExecuteReportSet(reportSet)   
@@ -61,7 +60,7 @@ End Sub
 
 ##Hidden Filter VB.NET
 
-```
+```visualbasic
 Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportSet) 
     MyBase.PreExecuteReportSet(reportSet)
     Dim emails(1) As String   
