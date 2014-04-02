@@ -51,8 +51,7 @@ Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportS
     'If reportSet.Source.Equals("[dbo].[Customers]") Then  
     Dim filter As New Izenda.AdHoc.Filter()  
     filter.Column = "email"   
-    filter.SqlOverride = "(aspnet_Membership.email = 'greg@edelinsolutions.com' or 
-    aspnet_Membership.email='gedelin@yahoo.com')"  
+    filter.SqlOverride = "(aspnet_Membership.email = 'greg@edelinsolutions.com' or aspnet_Membership.email='gedelin@yahoo.com')"  
     reportSet.Filters.AddHidden(filter)
     'End If
 End Sub
