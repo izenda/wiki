@@ -11,13 +11,7 @@ If you are experiencing an Izenda ReportList with a 'Loading' icon that never st
 
 If you use .NET 3.5+ the extension assembly is included with your .NET install; If browser console errors say it is not present, .NET should be re-installed.
 
-```csharp
-All versions of .NET and installation guides can be found here:
-http://www.microsoft.com/net/downloads
-```
+All versions of .NET and installation guides can be found [[here|http://www.microsoft.com/net/downloads]]:
 
-If you are using .NET 2.0 and the assembly is not present please use the link below to install ASP.NET2 AJAX extensions:
 
-```csharp
-http://www.microsoft.com/downloads/details.aspx?FamilyID=ca9d90fa-e8c9-42e3-aa19-08e2c027f5d6&displaylang=en
-```
+If you are using .NET 2.0 and the assembly is not present please use the link [[here|http://www.microsoft.com/downloads/details.aspx?FamilyID=ca9d90fa-e8c9-42e3-aa19-08e2c027f5d6&displaylang=en]] to install ASP.NET2 AJAX extensions.
