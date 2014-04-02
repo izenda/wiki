@@ -1,0 +1,48 @@
+#15.0 Expressions in Izenda
+
+##Introducing Izenda Expressions
+
+In the Advanced Settings popup menu (accessed by clicking the gear icon on the right hand side of each field dialog in the Fields tab) we can see a text box called Expressions.  
+
+![expressions1](http://wiki.izenda.us/FAQ/FAQ/expressions1.png)
+
+![expressions2](http://wiki.izenda.us/FAQ/FAQ/expressions2.png)
+
+This box accepts simple code which allows us to perform calculations on fields provided by the connection string or view.
+
+An expression cannot be run on another expression.  Since there can only be one layer of expressions, to process complex multipart equations some amount of calculation must be done by using a computed column from within a view.
+
+
+**Expressions can:**
+
+- Add, multiply, subtract, or divide two or more existing fields;
+- Convert integers into ratios based on other numerator/denominator fields;
+- Concatenate or add text to field output;
+
+**Expressions cannot:**
+
+- Create new ad-hoc fields
+
+### Three Ways to Apply an Expression to a Field
+
+Each of these expressions operates independently of the specified field, which is ‘Freight’ in this example.  Let’s say we want to get half of the freight value.  We can specify the field in the expression in different ways – naming the field directly, using the ``{0}`` operator. The Expressions text box overrides the values of the field selected- so any field can be used to create calculated columns.
+
+In the Expressions text box in the Advanced Settings popup for the Freight field, we could write these expressions in different syntaxes to compute ``(½ * Freight) = x: ``
+
+``.5 * {0} => Result is .5 * Freight``
+
+``.5 * Freight => Result is .5 * Freight``
+
+Either of these examples will work to compute ``(Freight/2)``. The first example will work when applied to the Freight field only. 
+
+If we enter the second variant in the Expressions box for another field (such as 'UnitPrice'), then the expressed value:
+
+``.5 * [Freight] => Result is .5 * Freight``
+
+The expression box overrides any unit price data with the entered formula, displaying ``(½ * Freight)``.
+
+It is not necessary to use square brackets, or parentheses, but using them is best practice to organize expressions and prevent syntax issues.
+
+---
+
+[[15.0 Expressions in Izenda]]
