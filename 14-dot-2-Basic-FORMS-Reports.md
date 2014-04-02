@@ -1,0 +1,50 @@
+#14.2 Basic FORMS Reports
+
+###Starting a Forms Report
+
+To create a form-based report using Izenda FORMS, simply click ‘Design Report’ as you would to create any report using Izenda. Once you are in the ‘Data Sources’ tab, choose the relevant data sources.  
+
+Continue to the ‘Fields’ tab. Choose any relevant fields. You can use the ‘Format’ drop-down menu to execute data formats within the form you create. Izenda FORMS will allow you to choose fields to call into the form from any available inside the selected data-source without actually choosing them in the ‘Fields’ tab; when the form and report are saved and reloaded, FORMS will automatically populate the ‘Fields’ tab with the fields called in the form. 
+
+FORMS will recognize aliases changed in the ‘Fields’ tab under ‘Description.’ For instance, a field named ‘OrderID’ and aliased as ‘Order#’ in the ‘Description’ column would be called within Izenda FORMS as ``[Order#]``. Using the ‘Advanced’ button for each field, expressions or concatenations can be implemented into the fields called by FORMS. 
+
+**Examples:**
+``[dbo].[Employees].[Address] + ', ' + [dbo].[Employees].[City] => 
+111 Grand Ave, Atlanta``
+
+``[Quantity] * [Price] => 5 * 10.50 => $52.50``
+
+After choosing relevant fields and adjusting formats in the ‘Fields’ tab, click ‘Design Form’ at the bottom of the ‘Fields’ list.
+
+### Building Reports
+
+The form designer has two modes:  ‘Editor’ and ‘Source.’ Izenda’s form designer functions in the same manner as any browser based text editor when in ‘Editor’ mode. In this interface you can see a preview of rendered HTML and any user can make a quick customization or change. Changes made in ‘Editor’ mode are automatically parsed into HTML.
+
+![forms1](./images/forms1.png)
+
+![forms2](./images/forms2.png)
+
+‘Source’ mode accepts HTML directly.  If you are designing a new form from scratch, most HTML designers will find it is best to build new projects using a web design tool like Expressions and then simply paste the source code into Izenda FORMS in ‘Source’ mode.  The user should not attempt to build a complex report using ‘Editor’ mode, because the parsing engine will add additional unnecessary complexity as the report complexity increases.
+
+Again, it is best practice to build an Izenda FORMS report in ‘Source’ mode by hand or by using an external web design tool to generate HTML. Once this HTML is pasted into the tool while in ‘Source’ mode, you can easily switch to ‘Editor’ mode to tweak the output.
+
+**Video Tutorial:** http://blog.izenda.com/quick-tutorial-making-the-most-of-your-toolbar-options/
+
+![forms3](./images/forms3.png)
+
+### Adding Fields
+
+Fields are inserted into a form using square brackets. 
+
+**Example:**  
+``[Field Name or Alias HERE]``
+
+If you want to display the field 'ShipCountry', then at the appropriate place in the form, you would place the ``[ShipCountry]`` tag.
+
+**Video Tutorial:** http://blog.izenda.com/quick-tip-adding-and-modifying-fields/
+
+---
+
+[[14.0 Izenda FORMS]]
+
+[[UserGuides]]
