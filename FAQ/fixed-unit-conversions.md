@@ -2,7 +2,7 @@
 
 Functions are added to Izenda through the extended functions API code. This article explains how with an example:
 
-[[Izenda and UDFs|http://wiki.izenda.us/FAQ/izenda-and-udfs]]
+[[Izenda and UDFs (User Defined Functions)|http://wiki.izenda.us/FAQ/izenda-and-udfs]]
 
 These functions are available in the 'Functions' drop-down. They can also be used in an expression by clicking the gear to the right side of the field.
 
