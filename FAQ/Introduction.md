@@ -2,7 +2,7 @@
 
 [[_TOC_]]
 
-Welcome to Izenda Reports and Dashboards. Izenda offers a rich API of reporting options and features. The following section aims to provide an overview of core Izenda features and a detailed explanation of these features. We at Izenda believe in creating a rich environment for self-service reporting and aim to keep this FAQ up-to-date with the latest information available. Izenda is growing all the time, so please check our [Release Notes](wiki.izenda.us/Release-Notes) frequently for new updates and improvements to existing features. You can also visit other sections of our FAQ for more specific answers to other questions you may have.
+Welcome to Izenda Reports and Dashboards. Izenda offers a rich API of reporting options and features. The following section aims to provide an overview of core Izenda features and a detailed explanation of these features. We at Izenda believe in creating a rich environment for self-service reporting and aim to keep this FAQ up-to-date with the latest information available. Izenda is growing all the time, so please check our [Release Notes](http://wiki.izenda.us/Release-Notes) frequently for new updates and improvements to existing features. You can also visit other sections of our FAQ for more specific answers to other questions you may have.
 
 ##Report Designer
 
