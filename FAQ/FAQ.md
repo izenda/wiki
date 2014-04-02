@@ -27,7 +27,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ###Troubleshooting
 
-- [[Izenda Troubleshooting Tip: ReportList never loads. All other pages work fine.||troubleshooting-report-list]]
+- [[Izenda Troubleshooting Tip: ReportList never loads. All other pages work fine.|troubleshooting-report-list]]
 - [[Izenda Troubleshooting Tip: 'WCFApplication' error|troubleshooting-wcf-application]]
 - [[Izenda Troubleshooting Tip: Transferring, Moving or Copying Report XML Manually|moving-report-xml-manually]]
 - [[Izenda Troubleshooting Tip: Enabling CSS in PDFs and high quality PDF exports|enabling-css-in-pdfs]]
