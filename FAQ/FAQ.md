@@ -36,23 +36,23 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ###Report Design
 
-- [[Izenda Report Design Tip: Running custom Javascript upon clicking a report element]]
-- [[How do I use Expressions?|15.0 Expressions in Izenda]]
-- [[How do I use FORMS?|14.0 Izenda FORMS]]
-- [[Why don't I see the number of resultant columns or rows I expect in my report?]]
-- [[How do I add Fixed Unit Conversions in Izenda, so users can easily access them?]]
-- [[How does filtering in dashboards work?]]
-- [[What CSS will be Included in My Report?]]
+- [[Izenda Report Design Tip: Running custom Javascript upon clicking a report element|FAQ/running-custom-javascript-on-click]]
+- [[How do I use Expressions?|15.0 Expressions in Izenda|FAQ/expressions-in-izenda]]
+- [[How do I use FORMS?|14.0 Izenda FORMS|FAQ/izenda-forms]]
+- [[Why don't I see the number of resultant columns or rows I expect in my report?|FAQ/resultant-columns-or-rows-expected-in-report]]
+- [[How do I add Fixed Unit Conversions in Izenda, so users can easily access them?|FAQ/fixed-unit-conversions]]
+- [[How does filtering in dashboards work?|FAQ/filtering-in-dashboards]]
+- [[What CSS will be Included in My Report?|FAQ/css-in-reports]]
 
 
 ###Misc.
 
-- [[How do I create Data Source Level Security?]]
-- [[How does security work?|How are user credentials applied?]]
-- [[How do I get the ReportList information to create my own ReportList?]]
-- [[How do I force a user to click on 'Update Results' before showing any data?]]
-- [[How do I upgrade/download a new file-set?|Download & Update Resources]]
-- [[How to upload CSV data to SQL Server]]
-- [[DatabaseAdHocConfig Table Structure]]
-- [[How are Thumbnails generated for the Izenda ReportList?]]
-- [[Understanding Izenda Print Modes]]
+- [[How do I create Data Source Level Security?|FAQ/data-source-level-security]]
+- [[How does security work?|FAQ/How user credentials are applied]]
+- [[How do I get the ReportList information to create my own ReportList?|FAQ/getting-reportlist-information]]
+- [[How do I force a user to click on 'Update Results' before showing any data?|FAQ/force-update-results-on-report]]
+- [[How do I upgrade/download a new file-set?|FAQ/Download and Update Resources]]
+- [[How to upload CSV data to SQL Server|FAQ/upload-csv-data-to-sql-server]]
+- [[DatabaseAdHocConfig Table Structure|FAQ/databaseadhocconfig-table-structure]]
+- [[How are Thumbnails generated for the Izenda ReportList?|FAQ/thumbnail-generation-for-reportlist]]
+- [[Understanding Izenda Print Modes|FAQ/understanding-izenda-print-modes]]
