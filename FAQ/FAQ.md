@@ -24,6 +24,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How Do I Enable Izenda Vision?|FAQ/enable-izenda-vision]]
 - [[How do I reset my Fusion Cache via code?|FAQ/reset-fusion-cache]]
 - [[How do I implement Fully Qualified Hidden Filters?|FAQ/implement-fully-qualified-hidden-filters]]
+- [[How do I change the default print settings?|http://wiki.izenda.us/FAQ/Questions/how-to-change-default-print-settings]]
 
 ###Troubleshooting
 
