@@ -2,7 +2,7 @@
 
 ##Field Level Access
 
-The field level property ``FieldFilterRegex`` is a regular expression property that filters based upon the string it's given. The user would not see any fields containing the words 'pass', 'admin' or 'pw'. 
+Field access provides a way of limiting what a user sees in the application. This is taken care of through a simple and easy-to-work-with property in the Izenda settings framework.
 
 [[Please see this example|Controlling access to fields]]
 
