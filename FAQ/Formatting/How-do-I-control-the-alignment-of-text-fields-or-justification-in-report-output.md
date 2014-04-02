@@ -1,4 +1,4 @@
-#How do I control the alignment of text fields or justification in report output?
+#Alignment & Justification Controls
 
 [[_TOC_]]
 
