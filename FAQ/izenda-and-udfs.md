@@ -34,5 +34,7 @@ end;
 
 ![Example UDF](http://wiki.izenda.us/FAQ/FAQ/udfs_example.png)
 
-**3b) You can also use this function in the 'Fields' tab [[advanced panel|http://wiki.izenda.us/FAQ/advanced-field-settings]] - Expression:**
-``SafeDivide(SUM([LaborCost]),SUM([SoldHours]))``
+**3b) You can also use this function in the 'Fields' tab's [[advanced panel|http://wiki.izenda.us/FAQ/advanced-field-settings]] 'Expression' input box:**
+```sql
+    SELECT CAST([dbo].SafeDivide(UnitsInStock, UnitsOnOrder) * 100 AS varchar) + '%' FROM Products
+```
