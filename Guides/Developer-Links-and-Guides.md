@@ -29,3 +29,4 @@ Here is a friendly set of links to videos, download pages and reference material
 |  | |[How do I enable Basic Report Sharing?](http://www.izenda.com/Site/KB/FAQ/How-do-I-enable-basic-report-sharing?)|
 |  | |[Using Share With Rights and Roles](http://www.izenda.com/Site/KB/FAQ/Using-Share-with-rights-roles-properties-in-Izenda-Reports-6-?Keywords=misc+tab)|
 |  | |[How To Post-Process Data](http://www.izenda.com/Site/KB/CodeSamples/How-to-postprocess-data?)|
+|  | |[[OData|Guides/OData]]|
