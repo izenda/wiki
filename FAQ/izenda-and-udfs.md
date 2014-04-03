@@ -36,5 +36,5 @@ end;
 
 **3b) You can also use this function in the 'Fields' tab's [[advanced panel|http://wiki.izenda.us/FAQ/advanced-field-settings]] 'Expression' input box:**
 ```sql
-    SELECT CAST([dbo].SafeDivide([UnitsInStock], [UnitsOnOrder]) * 100 AS varchar) + '%' FROM Products
+    SELECT CAST(SafeDivide([UnitsInStock], [UnitsOnOrder]) * 100 AS varchar) + '%' FROM Products
 ```
