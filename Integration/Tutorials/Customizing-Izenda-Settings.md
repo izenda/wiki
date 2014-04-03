@@ -78,9 +78,9 @@ You may now add custom code to Izenda Reports.
 
 Izenda Reports is an ASP.NET application and utilizes an object model. There are two classes upon which an integrator should primarily focus. These classes contain many settings and methods that will help you integrate our application with yours.
 
-  * AdHocSettings: the class which contains all of the settings for Izenda Reports. The settings page references these settings global, however, as explained, they can be set on a per-user basis. At this level, customization is fairly easy and involves assigning values to a settings. For example:
+  * **AdHocSettings**: the class which contains all of the settings for Izenda Reports. The settings page references these settings global, however, as explained, they can be set on a per-user basis. At this level, customization is fairly easy and involves assigning values to a settings. For example:
     * ``AdHocSettings.ShowAdminButton=false;``
-  * AdHocConfig: the class which enables you to call the methods and properties which you have altered from anywhere else in your code. For example, to invoke a the method which contains the logic for after a user has logged in you would call, where the ``PostLogin()`` method contains the logic:
+  * **AdHocConfig**: the class which enables you to call the methods and properties which you have altered from anywhere else in your code. For example, to invoke a the method which contains the logic for after a user has logged in you would call, where the ``PostLogin()`` method contains the logic:
     * ``AdHocSettings.AdHocConfig.PostLogin();``
 
 Both of these classes are customized by adding your code into the global.asax file, as shown above.
@@ -91,9 +91,9 @@ By putting code in the **global.asax** file, you are simply choosing to use the 
 
 In general, most custom code will be placed in the **Global.asax** file. [[Please see this code sample for details]]. Custom code applies to one of the following contexts:
 
-  * Global - Affect on the Izenda Reports application: This type of code applies to all users and all reports. This type of code should be contained in the ``ConfigureSettings()`` method in the global.asax file. [[Please see this example for details]]. 
-  * Per User Basis/Per Role Basis/etc - This type of code applies to different users in different ways. We recommend that this type of code should be contained in the ``PostLogin()`` method. Note that this method needs to be called from your application's authentication process. [[Please see this example for details]].
-  * Per Report/Custom Processing of Reports - Applied before execution of each report. Generally, this is used for applying hidden filters. This code needs to be placed in the ``PreExecuteReportSet()`` method. [[Please see this example for details]].
+  * **Global:** Affect on the Izenda Reports application: This type of code applies to all users and all reports. This type of code should be contained in the ``ConfigureSettings()`` method in the global.asax file. [[Please see this example for details]]. 
+  * **Per User Basis/Per Role Basis/etc:** This type of code applies to different users in different ways. We recommend that this type of code should be contained in the ``PostLogin()`` method. Note that this method needs to be called from your application's authentication process. [[Please see this example for details]].
+  * **Per Report/Custom Processing of Reports:** Applied before execution of each report. Generally, this is used for applying hidden filters. This code needs to be placed in the ``PreExecuteReportSet()`` method. [[Please see this example for details]].
 
 ##Calling Izenda Reports from your application
 
