@@ -38,3 +38,5 @@ end;
 ```sql
     CAST(SafeDivide([UnitsInStock], [UnitsOnOrder]) * 100 AS varchar) + '%'
 ```
+
+![Percent of Stock With UDFs](http://wiki.izenda.us/FAQ/FAQ/udfs_example_2.png)
