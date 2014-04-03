@@ -36,7 +36,7 @@ end;
 
 **3b) You can also use this function in the [[Expression|http://wiki.izenda.us/FAQ/UserGuides/15.0-Expressions-in-Izenda]] box on the 'Fields' tab's [[advanced panel|http://wiki.izenda.us/FAQ/advanced-field-settings]]**
 ```sql
-    SafeDivide([UnitsInStock], [UnitsOnOrder])
+    SafeDivide([UnitsOnOrder], [UnitsInStock])
 ```
 You can also use the Format dropdown to turn the result into your desired format. See the result below for what happens when we use the above expression in our Northwind Traders DataSource.
 
