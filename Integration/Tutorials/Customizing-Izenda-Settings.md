@@ -2,11 +2,11 @@
 
 [[_TOC_]]
 
-###Introduction: common code additions
+##Introduction: common code additions
 
 Izenda Reports can be integrated with the navigation, security, and appearance of existing applications. This is done through the code-level API, which can be accessed and extended through the **AdHocConfig** and **AdHocSettings** classes. By default, the Izenda starter kit includes pre-built code templates, which can be found in Global.asax. Here you will find settings that set critical values like the connection string and license key as well as a custom **AdHocConfig** implementation that overrides common methods. Here is an example of what a common global.asax might look like. 
 
-###Sample Global.asax file
+##Sample Global.asax file
 
 ``` c#
 <%@ Application Language="C#" %>
@@ -62,7 +62,7 @@ For more a more detailed code sample, click any of the headings.
   * PostLogin() Add per-user code here, such as setting the username and other per-user settings.
   * PreExecuteReportSet() Add hidden filters and other code which needs to run before the report is displayed to the user.
 
-###How do I add custom code?
+##How do I add custom code?
 
 To enable a custom configuration, we must put the key and connection string in the ``Session_Start()`` method, even though they have already been set in the **Settings.aspx** page. Otherwise, the Izenda Reports application will ignore the ``Configure_Settings()`` method completely and only use the settings set in the **settings.aspx** page. To enable custom code: 
 
@@ -74,7 +74,7 @@ To enable a custom configuration, we must put the key and connection string in t
 
 You may now add custom code to Izenda Reports.
 
-**AdHocSettings and AdHocConfig: The Main Integration Objects**
+##AdHocSettings and AdHocConfig: The Main Integration Objects
 
 Izenda Reports is an ASP.NET application and utilizes an object model. There are two classes upon which an integrator should primarily focus. These classes contain many settings and methods that will help you integrate our application with yours.
 
@@ -85,7 +85,7 @@ Izenda Reports is an ASP.NET application and utilizes an object model. There are
 
 Both of these classes are customized by adding your code into the global.asax file, as shown above.
 
-**Creating a custom AdHocConfig class using the Global.asax file**
+##Creating a custom AdHocConfig class using the Global.asax file
 
 By putting code in the **global.asax** file, you are simply choosing to use the ``CustomAdHocConfig`` class, which will extend either database mode or file system mode. Unless you specifically override the methods, they will retain their default behavior.
 
@@ -95,7 +95,7 @@ In general, most custom code will be placed in the **Global.asax** file. [[Pleas
   * Per User Basis/Per Role Basis/etc - This type of code applies to different users in different ways. We recommend that this type of code should be contained in the ``PostLogin()`` method. Note that this method needs to be called from your application's authentication process. [[Please see this example for details]].
   * Per Report/Custom Processing of Reports - Applied before execution of each report. Generally, this is used for applying hidden filters. This code needs to be placed in the ``PreExecuteReportSet()`` method. [[Please see this example for details]].
 
-**Calling Izenda Reports from your application**
+##Calling Izenda Reports from your application
 
 The ``CustomAdHocConfig`` class contains a variety of methods that can be overridden to your specifications. Initially, the two most important are global and per-user configuration settings.
 
@@ -103,7 +103,7 @@ The ``CustomAdHocConfig`` class contains a variety of methods that can be overri
   * Per-user settings: place your code in the ``PostLogin()`` method and invoke this method from your application by calling:
     * ``Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin();``
 
-**What if my **global.asax** is already integrated or I cannot use it?**
+##What if my global.asax is already integrated or I cannot use it?
 
 In the case that you will not be using the **global.asax** file or that you are using a different **global.asax** than Izenda's, you will need to make sure that you set the license key before invoking any of the configuration methods or settings in Izenda Reports. You can set the license key with:
 
