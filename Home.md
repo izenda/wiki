@@ -6,7 +6,7 @@ Welcome to the Izenda Wiki pages. Here we include information for our customers 
 
 ##[[Release Notes]]
 
-View previous releases and find out what new fixes and features are contained within each one.
+View the current and previous releases and find out what new fixes and features are contained within each one.
 
 ##[[FAQ]]
 
