@@ -30,13 +30,14 @@ end;
 **2) Add this function to Izenda:**
 ``AdHocSettings.ExtendedFunctions = new string[] { "[dbo].[SafeDivide]" };``
 
-**3a) You can now choose this function in the 'Fields' tab function drop down for any column. (Functions, as the one above, with more than one input parameter cannot be chosen for a single column in the functions drop-down and must be implemented as an expression)**
+**3a) You can now choose this function in the 'Fields' tab function drop down for any column. (Functions, as the one above, with more than one input parameter cannot be chosen for a single column in the functions drop-down and must be implemented as an expression.)**
 
 ![Example UDF](http://wiki.izenda.us/FAQ/FAQ/udfs_example.png)
 
-**3b) You can also use this function in the 'Fields' tab's [[advanced panel|http://wiki.izenda.us/FAQ/advanced-field-settings]] 'Expression' input box:**
+**3b) You can also use this function in the [[Expression|http://wiki.izenda.us/FAQ/UserGuides/15.0-Expressions-in-Izenda]] box on the 'Fields' tab's [[advanced panel|http://wiki.izenda.us/FAQ/advanced-field-settings]]**
 ```sql
-    CAST(SafeDivide([UnitsInStock], [UnitsOnOrder]) * 100 AS varchar) + '%'
+    SafeDivide([UnitsInStock], [UnitsOnOrder])
 ```
+You can also use the Format dropdown to turn the result into your desired format. See the result below for what happens when we use the above expression in our Northwind Traders DataSource.
 
 ![Percent of Stock With UDFs](http://wiki.izenda.us/FAQ/FAQ/udfs_example_2.png)
