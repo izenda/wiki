@@ -1,4 +1,4 @@
 * [[Release Notes]]
 * [[FAQ]]
 * [[Tutorials]]
-* [[Izenda Guides]]
+* [[Izenda User Guides|Izenda Guides]]
