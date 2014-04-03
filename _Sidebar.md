@@ -1,4 +1,4 @@
 * [[Release Notes]]
-* [[Izenda Guides]]
-* [[Integration]]
 * [[FAQ]]
+* [[Tutorials]]
+* [[Izenda Guides]]
