@@ -1,7 +1,4 @@
 * [[Installing Izenda]]
 * [[Izenda Quick Start Guide|Integration/Tutorials/Getting-Started]]
-* [[Basic Configuration]]
-* [[Integration]]
-* [[Customizing Izenda]]
-* [[OData|guides/OData]]
+* [[User Guides|FAQ/UserGuides]]
 * [[Developer Tutorials|Guides/Developer Links and Guides]]

@@ -96,3 +96,9 @@ Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin();
 AdHocSettings.RequireLogin = false; 
 AdHocSettings.LoginUrl = "INSERT_YOUR_LOGIN_PAGE_HERE"; 
 ```
+
+###[[Navigation|Integration/Tutorials/Navigation]]
+
+###[[Architecture|Integration/Tutorials/Architecture]]
+
+###[[Localization|Integration/Tutorials/Localization]]
