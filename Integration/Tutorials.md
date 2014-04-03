@@ -1,7 +1,7 @@
 #Tutorials
 
 * [[Installing Izenda]]
-* [[Izenda Quick Start Guide]]
+* [[Izenda Quick Start Guide|Integration/Quick-Start]]
 * [[Basic Configuration]]
 * [[Integration]]
 * [[Customizing Izenda]]
