@@ -1,4 +1,4 @@
-#Adding Code
+#Customizing Izenda Settings
 
 [[_TOC_]]
 
