@@ -32,7 +32,7 @@ end;
 
 **3a) You can now choose this function in the 'Fields' tab function drop down for any column. (Functions, as the one above, with more than one input parameter cannot be chosen for a single column in the functions drop-down and must be implemented as an expression)**
 
-<font color="red">Add Picture</font>
+~[Example UDF](http://wiki.izenda.us/FAQ/FAQ/udfs_example.png)
 
 **3b) You can also use this function in the 'Fields' tab [[advanced panel|http://wiki.izenda.us/FAQ/advanced-field-settings]] - Expression:**
 ``SafeDivide(SUM([LaborCost]),SUM([SoldHours]))``
