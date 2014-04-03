@@ -64,13 +64,13 @@ For more a more detailed code sample, click any of the headings.
 
 ###How do I add custom code?
 
-To enable a custom configuration, we must put the key and connection string in the Session_Start method, even though they have already been set in the Settings.aspx page. Otherwise, the Izenda Reports application will ignore the Configure_Settings method completely and only use the settings set in the settings.aspx page. To enable custom code: 
+To enable a custom configuration, we must put the key and connection string in the ``Session_Start()`` method, even though they have already been set in the **Settings.aspx** page. Otherwise, the Izenda Reports application will ignore the ``Configure_Settings()`` method completely and only use the settings set in the **settings.aspx** page. To enable custom code: 
 
   * Navigate via the file system to the root directory of your Izenda Reports installation
   * Open your global.asax file in a text editor or your favorite IDE
-  * Find the Session_Start() method
-  * Your license key MUST be first. Add your license key to the Session_Start() method as show in this example.
-  * Add your connection string to the Session_Start() method as show in this example.
+  * Find the ``Session_Start()`` method
+  * Your license key MUST be first. Add your license key to the ``Session_Start() method as show in this example.
+  * Add your connection string to the ``Session_Start()`` method as show in this example.
 
 You may now add custom code to Izenda Reports.
 
@@ -79,40 +79,34 @@ You may now add custom code to Izenda Reports.
 Izenda Reports is an ASP.NET application and utilizes an object model. There are two classes upon which an integrator should primarily focus. These classes contain many settings and methods that will help you integrate our application with yours.
 
   * AdHocSettings: the class which contains all of the settings for Izenda Reports. The settings page references these settings global, however, as explained, they can be set on a per-user basis. At this level, customization is fairly easy and involves assigning values to a settings. For example:
-    * AdHocSettings.ShowAdminButton=false;
-  * AdHocConfig: the class which enables you to call the methods and properties which you have altered from anywhere else in your code. For example, to invoke a the method which contains the logic for after a user has logged in you would call, where the PostLogin() method contains the logic:
-    * AdHocSettings.AdHocConfig.PostLogin();
+    * ``AdHocSettings.ShowAdminButton=false;``
+  * AdHocConfig: the class which enables you to call the methods and properties which you have altered from anywhere else in your code. For example, to invoke a the method which contains the logic for after a user has logged in you would call, where the ``PostLogin()`` method contains the logic:
+    * ``AdHocSettings.AdHocConfig.PostLogin();``
 
 Both of these classes are customized by adding your code into the global.asax file, as shown above.
 
 **Creating a custom AdHocConfig class using the Global.asax file**
 
-By putting code in the global.asax file, you are simply choosing to use the CustomAdHocConfig class, which will extend either database mode or file system mode. Unless you specifically override the methods, they will retain their default behavior.
+By putting code in the **global.asax** file, you are simply choosing to use the ``CustomAdHocConfig`` class, which will extend either database mode or file system mode. Unless you specifically override the methods, they will retain their default behavior.
 
-In general, most custom code will be placed in the Global.asax file. [[Please see this code sample for details]]. Custom code applies to one of the following contexts:
+In general, most custom code will be placed in the **Global.asax** file. [[Please see this code sample for details]]. Custom code applies to one of the following contexts:
 
-  * Global - Affect on the Izenda Reports application: This type of code applies to all users and all reports. This type of code should be contained in the ConfigureSettings() method in the global.asax file. [[Please see this example for details]]. 
-  * Per User Basis/Per Role Basis/etc - This type of code applies to different users in different ways. We recommend that this type of code should be contained in the PostLogin() method. Note that this method needs to be called from your application's authentication process. [[Please see this example for details]].
-  * Per Report/Custom Processing of Reports - Applied before execution of each report. Generally, this is used for applying hidden filters. This code needs to be placed in the PreExecuteReportSet() method. [[Please see this example for details]].
+  * Global - Affect on the Izenda Reports application: This type of code applies to all users and all reports. This type of code should be contained in the ``ConfigureSettings()`` method in the global.asax file. [[Please see this example for details]]. 
+  * Per User Basis/Per Role Basis/etc - This type of code applies to different users in different ways. We recommend that this type of code should be contained in the ``PostLogin()`` method. Note that this method needs to be called from your application's authentication process. [[Please see this example for details]].
+  * Per Report/Custom Processing of Reports - Applied before execution of each report. Generally, this is used for applying hidden filters. This code needs to be placed in the ``PreExecuteReportSet()`` method. [[Please see this example for details]].
 
 **Calling Izenda Reports from your application**
 
-The CustomAdHocConfig class contains a variety of methods that can be overridden to your specifications. Initially, the two most important are global and per-user configuration settings.
+The ``CustomAdHocConfig`` class contains a variety of methods that can be overridden to your specifications. Initially, the two most important are global and per-user configuration settings.
 
-  * Global configuration settings: use the ConfigureSettings() method in the global.asax. Code placed in here will override the settings.aspx settings.
-  * Per-user settings: place your code in the PostLogin() method and invoke this method from your application by calling:
-    * Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin();
+  * Global configuration settings: use the ``ConfigureSettings()`` method in the **global.asax**. Code placed in here will override the **settings.aspx** settings.
+  * Per-user settings: place your code in the ``PostLogin()`` method and invoke this method from your application by calling:
+    * ``Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin();``
 
-**What if my global.asax is already integrated or I cannot use it?**
+**What if my **global.asax** is already integrated or I cannot use it?**
 
-In the case that you will not be using the global.asax file or that you are using a different global.asax than Izenda's, you will need to make sure that you set the license key before invoking any of the configuration methods or settings in Izenda Reports. You can set the license key with:
+In the case that you will not be using the **global.asax** file or that you are using a different **global.asax** than Izenda's, you will need to make sure that you set the license key before invoking any of the configuration methods or settings in Izenda Reports. You can set the license key with:
 
-  * Izenda.AdHoc.AdHocSettings.LicenseKey = \[key here\];
+ ``Izenda.AdHoc.AdHocSettings.LicenseKey = \[key here\];``
 
 We recommend setting this at the start of the user's session.
-
-
-
-**Izenda Reports API **
-
-Izenda also provides customers with access to its API Source code and to various pages with the purchase of our product. To access our API and browse through it, click access the Izenda Reports API. 
