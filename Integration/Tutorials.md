@@ -4,7 +4,7 @@
 
 This tutorial will focus on installing Izenda Reports on your server.
 
-##[[Izenda Quick Start Guide|Integration/Quick-Start]]
+##[[Izenda Quick Start Guide|Integration/Tutorials/Getting-Started]]
 
 This tutorial provides a general overview of the topics covered by the sections below.
 
