@@ -1,3 +1,5 @@
+![alt text](http://demo2.izenda.us/bi/rs.aspx?image=ModernImages.izenda-logo-4.gif)
+
 * [[Release Notes]]
 * [[FAQ]]
 * [[Tutorials]]
