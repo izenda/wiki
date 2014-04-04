@@ -1,4 +1,4 @@
-#Izenda Fusion
+#Izenda Fusion Driver
 
 [[_TOC_]]
 
@@ -24,8 +24,10 @@ Configuring the Izenda Fusion Driver consists of several steps:
 
 At first you should create FusionDriver object and set up it as default driver for the Izenda AdHoc. Here is example how to do it in C#:
 
+```csharp
 FusionDriver fusionDriver = new FusionDriver();
 AdHocContext.Driver = fusionDriver;
+```
 
 ###2. Add connections to the driver
 
@@ -143,3 +145,16 @@ Below is a full example of how to set up and configure the Izenda Fusion Driver 
     }
 </script>
 ```
+
+###Customizing the Izenda Fusion driver
+
+Izenda reports is designed as a modular system to be easily customizable for usage with any datasources. The ``AdHocContext`` class has a **Driver** property containing an instance of ``Izenda.AdHoc.Database.Driver`` inheritor, which provides datasource meta data for AdHoc (Figure 1).
+
+![Fusion Driver Using Multiple DataSources](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver.png)
+**Figure 1:** The driver works directly with your datasources and provides Izenda AdHoc with complete information about tables, fields of tables, data types, etc.
+
+The ``Izenda.AdHoc.Database.MSSQLDriver`` class implements complete functionality for using MSSQL server as your datasource and also allows you to create inheritors. So the easiest way to create a custom driver working with MSSQL server is to inherit ``Izenda.AdHoc.Database.MSSQLDriver`` and override the functionality you need to work differently. Below is complete instruction on performing this.
+ 
+1. Create new project with type of Class library in Visual Studio (Figure 2).
+![Creating a Custom Driver](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver_2.png)
+2. 
