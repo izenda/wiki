@@ -10,7 +10,7 @@ Below is a schematic diagram of Fusion Driver:
 
 ![Izenda Fusion Driver Schematic](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/fusion_driver_schematic.png)
 
-##How to set up and configure Fusion Driver?
+##Configuring the Izenda Fusion Driver
 
 Configuring the Izenda Fusion Driver is almost the same as configuring the Izenda Driver with single connection. The main differences are:
 
@@ -88,7 +88,7 @@ You can configure the cache yourself by using the following properties and metho
 * **CacheAllReports method:** Adds all available reports to the cache: ``fusionDriver.CacheAllReports();``
 * **CacheReport method:** Adds a single report with the specified name to the cache: ``fusionDriver.CacheReport(string reportFullName);``
 
-###Sample use
+##Sample use
 
 Below is a full example of how to set up and configure the Izenda Fusion Driver with several connections and reports stored in your database:
 
@@ -146,7 +146,7 @@ Below is a full example of how to set up and configure the Izenda Fusion Driver 
 </script>
 ```
 
-###Customizing the Izenda Fusion driver
+##Customizing the Izenda Fusion driver
 
 Izenda reports is designed as a modular system to be easily customizable for usage with any datasources. The ``AdHocContext`` class has a **Driver** property containing an instance of ``Izenda.AdHoc.Database.Driver`` inheritor, which provides datasource meta data for AdHoc (Figure 1).
 
