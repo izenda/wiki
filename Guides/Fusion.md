@@ -86,9 +86,9 @@ You can configure the cache yourself by using the following properties and metho
 
 ###Sample use
 
-Below is a full example of how to set up and configure Fusion Driver with several connections and reports stored in database:
+Below is a full example of how to set up and configure the Izenda Fusion Driver with several connections and reports stored in your database:
 
-```asp
+```csharp
 <%@ Application Language="C#" %>
 <%@ Import Namespace="System.Data"%>
 <%@ Import Namespace="Izenda.AdHoc.Database"%>
