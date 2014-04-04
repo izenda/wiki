@@ -1,5 +1,5 @@
 ![alt text](http://demo2.izenda.us/bi/rs.aspx?image=ModernImages.izenda-logo-4.gif)
-```
+---
 
 * [[Installing Izenda on Windows Server|Integration/Tutorials/Installing-Izenda]]
 * [[Installing Izenda on Mac|/Guides/Mac-Install]]
