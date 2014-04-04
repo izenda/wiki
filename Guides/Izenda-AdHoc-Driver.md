@@ -1,18 +1,97 @@
-#Izenda Fusion Driver
+#Izenda AdHoc Driver
 
 [[_TOC_]]
 
-##How the Izenda Fusion Driver works
+##The AdHoc Driver class
+
+Izenda reports is designed as a modular system to be easily customizable for usage with any datasources. The ``AdHocContext`` class has a **Driver** property containing an instance of the ``Izenda.AdHoc.Database.Driver`` abstract class, which provides datasource metadata for Izenda AdHoc. All datasource drivers in Izenda AdHoc use this as their base class and layer functionality on top of it.
+
+![Creating a Custom Driver](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver.png)
+**Figure 1:** The standard Izenda Driver model. Datasources are separate and the driver handles the heavy lifting of interacting with the datasources.
+
+###Customizing the Izenda AdHoc Driver
+
+The ``Izenda.AdHoc.Database.MSSQLDriver`` class implements complete functionality for using MSSQL server as your datasource and also allows you to create inheritors. So the easiest way to create a custom driver working with MSSQL server is to inherit ``Izenda.AdHoc.Database.MSSQLDriver`` and override the functionality you need to work differently. Below are complete instructions detailing how to perform this:
+ 
+1. Create new project with type of Class library in Visual Studio.
+![Creating a Custom Driver](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver_2.png)
+**Figure 2:**
+
+2. Add Izenda.AdHoc.dll to the References in the project.
+
+![Adding Izenda AdHoc as a Reference](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver_3_2.png)
+**Figure 3:**
+
+3. Create new class and inherit MSSQLDriver:
+
+```csharp
+using Izenda.AdHoc.Database;
+namespace CustomDriver
+{
+    public class MyCustomDriver : MSSQLDriver
+    {
+    }
+}
+```
+4. Now any metadata drilling functionality can be altered. Here we will implement overriding of two most important methods, assuming that we have a single custom source of data. For our example, we will assume the table **Products** exists with three fields: **Id**, **Name**, and **Price**:
+
+a. ``GetAllTables()`` returns an array of ``Izenda.AdHoc.Database.Table`` which will be available in the DataSources tab in the ReportDesigner as a list of datasources. Here is a short example of overriding this method:
+ 
+```csharp
+public override Table[] GetAllTables()
+{
+    Table[] result = new Table[1];
+    result[0] = new Table("Products");
+    return result;
+}
+```
+b. GetColumns returns an array of Izenda.AdHoc.Database.Column for the given table. This array is used as fields list at several tabs in the ReportDesigner. Again, short example of overriding this method:
+ 
+public override Column[] GetColumns(Table table)
+{
+    if (table.Name == "Products") {
+    Column[] result = new Column[3];
+    result[0] = new Column("Id", SqlType.UInt32);
+    result[1] = new Column("Name", SqlType.VarChar);
+    result[2] = new Column("Price", SqlType.Float);
+    }
+    else {
+        throw new Exception("Unknown DataSource");
+    }
+}
+
+The overridden fields can be seen in the Fields tab on the Report Designer after selecting the DataSource "Products" at the DataSources tab.
+
+5. Include a reference to your ``CustomDriver`` to your website. To perform this, the following steps should be taken:
+    a. Compile your ``CustomDriver`` project and copy the assembly to your website's /bin folder, and add the reference just like above.
+    b. Set ``AdHocContext.Driver = new CustomDriver`` in the ``Session_Start()`` or ``Application_Start()`` method.
+
+6. You must also override some other methods like ``GetDataSet()``. This method accepts a ``System.Data.IDBCommand`` parameter, and returns the corresponding DataSet. Overriding this method allows you to pre-process the dataset before returning it. You may use ``AdHocContext.CurrentReportSet`` to get additional details of the report. For integrations that will not utilize SQL queries in the command object, ``Izenda.AdHoc.AdHocContext.CurrentReportSet`` may be used to get the report state.
+
+To override this method, simply add following strings to the MyCustomDriver class:
+
+```csharp
+public override DataSet GetDataSet(IDbCommand Command)
+{
+DataSet result;
+    result = base.GetDataSet(command); //If you want the driver to obtain DataSet and process it before returning
+
+    //result = new DataSet(); //If you want to implement your own method for obtaining a DataSet.
+
+    //more processing....
+    return result;
+}
+
+You can also see more coding examples in our [[Knowledge Base|http://izenda.com/Site/KB/CodeSamples/79]].
+
+##Izenda Fusion Driver
 
 The Izenda Fusion Driver composes data sources from several connections (data providers) into a single data source. This is very similar to how [[SSAS|http://technet.microsoft.com/en-us/library/ms175609(v=sql.90).aspx]] works, but using Fusion you can aggregate data not only from MSSQL databases but from very different data sources. For example, you can get data from the [[OData|Guides/OData]] data provider (i.e. without a direct connection to the database). All you need to do is set up the data sources' connections and you will be able to work with aggregated data as a single data source.
 
 ![Izenda Fusion Driver Schematic](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/fusion_driver_schematic.png)
-**Figure 1:** Schematics of how the Fusion Driver interacts with different datasources
+**Figure :** Schematics of how the Fusion Driver interacts with different datasources. Instead of working with individual datasources, it aggregates the datasources into one.
 
-![Fusion Driver Using Multiple DataSources](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver.png)
-**Figure 2:** The driver works directly with your datasources and provides Izenda AdHoc with complete information about tables, fields of tables, data types, etc.
-
-##Configuring the Izenda Fusion Driver
+###Configuring the Izenda Fusion Driver
 
 Configuring the Izenda Fusion Driver is almost the same as configuring the Izenda Driver with single connection. The main differences are:
 
@@ -22,7 +101,7 @@ Configuring the Izenda Fusion Driver is almost the same as configuring the Izend
 
 Configuring the Izenda Fusion Driver consists of several steps:
 
-###1. Create the Fusion Driver
+####1. Create the Fusion Driver
 
 At first you should create FusionDriver object and set up it as default driver for the Izenda AdHoc. Here is example how to do it in C#:
 
@@ -31,11 +110,11 @@ FusionDriver fusionDriver = new FusionDriver();
 AdHocContext.Driver = fusionDriver;
 ```
 
-###2. Add connections to the driver
+####2. Add connections to the driver
 
 Now you can add connections to the data sources end points. The end point could be a direct connection to the MSSQL database or it can be an OData connection to the MSSQL or Oracle database.
 
-####a) Adding a connection to the local MSSQL database. 
+#####a) Adding a connection to the local MSSQL database. 
 
 You should specify the connection nickname in first parameter, the connection type of MSSQL in the second parameter, and the connection string in the last parameter:
 
@@ -43,7 +122,7 @@ You should specify the connection nickname in first parameter, the connection ty
 fusionDriver.AddConnection("SqlNW", FusionConnectionType.MsSql, "server=(local);database=Northwind;Trusted_Connection=True;");
 ```
 
-####b) Adding a connection to the OData provider. 
+#####b) Adding a connection to the OData provider. 
 
 You should specify the connection nickname in first parameter, the connection type of OData in the second parameter, and the link to the OData end point in the last parameter:
 
@@ -51,11 +130,11 @@ You should specify the connection nickname in first parameter, the connection ty
 fusionDriver.AddConnection("OrclNW", FusionConnectionType.OData, "http://www.providerdomain.com/provider_endpoint.aspx"); 
 ```
 
-###3. Set up additional settings
+####3. Set up additional settings
 
 The Izenda Fusion Driver has several additional settings:
 
-####a) VisibleDataSources 
+#####a) VisibleDataSources 
 
 This is setup the same way as for a single connection. Only data sources with the specified names will be available:
 
@@ -63,7 +142,7 @@ This is setup the same way as for a single connection. Only data sources with th
 fusionDriver.VisibleDataSources = new string[] { "Orders", "Customers", "Order Details" };
 ```
 
-####b) Constraints
+#####b) Constraints
 
 This is setup the same as for single connection except that you are able to specify separate constraints for each connection by using connection nicknames. Note that you can use wildcard characters to set up constraints:
 
@@ -72,7 +151,7 @@ fusionDriver.AddConstraint("SqlNW/Order.Id", "SqlNW/*.OrderID");
 fusionDriver.RemoveConstraint("OrclNW/Account.Id", "OrclNW/User.AccountID");
 ```
 
-####c) ReportingConnectionString
+#####c) ReportingConnectionString
 
 If reports are stored in the database you should specify connection string to that database. Note that in addition to this, you should also use FusionAdHocConfig instead of DatabaseAdHocConfig. The following example sets up the connection string to the database using the reports table. If you store reports in the file system then skip this step(use FileSystemAdHocConfig if you do this).
 
@@ -80,7 +159,7 @@ If reports are stored in the database you should specify connection string to th
 ((FusionAdHocConfig)AdHocSettings.AdHocConfig).ReportingConnectionString = "server=(local);database=Reports;Trusted_Connection=True;";
 ```
 
-####d) Set up cache
+#####d) Set up cache
 
 Getting data from several data source providers may take a lot of time and resources when many connections are added. This will result in a slow connection to the providers due to large amount of data being transferred, etc. That’s why the cache is enabled by default for the Izenda Fusion Driver. By default, cache expiration time is set to 12PM on Saturday. This means that every Saturday, the cache will be cleared and all data will be requested from the providers during the next session.
 
@@ -90,7 +169,7 @@ You can configure the cache yourself by using the following properties and metho
 * **CacheAllReports method:** Adds all available reports to the cache: ``fusionDriver.CacheAllReports();``
 * **CacheReport method:** Adds a single report with the specified name to the cache: ``fusionDriver.CacheReport(string reportFullName);``
 
-##Sample use
+###Sample use
 
 Below is a full example of how to set up and configure the Izenda Fusion Driver with several connections and reports stored in your database:
 
@@ -147,13 +226,3 @@ Below is a full example of how to set up and configure the Izenda Fusion Driver 
     }
 </script>
 ```
-
-##Customizing the Izenda Fusion driver
-
-Izenda reports is designed as a modular system to be easily customizable for usage with any datasources. The ``AdHocContext`` class has a **Driver** property containing an instance of ``Izenda.AdHoc.Database.Driver`` abstract class, which provides datasource metadata for Izenda AdHoc.
-
-The ``Izenda.AdHoc.Database.MSSQLDriver`` class implements complete functionality for using MSSQL server as your datasource and also allows you to create inheritors. So the easiest way to create a custom driver working with MSSQL server is to inherit ``Izenda.AdHoc.Database.MSSQLDriver`` and override the functionality you need to work differently. Below is complete instruction on performing this.
- 
-1. Create new project with type of Class library in Visual Studio (Figure 2).
-![Creating a Custom Driver](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver_2.png)
-2. 
