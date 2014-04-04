@@ -31,16 +31,3 @@ Here is a friendly set of links to videos, download pages and reference material
 * [How To Post-Process Data](http://www.izenda.com/Site/KB/CodeSamples/How-to-postprocess-data?)
 * [[OData|Guides/OData]]
 * [[Izenda Fusion|Guides/Fusion]]
-
-| Basic Links                   | End User Links                |
-| :---------------------------: | :---------------------------: | 
-| [Izenda Website](http://www.izenda.com/Site/Izenda-Ad-Hoc-Reporting.aspx) | [Guide To Report Design](http://dwmofqygvzj39.cloudfront.net/izenda-izenda_guide_to_report_design.pdf)|
-| [Product Video](http://www.izenda.com/Site/Video/ProductVideo.aspx) | [Example Dashboard](http://demo2.izenda.us/bi/Dashboards.aspx?rn=Dashboard)|
-| [Izenda Blog](http://blog.izenda.com/) | [Knowledge Base Training Page](http://www.izenda.com/Site/KB/Training/78)|
-| [Company Page](http://www.izenda.com/site/Pages/company.aspx) | [Training Videos](http://www.izenda.com/Site/KB/Training/58)|
-| [Live Demo](http://demo2.izenda.us/bi/ReportListIntro.aspx) | [User Manuals](http://www.izenda.com/Site/KB/Training/93)|
-| [Gallery](http://www.izenda.com/site/Pages/Gallery.aspx) | [Making Custom Forms Video](http://www.youtube.com/watch?v=5b2axJlgdFs)|
-| [Client List](http://www.izenda.com/Site/Pages/Clients.aspx) | |
-| [Contact Page](http://www.izenda.com/site/Pages/contactus.aspx) | |
-| [Knowledge Base](http://www.izenda.com/Site/KB/Integration/94) | |
-| [FAQ](http://www.izenda.com/Site/KB/FAQ/80) | |
