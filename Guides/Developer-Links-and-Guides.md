@@ -1,7 +1,5 @@
 # Izenda Reports Developer Links and Guides
 
-![alt text](http://demo2.izenda.us/bi/rs.aspx?image=ModernImages.izenda-logo-4.gif)
-
 [[_TOC_]]
 
 ##Helpful Links
