@@ -6,9 +6,11 @@
 
 The Izenda Fusion Driver composes data sources from several connections (data providers) into a single data source. This is very similar to how [[SSAS|http://technet.microsoft.com/en-us/library/ms175609(v=sql.90).aspx]] works, but using Fusion you can aggregate data not only from MSSQL databases but from very different data sources. For example, you can get data from the [[OData|Guides/OData]] data provider (i.e. without a direct connection to the database). All you need to do is set up the data sources' connections and you will be able to work with aggregated data as a single data source.
 
-Below is a schematic diagram of Fusion Driver:
-
 ![Izenda Fusion Driver Schematic](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/fusion_driver_schematic.png)
+**Figure 1:** Schematics of how the Fusion Driver interacts with different datasources
+
+![Fusion Driver Using Multiple DataSources](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver.png)
+**Figure 2:** The driver works directly with your datasources and provides Izenda AdHoc with complete information about tables, fields of tables, data types, etc.
 
 ##Configuring the Izenda Fusion Driver
 
@@ -148,10 +150,7 @@ Below is a full example of how to set up and configure the Izenda Fusion Driver 
 
 ##Customizing the Izenda Fusion driver
 
-Izenda reports is designed as a modular system to be easily customizable for usage with any datasources. The ``AdHocContext`` class has a **Driver** property containing an instance of ``Izenda.AdHoc.Database.Driver`` inheritor, which provides datasource meta data for AdHoc (Figure 1).
-
-![Fusion Driver Using Multiple DataSources](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver.png)
-**Figure 1:** The driver works directly with your datasources and provides Izenda AdHoc with complete information about tables, fields of tables, data types, etc.
+Izenda reports is designed as a modular system to be easily customizable for usage with any datasources. The ``AdHocContext`` class has a **Driver** property containing an instance of ``Izenda.AdHoc.Database.Driver`` abstract class, which provides datasource metadata for Izenda AdHoc.
 
 The ``Izenda.AdHoc.Database.MSSQLDriver`` class implements complete functionality for using MSSQL server as your datasource and also allows you to create inheritors. So the easiest way to create a custom driver working with MSSQL server is to inherit ``Izenda.AdHoc.Database.MSSQLDriver`` and override the functionality you need to work differently. Below is complete instruction on performing this.
  
