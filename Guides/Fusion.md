@@ -51,7 +51,7 @@ fusionDriver.AddConnection("OrclNW", FusionConnectionType.OData, "http://www.pro
 
 The Izenda Fusion Driver has several additional settings:
 
-####1) VisibleDataSources 
+####a) VisibleDataSources 
 
 This is setup the same way as for a single connection. Only data sources with the specified names will be available:
 
@@ -59,7 +59,7 @@ This is setup the same way as for a single connection. Only data sources with th
 fusionDriver.VisibleDataSources = new string[] { "Orders", "Customers", "Order Details" };
 ```
 
-####2) Constraints
+####b) Constraints
 
 This is setup the same as for single connection except that you are able to specify separate constraints for each connection by using connection nicknames. Note that you can use wildcard characters to set up constraints:
 
@@ -68,7 +68,7 @@ fusionDriver.AddConstraint("SqlNW/Order.Id", "SqlNW/*.OrderID");
 fusionDriver.RemoveConstraint("OrclNW/Account.Id", "OrclNW/User.AccountID");
 ```
 
-####3) ReportingConnectionString
+####c) ReportingConnectionString
 
 If reports are stored in the database you should specify connection string to that database. Note that in addition to this, you should also use FusionAdHocConfig instead of DatabaseAdHocConfig. The following example sets up the connection string to the database using the reports table. If you store reports in the file system then skip this step(use FileSystemAdHocConfig if you do this).
 
@@ -76,7 +76,7 @@ If reports are stored in the database you should specify connection string to th
 ((FusionAdHocConfig)AdHocSettings.AdHocConfig).ReportingConnectionString = "server=(local);database=Reports;Trusted_Connection=True;";
 ```
 
-####4) Set up cache
+####d) Set up cache
 
 Getting data from several data source providers may take a lot of time and resources when many connections are added. This will result in a slow connection to the providers due to large amount of data being transferred, etc. That’s why the cache is enabled by default for the Izenda Fusion Driver. By default, cache expiration time is set to 12PM on Saturday. This means that every Saturday, the cache will be cleared and all data will be requested from the providers during the next session.
 
