@@ -1,10 +1,14 @@
 #Tutorials
 
-##[[Installing Izenda]]
+##[[Installing Izenda on Windows Server]]
 
 This tutorial will focus on installing Izenda Reports on your server.
 
-##[[Izenda Quick Start Guide|Integration/Tutorials/Getting-Started]]
+##[[Installing Izenda on Mac|/Guides/Mac-Install]]
+
+This tutorial will help Mac developers install an Izenda Reports demo on their personal computers.
+
+##[[Integrating Izenda Into Your Website|Integration/Tutorials/Getting-Started]]
 
 This tutorial will help you get ready to start using Izenda Reports with your website.
 
