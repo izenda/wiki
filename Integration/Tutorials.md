@@ -1,6 +1,6 @@
 #Tutorials
 
-##[[Installing Izenda on Windows Server]]
+##[[Installing Izenda on Windows Server|Integration/Tutorials/Installing-Izenda]]
 
 This tutorial will focus on installing Izenda Reports on your server.
 
