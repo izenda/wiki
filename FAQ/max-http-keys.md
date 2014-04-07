@@ -2,7 +2,7 @@
 
 ##Problem
 
-If you are experiencing an exception with the message 'Operation is not valid due to the current state of the object' the reason is an update Microsoft made the the .NET framework. They limited the maximum number of HTTP keys to 1000 by default. You can read more about the changes [here](http://support.microsoft.com/kb/2661403).
+If you are experiencing an exception with the message 'Operation is not valid due to the current state of the object' the reason is an update Microsoft made to the .NET framework. They limited the maximum number of HTTP keys to 1000 by default. You can read more about the changes [here](http://support.microsoft.com/kb/2661403).
 
 ##Solution
 
