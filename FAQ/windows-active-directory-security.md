@@ -36,11 +36,31 @@ Or you can also set these settings manually in the web.config file at the root f
 
 ##Use authentication information in the AdHoc security model 
 
+**C♯**
 ```csharp
+Imports System.Security.Principal;
+
+/*
+   implementation code
+*/
+
 public override void PostLogin()
 {
 	WindowsIdentity user = WindowsIdentity.GetCurrent();
 	AdHocSettings.CurrentUserName = user.Name;
 	AdHocSettings.CurrentUserIsAdmin = new WindowsPrincipal(user).IsInRole(WindowsBuiltInRole.Administrator);
 }
+```
+
+**VB.NET**
+```visualbasic
+Using System.Security.Principal
+
+'implementation code
+
+Public Overrides Sub PostLogin()
+	Dim user As WindowsIdentity = WindowsIdentity.GetCurrent()
+	AdHocSettings.CurrentUserName = user.Name
+	AdHocSettings.CurrentUserIsAdmin = New WindowsPrincipal(user).IsInRole(WindowsBuiltInRole.Administrator)
+End Sub
 ```
