@@ -45,11 +45,14 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How does filtering in dashboards work?|FAQ/filtering-in-dashboards]]
 - [[What CSS will be Included in My Report?|FAQ/css-in-reports]]
 
+###Security
+
+- [[How does security work?|FAQ/How user credentials are applied]]
+- [[How do I create Data Source Level Security?|FAQ/data-source-level-security]]
+- [[How do I use Windows Active Directory for security?| FAQ/windows-active-directory-security]]
 
 ###Misc.
 
-- [[How do I create Data Source Level Security?|FAQ/data-source-level-security]]
-- [[How does security work?|FAQ/How user credentials are applied]]
 - [[How do I get the ReportList information to create my own ReportList?|FAQ/getting-reportlist-information]]
 - [[How do I force a user to click on 'Update Results' before showing any data?|FAQ/force-update-results-on-report]]
 - [[How do I upgrade/download a new file-set?|FAQ/Download and Update Resources]]
