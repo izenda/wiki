@@ -26,7 +26,6 @@
 * FB-13273: Implementation of FormRenderer compatibility with visualizations like highcharts which render html/js into report body
 * FB-10401: Resolved issue where when using multiple datasources all the fields are not immediately available
 * FB-13277: Improve toolbar UI on the Dashboards page for narrow screens
-* FB-13305: Fix map for "United States" and "United Kingdom" countries
 * FB-13368: Fix Funnel HTML chart when data in the Label column contain single quotes
 * FB-13255: Added function filtering for column dropdowns in the maps tab
 * FB-11581: Updated AddForcedLeftJoin method to be capable of usage with custom DB schema. This will allow this feature to work correctly with tables that are not in the "dbo" schema
