@@ -71,7 +71,7 @@ Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportS
     filter.Values = emails   
     reportSet.Filters.AddHidden(filter)
 End Sub
-
+```
 
 ##Using a stored procedure
 
