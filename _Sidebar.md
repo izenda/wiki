@@ -3,7 +3,7 @@
 * [[Release Notes]]
 * [[FAQ]]
 * [[Tutorials]]
-* [[Izenda User Guides|IFAQ/UserGuides]]
+* [[Izenda User Guides|FAQ/UserGuides]]
 
 ---
 
