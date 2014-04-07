@@ -16,6 +16,6 @@ Get quick, effective answers to your questions.
 
 Find resources on installation, integration, and programming.
 
-##[[Izenda User Guides|Izenda Guides]]
+##[[Izenda User Guides|FAQ/UserGuides]]
 
 Learn how to use Izenda Reports and Dashboards' advanced features.
