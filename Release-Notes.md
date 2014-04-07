@@ -1,4 +1,43 @@
 [[_TOC_]]
+
+# 6.7.0.263 (April 7, 2014) Pending Release
+
+* FB-13494: Fix jQuery conflicts in the classic Asp.Net interface
+* FB-13490: Show "[FieldName] not found" text instead of exception when invalid field is used in the report Title, Description or Footer
+* FB-13459: Fix Map image file URL in HTTPS deployments
+* FB-13482: Made modern reportList respect setting AllowDeletingReports
+* FB-13003: Changes made in PerformCustomReportRendering were missed in html cache. Fixed by correcting order of PerformCustomReportRendering and caching calls
+* FB-13444: Enable Autocomplete filter in the HTML Report Viewer
+* FB-13408: Apply format of the same field from the Fields to the appropriate date value in filter description.
+* FB-13269: Prevented showing report data without required filters values specified by user
+* FB-13277: Fix filters refreshing on the Dashboards page in IE11
+* FB-13232: Fix Issue with Parameters on the Dashboards page by adding support for POST requests
+* FB-13223: Made modern reportViewer respect LockViewer setting
+* FB-13435: Fix typo in the ReportList without thumbnails. Change title of the "X" icon from "Edit" to "Remove"
+* FB-13432: Fix issues with Summary report when pagination is used
+* FB-13411: Fixed brackets escaping in Fields expressions
+* FB-13430: Fixed printing reports with highcharts to HTML by switching highcharts rendering to images when printing report to html
+* FB-13268: Implementation of adding new filter in modern reportViewer.
+* FB-13382: Fix calculated columns (when Arithmetic is used) in Charts.
+* FB-13410: Fix artifacts in the Dashboard PDF output is if report with a large number of rows is presented in the Dashboard
+* FB-13309: Apply AdHocSettings.FieldAliases to all controls on the Report Viewer page.
+* FB-13404: Fix CSV export if Value Ranges is used and Add Subtotals is checked
+* FB-13309: Apply AdHocSettings.FieldAliases to all controls on the Report Viewer page
+* FB-13381: Fix javascript errors when Equals(Popup) or Equals(Checkboxes) filter is used
+* FB-13273: Implementation of FormRenderer compatibility with visualizations like highcharts which render html/js into report body
+* FB-10401: Resolved issue where when using multiple datasources all the fields are not immediately available
+* FB-13277: Improve toolbar UI on the Dashboards page for the narrow screens.
+* FB-13305: Fix map for "United States" and "United Kingdom" countries
+* FB-13368: Fix Funnel HTML chart when data in  Label column contain single quote
+* FB-13255: Added function filtering for column dropdowns in the maps tab
+* FB-11581: Updated AddForcedLeftJoin method to be capable of usage with custom DB schema. This will allow this feature to work correctly with tables that are not in the "dbo" schema
+* FB-13329: Added customization variable for htmlchart barchart colors
+* FB-13119: Fixed pagination problems with Oracle
+* FB-13240: Added meta tags to force WebBrowser to work in proper (IE9/10/11) mode to resolve issues with chart rendering
+* FB-12908: Fix issues with loading Form if ReportSet.OwnerTenantID and AdHocSettings.CurrentUserTenantId do not match
+* FB-13290: Manually create HttpContext if it is not initialized and activate StaticSharedStorage in this case. As a result many Izenda functions can be used in the "offline" mode
+* FB-13305: Fix drill-down on the World Map for the USA and UK countries
+
 # 6.7.0.262 (Mar 25, 2014)
 * FB-13006: Use a filestream to write thumbnail data to improve error reporting when permissions are not set correctly
 * FB-13282: Apply AdHocSettings.TenantField filter to the request for the Equals(Select) filter.
