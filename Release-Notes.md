@@ -1,7 +1,6 @@
 [[_TOC_]]
 
-# 6.7.0.263 (April 7, 2014) Pending Release
-
+# 6.7.0.263 (April 7, 2014)
 * FB-13494: Fix jQuery conflicts in the classic Asp.Net interface
 * FB-13490: Show "[FieldName] not found" text instead of exception when invalid field is used in the report Title, Description or Footer
 * FB-13459: Fix Map image file URL in HTTPS deployments
