@@ -36,6 +36,8 @@ Or you can also set these settings manually in the web.config file at the root f
 
 ##Use authentication information in the AdHoc security model 
 
+Place the following lines of code into your ``global.asax``.
+
 **C♯**
 ```csharp
 Imports System.Security.Principal;
