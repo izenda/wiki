@@ -12,7 +12,7 @@ This tutorial will help Mac developers install an Izenda Reports demo on their p
 
 This tutorial will help you get ready to start using Izenda Reports with your website.
 
-##[[User Guides|http://wiki.izenda.us/Guides/UserGuides]]
+##[[User Guides|http://wiki.izenda.us/FAQ/UserGuides]]
 
 These tutorials help users to familiarize themselves with the features Izenda offers and how to utilize Izenda's most powerful tools.
 
