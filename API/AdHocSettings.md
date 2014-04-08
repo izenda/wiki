@@ -1,6 +1,6 @@
 #AdHocSettings
 
-The ``AdHocSettings`` class contains all the settings Izenda uses to control various aspects of the interface and flow of data. Many of the more useful settings are explained in detail in our [[User Guides||FAQ/UserGuides]] and [[Developer Guides|/Guides/Developer-Links-and-Guides]]. 
+The ``AdHocSettings`` class contains all the settings Izenda uses to control various aspects of the interface and flow of data. Many of the more useful settings are explained in detail in our [[User Guides||/FAQ/UserGuides]] and [[Developer Guides|/Guides/Developer-Links-and-Guides]]. 
 
 |Datatype|Setting name|Setting description|
 |:-------|:----------:|:-----------------:|  
