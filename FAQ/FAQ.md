@@ -9,7 +9,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ###API
 
-- [[Divide By Zero|FAQ/Divide By Zero]]
+- [[I'm Getting #DIV/0 In My Report Viewer|FAQ/Divide By Zero]]
 - [[Izenda API Tip: Constraints & Joins Best Practices|FAQ/Izenda-API-Tip-Constraints-Joins-Best-Practices]]
 - [[Izenda API Tip: Hidden Columns|FAQ/Izenda-API-Tip-Hidden-Columns]]
 - [[ListReports()|FAQ/ListReports]]
