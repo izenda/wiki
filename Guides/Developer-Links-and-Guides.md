@@ -29,3 +29,4 @@ Here is a friendly set of links to videos, download pages and reference material
 * [How To Post-Process Data](http://www.izenda.com/Site/KB/CodeSamples/How-to-postprocess-data?)
 * [[OData|Guides/OData]]
 * [[Izenda Fusion|Guides/Fusion]]
+* [[Layered Subtotaling|Guides/LayeredSubtotaling]]
