@@ -16,7 +16,9 @@ In this example, the data would be aggregated based on [ShipCountry] normally. T
 
 Here is a sample global.asax to implement layered subtotaling in your own application. This example behavior modifies the "Line Delimited With Labels" option in the Style tab of the Report Designer. However, you can customize which of the visual grouping styles this behavior modifies, if any, by modifying the following line:
 
-``isTargetVGStyle = AdHocContext.CurrentReportSet.VisualGroupStyle == VisualGroupStyle.LineDelimitedWithLabels;``
+```
+isTargetVGStyle = AdHocContext.CurrentReportSet.VisualGroupStyle == VisualGroupStyle.LineDelimitedWithLabels;
+```
 
 ```csharp
     /// <summary>
