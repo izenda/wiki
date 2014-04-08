@@ -1,12 +1,18 @@
 #Layered Subtotaling
 
+[[_TOC_]]
+
 ##Purpose
 
 Layered subtotaling is a customized way to display subtotals that will aggregate multiple subtotals based on a set of conditions into one lump sum. This is not a grand total. Below is an example of layered subtotaling.
 
+##Example
+
 ![Custom Layered Subtotaling](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_layered_subtotaling.png)
 
 In this example, the data would be aggregated based on [ShipCountry] normally. The subtotal of all countries' freight would be totaled up. With layered subtotaling, we can get subtotals for drilldowns (such as the subtotal of [ShipRegion] ([ShipCountry] drills down to [ShipRegion])) in one report. This allows not only each [ShipCountry] field value to be totaled up, but it also allows us to see each [ShipRegion]'s total.
+
+##Implementation
 
 Here is a sample global.asax to implement layered subtotaling in your own application. This example behavior modifies the "Line Delimited With Labels" option in the Style tab of the Report Designer. However, you can customize which of the visual grouping styles this behavior modifies, if any, by modifying the following line:
 
