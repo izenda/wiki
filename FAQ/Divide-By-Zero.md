@@ -1,4 +1,4 @@
-We have implemented the Div/0 custom format option. This functionality is available in our daily DLL download.
+We have implemented the Div/0 custom format option. This functionality is available in latest maintenance releases past 6.7.258.
 
 Usage; code for your Izenda global.asax:
 
