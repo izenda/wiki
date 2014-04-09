@@ -61,8 +61,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   string[]|CurrentUserRoles|Defines groups set for the current user.|
 |   string|CurrentUserTenantId|This identifies what tenant the current user is associated with in a multi-tenant system.|
 |   CustomizeChartDelegate|CustomizeChartDelegate|Represents a method that runs before chart reports get run.|
-|   CustomTimePeriodCollection|CustomTimePeriods|Used to define custom time periods that will be accessible in the 'In Time Period' filter operator on the Filters tab in the ReportDesigner. These options will be appended to the list of time periods that ship with Izenda AdHoc.<br>
-*Note: There are several overloads for the CustomTimePeriod constructor, so you can define different time periods with various types.*|
+|   CustomTimePeriodCollection|CustomTimePeriods|Used to define custom time periods that will be accessible in the 'In Time Period' filter operator on the Filters tab in the ReportDesigner. These options will be appended to the list of time periods that ship with Izenda AdHoc.<br>*Note: There are several overloads for the CustomTimePeriod constructor, so you can define different time periods with various types.*|
 |   DashboardDateSliderMode|DashboardDateSliderMode|Gets or sets the value indicating the size of each section of the graph with the Dashboard date slider.|
 |   string|DashboardDesignerUrl|Gets or sets the URL of the page used to design dashboards (DashboardDesigner).|
 |   string|DashboardDesignerUrlWithDelimiter|Gets the DashboardDesignerUrl with query string characters ("?" and "&") at the end.|
@@ -74,8 +73,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   string|DatabaseDiagramImageUrl|Gets or sets a link to a database diagram image that is displayed on the report designer. Database diagrams display table relationships and can be created through Microsoft SQL. Izenda recommends using a database diagram to simplify the process of joining complex related tables.|
 |   DateTime|DataCacheExpiration||
 |   int|DataCacheInterval||
-|   NameDistinctValueCollection|DataSourceAliases|Gets or sets the collection of key-value pairs where the key is the table name and the value is a table alias. 
-Note:This property doesn't change data source name in data base. You should use it if you want to change ONLY display name for the data source. I.e. you will still have to work with 'real' data source name if you want to use it in any other option.|
+|   NameDistinctValueCollection|DataSourceAliases|Gets or sets the collection of key-value pairs where the key is the table name and the value is a table alias. <br> *Note:This property doesn't change the data source name in database. It is for display purposes only.|
 |   NameStringsCollection|DataSourceCategories|This allows you to assign sets of datasources to different categories. When ShowDataSourcesAsCheckBoxes is enabled, this list is added to the Data Sources tab dropdown in the ReportDesigner. If the user selects a category, only datasources from the selected category will be shown.|
 |   TimeSpan|DataSourceDropDownTimeout|Gets or sets the timeout between starting loading dropdown values (in the DataSources dropdown at the Data Sources tab in the ReportDesigner) from the server and redirecting to the About page.|
 |   string|DataSourceHeading|Gets or sets the value of the title on the Data Sources tab of Report Designer. Some users rename this since other users may not be familiar with database terminology.|
@@ -126,7 +124,7 @@ Note:This property doesn't change data source name in data base. You should use 
 |   string|FiltersRegex|Sets the regular expression used for column filtering for data selection. This setting allows the user to use a regular expression to filter certain fields from being added to the report through the Fields tab in the report designer.|
 |   bool|ForceNewNameOnSave|Setting this property forces the "Save" button to function exactly like the "Save As" button. It requires the user to specify a report name when saving. If another report has the same name, Izenda Reports warns the user. <br> *Note: The AllowOverwritingReports property MUST be set to true for this to have any effect.|
 |   Unit|FormatDropDownWidth|Gets or sets the width of all "Format" dropdowns in the Report Designer.|
-|   FormatCollection|Formats|Gets or sets the list of available formats to apply to fields. This affects the Formats dropdown on the Fields tab of the ReportDesigner. <br> *Note: You could use Formats to add new custom formats. For example, adding new format for Europe-style date: ``AdHocSettings.Formats["EuroDate"] = "{0:dd/MM/yyyy}";``*|
+|   FormatCollection|Formats|Gets or sets the list of available formats to apply to fields. This affects the Formats dropdown on the Fields tab of the ReportDesigner. <br> *Note: You could use Formats to add new custom formats. Read more [[here|http://wiki.izenda.us/FAQ/Questions/How-do-I-use-ExtendedFormats-for-European-Date-Formats]]*|
 |   string|FormDesignerUrl||
 |   Unit|FunctionDropDownWidth||
 |   int|GaugeHeight||
