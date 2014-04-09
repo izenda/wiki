@@ -6,6 +6,8 @@ Hiding fields in filters is a way to disallow filtering on certain fields. You c
 
 ##Example
 
+![Hidden Fields](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/hidingfilters.png)
+
 In this example, I'm arbitrarily disallowing the user to filter on any field with the word "Ship" in it. 
 
 ##Implementation
