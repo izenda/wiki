@@ -133,87 +133,83 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   bool|GenerateParameterizedSql|Gets or sets the value indicating whether queries to the database should be parameterized.|
 |   bool|GenerateThumbnails|
 |   string|GeoDataTable||Gets or sets the value indicating the table name which contains geodata for maps.|
-|   GetEqualsSelectValuesDelegate|GetEqualsSelectValues|Represents a method that returns values for Equals_Select operator. 
-This handles the list of values shown at the Fields tab in the ReportDesigner in the Value(s) combobox if Equals(Select) operator is used.|
-|   TableItemStyle|GridHeaderStyle||
-|   TableItemStyle|GridItemStyle||
-|   System.Drawing.Color|HeaderForegroundColor||
-|   string|HeaderStyle||
-|   NameValueCollection|HelpText||
-|   string[]|HiddenCategories||
-|   string[]|HiddenColumns||
-|   List<double>|HiddenTimeZones||
+|   GetEqualsSelectValuesDelegate|GetEqualsSelectValues|Represents a method that returns values for the "Equals(Select)" operator. This handles the list of values shown on the Fields tab in the ReportDesigner in the Value(s) combobox if the "Equals(Select)" operator is used.|
+|   TableItemStyle|GridHeaderStyle|Gets or sets the OpenOffice output style for grid headers in the report.|
+|   TableItemStyle|GridItemStyle|Gets or sets the OpenOffice output style for grid items in the report.|
+|   System.Drawing.Color|HeaderForegroundColor|Gets or sets the color of the report header.|
+|   string|HeaderStyle|Gets or sets the CSS style for the headers in the Fields, Summary, and Filters tabs.|
+|   NameValueCollection|HelpText|Gets or sets the collection of key-value pairs where the key is the tab name and the value is a hint that will be shown when the mouse is over the appropriate tab. Can be seen in the ReportDesigner if the ShowSideHelp property is enabled. <br> *Note: You can also enable/disable side help by clicking the Help button (the ShowHelpButton property must be enabled for this)*.|
+|   string[]|HiddenCategories|Sets which categories are hidden for the current user. Report from those categories will not be shown to the current user.|
+|   string[]|HiddenColumns|Gets or sets the array of Column names that should be hidden in the Fields tab dropdowns in the ReportDesigner.|
+|   HiddenFilterCollection|HiddenFilters|This controls row-level security throughout the application. This should be used in all multi-tenant systems and systems where users are restricted to certain records. Hidden filters are applied to the report being executed. They will not appear in the UI and are invisible to the user.|
 |   string|IdentifiersRegex||
-|   string|ImagesPath||
-|   bool|InheritFiltersInSubreports||
-|   string|InstantReport||
-|   bool|InvalidateSchemaOnNew||
-|   int|InvertedGridLimit||
-|   System.Drawing.Color|ItemForegroundColor||
-|   Unit|JoinDropDownWidth||
-|   JoinedTablesList|JoinedTablesList||
-|   string|JoinFieldRegex||
-|   NameValueCollection|LabelAliases||
-|   AdHocLanguage|Language||
-|   char|LiteralComma||
-|   bool|LockViewer||
-|   string|LoginUrl||
-|   MapInfoCollection|MapInfoCollection||
-|   Size|MaxImageSize||
+|   string|ImagesPath|Gets or sets the path of the folder that contains the images used by Izenda AdHoc. If the value is not set, then built-in images will be used.|
+|   bool|InheritFiltersInSubreports|Gets or sets the value indicating whether filters will be inherited in subreports. When enabled, subreports will have filters from the master report applied.|
+|   string|InstantReport|Gets or sets the URL to the InstantReport page for custom implementations.|
+|   string|InstantReportWithDelimiter|Gets or sets the URL to the InstantReport page with query string characters appended("?" and "&").|
+|   bool|InvalidateSchemaOnNew|Gets or sets the value indicating whether the database schema should be invalidated when the user creates new report.|
+|   int|InvertedGridLimit|Gets or sets the maximum count of rows for an inverted grid. This affects the maximum count of rows when set in the ReportDesigner.<br> *Note: The AllowInvertedGrid property MUST be enabled to use InvertedGridLimit*.|
+|   System.Drawing.Color|ItemForegroundColor|Gets or sets the default color of the item text on the report grid.|
+|   Unit|JoinDropDownWidth|Gets or sets the width of the join type dropdowns. These dropdowns can be found at the Data Sources tab of the ReportDesigner when ShowDataSourcesAsCheckBoxes is set to false.|
+|   string|JoinFieldRegex|Gets or sets a regular expression used to filter certain fields from being shown in the join field between data sources in the data sources tab of report designer. For example, to show only fields ending with "ID", use following value: AdHocSettings.JoinFieldRegex = "^.*(?<!id)$";|
+|   NameValueCollection|LabelAliases|Gets or sets the collection of key-value pairs where the key is the field name and the value is a field alias.|
+|   AdHocLanguage|Language|Gets or sets the display language used for Izenda AdHoc.|
+|   string|LicenseKey|Gets or sets the license key for your distribution of Izenda AdHoc. This is absolutely required for the application to function.
+|   char|LiteralComma|Gets or sets the delimiter separating items in the 'Equals' filter operator value. This is an actual comma by default for easy copy/paste from CSV format lists.|
+|   bool|LockViewer|Gets or sets the value indicating whether the Report Viewer will be locked. If true, controls like Add/Remove field, filters control, etc. will be unavailable in the ReportViewer.|
+|   string|LoginUrl|This setting allows the user to specify their own login page to be utilized by Izenda Reports. Note to utilize this login page the "Require Login" check box must be selected.|
+|   MapInfoCollection|MapInfoCollection|Gets or sets the registered maps data. This defines the contents of the Map Type dropdown at the Map tab in the ReportDesigner.|
+|   Size|MaxImageSize|Gets or sets the maximum image size of the report images. If the size of an image is larger than the specified value then the image will be scaled.|
 |   int|MaximumReportSizeForCache||
-|   Unit|MinPdfFontSize||
-|   bool|MultiLevelVisualGrouping||
-|   string|MySqlConnectionString||
-|   string|NoDataSourcePage||
-|   int|NumChartPerRow||
-|   int|NumChartTabs||
-|   int|NumSharedDropdowns||
-|   bool|OpenCustomUrlInNewWindow||
-|   int|OracleCommandTimeout||
-|   string|OracleConnectionString||
-|   ReportOutputGeneratorCollection|OutputTypes||
+|   Unit|MinPdfFontSize|Sets the minimum font size that will be used when creating a PDF document. The default is 10 point.|
+|   string|MySqlConnectionString|Gets or sets the connection string for MySQL connections.|
+|   string|NoDataSourcePage|Gets or sets the URL of the page where users will be redirected if there are no tables in a database. 
+By default it is settings page.|
+|   int|NumChartPerRow|Gets or sets the value indicating the number of charts that should be displayed in one report row on Dashboards.|
+|   int|NumChartTabs|Sets the maximum number of charts allowed per report in the ReportDesigner. Each chart will have it's own tab in the report designer. Setting this to more than 1 requries a Dashboards license.|
+|   int|NumSharedDropdowns|Gets or sets the maximum number of user/roles a report can be shared with. This affects the number of "Share With" dropdowns on the Misc tab of the ReportDesigner.|
+|   bool|OpenCustomUrlInNewWindow|Gets or sets the value to enable opening a new window when a custom url link is clicked (See [[advanced filter settings|/FAQ/UserGuides/4.0 Fields Tab#4.8 Advanced Field Settings Button]]). If this is not enabled, the current page will change to the clicked on the link.|
+|   int|OracleCommandTimeout|Sets the time Izenda Reports will wait for an Oracle command to execute before timing out.|
+|   string|OracleConnectionString|Gets or sets the connection string for Oracle Server connections.|
+|   ReportOutputGeneratorCollection|OutputTypes|Gets or sets the registered ReportOutputGenerators collection. These define what types of formats Izenda AdHoc can export to.|
 |   string|ParentReportDesignerUrl||
 |   string|ParentReportListUrl||
 |   string|ParentReportViewerUrl||
 |   string|ParentSettingsUrl||
-|   bool|PerUserCaching||
-|   int|PivotFieldLimit||
-|   string|PostgreSQLConnectionString||
-|   int|PreviewColumnLimit||
-|   string|PreviewColumnLimitMessage||
-|   int|PreviewTimeout||
-|   PrintMode|PrintMode||
-|   ProcessFiltersDelegate|ProcessFiltersDelegate||
-|   int|QuickAddFieldWidth||
-|   int|QuickAddMinElementsInColumn||
-|   string|RDLFolder||
+|   bool|PerUserCaching|Gets or sets the value indicating whether the Driver.DatabaseSchema metadata should be cached.|
+|   int|PivotFieldLimit|Sets the limit for the maximum number of pivot columns that can exist in a report. See more about [[pivots|/FAQ/UserGuides/12.0 Pivots]].|
+|   string|PostgreSQLConnectionString|Gets or sets the connection string for Postgre SQL connections.|
+|   int|PreviewColumnLimit|Gets or sets the value indicating the number of columns to show in the report preview.|
+|   string|PreviewColumnLimitMessage|Gets or sets the value indicating the message displayed when PreviewColumnLimit is exceeded.|
+|   int|PreviewTimeout|Sets the minimum time Izenda Reports will wait for a MSSQL command to execute before timing out.|
+|   PrintMode|PrintMode|Gets or sets the value indicating what print mode will be used, PDF or HTML.|
+|   int|QuickAddFieldWidth|Gets or sets the value indicating the max length of a string in one [[QuickAdd|/FAQ/UserGuides/4.0 Fields Tab#4.7 Quick Add]] column.|
+|   int|QuickAddMinElementsInColumn|Set the minimum number of elements in each QuickAdd column.|
+|   string|RDLFolder|Gets or sets path to Folder where [[RDL|http://technet.microsoft.com/en-us/library/ms155062.aspx]] files would be saved.|
 |   int|RecentlyUpdatedCountAtReportList||
-|   System.Drawing.Color|ReportAlternatingItemColor||
-|   System.Drawing.Color|ReportBorderColor||
-|   string|ReportCss||
-|   string|ReportCssUrl||
-|   string|ReportDesignerUrl||
-|   System.Drawing.Color|ReportHeaderColor||
-|   System.Drawing.Image|ReportHeaderImage||
-|   string|ReportHeaderImageUrl||
-|   string|ReportingService2005Url||
-|   System.Drawing.Color|ReportItemColor||
-|   string|ReportList||
-|   ReportListSettings|ReportListSettings||
-|   ReportSetEventWatcherCollection|ReportSetEventWatchers||
-|   string|ReportsPath||
-|   bool|ReportsSharedByDefault||
-|   StorageMode|ReportStorageMode||
-|   ReportTypeCollection|ReportTypes||
-|   string|ReportViewer||
-|   int|ReportViewerDefaultPreviewResults||
-|   string|ReportViewerPostHtml||
-|   string|ReportViewerPreHtml||
-|   int|ReportViewerRefreshInterval||
-|   string|ReportViewPageTitle||
-|   bool|RequireLogin||
-|   string|ResponseServer||
-|   int[]|ResultsDropdownValues||
+|   System.Drawing.Color|ReportAlternatingItemColor|Gets or sets the text color of alternating(even numbered) items in reports. See ReportItemColor for regular(odd numbered) items.|
+|   System.Drawing.Color|ReportBorderColor|Gets or sets the color of the report border.|
+|   string|ReportCssUrl|This setting allows the user to specify their own css file to be used on reports generated by Izenda Reports. This setting replaced the ReportCss property and should be used instead.|
+|   string|ReportDesignerUrl|Gets or sets the URL of a page used to design reports.|
+|   string|ReportDesignerUrlWithDelimiter|Gets the ReportDesignerUrl with query string characters ("?" and "&") at the end.|
+|   System.Drawing.Color|ReportHeaderColor|Gets or sets the color of the report header.|
+|   string|ReportHeaderImageUrl|This setting allows the user to set a report header image to be used on reports. This replaced the property ReportHeaderImage and should be used instead.|
+|   string|ReportingService2005Url|Gets or sets the base URL of the XML Web service.|
+|   System.Drawing.Color|ReportItemColor|Gets or sets the text color of regular(odd numbered) items in reports. See ReportAlternatingItemColor for alternating(even numbered) items.|
+|   string|ReportList|Gets or sets the URL of the report list page. If this is null or empty, the Report List button in the toolbar will be hidden.|
+|   ReportSetEventWatcherCollection|ReportSetEventWatchers|Gets or sets the collection of registered IReportSetEventWatcher objects that perform various actions on ReportSet-related events.|
+|   string|ReportsPath|Sets the path to the directory where report files are stored. This is only needed when [[FileSystemMode|/Storing-Reports]] is enabled. Note: Be sure the folder exists and has the correct [[network user permissions|/Integration/Tutorials/Installing-Izenda#Step-3.-Configure-website-under-IIS]] specified.|
+|   StorageMode|ReportStorageMode|Defines how reports are stored: either in the file system or in the database.|
+|   string|ReportViewer|Gets or sets the URL of the report viewer page.|
+|   int|ReportViewerDefaultPreviewResults|This textbox specifies the default number of results in the Report Viewer for all reports. Izenda does not recommend setting this to a large number such as 5000 or larger as the html report will take a long time to generate. If you would like to view all the data, we recommend exporting the report. This will always provide the entire report.|
+|   string|ReportViewerPostHtml|Gets or sets the string of html that will be placed after the entire HtmlOutputReportResults section. This can be seen in the ReportViewer at the bottom page after the report body.|
+|   string|ReportViewerPreHtml|Gets or sets the string of html code that placing before the entire HtmlOutputReportResults section. This can be seen in the ReportViewer in the top of the page before the report body.|
+|   string|ReportViewerWithDelimiter|Gets the url of the report viewer page with query string characters ("?" and "&") at the end.
+|   string|ReportViewPageTitle|Gets or sets the title of report viewer page. This text can be seen as the title of the browser window when ReportViewer is opened.|
+|   bool|RequireLogin|This setting tells Izenda Reports that system will use authorization.<br> *Note: The LoginUrl property MUST be specified if this setting is enabled*.|
+|   string|ResponseServer|Gets or sets the URL of the ResponseServer page.|
+|   string|ResponseServerWithDelimiter|Gets the URL of the ResponseServer page with query string characters("?" and "&") at the end.|
+|   int[]|ResultsDropdownValues|Gets or sets the list of the values in the "Results" dropdown in the toolbar of the ReportDesigner. This will override as many default entries in the list as it can.|
 |   string|SavedReportsTable||
 |   string|SaveReportSetNextUrl||
 |   string|ScheduledReportsUrlFormatString||
