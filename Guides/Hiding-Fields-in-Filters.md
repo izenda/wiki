@@ -5,7 +5,10 @@
 Hiding fields in filters is a way to disallow filtering on certain fields. You can programmatically prevent access to fields in the filters tab based on any arbitrary logic you wish to employ. 
 
 ##Example
+Here are the available fields before hiding any:
+![Before Hiding Fields](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/not-hidden.png)
 
+And here are the available fields after hiding all that contain the word "Ship":
 ![Hidden Fields](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/hidingfilters.png)
 
 In this example, I'm arbitrarily disallowing the user to filter on any field with the word "Ship" in it. 
