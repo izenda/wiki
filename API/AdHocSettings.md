@@ -125,17 +125,16 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   bool|ForceNewNameOnSave|Setting this property forces the "Save" button to function exactly like the "Save As" button. It requires the user to specify a report name when saving. If another report has the same name, Izenda Reports warns the user. <br> *Note: The AllowOverwritingReports property MUST be set to true for this to have any effect.|
 |   Unit|FormatDropDownWidth|Gets or sets the width of all "Format" dropdowns in the Report Designer.|
 |   FormatCollection|Formats|Gets or sets the list of available formats to apply to fields. This affects the Formats dropdown on the Fields tab of the ReportDesigner. <br> *Note: You could use Formats to add new custom formats. Read more [[here|http://wiki.izenda.us/FAQ/Questions/How-do-I-use-ExtendedFormats-for-European-Date-Formats]]*|
-|   string|FormDesignerUrl||
-|   Unit|FunctionDropDownWidth||
-|   int|GaugeHeight||
-|   double|GaugeMaximum||
-|   double|GaugeMinimum||
-|   string[]|GaugeStyles||
-|   int|GaugeWidth||
-|   bool|GenerateParameterizedSql||
-|   bool|GenerateThumbnails||
-|   string|GeoDataTable||
-|   GetEqualsSelectValuesDelegate|GetEqualsSelectValues||
+|   string|FormDesignerUrl|Gets or sets the URL to the FormDesigner page.|
+|   Unit|FunctionDropDownWidth|Gets or sets the width of Function dropdowns in the Report Designer.|
+|   int|GaugeHeight|Gets or sets the height for Gauge controls in ReportSets. This setting replaced GaugeMaximum and GaugeMinimum and should be used instead.<br> *Note: This setting will affect only Linear Gauges*.|
+|   string[]|GaugeStyles|Gets or sets custom gauge types. This overrides the existing set of gauge styles, shown as radiobuttons on the Gauge tab in the ReportDesigner. If you use this, you should ensure that you either define IGaugeDrawer objects in the AdHocSettings.RadialGaugeDrawerCollection corresponding to your custom gauge styles, or you have overriden CustomizeGuage in your AdHocConfig.|
+|   int|GaugeWidth|Gets or sets the gauge width for "Gauge" format. This will affect width of gauges when they are shown in reportsets. <br> *Note: This setting will affect only Linear Gauges*.|
+|   bool|GenerateParameterizedSql|Gets or sets the value indicating whether queries to the database should be parameterized.|
+|   bool|GenerateThumbnails|
+|   string|GeoDataTable||Gets or sets the value indicating the table name which contains geodata for maps.|
+|   GetEqualsSelectValuesDelegate|GetEqualsSelectValues|Represents a method that returns values for Equals_Select operator. 
+This handles the list of values shown at the Fields tab in the ReportDesigner in the Value(s) combobox if Equals(Select) operator is used.|
 |   TableItemStyle|GridHeaderStyle||
 |   TableItemStyle|GridItemStyle||
 |   System.Drawing.Color|HeaderForegroundColor||
