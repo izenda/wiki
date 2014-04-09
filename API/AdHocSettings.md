@@ -9,12 +9,10 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   AdHocConfig|AdHocConfig|Gets or sets the current AdHocConfig - Ad Hoc configuration.|
 |   string|AdHocUserKey|A single password limiting access to the report designer, report list and report viewer. This is for projects that do not need multi-user security.|
 |   AggregateFunctionCollection|AggregateFunctions||
-|   bool|AllowAnalysisGrid|Gets or sets the value indicating whether it is allowed analysis grid. 
-The option appears in the Visual Group Style combobox at the Style tab in the ReportDesigner.|
+|   bool|AllowAnalysisGrid|Gets or sets the value indicating whether it is allowed analysis grid. The option appears in the Visual Group Style combobox at the Style tab in the ReportDesigner.|
 |   bool|AllowArchivedReportTableCreation|Gets or sets the value indicating whether it is allowed to create the database table that contains archived reports if there is no such table in the database. If set, AdHoc checks if table in database for keeping reportsets exists, and creates it if necessary.|
 |   bool|AllowClientSorting||
-|   bool|AllowComparativeArithmetic|Gets or sets the value indicating whether comparative arithmetic is allowed in arithmetic checkbox. 
-Comparative operators appear in "A" checkboxes at the Fields tab in the ReportDesigner.|
+|   bool|AllowComparativeArithmetic|Gets or sets the value indicating whether comparative arithmetic is allowed in arithmetic checkbox. Comparative operators appear in "A" checkboxes at the Fields tab in the ReportDesigner.|
 |   bool|AllowCreateNewCategory|Gets or sets the value indicating the possibility to create new categories in Save As dialog in the ReportDesigner.|
 |   bool|AllowDataFieldsInDescription|This checkbox enables/disables the ability to allow a data field to be used in the description of the report (which is set in the misc tab). This is particularly useful in drill down reports and those reports with filters. For example: Let's say we are filtering a report by the field CategoryName and the value Produce. For the Description we enter: [CategoryName] details. This will show on the report as Produce details and dynamically change when the user changes the filter value.|
 |   bool|AllowDeletingReports|This checkbox enables/disables the delete icons at the report list page against reports names, for the current user. Clicking on the red x delete icon deletes the report.|
@@ -33,8 +31,7 @@ Comparative operators appear in "A" checkboxes at the Fields tab in the ReportDe
 |   bool|AllowOverwritingReports|This enables/disables the current user's ability to overwrite reports currently saved. An example of this usage is that many users create base reports for their users to use. Disabling the overwrite report feature ensures that the default reports are not tampered with.|
 |   bool|AllowSelfJoin|Gets or sets the value indicating whether is it allowed datasources self join. If true and ShowDataSourcesAsCheckBoxes, then user can select the same data source twice and selfjoin it at the Data Sources tab in the ReportDesigner.|
 |   bool|AllowStackedBarChart|Gets or sets the value indicating whether Stacked Bar Chart is allowed. This defines if Stacked checkbox will be available in the Advanced Properties at the Chart tab in the ReportDesigner, when Bar chart type is used.|
-|   bool|AllowSummaryDeltas|Gets or sets the value indicating whether the "Show Summary Deltas" checkbox should be shown in the summary tab in the ReportDesigner. 
-Any time there is a change in a quantity, that change is calculated by taking the later value for that quantity and subtracting from it the earlier value for that quantity. The AllowDeltas feature MUST be turned on to use this feature.|
+|   bool|AllowSummaryDeltas|Gets or sets the value indicating whether the "Show Summary Deltas" checkbox should be shown in the summary tab in the ReportDesigner. Any time there is a change in a quantity, that change is calculated by taking the later value for that quantity and subtracting from it the earlier value for that quantity. The AllowDeltas feature MUST be turned on to use this feature.|
 |   bool|AllowVisualGroups||
 |   string|ApplicationHeaderImageUrl|Gets or sets the URL of the Application Header Logo.|
 |   bool|AutoJoinOnRenderedRows||
@@ -52,15 +49,12 @@ Any time there is a change in a quantity, that change is calculated by taking th
 |   ChartCollection|Charts|Gets or sets the collection of available Charts. The collection of available charts is shown in the Chart Type combobox on the Chart tab in the ReportDesigner.|
 |   Point|ChartSize|Gets or sets the value indicating chart size. This will affect size of all charts in the rendered report or dashboard.|
 |   string[]|ChartSortFields|Gets or sets the value indicating the fields that will be used for sorting data in charts.|
-|   int|CheckBoxListColumns|Gets or sets the maximum number of checkbox columns in "Quick add" dialog in the Report Designer on the Fields tab. 
-Note: Fields will be grouped in columns in cases when the number of fields is greater then QuickAddMinElementsInColumn|
+|   int|CheckBoxListColumns|Gets or sets the maximum number of checkbox columns in "Quick add" dialog in the Report Designer on the Fields tab. <br> *Note: Fields will be grouped in columns in cases when the number of fields is greater then QuickAddMinElementsInColumn*.|
 |   bool|CheckForUpdates||
 |   bool|CheckUserPermission|Gets or sets value indicating that user permissions should be checked. If disabled, all reports will be accessible to all users.|
 |   bool|CollapsedFiltersInReportViewer|Gets or sets the value indicating whether the filters section of the Report Viewer should be initially hidden. You should have ShowFiltersInReportViewer enabled to use this setting.|
 |   Unit|ColumnDropDownWidth|Gets or sets the value indicating the width of the box for dropdown boxes on the Fields tab in the ReportDesigner.|
-|   CultureInfo|Culture|Gets or sets the default culture setting for AdHoc. <br> *Note: Use this only in special cases. Normally, you should use the Language setting for localization. To learn more, see the links below:* <br>
-[[Language]] <br>
-[[Izenda Language Pack]]|
+|   CultureInfo|Culture|Gets or sets the default culture setting for AdHoc. <br> *Note: Use this only in special cases. Normally, you should use the Language setting for localization. To learn more, see the links below:* <br>[[Language]] <br>[[Izenda Language Pack]]|
 |   bool|CurrentUserIsAdmin|Gets or sets whether the current user is an Admin user. Admins may see and overwrite all reports for that tenant.|
 |   bool|CurrentUserIsGlobalAdministrator|Defines if the current user has global administrator rights.|
 |   string|CurrentUserName|Gets or sets the name of the current user. This is required for multi-user security.|
