@@ -11,8 +11,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   AggregateFunctionCollection|AggregateFunctions||
 |   bool|AllowAnalysisGrid|Gets or sets the value indicating whether it is allowed analysis grid. 
 The option appears in the Visual Group Style combobox at the Style tab in the ReportDesigner.|
-|   bool|AllowArchivedReportTableCreation|Gets or sets the value indicating whether it is allowed to create the database table that contains archived reports if there is no such table in the database. 
-If set, AdHoc checks if table in database for keeping reportsets exists, and creates it if necessary.|
+|   bool|AllowArchivedReportTableCreation|Gets or sets the value indicating whether it is allowed to create the database table that contains archived reports if there is no such table in the database. If set, AdHoc checks if table in database for keeping reportsets exists, and creates it if necessary.|
 |   bool|AllowClientSorting||
 |   bool|AllowComparativeArithmetic|Gets or sets the value indicating whether comparative arithmetic is allowed in arithmetic checkbox. 
 Comparative operators appear in "A" checkboxes at the Fields tab in the ReportDesigner.|
@@ -20,52 +19,31 @@ Comparative operators appear in "A" checkboxes at the Fields tab in the ReportDe
 |   bool|AllowDataFieldsInDescription|This checkbox enables/disables the ability to allow a data field to be used in the description of the report (which is set in the misc tab). This is particularly useful in drill down reports and those reports with filters. For example: Let's say we are filtering a report by the field CategoryName and the value Produce. For the Description we enter: [CategoryName] details. This will show on the report as Produce details and dynamically change when the user changes the filter value.|
 |   bool|AllowDeletingReports|This checkbox enables/disables the delete icons at the report list page against reports names, for the current user. Clicking on the red x delete icon deletes the report.|
 |   bool|AllowDeltas|Gets or sets the value indicating whether "Add Deltas" checkbox should be shown at the fields tab in the ReportDesigner. Any time there is a change in a quantity that change is calculated by taking the later value for that quantity and subtracting from it the earlier value for that quantity.|
-|   bool|AllowDomainJoin|Gets or sets the value indicating that domain joins should be shown on the report designer. Domain join could be useful if you want to join tables on columns with web addresses. 
-For example, if you set up Domain Join option columns with strings "http://www.yourdomain.com" and "www.yourdomain.com" will be equal.|
+|   bool|AllowDomainJoin|Gets or sets the value indicating that domain joins should be shown on the report designer. Domain join could be useful if you want to join tables on columns with web addresses. For example, if you set up Domain Join option columns with strings "http://www.yourdomain.com" and "www.yourdomain.com" will be equal.|
 |   bool|AllowEqualsSelectForStoredProcedures|Gets or sets the value indicating is it allowed to use Equals(Select) or Equals(Multiple) for filters in case when stored procedure used. These options can be found in the Operator dropdown at the Filters tab in the ReportDesigner.|
-|   bool|AllowFieldsAsValue|Gets or sets the value indicating whether field name is allowed in filter value. 
-If set, values like "Is Less Than (Field)" appear in the Operator combobox at the Filters tab in the ReportDesigner. Fields comparison allows you to compare values from one field with values from another field.|
-|   bool|AllowGroupWithoutSelect|Gets or sets value indicating if it is possible to make invisible fields which are used for Visual Grouping. 
-If set, fields with both "Hide This Field" (in the advanced properties) and "VG"; flags set, will not lead to report being considered as invalid.|
-|   bool|AllowHorizontalBarChart|Gets or sets the value indicating whether Horizontal Bar Chart is allowed. 
-This defines if Horizontal checkbox will be available in the Advanced Properties at the Chart tab in the ReportDesigner, when Bar chart type is used.|
+|   bool|AllowFieldsAsValue|Gets or sets the value indicating whether field name is allowed in filter value. If set, values like "Is Less Than (Field)" appear in the Operator combobox at the Filters tab in the ReportDesigner. Fields comparison allows you to compare values from one field with values from another field.|
+|   bool|AllowGroupWithoutSelect|Gets or sets value indicating if it is possible to make invisible fields which are used for Visual Grouping. If set, fields with both "Hide This Field" (in the advanced properties) and "VG"; flags set, will not lead to report being considered as invalid.|
+|   bool|AllowHorizontalBarChart|Gets or sets the value indicating whether Horizontal Bar Chart is allowed. This defines if Horizontal checkbox will be available in the Advanced Properties at the Chart tab in the ReportDesigner, when Bar chart type is used.|
 |   bool|AllowHtmlOutputsInScheduledReports||
-|   bool|AllowInvalidCharacters|Gets or sets the value indicating whether invalid characters in report namesare allowed if not striped. 
-If disabled, non-literal characters in the report name, entered in the Report Designer in Save As dialog, will cause error message during saving report. 
-Note: Invalid characters will be automatically removed from the report name if [[StripInvalidCharacters]] set to true.|
+|   bool|AllowInvalidCharacters|Gets or sets the value indicating whether invalid characters in report namesare allowed if not striped. If disabled, non-literal characters in the report name, entered in the Report Designer in Save As dialog, will cause error message during saving report. <br>*Note: Invalid characters will be automatically removed from the report name if [[StripInvalidCharacters]] set to true.*|
 |   bool|AllowInvertedGrid|Allows the inverted checkbox to be shown in the Summary tab in the ReportDesigner. Inverted grid means it exchanges columns for rows (up to 36 rows)|
-|   bool|AllowLineOnBar|Gets or sets the value indicating whether is it allowed line on Bar chart. 
-If true, then Line Value feature is available at the Chart tab in the ReportDesigner, when Bar chart type is selected. 
-Line can show additional values on the Bar chart.|
-|   bool|AllowMultilineHeaders|Gets or sets if headers in the grid report can be multiline. 
-This setting could be useful if you have many columns in the report or columns names are very long.|
-|   bool|AllowNewFiltersInReportViewer|This checkbox enables/disables the ability to add new filters in the report viewer page of Izenda Reports. Note: Current filters used on the report will still be displayed.|
+|   bool|AllowLineOnBar|Gets or sets the value indicating whether is it allowed line on Bar chart. If true, then Line Value feature is available at the Chart tab in the ReportDesigner, when Bar chart type is selected. Line can show additional values on the Bar chart.|
+|   bool|AllowMultilineHeaders|Gets or sets whether headers in the grid report can be multi-line. This setting could be useful if you have many columns in the report or columns names are very long.|
+|   bool|AllowNewFiltersInReportViewer|Gets or sets whether users have the ability to add new filters in the report viewer page of Izenda Reports. <br>*Note: Current filters used on the report will still be displayed.*|
 |   bool|AllowOverwritingReports|This enables/disables the current user's ability to overwrite reports currently saved. An example of this usage is that many users create base reports for their users to use. Disabling the overwrite report feature ensures that the default reports are not tampered with.|
-|   bool|AllowSelfJoin|Gets or sets the value indicating whether is it allowed datasources self join. 
-If true and ShowDataSourcesAsCheckBoxes, then user can select the same data source twice and selfjoin it at the Data Sources tab in the ReportDesigner.|
-|   bool|AllowStackedBarChart|Gets or sets the value indicating whether Stacked Bar Chart is allowed. 
-This defines if Stacked checkbox will be available in the Advanced Properties at the Chart tab in the ReportDesigner, when Bar chart type is used.|
-|   bool|AllowSummaryDeltas|Gets or sets the value indicating whether "Show Summary Deltas" checkbox should be shown in the summary tab in the ReportDesigner. 
-Any time there is a change in a quantity that change is calculated by taking the later value for that quantity and subtracting from it the earlier value for that quantity. 
-
-AllowDeltas feature MUST be turned on to use this feature.|
+|   bool|AllowSelfJoin|Gets or sets the value indicating whether is it allowed datasources self join. If true and ShowDataSourcesAsCheckBoxes, then user can select the same data source twice and selfjoin it at the Data Sources tab in the ReportDesigner.|
+|   bool|AllowStackedBarChart|Gets or sets the value indicating whether Stacked Bar Chart is allowed. This defines if Stacked checkbox will be available in the Advanced Properties at the Chart tab in the ReportDesigner, when Bar chart type is used.|
+|   bool|AllowSummaryDeltas|Gets or sets the value indicating whether the "Show Summary Deltas" checkbox should be shown in the summary tab in the ReportDesigner. 
+Any time there is a change in a quantity, that change is calculated by taking the later value for that quantity and subtracting from it the earlier value for that quantity. The AllowDeltas feature MUST be turned on to use this feature.|
 |   bool|AllowVisualGroups||
 |   string|ApplicationHeaderImageUrl|Gets or sets the URL of the Application Header Logo.|
 |   bool|AutoJoinOnRenderedRows||
-|   bool|AutoPostBackOnFilterChange|Gets or sets the value indicating whether should be postback on filter change. 
-This affects behavior of ReportViewer when ShowFiltersInReportViewer is enabled, and user changes filters there. All changes will be applied immediately and report will be reloaded.|
-|   bool|CacheEqualsSelect|Gets or sets the value indicating whether "Equals (Select)" value should be cached. 
-Caching "Equals (Select)" can be usefull if you have problems with performance in your data base or slow connection to it. But data in cache may be not relevant if it is updated very often in the data base. So, use this setting carefully.|
+|   bool|AutoPostBackOnFilterChange|Gets or sets the value indicating whether should be postback on filter change. This affects behavior of ReportViewer when ShowFiltersInReportViewer is enabled, and user changes filters there. All changes will be applied immediately and report will be reloaded.|
+|   bool|CacheEqualsSelect|Gets or sets the value indicating whether "Equals (Select)" value should be cached. Caching "Equals (Select)" can be useful if you have problems with performance in your data base or slow connection to it. But data in cache may be not relevant if it is updated very often in the data base. So, use this setting carefully.|
 |   bool|CacheQueries|Gets or sets the value indicating whether all queries for the Driver should be cached.|
-|   bool|CacheReports|Gets or sets the value indicating whether all loaded reports should be cached. 
-This feature can be very useful if you have problems with performance in your data base or slow connection to it. 
-Loaded ReportSet will be cached, so there will be no extra queries to the data base. 
-When you save the Reportset cache for it will be removed and it will be added again when ReportSet will be loaded again. 
-Report caching may cause problems if you are running more than one instance of Izenda Adhoc with the same reports source (i.e. the same database and table or same reports folder)|
-|   bool|CacheSchema|Gets or sets the value indicating whether DatabaseSchema should be cached. 
-Disable schema caching may be useful if you data base schema changes very often. But ussually it is better to use caching because it will prevent extra queries to the data base.|
-|   bool|CacheStoredProcedureMetaDataToDisk|Gets or sets the value indicating whether the information about stored procedures will be cached on the server's disk. 
-Normally stored procedures are updated with the database schema. But if CacheStoredProcedureMetaDataToDisk is enabled, they will be stored in the Izenda.config file and will not be updated with the schema. Normally, you don't need to use stored procedure caching, so use this feature only when you have problems with performance while loading a large amount of stored procedures.|
+|   bool|CacheReports|Gets or sets the value indicating whether all loaded reports should be cached. This feature can be very useful if you have problems with performance in your database or connections are slow. Loaded ReportSet will be cached, so there will be no extra queries to the database. When you save the Reportset cache for it will be removed and it will be added again when ReportSet will be loaded again. Report caching may cause problems if you are running more than one instance of Izenda Adhoc with the same reports source (i.e. the same database and table or same reports folder).|
+|   bool|CacheSchema|Gets or sets the value indicating whether DatabaseSchema should be cached. Disable schema caching may be useful if you data base schema changes very often. But ussually it is better to use caching because it will prevent extra queries to the data base.|
+|   bool|CacheStoredProcedureMetaDataToDisk|Gets or sets the value indicating whether the information about stored procedures will be cached on the server's disk. Normally stored procedures are updated with the database schema. But if CacheStoredProcedureMetaDataToDisk is enabled, they will be stored in the Izenda.config file and will not be updated with the schema. Normally, you don't need to use stored procedure caching, so use this feature only when you have problems with performance while loading a large amount of stored procedures.|
 |   bool|CascadeFilterValues|Gets or sets the value indicating whether filter values at the Filters tab in the ReportDesigner will be cascaded. For example, this will only show cities in the country selected on the prior filter by country|
 |   char|CategoryCharacter|Get or set delimiter which is used to delimit category name and report name.|
 |   bool|ChangParentUrlWhenRedirect||
