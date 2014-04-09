@@ -163,8 +163,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   int|MaximumReportSizeForCache||
 |   Unit|MinPdfFontSize|Sets the minimum font size that will be used when creating a PDF document. The default is 10 point.|
 |   string|MySqlConnectionString|Gets or sets the connection string for MySQL connections.|
-|   string|NoDataSourcePage|Gets or sets the URL of the page where users will be redirected if there are no tables in a database. 
-By default it is settings page.|
+|   string|NoDataSourcePage|Gets or sets the URL of the page where users will be redirected if there are no tables in a database. By default it is the settings page.|
 |   int|NumChartPerRow|Gets or sets the value indicating the number of charts that should be displayed in one report row on Dashboards.|
 |   int|NumChartTabs|Sets the maximum number of charts allowed per report in the ReportDesigner. Each chart will have it's own tab in the report designer. Setting this to more than 1 requries a Dashboards license.|
 |   int|NumSharedDropdowns|Gets or sets the maximum number of user/roles a report can be shared with. This affects the number of "Share With" dropdowns on the Misc tab of the ReportDesigner.|
