@@ -130,11 +130,11 @@ Note:This property doesn't change data source name in data base. You should use 
 |   Unit|DescriptionWidth|Gets or sets the width of the "Description" textbox on the Fields tab of the Report Designer.|
 |   bool|Distinct|Sets the default value of the distinct checkbox. The distinct checkbox is located on the datasources tab of the report designer page.|
 |   bool|DistinctSubtotalInnerQuery|Gets or sets the value indicating whether the DISTINCT option should be used in inner queries for calculating subtotals. This can affect database performance.|
-|   FormatCollection|DrillDownStyle|Gets or sets the list of available drill-down report fields formats. This affects contents of all "Drill-down style" comboboxes in the ReportDesigner.|
+|   FormatCollection|DrillDownStyle|Gets or sets the list of available drill-down report field formats. This affects the contents of all "Drill-down style" comboboxes in the ReportDesigner.|
 |   AggregateFunctionCollection|DundasAggregateFunctions||
-|   string|EmailFromAddress||
-|   string|EmailSubjectFormatString||
-|   bool|EmbedReportInServerEmail||
+|   string|EmailFromAddress|This gets or sets the value used as the default "email from" address for the automated scheduler.|
+|   string|EmailSubjectFormatString|This gets or sets the value used as the default subject of the emailed reports. By default it uses the report name as the subject of the email.|
+|   bool|EmbedReportInServerEmail|Gets or sets the value indicating whether a report will be embedded in the server email.|
 |   int|EqualsDropDownLimit||
 |   int|EqualsDropDownTimeout||
 |   Dictionary<string,string[]>|EqualsPopupDestinations ||
