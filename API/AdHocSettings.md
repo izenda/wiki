@@ -105,34 +105,28 @@ Note:This property doesn't change data source name in data base. You should use 
 |   string|EmailFromAddress|This gets or sets the value used as the default "email from" address for the automated scheduler.|
 |   string|EmailSubjectFormatString|This gets or sets the value used as the default subject of the emailed reports. By default it uses the report name as the subject of the email.|
 |   bool|EmbedReportInServerEmail|Gets or sets the value indicating whether a report will be embedded in the server email.|
-|   int|EqualsDropDownLimit||
-|   int|EqualsDropDownTimeout||
 |   Dictionary<string,string[]>|EqualsPopupDestinations ||
-|   string|EqualsSelectDateFormat||
-|   int|EqualsSelectLimit||
-|   string|EqualsSelectText||
-|   int|EqualsSelectTimeout||
-|   string|ErrorIzendaReplacement||
-|   string[]|ExistingDatabaseConstraints||
-|   bool|ExpandCategorizedReports||
-|   bool|ExpandVisualGroupGrids||
-|   Font|ExportFont||
-|   int|ExportLimit||
-|   NameValueCollection|ExtendedFormats||
-|   string[]|ExtendedFunctions||
-|   NameValueCollection|FieldAliases||
-|   Unit|FieldDropDownWidth||
-|   string|FieldFilterRegex||
-|   int|FieldLimit||
-|   FieldList|FieldList||
-|   string|FieldsRegex||
+|   int|EqualsSelectLimit|Limits the number of rows(the dropdown options) selectable through the "Equals(select)" filter. These filters can be found in the Filters tab of the Report Designer and in the report viewer when an "Equals(Select)" filter is utilized. <br>*Note: by default this is set to either 500 or 1000 rows. If, for example, you have 2 choices (true and false) and the false value is not in the first 1000 rows, then true will be the only option shown unless you increase this number.|
+|   string|EqualsSelectText|Gets or sets a value that allows the user to specify the wording for the "Equals(Select)" filter. The "Select(Equals)" option is found in the filter tab of report designer in the operator drop down box.|
+|   int|EqualsSelectTimeout|This setting allows the user to set how long to wait while the values of the filters tab is populated before timing out. If you have a large or unoptimized database, increasing this setting can help with proper reporting performance. This setting replaced EqualsDropDownTimeout and should be used instead.|
+|   string|ErrorIzendaReplacement|Gets or sets the value that will replace the word "Izenda" in StackTrace when an exception occurs. This is useful when you brand your distribution of Izenda to your own company name.|
+|   string[]|ExistingDatabaseConstraints|Gets a list of your database's constraints, if any.|
+|   bool|ExpandCategorizedReports|Gets or sets whether the categorized reports underneath each category in the report list and in the report designer's preview tab can be expanded.|
+|   bool|ExpandVisualGroupGrids|Gets or sets whether the visually grouped data details can be expanded underneath each visual grouping in the report viewer and in the report designer's preview tab. When enabled, all visual groups will be expanded automatically when you view the report.|
+|   Font|ExportFont|Gets or sets the font for the PDF and RTF outputs. This is set to a standard font for [[iTextSharp|http://sourceforge.net/projects/itextsharp/]] by default|
+|   int|ExportLimit|Gets or sets a value indicating the maximum number of rows a ReportSet may export.|
+|   string[]|ExtendedFunctions|This list allows the user specify additional SQL functions that should be included in the functions dropdown of the Fields tab. Learn more about [[UDFs|http://wiki.izenda.us/FAQ/izenda-and-udfs]].|
+|   NameValueCollection|FieldAliases|Gets or sets the field names(aliases) that the user sees in the Report Designer, on a per-user basis. The name of your database column is used as the key and the alias you want is the value. This is useful for localization and when custom fields are used in your application.|
+|   Unit|FieldDropDownWidth|Gets or sets the width of field dropdown on the Fields tab in the ReportDesigner.|
+|   int|FieldLimit|This setting limits the number of fields Izenda Reports allows to be used in a single report. Fields are set in the fields tab on the report designer page.|
+|   string|FieldsRegex|Sets the regular expression used to select specific columns from your datasource. This setting allows the user to use a regular expression to filter certain fields from being added to the report through the fields tab in the report designer. This replaced FieldFilterRegex and should be used instead.|
 |   string|FieldValueCssUrl||
-|   Unit|FilterParameterWidth||
-|   string|FiltersCustomPagesPath||
-|   string|FiltersRegex||
-|   bool|ForceNewNameOnSave||
-|   Unit|FormatDropDownWidth||
-|   FormatCollection|Formats||
+|   Unit|FilterParameterWidth|Gets or sets the width of the Filters tab's "value(s)" controls when the "Equals" operator is selected.|
+|   string|FiltersCustomPagesPath|Gets or sets the relative path to the Equals(PopUp) page if you are using a custom page.|
+|   string|FiltersRegex|Sets the regular expression used for column filtering for data selection. This setting allows the user to use a regular expression to filter certain fields from being added to the report through the Fields tab in the report designer.|
+|   bool|ForceNewNameOnSave|Setting this property forces the "Save" button to function exactly like the "Save As" button. It requires the user to specify a report name when saving. If another report has the same name, Izenda Reports warns the user. <br> *Note: The AllowOverwritingReports property MUST be set to true for this to have any effect.|
+|   Unit|FormatDropDownWidth|Gets or sets the width of all "Format" dropdowns in the Report Designer.|
+|   FormatCollection|Formats|Gets or sets the list of available formats to apply to fields. This affects the Formats dropdown on the Fields tab of the ReportDesigner. <br> *Note: You could use Formats to add new custom formats. For example, adding new format for Europe-style date: ``AdHocSettings.Formats["EuroDate"] = "{0:dd/MM/yyyy}";``*|
 |   string|FormDesignerUrl||
 |   Unit|FunctionDropDownWidth||
 |   int|GaugeHeight||
