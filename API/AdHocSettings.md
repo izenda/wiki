@@ -19,10 +19,8 @@ Comparative operators appear in "A" checkboxes at the Fields tab in the ReportDe
 |   bool|AllowCreateNewCategory|Gets or sets the value indicating the possibility to create new categories in Save As dialog in the ReportDesigner.|
 |   bool|AllowDataFieldsInDescription|This checkbox enables/disables the ability to allow a data field to be used in the description of the report (which is set in the misc tab). This is particularly useful in drill down reports and those reports with filters. For example: Let's say we are filtering a report by the field CategoryName and the value Produce. For the Description we enter: [CategoryName] details. This will show on the report as Produce details and dynamically change when the user changes the filter value.|
 |   bool|AllowDeletingReports|This checkbox enables/disables the delete icons at the report list page against reports names, for the current user. Clicking on the red x delete icon deletes the report.|
-|   bool|AllowDeltas|Gets or sets the value indicating whether "Add Deltas" checkbox should be shown at the fields tab in the ReportDesigner. 
-Any time there is a change in a quantity that change is calculated by taking the later value for that quantity and subtracting from it the earlier value for that quantity.|
-|   bool|AllowDomainJoin|Gets or set value indicating domain join should be shown at report designer. 
-Domain join could be usefull if you want to join tables on colums with web addresses. 
+|   bool|AllowDeltas|Gets or sets the value indicating whether "Add Deltas" checkbox should be shown at the fields tab in the ReportDesigner. Any time there is a change in a quantity that change is calculated by taking the later value for that quantity and subtracting from it the earlier value for that quantity.|
+|   bool|AllowDomainJoin|Gets or sets the value indicating that domain joins should be shown on the report designer. Domain join could be useful if you want to join tables on columns with web addresses. 
 For example, if you set up Domain Join option columns with strings "http://www.yourdomain.com" and "www.yourdomain.com" will be equal.|
 |   bool|AllowEqualsSelectForStoredProcedures|Gets or sets the value indicating is it allowed to use Equals(Select) or Equals(Multiple) for filters in case when stored procedure used. These options can be found in the Operator dropdown at the Filters tab in the ReportDesigner.|
 |   bool|AllowFieldsAsValue|Gets or sets the value indicating whether field name is allowed in filter value. 
