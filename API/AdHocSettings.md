@@ -214,8 +214,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   string|ScheduledReportsUrlFormatString|Gets or sets the url that is sent via email as the report web address when the user selects "link" in the scheduling control's "send email as" field. [[Report scheduling|/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler]] MUST be turned on for this to have an effect.|
 |   SchedulerOutputCollection|SchedulerOutputTypes|Gets or sets the value indicating the allowed formats for scheduling reports. This defines the contents of the "Send Email As" dropdown at the Misc tab in the ReportDesigner.|
 |   TimeSpan|SchemaCacheTimeout|Gets or sets how long the system should wait before giving up on caching the schema.|
-|   Unit|SelectValueDropDownWidth|Gets or sets the width of filter values dropdown. 
-This affects width of filtering value combobox, which appears at the Filters tab in the ReportDesigner when user selects Equals(Select) operator.|
+|   Unit|SelectValueDropDownWidth|Gets or sets the width of the "Value(s)" dropdown on the Filters tab in the Report Designer.|
 |   string|SettingsKey|Gets or sets a password used to access the settings page. It should be used in tandem with UserKey if you don't need multi-user security.|
 |   string|SettingsPageUrl|Gets or sets the URL of the Settings page.|
 |   string[]|SharedWithValues|This sets the users or roles available in the "Shared With" dropdown of the Misc tab in the Report Designer.|
@@ -297,81 +296,81 @@ This affects width of filtering value combobox, which appears at the Filters tab
 |   bool|ShowPivot|Gets or sets whether to show the "Add Pivot" button on the Report Designer.|
 |   bool|ShowPoweredByLogo|Gets or sets whether to show the "Powered By Izenda" logo throughout the application.|
 |   bool|ShowPreviewTab|Gets or sets whether the "Preview" tab is shown in the Report Designer.|
-|   bool|ShowPublishRdlButton|Gets or sets whether to show the "RDL" button on the Report Designer toolbar.|
-|   bool|ShowRdlOutputIcon||
-|   bool|ShowRecentDatasources||
+|   bool|ShowPublishRdlButton|Gets or sets whether to show the "Publish RDL" button on the Report Designer toolbar.|
+|   bool|ShowRdlOutputIcon|Gets or sets whether to show the "RDL" button on the Report Designer toolbar.|
+|   bool|ShowRecentDatasources|Gets or sets the value indicating whether the Recent Datasources dropdown list will be shown on the Data Sources tab of the Report Designer.|
 |   bool|ShowRemoveAll||
 |   bool|ShowRemoveFieldInReportViewer||
-|   bool|ShowReportClassifiers||
-|   bool|ShowReportColor||
-|   bool|ShowReportingServicesSettings||
-|   bool|ShowReportsInHtmlOutput||
-|   bool|ShowReportsListAsDropDown||
-|   bool|ShowReportsTab||
-|   bool|ShowResponseServerDetails||
-|   bool|ShowRowButtons||
-|   bool|ShowRTFButton||
-|   bool|ShowSaveAsToolbarButton||
-|   bool|ShowSaveControls||
-|   bool|ShowSaveControlsInReportsTab||
-|   bool|ShowSaveInReportViewer||
-|   bool|ShowSaveRdlToolbarButton||
-|   bool|ShowScheduleControls||
-|   bool|ShowServerEmailButton||
-|   bool|ShowSettingsButton||
-|   bool|ShowSettingsButtonForNonAdmins||
-|   bool|ShowSharedCheckbox||
-|   bool|ShowSharingControl||
-|   bool|ShowSideHelp||
-|   bool|ShowSimpleModeViewer||
-|   bool|ShowSqlOutputIcon||
-|   bool|ShowStackTrace||
-|   bool|ShowStyleTab||
-|   bool|ShowSummaryLine||
-|   bool|ShowSummaryTab||
-|   bool|ShowTableNames||
-|   bool|ShowTenantField||
-|   bool|ShowTimeZoneDropdown||
-|   bool|ShowTopInFields||
-|   bool|ShowTopInSummary||
-|   bool|ShowVisualGroupLabels||
-|   bool|ShowWatermarkedExports||
-|   bool|ShowWaterMarks||
-|   bool|ShowWidth||
-|   bool|ShowXLSButton||
+|   bool|ShowReportClassifiers|Gets or sets the value indicating whether the ReportClassifiers control should be shown on the "Misc" tab of the ReportDesigner.|
+|   bool|ShowReportColor|Gets or sets the value indicating whether report color (Item and AlternatingItem) dropdowns are shown on the Style tab in the Report Designer.|
+|   bool|ShowReportingServicesSettings|Deprecated|
+|   bool|ShowReportsInHtmlOutput|Deprecated|
+|   bool|ShowReportsListAsDropDown|Gets or sets the value indicating which mode to use for the Reports tab.|
+|   bool|ShowReportsTab|Gets or sets whether the Reports tab should be shown on the Report Designer.|
+|   bool|ShowResponseServerDetails|Gets or sets whether to show a diagnostic test using the Response Server page.|
+|   bool|ShowRowButtons|Gets or sets the value indicating whether "insert" and "move" buttons should be shown on the Fields tab in the Report Designer.|
+|   bool|ShowRTFButton|Gets or sets the whether to enable the button to export to RTF format.|
+|   bool|ShowSaveAsToolbarButton|Gets or sets whether the save as button is shown on the toolbar in Report Designer.|
+|   bool|ShowSaveControls|Gets or sets whether the save controls (save and save as icons) in the toolbar are shown on the report designer.|
+|   bool|ShowSaveControlsInReportsTab|Gets or sets the value indicating whether save controls should be shown in the toolbar in the Report Viewer.|
+|   bool|ShowSaveInReportViewer|Deprecated|
+|   bool|ShowSaveRdlToolbarButton|Gets or sets the value indicating whether the "Save As RDL" button should be shown on the toolbar.|
+|   bool|ShowScheduleControls|Defines whether or not the scheduling controls are show at the Misc tab in the Report Designer.|
+|   bool|ShowServerEmailButton|Gets or sets whether the "E-Mail report from server" button from the Izenda Reports toolbars.|
+|   bool|ShowSettingsButton|Gets or sets whether the "Settings" button is shown on the toolbar.|
+|   bool|ShowSettingsButtonForNonAdmins|Gets or sets whether the Settings button will be shown to users without administrator rights.|
+|   bool|ShowSharedCheckbox|Deprecated|
+|   bool|ShowSharingControl|Gets or sets the value indicating whether the sharing control will be shown at the Misc tab in the Report Designer.|
+|   bool|ShowSideHelp|Gets or sets the value indicating whether side help should be shown in the Report Designer.|
+|   bool|ShowSimpleModeViewer|Gets or sets whether to display the Simple Mode of the Report Viewer.|
+|   bool|ShowSqlOutputIcon|Deprecated|
+|   bool|ShowStackTrace|Gets or sets the value indicating the format for showing exceptions.|
+|   bool|ShowStyleTab|Gets or sets whether the Style tab is shown on the Report Designer page.|
+|   bool|ShowSummaryLine|Deprecated|
+|   bool|ShowSummaryTab|Gets or sets whether the summary tab is shown on the Report Designer.|
+|   bool|ShowTableNames|Gets or sets whether the fields in dropdowns should be grouped by table name. |
+|   bool|ShowTenantField|Gets or sets whether the field identified in the TenantField property is shown.|
+|   bool|ShowTimeZoneDropdown|Gets or sets the value indicating whether the timezone dropdown will be shown in the Report Designer on the Misc tab. <br> *Note: ShowScheduleControls MUST be set to true to use this*.|
+|   bool|ShowTopInFields|Gets or sets whether to display the "Records" textbox on the Fields tab of the Report Designer.|
+|   bool|ShowTopInSummary|Gets or sets whether to display the "Records" textbox on the Summary tab of the Report Designer.|
+|   bool|ShowVisualGroupLabels|Deprecated|
+|   bool|ShowWatermarkedExports|Gets or sets the value indicating whether a watermarked export should be used when there are license errors.|
+|   bool|ShowWaterMarks|Gets or sets the value indicating whether watermarks should be used when there are license errors.|
+|   bool|ShowWidth|Deprecated|
+|   bool|ShowXLSButton|Gets or sets the value indicating whether the "XLS" export button is shown on the toolbar. |
 |   string|SimpleFilterCssUrl||
-|   bool|SingleLineViewerToolbar||
-|   string|SmtpLogin||
-|   string|SmtpPassword||
-|   string|SmtpServer||
-|   bool|SortColumnNames||
-|   int|SqlCommandTimeout||
-|   string|SqlServerConnectionString||
+|   bool|SingleLineViewerToolbar|Gets or set value indicating whether the ReportViewer toolbar should be single line.|
+|   string|SmtpLogin|Gets or sets the SMTP server login name.|
+|   string|SmtpPassword|Gets or sets the SMTP server password.|
+|   string|SmtpServer|Gets or sets the SMTP server address used by your company to send out emails.|
+|   bool|SortColumnNames|Gets or sets the value indicating whether dropdowns with column names are sorted alphabetically. |
+|   int|SqlCommandTimeout|Gets or sets the wait time in seconds for loading dropdowns from the database.|
+|   string|SqlServerConnectionString|Gets or sets the connection string for MS SQL Server connections.|
 |   bool|StoreCurrentReportSetInApplication||
-|   int|StoredProcedureStringLimit||
-|   bool|StoreImagesToCache||
+|   int|StoredProcedureStringLimit|Gets or sets the value indicating the max length of a string returned by a Stored Procedure.|
+|   bool|StoreImagesToCache|Gets or sets the value indicating how temporary images should be stored.|
 |   bool|StrictANSIOuterJoin||
-|   bool|StripInvalidCharacters||
-|   string|SubCalculationFilterRegex||
-|   string|TabBackgroundImageUrl||
-|   NameDistinctValueCollection|TableAliases||
+|   bool|StripInvalidCharacters|Gets or sets the value indicating whether invalid characters in report names should be stripped out.|
+|   string|SubCalculationFilterRegex|Gets or sets whether the user can use a regular expression to filter certain numeric fields from having subcalculation function options when selected in the Fields tab of Report Designer.|
+|   string|TabBackgroundImageUrl|Gets or sets the path to an image used to customize the look of the tabs on the Report Designer.|
+|   NameDistinctValueCollection|TableAliases|Deprecated|
 |   Unit|TableDropDownWidth|This replaces the property DataSourceDropDownWidth and should be used instead.|
-|   string|TableFilterRegex||
-|   string|TabsCss||
-|   string|TabsCssUrl||
-|   string|TempFiles||
+|   string|TableFilterRegex|Gets or sets the regular expression used for table filtering.|
+|   string|TabsCss|Deprecated. Use TabsCssUrl instead.|
+|   string|TabsCssUrl|Gets or sets the CSS stylesheet URL to use for the TabStrip.|
+|   string|TempFiles|Gets or sets the value indicating the path where temporary files are stored.|
 |   string|TemplatesPath||
-|   string|TenantField||
-|   int|ThumbnailHeight||
-|   int|ThumbnailWidth||
-|   Unit|TimePeriodDropDownWidth||
-|   int|TimeZoneOffset||
-|   SchedulerTimeZoneCollection|TimeZones||
-|   string|ToolbarBackgroundImageUrl||
-|   string|ToolbarBorderColor||
-|   string|ToolbarCssUrl||
-|   string|UnCategorizedReportsMenuItemTitle||
-|   bool|UseAdvancedGauge||
+|   string|TenantField|The field that will be internally filtered by the current TenantID value. |
+|   int|ThumbnailHeight|Gets or sets the height of thumbnail images on the Report List.|
+|   int|ThumbnailWidth|Gets or sets the width of thumbnail images on the Report List.|
+|   Unit|TimePeriodDropDownWidth|Gets or sets the width of the time period dropdown.|
+|   int|TimeZoneOffset|Gets or sets the value indicating the time zone offset of the current user in hours.|
+|   SchedulerTimeZoneCollection|TimeZones|Gets or sets the collection of additional and hidden time zones. |
+|   string|ToolbarBackgroundImageUrl|Gets or sets a URL to an image to customize the look of the toolbar section of the report designer.|
+|   string|ToolbarBorderColor|Gets or sets the color of the toolbar border.|
+|   string|ToolbarCssUrl|Gets or sets the CSS stylesheet URL for the Toolbar.|
+|   string|UnCategorizedReportsMenuItemTitle|Deprecated|
+|   bool|UseAdvancedGauge|Gets or sets the value indicating whether advanced is used for "Gauge" format. |
 |   bool|UseBulkCSV||
 |   bool|UseColumnNameForDashboardCommonFilters||
 |   bool|UseConstraintsForJoins||
