@@ -2,6 +2,8 @@
 
 To change the default print settings, you will need to modify the ``PreExecuteReportSet()`` method and set the related properties. The code sample below demonstrates how to accomplish this.
 
+*Note: This will not affect the global print settings, but will instead affect the settings on a per-report basis. This allows for more granular control over different types of reports.*
+
 ```csharp
 public override void PreExecuteReportSet(ReportSet reportSet)
 {
