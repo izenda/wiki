@@ -7,6 +7,8 @@ When enabled, the Between(Calendar) option appears in the Operator dropdown at t
 
 Default value: true
 
+Below is a sample global.asax using the ShowBetweenDateCalendar setting.
+
 ##C♯
 
 ```csharp
