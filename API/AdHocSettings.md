@@ -277,7 +277,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   bool|ShowInvertSummaryCheckbox|Deprecated|
 |   bool|ShowInvisible|Deprecated|
 |   bool|ShowJoinDropDown|Gets or sets the value indicating whether the join type dropdown should be shown in the JoinedTablesList. |
-|   bool|ShowJustification|Gets or sets whether justification boxes are shown in the Report Designer.|
+|   bool|[[ShowJustification|http://wiki.izenda.us/FAQ/Formatting/How-do-I-control-the-alignment-of-text-fields-or-justification-in-report-output]]|Gets or sets whether justification boxes are shown in the Report Designer.|
 |   bool|ShowLinkFormats|Deprecated|
 |   bool|ShowLoadingForDesigner|Deprecated|
 |   bool|ShowLoadingOnDesignerLoad|Deprecated|
