@@ -17,6 +17,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[PostLogin()|FAQ/PostLogin]]
 - [[PreExecuteReportSet()|FAQ/PreExecuteReportSet]]
 - [[ProcessEqualsSelectList()|FAQ/ProcessEqualsSelectList]]
+- [[ProcessDataSet()|FAQ/ProcessDataSet]]
 - [[Switching databases via code|FAQ/switching-databases-via-code]]
 - [[How do I hide the settings page button or aspx page from users?|FAQ/hide-settings-page-button-or-aspx-page]]
 - [[How do I integrate with my login page?|FAQ/integrate-login-page]]
