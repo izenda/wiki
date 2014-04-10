@@ -1,4 +1,4 @@
-#How can I apply a hidden filter using an inner query
+#How can I apply a hidden filter using an inner query?
 
 [[_TOC_]]
 
@@ -9,7 +9,7 @@
 For this example, we will use the Northwind database as our datasource.
 Here is our sample report in the report designer:
 
-![]()
+![](/FAQ/applying-hidden-filter-using-inner-query/hidden_filters_1.png)
 
 Below is a code sample showing how to add a hidden filter to a report. We will be using this query with our sample datasource.
 
@@ -26,7 +26,7 @@ public override void PreExecuteReportSet(ReportSet reportSet)
 
 After booting up our application and running our report, here is what we get:
 
-![]()
+![](/FAQ/applying-hidden-filter-using-inner-query/hidden_filters_2.png)
 
 ##Hidden Filter with SQL Override
 
