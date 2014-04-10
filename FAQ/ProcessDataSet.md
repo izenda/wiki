@@ -18,7 +18,7 @@ The first parameter is the System.Data.DataSet retrieved from the database. It i
 
 In addition to manipulating the way your data looks, post-processing can assist with encryption, logging, localization, etc. The ProcessDataSet method will be called after your data has been retrieved from the database, but before it is displayed. This means you can manipulate the data however you want in order to display it as you want. For example, you can replace encrypted data values with decrypted ones. Let's explore post-processing with the ProcessDataSet method further.
 
-###Example: Using post-processing
+##Example: Using post-processing
 
 For example, we want to rename the "CA" region code to "California", but only in the results grid. 
 Without any post-processing we have the following report: 
