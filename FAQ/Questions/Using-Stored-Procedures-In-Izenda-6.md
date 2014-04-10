@@ -32,13 +32,9 @@ GO
 
 <a name="SampleOutput"></a>Here we have a SP named "GetContact" that accepts one input parameter, the name of a company. It returns two columns; the customer's name, and a phone number. There is also a condition that the CompanyName must be similar to the input variable @companyName. If we will execute this SP in MSSQL 2005 using the Customers table from Northwind, we will get the following result:
 
-|ContactName|Phone|
-|-----------|-----|
-|Andre Fonseca|(11)555-9482|
-|Jonas Bergulfsen|07-98 92 35|
-|Helvetius Nagy|(206)555-8257|
+![MSSQL stored procedure results](/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6/mssql_stored_procedure.png)
  
-*Results of sample SP execution in MSSQL 2005.*
+***Figure 1.** Results of sample SP execution in MSSQL 2005.*
 
 ###Using SPs in your application
 
