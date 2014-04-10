@@ -371,20 +371,20 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   string|ToolbarCssUrl|Gets or sets the CSS stylesheet URL for the Toolbar.|
 |   string|UnCategorizedReportsMenuItemTitle|Deprecated|
 |   bool|UseAdvancedGauge|Gets or sets the value indicating whether advanced is used for "Gauge" format. |
-|   bool|UseBulkCSV||
+|   bool|UseBulkCSV|Gets or sets the value indicating whether to use the Bulk CSV export option. |
 |   bool|UseColumnNameForDashboardCommonFilters||
-|   bool|UseConstraintsForJoins||
+|   bool|UseConstraintsForJoins|Gets or sets the value indicating if multiple autojoining conditions are allowed. |
 |   bool|UseDefaultDialogs||
-|   bool|UseFriendlyErrors||
+|   bool|UseFriendlyErrors|Gets or sets the value indicating whether friendly errors should be shown on exceptions.|
 |   bool|UseImageDescriptions||
-|   bool|UseNoLock||
-|   bool|UseNonPostbackDeleting||
-|   bool|UseNonPostbackExport||
-|   bool|UseNonPostbackPreview||
-|   bool|UseNonPostbackServerEmailing||
-|   bool|UseReportID||
-|   bool|ValidateBeforeSave||
-|   bool|ViewsOnly||
-|   string[]|VisibleDataSources||
-|   string[]|VisibleTables||
-|   VisualGroupStyle|VisualGroupStyle||
+|   bool|UseNoLock|Gets or sets the value indicating whether nolock statements will be used in sql-queries.|
+|   bool|UseNonPostbackDeleting|Gets or sets the value indicating whether a postback should occur on deleting a report.|
+|   bool|UseNonPostbackExport|Gets or sets the value indicating whether a postback should occur on exporting a report.|
+|   bool|UseNonPostbackPreview|Gets or sets the value indicating whether a postback should occur on previewing a report.|
+|   bool|UseNonPostbackServerEmailing|Gets or sets the value indicating whether a postback should occur when emailing a report from the server.|
+|   bool|UseReportID|Gets or sets whether the application uses a GUID instead of the report name in the query string.|
+|   bool|ValidateBeforeSave|Gets or sets the value indicating whether ReportSet should be validated before saving.|
+|   bool|ViewsOnly|ViewsOnly should be used if you would like all views visible and only views visible at the Data Sources tab. |
+|   string[]|VisibleDataSources|Gets or sets the array of table names that should be shown in the tables dropdown in the ReportDesigner on the Data Sources tab.|
+|   string[]|VisibleTables|Deprecated. Use VisibleDataSources instead.|
+|   VisualGroupStyle|VisualGroupStyle|Deprecated|
