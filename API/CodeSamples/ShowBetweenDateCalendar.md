@@ -95,8 +95,8 @@ Below is a sample global.asax using the ShowBetweenDateCalendar setting.
 
 ###AdHocSettings.ShowBetweenDateCalendar = true
 
-![ShowBetweenDateCalendar=true](http://wiki.izenda.us/CodeSamples/ShowBetweenDateCalendar/between_date_calendar.png)
+![ShowBetweenDateCalendar=true](http://wiki.izenda.us/API/CodeSamples/ShowBetweenDateCalendar/between_date_calendar.png)
 
 ###AdHocSettings.ShowBetweenDateCalendar = false
 
-![ShowBetweenDateCalendar=false](http://wiki.izenda.us/CodeSamples/ShowBetweenDateCalendar/between_date_no_calendar.png)
+![ShowBetweenDateCalendar=false](http://wiki.izenda.us/API/CodeSamples/ShowBetweenDateCalendar/between_date_no_calendar.png)
