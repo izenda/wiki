@@ -209,97 +209,95 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   string|ResponseServer|Gets or sets the URL of the ResponseServer page.|
 |   string|ResponseServerWithDelimiter|Gets the URL of the ResponseServer page with query string characters("?" and "&") at the end.|
 |   int[]|ResultsDropdownValues|Gets or sets the list of the values in the "Results" dropdown in the toolbar of the ReportDesigner. This will override as many default entries in the list as it can.|
-|   string|SavedReportsTable||
-|   string|SaveReportSetNextUrl||
-|   string|ScheduledReportsUrlFormatString||
-|   SchedulerOutputCollection|SchedulerOutputTypes||
-|   string|SchedulerTenantID||
-|   TimeSpan|SchemaCacheTimeout||
-|   string|ScriptDirectory||
-|   Unit|SelectValueDropDownWidth||
-|   bool|ServiceMode||
-|   string|SettingsKey||
-|   string|SettingsPageUrl||
-|   string[]|SharedWithValues||
-|   bool|ShowAddAll||
-|   bool|ShowAddFieldInReportViewer||
-|   bool|ShowAdminButton||
-|   bool|ShowAdvancedChartingButton||
-|   bool|ShowAllInPreview||
-|   bool|ShowAllInResults||
-|   bool|ShowAllTables||
-|   bool|ShowArithmeticInSummary||
-|   bool|ShowArithmeticOperations||
-|   bool|ShowBackButton||
-|   bool|ShowBetweenDateCalendar||
-|   bool|ShowBulkCSVButton||
-|   bool|ShowCategoryTextboxInSaveDialog||
-|   bool|ShowChartLegend||
-|   bool|ShowChartTab||
-|   bool|ShowClientEmailButton||
-|   bool|ShowConstraintsSettings||
-|   bool|ShowContinueLinks||
-|   bool|ShowCSVButton||
-|   bool|ShowCustomFormatType||
-|   bool|ShowDashboardAddDropDown||
-|   bool|ShowDashboardFieldsTab||
-|   bool|ShowDashboardPartViewerLinks||
-|   bool|ShowDashboardSettings||
-|   bool|ShowDatabaseDiagramIcon||
-|   bool|ShowDatabaseTypes||
-|   bool|ShowDataSourcesAsCheckBoxes||
-|   bool|ShowDataSourcesTab||
-|   bool|ShowDataWhenParametersBlank||
-|   bool|ShowDescriptionsInReportsTab||
-|   bool|ShowDesignDashboardLink||
-|   bool|ShowDesignLinkInReportViewer||
-|   bool|ShowDesignLinks||
-|   bool|ShowDetailFormat||
-|   bool|ShowDistinct||
-|   bool|ShowDOCButton||
-|   bool|ShowEtlButton||
-|   bool|ShowFieldAsValueDropDown||
-|   bool|ShowFieldsTab||
-|   bool|ShowFieldValueCheckbox||
-|   bool|ShowFieldValueSummaryCheckbox||
-|   bool|ShowFilterFunctions||
-|   bool|ShowFilterLogic||
-|   bool|ShowFiltersInDashboards||
-|   bool|ShowFiltersInReportViewer||
-|   bool|ShowFiltersTab||
-|   bool|ShowFunctions||
-|   bool|ShowGaugePercentage||
-|   bool|ShowGaugeTab||
-|   bool|ShowGoButton||
+|   string|SavedReportsTable|Gets or sets the table name for saved reports. If DatabaseAdHocConfig is used, reports data will be saved in this table in the database. This setting does nothing if FileSystemAdHocConfig is used. By default, a table named "IzendaAdHocReports" is used.|
+|   string|SaveReportSetNextUrl|Gets or sets the URL of the page to which users will be redirected after saving reports. <br>*Note:The Report name will be automatically appended to the url as a parameter named "rn"*.|
+|   string|ScheduledReportsUrlFormatString|Gets or sets the url that is sent via email as the report web address when the user selects "link" in the scheduling control's "send email as" field. [[Report scheduling|/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler]] MUST be turned on for this to have an effect.|
+|   SchedulerOutputCollection|SchedulerOutputTypes|Gets or sets the value indicating the allowed formats for scheduling reports. This defines the contents of the "Send Email As" dropdown at the Misc tab in the ReportDesigner.|
+|   TimeSpan|SchemaCacheTimeout|Gets or sets how long the system should wait before giving up on caching the schema.|
+|   Unit|SelectValueDropDownWidth|Gets or sets the width of filter values dropdown. 
+This affects width of filtering value combobox, which appears at the Filters tab in the ReportDesigner when user selects Equals(Select) operator.|
+|   string|SettingsKey|Gets or sets a password used to access the settings page. It should be used in tandem with UserKey if you don't need multi-user security.|
+|   string|SettingsPageUrl|Gets or sets the URL of the Settings page.|
+|   string[]|SharedWithValues|This sets the users or roles available in the "Shared With" dropdown of the Misc tab in the Report Designer.|
+|   bool|ShowAddAll|Deprecated|
+|   bool|ShowAddFieldInReportViewer|Deprecated|
+|   bool|ShowAdminButton|Deprecated|
+|   bool|ShowAdvancedChartingButton|This checkbox enables/disables the advanced button from being shown in the Chart tab of Report Designer.|
+|   bool|ShowAllInPreview|Gets or sets a value indicating whether an "All" option should be displayed in the "Results per page" dropdown on the Report Preview.|
+|   bool|ShowAllInResults|Gets or sets a value indicating whether an "All" option should be displayed in the "Results per page" dropdown on the Report Viewer.|
+|   bool|ShowAllTables|Deprecated|
+|   bool|ShowArithmeticInSummary|Gets or sets the value indicating whether the "Arithmetic" options should be displayed in the Summary tab of the Report Designer.|
+|   bool|ShowArithmeticOperations|Gets or sets the value indicating whether the "Arithmetic" options should be displayed in the Fields tab of the Report Designer.|
+|   bool|ShowBackButton|Gets or sets whether to show a "Back" button on the Report Viewer & Report Designer toolbars.|
+|   bool|[[ShowBetweenDateCalendar|/API/CodeSamples/ShowBetweenDateCalendar]]|Gets or sets the value indicating whether calendar controls should be used for "Between" operation for DateTime filters. |
+|   bool|ShowBulkCSVButton|Deprecated|
+|   bool|ShowCategoryTextboxInSaveDialog|Gets or sets the value indicating whether the "Category" dropdown should be shown in the "save as" dialog for reports.|
+|   bool|ShowChartLegend|Get or sets the value controlling whether charts should show legends.|
+|   bool|ShowChartTab|This checkbox enables/disables the "Charts" tab from the Izenda Reports application report designer page.|
+|   bool|ShowClientEmailButton|Gets or sets the value controlling whether the "email report from client" button is shown on the Izenda Reports toolbar.|
+|   bool|ShowConstraintsSettings|Gets or sets the value indicating the "Constraints" tab is shown on the Settings page.|
+|   bool|ShowContinueLinks|Gets or sets the value indicating whether the "Continue to" buttons are displayed throughout the tabs of the Report Designer.|
+|   bool|ShowCSVButton|Gets or sets the value indicating whether the Export to CSV button is displayed on the Izenda Reports toolbar.|
+|   bool|ShowCustomFormatType|Gets or sets the value indicating whether the "Custom" format type should be shown in the "Formats" dropdown.|
+|   bool|ShowDashboardAddDropDown|Deprecated|
+|   bool|ShowDashboardFieldsTab|Gets or sets the value indicating whether the "Dasbhoard Fields" tab is displayed on the Report Designer.|
+|   bool|ShowDashboardPartViewerLinks|Gets or sets the value indicating whether the Dashboard Viewer will have "edit" links for it's reports.|
+|   bool|ShowDashboardSettings|Deprecated|
+|   bool|ShowDatabaseDiagramIcon|Gets or sets the value indicating whether the Database Diagram icon should be shown in the toolbar in the ReportDesigner.|
+|   bool|ShowDatabaseTypes|Gets or sets the value indicating whether database types should be shown in the Fields dropdown.
+|   bool|ShowDataSourcesAsCheckBoxes|Gets or sets the value indicating which mode of the Data Sources list is shown.|
+|   bool|ShowDataSourcesTab|Gets or sets whether the Data Sources tab is shown on the Report Designer.|
+|   bool|ShowDataWhenParametersBlank|Deprecated|
+|   bool|ShowDescriptionsInReportsTab|Deprecated|
+|   bool|ShowDesignDashboardLink|Gets or sets the value indicating whether the "New Dashboard" link should be shown in the Report list.|
+|   bool|ShowDesignLinkInReportViewer|Gets or sets the value indicating whether the "Design" button should be shown in the Report Viewer in the toolbar.|
+|   bool|ShowDesignLinks|Gets or sets a value indicating whether "Design" links should be shown in the Report list and in the toolbar.|
+|   bool|ShowDetailFormat|Deprecated|
+|   bool|ShowDistinct|Gets or sets the value indicating whether the "Distinct" checkbox should be shown on the Data Source tab in the Report Designer.|
+|   bool|ShowDOCButton|Gets or sets whether to show the Microsoft Word export button on the Report Viewer & Designer toolbar.|
+|   bool|ShowEtlButton|Gets or sets the value indicating whether the upload data button should be shown in the report viewer. |
+|   bool|ShowFieldAsValueDropDown|Gets or sets the value indicating whether the "(Field)" operators will display their "Value(s)" as textboxes or dropdown menus.|
+|   bool|ShowFieldsTab|Gets or sets the value indicating whether the fields tab should be shown on the Report Designer.|
+|   bool|ShowFieldValueCheckbox|Gets or sets the value indicating whether the "Show main report in Field/Value style" checkbox should be shown on the Style tab in the ReportDesigner.|
+|   bool|ShowFieldValueSummaryCheckbox|Gets or sets the value indicating whether the "Show summary report in Field/Value style" checkbox should be shown on the Style tab in the ReportDesigner.|
+|   bool|ShowFilterFunctions|Deprecated|
+|   bool|ShowFilterLogic|Gets or sets the value indicating whether the "Filter Logic" textbox should be shown in the Filters tab in the Report Designer.|
+|   bool|ShowFiltersInDashboards|Gets or sets the value indicating whether the "Filters" tab should be shown when viewing Dashboards.|
+|   bool|ShowFiltersInReportViewer|Gets or sets the value indicating whether the "Filters" tab should be shown in the Report Viewer.|
+|   bool|ShowFiltersTab|Gets or sets the value indicating whether the "Filters" tab should be shown in the Report Designer.|
+|   bool|ShowFunctions|Gets or sets whether "Functions" controls should be shown for "Fields" on the Fields and Summary tabs on the Report Designer.|
+|   bool|ShowGaugePercentage|Gets or sets the value indicating whether percentages should be shown on Gauges.|
+|   bool|ShowGaugeTab|Gets or sets the value indicating whether the Gauges tab will be shown on the Report Designer.|
+|   bool|ShowGoButton|Gets or sets whether the Go button is shown on the Izenda Reports toolbars.|
 |   bool|ShowGradientBackground||
-|   bool|ShowGroupInFunctionDropdown||
-|   bool|ShowGroupMonth||
-|   bool|ShowHelpButton||
-|   bool|ShowHtmlAsCode||
-|   bool|ShowInTimePeriod||
-|   bool|ShowInvertSummaryCheckbox||
-|   bool|ShowInvisible||
-|   bool|ShowJoinDropDown||
-|   bool|ShowJustification||
-|   bool|ShowLinkFormats||
-|   bool|ShowLoadingForDesigner||
-|   bool|ShowLoadingOnDesignerLoad||
-|   bool|ShowLogoInPdf||
-|   bool|ShowMapTab||
-|   bool|ShowMenuInReportViewer||
-|   bool|ShowMiscTab||
-|   bool|ShowModifyButton||
-|   bool|ShowMultiLineControls||
-|   bool|ShowNewButton||
-|   bool|ShowNonIndexedJoinFields||
-|   bool|ShowODTButton||
-|   bool|ShowOnlineDocumentation||
-|   bool|ShowOpenOfficeButton||
-|   bool|ShowPDFButton||
-|   bool|ShowPivot||
-|   bool|ShowPoweredByLogo||
-|   bool|ShowPreviewTab||
-|   bool|ShowPublishRdlButton||
+|   bool|ShowGroupInFunctionDropdown|Gets or sets the value indicating whether GROUP feature should be shown as a function at the Fields tab in the ReportDesigner.|
+|   bool|ShowGroupMonth|Deprecated|
+|   bool|ShowHelpButton|Gets or sets the value indicating whether the "HideHelpPanel" icon should be shown in the toolbar. |
+|   bool|ShowHtmlAsCode|Gets or sets whether fetching HTML code contained in database fields displays as HTML or plain text. |
+|   bool|ShowInTimePeriod|Gets or sets the value indicating whether "In Time Period" items are shown in operators dropdown on the Report Designer. |
+|   bool|ShowInvertSummaryCheckbox|Deprecated|
+|   bool|ShowInvisible|Deprecated|
+|   bool|ShowJoinDropDown|Gets or sets the value indicating whether the join type dropdown should be shown in the JoinedTablesList. |
+|   bool|ShowJustification|Gets or sets whether justification boxes are shown in the Report Designer.|
+|   bool|ShowLinkFormats|Deprecated|
+|   bool|ShowLoadingForDesigner|Deprecated|
+|   bool|ShowLoadingOnDesignerLoad|Deprecated|
+|   bool|ShowLogoInPdf|Deprecated|
+|   bool|ShowMapTab|Gets or sets the value indicating whether the Map tab should be shown in the Report Designer.|
+|   bool|ShowMenuInReportViewer|Deprecated|
+|   bool|ShowMiscTab|Gets or sets whether the Misc tab is displayed on the Report Designer page. |
+|   bool|ShowModifyButton|Deprecated|
+|   bool|ShowMultiLineControls|Gets or sets the value indicating whether the "Multi-Line" feature is enabled.|
+|   bool|ShowNewButton|Gets or sets whether the "New" button is shown on the Report Viewer for creating new reports.|
+|   bool|ShowNonIndexedJoinFields|Gets or sets the value indicating whether non-indexed join fields should be shown.|
+|   bool|ShowODTButton|Deprecated|
+|   bool|ShowOnlineDocumentation|Gets or sets the value indicating whether to show "Details" buttons in the settings page. |
+|   bool|ShowOpenOfficeButton|Gets or sets the value indicating whether the "OpenOffice" export button is shown. |
+|   bool|ShowPDFButton|Gets or sets the value indicating whether the "PDF" export button is shown.|
+|   bool|ShowPivot|Gets or sets whether to show the "Add Pivot" button on the Report Designer.|
+|   bool|ShowPoweredByLogo|Gets or sets whether to show the "Powered By Izenda" logo throughout the application.|
+|   bool|ShowPreviewTab|Gets or sets whether the "Preview" tab is shown in the Report Designer.|
+|   bool|ShowPublishRdlButton|Gets or sets whether to show the "RDL" button on the Report Designer toolbar.|
 |   bool|ShowRdlOutputIcon||
 |   bool|ShowRecentDatasources||
 |   bool|ShowRemoveAll||
