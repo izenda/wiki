@@ -15,14 +15,19 @@ Since version 6.0, Izenda Reports can expose existing SPs (Stored Procedures) in
 
 When SPs are detected in your MSSQL database, their names will appear in the list of available DataSources in the Report Designer. Currently, Izenda AdHoc supports only input parameters, while parameters of other types are ignored. Input parameters play the role of the columns that are used in the WHERE clause of the SELECT statement.
 To be suitable for AdHoc, SPs must return a standard SELECT statement. This will be treated as the result of a standard SELECT statement being performed on a table. The column names returned from the SP will be available as fields in your DataSource.
-Example of a SP:
+
+Example of a SP using the Northwind database:
 
 ```sql
-CREATE PROCEDURE GetContact @companyName varchar (250) AS
-	BEGIN 
-		SELECT ContactName, Phone FROM Customers 
-		WHERE CompanyName LIKE '%'   @companyName   '%' 
-	END        
+USE northwind;
+GO
+CREATE PROCEDURE GetContact
+	@companyName varchar(250)
+AS
+  SELECT ContactName, Phone 
+  FROM Customers 
+  WHERE CompanyName LIKE '%' + @companyName + '%';
+GO      
 ```
 
 <a name="SampleOutput"></a>Here we have a SP named "GetContact" that accepts one input parameter, the name of a company. It returns two columns; the customer's name, and a phone number. There is also a condition that the CompanyName must be similar to the input variable @companyName. If we will execute this SP in MSSQL 2005 using the Customers table from Northwind, we will get the following result:
@@ -117,7 +122,7 @@ public override string[] ProcessEqualsSelectList(Izenda.AdHoc.Database.Column co
 
 Once you have completed the steps above and access your web application, you may notice there are DataSources that have "(SP)" at the end of name. After the SP is selected as the DataSource, you may continue to the Fields tab. Once you do, you may notice that some of fields have "(Param)" after their names.
 
-These fields represent the input parameters of the SP, and can not be used as output fields. In our example above, we selected two fields: ContactName and Phone. These are the columns in the final SELECT statement of our SP (see [Creating SPs in MSSQL 2005 to use in Izenda Reports]().) The last thing that we need before executing our report is to set the value for the input parameter "companyName". This can be done at the Filters tab of the Report Designer.
+These fields represent the input parameters of the SP, and can not be used as output fields. In our example above, we selected two fields: ContactName and Phone. These are the columns in the final SELECT statement of our SP. The last thing that we need before executing our report is to set the value for the input parameter "companyName". This can be done at the Filters tab of the Report Designer.
 
 To assign values to parameters of your SP, you need to select the field from the previous step (the one with "(Param)" at the end of name), then select the "Equals" operator, and type in the value for the parameter. In our example, we used the name "Gourmet" as our filter value. Now the report can be saved and executed. If you were following along, then you should have a datatable with the data [described above](#SampleOutput).
 
