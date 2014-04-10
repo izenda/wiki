@@ -1,5 +1,7 @@
 #ShowBetweenDateCalendar
 
+[[_TOC_]]
+
 Gets or sets the value indicating whether calendar controls should be used for the "Between" operation for DateTime filters. 
 When enabled, the Between(Calendar) option appears in the Operator dropdown at the Filters tab in the ReportDesigner for DateTime fields. If it is disabled, the option "Between" without "(Calendar)" will be displayed instead. By default, the Between(Calendar) option uses short date notation(unable to specify a time of day) whereas the standard Between option will allow datetimes to be specified.
 
