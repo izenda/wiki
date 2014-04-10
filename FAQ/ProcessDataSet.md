@@ -1,5 +1,7 @@
 #ProcessDataSet()
 
+[[_TOC_]]
+
 ##Usage
 
 The ``ProcessDataSet`` method is useful when you want to use post-processing in your application. This method should be overridden in your global.asax file. 
