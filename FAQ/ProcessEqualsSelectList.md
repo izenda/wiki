@@ -2,7 +2,7 @@
 
 This code sample overrides the equals select drop-down used in the "Filter" tab and in the Report Viewer.
 
-Here is sample code that you can add to your global file:
+Here is sample code that you can add to your global.asax file:
 
 ```csharp
 public override string[] ProcessEqualsSelectList(Izenda.AdHoc.Database.Column column)
