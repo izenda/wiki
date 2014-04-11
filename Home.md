@@ -72,6 +72,7 @@ AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
 AdHocSettings.CurrentUserName = GetUserName();
 AdHocSettings.CurrentUserTenantId = GetTenantID();
 AdHocSettings.CurrentUserIsAdmin = (GetUserRole() == "Admin");
+AdHocSettings.CurrentUserRoles = new string[] {(string)HttpContext.Current.Session["Role"]};
 AdHocSettings.VisibleDataSources = new string[]  { "Products", "Orders", "Customers" }; 
 ```
 
@@ -87,9 +88,15 @@ if(AdHocSettings.CurrentUserIsAdmin)
 }
 else
 {
-	Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Products", "Orders", "Customers" };
-        Izenda.AdHoc.AdHocSettings.OutputTypes["sql"].ShowInToolbar = false; //Hides the SQL output icon on the toolbar for non-admins
-	Izenda.AdHoc.AdHocSettings.HiddenFilters["ShipCountry"] = GetUserCountry();
+    Izenda.AdHoc.AdHocSettings.HiddenFilters["ShipCountry"] = GetUserCountry(); //Hide data that the user isn't authorized to view
+    Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Products", "Orders", "Customers" }; //non-admins only see certain data sources
+    Izenda.AdHoc.AdHocSettings.OutputTypes["sql"].ShowInToolbar = false; //Hides the SQL output icon on the toolbar for non-admins
+    if(new List<string>(AdHocSettings.CurrentUserRoles).Contains("ReportViewer")) {
+        //Role based logic
+    }
+    else if (new List<string>(AdHocSettings.CurrentUserRoles).Contains("ReportDesigner")) {
+        //Role based logic
+    }
 }
 ```
 
