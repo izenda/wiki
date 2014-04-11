@@ -11,92 +11,99 @@ Please watch our ten minute integration video to see how to do a core integratio
 [![Izenda Core Integration Video](/Home/izenda_intro_video.png)](https://www.youtube.com/watch?v=2FXYG6sqKF0)
 
 ###Izenda Reports Quick Setup
-To integrate Izenda into your own website, you will first need a development environment, such as Visual Studio. Once you have a development environment, you can get our website template from [here](http://www.izenda.com/Site/DownloadComplete.aspx?msgId=0). Once you have followed the steps there, return here and find out more about how you can get started using Izenda Reports.
+To integrate Izenda into your own website, you will first need a development environment, such as Visual Studio. Once you have a development environment, you can get our website template from [[here|http://www.izenda.com/Site/DownloadComplete.aspx?msgId=0]]. Once you have followed the steps there, return here and find out more about how you can get started using Izenda Reports.
 
 ###[[Configuring Settings|Integration/Tutorials/Customizing-Izenda-Settings]]
 
-The Izenda Reports API contains specific settings that alter the behavior of the tool on a per-user basis. Settings can be applied through the Settings.aspx page or via a CustomAdHocConfig class which is normally found in the Global.asax file. Examples of important settings include the license key or the user name. 
+The Izenda Reports API contains specific settings that alter the behavior of the tool on a per-user basis. Settings can be applied through the Settings.aspx page or via a CustomAdHocConfig class. Your global.asax should contain a definition for this that inherits from either FileSystemAdHocConfig or DatabaseAdHocConfig. Examples of important settings include the [[license key|/API/CodeSamples/LicenseKey]], the [[connection string|/API/CodeSamples/SqlServerConnectionString]], and the [[user name|/API/CodeSamples/CurrentUserName]]. 
 
 ###[[Creating Views|Integration/Tutorials/Views]]
 
-Some databases contain complex field names that may be confusing to users. In these situations it may be necessary to create reporting views that simplify the data model for the user. Users can be limited to specific views using the "Visible DataSources" setting.
+Some databases contain complex field names that may be confusing to users. In these situations, it may be necessary to create Views that simplify the data model for the user. Users can be limited to specific views using the [[AdHocSettings.VisibleDataSources|/API/CodeSamples/VisibleDataSources]] setting.
 
 ###[[Applying Branding|Integration/Tutorials/Appearance]]
 
-There are a few different ways to apply your branding, logo or header controls to Izenda Reports. 
+There are a few different ways to apply your branding, logo, or header controls to Izenda Reports. 
 
-Header Image : The simplest way to apply your logo is to set the "Application Header Image Url" in the "CSS & Images" section of the configuration page or the ApplicationHeaderImageUrl setting. This can be done by navigating to Settings.aspx from a browser. 
+**Header Image** : The simplest way to apply your logo is to set the "Application Header Image Url" in the "CSS & Images" section of the Settings.aspx page. You can also do it in your global.asax by modifying the [[AdHocSettings.ApplicationHeaderImageUrl|/API/CodeSamples/ApplicationHeaderImageUrl]] setting. 
 
-Master Pages : If you already have an ASP.NET master page, you can apply it to ReportDesigner.aspx, ReportList.aspx, and ReportViewer.aspx. Be careful not to apply a master page or theme to the rs.aspx page as that may interfere with the reporting operation. 
+**Master Pages** : If you already have an ASP.NET master page, you can apply it to ReportDesigner.aspx, ReportList.aspx, and ReportViewer.aspx. Be careful not to apply a master page or theme to the rs.aspx page as that may interfere with the reporting operation. 
 
-IFRAMES or Frames : The Izenda reports pages may be placed inside an IFRAME or FRAME. This would need to be done for ReportDesigner.aspx, ReportList.aspx, and ReportViewer.aspx. 
+**IFRAMES or Frames** : The Izenda reports pages may be placed inside an IFRAME or FRAME. This would need to be done for ReportDesigner.aspx, ReportList.aspx, and ReportViewer.aspx. 
 
-###[[Building Core Reports]]
+###[[Building Core Reports|/FAQ/UserGuides]]
 
-The best way to deploy Izenda is to create a small set of base reports that user can then customize. Ideally initial reports should contain the most relevant data sources and fields. It may be beneficial to add summaries and charts to them as well. See the training section for details on how to create various types of reports. 
+The best way to deploy Izenda is to create a small set of base reports that users can then customize. Ideally initial reports should contain the most relevant data sources and fields. It may be beneficial to add summaries and charts to them as well. See the training section for details on how to create various types of reports. 
 
 ###[[Enforcing Security and User Limitations|Integration/Tutorials/Security]]
 
-The Izenda Reports platform includes a robust and flexible security model which inherits rich security credentials from your application. This example covers how to apply security for most common scenarios by using the ''PostLogin()'' to pass user credentials to the Izenda API. This method is normally found in the [CustomAdHocConfig](Integration/Tutorials/Adding-Code) class in the Global.asax file. 
+The Izenda Reports platform includes a robust and flexible security model which inherits rich security credentials from your application. This example covers how to apply security for most common scenarios by using the [[PostLogin()|/FAQ/PostLogin]] method to pass user credentials to the Izenda API. This method is normally found in the [[CustomAdHocConfig|Integration/Tutorials/Adding-Code]] class in the Global.asax file. 
 
-###Assumptions
+####Assumptions
 
-These will vary based on your application
+For demonstration purposes, we will be working with the following information:
 
-  * The username is stored in a session variable called "UserName"
-  * The users role is stored in a session variable called "Role" 
+* The username is stored in a session variable called "UserName"
+* The tenant ID is stored in a session variable called "TenantID"
+* The user's role is stored in a session variable called "Role"
+* The user's country name is stored in a session variable called "UserCountry"
+* The database contains tables and views with a field named "ClientID"
+* Reports will be created and saved to a category called "Admin Reports" 
+* A method named GetUserName() exists in global.asax that accesses the session variable "UserName"
+* A method named GetTenantID() exists in global.asax that accesses the session variable "TenantID"
+* A method named GetUserRole() exists in global.asax that accesses the session variable "Role"
+* A method named GetUserCountry() exists in global.asax that accesses the session variable "UserCountry"
 
-  * The database contains tables and views with a field named "ClientID"
-  * Reports will be created and saved to a category called "Admin Reports" 
-
-###Limitations Enforced
+####Limitations Enforced
 
   * The user is logged In
   * The user can only see records for their ClientID
-  * The user can only see certain data sources and will not see reports that require those data sources
+  * The user can only see certain data sources and will not see reports that require unauthorized data sources
   * Non-admins will not be able to overwrite reports
   * Non-admins will not see the "Admin Reports" and "Sensitive Reports" categories in their report list 
 
-*Basic Login Security - Place in the ``PostLogin()`` or ``InitializeReporting()`` method of ``CustomAdHocConfig`` which is normally found in **Global.asax**.*
+###Basic Login Scenario
+
+In this example, we will initialize some of the more common settings. This is done in the [[PostLogin()|/FAQ/PostLogin]] or [[InitializeReporting()|/FAQ/InitializeReporting]] method of your ``CustomAdHocConfig`` class that we discussed earlier.
 
 ``` c#
 //Pass User Credentials
 AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
 AdHocSettings.CurrentUserName = GetUserName();
 AdHocSettings.CurrentUserTenantId = GetTenantID();
-AdHocSettings.CurrentUserIsAdmin = true; 
+AdHocSettings.CurrentUserIsAdmin = (GetUserRole() == "Admin");
 AdHocSettings.VisibleDataSources = new string[]  { "Products", "Orders", "Customers" }; 
 ```
 
-*Multi-Role Scenario - Apply specific limitations to certain roles*
+###Multi-Role Scenario
+
+Now let's add some logic based on the user's role. In this example, we apply limitations based upon role
  
 ``` c#
-string role = GetUserRoleFromApp()
-if(role == "Admin")
+if(AdHocSettings.CurrentUserIsAdmin)
 {
 	Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Purchasing.Vendor", "Products", "Orders", "Order Details", "Customers" };
 }
 else
 {
 	Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Products", "Orders", "Customers" };
-	Izenda.AdHoc.AdHocSettings.CurrentUserIsAdmin = false;
 	Izenda.AdHoc.AdHocSettings.ShowSettingsButton = false;
-    Izenda.AdHoc.AdHocSettings.ShowSqlOutputIcon = false;
+        Izenda.AdHoc.AdHocSettings.ShowSqlOutputIcon = false;
 	Izenda.AdHoc.AdHocSettings.HiddenFilters["ShipCountry"] = GetUserCountry();
 }
 ```
 
-*The PostLogin() method needs to be called at the end of your authentication process after user credentials are added to the session.*
+***Note:** The [[PostLogin()|/FAQ/PostLogin]] method needs to be called manually at the end of your authentication process after user credentials are added to the session.*
 
 ``` c#
 // Call the Izenda PostLogin() from your login page after authentication is complete
 Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin(); 
 ```
 
-*Once security is fully configured, add the following code to [ConfigureSettings()](http://wiki.izenda.us/Adding-Code) method to prevent users from navigating to reports without logging in first.*
+*Once security is fully configured, add the following code to the [ConfigureSettings()](http://wiki.izenda.us/Adding-Code) method to prevent users from navigating to reports without logging in first.*
 
 ``` c# 
 // Require Login once security configured. 
-AdHocSettings.RequireLogin = false; 
+AdHocSettings.RequireLogin = true; 
 AdHocSettings.LoginUrl = "INSERT_YOUR_LOGIN_PAGE_HERE"; 
 ```
