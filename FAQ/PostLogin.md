@@ -10,16 +10,11 @@ This will enable you to run any user/role related code, before the global settin
 ```csharp
 public override void PostLogin()
   { 
-    if (userName == joe)
-      {
-        AdHocSettings.CurrentUserName = userName;
-        AdHocSettings.CurrentUserIsAdmin = false;
-        AdHocSettings.ShowSettingsButton = false;
-      }
-
+    AdHocSettings.CurrentUserName = HttpContext.Current.Session["UserName"];
+    AdHocSettings.CurrentUserIsAdmin = HttpContext.Current.Session["IsAdmin"];
+    if (AdHocSettings.CurrentUserIsAdmin)
+        AdHocSettings.ShowSettingsButton = true;
     else
-      {
-        AdHocSettings.CurrentUserIsAdmin = true;
-      }
+        AdHocSettings.ShowSettingsButton = false;
   }
 ```
