@@ -80,6 +80,7 @@ AdHocSettings.VisibleDataSources = new string[]  { "Products", "Orders", "Custom
 Now let's add some logic based on the user's role. In this example, we apply limitations based upon role
  
 ``` c#
+Izenda.AdHoc.AdHocSettings.ShowSettingsButtonForNonAdmins = false; //Hides the button that redirects to the settings page for non-admins
 if(AdHocSettings.CurrentUserIsAdmin)
 {
 	Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Purchasing.Vendor", "Products", "Orders", "Order Details", "Customers" };
@@ -87,8 +88,7 @@ if(AdHocSettings.CurrentUserIsAdmin)
 else
 {
 	Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Products", "Orders", "Customers" };
-	Izenda.AdHoc.AdHocSettings.ShowSettingsButton = false;
-        Izenda.AdHoc.AdHocSettings.ShowSqlOutputIcon = false;
+        Izenda.AdHoc.AdHocSettings.OutputTypes["sql"].ShowInToolbar = false; //Hides the SQL output icon on the toolbar for non-admins
 	Izenda.AdHoc.AdHocSettings.HiddenFilters["ShipCountry"] = GetUserCountry();
 }
 ```
@@ -103,7 +103,7 @@ Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin();
 *Once security is fully configured, add the following code to the [ConfigureSettings()](http://wiki.izenda.us/Adding-Code) method to prevent users from navigating to reports without logging in first.*
 
 ``` c# 
-// Require Login once security configured. 
+// Require Login once security is configured. 
 AdHocSettings.RequireLogin = true; 
 AdHocSettings.LoginUrl = "INSERT_YOUR_LOGIN_PAGE_HERE"; 
 ```
