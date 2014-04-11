@@ -10,6 +10,7 @@ This will enable you to run any user/role related code, before the global settin
 ```csharp
 public override void PostLogin()
   { 
+    //user was already authenticated by login.aspx so we just need to use the information from the session in our AdHoc reporting
     AdHocSettings.CurrentUserName = HttpContext.Current.Session["UserName"];
     AdHocSettings.CurrentUserIsAdmin = HttpContext.Current.Session["IsAdmin"];
     if (AdHocSettings.CurrentUserIsAdmin)
