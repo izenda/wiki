@@ -6,18 +6,6 @@
 
 Izenda reports includes a flexible API that can be configured to integrate with your application. This guide covers most of the basic elements that are needed to apply branding and security to the majority of applications. Before beginning make sure that Izenda Reports can properly connect to your database when setup as a stand-alone virtual directory. 
 
-<object width="1000" height="750" class="embeddedObject" id="scPlayer" data="http://content.screencast.com/users/IzendaReports/folders/Default/media/0c8cf8cf-8f81-4124-96b3-e5f60817e3e6/scplayer.swf" type="application/x-shockwave-flash" style="width: 600px; height: 450px;">
-	<param name="movie" value="http://content.screencast.com/users/IzendaReports/folders/Default/media/0c8cf8cf-8f81-4124-96b3-e5f60817e3e6/scplayer.swf">
-	<param name="quality" value="high">
-	<param name="bgcolor" value="#FFFFFF">
-	<param name="flashVars" value="thumb=http://content.screencast.com/users/IzendaReports/folders/Default/media/0c8cf8cf-8f81-4124-96b3-e5f60817e3e6/FirstFrame.jpg&amp;containerwidth=1000&amp;containerheight=750&amp;autohide=true&amp;autostart=false&amp;loop=false&amp;showendscreen=true&amp;showsearch=false&amp;showstartscreen=true&amp;tocdoc=left&amp;xmp=sc.xmp&amp;advseek=true&amp;content=http://content.screencast.com/users/IzendaReports/folders/Default/media/0c8cf8cf-8f81-4124-96b3-e5f60817e3e6/IntWithSound.mp4&amp;blurover=false">
-	<param name="allowFullScreen" value="true">
-	<param name="scale" value="showall">
-	<param name="allowScriptAccess" value="always">
-	<param name="base" value="http://content.screencast.com/users/IzendaReports/folders/Default/media/0c8cf8cf-8f81-4124-96b3-e5f60817e3e6/">
-	<iframe width="1000" height="750" class="embeddedObject" src="http://www.screencast.com/users/IzendaReports/folders/Default/media/0c8cf8cf-8f81-4124-96b3-e5f60817e3e6/embed" frameborder="0" scrolling="no" style="width: 600px; height: 450px; overflow: hidden;" type="text/html"></iframe>
-</object>
-
 ###Izenda Reports Quick Setup
 To integrate Izenda into your own website, you will first need a development environment, such as Visual Studio. Once you have a development environment, you can get our website template from [here](http://www.izenda.com/Site/DownloadComplete.aspx?msgId=0). Once you have followed the steps there, return here and find out more about how you can get started using Izenda Reports.
 
