@@ -1,5 +1,8 @@
 [[_TOC_]]
 
+# 6.7.0.264 (Release Pending)
+* Revert "FB-13269: Prevented showing report data without required filters values specified by user"
+
 # 6.7.0.263 (April 7, 2014)
 * FB-13494: Fix jQuery conflicts in the classic Asp.Net interface
 * FB-13490: Show "[FieldName] not found" text instead of exception when invalid field is used in the report Title, Description or Footer
