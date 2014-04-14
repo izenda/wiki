@@ -1,6 +1,6 @@
 [[_TOC_]]
 
-# 6.7.0.264 (Release Pending)
+# 6.7.0.264 (April 14, 2014)
 * FB-13579: Disable toolbar if no datasources are selected
 * FB-13592: Improved combine bottom mechanism for Pie chart
 * FB-13345: Fix issues with custom category separator - AdHocSettings.CategoryCharacter
