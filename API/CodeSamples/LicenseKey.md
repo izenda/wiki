@@ -34,7 +34,7 @@ Public Class CustomAdHocConfig
 
     Shared Sub InitializeReporting()
         'Check to see if we've already initialized
-        If HttpContext.Current.Session = Nothing OrElse HttpContext.Current.Session("ReportingInitialized") IsNot Nothing Then
+        If HttpContext.Current.Session Is Nothing OrElse HttpContext.Current.Session("ReportingInitialized") IsNot Nothing Then
             Return
         'Initialize System
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
