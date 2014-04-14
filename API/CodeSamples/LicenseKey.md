@@ -38,6 +38,7 @@ Public Class CustomAdHocConfig
             Return
         'Initialize System
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
+        AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
         HttpContext.Current.Session("ReortingInitialized") = True
     End Sub
