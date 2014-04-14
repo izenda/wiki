@@ -385,6 +385,6 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   bool|UseReportID|Gets or sets whether the application uses a GUID instead of the report name in the query string.|
 |   bool|ValidateBeforeSave|Gets or sets the value indicating whether ReportSet should be validated before saving.|
 |   bool|ViewsOnly|ViewsOnly should be used if you would like all views visible and only views visible at the Data Sources tab. |
-|   string[]|VisibleDataSources|Gets or sets the array of table names that should be shown in the tables dropdown in the ReportDesigner on the Data Sources tab.|
+|   string[]|[[VisibleDataSources|/API/CodeSamples/VisibleDataSources]]|Gets or sets the array of table names that should be shown in the tables dropdown in the ReportDesigner on the Data Sources tab.|
 |   string[]|VisibleTables|Deprecated. Use VisibleDataSources instead.|
 |   VisualGroupStyle|VisualGroupStyle|Deprecated|
