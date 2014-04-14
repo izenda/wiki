@@ -2,6 +2,8 @@
 
 The SqlServerconnectionString is what Izenda AdHoc uses to initialize an MSSQL connection. This will do all the heavy lifting for including tables, functions, and stored procedures. It will also build queries utilizing the Izenda MSSQLDriver. 
 
+Below is a sample global.asax using the SqlServerConnectionString setting. The code block will appear within ``<script runat="server"> </script>`` tags within global.asax.
+
 ##Global.asax (C♯)
 ```c#
 
