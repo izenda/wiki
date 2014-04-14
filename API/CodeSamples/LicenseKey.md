@@ -30,7 +30,7 @@ public static void InitializeReporting() {
 
 'main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
 Public Class CustomAdHocConfig
-Inherits Izenda.AdHoc.DatabaseAdHocConfig
+    Inherits Izenda.AdHoc.DatabaseAdHocConfig
 
     Shared Sub InitializeReporting()
         'Check to see if we've already initialized
