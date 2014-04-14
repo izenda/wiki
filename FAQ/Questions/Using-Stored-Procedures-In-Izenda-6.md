@@ -36,7 +36,7 @@ GO
  
 ***Figure 1.** Results of sample SP execution in MSSQL 2005.*
 
-##Using SPs in your application
+##Making SPs visible in Izenda Reports
 
 In order to utilize SPs, we will need to setup database mode first in Global.asax.
 
@@ -74,9 +74,9 @@ public class CustomAdHocConfig : DatabaseAdHocConfig
 }
 ```
 
-##Making SPs visible in Izenda Reports
+When using SPs, use the [[VisibleTables|/API/CodeSamples/VisibleTables]] setting to contain the all the SPs, tables, and views that should be available as DataSources. Each of the strings in this list must exactly mirror the name of the SP, table, or view as it appears in your data source.
 
-The VisibleTables property must contain the exact names of all SPs that should be available as DataSources. **Caveat:** when the VisibleTables property is empty, all tables are visible by default, while all SP are hidden. If VisibleTables contains any names, then all tables not included in VisibleTables will become hidden. To use them, they must also be included in VisibleTables to be used together with SPs. In this code example, the table "DummyTable" is added to VisibleTables along with our SP to make it visible.
+**Caveat:** when the VisibleTables property is empty, all tables are visible by default, while all SP are hidden. If VisibleTables contains any names, then all tables not included in VisibleTables will become hidden. To use them, they must also be included in VisibleTables to be used together with SPs. In this code example, the table "DummyTable" is added to VisibleTables along with our SP to make it visible.
 
 ##Adding code for filtering the Equals(Select) drop-down.
 
