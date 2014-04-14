@@ -11,7 +11,7 @@ Since version 6.0, Izenda Reports can expose existing SPs (Stored Procedures) in
 * IMPORTANT- Filtering the Equals select drop-down
 * Building the report
 
-###Creating SPs in MSSQL 2005 to use in Izenda Reports
+##Creating SPs in MSSQL 2005 to use in Izenda Reports
 
 When SPs are detected in your MSSQL database, their names will appear in the list of available DataSources in the Report Designer. Currently, Izenda AdHoc supports only input parameters, while parameters of other types are ignored. Input parameters play the role of the columns that are used in the WHERE clause of the SELECT statement.
 To be suitable for AdHoc, SPs must return a standard SELECT statement. This will be treated as the result of a standard SELECT statement being performed on a table. The column names returned from the SP will be available as fields in your DataSource.
@@ -36,11 +36,11 @@ GO
  
 ***Figure 1.** Results of sample SP execution in MSSQL 2005.*
 
-###Using SPs in your application
+##Using SPs in your application
 
 In order to utilize SPs, we will need to setup database mode first in Global.asax.
 
-####MVC applications
+###MVC applications
 
 ```csharp
 void Session_Start(object sender, EventArgs e)
@@ -57,7 +57,7 @@ public class CustomAdHocConfig : DatabaseAdHocConfig
 }
 ```
 
-####Standard method
+###Standard method
 
 ```csharp
 [Serializable]
@@ -74,11 +74,11 @@ public class CustomAdHocConfig : DatabaseAdHocConfig
 }
 ```
 
-###Making SPs visible in Izenda Reports
+##Making SPs visible in Izenda Reports
 
 The VisibleTables property must contain the exact names of all SPs that should be available as DataSources. **Caveat:** when the VisibleTables property is empty, all tables are visible by default, while all SP are hidden. If VisibleTables contains any names, then all tables not included in VisibleTables will become hidden. To use them, they must also be included in VisibleTables to be used together with SPs. In this code example, the table "DummyTable" is added to VisibleTables along with our SP to make it visible.
 
-###Adding code for filtering the Equals(Select) drop-down.
+##Adding code for filtering the Equals(Select) drop-down.
 
 Stored procedures generate sql for you and override the default queries created by Izenda Reports. Hence, the Equals(Select) drop-down will not be properly filtered because the stored procedure will not reflect the filter. In order to do this, you must populate the drop-down yourself using the "ProcessEqualsSelect" method. 
 
@@ -114,7 +114,7 @@ public override string[] ProcessEqualsSelectList(Izenda.AdHoc.Database.Column co
 }
 ```
 
-###Building a report using SPs as the DataSource
+##Building a report using SPs as the DataSource
 
 Once you have completed the steps above and access your web application, you may notice there are DataSources that have "(SP)" at the end of name. After the SP is selected as the DataSource, you may continue to the Fields tab. Once you do, you may notice that some of fields have "(Param)" after their names.
 
@@ -122,7 +122,60 @@ These fields represent the input parameters of the SP, and can not be used as ou
 
 To assign values to parameters of your SP, you need to select the field from the previous step (the one with "(Param)" at the end of name), then select the "Equals" operator, and type in the value for the parameter. In our example, we used the name "Gourmet" as our filter value. Now the report can be saved and executed. If you were following along, then you should have a datatable with the data [described above](#SampleOutput).
 
- 
-Figure 5. Results of executing report, using "GetContact" SP as DataSource.
 
-Using Equals(...) filters operator with Stored Procedures
+##Using the Equals(...) operator with SPs
+
+Within the Izenda Report Designer are filter options that allow you to select a value from a list instead of typing the value directly. When only using table names as data sources, these work just fine. You just select the field name and AdHoc fetches all values for that field from the data source in the database, groups them, and pulls them into the dropdown control. If SPs are used as data sources, this becomes a bit more complex. This is due to a couple of factors: 
+
+* **Input parameters:** These are denoted with (Param) beside their names and must satisfy the SP's requirements for input. (i.e. having two required input parameters means using two filters whenever the SP is used) **Input parameters can NOT be used with the Equals(...) operator as their possible values cannot be determined.**
+* **Output Fields:** These are the fields returned by the SP. Izenda detects what valid values can be selected with the given input parameters. **The list of output values can ONLY be built when all input parameters have defined values.**
+
+In other words, you can only get a list of values for the **output fields** when values for all **input parameters** have been defined.
+
+We will demonstrate how this works using the **SalesByCategory** SP in the **Northwind** database. To see this Stored Procedure in the data sources list, you need following line of code in your Global.asax:
+
+```csharp
+    AdHocSettings.VisibleDataSources = new string[] {"SalesByCategory"};
+```
+
+Also, you need to set the [[AllowEqualsSelectForStoredProcedures|/API/CodeSamples/AllowEqualsSelectForStoredProcedures]] setting to true to allow usage of the Equals(...) operators for Stored Procedures. After this, you will be able to select SalesByCategory as data source, and select Equals(...) operators for its fields. Once you have done so, you should be able to see the below fields available in your "Fields" dropdown on the ReportDesigner.
+
+![Fig. 1: SalesByCategory](http://www.izenda.com/Site/KB/Uploads/Images/dhj3phkc_174gmzpr5fj_b.png)
+
+**CategoryName** and **OrdYear** are input parameters (denoted with **(Param)**) whereas **ProductName** and **TotalPurchase** are output fields. After clicking on the "Filters" tab, we can set pre-defined values for our input parameters using a standard Equals operator, since they will be passed to our SP instead of being used in the query. After doing so, we can use the Equals(...) operators with our output fields. Below, we have used the values "Beverages" and "1997" for our input parameters.
+
+![Fig. 2: Filters Using SPs]()
+
+After this, you can get a list of predefined values for any output fields using the Equals(...) operators. Below, we have selected the **Equals (Multiple)** and **Equals (Select)**
+
+![Fig. 3: Output Fields With SPs]()
+
+Note that if you change the values of your **input parameters**, the output possibilities will also change. This is because the output fields depend on the input data. For instance, if we change the values that query our Northwinds database to "Meat/Poultry" and "1998", our output will change.
+
+![Fig. 4: Output Fields Changed]()
+
+##Using ProcessEqualsSelectList
+
+From the example above, you can see that it is required to specify all stored procedure parameters. But if you don't want to specify parameters every time, you can pre-define them by overriding the ProcessEqualsSelectList() method in your [[AdHocConfig|/Integration/Tutorials/Customizing-Izenda-Settings]] class. 
+The example below will give the same results as if you had specified the values as "Beverages" and "1998" above.
+
+```csharp
+public override string[] ProcessEqualsSelectList(Izenda.AdHoc.Database.Column column)
+{
+	if (column.Name == "ProductName")
+	{
+		string sql = @"EXEC SalesByCategory 'Beverages', '1998'";
+		DataSet res = Izenda.AdHoc.AdHocContext.Driver.GetDataSet(Izenda.AdHoc.AdHocContext.Driver.CreateCommand(sql));
+		List results = new List();
+		foreach (DataRow row in res.Tables[0].Rows)
+			results.Add(row.ItemArray[0].ToString());
+
+		return results.ToArray();
+	}
+	return base.ProcessEqualsSelectList(column);
+}
+```
+
+Now you can just select **ProductName** and apply the **Equals(Select)** filter to it:
+
+![Fig. 5: Using ProcessEqualsSelectList results]()
