@@ -10,6 +10,8 @@ Default value: true
 Below is a sample global.asax using the ShowBetweenDateCalendar setting. The code block will appear within ``<script runat="server"> </script>`` tags within global.asax.
 
 ##C♯
+
+```csharp
 //main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
 public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
 {
