@@ -12,15 +12,15 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
 {
   // Configure settings
   // Add custom settings after setting the license key and connection string by overriding the ConfigureSettings() method
-public static void InitializeReporting() {
+  public static void InitializeReporting() {
     //Check to see if we've already initialized.
     if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
-        return;
+      return;
     AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
     HttpContext.Current.Session["ReportingInitialized"] = true;
-}
+  }
 }
 ```
 
