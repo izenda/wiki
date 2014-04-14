@@ -43,28 +43,28 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
 ##Global.asax (VB.NET)
 
 ```visualbasic
-        ' Configure settings
-        ' Add Custom Setting below license key and connection string setting
-        Public Overrides Sub ConfigureSettings()
-            AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
-            'AdHocSettings.VisibleTables = New String() { "VIEW1", "TABLE2" }
-            AdHocSettings.ShowBetweenDateCalendar = True
+'main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
+Public Class CustomAdHocConfig
+    Inherits Izenda.AdHoc.DatabaseAdHocConfig
 
-        End Sub
-        
-        ' Control what reports are visible for the current user
-        Public Overrides Function ListReports() As Izenda.AdHoc.ReportInfo()
-            Return MyBase.ListReports
-        End Function
+    'Configure settings
+    'Add custom settings after setting the license key and connection string by overriding the ConfigureSettings() method
+    Shared Sub InitializeReporting()
+        'Check to see if we've already initialized.
+        If HttpContext.Current.Session Is Nothing OrElse HttpContext.Current.Session("ReportingInitialized") IsNot Nothing Then
+            Return
+        'Initialize System
+        AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
+        AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
+        Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
+        HttpContext.Current.Session("ReortingInitialized") = True
+    End Sub
 
-        ' Customize a report on the fly prior to execution on a per user basis
-        Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportSet)
-        
-        End Sub
-
-    End Class
-
-</script>
+    'Add custom settings below
+    Public Overrides Sub ConfigureSettings()
+        AdHocSettings.ShowBetweenDateCalendar = True
+    End Sub
+End Class
 ```
 
 ##Screenshots
