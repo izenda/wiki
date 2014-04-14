@@ -4,7 +4,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 
 |Datatype|Setting name|Setting description|
 |:-------|:----------:|:-----------------:|  
-|   string|AddAllFilterRegex|This setting allows the user to use a regular expression to filter certain fields from being added through the "Add All" button (the "Add All" button can be turned on in the features tab of the settings guide and is added in the fields section of report designer). An example of when this may be used is if you don't want social security numbers added to reports you could add part of the name of that field to the regular expression.|
+|   string|[[AddAllFilterRegex|/API/CodeSamples/AddAllFilterRegex]]||
 |   Dictionary<string,double>|AdditionalTimeZones ||
 |   AdHocConfig|AdHocConfig|Gets or sets the current AdHocConfig - Ad Hoc configuration.|
 |   string|AdHocUserKey|A single password limiting access to the report designer, report list and report viewer. This is for projects that do not need multi-user security.|
