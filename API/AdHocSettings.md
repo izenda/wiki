@@ -4,10 +4,10 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 
 |Datatype|Setting name|Setting description|
 |:-------|:----------:|:-----------------:|  
-|   string|[[AddAllFilterRegex|/API/CodeSamples/AddAllFilterRegex]]||
+|   string|[[AddAllFilterRegex|/API/CodeSamples/AddAllFilterRegex]]|Gets or sets a regular expression to filter data source fields that can be added with the "Add All" button.|
 |   Dictionary<string,double>|AdditionalTimeZones ||
-|   AdHocConfig|AdHocConfig|Gets or sets the current AdHocConfig - Ad Hoc configuration.|
-|   string|AdHocUserKey|A single password limiting access to the report designer, report list and report viewer. This is for projects that do not need multi-user security.|
+|   AdHocConfig|[[AdHocConfig|/Integration/Tutorials/Customizing-Izenda-Settings]]|Gets or sets the current Ad Hoc configuration.|
+|   string|[[AdHocUserKey|/API/CodeSamples/AdHocUserKey]]|Gets or sets the password limiting access to the report designer, report list, and report viewer. This is for projects that do not need multi-user security.|
 |   AggregateFunctionCollection|AggregateFunctions||
 |   bool|AllowAnalysisGrid|Gets or sets the value indicating whether it is allowed analysis grid. The option appears in the Visual Group Style combobox at the Style tab in the ReportDesigner.|
 |   bool|AllowArchivedReportTableCreation|Gets or sets the value indicating whether it is allowed to create the database table that contains archived reports if there is no such table in the database. If set, AdHoc checks if table in database for keeping reportsets exists, and creates it if necessary.|
