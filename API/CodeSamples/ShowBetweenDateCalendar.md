@@ -7,16 +7,9 @@ When enabled, the Between(Calendar) option appears in the Operator dropdown at t
 
 Default value: true
 
-Below is a sample global.asax using the ShowBetweenDateCalendar setting. The code block will appear within ``<script> </script>`` tags within global.asax.
+Below is a sample global.asax using the ShowBetweenDateCalendar setting. The code block will appear within ``<script runat="server"> </script>`` tags within global.asax.
 
 ##C♯
-
-```csharp
-<%@ Application Language="C#" %>
-<%@ Import Namespace="Izenda.AdHoc" %>
-
-<script runat="server">
-
 //main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
 public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
 {
