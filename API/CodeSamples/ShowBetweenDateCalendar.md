@@ -7,7 +7,7 @@ When enabled, the Between(Calendar) option appears in the Operator dropdown at t
 
 Default value: true
 
-Below is a sample global.asax using the ShowBetweenDateCalendar setting.
+Below is a sample global.asax using the ShowBetweenDateCalendar setting. The code block will appear within ``<script> </script>`` tags within global.asax.
 
 ##C♯
 
