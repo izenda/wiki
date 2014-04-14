@@ -47,7 +47,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
     public override void PostLogin() {
         // Call Izenda.AdHoc.AdHocSettngs.AdHocConfig.PostLogin() from your login
         // page after authentication is successful
-        AdHocSettings.CurrentUserName = (string)HttpContext.Current.Session[""UserName"]; //Assumes the authenticated username is stored in a session variable
+        AdHocSettings.CurrentUserName = (string)HttpContext.Current.Session["UserName"]; //Assumes the authenticated username is stored in a session variable
         AdHocSettings.CurrentUserIsAdmin = (bool)HttpContext.Current.Session["IsAdmin"]; //Assumes the authenticated user's admin status is stored in a session variable
         AdHocSettings.ShowSettingsButton = AdHocSettings.CurrentUserIsAdmin;
         AdHocSettings.VisibleDataSources = GetUserDataSources();
