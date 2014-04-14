@@ -2,7 +2,7 @@
 
 # 6.7.0.264 (Release Pending)
 * Revert "FB-13269: Prevented showing report data without required filters values specified by user"
-* FB-13579: Diable toolbar if no datasources are selected
+* FB-13579: Disable toolbar if no datasources are selected
 * FB-13592: Improved combine bottom mechanism for Pie chart
 * FB-13345: Fix issues with custom category separator - AdHocSettings.CategoryCharacter
 * FB-13590: Allow to use Formats in Charts for Date and DateTime fields + allow to use custom formats
