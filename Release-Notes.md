@@ -25,7 +25,7 @@
 * FB-13483: Removed obsolete attribute from ShowSqlOutputButton setings
 * FB-12823: Added possibility to control Filter dropdown content on a per-column basis
 * FB-13329: Add ability to set custom colors for all html chart types
-* FB-13439: Remain scroll position in the Equals(Checkboxes) filter when filters refreshed. Do not send ajax redundant calls for the last or single filter in the Report Viewer
+* FB-13439: Keep scroll position in the Equals(Checkboxes) filter when filters are refreshed. Do not send ajax redundant calls for the last or single filter in the Report Viewer
 * FB-13507: ListReports cache implementation
 * Revert "FB-13269: Prevented showing report data without required filters values specified by user"
 
