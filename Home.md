@@ -1,4 +1,4 @@
-#Getting Started With Izenda
+#Izenda Wiki
 
 [[_TOC_]]
 
