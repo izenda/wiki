@@ -12,45 +12,46 @@ Izenda Reports can be integrated with the navigation, security, and appearance o
 <%@ Application Language="C#" %>
 <%@ Import Namespace="Izenda.AdHoc" %>
 <script runat="server">
-    
-void Session_Start(object sender, EventArgs e) 
-{
-	// set license key and connection string
-	Izenda.AdHoc.AdHocSettings.LicenseKey = "IzendaReports|Corporate|XXXXXXXXXXXX";
-	Izenda.AdHoc.AdHocSettings.SqlServerConnectionString = "server=localhost;Database=Database1;Trusted_Connection=True";
-	//initialize a new custom configuration 
-	Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-}
 
 [Serializable]
 public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
 {
-	public override void ConfigureSettings()
-	{
-	//Add custom global settings
-	}
+    //the method to be called by each of your reporting web pages in the OnPreInit() method. This will instantiate Izenda reports throughout your reporting application.
+    public static void InitializeReporting() {
+        //Check to see if we've already initialized.
+        if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+            return;
+        AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
+        //Creates a connection to Microsoft SQL Server
+        AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
+        Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+        HttpContext.Current.Session["ReportingInitialized"] = true;
+    }
 
-	public override void PreExecuteReportSet(Izenda.AdHoc.ReportSet reportSet)
-	{
-	// Add hidden filters before the report is displayed     
-	}
+    // Configure settings
+    // Add custom settings after setting the license key and connection string
+    public override void ConfigureSettings() {
+        //Add custom settings here
+    }
+    
+    // Dynamically modify the report before execution. 
+    public override void PreExecuteReportSet(Izenda.AdHoc.ReportSet reportSet) {
+        // Add custom logic to run before the report is displayed     
+    }
 	
-	public override void PostLogin()
-	{
-		// Call Izenda.AdHoc.AdHocSettngs.AdHocConfig.PostLogin() from your login
-		// page after authentication is successful
-               
-		if (userName == joe)
-		{
-			AdHocSettings.CurrentUserName = userName;
-			AdHocSettings.CurrentUserIsAdmin = false;
-			AdHocSettings.ShowSettingsButton = false;
-		}
-		else
-		{
-			AdHocSettings.CurrentUserIsAdmin = true; 
-		}
-	}
+    // Dynamically modify the results after they come back 
+    // from the database and before they are rendered
+    public override void ProcessDataSet(System.Data.DataSet ds, string reportPart) {
+        // Add custom logic to modify specific areas of the report
+    }
+    public override void PostLogin() {
+        // Call Izenda.AdHoc.AdHocSettngs.AdHocConfig.PostLogin() from your login
+        // page after authentication is successful
+        AdHocSettings.CurrentUserName = (string)HttpContext.Current.Session[""UserName"]; //Assumes the authenticated username is stored in a session variable
+        AdHocSettings.CurrentUserIsAdmin = (bool)HttpContext.Current.Session["IsAdmin"]; //Assumes the authenticated user's admin status is stored in a session variable
+        AdHocSettings.ShowSettingsButton = AdHocSettings.CurrentUserIsAdmin;
+        AdHocSettings.VisibleDataSources = GetUserDataSources();
+    }
 }
 </script>
 ```
