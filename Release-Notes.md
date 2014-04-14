@@ -1,7 +1,6 @@
 [[_TOC_]]
 
 # 6.7.0.264 (Release Pending)
-* Revert "FB-13269: Prevented showing report data without required filters values specified by user"
 * FB-13579: Disable toolbar if no datasources are selected
 * FB-13592: Improved combine bottom mechanism for Pie chart
 * FB-13345: Fix issues with custom category separator - AdHocSettings.CategoryCharacter
@@ -26,9 +25,9 @@
 * FB-13483: Removed obsolete attribute from ShowSqlOutputButton setings
 * FB-12823: Added possibility to control Filter dropdown content on a per-column basis
 * FB-13329: Add ability to set custom colors for all html chart types
-* Revert "FB-13269: Prevented showing report data without required filters values specified by user"
 * FB-13439: Remain scroll position in the Equals(Checkboxes) filter when filters refreshed. Do not send ajax redundant calls for the last or single filter in the Report Viewer
 * FB-13507: ListReports cache implementation
+* Revert "FB-13269: Prevented showing report data without required filters values specified by user"
 
 # 6.7.0.263 (April 7, 2014)
 * FB-13494: Fix jQuery conflicts in the classic Asp.Net interface
