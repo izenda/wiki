@@ -56,3 +56,8 @@ Public Class CustomAdHocConfig
     End Sub
 End Class
 ```
+
+##Screenshots
+
+**With AdHocUserKey set to a value**
+![AdHocUserKey](/API/CodeSamples/AdHocUserKey/ad_hoc_user_key.png)
