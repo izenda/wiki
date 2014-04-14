@@ -29,6 +29,10 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
   }
 }
 ```
+
+##Global.asax (VB.NET)
+
+```visualbasic
 'main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
 Public Class CustomAdHocConfig
     Inherits Izenda.AdHoc.DatabaseAdHocConfig
@@ -51,4 +55,4 @@ Public Class CustomAdHocConfig
         AdHocSettings.AdHocUserKey = "userkey"
     End Sub
 End Class
-##
+```
