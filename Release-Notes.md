@@ -17,10 +17,10 @@
 * FB-13561: Copy all Filter properties (Like Operator, OrIsBlank, etc.) from the master-report to the sub-report in Forms
 * FB-13329: Improved custom color setting for highcharts
 * FB-13486: Added data source categories sort for instant report page.
-* FB-13515: Fixed problems with changing between Calendar to any other filter type in reportViewer
-* FB-13532: Hide Datepicker dialog when filer on refresh so there are no conflicts between old dialog and newly created dialog
+* FB-13515: Fixed problems with changing between Calendar to other date filter types in reportViewer
+* FB-13532: Hide Datepicker dialog when filtering on refresh so there are no conflicts between the old and new dialog
 * FB-13386: Fixed browser slowdowns by fixing in JS code calendar z-order at the moment of its appearing, instead of repeating calls of function which did the same
-* FB-13291: report title and description not showing when part param exists
+* FB-13291: Fixed report title and description not showing when part param exists
 * FB-13504: Fix wrong colors for stacked bar chart
 * FB-13483: Removed obsolete attribute from ShowSqlOutputButton setings
 * FB-12823: Add ability to control Filter dropdown content on a per-column basis
