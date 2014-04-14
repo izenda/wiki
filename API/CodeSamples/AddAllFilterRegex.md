@@ -4,6 +4,8 @@
 
 This setting allows the user to use a regular expression to filter certain fields from being added through the "Add All" button (the "Add All" button can be turned on in the features tab of the settings guide and is added in the fields section of report designer). An example of when this may be used is if you don't want social security numbers added to reports you could add part of the name of that field to the regular expression.
 
+Below is a sample global.asax using the AddAllFilterRegex setting. The code block will appear within ``<script runat="server"> </script>`` tags within global.asax.
+
 ##Global.asax (C♯)
 ```csharp
 //main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
