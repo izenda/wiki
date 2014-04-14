@@ -25,6 +25,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     AdHocSettings.AddAllFilterRegex = "(id|guid)$";
   }
 }
+```
 
 ##Global.asax (VB.NET)
 
