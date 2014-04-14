@@ -17,56 +17,32 @@ Below is a sample global.asax using the ShowBetweenDateCalendar setting.
 
 <script runat="server">
 
-    void Session_Start(object sender, EventArgs e) 
-    {
-        AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
-        Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    }
+//main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
+public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
+{
+  // Configure settings
+  // Add custom settings after setting the license key and connection string by overriding the ConfigureSettings() method
+  public static void InitializeReporting() {
+    //Check to see if we've already initialized.
+    if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+      return;
+    AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
+    //Creates a connection to Microsoft SQL Server
+    AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
+    Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+    HttpContext.Current.Session["ReportingInitialized"] = true;
+  }
 
-    public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
-    {
-        // Configure settings
-        // Add Custom Setting below license key and connection string setting
-        public override void ConfigureSettings()
-        {
-            AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
-            //AdHocSettings.VisibleTables = new string[] { "VIEW1", "TABLE2" };
-            AdHocSettings.ShowBetweenDateCalendar = true;
-
-        }
-
-        // Control what reports are visible for the current user
-        public override Izenda.AdHoc.ReportInfo[] ListReports()
-        {
-            return base.ListReports();
-        }
-
-        // Customize a report on the fly prior to execution on a per user basis
-        public override void PreExecuteReportSet(Izenda.AdHoc.ReportSet reportSet)
-        {
-            
-        }
-
-    }
-</script>
+  //Add custom settings below
+  public override void ConfigureSettings() {
+    AdHocSettings.ShowBetweenDateCalendar = true;
+  }
+}
 ```
 
-##VB.NET
+##Global.asax (VB.NET)
 
 ```visualbasic
-<%@ Application Language="VB" %>
-<%@ Import Namespace="Izenda.AdHoc" %>
-
-<script runat="server">
-
-    Sub Session_Start(ByVal sender As Object, ByVal e As EventArgs)
-        AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
-        Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
-    End Sub
-    
-    Public Class CustomAdHocConfig
-        Inherits Izenda.AdHoc.DatabaseAdHocConfig
-        
         ' Configure settings
         ' Add Custom Setting below license key and connection string setting
         Public Overrides Sub ConfigureSettings()
@@ -93,10 +69,10 @@ Below is a sample global.asax using the ShowBetweenDateCalendar setting.
 
 ##Screenshots
 
-###AdHocSettings.ShowBetweenDateCalendar = true
+**AdHocSettings.ShowBetweenDateCalendar = true**
 
 ![ShowBetweenDateCalendar=true](http://wiki.izenda.us/API/CodeSamples/ShowBetweenDateCalendar/between_date_calendar.png)
 
-###AdHocSettings.ShowBetweenDateCalendar = false
+**AdHocSettings.ShowBetweenDateCalendar = false**
 
 ![ShowBetweenDateCalendar=false](http://wiki.izenda.us/API/CodeSamples/ShowBetweenDateCalendar/between_date_no_calendar.png)
