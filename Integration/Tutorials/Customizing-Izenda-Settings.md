@@ -29,7 +29,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
     }
 
     // Configure settings
-    // Add custom settings after setting the license key and connection string
+    // Add custom global settings after setting the license key and connection string
     public override void ConfigureSettings() {
         //Add custom settings here
     }
@@ -58,20 +58,21 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
 
 For more a more detailed code sample, click any of the headings.
 
-  * Session_Start() **The license key must be first!** Then add the connection string and initialize your custom AdHocConfig.
+  * InitializeReporting() **The license key must be first!** Then add the connection string and initialize your custom AdHocConfig.
   * ConfigureSettings() Add global settings here. Global settings will affect all users and any settings made here will override the settings.aspx page.
   * PostLogin() Add per-user code here, such as setting the username and other per-user settings.
-  * PreExecuteReportSet() Add hidden filters and other code which needs to run before the report is displayed to the user.
+  * PreExecuteReportSet() Add hidden filters and other code that needs to run before the report is displayed to the user.
 
 ##How do I add custom code?
 
-To enable a custom configuration, we must put the key and connection string in the ``Session_Start()`` method, even though they have already been set in the **Settings.aspx** page. Otherwise, the Izenda Reports application will ignore the ``Configure_Settings()`` method completely and only use the settings set in the **settings.aspx** page. To enable custom code: 
+To enable a custom configuration, we must put the key and connection string in the ``InitializeReporting()`` method, even if they have already been set on the **Settings.aspx** page. Otherwise, the Izenda Reports application will ignore the ``ConfigureSettings()`` method completely and only use the settings set in the **settings.aspx** page. To enable custom code: 
 
   * Navigate via the file system to the root directory of your Izenda Reports installation
   * Open your global.asax file in a text editor or your favorite IDE
-  * Find the ``Session_Start()`` method
-  * Your license key MUST be first. Add your license key to the ``Session_Start() method as show in this example.
-  * Add your connection string to the ``Session_Start()`` method as show in this example.
+  * Create the ``InitializeReporting()`` method as above
+  * Your license key MUST be first. Add your license key to the ``InitializeReporting()`` method as shown in this example.
+  * Add your connection string to the ``InitializeReporting()`` method as show in this example.
+  * Call ``InitializeReporting()`` in the ``OnPreInit()`` method from your reporting web pages.
 
 You may now add custom code to Izenda Reports.
 
@@ -79,22 +80,22 @@ You may now add custom code to Izenda Reports.
 
 Izenda Reports is an ASP.NET application and utilizes an object model. There are two classes upon which an integrator should primarily focus. These classes contain many settings and methods that will help you integrate our application with yours.
 
-  * **AdHocSettings**: the class which contains all of the settings for Izenda Reports. The settings page references these settings global, however, as explained, they can be set on a per-user basis. At this level, customization is fairly easy and involves assigning values to a settings. For example:
+  * **AdHocSettings**: the class that contains all of the settings for Izenda Reports. Using the Settings.aspx page will enable application-wide usage of these settings. However, they can be set on a per-user basis. Customization at the user level is fairly easy and simply involves assigning values to settings. For example:
     * ``AdHocSettings.ShowAdminButton=false;``
-  * **AdHocConfig**: the class which enables you to call the methods and properties which you have altered from anywhere else in your code. For example, to invoke a the method which contains the logic for after a user has logged in you would call, where the ``PostLogin()`` method contains the logic:
+  * **AdHocConfig**: the class that enables you to call the methods and properties that you have altered from anywhere else in your code. For example, you could call the ``PostLogin()`` method on any page and it will use the singular method definition that contains your custom logic:
     * ``AdHocSettings.AdHocConfig.PostLogin();``
 
 Both of these classes are customized by adding your code into the global.asax file, as shown above.
 
 ##Creating a custom AdHocConfig class using the Global.asax file
 
-By putting code in the **global.asax** file, you are simply choosing to use the ``CustomAdHocConfig`` class, which will extend either database mode or file system mode. Unless you specifically override the methods, they will retain their default behavior.
+By putting code in the **global.asax** file, you are simply choosing to use the ``CustomAdHocConfig`` class, which will extend either database mode or file system mode. Unless you specifically override the above methods, they will retain their default behavior.
 
-In general, most custom code will be placed in the **Global.asax** file. [[Please see this code sample for details]]. Custom code applies to one of the following contexts:
+In general, most custom code will be placed in the **Global.asax** file. Custom code applies to one of the following contexts:
 
-  * **Global:** Affect on the Izenda Reports application: This type of code applies to all users and all reports. This type of code should be contained in the ``ConfigureSettings()`` method in the global.asax file. [[Please see this example for details]]. 
-  * **Per User Basis/Per Role Basis/etc:** This type of code applies to different users in different ways. We recommend that this type of code should be contained in the ``PostLogin()`` method. Note that this method needs to be called from your application's authentication process. [[Please see this example for details]].
-  * **Per Report/Custom Processing of Reports:** Applied before execution of each report. Generally, this is used for applying hidden filters. This code needs to be placed in the ``PreExecuteReportSet()`` method. [[Please see this example for details]].
+  * **Global:** Affect on the Izenda Reports application: This type of code applies to all users and all reports. This type of code should be contained in the ``ConfigureSettings()`` method in the global.asax file. [[Please see this example for details|/FAQ/ConfigureSettings]]. 
+  * **Per User Basis/Per Role Basis/etc:** This type of code applies to different users in different ways. We recommend that this type of code be contained in the ``PostLogin()`` method. Note that this method needs to be called from your application's authentication process. [[Please see this example for details|/FAQ/PostLogin]].
+  * **Per Report/Custom Processing of Reports:** Applied before execution of each report. Generally, this is used for applying hidden filters. This code needs to be placed in the ``PreExecuteReportSet()`` method. [[Please see this example for details|/FAQ/applying-hidden-filter-using-inner-query]].
 
 ##Calling Izenda Reports from your application
 
@@ -106,8 +107,4 @@ The ``CustomAdHocConfig`` class contains a variety of methods that can be overri
 
 ##What if my global.asax is already integrated or I cannot use it?
 
-In the case that you will not be using the **global.asax** file or that you are using a different **global.asax** than Izenda's, you will need to make sure that you set the license key before invoking any of the configuration methods or settings in Izenda Reports. You can set the license key with:
-
- ``Izenda.AdHoc.AdHocSettings.LicenseKey = \[key here\];``
-
-We recommend setting this at the start of the user's session.
+In the case that you will not be using the **global.asax** file or that you are using a different **global.asax** than Izenda's, you will need to make sure that you set the license key before invoking any of the configuration methods or settings in Izenda Reports. You can set the license key at the start of the user's session.
