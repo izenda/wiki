@@ -2,7 +2,7 @@
 
 [[_TOC_]]
 
-Gets or sets the array of names for tables and views that should be shown in the "Data Sources (Tables and Views)" dropdown in the ReportDesigner on the Data Sources tab.
+Gets or sets the array of names for tables and views that should be shown in the "Data Sources (Tables and Views)" dropdown in the ReportDesigner on the Data Sources tab. Setting any values in this list will completely override the normally constructed list of tables and views on a per-user basis.
 
 ##Global.asax (C♯)
 ```csharp
@@ -50,3 +50,9 @@ Public Class CustomAdHocConfig
     End Sub
 End Class
 ```
+
+##Screenshots
+
+**AdHocSettings.VisibleDataSources = new string[] { "Products", "Orders", "Customers" };**
+
+![VisibleDataSources = new string[] {"Products", "Orders", "Customers" };]()
