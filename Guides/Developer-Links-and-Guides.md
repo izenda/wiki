@@ -30,3 +30,4 @@ Here is a friendly set of links to videos, download pages and reference material
 * [[OData|Guides/OData]]
 * [[Izenda Fusion|/Guides/Izenda-AdHoc-Driver]]
 * [[Layered Subtotaling|Guides/LayeredSubtotaling]]
+* [[Using Stored Procedures (SPs) In Izenda 6|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
