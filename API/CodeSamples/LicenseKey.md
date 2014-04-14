@@ -47,7 +47,7 @@ This setting is required to run Izenda and must be entered as one of the very fi
 
 ##Global.asax (VB.NET)
 
-```Visual Basic
+```VB.net
 <%@ Application Language="VB" %>
 <%@ Import Namespace="Izenda.AdHoc" %>
 
