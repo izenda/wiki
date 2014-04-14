@@ -2,6 +2,33 @@
 
 # 6.7.0.264 (Release Pending)
 * Revert "FB-13269: Prevented showing report data without required filters values specified by user"
+* FB-13579: Diable toolbar if no datasources are selected
+* FB-13592: Improved combine bottom mechanism for Pie chart
+* FB-13345: Fix issues with custom category separator - AdHocSettings.CategoryCharacter
+* FB-13590: Allow to use Formats in Charts for Date and DateTime fields + allow to use custom formats
+* FB-13582: Fixed glitch in code which spontaneously could cause exception inside cycle, and as a hence early exit from cycle, which led to missing custom DashboardFilters control in Dashboards page, though all conditions are met.
+* FB-13535: Fixed error which was caused by application of aggregate function in Gauge to Label column independently on presence/absence of aggregate function in Value column in case when calculated field from Fields report is selected in Value column
+* FB-13450: Show Print buttons in Dashboard designer
+* FB-13382: Made calculated field description appearing in bar chart legends
+* FB-13305: Fixed map-related part of reportSet validation to restore correct Preview availability behavior
+* FB-13546: Solve issues with Title and Description in the CSV output
+* FB-13556: Allow editing Label Justification in the newly created report
+* FB-13413: Limited stored procedures returned by FusionDriver by only those which are enlisted in VisibleDatasources, in the same way like it works now in usual drivers
+* FB-13517: Show All available filter operators if type of the column is unknown.
+* FB-13561: Copy all Filter properties (Like Operator, OrIsBlank, etc.) from the master-report to the sub-report in Forms
+* FB-13329: Improved custom color setting for highcharts
+* FB-13486: Added data source categories sort for instant report page.
+* FB-13515: Fixed problems with changing between Calendar to any other filter type in reportViewer
+* FB-13532: Hide Datepicker dialog when filer on refresh so there are no conflicts between old dialog and newly created dialog
+* FB-13386: Fixed browser slowdowns by fixing in JS code calendar z-order at the moment of its appearing, instead of repeating calls of function which did the same
+* FB-13291: report title and description not showing when part param exists
+* FB-13504: Fix wrong colors for stacked bar chart
+* FB-13483: Removed obsolete attribute from ShowSqlOutputButton setings
+* FB-12823: Added possibility to control Filter dropdown content on a per-column basis
+* FB-13329: Add ability to set custom colors for all html chart types
+* Revert "FB-13269: Prevented showing report data without required filters values specified by user"
+* FB-13439: Remain scroll position in the Equals(Checkboxes) filter when filters refreshed. Do not send ajax redundant calls for the last or single filter in the Report Viewer
+* FB-13507: ListReports cache implementation
 
 # 6.7.0.263 (April 7, 2014)
 * FB-13494: Fix jQuery conflicts in the classic Asp.Net interface
