@@ -55,4 +55,4 @@ End Class
 
 **AdHocSettings.VisibleDataSources = new string[] { "Products", "Orders", "Customers" };**
 
-![VisibleDataSources = new string[] {"Products", "Orders", "Customers" };]()
+![VisibleDataSources = new string[] {"Products", "Orders", "Customers" };](/API/CodeSamples/VisibleDataSources/VisibleDataSources)
