@@ -6,81 +6,41 @@ This setting is required to run Izenda and must be entered as one of the very fi
 
 ##Global.asax (C♯)
 ```c#
-<%@ Application Language="C#" %>
-<%@ Import Namespace="Izenda.AdHoc" %>
 
-<script runat="server">
-
-    void Session_Start(object sender, EventArgs e) 
-    {
-        AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
-        Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    }
-
-    public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
-    {
-        // Configure settings
-        // Add Custom Setting below license key and connection string setting
-        public override void ConfigureSettings()
-        {
-            AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
-            //AdHocSettings.VisibleTables = new string[] { "VIEW1", "TABLE2" };
-            AdHocSettings.LicenseKey = "INSERT LICENSE KEY HERE";
-
-        }
-
-        // Control what reports are visible for the current user
-        public override Izenda.AdHoc.ReportInfo[] ListReports()
-        {
-            return base.ListReports();
-        }
-
-        // Customize a report on the fly prior to execution on a per user basis
-        public override void PreExecuteReportSet(Izenda.AdHoc.ReportSet reportSet)
-        {
-            
-        }
-
-    }
-</script>
+//main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
+public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
+{
+  // Configure settings
+  // Add custom settings after setting the license key and connection string by overriding the ConfigureSettings() method
+public static void InitializeReporting() {
+    //Check to see if we've already initialized.
+    if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+        return;
+    AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
+    AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
+    Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+    HttpContext.Current.Session["ReportingInitialized"] = true;
+}
+}
 ```
 
 ##Global.asax (VB.NET)
 
 ```visualbasic
-<%@ Application Language="VB" %>
-<%@ Import Namespace="Izenda.AdHoc" %>
 
-<script runat="server">
+'main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
+Public Class CustomAdHocConfig
+Inherits Izenda.AdHoc.DatabaseAdHocConfig
 
-    Sub Session_Start(ByVal sender As Object, ByVal e As EventArgs)
+    Shared Sub InitializeReporting()
+        'Check to see if we've already initialized
+        If HttpContext.Current.Session = Nothing OrElse HttpContext.Current.Session("ReportingInitialized") IsNot Nothing Then
+            Return
+        'Initialize System
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
+        HttpContext.Current.Session("ReortingInitialized") = True
     End Sub
-    
-    Public Class CustomAdHocConfig
-        Inherits Izenda.AdHoc.DatabaseAdHocConfig
-        
-        ' Configure settings
-        ' Add Custom Setting below license key and connection string setting
-        Public Overrides Sub ConfigureSettings()
-            AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
-            'AdHocSettings.VisibleTables = New String() { "VIEW1", "TABLE2" }
-            AdHocSettings.LicenseKey = "INSERT LICENSE KEY HERE"
 
-        End Sub
-        
-        ' Control what reports are visible for the current user
-        Public Overrides Function ListReports() As Izenda.AdHoc.ReportInfo()
-            Return MyBase.ListReports
-        End Function
-
-        ' Customize a report on the fly prior to execution on a per user basis
-        Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportSet)
-        
-        End Sub
-
-    End Class
-
-</script>
+End Class
 ```
