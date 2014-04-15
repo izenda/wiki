@@ -47,7 +47,7 @@ public override void ProcessDataSet(DataSet ds, string reportPart)
                     } 
                     // There can be only one column with a specific name,
                     // so we can leave the cycle as soon as we find it
-                    Exit For                                       
+                    break;
                 }
             }
         }
@@ -70,7 +70,7 @@ Public Overrides Sub ProcessDataSet(ByVal ds As DataSet, ByVal reportPart As Str
                     Next
                     'There can be only one column with a specific name,
                     'so we can leave the cycle as soon as we find it
-                    break;
+                    Exit For                                       
 	        End If
 	    Next
         End If
