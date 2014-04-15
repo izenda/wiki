@@ -13,23 +13,23 @@ Here is a friendly set of links to videos, download pages and reference material
 
 ##Developer Guides
 
-* [IIS7 Installation Video](http://www.izenda.com/Site/KB/FAQ/How-to-Install-Izenda-Reports-on-Windows-Vista?)
-* [Installation Guide](http://www.izenda.com/Site/KB/FAQ/How-to-Install-Izenda-Reports-on-Windows-Vista?)
-* [15 Minute Integration Video](http://www.izenda.com/Site/KB/DownloadandInstall/77)
-* [API Settings List](http://izenda.com/Site/KB/SettingsAPI/9)
-* [Security Guide](http://www.izenda.com/Site/KB/Integration/Security-Guide-?)
+* [IIS7 Installation Video|http://www.izenda.com/site/kb/uploads/media/videos/vistainstallvideo.zip]]
+* [Installation Guide](/Integration/Tutorials/Installing-Izenda)
+* [[API Settings List|/API/AdHocSettings]]
+* [[Security Guide|/Tutorials/Security]]
 * [MDX Queries](http://www.izenda.com/Site/KB/CodeSamples/Pulling-Data-From-Analysis-Services-Cubes)
 * [Overriding AdHocConfig](http://www.izenda.com/Site/KB/CodeSamples/Overriding-AdHocConfig?Keywords=preexecute)
-* [Using Constraints](http://www.izenda.com/Site/KB/CodeSamples/Using-constraints?)
+* [Using Constraints](http://www.izenda.com/Site/KB/CodeSamples/Using-constraints)
 * [Basic Security Sample](http://www.izenda.com/Site/KB/CodeSamples/Basic-security-sample?)
 * [Switching Databases Via Code](http://www.izenda.com/Site/KB/CodeSamples/Switching-databases-via-code?) 
 * [Adding Code](http://www.izenda.com/Site/KB/Integration/Adding-Code?)
-* [How do I enable Basic Report Sharing?](http://www.izenda.com/Site/KB/FAQ/How-do-I-enable-basic-report-sharing?)
+* [How do I enable Basic Report Sharing?](/FAQ/Questions/How-do-I-enable-basic-report-sharing)
 * [Using Share With Rights and Roles](http://www.izenda.com/Site/KB/FAQ/Using-Share-with-rights-roles-properties-in-Izenda-Reports-6-?Keywords=misc+tab)
-* [How To Post-Process Data](http://www.izenda.com/Site/KB/CodeSamples/How-to-postprocess-data?)
+* [How To Post-Process Data](/FAQ/ProcessDataSet)
 * [[OData|Guides/OData]]
 * [[Izenda Fusion|/Guides/Izenda-AdHoc-Driver]]
 * [[Layered Subtotaling|Guides/LayeredSubtotaling]]
 * [[Using Stored Procedures (SPs) In Izenda 6|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
 * [[Hiding Fields in Filters|Guides/Hiding-Fields-In-Filters]]
 * [[Blank Column in Export|Guides/Blank-Column-in-Export]]
+* [[Dynamically Creating Reports Via the API|/API/CodeSamples/DynamicReportCreation]]
