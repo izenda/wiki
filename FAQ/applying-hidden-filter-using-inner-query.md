@@ -13,17 +13,33 @@ Here is our sample report in the report designer:
 
 Below is a code sample showing how to add a hidden filter to a report. We will be using this query with our sample datasource.
 
+###C♯
+
 ```csharp
 public override void PreExecuteReportSet(ReportSet reportSet)
 {
-	base.PreExecuteReportSet(reportSet);
-	Filter filter = new Filter();
-        //These three parameters are what are normally shown in the Filters tab of the report designer
-	filter.Column = "ShipCity"; //Filter Field
-	filter.Operator = OperatorTypes.In; //Operator
-        filter.Values = new string[] {"Boise"}; //Value(s)
-	reportSet.Filters.AddHidden(filter);
+    base.PreExecuteReportSet(reportSet);
+    Filter filter = new Filter();
+    //These three parameters are what are normally shown in the Filters tab of the report designer
+    filter.Column = "ShipCity"; //Filter Field
+    filter.Operator = OperatorTypes.In; //Operator
+    filter.Values = new string[] {"Boise"}; //Value(s)
+    reportSet.Filters.AddHidden(filter);
 }
+```
+
+###VB.NET
+
+```visualbasic
+Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportSet) 
+    MyBasease.PreExecuteReportSet(reportSet);
+    Dim filter As New Filter();
+    'These three parameters are what are normally shown in the Filters tab of the report designer
+    filter.Column = "ShipCity" 'Filter Field
+    filter.Operator = OperatorTypes.In 'Operator
+    filter.Values = New String() {"Boise"} 'Value(s)
+    reportSet.Filters.AddHidden(filter)
+End Sub
 ```
 
 **Note:** The **Values** property should always be used, even for one item.
