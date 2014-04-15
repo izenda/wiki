@@ -51,3 +51,4 @@ Public Class CustomAdHocConfig
 Here are a couple examples of using the PreExecuteReportSet method.
 
 * [[Hidden Filter Example|/FAQ/applying-hidden-filter-using-inner-query]]
+* [[Using Stored Procedures|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
