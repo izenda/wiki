@@ -2,10 +2,6 @@
 
 [[_TOC_]]
 
-##About
-
-#The ProcessEqualsSelectList() Method
-
 This code sample overrides the equals select drop-down used in the "Filter" tab and in the Report Viewer.
 
 Here is sample code that you can add to your global.asax file:
@@ -28,3 +24,5 @@ public override string[] ProcessEqualsSelectList(Izenda.AdHoc.Database.Column co
    return base.ProcessEqualsSelectList(column);
 }
 ```
+
+* [[Using Stored Procedures|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
