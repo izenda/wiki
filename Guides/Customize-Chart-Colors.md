@@ -1,3 +1,5 @@
+#Customize Chart Colors
+
 [[_TOC_]]
 
 ##Purpose
