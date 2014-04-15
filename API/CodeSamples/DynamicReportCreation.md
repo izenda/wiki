@@ -25,7 +25,7 @@ Izenda.AdHoc.AdHocContext.CurrentReportSet = rs;
 
 ###VB.NET Sample
 
-```
+```visualbasic
 Dim rs As New ReportSet()
 rs.ReportName = "Generated Report"
 
