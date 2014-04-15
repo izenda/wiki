@@ -18,11 +18,15 @@ public override void PreExecuteReportSet(ReportSet reportSet)
 {
 	base.PreExecuteReportSet(reportSet);
 	Filter filter = new Filter();
-	filter.Column = "ShipCity";
-	filter.SqlOverride = "ShipCity IN (SELECT ShipCity FROM [dbo].[Orders] WHERE ShipCountry = 'USA')";
+        //These three parameters are what are normally shown in the Filters tab of the report designer
+	filter.Column = "ShipCity"; //Filter Field
+	filter.Operator = OperatorTypes.In; //Operator
+        filter.Values = new string[] {"Boise"}; //Value(s)
 	reportSet.Filters.AddHidden(filter);
 }
 ```
+
+**Note:** The **Values** property should always be used, even for one item.
 
 After booting up our application and running our report, here is what we get:
 
@@ -36,7 +40,7 @@ After booting up our application and running our report, here is what we get:
 public override void PreExecuteReportSet(ReportSet reportSet) 
 {  
     base.PreExecuteReportSet(reportSet);   
-    if(reportSet.Source.Equals("[dbo].[Customers]"))
+    if(reportSet.Source.Equals("[dbo].[Orders]"))
     {    
         Filter filter = new Izenda.AdHoc.Filter();    
         filter.Column = "email";    
@@ -56,7 +60,7 @@ Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportS
 	emails(1) = "gedelin@yahoo.com1"    
 	Dim filter As New Izenda.AdHoc.Filter()   
 	filter.Column = "email"    
-	filter.Operator = OperatorTypes.In    
+	filter.Operator = OperatorTypes.In
 	filter.Values = emails    
 	reportSet.Filters.AddHidden(filter)
 End Sub
