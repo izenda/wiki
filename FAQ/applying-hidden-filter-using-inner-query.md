@@ -4,7 +4,7 @@
 
 **Note:** Use the below method only when you have a large number of values.  Normaly you don't have to add filters via inner query. Please use AdHocSettings.HiddenFilters instead.
 
-##Hidden Filter C♯
+##Using a Hidden Filter
 
 For this example, we will use the Northwind database as our datasource.
 Here is our sample report in the report designer:
@@ -30,6 +30,8 @@ After booting up our application and running our report, here is what we get:
 
 ##Hidden Filter with SQL Override
 
+###C♯
+
 ```csharp
 public override void PreExecuteReportSet(ReportSet reportSet) 
 {  
@@ -43,6 +45,8 @@ public override void PreExecuteReportSet(ReportSet reportSet)
     }
 }
 ```
+
+###VB.NET
 
 ```visualbasic
 Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportSet)   
