@@ -29,33 +29,33 @@ Without any post-processing we have the following report:
 
 Now let's add some extra code to the CustomAdHocConfig class:
 
+###C♯
+
 ```csharp
 public override void ProcessDataSet(DataSet ds, string reportPart)
 {
     // We want to alter only "Detail" part of the report set
-    if (reportPart == "Detail")
-    {
-        if (ds != null && ds.Tables.Count > 0 && ds.Tables[0] != null && ds.Tables[0].Rows.Count > 0)
-        {
+    if (reportPart == "Detail") {
+        if (ds != null && ds.Tables.Count > 0 && ds.Tables[0] != null && ds.Tables[0].Rows.Count > 0) {
             // Iterate through columns to find column with name "Ship Region"
-            for (int index = 0; index < ds.Tables[0].Columns.Count; index++)
-            {
-                if (ds.Tables[0].Columns[index].ColumnName == "Ship Region")
-                {
-                    foreach (DataRow row in ds.Tables[0].Rows)
-                    {
+            for (int index = 0; index < ds.Tables[0].Columns.Count; index++) {
+                if (ds.Tables[0].Columns[index].ColumnName == "Ship Region") {
+                    // Iterate through rows to find the field with a value of "CA"
+                    foreach (DataRow row in ds.Tables[0].Rows) {
                         if (row[index].ToString() == "CA")
-                        row[index] = "California";
-                    }
+                            row[index] = "California";
+                    } 
                     // There can be only one column with a specific name,
                     // so we can leave the cycle as soon as we find it
-                    break;                                        
+                    break;                                       
                 }
             }
         }
     }
 }
 ```
+
+###VB.NET
 
 ```visualbasic
 Public Overrides Sub ProcessDataSet(ByVal ds As DataSet, ByVal reportPart As String)
@@ -66,20 +66,19 @@ Public Overrides Sub ProcessDataSet(ByVal ds As DataSet, ByVal reportPart As Str
 	    For index As Integer = 0 to ds.Tables(0).Columns.Count - 1
 	        If ds.Tables(0).Columns(index).ColumnName = "Ship Region" Then
                     For Each row As DataRow In ds.Tables(0).Rows
-		        If row(index).ToString() = "CA" Then
-			    row(index) = "California"
-			    'There can be only one column with a specific name,
-			    'so we can leave the cycle as soon as we find it
-			    break;
-		        End If
+		        If row(index).ToString() = "CA" Then row(index) = "California"
                     Next
+                    'There can be only one column with a specific name,
+                    'so we can leave the cycle as soon as we find it
+                    break;
 	        End If
 	    Next
         End If
     End If
 End Sub
 ```
-And after implementing post-prosessor the result will be:
+
+When we run our post-processor code we will get the expected result:
 
 ![After Post-Processing](http://www.izenda.com/Site/KB/Uploads/Images/PostProcess_after.png)
 
