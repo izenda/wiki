@@ -28,7 +28,6 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How do I implement Fully Qualified Hidden Filters?|FAQ/implement-fully-qualified-hidden-filters]]
 - [[How do I change the default print settings?|http://wiki.izenda.us/FAQ/Questions/how-to-change-default-print-settings]]
 - [[The AdHocSettings class|/API/AdHocSettings]]
-- [[Setting the default report tab in ReportList.aspx|/FAQ/Default ReportList Tab]]
 
 ###Troubleshooting
 
