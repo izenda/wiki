@@ -6,6 +6,7 @@
 
 The ``ProcessDataSet`` method is useful when you want to use post-processing in your application. This method should be overridden in your global.asax file. 
 
+```csharp
 public class CustomAdHocConfig : DatabaseAdHocConfig
 {
 	public override void ProcessDataSet(DataSet ds, string reportPart)
@@ -13,6 +14,7 @@ public class CustomAdHocConfig : DatabaseAdHocConfig
 		// Put your code here
 	}
 }
+```
 
 The first parameter is the System.Data.DataSet retrieved from the database. It is called "ds" here, but it can be named anything as long as the datatype remains the same. The second parameter is the name of the report in the ReportSet. For example, if part of your report is a grid named "Detail" and part of your report is a pie chart named "Chart", you can reference the grid part of your report by checking if ReportPart = "Detail". With that part of the report captured, you can manipulate it how you want and display the results. 
 
@@ -30,27 +32,53 @@ Now let's add some extra code to the CustomAdHocConfig class:
 ```csharp
 public override void ProcessDataSet(DataSet ds, string reportPart)
 {
-	// We want to alter only "Detail" part of the report set
-	if (reportPart == "Detail")
-	{
-		if (ds != null && ds.Tables.Count > 0 && ds.Tables[0] != null && ds.Tables[0].Rows.Count > 0)
-		{
-			// Iterate through columns to find column with name "Ship Region"
-			for (int index = 0; index < ds.Tables[0].Columns.Count; index++)
-				if (ds.Tables[0].Columns[index].ColumnName == "Ship Region")
-				{
-					foreach (DataRow row in ds.Tables[0].Rows)
-						if (row[index].ToString() == "CA")
-							row[index] = "California";
-					// There can be only one column with a specific name,
-					// so we can leave the cycle as soon as we find it
-					break;
-				}
-		}
-	}
+    // We want to alter only "Detail" part of the report set
+    if (reportPart == "Detail")
+    {
+        if (ds != null && ds.Tables.Count > 0 && ds.Tables[0] != null && ds.Tables[0].Rows.Count > 0)
+        {
+            // Iterate through columns to find column with name "Ship Region"
+            for (int index = 0; index < ds.Tables[0].Columns.Count; index++)
+            {
+                if (ds.Tables[0].Columns[index].ColumnName == "Ship Region")
+                {
+                    foreach (DataRow row in ds.Tables[0].Rows)
+                    {
+                        if (row[index].ToString() == "CA")
+                        row[index] = "California";
+                    }
+                    // There can be only one column with a specific name,
+                    // so we can leave the cycle as soon as we find it
+                    break;                                        
+                }
+            }
+        }
+    }
 }
 ```
 
+```visualbasic
+Public Overrides Sub ProcessDataSet(ByVal ds As DataSet, ByVal reportPart As String)
+    'We want to alter only "Detail" part of the report set
+    If reportPart = "Detail" Then
+        If ds IsNot Nothing AndAlso ds.Tables.Count > 0 AndAlso ds.Tables(0) IsNot Nothing AndAlso ds.Tables(0).Rows.Count > 0 Then
+	    'Iterate through columns to find column with name "Ship Region"
+	    For index As Integer = 0 to ds.Tables(0).Columns.Count - 1
+	        If ds.Tables(0).Columns(index).ColumnName = "Ship Region" Then
+                    For Each row As DataRow In ds.Tables(0).Rows
+		        If row(index).ToString() = "CA" Then
+			    row(index) = "California"
+			    'There can be only one column with a specific name,
+			    'so we can leave the cycle as soon as we find it
+			    break;
+		        End If
+                    Next
+	        End If
+	    Next
+        End If
+    End If
+End Sub
+```
 And after implementing post-prosessor the result will be:
 
 ![After Post-Processing](http://www.izenda.com/Site/KB/Uploads/Images/PostProcess_after.png)
