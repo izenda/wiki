@@ -21,7 +21,7 @@ public class CustomAdHocConfig : DatabaseAdHocConfig
 	{
 		//Per-user settings go here
 	}
-        public override string[] ProcessEqualsSelectList(Izenda.AdHoc.Database.Column column) 
+        public override void PreExecuteReportSet(ReportSet reportSet)
         { 
                 //put your own custom code inside this method
         }
@@ -41,9 +41,9 @@ Public Class CustomAdHocConfig
 	public override void ConfigureSettings()
 		'Per-user settings go here
 	End Sub
-        Public Overrides Function ProcessEqualsSelectList(ByVal column As Izenda.AdHoc.Database.Column) As String()
+        Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportSet) 
                 'put your own custom code inside this method
-        End Function
+        End Sub
 }
 ```
 ##Examples
@@ -51,4 +51,3 @@ Public Class CustomAdHocConfig
 Here are a couple examples of using the PreExecuteReportSet method.
 
 * [[Hidden Filter Example|/FAQ/applying-hidden-filter-using-inner-query]]
-* [[Using Stored Procedures|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
