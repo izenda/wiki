@@ -16,7 +16,7 @@ Here is a friendly set of links to videos, download pages and reference material
 * [IIS7 Installation Video|http://www.izenda.com/site/kb/uploads/media/videos/vistainstallvideo.zip]]
 * [Installation Guide](/Integration/Tutorials/Installing-Izenda)
 * [[API Settings List|/API/AdHocSettings]]
-* [[Security Guide|/Tutorials/Security]]
+* [[Security Guide|/Integration/Tutorials/Security]]
 * [MDX Queries](http://www.izenda.com/Site/KB/CodeSamples/Pulling-Data-From-Analysis-Services-Cubes)
 * [Overriding AdHocConfig](http://www.izenda.com/Site/KB/CodeSamples/Overriding-AdHocConfig?Keywords=preexecute)
 * [Using Constraints](http://www.izenda.com/Site/KB/CodeSamples/Using-constraints)
