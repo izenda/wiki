@@ -9,3 +9,9 @@ public override void ConfigureSettings()
     Izenda.AdHoc.AdHocSettings.ShowClientEmailButton = false;
 }
 ```
+
+```visualbasic
+Public Overrides Sub ConfigureSettings()
+    Izenda.AdHoc.AdHocSettings.ShowInvisible = True
+    Izenda.AdHoc.AdHocSettings.ShowClientEmailButton = False
+End Sub
