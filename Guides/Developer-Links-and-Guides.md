@@ -32,3 +32,4 @@ Here is a friendly set of links to videos, download pages and reference material
 * [[Layered Subtotaling|Guides/LayeredSubtotaling]]
 * [[Using Stored Procedures (SPs) In Izenda 6|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
 * [[Hiding Fields in Filters|Guides/Hiding-Fields-In-Filters]]
+* [[Blank Column in Export|Guides/Blank-Column-in-Export]]
