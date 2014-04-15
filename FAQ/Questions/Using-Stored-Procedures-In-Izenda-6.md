@@ -16,7 +16,7 @@ Since version 6.0, Izenda Reports can expose existing SPs (Stored Procedures) in
 When SPs are detected in your MSSQL database, their names will appear in the list of available DataSources in the Report Designer. Currently, Izenda AdHoc supports only input parameters, while parameters of other types are ignored. Input parameters play the role of the columns that are used in the WHERE clause of the SELECT statement.
 To be suitable for AdHoc, SPs must return a standard SELECT statement. This will be treated as the result of a standard SELECT statement being performed on a table. The column names returned from the SP will be available as fields in your DataSource.
 
-Example of a SP using the Northwind database:
+**Example of a SP using the Northwind database:**
 
 ```sql
 USE northwind;
@@ -179,3 +179,77 @@ public override string[] ProcessEqualsSelectList(Izenda.AdHoc.Database.Column co
 Now you can just select **ProductName** and apply the **Equals(Select)** filter to it:
 
 ![Fig. 5: Using ProcessEqualsSelectList results]()
+
+##Using PreExecuteReportSet
+
+This example uses a stored procedure to populate a table before report design or execution. Every time a report is created or viewed, the below stored procedure will update the results of the **StoredProcResults** table also defined below. Let's first create the table to hold the data.
+
+```sql
+CREATE TABLE [dbo].[StoredProcResults]  
+    [ProductID] [int] NOT NULL,
+    [OrderQuantity] [int] NOT NULL,   
+    [Total] [int] NOT NULL,  
+    [DueDate] [smalldatetime] NOT NULL    
+    ) ON [PRIMARY]
+```
+
+Now we will create the SP to interface with this table.
+
+```sql
+CREATE PROCEDURE DoCustomAction  (   
+    @date1 as smalldatetime,    
+    @date2 as smalldatetime  
+    ) 
+    AS  
+    BEGIN  
+    
+    insert into StoredProcResults   
+    select p.ProductID, p.UnitsOnOrder, (p.UnitPrice * p.UnitsOnOrder), o.RequiredDate  
+    from Orders o 
+    join [Order Details] od on o.OrderID = od.OrderID
+    join Products p on od.ProductID = p.ProductID
+    where o.RequiredDate >= @date1 and o.RequiredDate <= @date2   
+     
+    END  
+```
+
+Now we will override the [[PreExecuteReportSet|/FAQ/PreExecuteReportSet]] method to access and execute the stored procedure under certain conditions. In our example, we will specify that any time a report is viewed with the name "StoredProcExample", we will update the StoredProcResults table with orders of products whose due dates fall between 1/1/2003 and 12/31/2003.
+
+```csharp
+// Customize a report on the fly prior to execution on a per user basis
+public override void PreExecuteReportSet(Izenda.AdHoc.ReportSet reportSet)
+{    
+string currentReportName = HttpContext.Current.Request.QueryString["rn"];
+
+    if (currentReportName == "StoredProcExample")   
+    {      
+      SqlConnection myConnection = new SqlConnection(Izenda.AdHoc.AdHocSettings.SqlServerConnectionString);      
+      SqlCommand myCommand = new SqlCommand("DoCustomAction", myConnection);      
+
+      // Mark the Command as a SPROC      
+      myCommand.CommandType = System.Data.CommandType.StoredProcedure;    
+
+      // Add Parameters to SPROC      
+      SqlParameter parameterdate1 = new SqlParameter
+      ("@date1", System.Data.SqlDbType.SmallDateTime);       
+      parameterdate1.Value = "1/1/2003";       
+      myCommand.Parameters.Add(parameterdate1);        
+      
+      SqlParameter parameterdate2 = new SqlParameter
+      ("@date2", System.Data.SqlDbType.SmallDateTime);       
+      parameterdate2.Value = "12/31/2003";      
+      myCommand.Parameters.Add(parameterdate2);       
+
+      try      
+                
+        myConnection.Open();           
+        myCommand.ExecuteNonQuery();      
+      }       
+      
+      finally      
+      {
+        myConnection.Close();       
+      }    
+    }
+}
+```
