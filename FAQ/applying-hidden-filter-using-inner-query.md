@@ -30,9 +30,11 @@ public override void PreExecuteReportSet(ReportSet reportSet)
 
 After booting up our application and running our report, here is what we get:
 
-![](/FAQ/applying-hidden-filter-using-inner-query/hidden_filters_2.png)
+![](/FAQ/applying-hidden-filter-using-inner-query/hidden_filters_0.png)
 
 ##Hidden Filter with SQL Override
+
+The SqlOverride property can be used to more precisely handle inner queries for the filter. You simply need to define the Column and the SqlOverride properties to use it. See the query below for a demonstration.
 
 ###C♯
 
@@ -43,8 +45,8 @@ public override void PreExecuteReportSet(ReportSet reportSet)
     if(reportSet.Source.Equals("[dbo].[Orders]"))
     {    
         Filter filter = new Izenda.AdHoc.Filter();    
-        filter.Column = "email";    
-        filter.SqlOverride = "(aspnet_Membership.email = 'greg@edelinsolutions.com' or aspnet_Membership.email='gedelin@yahoo.com')";    
+        filter.Column = "ShipCity";    
+        filter.SqlOverride = "ShipCity IN (SELECT ShipCity FROM [dbo].[Orders] WHERE ShipCountry = 'USA')"; //There is no need to use the Operator or Values properties with SqlOverride
         reportSet.Filters.AddHidden(filter);    
     }
 }
@@ -53,15 +55,15 @@ public override void PreExecuteReportSet(ReportSet reportSet)
 ###VB.NET
 
 ```visualbasic
-Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportSet)   
-	MyBase.PreExecuteReportSet(reportSet)    
-	Dim emails(1) As String    
-	emails(0) = "greg@edelinsolutions.com"    
-	emails(1) = "gedelin@yahoo.com1"    
-	Dim filter As New Izenda.AdHoc.Filter()   
-	filter.Column = "email"    
-	filter.Operator = OperatorTypes.In
-	filter.Values = emails    
-	reportSet.Filters.AddHidden(filter)
+Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportSet) 
+    MyBase.PreExecuteReportSet(reportSet)
+    If reportSet.Source.Equals("[dbo].[Orders]") Then
+        Dim filter As New Izenda.AdHoc.Filter()   
+        filter.Column = "ShipCity"  
+        filter.SqlOverride = "ShipCity IN (SELECT ShipCity FROM [dbo].[Orders] WHERE ShipCountry = 'USA')" 'There is no need to use the Operator or Values properties with SqlOverride
+        reportSet.Filters.AddHidden(filter)   
+    End If
 End Sub
 ```
+
+![](/FAQ/applying-hidden-filter-using-inner-query/hidden_filters_2.png)
