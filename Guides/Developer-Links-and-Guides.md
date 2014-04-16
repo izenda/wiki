@@ -13,7 +13,7 @@ Here is a friendly set of links to videos, download pages and reference material
 
 ##Developer Guides
 
-* [IIS7 Installation Video|http://www.izenda.com/site/kb/uploads/media/videos/vistainstallvideo.zip]]
+* [[IIS7 Installation Video|http://www.izenda.com/site/kb/uploads/media/videos/vistainstallvideo.zip]]
 * [Installation Guide](/Integration/Tutorials/Installing-Izenda)
 * [[API Settings List|/API/AdHocSettings]]
 * [[Security Guide|/Integration/Tutorials/Security]]
