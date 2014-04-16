@@ -18,7 +18,7 @@ Here is a friendly set of links to videos, download pages and reference material
 * [[API Settings List|/API/AdHocSettings]]
 * [[Security Guide|/Integration/Tutorials/Security]]
 * [MDX Queries](http://www.izenda.com/Site/KB/CodeSamples/Pulling-Data-From-Analysis-Services-Cubes)
-* [Overriding AdHocConfig](http://www.izenda.com/Site/KB/CodeSamples/Overriding-AdHocConfig?Keywords=preexecute)
+* [[Overriding AdHocConfig}/API/AdHocConfig]]
 * [Using Constraints](http://www.izenda.com/Site/KB/CodeSamples/Using-constraints)
 * [Basic Security Sample](http://www.izenda.com/Site/KB/CodeSamples/Basic-security-sample?)
 * [Switching Databases Via Code](http://www.izenda.com/Site/KB/CodeSamples/Switching-databases-via-code?) 
