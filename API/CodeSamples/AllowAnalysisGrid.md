@@ -63,4 +63,4 @@ End Class
 
 ![](http://www.izenda.com/Site/Images/Screenshots/AllowAnalysisGridDS.png)
 
-![]()
+![](/API/CodeSamples/AllowAnalysisGrid/analysis_grid.png)
