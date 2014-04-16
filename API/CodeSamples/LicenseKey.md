@@ -2,6 +2,8 @@
 
 [[_TOC_]]
 
+##About
+
 This setting is required to run Izenda and must be entered as one of the very first settings in the initialization code for Izenda to run properly.
 
 ##Global.asax (C♯)
