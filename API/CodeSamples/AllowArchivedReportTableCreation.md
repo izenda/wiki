@@ -1,5 +1,9 @@
 #AllowArchivedReportTableCreation
 
+[[_TOC_]]
+
+##About
+
 Gets or sets the value indicating whether it is allowed to create the database table that contains archived reports if there is no such table in the database. If set, AdHoc checks if table in database for keeping reportsets exists, and creates it if necessary.
 By default the name of this table is IzendaAdHocReports.
 
