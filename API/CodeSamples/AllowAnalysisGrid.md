@@ -27,7 +27,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
 
   //Add custom settings below
   public override void ConfigureSettings() {
-    AdHocSettings.AdHocUserKey = "userkey";
+    AdHocSettings.AllowAnalysisGrid = true;
   }
 }
 ```
@@ -54,7 +54,7 @@ Public Class CustomAdHocConfig
 
     'Add custom settings below
     Public Overrides Sub ConfigureSettings()
-        AdHocSettings.AdHocUserKey = "userkey"
+        AdHocSettings.AllowAnalysisGrid = True
     End Sub
 End Class
 ```
@@ -62,3 +62,5 @@ End Class
 ##Screenshots
 
 ![](http://www.izenda.com/Site/Images/Screenshots/AllowAnalysisGridDS.png)
+
+![]()
