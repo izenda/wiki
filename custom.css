@@ -18,6 +18,6 @@ body {background-color: white;}
   -webkit-border-radius: 0.5em;
 }
 
-#tree {
+.tree li label, .tree li a {
   color: black;
 }
