@@ -2,6 +2,8 @@
 
 [[_TOC_]]
 
+##About
+
 Gets or sets a single password limiting access to the report designer, report list, and report viewer. This setting is **only** for projects that do not need multi-user security. When set, a security key will be requested when a user attempts to access any of the aforementioned reporting pages.
 
 ##Global.asax (C♯)
