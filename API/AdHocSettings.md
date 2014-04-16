@@ -14,7 +14,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   bool|AllowClientSorting||
 |   bool|AllowComparativeArithmetic|Gets or sets the value indicating whether comparative arithmetic is allowed in arithmetic checkbox. Comparative operators appear in "A" checkboxes at the Fields tab in the ReportDesigner.|
 |   bool|AllowCreateNewCategory|Gets or sets the value indicating the possibility to create new categories in Save As dialog in the ReportDesigner.|
-|   bool|[[AllowDataFieldsInDescription|/API/CodeSamples/AllowDataFieldsInDescription]]||
+|   bool|AllowDataFieldsInDescription|This checkbox enables/disables the ability to allow a data field to be used in the description of the report (which is set in the misc tab). This is particularly useful in drill down reports and those reports with filters. For example: Let's say we are filtering a report by the field CategoryName and the value Produce. For the Description we enter: [CategoryName] details. This will show on the report as Produce details and dynamically change when the user changes the filter value.|
 |   bool|AllowDeletingReports|This checkbox enables/disables the delete icons at the report list page against reports names, for the current user. Clicking on the red x delete icon deletes the report.|
 |   bool|AllowDeltas|Gets or sets the value indicating whether "Add Deltas" checkbox should be shown at the fields tab in the ReportDesigner. Any time there is a change in a quantity that change is calculated by taking the later value for that quantity and subtracting from it the earlier value for that quantity.|
 |   bool|AllowDomainJoin|Gets or sets the value indicating that domain joins should be shown on the report designer. Domain join could be useful if you want to join tables on columns with web addresses. For example, if you set up Domain Join option columns with strings "http://www.yourdomain.com" and "www.yourdomain.com" will be equal.|
@@ -209,8 +209,8 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   string|ResponseServer|Gets or sets the URL of the ResponseServer page.|
 |   string|ResponseServerWithDelimiter|Gets the URL of the ResponseServer page with query string characters("?" and "&") at the end.|
 |   int[]|ResultsDropdownValues|Gets or sets the list of the values in the "Results" dropdown in the toolbar of the ReportDesigner. This will override as many default entries in the list as it can.|
-|   string|SavedReportsTable|Gets or sets the table name for saved reports. If DatabaseAdHocConfig is used, reports data will be saved in this table in the database. This setting does nothing if FileSystemAdHocConfig is used. By default, a table named "IzendaAdHocReports" is used.|
-|   string|SaveReportSetNextUrl|Gets or sets the URL of the page to which users will be redirected after saving reports. <br>*Note:The Report name will be automatically appended to the url as a parameter named "rn"*.|
+|   string|[[SavedReportsTable|/API/CodeSamples/SavedReportsTable]]|Gets or sets the table name for saved reports.|
+|   string|[[SaveReportSetNextUrl|/API/CodeSamples/SaveReportSetNextUrl]]|Gets or sets the URL of the page to which users will be redirected after saving reports.|
 |   string|ScheduledReportsUrlFormatString|Gets or sets the url that is sent via email as the report web address when the user selects "link" in the scheduling control's "send email as" field. [[Report scheduling|/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler]] MUST be turned on for this to have an effect.|
 |   SchedulerOutputCollection|SchedulerOutputTypes|Gets or sets the value indicating the allowed formats for scheduling reports. This defines the contents of the "Send Email As" dropdown at the Misc tab in the ReportDesigner.|
 |   TimeSpan|SchemaCacheTimeout|Gets or sets how long the system should wait before giving up on caching the schema.|
