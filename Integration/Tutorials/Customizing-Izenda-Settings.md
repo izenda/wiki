@@ -107,4 +107,4 @@ The ``CustomAdHocConfig`` class contains a variety of methods that can be overri
 
 ##What if my global.asax is already integrated or I cannot use it?
 
-In the case that you will not be using the **global.asax** file or that you are using a different **global.asax** than Izenda's, you will need to make sure that you set the license key before invoking any of the configuration methods or settings in Izenda Reports. You can set the license key at the start of the user's session.
+In the case that you will not be using the **global.asax** file or that you are using a different **global.asax** than Izenda's, you can set the license key at the start of the user's session to obtain the same result. You will need to make sure that you set the license key before invoking any of the configuration methods or settings in Izenda Reports.
