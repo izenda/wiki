@@ -16,6 +16,10 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
     //Initializing these settings in a static context is a best practice for Izenda to run smoothly. This method will need to be called on your reporting pages or from Session_Start().
     public static void InitializeReporting()
     {
+        //Check to see if we've already initialized.
+        if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+            return;
+        //Initialize System      
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
         AdHocSettings.GenerateThumbnails = True;
