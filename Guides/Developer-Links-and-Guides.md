@@ -34,3 +34,4 @@ Here is a friendly set of links to videos, download pages and reference material
 * [[Blank Column in Export|Guides/Blank-Column-in-Export]]
 * [[Dynamically Creating Reports Via the API|/API/CodeSamples/DynamicReportCreation]]
 * [[Customize Chart Colors|Guides/Customize-Chart-Colors]]
+* [[Setting Timeouts|Guides/Timeouts]]
