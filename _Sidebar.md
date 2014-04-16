@@ -4,6 +4,7 @@
 * [[FAQ]]
 * [[Tutorials]]
 * [[Izenda User Guides|FAQ/UserGuides]]
+* [[The Izenda API|/API/AdHocConfig]]
 
 ---
 
