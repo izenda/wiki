@@ -33,7 +33,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   bool|AllowStackedBarChart|Gets or sets the value indicating whether Stacked Bar Chart is allowed. This defines if Stacked checkbox will be available in the Advanced Properties at the Chart tab in the ReportDesigner, when Bar chart type is used.|
 |   bool|AllowSummaryDeltas|Gets or sets the value indicating whether the "Show Summary Deltas" checkbox should be shown in the summary tab in the ReportDesigner. Any time there is a change in a quantity, that change is calculated by taking the later value for that quantity and subtracting from it the earlier value for that quantity. The AllowDeltas feature MUST be turned on to use this feature.|
 |   bool|AllowVisualGroups||
-|   string|ApplicationHeaderImageUrl|Gets or sets the URL of the Application Header Logo.|
+|   string|[[ApplicationHeaderImageUrl|/API/CodeSamples/ApplicationHeaderImageUrl]]|Gets or sets the URL of the Application Header Logo.|
 |   bool|AutoJoinOnRenderedRows||
 |   bool|AutoPostBackOnFilterChange|Gets or sets the value indicating whether should be postback on filter change. This affects behavior of ReportViewer when ShowFiltersInReportViewer is enabled, and user changes filters there. All changes will be applied immediately and report will be reloaded.|
 |   bool|CacheEqualsSelect|Gets or sets the value indicating whether "Equals (Select)" value should be cached. Caching "Equals (Select)" can be useful if you have problems with performance in your data base or slow connection to it. But data in cache may be not relevant if it is updated very often in the data base. So, use this setting carefully.|
