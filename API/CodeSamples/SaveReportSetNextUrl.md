@@ -28,7 +28,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
 
   //Add custom settings below
   public override void ConfigureSettings() {
-    AdHocSettings.SaveReportSetNextUrl = "";
+    AdHocSettings.SaveReportSetNextUrl = "CustomSave.aspx";
   }
 }
 ```
@@ -53,7 +53,7 @@ Public Class CustomAdHocConfig
 
     'Add custom settings below
     Public Overrides Sub ConfigureSettings()
-        AdHocSettings.SaveReportSetNextUrl = "URL-TO-REDIRECT-TO.aspx"
+        AdHocSettings.SaveReportSetNextUrl = "CustomSave.aspx"
     End Sub
 End Class
 ```
