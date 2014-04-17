@@ -18,7 +18,7 @@ This lesson focuses on how to use the Fields tab in the Report Designer and its 
 
 This lesson focuses on how to use the Filters tab in the Report Designer and its capabilities and features in Izenda Reports and Dashboards.
 
-##[[Section 6 - Summary Tab|FAQ/UserGuides/6.0 Summary tab]]
+##[[Section 6 - Summary Tab|Guides/ReportDesign/6.0 Summary tab]]
 
 This lesson focuses on how to use the Summary tab in the Report Designer and its capabilities and features in Izenda Reports and Dashboards.
 
