@@ -4,7 +4,7 @@
 * [[Installing Izenda on Windows Server|Integration/Tutorials/Installing-Izenda]]
 * [[Installing Izenda on Mac|/Guides/Mac-Install]]
 * [[Integrating Izenda Into Your Website|Integration/Tutorials/Getting-Started]]
-* [[User Guides|http://wiki.izenda.us/FAQ/UserGuides]]
+* [[User Guides|http://wiki.izenda.us/Guides/ReportDesign/15.0-Expressions-in-Izenda]]
 * [[Developer Guides|Guides/Developer Links and Guides]]
 
 ---
