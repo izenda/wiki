@@ -31,7 +31,7 @@ There are a few different ways to apply your branding, logo, or header controls 
 
 **IFRAMES or Frames** : The Izenda reports pages may be placed inside an IFRAME or FRAME. This would need to be done for ReportDesigner.aspx, ReportList.aspx, and ReportViewer.aspx. 
 
-###[[Building Core Reports|/Guides/ReportDesigner]]
+###[[Building Core Reports|/Guides/ReportDesign]]
 
 The best way to deploy Izenda is to create a small set of base reports that users can then customize. Ideally initial reports should contain the most relevant data sources and fields. It may be beneficial to add summaries and charts to them as well. See the training section for details on how to create various types of reports. 
 
