@@ -109,7 +109,7 @@ else
 Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin(); 
 ```
 
-*Once security is fully configured, add the following code to the [[ConfigureSettings()|(http://wiki.izenda.us/Adding-Code]] method to prevent users from navigating to reports without logging in first.*
+*Once security is fully configured, add the following code to the [[ConfigureSettings()|/FAQ/ConfigureSettings]] method to prevent users from navigating to reports without logging in first.*
 
 ``` c# 
 // Require Login once security is configured. 
