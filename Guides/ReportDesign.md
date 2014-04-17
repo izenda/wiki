@@ -54,6 +54,6 @@ This lesson focuses on the Maps tab and what its capabilities and features are i
 
 This lesson focuses on the capabilities of Izenda Reports and Dashboards to create pixel-perfect legal forms in Izenda Reports and Dashboards.
 
-##[[Section 15 - Expressions in Izenda|FAQ/UserGuides/15.0 Expressions In Izenda]]
+##[[Section 15 - Expressions in Izenda|/Guides/ReportDesign/15.0-Expressions-in-Izenda]]
 
 This lesson focuses on how to use Expressions in Izenda Reports and Dashboards.

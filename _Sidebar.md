@@ -3,7 +3,7 @@
 * [[Release Notes]]
 * [[FAQ]]
 * [[Tutorials]]
-* [[Izenda User Guides|FAQ/UserGuides]]
+* [[Guide to Report Design|/Guides/ReportDesign]]
 * [[The Izenda API|/API/AdHocConfig]]
 
 ---
