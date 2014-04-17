@@ -57,7 +57,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   CultureInfo|Culture|Gets or sets the default culture setting for AdHoc. <br> *Note: Use this only in special cases. Normally, you should use the Language setting for localization. To learn more, see the links below:* <br>[[Language]] <br>[[Izenda Language Pack]]|
 |   bool|CurrentUserIsAdmin|Gets or sets whether the current user is an Admin user. Admins may see and overwrite all reports for that tenant.|
 |   bool|CurrentUserIsGlobalAdministrator|Defines if the current user has global administrator rights.|
-|   string|CurrentUserName|Gets or sets the name of the current user. This is required for multi-user security.|
+|   string|[[CurrentUserName|/API/CodeSamples/CurrentUserName]]|Gets or sets the name of the current user. This is required for multi-user security.|
 |   string[]|CurrentUserRoles|Defines groups set for the current user.|
 |   string|CurrentUserTenantId|This identifies what tenant the current user is associated with in a multi-tenant system.|
 |   CustomizeChartDelegate|CustomizeChartDelegate|Represents a method that runs before chart reports get run.|
