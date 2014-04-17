@@ -14,7 +14,7 @@ This lesson focuses on how to use the Data Sources tab in the Report Designer an
 
 This lesson focuses on how to use the Fields tab in the Report Designer and its capabilities and features in Izenda Reports and Dashboards.
 
-##[[Section 5 - Filters Tab|FAQ/UserGuides/5.0 Filters tab]]
+##[[Section 5 - Filters Tab|Guides/ReportDesign/5.0 Filters tab]]
 
 This lesson focuses on how to use the Filters tab in the Report Designer and its capabilities and features in Izenda Reports and Dashboards.
 
