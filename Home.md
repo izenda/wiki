@@ -64,7 +64,7 @@ For demonstration purposes, we will be working with the following information:
 
 ###Basic Login Scenario
 
-In this example, we will initialize some of the more common settings. This is done in the [[PostLogin()|/FAQ/PostLogin]] or [[InitializeReporting()|/FAQ/InitializeReporting]] method of your ``CustomAdHocConfig`` class that we discussed earlier.
+In this example, we will initialize some of the more common settings. This is done in the [[PostLogin()|/FAQ/PostLogin]] or [[ConfigureSettings()|/FAQ/ConfigureSettings]] method of your ``CustomAdHocConfig`` class that we discussed earlier. This example assumes your license key has already been set previously.
 
 ``` c#
 //Pass User Credentials
@@ -78,7 +78,7 @@ AdHocSettings.VisibleDataSources = new string[]  { "Products", "Orders", "Custom
 
 ###Multi-Role Scenario
 
-Now let's add some logic based on the user's role. In this example, we apply limitations based upon role
+Now let's add some logic based on the user's role. In this example, we apply limitations based on whether or not the user is an administrator, report designer, or report viewer. However, your individual roles may vary based on your security model.
  
 ``` c#
 Izenda.AdHoc.AdHocSettings.ShowSettingsButtonForNonAdmins = false; //Hides the button that redirects to the settings page for non-admins
@@ -92,10 +92,12 @@ else
     Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Products", "Orders", "Customers" }; //non-admins only see certain data sources
     Izenda.AdHoc.AdHocSettings.OutputTypes["sql"].ShowInToolbar = false; //Hides the SQL output icon on the toolbar for non-admins
     if(new List<string>(AdHocSettings.CurrentUserRoles).Contains("ReportViewer")) {
-        //Role based logic
+        AdHocSettings.ShowDesignDashboardLink = false;
+        AdHocSettings.ShowDesignLinks = false;
+        AdHocSettings.ShowDesignLinkInReportViewer = false;
     }
     else if (new List<string>(AdHocSettings.CurrentUserRoles).Contains("ReportDesigner")) {
-        //Role based logic
+        AdHocSettings.ShowMiscTab = false;
     }
 }
 ```
@@ -107,7 +109,7 @@ else
 Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin(); 
 ```
 
-*Once security is fully configured, add the following code to the [ConfigureSettings()](http://wiki.izenda.us/Adding-Code) method to prevent users from navigating to reports without logging in first.*
+*Once security is fully configured, add the following code to the [[ConfigureSettings()|(http://wiki.izenda.us/Adding-Code]] method to prevent users from navigating to reports without logging in first.*
 
 ``` c# 
 // Require Login once security is configured. 
