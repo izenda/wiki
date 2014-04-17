@@ -113,7 +113,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   bool|ExpandVisualGroupGrids|Gets or sets whether the visually grouped data details can be expanded underneath each visual grouping in the report viewer and in the report designer's preview tab. When enabled, all visual groups will be expanded automatically when you view the report.|
 |   Font|ExportFont|Gets or sets the font for the PDF and RTF outputs. This is set to a standard font for [[iTextSharp|http://sourceforge.net/projects/itextsharp/]] by default|
 |   int|ExportLimit|Gets or sets a value indicating the maximum number of rows a ReportSet may export.|
-|   string[]|ExtendedFunctions|This list allows the user specify additional SQL functions that should be included in the functions dropdown of the Fields tab. Learn more about [[UDFs|http://wiki.izenda.us/FAQ/izenda-and-udfs]].|
+|   string[]|[[ExtendedFunctions|/API/CodeSamples/ExtendedFunctions]]|This list allows the user specify additional SQL functions that should be included in the functions dropdown of the Fields tab. Learn more about [[UDFs|http://wiki.izenda.us/FAQ/izenda-and-udfs]].|
 |   NameValueCollection|FieldAliases|Gets or sets the field names(aliases) that the user sees in the Report Designer, on a per-user basis. The name of your database column is used as the key and the alias you want is the value. This is useful for localization and when custom fields are used in your application.|
 |   Unit|FieldDropDownWidth|Gets or sets the width of field dropdown on the Fields tab in the ReportDesigner.|
 |   int|FieldLimit|This setting limits the number of fields Izenda Reports allows to be used in a single report. Fields are set in the fields tab on the report designer page.|
