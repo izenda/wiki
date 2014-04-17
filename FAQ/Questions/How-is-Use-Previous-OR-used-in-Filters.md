@@ -1,5 +1,9 @@
 #How is "Use Previous OR" used in Filters?
 
+[[_TOC_]]
+
+##About
+
 The filter operator "Use Previous OR" will use the previous field's filter as its own filter. Using this technique, you can require two or more fields to be filtered with only one filter. This is helpful when your database uses composite keys or when you just want to show results filtered by field A OR field B but with only exposing one filter to the users viewing the reports.
 
 ##Example
