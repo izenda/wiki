@@ -25,15 +25,14 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
         //Creates a connection to Microsoft SQL Server
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
         Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+        //Handle user specific logic
+        AdHocSettings.CurrentUserName = (string)HttpContext.Current.Session["UserName"]; //Assumes the authenticated username is stored in a session variable
+        AdHocSettings.CurrentUserIsAdmin = (bool)HttpContext.Current.Session["IsAdmin"]; //Assumes the authenticated user's admin status is stored in a session variable
+        AdHocSettings.ShowSettingsButton = AdHocSettings.CurrentUserIsAdmin;
+        AdHocSettings.VisibleDataSources = GetUserDataSources();
         HttpContext.Current.Session["ReportingInitialized"] = true;
     }
 
-    // Configure settings
-    // Add custom global settings after setting the license key and connection string
-    public override void ConfigureSettings() {
-        //Add custom settings here
-    }
-    
     // Dynamically modify the report before execution. 
     public override void PreExecuteReportSet(Izenda.AdHoc.ReportSet reportSet) {
         // Add custom logic to run before the report is displayed     
@@ -44,14 +43,6 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
     public override void ProcessDataSet(System.Data.DataSet ds, string reportPart) {
         // Add custom logic to modify specific areas of the report
     }
-    public override void PostLogin() {
-        // Call Izenda.AdHoc.AdHocSettngs.AdHocConfig.PostLogin() from your login
-        // page after authentication is successful
-        AdHocSettings.CurrentUserName = (string)HttpContext.Current.Session["UserName"]; //Assumes the authenticated username is stored in a session variable
-        AdHocSettings.CurrentUserIsAdmin = (bool)HttpContext.Current.Session["IsAdmin"]; //Assumes the authenticated user's admin status is stored in a session variable
-        AdHocSettings.ShowSettingsButton = AdHocSettings.CurrentUserIsAdmin;
-        AdHocSettings.VisibleDataSources = GetUserDataSources();
-    }
 }
 </script>
 ```
@@ -59,13 +50,11 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
 For more a more detailed code sample, click any of the headings.
 
   * InitializeReporting() **The license key must be first!** Then add the connection string and initialize your custom AdHocConfig.
-  * ConfigureSettings() Add global settings here. Global settings will affect all users and any settings made here will override the settings.aspx page.
-  * PostLogin() Add per-user code here, such as setting the username and other per-user settings.
-  * PreExecuteReportSet() Add hidden filters and other code that needs to run before the report is displayed to the user.
-
+  * [[PreExecuteReportSet()|/FAQ/PreExecuteReportSet]] Add hidden filters and other code that needs to run before the report is displayed to the user.
+  * [[ProcessDataSet()|/FAQ/ProcessDataSet]] You can manipulate the report how you please in this method. This is useful for substituting values in your reports.
 ##How do I add custom code?
 
-To enable a custom configuration, we must put the key and connection string in the ``InitializeReporting()`` method, even if they have already been set on the **Settings.aspx** page. Otherwise, the Izenda Reports application will ignore the ``ConfigureSettings()`` method completely and only use the settings set in the **settings.aspx** page. To enable custom code: 
+To enable a custom configuration, we must put the key and connection string in the ``InitializeReporting()`` method, even if they have already been set on the **Settings.aspx** page. Otherwise, there could be complications when initializing. When adding custom code, we recommend disabling **Settings.aspx** and **Izenda.config** altogether to prevent any conflicts from occurring. Here is the process flow for enabling custom code: 
 
   * Navigate via the file system to the root directory of your Izenda Reports installation
   * Open your global.asax file in a text editor or your favorite IDE
@@ -80,10 +69,10 @@ You may now add custom code to Izenda Reports.
 
 Izenda Reports is an ASP.NET application and utilizes an object model. There are two classes upon which an integrator should primarily focus. These classes contain many settings and methods that will help you integrate our application with yours.
 
-  * **AdHocSettings**: the class that contains all of the settings for Izenda Reports. Using the Settings.aspx page will enable application-wide usage of these settings. However, they can be set on a per-user basis. Customization at the user level is fairly easy and simply involves assigning values to settings. For example:
-    * ``AdHocSettings.ShowAdminButton=false;``
-  * **AdHocConfig**: the class that enables you to call the methods and properties that you have altered from anywhere else in your code. For example, you could call the ``PostLogin()`` method on any page and it will use the singular method definition that contains your custom logic:
-    * ``AdHocSettings.AdHocConfig.PostLogin();``
+  * **AdHocSettings**: the class that contains all of the settings for Izenda Reports. Using the Settings.aspx page will enable application-wide usage of these settings. However, they can be set on a per-user basis. Customization at the user level is fairly easy but does require some experience with C♯ or VB.NET. For example:
+    * **C♯:** ``AdHocSettings.ShowAdminButton = (bool)HttpContext.Current.Session["IsAdmin"];``
+    * **VB.NET:** ``AdHocSettings.ShowAdminButton = CBool(HttpContext.Current.Session("IsAdmin"))``
+  * **AdHocConfig**: the class that enables you to call the methods and properties that you have altered from anywhere else in your code. Generally, your global.asax will inherit either ``DataBaseAdHocConfig`` or ``FileSystemAdHocConfig``.
 
 Both of these classes are customized by adding your code into the global.asax file, as shown above.
 
@@ -93,9 +82,9 @@ By putting code in the **global.asax** file, you are simply choosing to use the 
 
 In general, most custom code will be placed in the **Global.asax** file. Custom code applies to one of the following contexts:
 
-  * **Global:** Affect on the Izenda Reports application: This type of code applies to all users and all reports. This type of code should be contained in the ``ConfigureSettings()`` method in the global.asax file. [[Please see this example for details|/FAQ/ConfigureSettings]]. 
-  * **Per User Basis/Per Role Basis/etc:** This type of code applies to different users in different ways. We recommend that this type of code be contained in the ``PostLogin()`` method. Note that this method needs to be called from your application's authentication process. [[Please see this example for details|/FAQ/PostLogin]].
-  * **Per Report/Custom Processing of Reports:** Applied before execution of each report. Generally, this is used for applying hidden filters. This code needs to be placed in the ``PreExecuteReportSet()`` method. [[Please see this example for details|/FAQ/applying-hidden-filter-using-inner-query]].
+  * **Global:** This type of code applies to all users and all reports. Generally, these will be the first settings initialized in your application and will not require custom logic as they apply the same everywhere in your application. 
+  * **Per User Basis/Per Role Basis/etc:** This type of code applies to different users in different ways. You can use your own logic to implement settings at this level. Core settings of this nature that Izenda offers include [[CurrentUserName|/API/CodeSamples/CurrentUserName]], [[CurrentUserTenantId|/API/CodeSamples/CurrentUserTenantId]], [[CurrentUserRoles|/API/CodeSamples/CurrentUserRoles]], and [[CurrentUserIsAdmin|/API/CodeSamples/CurrentUserIsAdmin]].
+  * **Per Report/Custom Processing of Reports:** Applied before execution of each report. Generally, this is used for applying hidden filters. This code needs to be placed in the [[PreExecuteReportSet()/FAQ/PreExecuteReportSet]] method. [[Please see this example for details|/FAQ/applying-hidden-filter-using-inner-query]].
 
 ##Calling Izenda Reports from your application
 
