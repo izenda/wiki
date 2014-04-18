@@ -43,12 +43,12 @@ The Izenda Reports platform includes a robust and flexible security model which 
 
 For demonstration purposes, we will be working with the following information:
 
+* The user has already been authenticated with the application Izenda is embedded into
 * The username is stored in a session variable called "UserName"
 * The tenant ID is stored in a session variable called "TenantID"
 * The user's role is stored in a session variable called "Role"
 * The user's country name is stored in a session variable called "UserCountry"
 * The database contains tables and views with a field named "ClientID"
-* Reports will be created and saved to a category called "Admin Reports" 
 * A method named GetUserName() exists in global.asax that accesses the session variable "UserName"
 * A method named GetTenantID() exists in global.asax that accesses the session variable "TenantID"
 * A method named GetUserRole() exists in global.asax that accesses the session variable "Role"
@@ -64,10 +64,11 @@ For demonstration purposes, we will be working with the following information:
 
 ###Basic Login Scenario
 
-In this example, we will initialize some of the more common settings. This is done in the [[PostLogin()|/FAQ/PostLogin]] or [[ConfigureSettings()|/FAQ/ConfigureSettings]] method of your ``CustomAdHocConfig`` class that we discussed earlier. This example assumes your license key has already been set previously.
+In this example, we will initialize some of the more common settings. This is done in the ``InitializeReporting()`` method of your ``CustomAdHocConfig`` class that we discussed earlier.
 
 ``` c#
 //Pass User Credentials
+AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
 AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
 AdHocSettings.CurrentUserName = GetUserName();
 AdHocSettings.CurrentUserTenantId = GetTenantID();
@@ -100,19 +101,4 @@ else
         AdHocSettings.ShowMiscTab = false;
     }
 }
-```
-
-***Note:** The [[PostLogin()|/FAQ/PostLogin]] method needs to be called manually at the end of your authentication process after user credentials are added to the session.*
-
-``` c#
-// Call the Izenda PostLogin() from your login page after authentication is complete
-Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin(); 
-```
-
-*Once security is fully configured, add the following code to the [[ConfigureSettings()|/FAQ/ConfigureSettings]] method to prevent users from navigating to reports without logging in first.*
-
-``` c# 
-// Require Login once security is configured. 
-AdHocSettings.RequireLogin = true; 
-AdHocSettings.LoginUrl = "INSERT_YOUR_LOGIN_PAGE_HERE"; 
 ```
