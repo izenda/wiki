@@ -37,7 +37,7 @@ The best way to deploy Izenda is to create a small set of base reports that user
 
 ###[[Enforcing Security and User Limitations|Integration/Tutorials/Security]]
 
-The Izenda Reports platform includes a robust and flexible security model which inherits rich security credentials from your application. This example covers how to apply security for most common scenarios by using the [[PostLogin()|/FAQ/PostLogin]] method to pass user credentials to the Izenda API. This method is normally found in the [[CustomAdHocConfig|/Integration/Tutorials/Customizing-Izenda-Settings]] class in the Global.asax file. 
+The Izenda Reports platform includes a robust and flexible security model which inherits rich security credentials from your application. This example covers how to apply security for most common scenarios by using the ``InitializeReporting()`` method to pass user credentials to the Izenda API. This method is normally found in the [[CustomAdHocConfig|/Integration/Tutorials/Customizing-Izenda-Settings]] class in the Global.asax file. 
 
 ####Assumptions
 
