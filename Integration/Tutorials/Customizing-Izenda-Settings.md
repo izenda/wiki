@@ -85,7 +85,7 @@ In general, most custom code will be placed in the **Global.asax** file. Custom 
 
   * **Global:** This type of code applies to all users and all reports. Generally, these will be the first settings initialized in your application and will not require custom logic as they apply the same everywhere in your application. 
   * **Per User Basis/Per Role Basis/etc:** This type of code applies to different users in different ways. You can use your own logic to implement settings at this level. Core settings of this nature that Izenda offers include [[CurrentUserName|/API/CodeSamples/CurrentUserName]], [[CurrentUserTenantId|/API/CodeSamples/CurrentUserTenantId]], [[CurrentUserRoles|/API/CodeSamples/CurrentUserRoles]], and [[CurrentUserIsAdmin|/API/CodeSamples/CurrentUserIsAdmin]].
-  * **Per Report/Custom Processing of Reports:** Applied before execution of each report. Generally, this is used for applying hidden filters. This code needs to be placed in the [[PreExecuteReportSet()/FAQ/PreExecuteReportSet]] method. [[Please see this example for details|/FAQ/applying-hidden-filter-using-inner-query]].
+  * **Per Report/Custom Processing of Reports:** Applied before execution of each report. Generally, this is used for applying hidden filters. This code needs to be placed in the [[PreExecuteReportSet()|/FAQ/PreExecuteReportSet]] method. [[Please see this example for details|/FAQ/applying-hidden-filter-using-inner-query]].
 
 ##What if my global.asax is already integrated or I cannot use it?
 
