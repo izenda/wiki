@@ -66,8 +66,8 @@ _**Note:** Some of the items below are listed more than once. This is because th
 * Adding New Items to Time Period Dropdown List
 * Create Custom Field Aliases
 * Control names change randomly when deployed from development to production
-* Report Designer Page Code Samples
-* Add and Remove Report Designer Toolbar Buttons
+* [[Report Designer Page Code Samples|/API/CodeSamples/ReportDesigner]]
+* [[Add and Remove Report Designer Toolbar Buttons|/API/CodeSamples/ReportDesigner#]]
 
 ##Report Management
 
