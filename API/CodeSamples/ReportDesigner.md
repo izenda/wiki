@@ -54,7 +54,7 @@ This would hide both the **Save** and **Save As...** toolbar buttons and is more
 
 Here is a code sample that shows how to override the CSS in the Report Designer page. Essentially, you insert a ``<style> </style>`` tag as shown below after the ``</FORM>`` tag in the page. You can then override the CSS elements. In this example, it also overrides the "Preview" tab CSS for the HTML preview. The classes for the report tables in the "Preview" tab are the same CSS tables available in the [[Appearance|/Integration/Tutorials/Appearance]] section of this site. You can use any web browser's developer tools add-on (usually accessed by pressing F12 on the keyboard or ctrl+click if on a Mac with Safari developer tools enabled) to find what CSS classes you need to override. **Caveat:** this will only override them while in the "ReportDesigner.aspx" page.
 
-```aspx
+```asp
 <FORM id="Form1" method="post" runat="server">
 <cc1:adhocreportdesigner id=queryBuilder runat="server">
 </cc1:adhocreportdesigner>
