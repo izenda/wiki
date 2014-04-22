@@ -48,6 +48,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How do I add Fixed Unit Conversions in Izenda, so users can easily access them?|FAQ/fixed-unit-conversions]]
 - [[How does filtering in dashboards work?|FAQ/filtering-in-dashboards]]
 - [[What CSS will be Included in My Report?|FAQ/css-in-reports]]
+- [[How Do I Use a Blank Column in My Exports?|Guides/Blank-Column-in-Export]]
 
 ###Security
 
