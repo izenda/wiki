@@ -36,6 +36,8 @@ An example of how to set custom CSS:
     * [[TabCssUrl|/API/CodeSamples/TabsCssUrl]]
     * [[ToolbarCssUrl|/API/CodeSamples/ToolbarCssUrl]]
     * [[HeaderStyle|/API/CodeSamples/HeaderStyle]]
+  * enter the new absolute URLs of the CSS files
+  * fully clear your cache and restart the application
   
 After resetting and clearing the cache, the CSS changes should reflect in Izenda Reports.
 
