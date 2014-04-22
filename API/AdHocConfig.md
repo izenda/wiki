@@ -4,7 +4,7 @@
 
 ##About
 
-The AdHocConfig class is where Izenda Reports will perform all of its initialization and configuration. You can also override various methods used by the base class in order to control various aspects of the reporting application. At a minimum, you will probably need to override the [[ConfigureSettings()|/FAQ/ConfigureSettings]] and [[PostLogin()|/FAQ/PostLogin]] methods. This will work for most cases, but we will provide a template with a full list of overridden methods below. Another core part of the Izenda API is the [[AdHocSettings|/API/CodeSamples/AdHocSettings]] class. This code should be placed in the Global.asax file of your web site.
+The AdHocConfig class is where Izenda Reports will perform all of its initialization and configuration. You can also override various methods used by the base class in order to control various aspects of the reporting application. At a minimum, you will probably need to override the [[ConfigureSettings()|/FAQ/ConfigureSettings]] and [[PostLogin()|/FAQ/PostLogin]] methods. This will work for most cases, but we will provide a template with a full list of overridden methods below. Another core part of the Izenda API is the [[AdHocSettings|/API/AdHocSettings]] class. This code should be placed in the Global.asax file of your web site.
 
 ##C♯ Example
 
