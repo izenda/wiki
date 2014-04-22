@@ -64,7 +64,7 @@ For demonstration purposes, we will be working with the following information:
 
 ###Basic Login Scenario
 
-In this example, we will initialize some of the more common settings. This is done in the ``InitializeReporting()`` method of your ``CustomAdHocConfig`` class that we discussed earlier. You will have to call the ``InitializeReporting`` method after your user has been authenticated.
+In this example, we will initialize some of the more common settings. This is done in the ``InitializeReporting()`` method of your ``CustomAdHocConfig`` class that we discussed earlier. You will have to call the ``InitializeReporting()`` method after your user has been authenticated.
 
 ``` c#
 //Pass User Credentials
