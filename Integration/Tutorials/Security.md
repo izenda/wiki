@@ -16,22 +16,21 @@ Type of security|Example|Implementation Details
 
 ###Login Security
 
-To enable basic login security, add the following code to the PostLogin() method of your CustomAdHocConfig class. This is normally found in Global.asax file. The code should look up user credentials from your application, database or windows authentication and provide it to the Izenda Reports API. Furthermore, specifying your login page will ensure that users do not see reports without being logged in.
+To enable basic login security, add the following code to the ``InitializeReporting()`` method of your CustomAdHocConfig class. This is normally found in Global.asax file. The code should look up user credentials from your application, database or windows authentication and provide it to the Izenda Reports API. Furthermore, specifying your login page will ensure that users do not see reports without being logged in. If a login page is specified this way, you should ensure that ``InitializeReporting()`` is called again after the login process to ensure the user is properly authenticated. 
 
 ```c#
-public override void PostLogin()
+public static void InitializeReporting()
 {  
-	Izenda.AdHoc.AdHocSettings.CurrentUserName = LookupUserName();  
-	Izenda.AdHoc.AdHocSettings.CurrentUserIsAdmin = LookupAdminRole();  
-	AdHocSettings.RequireLogin = true;  
-	AdHocSettings.LoginUrl = "/App/Login.aspx";
+        AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
+        AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
+	AdHocSettings.CurrentUserName = LookupUserName();  
+	AdHocSettings.CurrentUserIsAdmin = LookupAdminRole();  
+        AdHocSettings.CurrentUserTenantId = GetTenantID();
+	AdHocSettings.CurrentUserRoles = new string[] {(string)HttpContext.Current.Session["Role"]};
+        AdHocSettings.VisibleDataSources = new string[]  { "Products", "Orders", "Customers" }; 
+        AdHocsettings.LoginPage = "YOUR_LOGIN_PAGE.aspx";
+        AdHocSettings.RequireLogin = true;
 }
-```
-
-The method will need to be called from your login process with the following line.
-
-```c#
-Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin()
 ```
 
 ###Data Sources
@@ -60,54 +59,62 @@ Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin()
 
 Once the login security is implemented, users can set the shared and read only status of a report. If a report is shared, other members of that tenant will be able to see it. If it is marked read-only, users will be able to load the report, but any modifications will need to be saved as a different report name. These limitations do not apply to users with admin rights enabled via CurrentUserIsAdmin.
 
-```c#
-public override void PostLogin()  
-{      
-	Izenda.AdHoc.AdHocSettings.CurrentUserName = LookupUserName();
-}
-```
+![Share and read only](http://wiki.izenda.us/Integration/Share-and-Read_only.png)
 
-**This is a screen shot of the Misc tab in the Report Designer showing the "Shared" & "Read Only" checkboxes that a user can select on a per report basis.**
-
-![](http://wiki.izenda.us/Integration/Share-and-Read_only.png)
+**A screenshot of the Misc tab in the Report Designer showing the "Shared" & "Read Only" checkboxes that a user can select on a per report basis.**
 
 ###Custom Report Control
 
 To apply additional constraints to which users see what reports, it is necessary to override the ListReports method. See Report Management for additional details.
 
-```c#
-public override Izenda.AdHoc.ReportInfo[] ListReports()
-{ Return filtered list}
+```csharp
+public override ReportInfo[] FilteredListReports() {
+      ReportInfo[] reports = ListReports(); //Get the list of loaded reports. Can be overridden or used as-is
+      ArrayList result = new ArrayList();
+
+      foreach (ReportInfo info in reports) {
+        if (info.Category == "Hidden reports")
+          continue;
+        ReportSet reportSet = LoadFilteredReportSet(info.Name);
+        if (reportSet != null && reportSet.CanBeLoaded)
+          result.Add(info);
+      }
+      return (ReportInfo[])result.ToArray(typeof(ReportInfo));
+    }
 ```
 
 ###Overwriting and Deleting Reports</a>
 
-The API allows control of deleting or modifying reports. Reports can be accessed as Read-Only and can not be modified or deleted. 
+The API allows control of deleting or modifying reports. Reports marked Read-Only can not be modified or deleted even if the settings below are enabled. 
 
 ```c#
- public override void ConfigureSettings()
+ public static void InitializeReporting()
 {  
 	AdHocSettings.AllowOverwritingReports = true;           
 	AdHocSettings.AllowDeletingReports = true;
 }
 ```
 
-###Altering Capabilities by Role
+###Altering Capabilities by Role and Tenant ID
 
-The API allows for over a hundred features of Izenda reports to be hidden or altered based on the user's role. All settings get applied on a per-user basis. 
+The versatility of Izenda reports allows for all settings to be applied on a per-user basis. The only limit to the customization level of Izenda's settings is your relevant coding experience, since this does require basic knowledge of either VB.NET or C#. 
 The following code applies properties like the connection string, where reports are stored and visibility of the modify button modify button based on the user.
 
 ```c#
-public override void PostLogin()
+public static void InitializeReporting()
 {  
+        //GetConnectionForUser, GetUserCompany, GetUserDepartment, GetUserRole, and GetTables are all user-defined methods in global.asax
+        AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
 	//Set connection string per-tenant  
 	AdHocSettings.SqlServerConnectionString = GetConnectionForUser();  
 	//Set the stored reports file folder path per-tenant  
 	AdHocSettings.ReportsPath="\\"   GetUserCompany()   "\\"     
-	GetUserDepartment();      
+	AdHocSettings.CurrentUserTenantId = GetUserDepartment(); //Organizational level security    
+        AdHocSettings.CurrentUserRoles = new string[]{GetUserRole()}; //Role based security
 	//Set table and view access  
-	AdHocSettings.VisibleDataSources = GetTables(GetUserRole);      
-	if (GetUserRole()=="PowerUser")  
+        
+	AdHocSettings.VisibleDataSources = GetTables(AdHocSettings.CurrentUserRoles);
+	if (AdHocSettings.CurrentUserRoles.Contains("PowerUser"))  //User level security
 	{    
 		AdHocSettings.ShowModifyButton=true;    
 		AdHocSettings.AllowDeletingReports=false;      
@@ -121,13 +128,15 @@ The method will need to be called from your login process with the following lin
 	Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin()
 ```
 
-###Field/Record or Tenant Level Security
+###Field/Record Level Security
 
 Many applications limit users to specific records based on their credentials. The HiddenFilters API Setting may be used to add hidden filters to reports which limit the results based on the user, their credentials and their tenant. In this example, anyone reporting on the AcmeWidgetSales view will be limited to data in their TerritoryID.
 
 ```c# 
-public override void PostLogin()
+public static void InitializeReporting()
 {
+        AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
+        AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
 	AdHocSettings.HiddenFilters["AccountID"] = AccountID;
 		//Set the account tenancy
 	if (!Izenda.AdHoc.AdHocSettings.CurrentUserIsAdmin)  
