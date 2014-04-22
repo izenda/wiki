@@ -6,7 +6,7 @@
 
 Here we will provide snippets of programming code in various languages applicable to Izenda Reports and Dashboards that will allow you to modify and enhance your reporting solution.
 
-***Note:** Some of the items below are listed more than once. This is because they apply to more than one area of Izenda Reports.*
+_**Note:** Some of the items below are listed more than once. This is because they apply to more than one area of Izenda Reports._
 
 ##Login Page
 
