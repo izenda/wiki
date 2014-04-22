@@ -13,25 +13,39 @@ Here is a friendly set of links to videos, download pages and reference material
 
 ##Developer Guides
 
+Here we will provide programming resources, code snippets, and setup tutorials for users who wish to delve into the Izenda API
+
+###Quick Reference Guides
+
 * [[IIS7 Installation Video|http://www.izenda.com/site/kb/uploads/media/videos/vistainstallvideo.zip]]
 * [Installation Guide](/Integration/Tutorials/Installing-Izenda)
-* [[API Settings List|/API/AdHocSettings]]
 * [[Security Guide|/Integration/Tutorials/Security]]
-* [MDX Queries](http://www.izenda.com/Site/KB/CodeSamples/Pulling-Data-From-Analysis-Services-Cubes)
-* [[Overriding AdHocConfig|/API/AdHocConfig]]
-* [Using Constraints](http://www.izenda.com/Site/KB/CodeSamples/Using-constraints)
-* [Basic Security Sample](http://www.izenda.com/Site/KB/CodeSamples/Basic-security-sample?)
-* [Switching Databases Via Code](http://www.izenda.com/Site/KB/CodeSamples/Switching-databases-via-code?) 
-* [Adding Code](http://www.izenda.com/Site/KB/Integration/Adding-Code?)
-* [How do I enable Basic Report Sharing?](/FAQ/Questions/How-do-I-enable-basic-report-sharing)
-* [Using Share With Rights and Roles](http://www.izenda.com/Site/KB/FAQ/Using-Share-with-rights-roles-properties-in-Izenda-Reports-6-?Keywords=misc+tab)
-* [How To Post-Process Data](/FAQ/ProcessDataSet)
+* [[Basic Security Sample|Home#Basic-Login-Scenario]]
+* [[Adding Code|Integration/Tutorials/Customizing-Izenda-Settings]]
 * [[OData|Guides/OData]]
-* [[Izenda Fusion|/Guides/Izenda-AdHoc-Driver]]
-* [[Layered Subtotaling|Guides/LayeredSubtotaling]]
-* [[Using Stored Procedures (SPs) In Izenda 6|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
-* [[Hiding Fields in Filters|Guides/Hiding-Fields-In-Filters]]
-* [[Blank Column in Export|Guides/Blank-Column-in-Export]]
-* [[Dynamically Creating Reports Via the API|/API/CodeSamples/DynamicReportCreation]]
-* [[Customize Chart Colors|Guides/Customize-Chart-Colors]]
+* [[Using the Izenda Fusion Driver|/Guides/Izenda-AdHoc-Driver]]
+
+###C♯/VB.NET Guides
+
+* [[Izenda AdHoc Base Class|/API/AdHocConfig]]
+* [[API Settings List|/API/AdHocSettings]]
 * [[Setting Timeouts|Guides/Timeouts]]
+* [How To Post-Process Data](/FAQ/ProcessDataSet)
+* [Enabling Report Sharing?](/FAQ/Questions/How-do-I-enable-basic-report-sharing)
+* [[Layered Subtotaling|Guides/LayeredSubtotaling]]
+* [[Hiding Fields in Filters|Guides/Hiding-Fields-In-Filters]]
+* [Using Share With Rights and Roles](/API/CodeSamples/)
+* [[Dynamically Creating Reports Via the API|/API/CodeSamples/DynamicReportCreation]]
+* [Switching Databases Via Code](http://www.izenda.com/Site/KB/CodeSamples/Switching-databases-via-code?) 
+
+
+###Javascript Guides
+
+* [[Customize Chart Colors|Guides/Customize-Chart-Colors]]
+
+###CSS Guides
+
+###SQL Guides
+
+* [MDX Queries](http://www.izenda.com/Site/KB/CodeSamples/Pulling-Data-From-Analysis-Services-Cubes)
+* [[Using Stored Procedures (SPs) In Izenda 6|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
