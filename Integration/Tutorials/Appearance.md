@@ -16,7 +16,7 @@ An example of how to set custom CSS:
     * [CSS.ZIP](http://wiki.izenda.us/Integration/Appearance/css.zip)
   * edit the CSS files, **but do not change the selector names or the filenames**
   * save the edited files to your server where they can be accessed via absolute urls
-  * navigate to the settings.aspx page and click the "Images & CSS" tab shown below **-OR-** you can define them [[programatically|]].
+  * navigate to the settings.aspx page and click the "Images & CSS" tab shown below **-OR-** you can define them [[programatically|http://wiki.izenda.us/Integration/Tutorials/Appearance#Programatically]].
 
     ![](http://wiki.izenda.us/Appearance/ImagesCssTab.png)
   * enter the new absolute URLs of the CSS files
