@@ -97,7 +97,7 @@ _**Note:** Some of the items below are listed more than once. This is because th
 * Pulling Data From Analysis Services Cubes
 * Combining Multiple Event Based Fields with UNION
 * Organizing Dates by Week
-* 1 Million Record View
+* [[1 Million Record View|/API/CodeSamples/1 Million Record View]]
 
 ##Appearance
 
