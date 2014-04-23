@@ -6,7 +6,7 @@
 
 Here we will show you how to easily add a new formatting option to the "Formats" dropdown menu on the Fields tab of the Report Designer. These should be handled in your ``InitializeReporting()`` method in your global.asax.
 
-##Method 1
+##Example 1 - Bold
 
 In this example, we will quickly add a new format option to the list called "Bold". New formats added this way will be available for every type of data and will not override the existing built-in formats for each type of data. The symbol {0} acts as a token to represent the data that is returned by the query.
 
@@ -14,7 +14,7 @@ In this example, we will quickly add a new format option to the list called "Bol
     AdHocSettings.Formats.Add("Bold", "<strong>{0}</strong>");
 ```
 
-##Method 2
+##Example 2 - Scientific
 
 We can also use an Izenda Format object as an argument. Below is the method of adding a formatting option called "Scientific" to the list of formats. Items added this way can be made available for specific **SqlTypeGroups** and will not override any of the existing formats.
 
@@ -22,6 +22,26 @@ We can also use an Izenda Format object as an argument. Below is the method of a
     SimpleFormat scientificFormat = new SimpleFormat("Scientific", "{0:E}", new SqlTypeGroup[] {SqlTypeGroup.Real, SqlTypeGroup.Numeric});
     AdHocSettings.Formats.Add("Scientific", scientificFormat);
 ```
+
+##Example 3 - International Date Formats
+
+In this example, we show how to set the formats when using an International Date format. This example is for the European Date format and needs to be placed in the ``InitializeReporting()`` method of your global.asax file. 
+
+```csharp
+public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
+{
+	// Configure settings
+
+	// Add Custom Setting below license key and connection string setting
+	public override void ConfigureSettings()
+	{
+		AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
+		AdHocSettings.Formats.Add("EuroDate", "{0:dd/MM/yyyy}");
+	}
+}
+```
+
+You can use this example as a template for other date formats as well.
 
 ##Results
 
