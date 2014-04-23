@@ -17,12 +17,11 @@ _**Note:** Some of the items below are listed more than once. This is because th
 
 * Secure https on a load balancer
 * How can I apply a hidden filter using an inner query
-* ProcessEqualsSelectList()
-* CustomizeChart()
+* [[ProcessEqualsSelectList()|/FAQ/ProcessEqualsSelectList]]
+* [[CustomizeChart()|/FAQ/CustomizeChart]]
 * Introduction to the Global.asax file
-* PostLogin()
-* Session_Start()
-* ConfigureSettings()
+* [[InitializeReporting()|/FAQ/InitializeReporting]]
+* [[Session_Start()|/FAQ/Session_Start]]
 * Add Formatting to Grid or New Formats to Formats Dropdown	
 
 ##General
