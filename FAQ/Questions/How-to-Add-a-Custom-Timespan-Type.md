@@ -15,6 +15,8 @@ if (!AdHocSettings.CustomTimePeriods.ContainsKey("Lunar Cycle")) {
 
 ##Modifying An Existing Time Period
 
+You may at any time modify your existing set of custom time periods. You cannot, however, modify built-in time periods this way.
+
 ```csharp
       CustomTimePeriod ctp = AdHocSettings.CustomTimePeriods["Lunar Cycle"];
       ctp.StartDate = DateTime.Now + ctp.Period; //passed by reference so the original list will update
