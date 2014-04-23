@@ -63,7 +63,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How do I force a user to click on 'Update Results' before showing any data?|FAQ/force-update-results-on-report]]
 - [[How do I upgrade/download a new file-set?|FAQ/Download and Update Resources]]
 - [[How to upload CSV data to SQL Server|FAQ/upload-csv-data-to-sql-server]]
-- [[DatabaseAdHocConfig Table Structure|FAQ/databaseadhocconfig-table-structure]]
+- [[DatabaseAdHocConfig Table Structure|/FAQ/IzendaAdHocReports-table]]
 - [[How are Thumbnails generated for the Izenda ReportList?|FAQ/thumbnail-generation-for-reportlist]]
 - [[Understanding Izenda Print Modes|FAQ/understanding-izenda-print-modes]]
 - [[What are the query string keys for rs.aspx?|http://wiki.izenda.us/FAQ/Questions/Query-String-Keys-for-rs.aspx]]
