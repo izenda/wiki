@@ -15,6 +15,6 @@ In this example, we will quickly add a new format option to the list called "Bol
 We can also use an Izenda Format object as an argument. Below is the method of adding a formatting option called "Scientific" to the list of formats. Items added this way can be made available for specific **SqlTypeGroups** and will not override any of the existing formats.
 
 ```csharp
-      SimpleFormat scientificFormat = new SimpleFormat("Scientific", "{0:E}", new SqlTypeGroup[] {SqlTypeGroup.Real, SqlTypeGroup.Numeric});
-      AdHocSettings.Formats.Add("Scientific", scientificFormat);
+    SimpleFormat scientificFormat = new SimpleFormat("Scientific", "{0:E}", new SqlTypeGroup[] {SqlTypeGroup.Real, SqlTypeGroup.Numeric});
+    AdHocSettings.Formats.Add("Scientific", scientificFormat);
 ```
