@@ -21,6 +21,24 @@ CREATE TABLE [dbo].[IzendaAdHocReports] (
 );
 ```
 
+##Oracle Table Script
+
+```sql
+BEGIN
+    CREATE TABLE IzendaAdHocReports
+    ( Name VARCHAR(255) NOT NULL,
+      Xml NCLOB,
+      CreatedDate DATE,
+      ModifiedDate DATE,
+      TenantID VARCHAR(255),
+      IzendaAdHocReportsID INTEGER,
+      ReportSourceID INTEGER,
+      Thumbnail BLOB
+    );
+    COMMIT;
+END;
+```
+
 ##Izenda FORMS plugin
 
 The Izenda [[FORMS|/Guides/ReportDesign/14.0-Izenda-FORMS]] plugin uses a unique process to generate the pixel-perfect forms that the report viewers see. To do this, it needs a special column in the database. Here is the table script with the new column added.
@@ -41,11 +59,42 @@ CREATE TABLE [dbo].[IzendaAdHocReports] (
 );
 ```
 
-###Alter table script
+###Oracle SQL table script
+
+```sql
+BEGIN
+    CREATE TABLE IzendaAdHocReports
+    ( Name VARCHAR(255) NOT NULL,
+      Xml NCLOB,
+      CreatedDate DATE,
+      ModifiedDate DATE,
+      TenantID VARCHAR(255),
+      IzendaAdHocReportsID INTEGER,
+      Form NCLOB,
+      ReportSourceID INTEGER,
+      Thumbnail BLOB
+    );
+    COMMIT;
+END;
+```
+
+###MSSQL Alter table script
 
 And here is an SQL statement to add the field to an existing table.
 
 ```sql
 ALTER TABLE [dbo].[IzendaAdHocReports]
 ADD [Form] NVARCHAR (MAX)  NULL
+```
+
+###Oracle Alter table script
+
+Here is the Oracle equivalent of the above alter table script
+
+```sql
+BEGIN
+ALTER TABLE IzendaAdHocReports 
+ADD (Form NCLOB);
+COMMIT;
+END;
 ```
