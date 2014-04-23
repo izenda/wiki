@@ -1,8 +1,8 @@
-#How do I use ExtendedFormats for European Date Formats?
+#How do I Use Custom Date Formats?
 
 [[_TOC_]]
 
-In this example, we show how to set the formats when using an International Date format. This example is for the European Date format and needs to be placed in the ConfigureSettings() section of your global.asax file. 
+In this example, we show how to set the formats when using an International Date format. This example is for the European Date format and needs to be placed in the ``InitializeReporting()`` method of your global.asax file. 
 
 ```csharp
 public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
@@ -13,7 +13,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
 	public override void ConfigureSettings()
 	{
 		AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
-		AdHocSettings.Formats["EuroDate"] = "{0:dd/MM/yyyy}";
+		AdHocSettings.Formats.Add("EuroDate", "{0:dd/MM/yyyy}");
 	}
 }
 ```
