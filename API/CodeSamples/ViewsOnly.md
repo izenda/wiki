@@ -9,7 +9,9 @@ Gets or sets whether the data sources will include only views or will include bo
 _**Note**: ViewsOnly will NOT work if you also use VisibleDataSources._
 
 Use cases: 
+
 1) Tables and fields may have not very user-friendly names. Creating Views with user-friendly names can make the process of working with the database much easier. 
+
 2) You may not want to allow users to work with tables in your database because they may contain sensitive information or consist of raw data useless for reports. Creating Views with proper data aggregation may help you to build better reports with relevant data. 
 
 **Troubleshooting:**
