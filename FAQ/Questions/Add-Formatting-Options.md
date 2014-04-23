@@ -22,3 +22,13 @@ We can also use an Izenda Format object as an argument. Below is the method of a
     SimpleFormat scientificFormat = new SimpleFormat("Scientific", "{0:E}", new SqlTypeGroup[] {SqlTypeGroup.Real, SqlTypeGroup.Numeric});
     AdHocSettings.Formats.Add("Scientific", scientificFormat);
 ```
+
+##Results
+
+Below are screenshots of the results. The one directly below this text shows the OrderID field (a number field) with both of our new functions listed.
+
+![Extended Formats](/FAQ/Questions/Add-Formatting-Options/extended_formats.png)
+
+And here is the Freight field formatting options. Notice that we did not specify the "Money" type in our **SqlTypeGroups** for the Scientific format. Therefore, it is not listed in this dropdown but "Bold" still is.
+
+![Extended Formats 2](/FAQ/Questions/Add-Formatting-Options/extended_formats_2.png)
