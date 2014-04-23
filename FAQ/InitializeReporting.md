@@ -4,7 +4,7 @@
 
 ##About
 
-The ``InitializeReporting()`` method is a static context method that Izenda uses to initialize settings and set various configuration options. This should be called after your user has logged in to your application in order to set user-level settings. Since it's a static method, it can be called from anywhere and has global scope throughout your application. This method should be placed within the global.asax file where you have inherited either [[FileSystemAdHocConfig|/FAQ/Storing-Reports#File-System-Mode]] or [[DatabaseAdHocConfig|/FAQ/Storing-Reports#Database-Mode]].
+The ``InitializeReporting()`` method is a static context method that Izenda uses to initialize settings and set various configuration options. This should be called after your user has logged in to your application in order to set user-level settings. Since it's a static method, it can be called from anywhere and has global scope throughout your application. This method should be placed within the global.asax file where you have inherited either [[FileSystemAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]] or [[DatabaseAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]].
 
 ##Global.asax(C♯)
 
