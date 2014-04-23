@@ -38,21 +38,19 @@ public static void InitializeReporting()
 The API allows control over which data sources a user sees based on their credentials. In the following example, members of the "Sales" role would see additional data sources that normal users would not. Any reports that utilize these data sources would only be visible to members of the sales role.
 
 ```c#
-public override void PostLogin()
-{  
-AdHocSettings.VisibleDataSources = new string[] {"Products"};         
-	if(IsInRole("Sales"))  
-	{
-		AdHocSettings.VisibleDataSources = new string[]
-		{"Products", "Categories", "Orders"};   
-	}
-}
+ 
+    AdHocSettings.VisibleDataSources = new string[] {"Products"};         
+    if(IsInRole("Sales"))  
+    {
+        AdHocSettings.VisibleDataSources = new string[]
+        {"Products", "Categories", "Orders"};   
+    }
 ```
 
 The method will need to be called from your login process with the following line.
 
 ```c#
-Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin()
+global_asax.CustomAdHocConfig.InitializeReporting();
 ```
 
 ###User Driven Report Sharing
@@ -88,11 +86,8 @@ public override ReportInfo[] FilteredListReports() {
 The API allows control of deleting or modifying reports. Reports marked Read-Only can not be modified or deleted even if the settings below are enabled. 
 
 ```c#
- public static void InitializeReporting()
-{  
 	AdHocSettings.AllowOverwritingReports = true;           
 	AdHocSettings.AllowDeletingReports = true;
-}
 ```
 
 ###Altering Capabilities by Role and Tenant ID
@@ -120,12 +115,6 @@ public static void InitializeReporting()
 		AdHocSettings.AllowDeletingReports=false;      
 	}
 }
-```
-
-The method will need to be called from your login process with the following line.
-
-```c#
-	Izenda.AdHoc.AdHocSettings.AdHocConfig.PostLogin()
 ```
 
 ###Field/Record Level Security
