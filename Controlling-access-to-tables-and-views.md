@@ -1,4 +1,4 @@
-To control access to the data sources you can use [AdHocSettings.ViewsOnly](http://www.izenda.com/Site/CodeSample/CodeSample.aspx?setting=ViewsOnly) setting or [AdHocSettings.VisibleDataSources](http://www.izenda.com/Site/CodeSample/CodeSample.aspx?setting=VisibleDataSources) property.
+To control access to the data sources you can use [[AdHocSettings.ViewsOnly|/API/CodeSamples/ViewsOnly]] setting or [[AdHocSettings.VisibleDataSources|/API/CodeSamples/VisibleDataSources]] property.
 
 If the ``ViewsOnly`` is set to _true_: only Views will be visible at the Data Sources tab.
 
