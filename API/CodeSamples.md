@@ -92,7 +92,7 @@ _**Note:** Some of the items below are listed more than once. This is because th
 * LEFT OUTER and FULL OUTER joins
 * Different JOIN types and Filters
 * Configure LEFT OUTER JOIN filters
-* Add "Forms" column to the IzendaAdHocReports table manually
+* [[Add "Forms" column to the IzendaAdHocReports table manually|/FAQ/IzendaAdHocReports-table]]
 * Create IzendaAdHocReports table manually
 * Pulling Data From Analysis Services Cubes
 * Combining Multiple Event Based Fields with UNION
