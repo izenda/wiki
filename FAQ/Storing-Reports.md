@@ -4,7 +4,7 @@
 
 ##Choosing Database Mode or Filesystem Mode
 
-Izenda Reports features two methods for saving reports, file system mode and database mode. The default is the Filesystem mode. The table shown will help you choose whether or not you want to use database or filesystem mode. You should choose the mode that best suits your company's needs.
+Izenda Reports features two methods for saving reports: file system mode and database mode. The default is the Filesystem mode. The table shown will help you choose whether or not you want to use database or filesystem mode. You should choose the mode that best suits your company's needs.
 
 |Database|Filesystem|
 |--------|----------|
