@@ -8,6 +8,7 @@ This is a simple authentication function you can place in your Login page (Login
 
 Normally, logins should be pulled from the database, active directory, or whatever system your organization uses for storing user info. We also support using your company's existing login page in place of our example login page. If nothing is available, here is a simple method to provide basic authentication. Also included is the callback function used by **btnLogin**'s "OnClick" property.
 
+```csharp
 Bool AuthenticateUser(string userName, string password, out bool isAdmin)
 {            
 	System.Collections.Hashtable Passwords = new System.Collections.Hashtable();
@@ -49,3 +50,4 @@ void btnLogin_Click(object sender, EventArgs args)
         else
             loginValidator.IsValid = false; 
 }
+```
