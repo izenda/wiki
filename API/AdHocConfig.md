@@ -22,6 +22,9 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
         //Initialize System      
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
+	AdHocSettings.AllowOverwritingReports = true;
+	AdHocSettings.AllowDeletingReports = true;
+        //After initializing, set global settings applicable to all users
         AdHocSettings.GenerateThumbnails = True;
         AdHocSettings.DashboardViewer = "Dashboards.aspx";
         AdHocSettings.ShowSimpleModeViewer = True;
@@ -30,22 +33,8 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
         AdHocSettings.ReportCssUrl = "Resources/css/Report.css";
         AdHocSettings.ShowBetweenDateCalendar = True;
         AdHocSettings.AdHocConfig = New CustomAdHocConfig();
-        HttpContext.Current.Session("ReportingInitialized") = True;
 
-    }
-    // Store all global code here that applies to all users. 
-    public override void ConfigureSettings()
-    {
-	AdHocSettings.AllowOverwritingReports = true;
-	AdHocSettings.AllowDeletingReports = true;
-    }
-
-    // AdHocSettings.AdHocConfig.PostLogin() must be called from 
-    // your application's login page after the user is authenticated
-    // Place ALL user-specific or role-specific code here
-    public override void PostLogin()
-    {
-	//Pass User Credentials
+	//Pass User Credentials. Set user-specific settings after we initialize the user
 	AdHocSettings.CurrentUserName = HttpContext.Current.Session["UserName"] as string;
 	AdHocSettings.CurrentUserIsAdmin = true;
 	AdHocSettings.VisibleDataSources = new string[] { "Orders", "Employees", "AdminData" };
@@ -58,7 +47,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
 	if (!role.Equals("Administrator"))
 	{
 		// Limit user to the orders table    
-		AdHocSettings.VisibleDataSources = new string[] { "Orders" };
+		AdHocSettings.VisibleDataSources = new string[] { "Orders" }; //Will override the previous setting
 		// Prevent the user from seeing private reports and overwriting shared reports
 		// Disable access to settings button.
 		AdHocSettings.CurrentUserIsAdmin = false;
@@ -66,6 +55,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
 		AdHocSettings.ShowSettingsButton = false;
 		AdHocSettings.HiddenCategories = new string[] { "Admin Reports", "Sensitive Reports" };
 	}
+        HttpContext.Current.Session("ReportingInitialized") = True;
     }
 
     // Gets a list of ReportInfo objects for all loadable reports stored.
@@ -274,6 +264,9 @@ public override void ProcessDataSet(DataSet ds, string reportPart)
       'Initialize System
       AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
       AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
+      'After initializing, set global settings applicable to all users
+      AdHocSettings.AllowOverwritingReports = True
+      AdHocSettings.AllowDeletingReports = True
       AdHocSettings.GenerateThumbnails = True
       AdHocSettings.DashboardViewer = "Dashboards.aspx"
       AdHocSettings.ShowSimpleModeViewer = True
@@ -283,19 +276,8 @@ public override void ProcessDataSet(DataSet ds, string reportPart)
       AdHocSettings.ShowBetweenDateCalendar = True
       AdHocSettings.AdHocConfig = New CustomAdHocConfig()
       HttpContext.Current.Session("ReportingInitialized") = True
-    End Sub
 
-'Store all global code here that applies to all users. 
-    Public Overrides Sub ConfigureSettings()
-      AdHocSettings.AllowOverwritingReports = True
-      AdHocSettings.AllowDeletingReports = True
-    End Sub
-    
-    'AdHocSettings.AdHocConfig.PostLogin() must be called from 
-    'your application's login page after the user is authenticated
-    'Place ALL user-specific or role-specific code here
-    Public Overrides Sub PostLogin()
-      'Pass User Credentials
+      'Pass User Credentials. Set user-specific settings after we initialize the user
       AdHocSettings.CurrentUserName = HttpContext.Current.Session("UserName").ToString()
       AdHocSettings.CurrentUserIsAdmin = True
       AdHocSettings.VisibleDataSources = New String() {"Orders", "Employees", "AdminData"}
