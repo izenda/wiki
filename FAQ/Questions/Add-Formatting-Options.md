@@ -28,7 +28,6 @@ We can also use an Izenda Format object as an argument. Below is the method of a
 In this example, we show how to set the formats when using an International Date format. This example is for the European Date format.
 
 ```csharp
-    AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     AdHocSettings.Formats.Add("EuroDate", "{0:dd/MM/yyyy}");
 ```
 
