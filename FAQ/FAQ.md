@@ -9,25 +9,26 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ###API
 
-- [[I'm Getting #DIV/0 In My Report Viewer|FAQ/Divide By Zero]]
-- [[Izenda API Tip: Constraints & Joins Best Practices|FAQ/Izenda-API-Tip-Constraints-Joins-Best-Practices]]
-- [[Izenda API Tip: Hidden Columns|FAQ/Izenda-API-Tip-Hidden-Columns]]
-- [[ListReports()|FAQ/ListReports]]
-- [[LoadReportSet()|FAQ/LoadReportSet]]
-- [[PostLogin()|FAQ/PostLogin]]
-- [[PreExecuteReportSet()|FAQ/PreExecuteReportSet]]
-- [[ProcessEqualsSelectList()|FAQ/ProcessEqualsSelectList]]
-- [[ProcessDataSet()|FAQ/ProcessDataSet]]
-- [[Switching databases via code|FAQ/switching-databases-via-code]]
+- [[What Are All the Settings Izenda Offers?|/API/AdHocSettings]]
+- [[What Are the Best Practices for Constraints & Joins?|FAQ/Izenda-API-Tip-Constraints-Joins-Best-Practices]]
+- [[Can I Use Hidden Columns?|FAQ/Izenda-API-Tip-Hidden-Columns]]
+- [[What Is the ListReports() method?|FAQ/ListReports]]
+- [[What Is the LoadReportSet() method?|FAQ/LoadReportSet]]
+- [[What Is the PostLogin() method?|FAQ/PostLogin]]
+- [[What Is the PreExecuteReportSet() method?|FAQ/PreExecuteReportSet]]
+- [[What Is the ProcessEqualsSelectList() method?|FAQ/ProcessEqualsSelectList]]
+- [[What Is the ProcessDataSet() method?|FAQ/ProcessDataSet]]
+- [[How Do I Programatically switch databases?|FAQ/switching-databases-via-code]]
 - [[How do I hide the settings page button or aspx page from users?|FAQ/hide-settings-page-button-or-aspx-page]]
 - [[How do I integrate with my login page?|FAQ/integrate-login-page]]
 - [[How do I implement Field-Level Security|FAQ/Field-Level-Security-Integration]]
-- [[Izenda and UDFs (User Defined Functions)|FAQ/izenda-and-udfs]]
+- [[Can I Use My Own Database's Functions With Izenda?|FAQ/izenda-and-udfs]]
 - [[How Do I Enable Izenda Vision?|FAQ/enable-izenda-vision]]
 - [[How do I reset my Fusion Cache via code?|FAQ/reset-fusion-cache]]
 - [[How do I implement Fully Qualified Hidden Filters?|FAQ/implement-fully-qualified-hidden-filters]]
 - [[How do I change the default print settings?|http://wiki.izenda.us/FAQ/Questions/how-to-change-default-print-settings]]
-- [[The AdHocSettings class|/API/AdHocSettings]]
+- [[Can I Add Custom Format Options to the Report Designer?|/FAQ/Questions/Add Formatting Options]]
+- [[I'm Getting #DIV/0 In My Report Viewer. How Can I Fix This?|FAQ/Divide By Zero]]
 
 ###Troubleshooting
 
