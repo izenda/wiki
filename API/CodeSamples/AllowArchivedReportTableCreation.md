@@ -4,12 +4,9 @@
 
 ##About
 
-Gets or sets the value indicating whether it is allowed to create the database table that contains archived reports if there is no such table in the database. If set, AdHoc checks if table in database for keeping reportsets exists, and creates it if necessary.
-By default the name of this table is IzendaAdHocReports.
+Gets or sets the value indicating whether the application will use a database table for archiving reports. The application must be running in Database Mode for this to have any effect. When set, the application will first check if the table specified by the [[SavedReportsTable|/API/CodeSamples/SavedReportsTable]] setting exists. If your SavedReportsTable setting is not explicitly set, Izenda will use the default table name **IzendaAdHocReports**. The application will then use this table to save archived reports.
 
-Note: It is required to allow create new table if you use DatabaseAdHocConfig. [[Read more about storing reports|/FAQ/Storing-Reports]]
-
-Also see [[SavedReportsTable|API/CodeSamples/SavedReportsTable]]
+_**Note:** Database Mode requires the ability to save reports. This setting simply allows the application to store archived reports. Read more about [[storing reports|/FAQ/Storing-Reports]]._
 
 ##Global.asax (C♯)
 
