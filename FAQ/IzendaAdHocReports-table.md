@@ -6,7 +6,7 @@
 
 When using _DatabaseAdHocConfig_, Izenda reports saves report definitions to the database. By default, this is the table name that Izenda uses. You can use [[SavedReportsTable|/API/CodeSamples/SavedReportsTable]] to specify a different table name. Izenda will create the table for you, but in the event that something fails, here is the SQL script that will generate the table.
 
-##SQL 2012 Table Script
+##MSSQL Table Script
 
 ```sql
 CREATE TABLE [dbo].[IzendaAdHocReports] (
@@ -43,7 +43,7 @@ END;
 
 The Izenda [[FORMS|/Guides/ReportDesign/14.0-Izenda-FORMS]] plugin uses a unique process to generate the pixel-perfect forms that the report viewers see. To do this, it needs a special column in the database. Here is the table script with the new column added.
 
-###SQL 2012 table script
+###MSSQL table script
 
 ```sql
 CREATE TABLE [dbo].[IzendaAdHocReports] (
