@@ -1,4 +1,4 @@
-#Applying Security for Owner of the Report Out of Scheduler
+#Applying Tenant Level Security to Scheduled Reports
 
 [[_TOC_]]
 
