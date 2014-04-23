@@ -6,6 +6,8 @@
 
 This code sample shows how to apply security for the owner of the report when it gets sent out via the scheduler. This can allow reports to get disseminated based on the report owner's tenant ID and prevent any users outside of that group from receiving the report.
 
+##C♯
+
 ```csharp
 public override void PreExecuteReportSet(Izenda.AdHoc.ReportSetreportSet)
   {
