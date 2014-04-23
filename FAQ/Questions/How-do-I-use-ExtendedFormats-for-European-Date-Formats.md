@@ -1,21 +1,20 @@
-#How do I Use Custom Date Formats?
+#Applying Security for Owner of the Report Out of Scheduler
 
 [[_TOC_]]
 
-In this example, we show how to set the formats when using an International Date format. This example is for the European Date format and needs to be placed in the ``InitializeReporting()`` method of your global.asax file. 
+##About
+
+This code sample shows how to apply security for the owner of the report when it gets sent out via the scheduler. This can allow reports to get disseminated based on the report owner's tenant ID and prevent any users outside of that group from receiving the report.
 
 ```csharp
-public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
-{
-	// Configure settings
-
-	// Add Custom Setting below license key and connection string setting
-	public override void ConfigureSettings()
-	{
-		AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
-		AdHocSettings.Formats.Add("EuroDate", "{0:dd/MM/yyyy}");
-	}
-}
+public override void PreExecuteReportSet(Izenda.AdHoc.ReportSetreportSet)
+  {
+    bool scheduler = AdHocSettings.CurrentUserName.Equals("DefaultAdministrator");
+    if (scheduler)
+      {
+        Filter f = new Filter("TenantID");
+        f.Value = LookupTenantIDFromUser(reportSet.UserName); //Write your own implementation of this method
+        reportSet.Filters.AddHidden(f);
+      }
+  } //end method
 ```
-
-You can use this example as a template for other date formats as well.
