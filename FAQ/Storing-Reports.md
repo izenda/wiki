@@ -46,7 +46,7 @@ Each of these methods may be over-ridden in order to implement custom behavior. 
 
 ```csharp
 //C#
-public override void ConfigureSettings()
+public static void InitializeReporting()
 {
     Izenda.AdHoc.AdHocSettings.ReportsPath = "\SomePath";
 }
@@ -54,7 +54,7 @@ public override void ConfigureSettings()
 
 ```visualbasic
 'VB.NET
-Public Override Sub ConfigureSettings()
+Public Shared Sub InitializeReporting()
     Izenda.AdHoc.AdHocSettings.ReportsPath = "\SomePath"
 End Sub
 ```
@@ -62,11 +62,27 @@ End Sub
 ##Database Mode
 
 This is the alternative saving mode for Izenda Reports. Izenda Reports creates a default table in the database, IzendaAdHocReports, to save the report data. In this mode, no data is stored in the Reports folder in the Izenda Reports directory. To set the default table which Izenda Reports should use, you must first create a table in the database and then ensure that the NETWORK SERVICE machine account has owner access if using ASP.NET 2.0 or that the ASP.NET machine account has owner access if using ASP.NET 1.1. Now tell Izenda Reports which table to use by setting the "SavedReportsTable" property as shown in the example.
-###Setting the Saved Reports Table
+
+###Setting Database Mode
+
+To set Database Mode in our global.asax, we simply need to have the global.asax inherit the appropriate base class. We will then have a few configuration settings that become available.
 
 ```csharp
 //C#
-public override void ConfigureSettings()
+public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
+```
+
+```visualbasic
+'VB.NET
+Public Class CustomAdHocConfig Inherits Izenda.AdHoc.DatabaseAdHocConfig
+```
+
+###Setting the Saved Reports Table
+
+This is the most essential setting to specify when using Database Mode. However, it is not required. If it is not specified, Izenda will create and use a table called "[[IzendaAdHocReports|/FAQ/databaseadhocconfig-table-structure]]".
+```csharp
+//C#
+public static void InitializeReporting()
 {
     Izenda.AdHoc.AdHocSettings.SavedReportsTable = "SomeTableName";
 }
@@ -74,7 +90,7 @@ public override void ConfigureSettings()
 
 ```visualbasic
 'VB.NET
-Public Override Sub ConfigureSettings()
+Public Shared Sub InitializeReporting()
     Izenda.AdHoc.AdHocSettings.SavedReportsTable = "SomeTableName"
 End Sub
 ```
