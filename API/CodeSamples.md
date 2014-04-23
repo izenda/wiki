@@ -103,7 +103,7 @@ _**Note:** Some of the items below are listed more than once. This is because th
 * Adding Custom Formats
 * Report List CSS Code Sample
 
-##[[API|/API/CodeSamples/AdHocConfig]]
+##[[API|/API/AdHocConfig]]
 
 * Adding custom filters to the dashboards. MVC application
 * Adding custom filters to the dashboards
