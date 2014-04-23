@@ -4,7 +4,7 @@
 
 ##About
 
-The AdHocConfig class is where Izenda Reports will perform all of its initialization and configuration. You can also override various methods used by the base class in order to control various aspects of the reporting application. At a minimum, you will need to set the [[LicenseKey|/API/CodeSamples/LicenseKey]] and the [[connection string|/API/CodeSamples/SqlServerConnectionString]]. However, there are many more customizations you can make to Izenda Reports. We will provide a template with a full list of overridden methods below. You can also find a full list of [[settings|/API/CodeSamples/AdHocsettings]] that Izenda can be customized with on our site. This code should be placed in the Global.asax file of your web site.
+The AdHocConfig class is where Izenda Reports will perform all of its initialization and configuration. You can also override various methods used by the base class in order to control various aspects of the reporting application. At a minimum, you will need to set the [[LicenseKey|/API/CodeSamples/LicenseKey]] and the [[connection string|/API/CodeSamples/SqlServerConnectionString]]. However, there are many more customizations you can make to Izenda Reports. We will provide a template with a full list of overridden methods below. You can also find a full list of [[settings|/API/AdHocsettings]] that Izenda can be customized with on our site. This code should be placed in the Global.asax file of your web site.
 
 ##C♯ Example
 
