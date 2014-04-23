@@ -24,9 +24,6 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     AdHocSettings.CustomTimePeriods.Add("Lunar Cycle", new CustomTimePeriod("Lunar Cycle", new TimeSpan(29, 12, 44, 2, 976)));
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
-  public override void ConfigureSettings() {
-    AdHocSettings.VisibleDataSources = new string[] {"DataSource1", "DataSource2"};
-  }
 }
 ```
 
