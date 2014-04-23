@@ -50,4 +50,4 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 
 * [MDX Queries](http://www.izenda.com/Site/KB/CodeSamples/Pulling-Data-From-Analysis-Services-Cubes)
 * [[Using Stored Procedures (SPs) In Izenda 6|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
-* [[Adding the FORMS column to the IzendaAdHocReports table|/API/CodeSamples/IzendaAdHocReports table]]
+* [[Adding the FORMS column to the IzendaAdHocReports table|/FAQ/IzendaAdHocReports-table]]
