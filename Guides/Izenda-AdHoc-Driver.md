@@ -83,7 +83,7 @@ DataSet result;
 }
 ```
 
-You can also see more coding examples in our [[Knowledge Base|http://izenda.com/Site/KB/CodeSamples/79]].
+You can also see more coding examples [[here|http://wiki.izenda.us/API/CodeSamples]].
 
 ##Izenda Fusion Driver
 
