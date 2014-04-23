@@ -20,9 +20,9 @@ Izenda.AdHoc.AdHocSettings.ViewsOnly = True
 
 C#
 ```csharp
-Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Products", "Categories" };
+    Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Products", "Categories" };
 ```
 VB.NET
 ```visualbasic
-Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Products", "Categories" }
+    Izenda.AdHoc.AdHocSettings.VisibleDataSources = New String() { "Products", "Categories" }
 ```
