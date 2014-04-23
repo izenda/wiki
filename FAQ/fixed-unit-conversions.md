@@ -1,8 +1,6 @@
-#How Do I Add Fixed Unit Conversions in Izenda So Users Can Easily Access Them?
+#Adding Fixed Unit Convesions
 
-Functions are added to Izenda through the extended functions API code. This article explains how with an example:
-
-[[Izenda and UDFs (User Defined Functions)|http://wiki.izenda.us/FAQ/izenda-and-udfs]]
+Functions are added to Izenda through the extended functions API code. You can learn more about UDFs (User Defined Functions) [[here|http://wiki.izenda.us/FAQ/izenda-and-udfs]].
 
 These functions are available in the 'Functions' drop-down. They can also be used in an expression by clicking the gear to the right side of the field.
 
@@ -10,9 +8,9 @@ These functions are available in the 'Functions' drop-down. They can also be use
 
 **Example 1**: _Data stored in Meters - Output needed in Meters, Kilometers and Miles._
 
-If the data for a distance column was stored in meters lets say, and you wanted to display either **meters**, **miles** or **kilometers**. You would add custom Formats (http://www.izenda.com/Site/KB/CodeSamples/Adding-Custom-Formats?) to display desired values to append _(m, km, mi)_, and custom functions to do the conversion to **Miles** and **Kilometers** from **meters**.
+If the data for a distance column was stored in meters lets say, and you wanted to display either **meters**, **miles** or **kilometers**. You would add [[custom Formats|/FAQ/Questions/Add-Formatting-Options]] to display desired values to append _(m, km, mi)_, and custom functions to do the conversion to **Miles** and **Kilometers** from **meters**.
 
-**TO use Example 1 in tool once API work is done:**
+**To use Example 1 in tool once API work is done:**
 
 1. User selects column 'Distance'.
 2. User selects the appropriate choices for their needs
