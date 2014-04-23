@@ -37,7 +37,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [Using Share With Rights and Roles](/API/CodeSamples/)
 * [[Dynamically Creating Reports Via the API|/API/CodeSamples/DynamicReportCreation]]
 * [Switching Databases Via Code](http://www.izenda.com/Site/KB/CodeSamples/Switching-databases-via-code?) 
-* [[Adding Custom Formatting Options in the Report Designer|[http://wiki.izenda.us/FAQ/Questions/Add-Formatting-Options]]
+* [[Adding Custom Formatting Options in the Report Designer|/FAQ/Questions/Add-Formatting-Options]]
 
 
 ###Javascript Guides
