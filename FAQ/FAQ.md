@@ -69,3 +69,4 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[What are the query string keys for rs.aspx?|http://wiki.izenda.us/FAQ/Questions/Query-String-Keys-for-rs.aspx]]
 - [[How Can I Apply a Hidden Filter Using an Inner Query?|/FAQ/applying-hidden-filter-using-inner-query]]
 - [[How Do I Use Stored Procedures With Izenda Reports?|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
+- [[How Can I Use a Custom Filter on my Dashboards?|/FAQ/Questions/Adding-custom-filters-to-dashboards]]
