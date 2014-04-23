@@ -38,6 +38,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[Dynamically Creating Reports Via the API|/API/CodeSamples/DynamicReportCreation]]
 * [Switching Databases Via Code](http://www.izenda.com/Site/KB/CodeSamples/Switching-databases-via-code?) 
 * [[Adding Custom Formatting Options in the Report Designer|/FAQ/Questions/Add-Formatting-Options]]
+* [[Login page sample|/Tutorials/CodeSamples/Login-Sample]]
 
 
 ###Javascript Guides
