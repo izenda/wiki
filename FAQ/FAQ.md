@@ -56,6 +56,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How does security work?|FAQ/How user credentials are applied]]
 - [[How do I create Data Source Level Security?|FAQ/data-source-level-security]]
 - [[How do I use Windows Active Directory for security?| FAQ/windows-active-directory-security]]
+- [[How Do I Apply Security to Scheduled Reports?|/FAQ/Questions/Applying-Security-to-Scheduled-Reports]]
 
 ###Misc.
 
