@@ -2,7 +2,7 @@
 
 ## How do I utilize a complex UDF from my database within Izenda?
 
-**1) Create UDF in the DB that performs your calculation:**
+**1) Create the UDF in the database that performs your calculation:**
 
 **EXAMPLE UDF:**
 
