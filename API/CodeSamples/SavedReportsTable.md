@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the table name for saved reports. If DatabaseAdHocConfig is used, reports data will be saved in this table in the database. This setting does nothing if FileSystemAdHocConfig is used. By default, a table named "IzendaAdHocReports" is used. See our article on [[storing reports|/FAQ/Storing-Reports]] for more information on DatabaseAdHocConfig and FileSystemAdHocConfig.
+Gets or sets the table name for saved reports. If DatabaseAdHocConfig is used, reports data will be saved in this table in the database. This setting does nothing if FileSystemAdHocConfig is used. By default, a table named "[[IzendaAdHocReports|/FAQ/IzendaAdHocReports-table]]" is used. See our article on [[storing reports|/FAQ/Storing-Reports]] for more information on DatabaseAdHocConfig and FileSystemAdHocConfig.
 
 ##Global.asax (C♯)
 ```c#
