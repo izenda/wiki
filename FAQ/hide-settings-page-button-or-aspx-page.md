@@ -1,11 +1,58 @@
-#Hide Settings Page
+#Hiding Buttons and Tabs
 
-##The Settings Button
+[[_TOC_]
 
-If you want to hide the settings page button in the report designer and restrict it to only admin users, you will need to set the property shown below.
+##About
 
-``Izenda.AdHoc.AdHocSettings.ShowAdminButton = false;``
+Izenda offers various methods of controlling the toolbar buttons and tabs that users will see when they view various pages within the reporting application. Most of these can be controlled through the [[AdHocSettings|/API/AdHocSettings]] class. We recommend you utilize the AdHocSettings class properties whenever possible.
 
-##The Settings Page
+##Report Viewer Buttons
 
-If you want to restrict access to the page itself, _settings.aspx_, you can apply typical aspx page restrictions in the ``OnPageLoad()`` event, such as redirecting if the username or similar variable is not set to the required value.
+* The Report List Button
+* The Save Save As Button
+* The Print HTML and HTML-powered PDF Button
+* The Export dropdown
+* The Send Report Button
+* The Records dropdown
+* The Open In Designer Button
+* The Settings Button
+
+##Report Viewer Tabs
+
+* The FILTERS tab
+* The FIELDS tab
+* The PIVOTS tab
+
+##Report Designer Buttons
+
+* Report List Button
+* New Button
+* Save Button
+* Save As Button
+* Print (PDF) Button
+* Print (HTML) Button
+* Show SQL Button
+* CSV Button
+* Excel Button
+* Word Button
+* XML Button
+* RTF Button
+* E-mail From Client Button
+* E-mail From Server Button
+* Settings Button
+* Results Dropdown
+* Help Panel Button
+
+##Report Designer Tabs
+
+* Reports Tab
+* Data Sources Tab
+* Fields Tab
+* Summary Tab
+* Chart Tab
+* Gauge Tab
+* Map Tab
+* Misc Tab
+* Style Tab
+* Filters Tab
+* Preview Tab
