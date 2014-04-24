@@ -1,4 +1,4 @@
-#Adding Formatting Options to Izenda Reports Formatting to Grid or New Formats to Formats Dropdown
+#Formatting Options
 
 [[_TOC_]]
 
