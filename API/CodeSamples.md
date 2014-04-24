@@ -10,7 +10,7 @@ _**Note:** Some of the items below are listed more than once. This is because th
 
 ##Login Page
 
-* Authentication Function
+* [[Authentication Function|/Tutorials/CodeSamples/Login-Sample]]
 * Controlling user logins and login customization
 
 ##Global Application
