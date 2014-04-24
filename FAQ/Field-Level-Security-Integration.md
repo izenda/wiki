@@ -1,4 +1,69 @@
-#Field Level Security Integration
+#Security Levels
+
+[[_TOC_]]
+
+##About
+
+Izenda offers many various methods of implementing security over the scope of your reports. It is highly customizable and can be controlled through the global.asax file. Here we will provide various security samples for different levels of access. You may modify these to suit your own organization's needs.
+
+##Basic security sample
+
+Here we demonstrate what basic security settings might look like in your application. Note that the code below would exist inside the ``InitializeReporting()`` method. In this case, initialization would be performed while confirming the user's identity. You may also call the ``InitializeReporting()`` method after the user has been authenticated.
+
+```csharp
+AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
+AdHocSettings.SqlServerConnectionString = "...";
+AdHocSettings.CurrentUserName = GetUserName();
+AdHocSettings.CurrentUserTenantId = GetTenantID();
+string role = GetUserRoleFromApp()
+if(role == "Admin")
+{
+	Izenda.AdHoc.AdHocSettings.VisibleDataSources = 
+		new string[] { "Purchasing.Vendor", "Products", "Orders", "Order Details", "Customers" };
+}
+else
+{
+	Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Products", "Orders", "Customers" };
+	Izenda.AdHoc.AdHocSettings.CurrentUserIsAdmin = false;
+	Izenda.AdHoc.AdHocSettings.ShowSettingsButton = false;
+	Izenda.AdHoc.AdHocSettings.ShowSqlOutputIcon = false;
+	Izenda.AdHoc.AdHocSettings.HiddenFilters["ShipCountry"]= GetUserCountry();
+}
+```
+
+You could also use more complex logic. For example, you could filter all queries for the particular user or user group.
+
+```csharp
+public override void PreExecuteReportSet(ReportSet reportSet)
+{
+	bool isLocalManager = false;
+	foreach (string role in AdHocSettings.CurrentUserRoles)
+		if (role == "Local Manager")
+			isLocalManager = true;
+	if (!AdHocSettings.CurrentUserIsAdmin || isLocalManager)
+	{
+		Filter filter = new Filter();
+		filter.Column = "ShipCity";
+		filter.SqlOverride = "ShipCity IN (SELECT ShipCity FROM [dbo].[Orders] WHERE ShipCountry = 'USA')";
+		reportSet.Filters.AddHidden(filter);
+	}
+}
+```
+
+##Data Source Level Security
+
+**Table and View Access**
+
+To limit what data sources a user can see, apply the [[VisibleDataSources|/API/CodeSamples/VisibleDataSources]] setting. Its argument is an array of strings. Izenda recommends creating database views to simplify the user experience. Izenda Reports will only show views if you set [[ViewsOnly|/API/CodeSamples/ViewsOnly]] to _true_. Here is an example:
+
+```csharp
+//set access to which tables and views are visible
+
+if(!AdHocSettings.CurrentUserIsAdmin) 
+    Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[]{ "Products", "Categories" };
+else
+    Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] {"AdminData", "Employees", "Products", "Categories"};
+```
 
 ##Field Level Access
 
