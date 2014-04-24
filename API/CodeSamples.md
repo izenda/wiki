@@ -30,7 +30,7 @@ _**Note:** Some of the items below are listed more than once. This is because th
 * Storing Reports in Database and Fusion Driver
 * Overriding Driver Methods
 * Using constraints
-* Code Sample for Export Button
+* [[Custom Report Viewer Export Button|http://wiki.izenda.us/API/CodeSamples/ReportViewer/Custom-Export-Buttons]]
 * Dymamically changing the database with url parameter
 * Create Button to Switch Databases
 * Secure https on a load balancer
