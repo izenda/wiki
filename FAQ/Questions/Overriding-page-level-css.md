@@ -53,7 +53,9 @@ B. On the Settings.aspx page, go to the **Appearance (images and css)** tab and 
 
 Once you have set the path to tabs.css, you can use the program of your choice to edit it to match your company's colors or fonts.
 
-##Toolbar
+* [[HeaderStyleCss:|/API/CodeSamples/HeaderStyle]] This is also applicable to the report designer and should facilitate customization.
+
+###Toolbar
 
 With the zip file you downloaded from the last section, extract the **toolbar.css** file into the resources/css folder within your application. Ensure the file is still named toolbar.css, then enter the link generated into your browser (example /your_site_url/resources/css/toolbar.css).
 
@@ -62,3 +64,8 @@ You can either set the [[ToolbarCssUrl|/API/CodeSamples/ToolbarCssUrl]] setting 
 ##Report List
 
 To use custom CSS for the Report List page, you can use the method described above for the Report Viewer to obtain the desired results. However, the file will be called ``reportlist.css`` and the page it should be included on is **ReportList-Head.ascx**. The CSS classes you will have to override will also be different than the ReportViewer page CSS classes.
+
+##Dashboards
+
+    * [[DashboardsCssUrl|/API/CodeSamples/DashboardsCssUrl]]
+
