@@ -16,7 +16,7 @@ _**Note:** Some of the items below are listed more than once. This is because th
 ##Global Application
 
 * Secure https on a load balancer
-* How can I apply a hidden filter using an inner query
+* [[How can I apply a hidden filter using an inner query|/FAQ/applying-hidden-filter-using-inner-query]]
 * [[ProcessEqualsSelectList()|/FAQ/ProcessEqualsSelectList]]
 * [[CustomizeChart()|/FAQ/CustomizeChart]]
 * [[Introduction to the Global.asax file|/API/AdHocConfig]]
