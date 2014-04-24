@@ -131,4 +131,4 @@ _**Note:** Some of the items below are listed more than once. This is because th
 * Hiding Read Only Check Box
 * Reducing Server Trips in AdhocConfig Methods
 * Getting the Report Name
-* Changing the response server page ( rs.aspx ) for custom errors or redirects
+* [[Changing the response server page ( rs.aspx ) for custom errors or redirects|http://www.izenda.com/Site/KB/CodeSamples/Code-Sample-for-Export-Button]]
