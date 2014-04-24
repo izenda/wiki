@@ -10,7 +10,7 @@ _**Note:** You still will be able to use any fields to join tables at the Data S
 
 **Troubleshooting:** If you see the message "No fields available to select" your regular expression might be too general. Check your regular expressions and your data source fields and try again.
 
-##C♯
+##Global.asax (C♯)
 
 ```csharp
 //main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
@@ -33,7 +33,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
 
 ```
 
-##VB.NET
+##Global.asax (VB.NET)
 
 ```visualbasic
 'main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
