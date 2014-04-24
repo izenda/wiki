@@ -94,7 +94,7 @@ _**Note:** Some of the items below are listed more than once. This is because th
 * [[Add "Forms" column to the IzendaAdHocReports table manually|/FAQ/IzendaAdHocReports-table]]
 * Create IzendaAdHocReports table manually
 * Pulling Data From Analysis Services Cubes
-* Combining Multiple Event Based Fields with UNION
+* [[Combining Multiple Event Based Fields with UNION|http://wiki.izenda.us/FAQ/Questions/Combining-Fields-with-Union]]
 * Organizing Dates by Week
 * [[1 Million Record View|/API/CodeSamples/1 Million Record View]]
 
