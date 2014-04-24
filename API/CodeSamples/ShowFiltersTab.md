@@ -51,4 +51,4 @@ End Class
 
 ##Screenshots
 
-![](http://izenda.com/Site/Images/Screenshots/ShowFiltersTabDS.png)
+![](/API/CodeSamples/ShowFiltersTab/showFiltersTab.png)
