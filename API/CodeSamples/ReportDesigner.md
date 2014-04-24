@@ -8,7 +8,7 @@ Here we will provide helpful code samples that can be used to control the Report
 
 ##Toggling toolbar buttons
 
-Although Izenda does offer a method of toggling toolbar buttons via our AdHocSettings class, some users may find it more beneficial to refer to the toolbar menu items directly in the context of the Report Designer page. However, we recommend that this be done through the [[AdHocSettings|/API/CodeSamples/AdHocSettings]] class. You will find all of the Report Designer's toolbar buttons there. Here is the code to do so on the Report Designer page.
+Although Izenda does offer a method of toggling toolbar buttons via our AdHocSettings class, some users may find it more beneficial to refer to the toolbar menu items directly in the context of the Report Designer page. However, we recommend that this be done through the [[AdHocSettings|/API/AdHocSettings]] class. You will find all of the Report Designer's toolbar buttons there. Here is the code to do so on the Report Designer page.
 
 ```csharp
 protected void OnInit(EventArgs e)
