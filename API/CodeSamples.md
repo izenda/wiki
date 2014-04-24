@@ -19,10 +19,10 @@ _**Note:** Some of the items below are listed more than once. This is because th
 * How can I apply a hidden filter using an inner query
 * [[ProcessEqualsSelectList()|/FAQ/ProcessEqualsSelectList]]
 * [[CustomizeChart()|/FAQ/CustomizeChart]]
-* Introduction to the Global.asax file
+* [[Introduction to the Global.asax file|/API/AdHocConfig]]
 * [[InitializeReporting()|/FAQ/InitializeReporting]]
 * [[Session_Start()|/FAQ/Session_Start]]
-* Add Formatting to Grid or New Formats to Formats Dropdown	
+* [[Add Formatting to Grid or New Formats to Formats Dropdown|/FAQ/Questions/Add-Formatting-Options]]
 
 ##General
 
@@ -66,7 +66,7 @@ _**Note:** Some of the items below are listed more than once. This is because th
 * Create Custom Field Aliases
 * Control names change randomly when deployed from development to production
 * [[Report Designer Page Code Samples|/API/CodeSamples/ReportDesigner]]
-* [[Add and Remove Report Designer Toolbar Buttons|/API/CodeSamples/ReportDesigner#]]
+* [[Add and Remove Report Designer Toolbar Buttons|http://wiki.izenda.us/API/CodeSamples/ReportDesigner#Toggling-toolbar-buttons]]
 
 ##Report Management
 
