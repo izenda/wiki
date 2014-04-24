@@ -1,50 +1,89 @@
-#Appearance
+###SQL Samples of Various Join Types
 
-[[_TOC_]]
+**Inner (Direct) Join:**  Selects rows from two tables such that the value in one column of the first table also appears in a column of the second table.  
 
-###Introduction
+```sql
+SELECT DISTINCT 
+[dbo].[Invoices].[CustomerName] AS 'Customer Name'
+FROM [dbo].[Orders]
+INNER JOIN [dbo].[Invoices] ON [dbo].[Invoices].[CustomerID]=[dbo].[Orders].[CustomerID];
+```
 
-Izenda Reports fully integrates with your application both at the program level and visually. All visual aspects of Izenda Reports are user customizable and can be made to match your existing application's visual look and feel. These are some of the quickest ways to change the look and feel of our application in order to blend seamlessly with your product or application.
+**Cross Join:** A cross join will return a result table where each row from the first table is combined with each row from the second table. 
 
-###Setting Custom CSS and Navigation Image Files
+```sql
+SELECT DISTINCT 
+[dbo].[Invoices].[CustomerName] AS 'Customer Name'
+FROM [dbo].[Orders]
+CROSS JOIN [dbo].[Invoices];
+```
 
-####Settings.aspx
+**Left(First Exists) Join:** The Left Outer Join known also as Left Join returns all rows from the left table in the Left Outer Join clause, no matter if the joined columns match.  A field in a result row will be null if the corresponding input table did not contain a matching row.
 
-An example of how to set custom CSS:
+```sql
+SELECT DISTINCT 
+[dbo].[Invoices].[CustomerName] AS 'Customer Name'
+FROM [dbo].[Orders]
+LEFT OUTER JOIN [dbo].[Invoices] ON [dbo].[Invoices].[CustomerID]=[dbo].[Orders].[CustomerID];
+```
 
-  * download the archive
-    * [CSS.ZIP](http://wiki.izenda.us/Integration/Appearance/css.zip)
-  * edit the CSS files, **but do not change the selector names or the filenames**
-  * save the edited files to your server where they can be accessed via absolute urls
-  * navigate to the settings.aspx page and click the "Images & CSS" tab shown below **-OR-** you can define them [[programatically|http://wiki.izenda.us/Integration/Tutorials/Appearance#Programatically]].
+**Right Join:** The Right Outer Join known also as Right Join returns all rows from the right table in the Right Outer Join clause, no matter if the joined columns match.  A field in a result row will be null if the corresponding input table did not contain a matching row.
 
-    ![](http://wiki.izenda.us/Appearance/ImagesCssTab.png)
-  * enter the new absolute URLs of the CSS files
-  * fully clear your cache and restart the application
+```sql
+SELECT DISTINCT 
+[dbo].[Invoices].[CustomerName] AS 'Customer Name'
+FROM [dbo].[Orders]
+RIGHT OUTER JOIN [dbo].[Invoices] ON [dbo].[Invoices].[CustomerID]=[dbo].[Orders].[CustomerID];
+```
 
-####Programatically
+**Full Join:** The Full Outer Join known also as Full Join returns all rows from Both the Right Outer Join & Left Outer Join.  A field in a result row will be null if the corresponding input table did not contain a matching row.
 
-  * download the archive
-    * [CSS.ZIP](http://wiki.izenda.us/Integration/Appearance/css.zip)
-  * edit the CSS files, **but do not change the selector names or the filenames**
-  * save the edited files to your server where they can be accessed via absolute urls
-  * Open up your global.asax and override the following properties:
-    * [[DashboardsCssUrl|/API/CodeSamples/DashboardsCssUrl]]
-    * [[FieldValueCssUrl|/API/CodeSamples/FieldValueCssUrl]]
-    * [[ReportCssUrl|/API/CodeSamples/ReportCssUrl]]
-    * [[SimpleFilterCssUrl|/API/CodeSamples/SimpleFilterCssUrl]]
-    * [[TabCssUrl|/API/CodeSamples/TabsCssUrl]]
-    * [[ToolbarCssUrl|/API/CodeSamples/ToolbarCssUrl]]
-    * [[HeaderStyle|/API/CodeSamples/HeaderStyle]]
-  * enter the new absolute URLs of the CSS files
-  * fully clear your cache and restart the application
-  
-After resetting and clearing the cache, the CSS changes should reflect in Izenda Reports.
+```sql
+SELECT DISTINCT 
+[dbo].[Invoices].[CustomerName] AS 'Customer Name'
+FROM [dbo].[Orders]
+FULL OUTER JOIN [dbo].[Invoices] ON [dbo].[Invoices].[CustomerID]=[dbo].[Orders].[CustomerID];
+```
 
-###Setting the Report List page (ReportList.aspx) CSS
+##Filters and Join Types
 
-Although the html element styles are hard coded into the application, it is possible to change them by simply placing a style tag into the page right after the end of the form. [[Please see this example]]. 
+If you specify a [[filter|http://wiki.izenda.us/Guides/ReportDesign/5.0-Filters-tab]] for the column in first(left) table in JOIN clause, all filters will be applied as usual (i.e. all filters will be in the WHERE clause):
 
-###Customer Integration Samples
+```sql
+SELECT
+[dbo].[Order Details].[Discount], 
+[dbo].[Orders].[OrderID]
+FROM [dbo].[Order Details]
+LEFT OUTER JOIN [dbo].[Orders] ON [dbo].[Orders].[OrderID]=[dbo].[Order Details].[OrderID]
+WHERE [dbo].[Order Details].[OrderID] = 10248
+```
 
-We have screenshots of our customers' integrated solutions available [here](http://www.izenda.com/Site/Pages/Clients.aspx).
+Now let's say we want to specify filter for the column in the second(right) table. In this case, we should add this filter to the JOIN clause itself:
+
+```sql
+SELECT
+[dbo].[Order Details].[Discount],
+[dbo].[Orders].[OrderID]
+FROM [dbo].[Order Details] 
+LEFT OUTER JOIN [dbo].[Orders] ON [dbo].[Orders].[OrderID]=[dbo].[Order Details].[OrderID] AND [dbo].[Orders].[OrderID] = 10248
+```
+
+The reason why we shouldn't place the filter in the WHERE clause is that it will transform our **LEFT OUTER JOIN** to an **INNER JOIN**. For example, when you use "WHERE [dbo].[Order Details].[OrderID] = 10248", you remove all NULLs from the results (obviously NULL doesn't equal 10248). To avoid this (to retain NULLs in the results) we should follow ANSI-92 SQL syntax and use conditional joins.
+
+We can also use an inner query to apply our outer left join:
+
+```sql
+SELECT
+[dbo].[Order Details].[Discount],
+Ord.[OrderID]
+FROM [dbo].[Order Details] 
+LEFT OUTER JOIN 
+(SELECT * FROM [dbo].[Orders]
+WHERE [dbo].[Orders].[OrderID] = 10248) AS Ord 
+ON Ord.[OrderID]=[dbo].[Order Details].[OrderID]
+```
+
+When we apply filters within the JOIN clause, it's like we applied these filters separately to the table, and then added them to the JOIN. This can help speedup database performance. Please refer to the articles below for more information:
+
+* [[ANSI SQL-92 Standard|http://www.contrib.andrew.cmu.edu/~shadow/sql/sql1992.txt]]
+* [[MSDN article about OUTER joins|http://msdn.microsoft.com/en-us/library/aa213228]]
