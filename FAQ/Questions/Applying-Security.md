@@ -69,7 +69,7 @@ else
 
 ##Field Level Access
 
-Field access provides a way of limiting what a user sees in the application. You can use the [[FieldsRegex|/API/CodeSamples/FieldFilterRegex]] property to set a general filter on what fields users can select when building reports or you can use the ``PreExecuteReportSet()`` method, demonstrated below.
+Field access provides a way of limiting what a user sees in the application. You can use the [[FieldsRegex|/API/CodeSamples/FieldsRegex]] property to set a general filter on what fields users can select when building reports or you can use the ``PreExecuteReportSet()`` method, demonstrated below.
 
 **Record Level Security Integration**
 
