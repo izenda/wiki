@@ -100,8 +100,8 @@ _**Note:** Some of the items below are listed more than once. This is because th
 
 ##Appearance
 
-* Adding Custom Formats
-* Report List CSS Code Sample
+* [[Adding Custom Formats|/FAQ/Questions/Add-Formatting-Options]]
+* [[Report List CSS Code Sample|/FAQ/Questions/Overriding-page-level-css]]
 
 ##[[API|/API/AdHocConfig]]
 
