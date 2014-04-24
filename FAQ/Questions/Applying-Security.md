@@ -8,26 +8,28 @@ Izenda offers many various methods of implementing security over the scope of yo
 
 ##Basic security sample
 
-Here we demonstrate what basic security settings might look like in your application. Note that the code below would exist inside the ``InitializeReporting()`` method. In this case, initialization would be performed while confirming the user's identity. You may also call the ``InitializeReporting()`` method after the user has been authenticated.
+Here we demonstrate what basic security settings might look like in your application. In this case, initialization would be performed while confirming the user's identity. You may also call the ``InitializeReporting()`` method after the user has been authenticated.
 
 ```csharp
-AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
-AdHocSettings.SqlServerConnectionString = "...";
-AdHocSettings.CurrentUserName = GetUserName();
-AdHocSettings.CurrentUserTenantId = GetTenantID();
-string role = GetUserRoleFromApp()
-if(role == "Admin")
-{
-	Izenda.AdHoc.AdHocSettings.VisibleDataSources = 
-		new string[] { "Purchasing.Vendor", "Products", "Orders", "Order Details", "Customers" };
-}
-else
-{
-	Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Products", "Orders", "Customers" };
+public static void InitializeReporting() {
+    AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
+    AdHocSettings.SqlServerConnectionString = "...";
+    AdHocSettings.CurrentUserName = GetUserName();
+    AdHocSettings.CurrentUserTenantId = GetTenantID();
+    string role = GetUserRoleFromApp()
+    if(role == "Admin")
+    {
+    	Izenda.AdHoc.AdHocSettings.VisibleDataSources = 
+            new string[] { "Purchasing.Vendor", "Products", "Orders", "Order Details", "Customers" };
+    }
+    else
+    {
+        Izenda.AdHoc.AdHocSettings.VisibleDataSources = new string[] { "Products", "Orders", "Customers" };
 	Izenda.AdHoc.AdHocSettings.CurrentUserIsAdmin = false;
 	Izenda.AdHoc.AdHocSettings.ShowSettingsButton = false;
 	Izenda.AdHoc.AdHocSettings.ShowSqlOutputIcon = false;
 	Izenda.AdHoc.AdHocSettings.HiddenFilters["ShipCountry"]= GetUserCountry();
+    }
 }
 ```
 
