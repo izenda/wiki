@@ -15,7 +15,7 @@ Izenda offers various methods of controlling the toolbar buttons and tabs that u
 * The Send Report Button
 * The Records dropdown
 * The Open In Designer Button
-* The Settings Button
+* [[The Settings Button|/API/CodeSamples/ShowSettingsButton]]
 
 ##Report Viewer Tabs
 
@@ -39,7 +39,7 @@ Izenda offers various methods of controlling the toolbar buttons and tabs that u
 * RTF Button
 * E-mail From Client Button
 * E-mail From Server Button
-* Settings Button
+* [[Settings Button|/API/CodeSamples/ShowSettingsButton]]
 * Results Dropdown
 * Help Panel Button
 
@@ -54,5 +54,5 @@ Izenda offers various methods of controlling the toolbar buttons and tabs that u
 * Map Tab
 * Misc Tab
 * Style Tab
-* Filters Tab
+* [[Filters Tab|/API/CodeSamples/ShowFiltersTab]]
 * Preview Tab
