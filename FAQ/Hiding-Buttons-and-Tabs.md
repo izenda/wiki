@@ -1,6 +1,6 @@
 #Hiding Buttons and Tabs
 
-[[_TOC_]
+[[_TOC_]]
 
 ##About
 
