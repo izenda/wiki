@@ -51,10 +51,4 @@ End Class
 
 ##Screenshots
 
-AdHocSettings.ShowSettingsButton = false
-
-![]()
-
-AdHocSettings.ShowSettingsButton = true
-
-![]()
+![](http://izenda.com/Site/Images/Screenshots/ShowFiltersTabDS.png)
