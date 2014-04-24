@@ -105,8 +105,8 @@ _**Note:** Some of the items below are listed more than once. This is because th
 
 ##[[API|/API/AdHocConfig]]
 
-* Adding custom filters to the dashboards. MVC application
-* Adding custom filters to the dashboards
+* [[Adding custom filters to the dashboards. MVC application|/FAQ/Questions/Adding-custom-filters-to-dashboards]]
+* [[Adding custom filters to the dashboards|/FAQ/Questions/Adding-custom-filters-to-dashboards]]
 * Reports and tenants
 * How to dynamically change TimeZone in post-process
 * Web Farms / Gardens / Clusters / Load Balancers / Clouds / Azure
