@@ -1,6 +1,6 @@
 #SQL Samples of Various Join Types
 
-[[_TOC_]
+[[_TOC_]]
 
 ##Inner (Direct) Join
 
