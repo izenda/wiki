@@ -42,6 +42,14 @@ public override Izenda.AdHoc.ReportInfo[] ListReports() {
 
 ```
 
+##Controlling report access
+
+In [[Database Mode|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]], you can override the [[SaveReportSet|/FAQ/SaveReportSet]] method to include [[AdHocSettings.CurrentUserName|/API/CodeSamples/CurrentUserName]] in the data saved to the [[SavedReportsTable|/API/CodeSample/SavedReportsTable]] and then structure a query like the following:
+
+```csharp
+    String.Format("SELECT Name, CreatedDate, ModifiedDate FROM {0} ORDER BY Name WHERE UserID='{1}'", AdHocSettings.SavedReportsTable, AdHocSettings.CurrentUserName)
+```
+
 ### [[FileSystemAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]]
 
 ```csharp
@@ -86,9 +94,6 @@ public override ReportInfo[] ListReports() {
 }//end method
 ```
 
-##Controlling report access
-
-This is an example of how to override this method using some basic security checks ensuring a user can only get reports available to him/her. We will provide a C♯ sample using [[DatabaseAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]]. You can transform this code sample as needed to suit your own company's needs.
 
 ```
 public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
