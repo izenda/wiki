@@ -3,7 +3,6 @@
 * [[Release Notes]]
 * [[FAQ]]
 * [[Tutorials]]
-* [[Guide to Report Design|/Guides/ReportDesign]]
 * [[The Izenda API|/API/AdHocConfig]]
 
 ---
@@ -22,7 +21,6 @@
 
 * [Guide To Report Design](http://dwmofqygvzj39.cloudfront.net/izenda-izenda_guide_to_report_design.pdf)
 * [Example Dashboard](http://demo2.izenda.us/bi/Dashboards.aspx?rn=Dashboard)
-* [Knowledge Base Training Page](http://www.izenda.com/Site/KB/Training/78)
 * [Training Videos](http://www.izenda.com/Site/KB/Training/58)
-* [User Manuals](http://www.izenda.com/Site/KB/Training/93)
+* [The AdHocSettings class](http://www.izenda.com/Site/KB/Training/93)
 * [Making Custom Forms Video](http://www.youtube.com/watch?v=5b2axJlgdFs)
