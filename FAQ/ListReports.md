@@ -42,7 +42,7 @@ public override Izenda.AdHoc.ReportInfo[] ListReports() {
 
 ```
 
-###Controlling report access
+####Controlling report access
 
 In [[Database Mode|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]], you can override the [[SaveReportSet|/FAQ/SaveReportSet]] method to include [[AdHocSettings.CurrentUserName|/API/CodeSamples/CurrentUserName]] in the data saved to the [[SavedReportsTable|/API/CodeSample/SavedReportsTable]] and then structure a query like the following:
 
