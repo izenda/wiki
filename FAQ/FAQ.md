@@ -29,7 +29,8 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How do I change the default print settings?|http://wiki.izenda.us/FAQ/Questions/how-to-change-default-print-settings]]
 - [[Can I Add Custom Format Options to the Report Designer?|/FAQ/Questions/Add Formatting Options]]
 - [[I'm Getting #DIV/0 In My Report Viewer. How Can I Fix This?|FAQ/Divide By Zero]]
-- [[My control names changed when I deployed from development to production and now I can't access them.|http://wiki.izenda.us/FAQ/Questions/Control-Names-Break-In-Production]]
+- [[My control names changed when I deployed from development to production and now I can't access them.|/FAQ/Questions/Control-Names-Break-In-Production]]
+- [[How Do I Display Filter Names in My Reports?|/FAQ/Questions/Displaying-filter-names-in-reports]]
 
 ###Troubleshooting
 
