@@ -4,7 +4,7 @@
 
 You can set the database access level on a per-user basis using different connection strings by simply adding logic that changes the connection string based on logic you provide. For instance, take the code sample below:
 
-```
+```sql
 public static void InitializeReporting() {
     AdHocSettings.CurrentUserName = GetUserName();
     AdHocSettings.CurrentUserTenantID = GetUserTenantID();
