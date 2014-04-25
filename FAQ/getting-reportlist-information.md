@@ -16,7 +16,7 @@ _**The main question is how to get the ReportsList:**_
 
 - AdHocSettings.AdHocConfig.FilteredListReportsDictionaryCached
 
-- AdHocSettings.AdHocConfig.ListReports
+- [[AdHocSettings.AdHocConfig.ListReports|/FAQ/ListReports]]
 
 ---
 
@@ -43,6 +43,4 @@ _**In this case you could use JSON data to populate a client-side control using 
 
 ------
 
-We cannot provide ready-to-use examples because the code really depends on your particular use-case. Please contact Izenda Services with any questions: 
-
-Services@Izenda.com
+We cannot provide ready-to-use examples because the code really depends on your particular use-case. Please contact Izenda Services with any questions.
