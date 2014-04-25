@@ -10,11 +10,8 @@ The DeleteReportSet method is used to delete reports from your storage system. T
 
 ```csharp
 /* BEGIN Database Mode Code Sample */
-    string sql = string.Format(@"
-    DELETE FROM {1}
-    WHERE Name='{0}'",
-    reportName.Trim(),
-    SavedReportsTable);
+public override void DeleteReportSet() {
+    string sql = string.Format(@"DELETE FROM {1} WHERE Name='{0}'", reportName.Trim(), SavedReportsTable);
     System.Data.IDbCommand command = Izenda.AdHoc.AdHocContext.Driver.CreateCommand(sql);
     try
     {
@@ -25,6 +22,7 @@ The DeleteReportSet method is used to delete reports from your storage system. T
         if (command.Connection.State == System.Data.ConnectionState.Open)
         command.Connection.Close();
     }
+}
 /* END Database Mode Code Sample */
 ```
 
@@ -32,7 +30,9 @@ The DeleteReportSet method is used to delete reports from your storage system. T
 
 ```csharp
 /* BEGIN Filesystem Mode Code Sample */
+public override void DeleteReportSet() {
     string filePath = Path.Combine(ReportPath, reportName);
     File.Delete(filePath + ".xml");
+}
 /* END Filesystem Mode Code Sample */
 ```
