@@ -30,7 +30,6 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Can I Add Custom Format Options to the Report Designer?|/FAQ/Questions/Add Formatting Options]]
 - [[I'm Getting #DIV/0 In My Report Viewer. How Can I Fix This?|FAQ/Divide By Zero]]
 - [[My control names changed when I deployed from development to production and now I can't access them.|/FAQ/Questions/Control-Names-Break-In-Production]]
-- [[How Do I Display Filter Names in My Reports?|/FAQ/Questions/Displaying-filter-names-in-reports]]
 
 ###Troubleshooting
 
@@ -52,6 +51,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How does filtering in dashboards work?|FAQ/filtering-in-dashboards]]
 - [[What CSS will be Included in My Report?|FAQ/css-in-reports]]
 - [[How Do I Use a Blank Column in My Exports?|Guides/Blank-Column-in-Export]]
+- [[How Do I Display Filter Names in My Reports?|http://wiki.izenda.us/Guides/ReportDesign/5.0-Filters-tab#5.6-Other-Filter-Features]]
 
 ###Security
 
