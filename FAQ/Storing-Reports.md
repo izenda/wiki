@@ -35,10 +35,10 @@ Public Class CustomAdHocConfig Inherits Izenda.AdHoc.FileSystemAdHocConfig
 
 One of the advantages of file system mode is that it allows for custom saving behavior. There are four main methods that control creating, loading, saving, and deleting reports:
 
-* ListReports
-* LoadReportSet
-* SaveReportSet
-* DeleteReportSet
+* [[ListReports|/FAQ/ListReports]]
+* [[LoadReportSet|/FAQ/LoadReportSet]]
+* [[SaveReportSet|/FAQ/SaveReportSet]]
+* [[DeleteReportSet|/FAQ/DeleteReportSet]]
 
 Each of these methods may be over-ridden in order to implement custom behavior. Please see the global.asax example and the Izenda Reports API for examples. To set the default reports folder path that Izenda Reports should use, you must first create a folder in the file system and then ensure that the *NETWORK SERVICE* machine account has read and write access (if using ASP.NET 2.0) or that the *ASP.NET* machine account has read and write access (if using ASP.NET 1.1). Once this is complete, we must now tell Izenda Reports which folder to use by setting the "ReportsPath" property as shown in the example.
 
@@ -79,7 +79,7 @@ Public Class CustomAdHocConfig Inherits Izenda.AdHoc.DatabaseAdHocConfig
 
 ###Setting the Saved Reports Table
 
-This is the most essential setting to specify when using Database Mode. However, it is not required. If it is not specified, Izenda will create and use a table called "[[IzendaAdHocReports|/FAQ/databaseadhocconfig-table-structure]]".
+This is the most essential setting to specify when using Database Mode. However, it is not required. If it is not specified, Izenda will create and use a table called "[[IzendaAdHocReports|http://wiki.izenda.us/FAQ/IzendaAdHocReports-table]]".
 ```csharp
 //C#
 public static void InitializeReporting()
