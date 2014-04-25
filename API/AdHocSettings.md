@@ -248,7 +248,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   bool|[[ShowDataSourcesTab|API/CodeSamples/ShowDataSourcesTab]]|Gets or sets whether the Data Sources tab is shown on the Report Designer.|
 |   bool|[[ShowDataWhenParametersBlank|API/CodeSamples/ShowDataWhenParametersBlank]]|Deprecated|
 |   bool|[[ShowDescriptionsInReportsTab|API/CodeSamples/ShowDescriptionsInReportsTab]]|Deprecated|
-|   bool|[[ShowDesignDashboardLink|API/CodeSamples/ShowDesignDashboardLink]]|Gets or sets the value indicating whether the "New Dashboard" link should be shown in the Report list.|
+|   bool|[[ShowDesignDashboardLink|API/CodeSamples/ShowDesignDashboardLink]]|Deprecated. Use ShowDesignLinkInReportViewer instead.|
 |   bool|[[ShowDesignLinkInReportViewer|API/CodeSamples/ShowDesignLinkInReportViewer]]|Gets or sets the value indicating whether the "Design" button should be shown in the Report Viewer in the toolbar.|
 |   bool|[[ShowDesignLinks|API/CodeSamples/ShowDesignLinks]]|Gets or sets a value indicating whether "Design" links should be shown in the Report list and in the toolbar.|
 |   bool|[[ShowDetailFormat|API/CodeSamples/ShowDetailFormat]]|Deprecated|
