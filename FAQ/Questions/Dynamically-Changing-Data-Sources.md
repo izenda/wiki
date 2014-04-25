@@ -10,7 +10,7 @@ How can I change the data source I'm using for my reports on the fly?
 
 You can change the data source for individual reports by overriding the [[PreExecuteReportSet|/FAQ/PreExecuteReportSet]] method. Here is the source code for changing data sources:
 
-```
+```csharp
 public override void PreExecuteReportSet(Izenda.AdHoc.ReportSet reportSet) 
 { 
     base.PreExecuteReportSet(reportSet);
