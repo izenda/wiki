@@ -21,10 +21,16 @@ Clears the cache
 These are directly related to the filters used in the report and range from 1 to the number of filters used in the report where x is the number of the filter. The value indicates what default value the filter should have. (e.g. a report that filters on country, company, and product could have p1value=usa&p2value=general+mills&p3value=lucky+charms)
 
 **wscmd=[value]**
+This parameter takes any of the following string values and returns a JSON formatted object to the browser. This can help developers who wish to work with JSON objects to build customized application pages using Izenda.
 
 Possible Values
 
-* reportlistdata
-* reportlistdatalite
+* reportlistdata - returns a list of all the reports on file.
+* reportlistdatalite - similar to reportlistdata but returns less data.
+* fulldslist - returns a list of all data sources.
+* getconstraintslist - returns a list of the database constraints
+* getcrsparts - returns a list of the current report set's report parts
+* getcrstables - returns a list of the current report set's table names
+* getpivotguidata - returns the current report set's pivot data along with field names applicable to the current report set and all possible values for pivoting
 
 *Note: At this time, Izenda supports at most 5 query string parameters*
