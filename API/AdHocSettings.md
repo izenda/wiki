@@ -248,10 +248,10 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   bool|[[ShowDataSourcesTab|API/CodeSamples/ShowDataSourcesTab]]|Gets or sets whether the Data Sources tab is shown on the Report Designer.|
 |   bool|[[ShowDataWhenParametersBlank|API/CodeSamples/ShowDataWhenParametersBlank]]|Deprecated|
 |   bool|[[ShowDescriptionsInReportsTab|API/CodeSamples/ShowDescriptionsInReportsTab]]|Deprecated|
-|   bool|[[ShowDesignDashboardLink|API/CodeSamples/ShowDesignDashboardLink]]|Gets or set value indicating whether design a new dashboard link should be shown in Report list for the current user.|
-|   bool|[[ShowDesignLinkInReportViewer|API/CodeSamples/ShowDesignLinkInReportViewer]]|Deprecated. Use ShowDesignDashboardLink instead.|
+|   bool|[[ShowDesignDashboardLink|API/CodeSamples/ShowDesignDashboardLink]]|Deprecated. Use ShowDesignLinks instead.|
+|   bool|[[ShowDesignLinkInReportViewer|API/CodeSamples/ShowDesignLinkInReportViewer]]|Deprecated. Use ShowDesignLinks instead.|
 |   bool|[[ShowDesignLinks|API/CodeSamples/ShowDesignLinks]]|Gets or sets a value indicating whether "Design" links should be shown in the Report list and in the toolbar.|
-|   bool|[[ShowDetailFormat|API/CodeSamples/ShowDetailFormat]]|Deprecated|
+|   bool|[[ShowDetailFormat|API/CodeSamples/ShowDetailFormat]]|Deprecated.|
 |   bool|[[ShowDistinct|API/CodeSamples/ShowDistinct]]|Gets or sets the value indicating whether the "Distinct" checkbox should be shown on the Data Source tab in the Report Designer.|
 |   bool|[[ShowDOCButton|API/CodeSamples/ShowDOCButton]]|Gets or sets whether to show the Microsoft Word export button on the Report Viewer & Designer toolbar.|
 |   bool|[[ShowEtlButton|API/CodeSamples/ShowEtlButton]]|Gets or sets the value indicating whether the upload data button should be shown in the report viewer. |
