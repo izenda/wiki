@@ -53,8 +53,8 @@ End Class
 
 AdHocSettings.ShowDesignLinks = true
 
-![]()
+![](http://wiki.izenda.us/API/CodeSamples/ShowDesignLinks/toolbar_showdesigndashboardlinks_2.png)
 
 AdHocSettings.ShowDesignLinks = false
 
-![]()
+![](http://wiki.izenda.us/API/CodeSamples/ShowDesignLinks/toolbar_showdesigndashboardlinks.PNG)
