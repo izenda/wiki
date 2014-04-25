@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets whether the data sources will include only views or will include both views and other sources such as tables and stored procedures. This etting should be used if you would like only Views to be visible on the Data Sources tab of the Report Designer. This will show the users all views stored on the target database.
+Gets or sets whether the data sources will include only views or will include both views and other sources such as tables and stored procedures. This setting should be used if you would like only Views to be visible on the Data Sources tab of the Report Designer. This will show the users all views stored on the target database. You could also control access to specific tables and views with the [[VisibleDataSources|/API/CodeSamples/VisibleDataSources]] setting.
 
 _**Note**: ViewsOnly will NOT work if you also use VisibleDataSources._
 
@@ -32,7 +32,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    AdHocSettings.ViewsOnly = true;
+    AdHocSettings.ViewsOnly = true;  //The relevant setting
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
@@ -52,7 +52,7 @@ Public Class CustomAdHocConfig
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
-        AdHocSettings.ViewsOnly = True
+        AdHocSettings.ViewsOnly = True 'The relevant setting
         HttpContext.Current.Session("ReportingInitialized") = True
     End Sub
 End Class
