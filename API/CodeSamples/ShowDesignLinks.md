@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets a value indicating whether "Design" links should be shown in the Report list and in the toolbar.
+Gets or sets a value indicating whether "Design" links should be shown in the Report list and in the toolbar. This will hide the "New", "Save", "Save As", and "Design" buttons. It will also hide the "Fields" tab on the Report Viewer.
 
 ##Global.asax (C♯)
 ```c#
