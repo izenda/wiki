@@ -1,5 +1,13 @@
 #The ListReports() Method
 
+[[_TOC_]]
+
+##About
+
+The ListReports method allows you to dynamically alter the list of reports that Izenda uses on the Report List page. Below is an example of logic you could use with this method.
+
+##Sample Method (DatabaseAdHocConfig)
+
 ```csharp
 public override Izenda.AdHoc.ReportInfo[] ListReports()
 {
@@ -30,6 +38,8 @@ public override Izenda.AdHoc.ReportInfo[] ListReports()
       return (Izenda.AdHoc.ReportInfo[])reportNames.ToArray(typeof(Izenda.AdHoc.ReportInfo));
       /* END Database Mode Code Sample */
 ```
+
+##Sample Method (FileSystemAdHocConfig)
 
 ```csharp
       /* BEGIN Filesystem Mode Code Sample */
