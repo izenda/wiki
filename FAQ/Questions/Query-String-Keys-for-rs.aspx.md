@@ -20,4 +20,11 @@ Clears the cache
 **pxvalue=[value]**
 These are directly related to the filters used in the report and range from 1 to the number of filters used in the report where x is the number of the filter. The value indicates what default value the filter should have. (e.g. a report that filters on country, company, and product could have p1value=usa&p2value=general+mills&p3value=lucky+charms)
 
+**wscmd=[value]**
+
+Possible Values
+
+* reportlistdata
+* reportlistdatalite
+
 *Note: At this time, Izenda supports at most 5 query string parameters*
