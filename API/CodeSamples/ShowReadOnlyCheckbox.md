@@ -4,9 +4,9 @@
 
 ##About
 
-**Obsolete:** This setting is no longer available
+**Obsolete:** This setting is no longer available. Use [[ShowSharingControl|/API/CodeSamples/ShowSharingControl]] instead.
 
-Gets or sets whether the "Read Only" checkbox is shown on the report designer.
+Gets or sets whether the "Read Only" checkbox is shown on the Misc tab of the report designer.
 
 ##Global.asax (C♯)
 ```c#
