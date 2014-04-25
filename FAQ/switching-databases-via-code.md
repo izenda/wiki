@@ -20,6 +20,21 @@ public static void InitializeReporting() {
 
 This is a simple method that will connect the user to the database called "Administration" if that user is an admin. You can, however, also switch databases on the fly during runtime. 
 
+##Using the Query String
+
+To dynamically change your connection string via a query string parameter, you can add code like this to the Report Designer, Report List, and Report Viewer. If a "db" parameter is found, it will change the connection string.
+
+```csharp
+protected override void OnInit(EventArgs e)
+{
+	string db = Request.QueryString["db"];
+	if (db != null) 
+		Izenda.AdHoc.AdHocSettings.SqlServerConnectionString = "server=(local);Trusted_Connection=True;database=" + db;
+	
+	base.OnInit(e);
+}
+```
+
 ##Custom Button
 
 This sample page can be used to create a drop down & button to dynamically change the database connection string during runtime. Simply add this new page to the folder where your reporting website exists. When the database from the dropdown is selected and the button is clicked, the connection string associated to that database is selected. The application will now use the updated data source information.
