@@ -6,7 +6,7 @@ Gets or sets the URL of the page to which users will be redirected after saving 
 
 You could use this feature if you want to modify how users save reports. Normally, a simple popup will appear on the screen that prompts the user to enter a Name and a Category and once these fields are entered, the user will be redirected back to the Report List. But if you define a url with this setting, users will be directed to your custom page where you can require additional elements such as custom scheduling controls or advanced sharing. Since Izenda saves the report before the redirect, you will have full access to the report by pulling it from your File System or Database.
 
-**Note:** The report name will be automatically added to the url query string as a parameter named "rn". Therefore, your URL could look like "www.yourdomain.com/CustomSave.aspx?rn=SavedReportName" and you will be able to grab the report from the file system or database with the query string parameter.
+**Note:** The report name will be automatically added to the url query string as a parameter named "rn". Therefore, your URL could look like ``www.yourdomain.com/CustomSave.aspx?rn=SavedReportName`` and you will be able to grab the report from the file system or database with the query string parameter.
 
 ##Global.asax (C♯)
 
