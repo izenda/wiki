@@ -298,6 +298,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   bool|[[ShowPreviewTab|API/CodeSamples/ShowPreviewTab]]|Gets or sets whether the "Preview" tab is shown in the Report Designer.|
 |   bool|[[ShowPublishRdlButton|API/CodeSamples/ShowPublishRdlButton]]|Gets or sets whether to show the "Publish RDL" button on the Report Designer toolbar.|
 |   bool|[[ShowRdlOutputIcon|API/CodeSamples/ShowRdlOutputIcon]]|Gets or sets whether to show the "RDL" button on the Report Designer toolbar.|
+|   bool|[[ShowReadOnlyCheckbox|/API/CodeSamples/ShowReadOnlyCheckbox]]|Deprecated. This setting is no longer available.|
 |   bool|[[ShowRecentDatasources|API/CodeSamples/ShowRecentDatasources]]|Gets or sets the value indicating whether the Recent Datasources dropdown list will be shown on the Data Sources tab of the Report Designer.|
 |   bool|[[ShowRemoveAll|API/CodeSamples/ShowRemoveAll]]||
 |   bool|[[ShowRemoveFieldInReportViewer|API/CodeSamples/ShowRemoveFieldInReportViewer]]||
