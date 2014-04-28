@@ -84,3 +84,62 @@ When we run our post-processor code we will get the expected result:
 
 As you can see, "CA" was replaced by "California" in the grid but the chart still displays "CA". 
 Using this approach, you can change data retrieved from the database in many ways.
+---
+##Example: Dynamically changing time zones
+
+This code sample show how to change TimeZone dynamically from the code. This allows you to show relevant Date values according to the current user local time.
+
+C♯:
+
+```csharp
+public override void ProcessDataSet(DataSet ds, string reportPart)
+{    
+	if (ds.Tables.Count == 0)        
+		return;    
+	// Iterate through ALL DateTime values and change values according to the local TimeZone    
+	// Note: you could also change some fields only    
+	foreach (DataColumn column in ds.Tables[0].Columns)       
+		if (column.DataType == typeof(DateTime))            
+			foreach (DataRow row in ds.Tables[0].Rows)                
+				row[column] = GetLocalTime((DateTime)row[column]);
+}
+
+private static DateTime GetLocalTime(DateTime utcTime)
+{    
+	// The only way to get user local time is to get in on the client-side (using javascript)    
+	// Izenda already have this functionality, so you could use IZR_TimeZone session variable    
+	// OR you may want to detect user TimeZone using your own methods    
+	if (HttpContext.Current.Session["IZR_TimeZone"] == null)       
+		return utcTime;    
+	return utcTime.AddMinutes((int)HttpContext.Current.Session["IZR_TimeZone"]);
+}
+```
+
+###VB.NET:
+
+```visualbasic
+Public Overrides Sub ProcessDataSet(ds As Data.DataSet, reportPart As String)	
+	If (ds.Tables.Count = 0) Then		
+		Return	
+	End If	
+	' Iterate through ALL DateTime values and change values according to the local TimeZone	
+	' Note: you could also change some fields only	
+	For Each column As System.Data.DataColumn In ds.Tables(0).Columns		
+		If (column.DataType Is GetType(DateTime)) Then			
+			For Each row As System.Data.DataRow In ds.Tables(0).Rows				  
+				row(column) = GetLocalTime(CType(row(column), DateTime))			
+			Next		
+		End If	
+	Next 
+End Sub
+
+Private Function GetLocalTime(utcTime As DateTime) As DateTime	
+	' The only way to get user local time is to get in on the client-side (using javascript)	
+	' Izenda already have this functionality, so you could use IZR_TimeZone session variable	
+	' OR you may want to detect user TimeZone using your own methods	
+	If (HttpContext.Current.Session("IZR_TimeZone") Is Nothing) Then		
+		Return utcTime	
+	End If	
+	Return utcTime.AddMinutes(DirectCast(HttpContext.Current.Session("IZR_TimeZone"), Integer))
+End Function
+```
