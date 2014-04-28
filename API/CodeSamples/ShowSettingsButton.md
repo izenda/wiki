@@ -57,8 +57,8 @@ End Class
 
 AdHocSettings.ShowSettingsButton = false
 
-![]()
+![](http://wiki.izenda.us/API/CodeSamples/ShowSettingsButton/toolbar_showsettingsbutton_false.png)
 
 AdHocSettings.ShowSettingsButton = true
 
-![]()
+![](http://wiki.izenda.us/API/CodeSamples/ShowSettingsButton/toolbar_showsettingsbutton_false.png)
