@@ -56,7 +56,7 @@ End Class
 
 ```csharp
 AdHocSettings.DataSourceCategories["Employees"] = new string[] { "Employees", "Territories" };
-AdHocSettings.DataSourceCategories["Orders"] = new string[] { "Orders", "Products" };
+AdHocSettings.DataSourceCategories["Orders"] = new string[] { "Orders", "Order Details" };
 ```
 
 ![](http://wiki.izenda.us/API/CodeSamples/DataSourceCategories/datasourcecategories.png)
