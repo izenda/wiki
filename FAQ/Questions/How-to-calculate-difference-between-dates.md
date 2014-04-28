@@ -22,3 +22,13 @@ Here we establish our report fields. Note how the (-) operator is selected on th
 ![](http://wiki.izenda.us/FAQ/FAQ/date_difference_results.png)
 
 We can see that our data has appeared as we wanted it in our preview.
+
+###Find the difference between two datetimes
+
+The difference between two datetimes can be determined by implementing an [[Expression|http://wiki.izenda.us/Guides/ReportDesign/15.0-Expressions-in-Izenda]] in the Report Designer that is similar to the following:
+
+``[RequiredDate] - [OrderDate]``
+
+This will, however, format the date as an expression of time from the beginning of the epoch and not as an actual difference in times. (E.g. if your first date is **9/2/2010 3:13:48 AM** and your second date is **8/5/2010 11:18:46 AM**, the result will be **1/28/1900 3:55:02 PM** and not **28 Days 15 Hours 55 Minutes 2 Seconds** or something similar)
+
+For the formatting, you will need to implement a [[Custom Formatter|http://wiki.izenda.us/FAQ/Questions/Add-Formatting-Options#Example-4---Custom-Formatters]].
