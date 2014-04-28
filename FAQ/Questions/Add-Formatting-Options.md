@@ -102,4 +102,6 @@ You may use the DatesCustomFormatFormatter below as a reference. This will get i
 
 ###Results
 
-![]()
+The results of the above custom formatter are displayed here. The column "Ship Time" is the time difference between the Required Date and the Order Date.
+
+![](http://wiki.izenda.us/FAQ/Questions/Add-Formatting-Options/custom_format_object.png)
