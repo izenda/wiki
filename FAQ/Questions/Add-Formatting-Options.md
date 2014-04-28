@@ -45,7 +45,7 @@ You can use this example as a template for other date formats as well.
 
 ##Example 4 - Custom Formatters
 
-In this example, we show how to create a custom formatter. You will add it to the [[Formatters collection for use in your application. This example is for the difference between time periods.
+In this example, we show how to create a custom formatter. This example is for the difference between time periods.
 
 You may use the DatesCustomFormatFormatter below as a reference. This will get inserted into your global.asax below your [[CustomAdHocConfig|http://wiki.izenda.us/API/AdHocConfig]] class definition. You can implement this custom formatter in your [[InitializeReporting()|]] method by creating a "new" DatesCustomFormatFormatter in the [[Formats|http://wiki.izenda.us/API/CodeSamples/Formats]] collection.
 
