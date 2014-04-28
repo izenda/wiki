@@ -61,4 +61,4 @@ AdHocSettings.ShowSettingsButton = false
 
 AdHocSettings.ShowSettingsButton = true
 
-![](http://wiki.izenda.us/API/CodeSamples/ShowSettingsButton/toolbar_showsettingsbutton_false.png)
+![](http://wiki.izenda.us/API/CodeSamples/ShowSettingsButton/toolbar_showsettingsbutton_true.png)
