@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the list of available formats to apply to fields. This affects the Formats dropdown on the Fields tab of the ReportDesigner. 
+Gets or sets the list of available formats to apply to fields. This affects the Formats dropdown on the [[Fields tab|http://wiki.izenda.us/Guides/ReportDesign/4.0-fields-tab]] of the Report Designer. 
 
 _**Note:** You could use Formats to add new custom formats. Read more [[here|/FAQ/Questions/Add-Formatting-Options]]_
 
