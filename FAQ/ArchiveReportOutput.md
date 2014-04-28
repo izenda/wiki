@@ -35,7 +35,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
 }
 ```
 
-VB.NET
+##Global.asax (VB.NET)
 
 ```visualbasic
 'main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
