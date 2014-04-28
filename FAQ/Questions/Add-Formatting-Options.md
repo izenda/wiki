@@ -23,6 +23,16 @@ We can also use an Izenda Format object as an argument. Below is the method of a
     AdHocSettings.Formats.Add("Scientific", scientificFormat);
 ```
 
+###Results
+
+Below are screenshots of the results. The one directly below this text shows the OrderID field (a number field) with both of our new functions listed.
+
+![Extended Formats](/FAQ/Questions/Add-Formatting-Options/extended_formats.png)
+
+And here is the Freight field formatting options. Notice that we did not specify the "Money" type in our **SqlTypeGroups** for the Scientific format. Therefore, it is not listed in this dropdown but "Bold" still is.
+
+![Extended Formats 2](/FAQ/Questions/Add-Formatting-Options/extended_formats_2.png)
+
 ##Example 3 - International Date Formats
 
 In this example, we show how to set the formats when using an International Date format. This example is for the European Date format.
@@ -33,12 +43,58 @@ In this example, we show how to set the formats when using an International Date
 
 You can use this example as a template for other date formats as well.
 
-##Results
+##Example 4 - Custom Formatters
 
-Below are screenshots of the results. The one directly below this text shows the OrderID field (a number field) with both of our new functions listed.
+In this example, we show how to create a custom formatter. You will add it to the [[Formatters collection for use in your application. This example is for the difference between time periods.
 
-![Extended Formats](/FAQ/Questions/Add-Formatting-Options/extended_formats.png)
+You may use the DatesCustomFormatFormatter below as a reference. This will get inserted into your global.asax below your [[CustomAdHocConfig|http://wiki.izenda.us/API/AdHocConfig]] class definition. You can implement this custom formatter in your [[InitializeReporting()|]] method by creating a "new" DatesCustomFormatFormatter in the [[Formats|http://wiki.izenda.us/API/CodeSamples/Formats]] collection.
 
-And here is the Freight field formatting options. Notice that we did not specify the "Money" type in our **SqlTypeGroups** for the Scientific format. Therefore, it is not listed in this dropdown but "Bold" still is.
+```csharp
+  [Serializable]
+  public class DatesCustomFormatFormatter : IFormatter {
+    public Type GetOutputDataType(DataTable table, int columnNumber, ReportOutputOptions reportOutputOptions, Field field) {
+      return typeof(string);
+    }
 
-![Extended Formats 2](/FAQ/Questions/Add-Formatting-Options/extended_formats_2.png)
+    public object Format(DataTable table, int rowNumber, int columnNumber, Field field, DataTable originalTable, Field nameField) {
+      object value = table.Rows[rowNumber][columnNumber];
+      if (value == null || Convert.IsDBNull(value))
+        return null;
+      DateTime dateValue;
+
+      DateTime.TryParse(value.ToString(), out dateValue);
+      return dateValue.Day + " Days " + dateValue.Hour + " Hours " + dateValue.Minute + " Minutes " + dateValue.Second + " Seconds";
+    }
+  }
+
+  public class DatesCustomFormat : IFormat {
+    private SqlTypeGroupCollection allowedTypeGroups = new SqlTypeGroupCollection();
+    public SqlTypeGroupCollection AllowedTypeGroups {
+      get { return allowedTypeGroups; }
+    }
+
+    public SqlTypeGroupCollection DisallowedTypeGroups {
+      get { return null; }
+    }
+
+    public string Name { get; set; }
+
+    public SqlTypeGroup DefaultFor {
+      get { return SqlTypeGroup.None; }
+    }
+
+    public bool Visible {
+      get { return true; }
+    }
+
+    public IFormatter[] CreateFormatters() {
+      return new IFormatter[] { new DatesCustomFormatFormatter() };
+    }
+
+    public DatesCustomFormat(string name) {
+      allowedTypeGroups.Add(SqlTypeGroup.Date);
+      allowedTypeGroups.Add(SqlTypeGroup.DateTime);
+      Name = name;
+    }
+  }
+```
