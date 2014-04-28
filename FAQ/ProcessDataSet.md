@@ -84,7 +84,7 @@ When we run our post-processor code we will get the expected result:
 
 As you can see, "CA" was replaced by "California" in the grid but the chart still displays "CA". 
 Using this approach, you can change data retrieved from the database in many ways.
----
+
 ##Example: Dynamically changing time zones
 
 This code sample show how to change TimeZone dynamically from the code. This allows you to show relevant Date values according to the current user local time.
