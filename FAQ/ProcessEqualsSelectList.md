@@ -2,7 +2,9 @@
 
 [[_TOC_]]
 
-This code sample overrides the equals select drop-down used in the "Filter" tab and in the Report Viewer.
+##About
+
+The ProcessEqualsSelectList method is used to re-define how the Equals(Select) option renders its results on the Filters tab of the Report Designer. There are many different ways to deal with this particular list depending on how your application is structured. This code will add the values "Vendor 1" and "Vendor 2" into the list when the column's name that is being filtered is "VendorName".
 
 Here is sample code that you can add to your global.asax file:
 
