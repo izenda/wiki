@@ -182,7 +182,10 @@ Below is a full example of how to set up and configure the Izenda Fusion Driver 
 <%@ Import Namespace="System.Configuration" %>
 
 <script runat="server">
-    void Session_Start(object sender, EventArgs e) 
+[Serializable]
+public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
+{
+    public static void InitializeReporting() 
     {
         // Set license key. Note: "+FUSION" must be in license key
         AdHocSettings.LicenseKey = "LICENSE KEY";
@@ -192,12 +195,7 @@ Below is a full example of how to set up and configure the Izenda Fusion Driver 
         
         // Create Fusion driver and set it as default driver for AdHoc
         FusionDriver fusionDriver = new FusionDriver();
-        AdHocContext.Driver = fusionDriver;
-        
-        // Add connection to the local MSSQL database
-        fusionDriver.AddConnection("SqlNW", FusionConnectionType.MsSql, "server=(local);database=Northwind;Trusted_Connection=True;");
-        // Add connection to the OData provider which is connected to the Oracle database
-        fusionDriver.AddConnection("OrclNW", FusionConnectionType.OData, "http://www.providerdomain.com/Oracle/FusionEndpoint.aspx");     
+        AdHocContext.Driver = fusionDriver;  
         
         // Add visible data sources
         fusionDriver.VisibleDataSources = new string[] { "Orders", "Customers", "Order Details" };  
@@ -216,14 +214,85 @@ Below is a full example of how to set up and configure the Izenda Fusion Driver 
         // Set connection to the database with reports table
         ((FusionAdHocConfig)AdHocSettings.AdHocConfig).ReportingConnectionString = "server=(local);database=ReportsDB;Trusted_Connection=True;";
     }
-    
-    [Serializable]
-    public class CustomFusionAdHocConfig : FusionAdHocConfig
-    {
-        public override void ConfigureSettings()
-        {
-        
-        }
+}
+[Serializable]
+public class CustomFusionAdHocConfig : FusionAdHocConfig
+{
+    public CustomFusionDriver()
+    {        
+        // Add connection to the local MSSQL database
+        this.AddConnection("SqlNW", FusionConnectionType.MsSql, "server=(local);database=Northwind;Trusted_Connection=True;");
+        // Add connection to the OData provider which is connected to the Oracle database
+        this.AddConnection("OrclNW", FusionConnectionType.OData, "http://www.providerdomain.com/Oracle/FusionEndpoint.aspx");  
     }
+ 
+    public override System.Data.DataSet GetDataSet(System.Data.IDbCommand command, string reportPart)
+    {
+        // You could use AdHocContext.CurrentReportSet property here to get the executing report
+
+        // Replace with custom code
+        // For ex. add some caching here and then call base method to retrieve data
+        return base.GetDataSet(command, reportPart);
+    }
+}
 </script>
+```
+
+###Overriding CustomFusionDriver Methods
+
+You could also override other methods to customize getting data. Here are the most commonly used:
+
+```csharp
+// Get array of all available tables from all connections
+public override Izenda.AdHoc.Database.Table[] GetAllTables()
+{
+	return base.GetAllTables();
+}
+
+// Get array of all available tables from all connections
+public override StoredProcedure[] GetAllStoredProcedures()
+{
+	return base.GetAllStoredProcedures();
+}
+
+// Get array of all columns in tables from all connections
+public override Column[] GetColumns(Izenda.AdHoc.Database.Table table)
+{
+	return base.GetColumns(table);
+}
+
+// Get array of all tables constraints from all connections
+public override Constraint[] GetConstraints(DatabaseSchema schema)
+{
+	return base.GetConstraints(schema);
+}
+
+// Add new virtual constraint
+public override void AddConstraint(string primaryColumn, string foreignColumn)
+{
+	base.AddConstraint(primaryColumn, foreignColumn);
+}
+
+// Remove constraint
+public override bool RemoveConstraint(string fullyQualifiedPrimaryColumn, string fullyQualifiedForeignColumn)
+{
+	return base.RemoveConstraint(fullyQualifiedPrimaryColumn, fullyQualifiedForeignColumn);
+}
+```
+
+**Note:** The **fusionConnections** property within the **FusionDriver** class is where all connections for the current driver are stored. You can iterate over the collection and ping the database with a small bit of data in order to determine if the connection string you are using is obtaining results properly.
+
+Here is a sample use of fusionConnections:
+
+```csharp
+public override Column[] GetColumns(Izenda.AdHoc.Database.Table table)
+{
+	foreach (FusionConnection fusionConnection in this.fusionConnections)
+	{
+		Column[] columns = fusionConnection.GetColumns(table);
+		if (columns.Length > 0)
+			return columns;
+	}
+	return new Column[0];
+}
 ```
