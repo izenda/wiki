@@ -31,4 +31,6 @@ public override string[] ProcessEqualsSelectList(Izenda.AdHoc.Database.Column co
 
 ##Other Articles
 
+Please see this article about using stored procedures with this filter option.
+
 * [[Using Stored Procedures|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
