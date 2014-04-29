@@ -2,6 +2,10 @@
 
 [[_TOC_]]
 
+##About
+
+The MySqlConnectionString is used for setting up connections to My SQL databases. This will cause the AdHocContext.Driver object to become a MySqlDriver object. You can specify this setting for an entire user group or you can specify it per-user. 
+
 ##Setting Up a MySQL Connection String
 
 To set up your MySql Connection String, use the AdHocSettings property MySqlConnectionString.
