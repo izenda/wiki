@@ -63,11 +63,11 @@ To test this, go back to a report you wish to schedule and click on it. Click th
 * Navigate to the rs.aspx page in the application (for example, http://yourhost/yourapp/rs.aspx). Now add this to the end of the URL, ?run_scheduled_reports=30 (30 equals the frequency in minutes it will run). The url in the browser should read: http://yourhost/yourapp/rs.aspx?run_scheduled_reports=30
 * This will return a list of scheduled reports into the browser window. In either case, you should receive the link to your scheduled report in your e-mail.
 
-##Alternative Setup using code in ConfigureSettings()
+##Alternative Setup using code in InitializeReporting()
 
 To set the settings in code:
 
-* Setup your SMTP Server in the Global.asax file inside of the ConfigureSettings() method by modifying some settings in it. The Global.asax file is found in the root of the directory to which you installed Izenda Reports.
+* Setup your SMTP Server in the Global.asax file inside of the **InitializeReporting()** method by modifying some settings in it. The Global.asax file is found in the root of the directory to which you installed Izenda Reports.
 
 ```csharp
 Izenda.AdHoc.AdHocSettings.SmtpServer = "INSERT IP ADDRESS HERE";
