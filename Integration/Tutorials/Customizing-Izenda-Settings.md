@@ -4,9 +4,26 @@
 
 ##Introduction: common code additions
 
-Izenda Reports can be integrated with the navigation, security, and appearance of existing applications. This is done through the code-level API, which can be accessed and extended through the **AdHocConfig** and **AdHocSettings** classes. By default, the Izenda starter kit includes pre-built code templates, which can be found in Global.asax. Here you will find settings that set critical values like the connection string and license key as well as a custom **AdHocConfig** implementation that overrides common methods. Here is an example of what a common global.asax might look like. 
+Izenda Reports can be integrated with the navigation, security, and appearance of existing applications. This is done through the code-level API, which can be accessed and extended through the **[[AdHocConfig|/API/CodeSamples/AdHocConfig]]** and **[[AdHocSettings|/API/CodeSamples/AdHocSettings]]** classes. By default, the Izenda starter kit includes pre-built code templates, which can be found in Global.asax.
 
-##Sample Global.asax file
+##The Global.asax file
+
+The Global.asax file, also known as the ASP.NET application file, is a file that contains code for responding to application-level and session-level events raised by ASP.NET or by HTTP modules. At run time, Global.asax is parsed and compiled.
+
+The global.asax provides the ability to customize the following features and more:
+
+* listing of reports
+* loading of reports
+* saving of reports
+* deleting of reports
+* user security on a per user/per role basis
+* hidden filters for reports
+* UI appearance
+* report-level and datasource-level application logic
+
+Here is an example of what a common global.asax might look like. 
+
+###Sample Global.asax file
 
 ``` c#
 <%@ Application Language="C#" %>
