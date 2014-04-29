@@ -67,5 +67,5 @@ To use custom CSS for the Report List page, you can use the method described abo
 
 ##Dashboards
 
-    * [[DashboardsCssUrl|/API/CodeSamples/DashboardsCssUrl]]
+* [[DashboardsCssUrl|/API/CodeSamples/DashboardsCssUrl]]
 
