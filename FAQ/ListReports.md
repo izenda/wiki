@@ -94,36 +94,36 @@ public override ReportInfo[] ListReports() {
 }//end method
 ```
 
+##Sample VB.NET Methods
+
+###DatabaseAdHocConfig
 
 ```
-public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
-{	
+Public Class CustomAdHocConfig
+    Inherits Izenda.AdHoc.DatabaseAdHocConfig
 
-    protected override Izenda.AdHoc.ReportInfo[] ListReports()
-    {
-        ArrayList reportNames = new ArrayList();
-        string sql = String.Format("SELECT Name, CreatedDate, ModifiedDate FROM {0} ORDER BY Name WHERE UserID='{1}'", AdHocSettings.SavedReportsTable, AdHocSettings.CurrentUserName); 
+    Protected Overrides Function ListReports() As Izenda.AdHoc.ReportInfo()
+        Dim reportNames As New ArrayList()
+        Dim sql As String = String.Format("SELECT Name, CreatedDate, ModifiedDate FROM {0} ORDER BY Name WHERE UserID='{1}'", AdHocSettings.SavedReportsTable, AdHocSettings.CurrentUserName)
 
-        System.Data.IDbCommand command = null;
-        try
-        {
-            command = Izenda.AdHoc.AdHocContext.Driver.CreateCommand(sql);
-            System.Data.IDataReader reader = command.ExecuteReader();
+        Dim command As IDbCommand = Nothing
+        Try
+            command = Izenda.AdHoc.AdHocContext.Driver.CreateCommand(sql)
+            Dim reader As IDataReader = command.ExecuteReader()
 
-            while (reader.Read())
-            {
-                string reportName = reader["Name"].ToString();
-                DateTime createdDate = (DateTime)reader["CreatedDate"];
-                DateTime modifiedDate = (DateTime)reader["ModifiedDate"];
-                if (reportName != "")
-                reportNames.Add(new Izenda.AdHoc.ReportInfo(reportName, false, createdDate, modifiedDate));
-            }
-        }
-        catch (Exception) { }
+            While reader.Read()
+                Dim reportName As String = reader("Name").ToString()
+                Dim createdDate As DateTime = Convert.ToDateTime(reader("CreatedDate").ToString())
+                Dim modifiedDate As DateTime = Convert.ToDateTime(reader("ModifiedDate").ToString())
+                If reportName.Equals("") Then
+                    reportNames.Add(New Izenda.AdHoc.ReportInfo(reportName, False, createdDate, modifiedDate))
+                End If
+            End While
+        Catch
+        End Try
 
-        if (command.Connection.State == System.Data.ConnectionState.Open)
-        command.Connection.Close();
-        return (Izenda.AdHoc.ReportInfo[])reportNames.ToArray(typeof(Izenda.AdHoc.ReportInfo));
+        If command.Connection.State = System.Data.ConnectionState.Open Then command.Connection.Close()
+        Return DirectCast(reportNames.ToArray(GetType(Izenda.AdHoc.ReportInfo)), Izenda.AdHoc.ReportInfo())
     }
 }
 ```
