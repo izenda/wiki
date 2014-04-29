@@ -12,23 +12,27 @@ This method controls how the CurrentReportSet object is loaded into the applicat
 
 ```csharp
 public override Izenda.AdHoc.ReportSet LoadReportSet(string reportName)
-  {
+{
     /* BEGIN Database Mode Code Sample */
     string sql = string.Format("SELECT Xml FROM {0} WHERE Name = '{1}'", AdHocSettings.SavedReportsTable, reportName);
     object oXml = Izenda.AdHoc.AdHocContext.Driver.GetScalar(sql);
-      if (oXml != DBNull.Value && oXml != null)
+    if (oXml != DBNull.Value && oXml != null)
         {
           Izenda.AdHoc.ReportSet reportSet = new Izenda.AdHoc.ReportSet();
           reportSet.ReadXml(oXml.ToString());
           return reportSet;
         }
       return null;
+    }
     /* END Database Mode Code Sample */
+}
 ```
 
 ###FileSystemAdHocConfig Mode
 
 ```csharp    
+public override Izenda.AdHoc.ReportSet LoadReportSet(string reportName)
+{
     /* BEGIN Filesystem Mode Code Sample */
     string fileName = GetFileName(reportName);
       if (fileName == null)
