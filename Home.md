@@ -21,7 +21,7 @@ The Izenda Reports API contains specific settings that alter the behavior of the
 
 Some databases contain complex field names that may be confusing to users. In these situations, it may be necessary to create Views that simplify the data model for the user. Users can be limited to specific views using the [[AdHocSettings.VisibleDataSources|/API/CodeSamples/VisibleDataSources]] setting.
 
-###[[Applying Branding|Integration/Tutorials/Appearance]]
+###Applying Branding
 
 There are a few different ways to apply your branding, logo, or header controls to Izenda Reports. 
 
