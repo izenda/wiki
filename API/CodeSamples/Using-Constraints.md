@@ -38,7 +38,7 @@ Notice that we define multiple columns for a single data source and map them to 
 
 In this case Izenda will generate the following SQL:
 
-```csharp
+```sql
 SELECT *
 FROM [dbo].[Orders]
 INNER JOIN [dbo].[Invoices] 
