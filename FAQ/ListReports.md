@@ -98,7 +98,7 @@ public override ReportInfo[] ListReports() {
 
 ###DatabaseAdHocConfig
 
-```
+```visualbasic
 Public Class CustomAdHocConfig
     Inherits Izenda.AdHoc.DatabaseAdHocConfig
 
@@ -124,6 +124,6 @@ Public Class CustomAdHocConfig
 
         If command.Connection.State = System.Data.ConnectionState.Open Then command.Connection.Close()
         Return DirectCast(reportNames.ToArray(GetType(Izenda.AdHoc.ReportInfo)), Izenda.AdHoc.ReportInfo())
-    }
-}
+    End Sub
+End Class
 ```
