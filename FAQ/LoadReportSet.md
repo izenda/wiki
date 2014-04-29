@@ -93,3 +93,7 @@ Public Overrides Function LoadReportSet(reportName As String) As ReportSet
       ' END Filesystem Mode Code Sample
 End Function
 ```
+
+##Logging Loading Exceptions
+
+The "No Fields Selected" error occurs when there are zero valid fields in the report. The system is designed to hide reports when an exception occurs because it assumes it is a security exception and the user is not allowed to view that report for one of a multitude of reasons. The system is designed to hide reports that are not included in the current users's security credentials. If you would like to log the loading exception, you can do so by wrapping the above method in a try catch block and handling the exception by logging it where you want to view it later.
