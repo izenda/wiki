@@ -4,7 +4,7 @@
 
 ##About
 
-This sets the list of users or roles available in the "Shared With" dropdown of the Misc tab in the Report Designer. This is usually set per-user and may be fine-tuned to your organization's needs. While this setting doesn't have any immediate effect on what reports a user can see, the [[CurrentUserRoles|/API/CodeSamples/CurrentUserRoles]] and [[CurrentUserName|/API/CodeSamples/CurrentUserName]] properties are used in conjunction with this property to create report-level security.
+This sets the list of users or roles available in the "Shared With" dropdown of the Misc tab in the Report Designer. This is usually set per-user and may be fine-tuned to your organization's needs. While this setting doesn't have any immediate effect on what reports a user can see, the [[CurrentUserRoles|/API/CodeSamples/CurrentUserRoles]] and [[CurrentUserName|/API/CodeSamples/CurrentUserName]] properties are used in conjunction with this property to create report-level security. The values contained in this list can either be names of **users** or names of **roles** within your application. Both may be used simultaneously if so desired.
 
 **Default Value:** null/Nothing
 
@@ -54,6 +54,6 @@ End Class
 
 ##Screenshots
 
-AdHocSettings.SharedWithValues = new string[] {"Marketing", "Sales", "Bob", "Alice", "Dan"}
+AdHocSettings.SharedWithValues = new string[] {"Marketing", "Sales", "Bob", "Accounting", "Lisa"}
 
 ![SharedWithValues dropdown](/API/CodeSamples/SharedWithValues/sharewithdropdown.png)
