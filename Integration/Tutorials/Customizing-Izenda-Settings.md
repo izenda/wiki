@@ -66,7 +66,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
 
 For more a more detailed code sample, click any of the headings.
 
-  * [[InitializeReporting()|/FAQ/InnitializeReporting]] **The license key must be first!** Then add the connection string and initialize your custom AdHocConfig.
+  * [[InitializeReporting()|/FAQ/InitializeReporting]] **The license key must be first!** Then add the connection string and initialize your custom AdHocConfig.
   * [[PreExecuteReportSet()|/FAQ/PreExecuteReportSet]] Add hidden filters and other code that needs to run before the report is displayed to the user.
   * [[ProcessDataSet()|/FAQ/ProcessDataSet]] You can manipulate the report how you please in this method. This is useful for substituting values in your reports.
 
