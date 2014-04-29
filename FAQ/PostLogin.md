@@ -4,7 +4,7 @@
 
 ##About
 
-**This method has been deprecated. Use [[InitializeReporting|/FAQ/InitializeReporting]] instead**.
+**This method is obsolete. Use [[InitializeReporting|/FAQ/InitializeReporting]] instead**.
 
 The PostLogin method allows you to call it from your login page using the line of code: ``Izenda.AdHoc.AdHocSettngs.AdHocConfig.PostLogin();``
 
