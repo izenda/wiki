@@ -4,7 +4,7 @@
 
 ##Introduction: common code additions
 
-Izenda Reports can be integrated with the navigation, security, and appearance of existing applications. This is done through the code-level API, which can be accessed and extended through the **[[AdHocConfig|/API/CodeSamples/AdHocConfig]]** and **[[AdHocSettings|/API/CodeSamples/AdHocSettings]]** classes. By default, the Izenda starter kit includes pre-built code templates, which can be found in Global.asax.
+Izenda Reports can be integrated with the navigation, security, and appearance of existing applications. This is done through the code-level API, which can be accessed and extended through the **[[AdHocConfig|/API/AdHocConfig]]** and **[[AdHocSettings|/API/AdHocSettings]]** classes. By default, the Izenda starter kit includes pre-built code templates, which can be found in Global.asax.
 
 ##The Global.asax file
 
