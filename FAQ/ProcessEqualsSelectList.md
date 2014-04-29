@@ -1,10 +1,12 @@
-#The ProcessEqualsSelectList() Method
+#ProcessEqualsSelectList()
 
 [[_TOC_]]
 
 ##About
 
 The ProcessEqualsSelectList method is used to re-define how the Equals(Select) option renders its results on the Filters tab of the Report Designer. There are many different ways to deal with this particular list depending on how your application is structured. This code will add the values "Vendor 1" and "Vendor 2" into the list when the column's name that is being filtered is "VendorName".
+
+##C♯ Method
 
 Here is sample code that you can add to your global.asax file:
 
@@ -26,5 +28,7 @@ public override string[] ProcessEqualsSelectList(Izenda.AdHoc.Database.Column co
    return base.ProcessEqualsSelectList(column);
 }
 ```
+
+##Screenshots
 
 * [[Using Stored Procedures|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
