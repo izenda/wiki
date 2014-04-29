@@ -6,7 +6,7 @@
 
 The PreExecuteReportSet method is used to modify the report before it is sent to the Report Viewer or Report Preview for viewing. Overriding this method can add granular control of fields, filters, and other properties of the report before the person designing/viewing the report will see it. This method should be overridden inside your CustomAdHocConfig class within your global.asax page.
 
-##C♯ Boilerplate
+##Global.asax (C♯)
 
 ```csharp
 public class CustomAdHocConfig : DatabaseAdHocConfig
@@ -28,7 +28,7 @@ public class CustomAdHocConfig : DatabaseAdHocConfig
 }
 ```
 
-##VB.NET Boilerplate
+##Global.asax (VB.NET)
 
 ```visualbasic
 Public Class CustomAdHocConfig 
