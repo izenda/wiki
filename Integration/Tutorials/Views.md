@@ -46,8 +46,8 @@ CREATE VIEW Persons AS SELECT ctx_fname  AS FirstName, ctx_lname AS LastName FRO
 ``` sql
 CREATE VIEW Events AS
 SELECT CASE DATEPART(w,CreateDate)
-	WHEN ‘1’ THEN ‘Sunday’
-	WHEN ‘2’ THEN ‘Monday’
+	WHEN '1' THEN 'Sunday'
+	WHEN '2' THEN 'Monday'
 	END AS DayOfWeekAggregating Data
 CREATE VIEW OrderSummary 
 SELECT DATEPART(yyyy,OrderDate) AS OrderMonth
@@ -94,8 +94,8 @@ UNION SELECT emp_name
 ``` sql
 CREATE VIEW Events AS
 SELECT CASE DATEPART(w,CreateDate)
-		WHEN ‘1’ THEN ‘Sunday’
-		WHEN ‘2’ THEN ‘Monday’
+		WHEN '1' THEN 'Sunday'
+		WHEN '2' THEN 'Monday'
 END AS DayOfWeekAggregating Data
 
 CREATE VIEW OrderSummary
@@ -165,4 +165,14 @@ SELECT [ShipCountry],SUM(Freight) AS Total,SUM(CASE DATEPART(yyyy,[OrderDate])
 	WHEN '2008' THEN Freight ELSE 0 END) AS [2008]
 FROM [Orders]
 GROUP BY [ShipCountry]
+```
+
+**Organizing Dates by Week**
+
+The following example illustrates how to create a view that will convert a date field into the week number.
+
+```sql
+CREATE VIEW WeekView AS
+SELECT DATENAME(week, [dbo].[Orders].[OrderDate]) AS Week, OrderID
+FROM [dbo].[Orders]
 ```
