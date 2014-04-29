@@ -40,11 +40,11 @@ Click the "Start" button in Windows Server, then click on the"Control Panel" men
 * IzendaScheduler.exe takes the path to the rs.aspx page as a parameter (ex: http://yourhost/yourapp/rs.aspx ) 
 * Click "Apply" and then Click "Ok"
 
-Now that you have setup the scheduler, we will need to setup Izenda Reports. There are two ways to do this. We strongly recommend using the settings page if possible. The settings can also be set in code with the Global.asax page.
+Now that you have setup the scheduler, we will need to setup Izenda Reports. There are two ways to do this. We recommend using the [[InitializeReporting()|/FAQ/InitializeReporting]] method in your CustomAdHocConfig class to do this, but you may also use the settings.aspx page included with our demo to create a config file that will take the place of any settings in code.
 
 ##Setup using the Settings.aspx page
 
-To use the Settings.aspx page in the application (recommended):
+To use the Settings.aspx page:
 
 * Navigate to the Settings.aspx page in Izenda Reports (for example http://yourhost/yourapp/settings.aspx).
 * Click the "Email and Scheduling" Tab
