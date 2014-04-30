@@ -33,15 +33,15 @@ Here is a chart demonstrating accessibility between a user's CurrentUserTenantId
 
 ###Tenant Field
 
-The [[TenantField|/API/CodeSamples/TenantField]] setting allows per-report filtering based on the value of the user's [[CurrentUserTenantId|/API/CodeSamples/CurrentTenantId]]. Here are the rules about **ReportSets**.
+The [[TenantField|/API/CodeSamples/TenantField]] setting allows per-report filtering based on the value of the user's [[CurrentUserTenantId|/API/CodeSamples/CurrentUserTenantId]]. Here are the rules about **ReportSets**.
 
 * Every **ReportSet** contains a list of the **DataSources** used with it. 
 * Every **DataSource** has a list of **Fields** associated with it.
 * Every **Field** can have a set of applied **Filters**.
 
-This creates a high level of control over what is filtered. Essentially, the system will look at the ReportSet's DataSources, find the Field specified by [[TenantField|/API/CodeSamples/TenantField]] and apply a hidden filter to that field using the value of the user's [[CurrentUserTenantId|/API/CodeSamples/CurrentTenantId]].
+This creates a high level of control over what is filtered. Essentially, the system will look at the ReportSet's DataSources, find the Field specified by [[TenantField|/API/CodeSamples/TenantField]] and apply a hidden filter to that field using the value of the user's [[CurrentUserTenantId|/API/CodeSamples/CurrentUserTenantId]].
 
-So, if the [[TenantField|/API/CodeSamples/TenantField]] property is specified, the hidden filter of the user's [[CurrentUserTenantId|/API/CodeSamples/CurrentTenantId]] will be added every time report is populated.
+So, if the [[TenantField|/API/CodeSamples/TenantField]] property is specified, the hidden filter of the user's [[CurrentUserTenantId|/API/CodeSamples/CurrentUserTenantId]] will be added every time report is populated.
 
 So, the generated SQL will look like the following:
 
@@ -59,7 +59,7 @@ If [[TenantField|/API/CodeSamples/TenantField]] is NOT specified we will see the
 
 ![Customer order report output]()
 
-Now let’s specify [[TenantField|/API/CodeSamples/TenantField]] and [[CurrentUserTenantId|/API/CodeSamples/CurrentTenantId]]:
+Now let’s specify [[TenantField|/API/CodeSamples/TenantField]] and [[CurrentUserTenantId|/API/CodeSamples/CurrentUserTenantId]]:
 
 ```csharp
 public class CustomAdHocConfig : DatabaseAdHocConfig
@@ -78,4 +78,4 @@ With these properties set, we will see a completely different report:
 
 As you can see the results are filtered by the “Customer ID” field now. And only those matching “ALFKI” will be populated.
 
-_**Note:** You must always specify [[CurrentUserTenantId|/API/CodeSamples/CurrentTenantId]] to use [[TenantField|/API/CodeSamples/TenantField]]. The only exception is reports scheduler (details in the below section)._
+_**Note:** You must always specify [[CurrentUserTenantId|/API/CodeSamples/CurrentUserTenantId]] to use [[TenantField|/API/CodeSamples/TenantField]]. The only exception is reports scheduler (details in the below section)._
