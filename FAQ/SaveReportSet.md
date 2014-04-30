@@ -41,7 +41,7 @@ END",
 
 ###FileSystemAdHocConfig
 
-```
+```csharp
 public override void SaveReportSet(string reportName, Izenda.AdHoc.ReportSet reportSet) {
   // BEGIN Filesystem Mode Code Sample 
   DirectoryInfo dir = new DirectoryInfo(ReportPath);
