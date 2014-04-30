@@ -65,6 +65,7 @@ You can either set the [[ToolbarCssUrl|/API/CodeSamples/ToolbarCssUrl]] setting 
 
 To use custom CSS for the Report List page, you can use the method described above for the Report Viewer to obtain the desired results. However, the file will be called ``reportlist.css`` and the page it should be included on is **ReportList-Head.ascx**. The include statement should look similar to the following:
 ``<link rel="stylesheet" type="text/css" href="./Resources/css/reportviewer.css" />``
+
 The CSS classes you will have to override will also be different than the ReportViewer page CSS classes. Here are some examples of classes that can be overridden.
 
 ```css
