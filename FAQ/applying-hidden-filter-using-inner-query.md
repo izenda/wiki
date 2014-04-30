@@ -86,4 +86,4 @@ End Sub
 
 ##Multi-tenant hidden filters
 
-For a global method of using hidden filters, see the article on the [[HiddenFilters|/API/CodeSamples/HiddenFilters]] collection in [[AdHocSettings|/API/AdHocSettings].
+For a global method of using hidden filters, see the article on the [[HiddenFilters|/API/CodeSamples/HiddenFilters]] collection in [[AdHocSettings|/API/AdHocSettings]].
