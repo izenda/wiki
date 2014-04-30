@@ -8,6 +8,7 @@ Gets or sets the identifier for the current user's tenant in a multi-tenant syst
 
 **Default value:** null
 
+Please also view our overview article on [[reports and tenants|http://wiki.izenda.us/FAQ/Questions/reports-and-tenants]].
 ##Global.asax (C♯)
 
 ```csharp
