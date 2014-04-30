@@ -25,34 +25,39 @@ The Report List Button
 
 ##Report Designer Buttons
 
-* Report List Button
-* New Button
-* Save Button
-* Save As Button
-* Print (PDF) Button
+* [[Back Button|http://wiki.izenda.us/API/CodeSamples/ShowBackButton]]
+* [[Report List Button|http://wiki.izenda.us/API/CodeSamples/ReportList]]
+* [[New Button|http://wiki.izenda.us/API/CodeSamples/ShowNewButton]]
+* [[Save Button|http://wiki.izenda.us/API/CodeSamples/ShowSaveControls]]
+* [[Save As Button|http://wiki.izenda.us/API/CodeSamples/ShowSaveControls]]
+* [[Print (PDF) Button|http://wiki.izenda.us/API/CodeSamples/ShowPDFButton]]
 * Print (HTML) Button
-* Show SQL Button
-* CSV Button
+* [[Publish RDL Button|http://wiki.izenda.us/API/CodeSamples/ShowPublishRdlButton]]
+* [[Show SQL Button|http://wiki.izenda.us/API/CodeSamples/ShowRdlOutputIcon]]
+* [[CSV Button|http://wiki.izenda.us/API/CodeSamples/ShowCSVButton]]
 * Excel Button
-* Word Button
+* [[Word Button|http://wiki.izenda.us/API/CodeSamples/ShowDOCButton]]
 * XML Button
-* RTF Button
-* E-mail From Client Button
-* E-mail From Server Button
+* [[RTF Button|http://wiki.izenda.us/API/CodeSamples/ShowRTFButton]]
+* [[Open Office Button|http://wiki.izenda.us/API/CodeSamples/ShowOpenOfficeButton]]
+* [[Output RDL Button|http://wiki.izenda.us/API/CodeSamples/ShowRdlOutputIcon]]
+* [[E-mail From Client Button|http://wiki.izenda.us/API/CodeSamples/ShowClientEmailButton]]
+* [[E-mail From Server Button|http://wiki.izenda.us/API/CodeSamples/ShowServerEmailButton]]
 * [[Settings Button|/API/CodeSamples/ShowSettingsButton]]
 * Results Dropdown
-* Help Panel Button
+* [[Help Panel Button|http://wiki.izenda.us/API/CodeSamples/ShowSideHelp]]
+* [[Add Pivot Button|http://wiki.izenda.us/API/CodeSamples/ShowPivot]]
 
 ##Report Designer Tabs
 
-* Reports Tab
-* Data Sources Tab
-* Fields Tab
-* Summary Tab
-* Chart Tab
-* Gauge Tab
-* Map Tab
-* Misc Tab
-* Style Tab
+* [[Reports Tab|/API/CodeSamples/ShowReportsTab]]
+* [[Data Sources Tab|http://wiki.izenda.us/API/CodeSamples/ShowDataSourcesTab]]
+* [[Fields Tab|http://wiki.izenda.us/API/CodeSamples/ShowFieldsTab]]
+* [[Summary Tab|http://wiki.izenda.us/API/CodeSamples/ShowSummaryTab]]
+* [[Chart Tab|http://wiki.izenda.us/API/CodeSamples/ShowChartTab]]
+* [[Gauge Tab|http://wiki.izenda.us/API/CodeSamples/ShowGaugeTab]]
+* [[Map Tab|http://wiki.izenda.us/API/CodeSamples/ShowMapTab]]
+* [[Misc Tab|http://wiki.izenda.us/API/CodeSamples/ShowMiscTab]]
+* [[Style Tab|http://wiki.izenda.us/API/CodeSamples/ShowStyleTab]]
 * [[Filters Tab|/API/CodeSamples/ShowFiltersTab]]
-* Preview Tab
+* [[Preview Tab|http://wiki.izenda.us/API/CodeSamples/ShowPreviewTab]]
