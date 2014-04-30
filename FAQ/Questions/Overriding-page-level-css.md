@@ -127,6 +127,10 @@ The CSS classes you will have to override will also be different than the Report
 
 ##Dashboards
 
+You can override page CSS on the Dashboards.aspx page by using the following properties to include a CSS file you specify, or you can open **Dashboards-head.ascx** and **Dashboards-body.ascx** and include your own CSS using the methods described above for the Report Viewer and Report List.
+
+AdHocSettings Properties applicable to Dashboards.aspx
+
 * [[DashboardsCssUrl|/API/CodeSamples/DashboardsCssUrl]]
 
 _**Note:** You may need to append the **!Important** flag onto certain CSS properties so they will override the existing styles._
