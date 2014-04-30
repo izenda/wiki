@@ -13,10 +13,14 @@ public class CustomAdHocConfig : DatabaseAdHocConfig
 {
         public static void InitializeReporting() 
         {
+                //Check to see if we've already initialized.
+                if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+                    return;
                 AdHocSettings.LicenseKey = "INSERT_YOUR_LICENSE_KEY_HERE";
                 AdHocSettings.SqlServerConnectionString = "INSERT_YOUR_CONNECTION_STRING_HERE";
                 AdHocSettings.AdHocConfig = new CustomAdHocConfig();
                 //Global and per-user initialization settings will be configured here
+                HttpContext.Current.Session["ReportingInitialized"] = true;
         }
 
         public override void PreExecuteReportSet(ReportSet reportSet)
@@ -40,6 +44,7 @@ Public Class CustomAdHocConfig
                 AdHocSettings.SqlServerConnectionString = "INSERT_YOUR_CONNECTION_STRING_HERE"
                 AdHocSettings.AdHocConfig = New CustomAdHocConfig()
                 'Global and per-user initialization settings will be configured here
+                HttpContext.Current.Session("ReportingInitialized") = True
         End Sub
 
         Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportSet) 
