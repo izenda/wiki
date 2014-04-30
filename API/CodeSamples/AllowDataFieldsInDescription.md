@@ -6,6 +6,8 @@
 
 Gets or sets whether to allow a data field to be used in the description field of the report on the Misc tab of the Report Designer. This is particularly useful in drill-down reports and reports with filters. For example, let's say we are filtering a report by the field "CategoryName" with the value "Produce". When we enter [CategoryName] in the description field, the report will display Produce above the data grid instead of [CategoryName]. This will dynamically change when the user changes the filter value.
 
+**Default value:** true
+
 ##Global.asax (C♯)
 
 ```csharp
@@ -21,12 +23,8 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    HttpContext.Current.Session["ReportingInitialized"] = true;
-  }
-
-  //Add custom settings below
-  public override void ConfigureSettings() {
     AdHocSettings.AllowDataFieldsInDescription = true;
+    HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
 ```
@@ -48,12 +46,12 @@ Public Class CustomAdHocConfig
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
-        HttpContext.Current.Session("ReportingInitialized") = True
-    End Sub
-
-    'Add custom settings below
-    Public Overrides Sub ConfigureSettings()
         AdHocSettings.AllowDataFieldsInDescription = True
+        HttpContext.Current.Session("ReportingInitialized") = True
     End Sub
 End Class
 ```
+
+##Performance
+
+Due to the nature of the feature that this setting controls, additional trips to the server need to be made in order to support the feature. If you think that this would adversely affect performance of your application, you can opt to turn this feature off.
