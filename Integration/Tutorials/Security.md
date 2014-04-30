@@ -11,7 +11,7 @@ Type of security|Example|Implementation Details
 [User Driven Report Sharing](#User-Driven-Report-Sharing)|A user can save a report and decide if they want other users to see this report. They can also mark a report read-only meaning it can be viewed but not saved over.|[[Basic Report Sharing]] <br> [[CurrentUserIsAdmin]] <br> [[ReportsPath]] <br> [[Read-Only & Shared Checkboxes]]
 [Custom Report Control](#Custom-Report-Control)|Different departments can see different base reports.|[[VisibleDataSources hides reports for non-accessible datasources]] <br>[[ReportsList may be overridden]] <br>[[Storing Reports]]<br> [[ReportsPath]]
 [Overwriting and Deleting Reports](#Overwriting-and-Deleting-Reports)|Users can load shared or base reports, but should not be able to delete them or overwrite them.|[[AllowOverwritingReports]] <br>[[AllowDeletingReports]] <br>[[CurrentUserIsAdmin]]<br>
-[Altering Capabilities by Role](#Altering-Capabilities-by-Role)|Only power users should see the modify report button on the report viewer. Others will only access the report viewer.|[[ShowDesignLinks]] [[ShowModifyButton]]<br> [[AllowOverwritingReports]] [[ShowAdminButton]]
+[Altering Capabilities by Role](#Altering-Capabilities-by-Role)|Only power users should see the modify report button on the report viewer. Others will only access the report viewer.|[[ShowDesignLinks]] [[ShowModifyButton]]<br> [[AllowOverwritingReports]] [[ShowSettingsButton|/API/CodeSamples/ShowSettingsButton]]
 [Field/Record or Tenant Level Security](#Field/Record-or-Tenant-Level-Security)|Salespeople look at the same report but see different data based on their territory and credentials. In a multi-tenant environment, reports and data for each customer, group, or tenant should be isolated.|[[PreExecuteReportSet - Hidden Filters]] <br>[[ProcessEqualsSelectList]] <br>[[Field & Record Level Security]]
 
 ###Login Security
@@ -35,7 +35,7 @@ public static void InitializeReporting()
 
 ###Data Sources
 
-The API allows control over which data sources a user sees based on their credentials. In the following example, members of the "Sales" role would see additional data sources that normal users would not. Any reports that utilize these data sources would only be visible to members of the sales role.
+The [[API|/API/AdHocSettings]] allows control over which data sources a user sees based on their [[credentials|/FAQ/How-user-credentials-are-applied]]. In the following example, members of the "Sales" role would see additional data sources that normal users would not. Any reports that utilize these data sources would only be visible to members of the sales role.
 
 ```c#
  
