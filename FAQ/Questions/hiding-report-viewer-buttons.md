@@ -6,11 +6,45 @@ How do I hide toolbar buttons on the Report Viewer via the code-behind file?
 
 ##Answer
 
-For most toolbar buttons, we strongly recommend enabling/disabling them in the InitializeReporting() method of your global.asax. There are a multitude of settings specifically for enabling/disabling common buttons. 
+###Option 1 - AdHocSettings & InitializeReporting
+
+For most toolbar buttons, we strongly recommend enabling/disabling them in the [[InitializeReporting()|/FAQ/InitializeReporting]] method of your global.asax. There are a multitude of settings specifically for enabling/disabling common buttons. 
+
+###Option 2 - AdHocSettings & Page CodeFile
 
 If you still believe you must do this in the code behind file for the report viewer page, you can access the [[AdHocSettings|/API/AdHocSettings]] properties from the code behind file on the page.
 
-If you cannot find a setting for the button in question, then you can directly modify the ReportViewer-Body.ascx file to make the button you need to modify a server control. For example, if you want to hide the "Print" options on the page, you will need to modify the following:
+###Option 3 - Client side hiding
+
+You can always use javascript code to modify any buttons that you need hidden. Javascript can access the asp.net Session collection through server tags if you need to have some way of controlling access to buttons based on information available on the server side. Here is how to access the Session using javascript:
+
+```javascript
+function GetUserName()
+{
+    var username = '<%= Session["UserName"] %>';
+    return userName;
+}
+```
+
+Then you just need to use the appropriate client side ID of the control. Here is a snippet for hiding the **Report List** button on the report viewer. This can go inside your ReportViewer-Body.ascx page. It uses a server tag to insert the evaluated statement into the page's javascript. This will return the string "True" or "False". So then we will just have to check for that string.
+
+```javascript
+<script type="text/javascript">
+  var displayReportList = '<%= Convert.ToBoolean(Session["ShowReportList"]) %>';
+  if (displayReportList == "False") { $('#rlhref').attr("style", "display:none;"); }
+</script>
+```
+
+ You can set the session variable in your global.asax in a manner like the following:
+
+```csharp
+HttpContext.Current.Session["ShowReportList"] = false;
+```
+
+_**Note:** You will still have to check for the uppercase "False" regardless if you use vb.net or c#._
+
+###Option 4 - Server side hiding
+If you cannot find a setting for the button in question, then you can directly modify the elements in the ReportViewer-Body.ascx file to make them server side. For example, if you want to hide the "Print" options on the page, you will need to modify the following:
 
 ```html
   <div class="btn-group cool"> <!--Change this div to use runat="server" and id="ddlPrintReportSet"-->
