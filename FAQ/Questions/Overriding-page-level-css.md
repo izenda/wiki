@@ -66,17 +66,37 @@ You can either set the [[ToolbarCssUrl|/API/CodeSamples/ToolbarCssUrl]] setting 
 To use custom CSS for the Report List page, you can use the method described above for the Report Viewer to obtain the desired results. However, the file will be called ``reportlist.css`` and the page it should be included on is **ReportList-Head.ascx**. The CSS classes you will have to override will also be different than the ReportViewer page CSS classes. Here are some examples of classes that can be overridden.
 
 ```css
-.blue-panel ul
+.blue-panel
 {
-    border-color:white;
+  background-color:#0d70cd;
+    border-color:#0d70ff;
     border-style:solid;
-    border-width:2px;			
-    font-family: Verdana, Geneva, Arial, Helvetica;
+    border-width:2px;		
+    border-radius:25px;
 }
+		                
+.blue-panel ul
+{	
+    font-family: Verdana, Geneva, Arial, Helvetica;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
 .blue-panel ul li
 {
-    background-color:red;
+    background-color:#0d70cd;
+    background-image: url('../../rs.aspx?image=ModernImages.report-icon.png');
+    background-repeat: no-repeat;
+    background-position: 0px 5px; 
+    padding-left: 14px; 
 }
+
+.blue-panel ul li a
+{
+  color: white;
+}
+
 .blue-panel h2
 {
     border-width:1px;
@@ -85,6 +105,17 @@ To use custom CSS for the Report List page, you can use the method described abo
     background-color:silver;
 }
 
+.blue-panel a:hover
+{
+  background-color:#0d70ff !Important;
+  color: white;
+}
+
+.blue-panel a.selected
+{
+  background-color: #4540b9;
+  color:white;
+}
 #RL_QuickSearchBox
 {
   font-family: 'Comic Sans MS' !Important;
