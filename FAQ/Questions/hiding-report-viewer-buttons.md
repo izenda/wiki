@@ -1,5 +1,7 @@
 #Hiding Report Viewer Buttons
 
+[[_TOC_]]
+
 ##Question
 
 How do I hide toolbar buttons on the Report Viewer via the code-behind file?
