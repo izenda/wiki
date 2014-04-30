@@ -6,7 +6,7 @@
 
 Gets or sets the field that will be internally filtered by the value of [[CurrentUserTenantId|/API/CodeSamples/CurrentUserTenantId]]. When set, a hidden filter will automatically get added to every report containing the field identified in [[CurrentUserTenantId|/API/CodeSamples/CurrentUserTenantId]]. This setting is used in conjunction with [[CurrentUserTenantId|/API/CodeSamples/CurrentUserTenantId]]. You can also refer to our article on the [[ShowTenantField|/API/CodeSamples/ShowTenantField]] property for information on controlling whether users will see this field when designing reports.
 
-**Default value:** empty string
+**Default value:** null
 
 ##Global.asax (C♯)
 
