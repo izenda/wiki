@@ -8,6 +8,8 @@ Gets or sets the field that will be internally filtered by the value of [[Curren
 
 **Default value:** null
 
+Please also view our overview article on [[reports and tenants|/FAQ/Questions/reports-and-tenants]].
+
 ##Global.asax (C♯)
 
 ```csharp
