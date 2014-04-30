@@ -83,3 +83,7 @@ End Sub
 ```
 
 ![](/FAQ/applying-hidden-filter-using-inner-query/hidden_filters_2.png)
+
+##Multi-tenant hidden filters
+
+For a global method of using hidden filters, see the article on the [[HiddenFilters|/API/CodeSamples/HiddenFilters]] collection in [[AdHocSettings|/API/AdHocSettings].
