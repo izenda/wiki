@@ -16,11 +16,9 @@ public class CustomAdHocConfig : DatabaseAdHocConfig
                 AdHocSettings.LicenseKey = "INSERT_YOUR_LICENSE_KEY_HERE";
                 AdHocSettings.SqlServerConnectionString = "INSERT_YOUR_CONNECTION_STRING_HERE";
                 AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+                //Global and per-user initialization settings will be configured here
         }
-	public override void ConfigureSettings()
-	{
-		//Per-user settings go here
-	}
+
         public override void PreExecuteReportSet(ReportSet reportSet)
         { 
                 //put your own custom code inside this method
@@ -34,13 +32,16 @@ public class CustomAdHocConfig : DatabaseAdHocConfig
 Public Class CustomAdHocConfig 
                         Inherits DatabaseAdHocConfig
         Public Shared Sub InitializeReporting() 
+                'Check to see if we've already initialized.
+                If HttpContext.Current.Session Is Nothing OrElse HttpContext.Current.Session("ReportingInitialized") IsNot Nothing Then
+                    Return
+                'Initialize System
                 AdHocSettings.LicenseKey = "INSERT_YOUR_LICENSE_KEY_HERE"
                 AdHocSettings.SqlServerConnectionString = "INSERT_YOUR_CONNECTION_STRING_HERE"
                 AdHocSettings.AdHocConfig = New CustomAdHocConfig()
+                'Global and per-user initialization settings will be configured here
         End Sub
-	public override void ConfigureSettings()
-		'Per-user settings go here
-	End Sub
+
         Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportSet) 
                 'put your own custom code inside this method
         End Sub
