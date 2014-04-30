@@ -6,7 +6,7 @@
 
 Gets or sets the identifier for the current user's tenant in a multi-tenant system. This allows one instance of Izenda to be run on a server that provides reporting to a multitude of client-organizations (tenants). This setting is used in conjunction with [[TenantField|/API/CodeSamples/TenantField]].
 
-**Default value:** empty string
+**Default value:** null
 
 ##Global.asax (C♯)
 
