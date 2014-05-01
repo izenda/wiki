@@ -6,20 +6,28 @@
 
 It is recommended that you perform these installation steps on the Web Server on which Izenda Reports is installed.
 
-First, we must allow the schedule controls to be shown in the Report Designer page.
+First, we must allow the schedule controls to be shown in the Report Designer page. This can be done in one of two ways.
+
+**Via Settings.aspx**
 
 * Navigate to the Izenda Reports settings.aspx page (e.g. http://yourhost/yourapp/settings.aspx)
 * Click the "Email & Scheduling" tab
 * Check the box next to "Show Schedule Controls"
 * Click "Save to Izenda.Config" in the upper left-hand corner
-* The schedule controls will now be shown in the report designer under the [[Misc tab|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab]]
-* If you set the Izenda Reports settings via code, then you will need to set the following settings, otherwise ignore the below C# line of code.
+
+**Via Code**
+
+* Open your global.asax file in your IDE/favorite text editor
+* Look for the [[InitializeReporting|/FAQ/InitializeReporting]] method
+* Add the following line of code into the method
 
 ```csharp
 Izenda.AdHoc.AdHocSettings.ShowScheduleControls = true;
 ```
 
-The scheduler requires the use of the Izenda Scheduler executable that is found in the root of the directory you installed Izenda Reports in. You then need to add a scheduled task to your system that runs every minute. The task uses the Izenda Scheduler to access a page in our application that determines if any reports need to go out. The Izenda Scheduler executable does not actually send out the files or access anything else except for the specific page in our application that you give the .exe file as a parameter.
+The schedule controls will now be shown in the report designer under the [[Misc tab|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab]].
+
+Next, a little background about how the scheduler works. The scheduler requires the use of the Izenda Scheduler executable that is found in the root of the directory you installed Izenda Reports in. You then need to add a scheduled task to your system that runs every minute. The task uses the Izenda Scheduler to access a page in the application that determines if any reports need to go out. The Izenda Scheduler executable does not actually send out the files or access anything else except for the specific page in our application that you give the .exe file as a parameter.
 
 You must follow the steps below or the reports will not be e-mailed.
 
