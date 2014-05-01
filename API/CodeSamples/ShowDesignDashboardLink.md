@@ -4,6 +4,8 @@
 
 ##About
 
+_**Obsolete:** This setting is no longer available. Please use [[ShowDesignDashboardLink|http://wiki.izenda.us/API/CodeSamples/ShowDesignDashboardLink]] instead._
+
 Gets or set value indicating whether design a new dashboard link should be shown in Report list for the current user.
 
 ##Global.asax (C♯)
