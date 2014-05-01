@@ -28,7 +28,7 @@ _**Note:** Some of the items below are listed more than once. This is because th
 
 * [[Inherit filters in the subreport|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab#9.2.6-Passing-Filters-from-Master-Report-to-Sub-Report]]
 * Storing Reports in Database and Fusion Driver
-* Overriding Driver Methods
+* [[Overriding Driver Methods|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#Overriding-CustomFusionDriver-Methods]]
 * Using constraints
 * [[Custom Report Viewer Export Button|http://wiki.izenda.us/API/CodeSamples/ReportViewer/Custom-Export-Buttons]]
 * [[Dymamically changing the database with url parameter|http://wiki.izenda.us/FAQ/switching-databases-via-code#Using-the-Query-String]]
