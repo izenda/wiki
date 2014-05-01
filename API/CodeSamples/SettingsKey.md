@@ -55,3 +55,11 @@ End Class
 ##Screenshots
 
 ![](http://wiki.izenda.us/API/CodeSamples/SettingsKey/settings_key.png)
+
+##Related Articles
+
+Other settings and tutorials related to this setting are listed below:
+
+* [[ShowSettingsButton|/API/CodeSamples/ShowSettingsButton]]
+* [[ShowSettingsButtonForNonAdmins|/API/CodeSamples/ShowSettingsButtonForNonAdmins]]
+* [[AdHocUserKey|/API/CodeSamples/AdHocUserKey]]
