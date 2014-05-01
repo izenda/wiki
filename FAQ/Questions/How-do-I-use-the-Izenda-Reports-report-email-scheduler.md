@@ -12,7 +12,7 @@ First, we must allow the schedule controls to be shown in the Report Designer pa
 * Click the "Email & Scheduling" tab
 * Check the box next to "Show Schedule Controls"
 * Click "Save to Izenda.Config" in the upper left-hand corner
-* The schedule controls will now be shown in the report designer under the "Misc" tab
+* The schedule controls will now be shown in the report designer under the [[Misc tab|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab]]
 * If you set the Izenda Reports settings via code, then you will need to set the following settings, otherwise ignore the below C# line of code.
 
 ```csharp
@@ -63,7 +63,7 @@ To test this, go back to a report you wish to schedule and click on it. Click th
 * Navigate to the rs.aspx page in the application (for example, http://yourhost/yourapp/rs.aspx). Now add this to the end of the URL, ?run_scheduled_reports=30 (30 equals the frequency in minutes it will run). The url in the browser should read: http://yourhost/yourapp/rs.aspx?run_scheduled_reports=30
 * This will return a list of scheduled reports into the browser window. In either case, you should receive the link to your scheduled report in your e-mail.
 
-##Alternative Setup using code in InitializeReporting()
+##Alternative Setup using code in [[InitializeReporting()|/FAQ/InitializeReporting]]
 
 To set the settings in code:
 
@@ -94,4 +94,4 @@ To test this, go back to a report you wish to schedule and click on it. Click th
 
 ##Security On Scheduled Reports
 
-Scheduled reports only supports per-user security using the Link format.  Scheduled attachments will not apply hidden filters normally, but you can apply security through PreExecuteReportSet() based on the security of the report owner.  If per-user security is required, the Link format will require the user to login before seeing the report.
+Scheduled reports only supports per-user security using the Link format.  Scheduled attachments will not apply hidden filters normally, but you can apply security through [[PreExecuteReportSet()|/FAQ/PreExecuteReportSet]] based on the security of the report owner.  If per-user security is required, the Link format will require the user to login before seeing the report.
