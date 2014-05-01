@@ -9,7 +9,7 @@ How can I use an HTTPS load balancer with Izenda?
 If you are using a load balancer that does not support http (vs https), please set the following settings so the application can find images and css.
 
 ```csharp
-string sUrl =”https://www.domain.com/App/Reporting/rs.aspx”;
+string sUrl ="https://www.domain.com/App/Reporting/rs.aspx";
 
 Izenda.AdHoc.AdHocSettings.ResponseServer = sUrl;
 Izenda.AdHoc.AdHocSettings.ReportCssUrl = sUrl + "?css=report";
