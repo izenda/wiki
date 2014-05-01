@@ -1,5 +1,10 @@
 [[_TOC_]]
 
+# 6.7.0.265 (Pending)
+
+* FB-13634: Prevent showing all Filters (even with Parameter = false) in the Report Viewer when any filter is removed.
+* FB-13449: Implemented limited support of embedded subreports in csv output generator
+
 # 6.7.0.264 (April 14, 2014)
 * FB-13579: Disable toolbar if no datasources are selected
 * FB-13592: Improved combine bottom mechanism for Pie chart
