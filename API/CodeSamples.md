@@ -11,17 +11,17 @@ _**Note:** Some of the items below are listed more than once. This is because th
 ##Login Page
 
 * [[Authentication Function|/Tutorials/CodeSamples/Login-Sample]]
-* Controlling user logins and login customization
+* [[Controlling user logins and login customization|http://wiki.izenda.us/Tutorials/CodeSamples/Login-Sample]]
 
 ##Global Application
 
-* Secure https on a load balancer
+* [[Secure https on a load balancer|http://wiki.izenda.us/FAQ/Questions/Secure-https-on-a-load-balancer]]
 * [[How can I apply a hidden filter using an inner query|/FAQ/applying-hidden-filter-using-inner-query]]
 * [[ProcessEqualsSelectList()|/FAQ/ProcessEqualsSelectList]]
 * [[CustomizeChart()|/FAQ/CustomizeChart]]
 * [[Introduction to the Global.asax file|/API/AdHocConfig]]
 * [[InitializeReporting()|/FAQ/InitializeReporting]]
-* [[Session_Start()|/FAQ/Session_Start]]
+* [[Session_Start()|/FAQ/Session-Start]]
 * [[Add Formatting to Grid or New Formats to Formats Dropdown|/FAQ/Questions/Add-Formatting-Options]]
 
 ##General
