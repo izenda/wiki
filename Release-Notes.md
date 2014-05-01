@@ -1,7 +1,29 @@
 [[_TOC_]]
 
-# 6.7.0.265 (Pending)
+# 6.7.0.265 (May 1, 2014)
 
+* FB-13532: Fix date-picker if cascade filters values load too slowly
+* FB-13613: Do not use pagination in Viewer if Analysis Grid or Visual Group Hierarchy is used
+* FB-13725: Apply Filter Logic to the Pivots sub-queries
+* FB-13792: Added separator titles for pie chart
+* FB-13760: Fix Between Filter Operator for calculated columns
+* FB-13745: Use images URLs instead of base-64 data in IE8
+* FB-13587: Added creation of default log4net configuration file
+* FB-13523: Forms data now loads for every report individually only at the moment of its execution, and doesn't load during just opening reportList
+* FB-13361: Apply AdHocSettings.CurrentUserTenantId filter to the list reports SQL if DatabaseAdHocConfig is used
+* FB-13467: Optimization of initialization-related routines and CheckLimitation() calls
+* FB-13282: Attach subtotals to the Form report in order
+* FB-13675: Fixed thumbnails generation in case of Dashboard reports
+* FB-11797: Fixed out of memory exception caused by many simultaneous thumbnail generation threads, by introducing queue for thumbnails generation
+* FB-13640: return default button returns default now
+* FB-13746: Fixed loss of NOT flag in filter properties during manipulations from modern reportViewer
+* FB-13659: Added missing css to reportViewer
+* FB-13723: Added hiding Visualizations if no visualizations were found
+* FB-13263: Fix asynchronous loading of the ReportPart controls.
+* FB-13414: add switching to simple mode for datasources tab
+* FB-13526: the auto-selection in indicator bar is disabled
+* FB-13711: Auto refresh Quick Add dialog until fields list is populated
+* FB-13730: Fix HTML Charts exporting to RTF when ReportSet has category
 * FB-13715: Show error text in the output body instead of throwing exception if there is an error during Chart rendering in RTF export
 * FB-13691: Fix Embedded subreports filters inheritance
 * FB-13687: Changed log4net configuration file to log4net.xml
