@@ -68,4 +68,4 @@ AdHocSettings.ShowSettingsButton = true
 Other settings and tutorials related to this setting are listed below:
 
 * [[ShowSettingsButtonForNonAdmins|/API/CodeSamples/ShowSettingsButtonForNonAdmins]]
-* [[Limiting Access to Settings.aspx|/API/CodeSamples/AdHocUserKey]]
+* [[Limiting Access to Settings.aspx|/API/CodeSamples/SettingsKey]]
