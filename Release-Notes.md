@@ -2,7 +2,21 @@
 
 # 6.7.0.265 (Pending)
 
-* FB-13634: Prevent showing all Filters (even with Parameter = false) in the Report Viewer when any filter is removed.
+* FB-13715: Show error text in the output body instead of throwing exception if there is an error during Chart rendering in RTF export
+* FB-13691: Fix Embedded subreports filters inheritance
+* FB-13687: Changed log4net configuration file to log4net.xml
+* FB-13706: Fix drill-down subreports when special characters are used as a drill-down key values
+* FB-13679: Added the ability to process HTTP POST Requests in OData Fusion Connection.
+* FB-13683: Implemented percent symbol escaping in filter value when LIKE is applied to filter value in sql query
+* FB-13547: Behavior fix - made ItemsPerPage to be ignored if UsePagination is disabled
+* FB-13661: Fixed bug in datasources joining when switching in reportDesigner from simple to advanced mode
+* FB-13639: AdHocSettings.EmptyReportString setting added, this setting can be used to configure the message shown when reports return an empty result
+* FB-13674: Fixing HintPath for log4net dll in AdHoc2012.csproj
+* FB-13687: Logging @ERROR level for Data Access Layer
+* FB-13665: Made FusionCache taking into account .SqlOverride members of Filter/Field during cache key calculation
+* FB-13587: log4net infrastructure, and data access layer@ERROR level logging implemented
+* FB-13646: Implemented drill-down subreports in Detail report when rendered in ReportPart
+* FB-13634: Prevent showing all Filters (even with Parameter = false) in the Report Viewer when any filter is removed
 * FB-13449: Implemented limited support of embedded subreports in csv output generator
 
 # 6.7.0.264 (April 14, 2014)
