@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets password to access the settings page. It should be used in tandem with UserKey if you don't need multi-user security.
+Gets or sets password to access the settings page. It should be used in tandem with [[AdHocUserKey|/API/CodeSamples/AdHocUserKey]] if you don't need multi-user security.
 If set, user will be asked for the password before settings page will be opened.
 
 **Default Value:** null
