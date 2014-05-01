@@ -62,3 +62,10 @@ AdHocSettings.ShowSettingsButton = false
 AdHocSettings.ShowSettingsButton = true
 
 ![](http://wiki.izenda.us/API/CodeSamples/ShowSettingsButton/toolbar_showsettingsbutton_true.png)
+
+##Related Articles
+
+Other settings and tutorials related to this setting are listed below:
+
+* [[ShowSettingsButtonForNonAdmins|/API/CodeSamples/ShowSettingsButtonForNonAdmins]]
+* [[Limiting Access to Settings.aspx|/API/CodeSamples/AdHocUserKey]]
