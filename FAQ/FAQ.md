@@ -19,7 +19,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[What Is the ProcessEqualsSelectList() method?|FAQ/ProcessEqualsSelectList]]
 - [[What Is the ProcessDataSet() method?|FAQ/ProcessDataSet]]
 - [[How Do I Programatically switch databases?|FAQ/switching-databases-via-code]]
-- [[How do I hide the settings page button or aspx page from users?|FAQ/hide-settings-page-button-or-aspx-page]]
+- [[How do I hide the settings page button or aspx page from users?|FAQ/hide-settings-page-button-or-aspx-page|http://wiki.izenda.us/API/CodeSamples/ShowSettingsButton]]
 - [[How do I integrate with my login page?|FAQ/integrate-login-page]]
 - [[How do I implement Field-Level Security|http://wiki.izenda.us/FAQ/Questions/Applying-Security#Field-Level-Access]]
 - [[Can I Use My Own Database's Functions With Izenda?|FAQ/izenda-and-udfs]]
