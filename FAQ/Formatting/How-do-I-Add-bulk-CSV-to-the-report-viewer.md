@@ -44,17 +44,7 @@ AdHocSettings.OutputTypes["CSV"].Hidden = true;
 
 ###String keys for other output types
 
-The string keys which are available are:
-
-* csv
-* pdf
-* doc
-* xls
-* sql
-* bulkcsv
-* xml
-* odt (open office)
-* rtf
+The string keys which are available are listed [[in this article|/FAQ/Formatting/How-do-I-hide-Output-Types]]
 
 ##Troubleshooting the Bulk CSV Option
 
