@@ -8,6 +8,8 @@ _**Obsolete:** As of version 6.7, this setting is no longer available._
 
 Gets or sets whether the data grid should be displayed on the report viewer before the user selects values for all of the filters on the report. This setting does not apply to the report designer preview tab.
 
+**Default Value:** true
+
 ##Global.asax (C♯)
 
 ```csharp
