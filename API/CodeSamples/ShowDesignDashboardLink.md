@@ -8,6 +8,8 @@ _**Obsolete:** This setting is no longer available. Please use [[ShowDesignDashb
 
 Gets or set value indicating whether design a new dashboard link should be shown in Report list for the current user.
 
+**Default Value:** true
+
 ##Global.asax (C♯)
 ```c#
 
