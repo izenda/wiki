@@ -10,11 +10,7 @@ The style tab is where you can customize the look and feel of your report. You c
 
 ##10.1 Style Properties
 
-There are six separate controls that you can use to select the colors used for various elements on your report. You can see the results of your changes in the sample grid that is displayed directly below the dropdown menus.
-
-The colors that can be changed are: Border color, Header color, Header foreground color, Item color, Item foreground color, and Alternating item color.
-
-![Sample Grid and color dropdowns]()
+There are six separate controls that you can use to select the colors used for various elements on your report. You can see the results of your changes in the sample grid that is displayed directly below the dropdown menus. The colors that can be changed are: Border color, Header color, Header foreground color, Item color, Item foreground color, and Alternating item color.
 
 Explanations of these features are given below:
 
@@ -27,6 +23,10 @@ Explanations of these features are given below:
 |Item Foreground Color|Affects the text color of all report items.|
 |Alternating Item Color|Affects the background color of the even numbered report items.|
 |Restore Default|Reverts all of the previously mentioned controls' settings back to their defaults.|
+
+##10.2 CSS & Printing Controls
+
+These controls will allow you to control the style of your reports on a granular scale if need be and also to apply various visual 
 |CSS|You can define any custom CSS to be used on this report inside the text box. You can use the browser object inspector to discern CSS class names used on the grid so you can override them.|
 |Landscape Printing|When checked, this will cause reports printed from the report viewer to be printed in landscape mode. Otherwise they will be printed in portrait mode.|
 |Show Page Number|When checked, this will display the page number on all page-dependent printed reports. This will not apply to the report viewer or to XML, XLS, and CSV exports.|
