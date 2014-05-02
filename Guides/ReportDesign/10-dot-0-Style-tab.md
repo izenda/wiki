@@ -6,7 +6,7 @@
 
 The style tab is where you can customize the look and feel of your report. You can also change the color of the border, header, and rows, as well as the order of the report items. We will go over the controls in detail here and how you can use them to maximize the effectiveness of your reports.
 
-![The Style Tab]()
+![The Style Tab](http://wiki.izenda.us/Guides/ReportDesign/10-dot-0-Style-tab/style-tab.png)
 
 ##10.1 Style Properties
 
