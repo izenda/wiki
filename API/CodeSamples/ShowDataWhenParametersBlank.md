@@ -29,6 +29,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
+```
 
 ##Global.asax (VB.NET)
 
