@@ -50,4 +50,4 @@ You can get a complete overview of the process for using custom CSS styles on th
 
 Here is an example of one solution that used customized CSS in order to more fully integrate Izenda into the hosting application.
 
-![](/Guides/ReportDesign/10.0-Style-tab/customer_example.png)
+![](/Guides/ReportDesign/10.0-Style-tab/customer_integration_example.png)
