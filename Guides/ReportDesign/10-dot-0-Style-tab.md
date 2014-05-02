@@ -19,6 +19,7 @@ The colors that can be changed are: Border color, Header color, Header foregroun
 Explanations of these features are given below:
 
 |**Feature**|**Description**|
+|:---------:|:-------------:|
 |Border Color|Affects the color of the border surrounding your grid cells|
 |Header Color|Affects the background color of the report header columns. If you use [[visual grouping|http://wiki.izenda.us/Guides/ReportDesign/4.0-fields-tab#4.3-Sort,-VG,-&-Arithmetic-Check-Boxes]], this affects all header columns in each visual group.|
 |Header Foreground Color|Affects the text color of every header column in your report.|
