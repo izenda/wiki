@@ -31,7 +31,7 @@ The Report List Button
 * [[Save Button|http://wiki.izenda.us/API/CodeSamples/ShowSaveControls]]
 * [[Save As Button|http://wiki.izenda.us/API/CodeSamples/ShowSaveControls]]
 * [[Print (PDF) Button|/FAQ/Formatting/How-do-I-hide-Output-Types]]
-* [[Print (HTML) Button|/API/CodeSamples/ShowHtmlButton]]
+* [[Print (HTML) Button|http://wiki.izenda.us/FAQ/Formatting/How-do-I-hide-Output-Types]]
 * [[Publish RDL Button|http://wiki.izenda.us/API/CodeSamples/ShowPublishRdlButton]]
 * [[Show SQL Button|/FAQ/Formatting/How-do-I-hide-Output-Types]]
 * [[CSV Button|http://wiki.izenda.us/API/CodeSamples/ShowCSVButton]]
