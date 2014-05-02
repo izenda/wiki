@@ -26,7 +26,10 @@ Explanations of these features are given below:
 
 ##10.2 CSS & Printing Controls
 
-These controls will allow you to control the style of your reports on a granular scale if need be and also to apply various visual 
+These controls will allow you to control the style of your reports on a granular scale if need be and also to apply various visual elements to printed reports. 
+
+|**Feature**|**Description**|
+|:---------:|:-------------:|
 |CSS|You can define any custom CSS to be used on this report inside the text box. You can use the browser object inspector to discern CSS class names used on the grid so you can override them.|
 |Landscape Printing|When checked, this will cause reports printed from the report viewer to be printed in landscape mode. Otherwise they will be printed in portrait mode.|
 |Show Page Number|When checked, this will display the page number on all page-dependent printed reports. This will not apply to the report viewer or to XML, XLS, and CSV exports.|
@@ -34,6 +37,13 @@ These controls will allow you to control the style of your reports on a granular
 |Use Pagination in Web View|Sets whether the report viewer will use paging.|
 |Add Bookmark for Each Visual Group|Sets whether bookmarks will be used on each visual group. Applies only to PDF exports.|
 |Page Break After Visual Groups|Sets whether each visual group will receive its own page when exported. This will not apply to XML, XLS, or CSV exports.|
+
+##10.3 Report Viewer Styling
+
+These controls will allow you to control the visual flow of the elements in your report as they appear on the report viewer.
+
+|**Feature**|**Description**|
+|:---------:|:-------------:|
 |Minimize Grid Width|Adjusts the margins of the data grid to match the size of the data. This can result in columns that are not uniform size.|
 |Visual Group Style|Sets how visual groupings will be displayed. [[See more|]].|
 |Items Per Page|Allows a user to set the number of items shown per page in the report viewer.|
@@ -42,11 +52,11 @@ These controls will allow you to control the style of your reports on a granular
 |Show Main Report in Field&#124;Value Style|Allows a user to set whether the entire detail grid will be shown using the field value style defined above.|
 |Show Summary Report in Field&#124;Value Style|Allows a user to set whether the summary grid uses the field value style defined above.|
 
-##10.2 Changing Colors Through CSS
+##10.4 Changing Colors Through CSS
 
 You can get a complete overview of the process for using custom CSS styles on the report desinger from [[this tutorial|http://wiki.izenda.us/FAQ/Questions/Overriding-page-level-css#Report-Designer]].
 
-###10.2.1 Customer Integration Example
+###10.4.1 Customer Integration Example
 
 Here is an example of one solution that used customized CSS in order to more fully integrate Izenda into the hosting application.
 
