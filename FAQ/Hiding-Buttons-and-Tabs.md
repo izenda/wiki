@@ -30,14 +30,14 @@ The Report List Button
 * [[New Button|http://wiki.izenda.us/API/CodeSamples/ShowNewButton]]
 * [[Save Button|http://wiki.izenda.us/API/CodeSamples/ShowSaveControls]]
 * [[Save As Button|http://wiki.izenda.us/API/CodeSamples/ShowSaveControls]]
-* [[Print (PDF) Button|http://wiki.izenda.us/API/CodeSamples/ShowPDFButton]]
-* Print (HTML) Button
+* [[Print (PDF) Button|/FAQ/Formatting/How-do-I-hide-Output-Types]]
+* [[Print (HTML) Button|/API/CodeSamples/ShowHtmlButton]]
 * [[Publish RDL Button|http://wiki.izenda.us/API/CodeSamples/ShowPublishRdlButton]]
-* [[Show SQL Button|http://wiki.izenda.us/API/CodeSamples/ShowRdlOutputIcon]]
+* [[Show SQL Button|/FAQ/Formatting/How-do-I-hide-Output-Types]]
 * [[CSV Button|http://wiki.izenda.us/API/CodeSamples/ShowCSVButton]]
-* Excel Button
+* [[Excel Button|/FAQ/Formatting/How-do-I-hide-Output-Types]]
 * [[Word Button|http://wiki.izenda.us/API/CodeSamples/ShowDOCButton]]
-* XML Button
+* [[XML Button|/FAQ/Formatting/How-do-I-hide-Output-Types]]
 * [[RTF Button|http://wiki.izenda.us/API/CodeSamples/ShowRTFButton]]
 * [[Open Office Button|http://wiki.izenda.us/API/CodeSamples/ShowOpenOfficeButton]]
 * [[Output RDL Button|http://wiki.izenda.us/API/CodeSamples/ShowRdlOutputIcon]]
