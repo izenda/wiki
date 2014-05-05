@@ -4,7 +4,7 @@
 
 ##About
 
-The GetPossibleValuesAsTree method is an overridable method in the [[AdHocConfig|/FAQ/AdHocConfig]] class that can change the behavior of the Equals (Tree) filter operator. This option is normally hidden from appearing on the list until it is overridden in your CustomAdHocConfig. The [[Equals (Tree)|http://wiki.izenda.us/Guides/ReportDesign/5.0-Filters-tab#5.3-Operator-Categories]] operator will allow you to select elements based on a hierarchy of values starting with "All", which is the root option. Values can be expanded out from the root option and any number may be selected. 
+The GetPossibleValuesAsTree method is an overridable method in the [[AdHocConfig|/API/AdHocConfig]] class that can change the behavior of the Equals (Tree) filter operator. This option is normally hidden from appearing on the list until it is overridden in your CustomAdHocConfig. The [[Equals (Tree)|http://wiki.izenda.us/Guides/ReportDesign/5.0-Filters-tab#5.3-Operator-Categories]] operator will allow you to select elements based on a hierarchy of values starting with "All", which is the root option. Values can be expanded out from the root option and any number may be selected. 
 
 ##C♯ Method
 
