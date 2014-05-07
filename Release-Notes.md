@@ -1,7 +1,21 @@
 [[_TOC_]]
 
-# 6.7.0.265 (May 1, 2014)
+# 6.7.0.266 (May 7, 2014)
+* FB-13933: API error level logging implemented
+* FB-13915: Fix issues with Form loading in the Designer caused by the changes in FB-13523
+* FB-13715: Allow to export reports to RTF with a single VG field
+* FB-13689: Avoid crash if iTextSharp DLL isn't present
+* FB-13587: Data Access Layer INFO logging implemented
+* FB-13846: Fixed "index out of range exception" for pie chart with 0 values
+* FB-13484 Map tab country/state label updates correctly
+* FB-13414 Add switching back to simple data source mode
+* FB-13885: Fixed crash when switching filter operator from Between to InTimePeriod
+* FB-13755: Changed pagination to entering record number
+* FB-13718: Made reports with pagination return ExportLimit reports when printing to HTML
+* FB-13530: Filter description behavior fix in reportViewer UI
+* FB-13826: Fixed crashing pie chart in reportPart window when hovering mouse over it
 
+# 6.7.0.265 (May 1, 2014)
 * FB-13532: Fix date-picker if cascade filters values load too slowly
 * FB-13613: Do not use pagination in Viewer if Analysis Grid or Visual Group Hierarchy is used
 * FB-13725: Apply Filter Logic to the Pivots sub-queries
