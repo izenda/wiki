@@ -33,7 +33,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [How To Post-Process Data](/FAQ/ProcessDataSet)
 * [Enabling Report Sharing?](/FAQ/Questions/How-do-I-enable-basic-report-sharing)
 * [[Layered Subtotaling|Guides/LayeredSubtotaling]]
-* [[Hiding Fields in Filters|Guides/Hiding-Fields-In-Filters]]
+* [[Show/Hide Fields in Filters|Guides/Show_Hide Fields in Filters]]
 * [Using Share With Rights and Roles](/API/CodeSamples/)
 * [[Dynamically Creating Reports Via the API|/API/CodeSamples/DynamicReportCreation]]
 * [Switching Databases Via Code](http://www.izenda.com/Site/KB/CodeSamples/Switching-databases-via-code?) 
