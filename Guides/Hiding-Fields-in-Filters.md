@@ -1,10 +1,10 @@
-#Hiding Fields in Filters
+#Show/Hide Fields in Filters
 
 [[_TOC_]]
 
 ##Purpose
 
-Hiding fields in filters is a way to disallow filtering on certain fields. You can programmatically prevent access to fields in the filters tab based on any arbitrary logic you wish to employ. 
+Hiding fields in filters is a way to disallow filtering on certain fields. You can programmatically prevent access to fields in the filters tab based on any arbitrary logic you wish to employ. You can also show specific fields.
 
 ##Example
 Here are the available fields before hiding any:
