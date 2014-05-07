@@ -44,7 +44,7 @@ Here is an example of an AJAX request you can send in order to return the Report
 
 - rs.aspx?wscmd=reportlistdatalite
 
-_**In this case you could use JSON data to populate a client-side control using javascript like so:**_
+_**In this case you could use the JSON data to populate a client-side control using javascript like so:**_
 
 ```javascript
     function GetReports(keyword, category) {
@@ -54,6 +54,55 @@ _**In this case you could use JSON data to populate a client-side control using 
         requestString += '&wsarg0=' + category + '&wsarg1=' + keyword + '&wsarg2=1';
         AjaxRequest('./rs.aspx', requestString, AcceptReports, GetReportsFail, 'reportlistdatalite');
     }
+
+    function AcceptReports(returnObj, id, parameters) {
+        for (var rCnt1 = 0; rCnt1 < returnObj.ReportSets.length; rCnt++) {
+            $("#ReportsDropdown").append($('<option></option>').val(returnObj.ReportSets[rCnt].Name).html(returnObj.ReportSets[rCnt].Name));
+        }
+    }
+
+    //Ajax request for JSON methods-----------------------------------------------------------
+    function AjaxRequest(url, parameters, callbackSuccess, callbackError, id) {
+      var thisRequestObject = null;
+      if (window.XMLHttpRequest)
+        thisRequestObject = new XMLHttpRequest();
+      else if (window.ActiveXObject)
+        thisRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+      thisRequestObject.requestId = id;
+      thisRequestObject.onreadystatechange = ProcessRequest;
+
+      thisRequestObject.open('GET', url + '?' + parameters, true);
+      thisRequestObject.send();
+
+      function DeserializeJson() {
+        var responseText = thisRequestObject.responseText;
+        while (responseText.indexOf('"\\/Date(') >= 0) {
+          responseText = responseText.replace('"\\/Date(', 'eval(new Date(');
+          responseText = responseText.replace(')\\/"', '))');
+        }
+        if (responseText.charAt(0) != '[' && responseText.charAt(0) != '{')
+          responseText = '{' + responseText + '}';
+        var isArray = true;
+        if (responseText.charAt(0) != '[') {
+          responseText = '[' + responseText + ']';
+          isArray = false;
+        }
+        var retObj = eval(responseText);
+        if (!isArray)
+          return retObj[0];
+        return retObj;
+      }
+
+      function ProcessRequest() {
+        if (thisRequestObject.readyState == 4) {
+          if (thisRequestObject.status == 200 && callbackSuccess) {
+              callbackSuccess(DeserializeJson(), thisRequestObject.requestId, parameters);
+          }
+          else if (callbackError) {
+            callbackError(thisRequestObject);
+          }
+        }
+      }
 ```
 ------
 
