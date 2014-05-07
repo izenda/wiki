@@ -4,7 +4,7 @@
 
 ##Purpose
 
-Hiding fields in filters is a way to disallow filtering on certain fields. You can programmatically prevent access to fields in the filters tab based on any arbitrary logic you wish to employ. You can also show specific fields.
+Hiding fields in filters is a way to disallow filtering on certain fields. You can programmatically prevent access to fields in the filters tab based on any arbitrary logic you wish to employ. You can also adjust the logic to show specific fields.
 
 ##Example
 Here are the available fields before hiding any:
