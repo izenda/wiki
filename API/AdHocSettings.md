@@ -132,7 +132,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |   int|[[GaugeWidth|API/CodeSamples/GaugeWidth]]|Gets or sets the gauge width for "Gauge" format. This will affect width of gauges when they are shown in reportsets. <br> *Note: This setting will affect only Linear Gauges*.||
 |   bool|[[GenerateParameterizedSql|API/CodeSamples/GenerateParameterizedSql]]|Gets or sets the value indicating whether queries to the database should be parameterized.||
 |   bool|[[GenerateThumbnails|API/CodeSamples/GenerateThumbnails]]||
-|   string|GeoDataTable|[[|API/CodeSamples/]]|Gets or sets the value indicating the table name which contains geodata for maps.||
+|   string|[[GeoDataTable||API/CodeSamples/GeoDataTable]]|Gets or sets the value indicating the table name which contains geodata for maps.||
 |   GetEqualsSelectValuesDelegate|[[GetEqualsSelectValues|API/CodeSamples/GetEqualsSelectValues]]|Represents a method that returns values for the "Equals(Select)" operator. This handles the list of values shown on the Fields tab in the ReportDesigner in the Value(s) combobox if the "Equals(Select)" operator is used.||
 |   TableItemStyle|[[GridHeaderStyle|API/CodeSamples/GridHeaderStyle]]|Gets or sets the OpenOffice output style for grid headers in the report.||
 |   TableItemStyle|[[GridItemStyle|API/CodeSamples/GridItemStyle]]|Gets or sets the OpenOffice output style for grid items in the report.||
