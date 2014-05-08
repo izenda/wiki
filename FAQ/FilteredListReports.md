@@ -6,6 +6,8 @@
 
 This method returns a list of reports that are guaranteed to be available to the current user, taking into account all [[hidden filters|http://wiki.izenda.us/FAQ/applying-hidden-filter-using-inner-query]] and settings. This method can be overridden in your [[CustomAdHocConfig|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]] class as needed. Here is a sample of what an overridden implementation could look like.
 
+_**Note:** For more on caching in Izenda, please see the [[UseCachedFilteredLists|/API/CodeSamples/UseCachedFilteredLists]] setting._
+
 ##Global.asax (C♯)
 
 ```csharp
