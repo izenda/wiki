@@ -195,3 +195,17 @@ Clicking this causes the current report to be exported in RTF format.
 </li>
 ```
 
+##Send Button
+
+![Send Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/send.png)
+
+Clicking this will send the current report via email.
+
+```html
+<div class="btn-group">
+  <button type="button" class="btn" lang-title="js_SendReport" title="Send report" onclick="InitiateEmail();">
+    <img class="icon" src="rs.aspx?image=ModernImages.mail.png" lang-alt="js_SendReport" alt="Send report" />
+    <span class="hide" lang-text="js_SendReport">Send report</span>
+  </button>
+</div>  
+```
