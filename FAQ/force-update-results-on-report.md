@@ -1,3 +1,6 @@
+#Force "Update Results" On Report Viewer
+[[_TOC_]]
+
 ##Question
 
 How Do I Force a User to Click on 'Update Results' Before Showing Any Data?
