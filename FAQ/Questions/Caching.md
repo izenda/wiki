@@ -10,9 +10,9 @@ What kinds of caching does Izenda use? Can I update the cache?
 
 Izenda caches all your reports and schema information automatically per browser session. Here is a list of the caching methods that are available in case you wish to manually update the cache, although generally the cache will self-update as needed.
 
-###[[FilteredListReports]]
+###FilteredListReports
 
-The AdHocConfig.FilteredListReports method will return a list of reports that are guaranteed to be available to the current user.
+The [[AdHocConfig.FilteredListReports|http://wiki.izenda.us/FAQ/FilteredListReports]] method will return a list of reports that are guaranteed to be available to the current user.
 
 ###InvalidateFilteredCaches
 
