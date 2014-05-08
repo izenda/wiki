@@ -62,3 +62,47 @@ This button allows a user to save the current report with a specific name.
 
 ```
 
+##Print Options
+
+![Print Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/print.png)
+
+Clicking the downward facing triangle next to the print icon will reveal further print options; HTML print and PDF print.
+
+```html
+<button type="button" class="btn" lang-title="js_Print" title="Print" onclick="responseServer.OpenUrl('rs.aspx?p=htmlreport&print=1', 'aspnetForm', '');">
+  <img class="icon" src="rs.aspx?image=ModernImages.print.png" alt="Printer" />
+  <span class="hide" lang-text="js_Print">Print</span>
+</button>
+
+<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+  <span class="caret"></span>
+</button>
+```
+
+###HTML Print
+
+![HTML Print Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/html-print.png)
+
+This button allows for direct printing of a report from the browser. 
+
+```html
+<li><a href="javascript:void(0)" title="" style="min-width: 18em;" onclick="responseServer.OpenUrl('rs.aspx?p=htmlreport&print=1', 'aspnetForm', '');">
+  <img class="icon" src="rs.aspx?image=ModernImages.print-32.png" alt="" />
+  <b lang-text="js_PrintHTML">Print HTML</b><br>
+  <span lang-text="js_PrintDirectlyMessage">Print directly from your browser, the fastest way for modern browsers</span>
+</a></li>
+```
+
+###PDF Print
+
+![PDF Print Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/pdf-print.png)
+
+This button allows for printing of a report as a PDF file. 
+
+```html
+<li><a href="javascript:void(0)" title="" style="min-width: 18em;" onclick="responseServer.OpenUrl('rs.aspx?p=htmlreport&print=1', 'aspnetForm', '');">
+  <img class="icon" src="rs.aspx?image=ModernImages.print-32.png" alt="" />
+  <b lang-text="js_PrintHTML">Print HTML</b><br>
+  <span lang-text="js_PrintDirectlyMessage">Print directly from your browser, the fastest way for modern browsers</span>
+</a></li>
+```
