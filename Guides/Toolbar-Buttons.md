@@ -209,3 +209,59 @@ Clicking this will send the current report via email.
   </button>
 </div>  
 ```
+
+##Results Per Page Button
+
+![Results Per Page Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/results.png)
+
+The results per page button set the numbers of results to be displayed on a single page. Clicking the dropdown next to the button allows the user to specify how many records per page they'd like to see.
+
+```html
+<button type="button" class="btn" lang-title="js_ResultsPerPage" title="Results per page" onclick="">
+  <img class="icon" id="resNumImg" src="rs.aspx?image=ModernImages.rows-100.png" alt="Results per page" />
+  <span class="hide" lang-text="js_ResultsPerPage">Results per page</span>
+</button>
+
+<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+  <span class="caret"></span>
+</button>
+```
+
+The following is the code for the 5 record options provided by default.
+
+```html
+<ul class="dropdown-menu">
+  <li onclick="ChangeTopRecords(1, true);" id="resNumLi0"><a href="javascript:void(0)" title="" style="min-width: 12em;">
+    <img class="icon" src="rs.aspx?image=ModernImages.result-1-32.png" alt="" />
+    <b lang-text="js_Result_1">1 Result</b><br />
+    <span lang-text="js_Result_1_Message">Ideal for large forms</span>
+  </a></li>
+  <li onclick="ChangeTopRecords(10, true);" id="resNumLi1"><a href="javascript:void(0)" title="">
+    <img class="icon" src="rs.aspx?image=ModernImages.results-10-32.png" alt="" />
+    <b lang-text="js_Result_10">10 Results</b><br />
+    <span lang-text="js_Result_10_Message">Good for single parameter reports</span>
+  </a></li>
+  <li onclick="ChangeTopRecords(100, true);" id="resNumLi2"><a href="javascript:void(0)" title="">
+    <img class="icon" src="rs.aspx?image=ModernImages.results-100-32.png" alt="" />
+    <b lang-text="js_Result_100">100 Results</b><br />
+    <span lang-text="js_Result_100_Message">Default and recommended value</span>
+  </a></li>
+  <li onclick="ChangeTopRecords(1000, true);" id="resNumLi3"><a href="javascript:void(0)" title="">
+    <img class="icon" src="rs.aspx?image=ModernImages.results-1000-32.png" alt="" />
+    <b lang-text="js_Result_1000">1000 Results</b><br />
+    <span lang-text="js_Result_1000_Message">Good for larger reports</span>
+  </a></li>
+  <li onclick="ChangeTopRecords(10000, true);" id="resNumLi5"><a href="javascript:void(0)" title="">
+    <img class="icon" src="rs.aspx?image=ModernImages.results-10000-32.png" alt="" />
+    <b lang-text="js_Result_10000">10000 Results</b><br />
+    <span lang-text="js_Result_10000_Message">10000 Results</span>
+  </a></li>     
+  <li class="divider"></li>
+  <li onclick="ChangeTopRecords(-1, true);" id="resNumLi4"><a href="javascript:void(0)" title="">
+    <img class="icon" src="rs.aspx?image=ModernImages.results-all-32.png" alt="" />
+    <b lang-text="js_Result_All">Show all results</b><br>
+    <span lang-text="js_Result_All_Message">Use carefully as this may overload the browser</span>
+  </a></li>
+</ul>
+```
+
