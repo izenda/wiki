@@ -15,7 +15,7 @@ Make the following changes to **WebService.aspx.cs**
 
 ## webforms-cs-odata
 
-[webforms-cs-odata](http://archives.izenda.us/ri/webforms-cs-odata.zip) is a reference implementation of Izenda configured to use OData.
+[webforms-cs-odata](http://archives.izenda.us/ri/webforms-cs-odata.zip) is a reference implementation of Izenda configured to use Izenda's OData provider.
 
 Make the following changes to **Global.asax**
 
