@@ -2,7 +2,11 @@
 
 [[_TOC_]]
 
-##Defining advanced filter logic
+##Question
+
+How can I create filters that get applied conditionally when designing a report?
+
+##Answer
 
 Izenda Reports allows you to have an arbitrary number of filters on a new report. These filters can even be applied with custom logic that you define. This is done with the advanced logic filter. 
 
