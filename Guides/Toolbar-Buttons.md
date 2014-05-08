@@ -106,3 +106,92 @@ This button allows for printing of a report as a PDF file.
   <span lang-text="js_PrintDirectlyMessage">Print directly from your browser, the fastest way for modern browsers</span>
 </a></li>
 ```
+
+##Exports Button
+
+![Exports Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/exports2.png)
+
+Clicking the downward facing triangle next to the Exports icon will reveal further exporting options; Excel, Word, CSV, XML, and RTF.
+
+```html
+<button type="button" class="btn" title="Excel" onclick="responseServer.OpenUrlWithModalDialogNewCustomRsUrl('rs.aspx?output=XLS(MIME)', 'aspnetForm', 'reportFrame', nrvConfig.ResponseServerUrl);">
+  <img class="icon" src="rs.aspx?image=ModernImages.excel.png" alt="Get Excel file" />
+  <span class="hide" lang-text="js_ExportToExcel">Export to Excel</span>
+</button>
+
+<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+  <span class="caret"></span>
+</button>
+```
+
+###Excel Button
+
+![Excel Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/excel.png)
+
+Clicking this causes the current report to be exported as an excel document. 
+
+```html
+<li><a href="javascript:void(0)" title="" style="min-width: 18em;" onclick="responseServer.OpenUrlWithModalDialogNewCustomRsUrl('rs.aspx?output=XLS(MIME)', 'aspnetForm', 'reportFrame', nrvConfig.ResponseServerUrl);">
+  <img class="icon" src="rs.aspx?image=ModernImages.xls-32.png" alt="" />
+  <b lang-text="js_ExportToExcel">Export to Excel</b><br>
+  <span lang-text="js_ExportToExcelMessage">File for Microsoft's spreadsheet application</span>
+</a></li>
+```
+
+###Word Button
+
+![Word Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/word.png)
+
+Clicking this causes the current report to be exported as a word document. 
+
+```html
+<li><a href="javascript:void(0)" title="" onclick="responseServer.OpenUrlWithModalDialogNewCustomRsUrl('rs.aspx?output=DOC', 'aspnetForm', 'reportFrame', nrvConfig.ResponseServerUrl);">
+  <img class="icon" src="rs.aspx?image=ModernImages.word-32.png" alt="" />
+  <b lang-text="js_WordDocument">Word document</b><br>
+  <span lang-text="js_WordDocumentMessage">File for Microsoft's word processor, most widely-used office application</span>
+</a></li>
+```
+
+###CSV Button
+
+![CSV Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/csv.png)
+
+Clicking this causes the current report to be exported in CSV format. 
+
+```html
+<li><a href="javascript:void(0)" title="" onclick="responseServer.OpenUrlWithModalDialogNewCustomRsUrl('rs.aspx?output=CSV', 'aspnetForm', 'reportFrame', nrvConfig.ResponseServerUrl);">
+  <img class="icon" src="rs.aspx?image=ModernImages.csv-32.png" alt="" />
+  <b lang-text="js_CSV">CSV</b><br>
+  <span lang-text="js_CSVMessage">Stores tabular data in text file, that can be used in Google Docs</span>
+</a></li>
+```
+
+###XML Button
+
+![XML Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/xml.png)
+
+Clicking this causes the current report to be exported in XML format. 
+
+```html
+<li><a href="javascript:void(0)" title="" onclick="responseServer.OpenUrlWithModalDialogNewCustomRsUrl('rs.aspx?output=XML', 'aspnetForm', 'reportFrame', nrvConfig.ResponseServerUrl);">
+  <img class="icon" src="rs.aspx?image=ModernImages.xml-32.png" alt="" />
+  <b lang-text="js_XML">XML</b><br>
+  <span lang-text="js_XMLMessage">Both human-readable and machine-readable text file</span>
+</a></li>
+```
+
+###RTF Button
+
+![RTF Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/rtf.png)
+
+Clicking this causes the current report to be exported in RTF format. 
+
+```html
+<li id="RTFExportButton"><a href="javascript:void(0)" title="" onclick="responseServer.OpenUrlWithModalDialogNewCustomRsUrl('rs.aspx?output=RTF', 'aspnetForm', 'reportFrame', nrvConfig.ResponseServerUrl);">
+    <img class='icon' src="rs.aspx?image=ModernImages.rtf-32.png" alt="" />
+    <b lang-text='js_RTF'>RTF</b><br>
+    <span lang-text='js_RTFMessage'>File format for cross-platform document interchange</span>
+  </a>
+</li>
+```
+
