@@ -18,7 +18,7 @@ The report list button is used to jump right into the report list. This is the c
 
 ##Save Options
 
-![Save Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/save.png)
+![Save Options](http://wiki.izenda.us/Guides/Toolbar-Buttons/save-options.png)
 
 Clicking the downward facing triangle next to the save icon will reveal further save options; save and save as.
 
@@ -35,7 +35,7 @@ Clicking the downward facing triangle next to the save icon will reveal further 
 
 ###Save
 
-![Save Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/save-32.png)
+![Save Options Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/save-32.png)
  
 The save button simply saves the current report. 
 
@@ -64,7 +64,7 @@ This button allows a user to save the current report with a specific name.
 
 ##Print Options
 
-![Print Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/print.png)
+![Print Options Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/print-options.png)
 
 Clicking the downward facing triangle next to the print icon will reveal further print options; HTML print and PDF print.
 
