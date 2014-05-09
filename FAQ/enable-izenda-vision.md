@@ -12,4 +12,4 @@ Izenda Vision is a rich extension to the API to include many cutting-edge data v
 
 - Create sample reports.
 
-- Copy and customize existing visualizations from inside the **/vis** folder.
+- You can now copy and customize existing visualizations from inside the **/vis** folder, or add your own.
