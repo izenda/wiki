@@ -38,45 +38,11 @@ GO
 
 ##Making SPs visible in Izenda Reports
 
-In order to utilize SPs, we will need to setup database mode first in Global.asax.
+You can use SPs in either DatabaseAdHocConfig mode or FileSystemAdHocConfig mode, as long as the SP exists in your database.
 
-###MVC applications
+When using SPs, use the [[VisibleDataSources|/API/CodeSamples/VisibleDataSources]]] setting to contain the all the SPs, tables, and views that should be available as DataSources. Each of the strings in this list must exactly mirror the name of the SP, table, or view as it appears in your data source.
 
-```csharp
-void Session_Start(object sender, EventArgs e)
-{
-	AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-}
-[Serializable]
-public class CustomAdHocConfig : DatabaseAdHocConfig
-{
-	public override void ConfigureSettings()
-	{
-		AdHocSettings.VisibleTables = new string[] {"GetContact", "DummyTable"};
-	}
-}
-```
-
-###Standard method
-
-```csharp
-[Serializable]
-public class CustomAdHocConfig : DatabaseAdHocConfig
-{
-        public static void InitializeReporting() 
-        {
-                AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-        }
-	public override void ConfigureSettings()
-	{
-		AdHocSettings.VisibleTables = new string[] {"GetContact", "DummyTable"};
-	}
-}
-```
-
-When using SPs, use the [[VisibleTables|/API/CodeSamples/VisibleTables]] setting to contain the all the SPs, tables, and views that should be available as DataSources. Each of the strings in this list must exactly mirror the name of the SP, table, or view as it appears in your data source.
-
-**Caveat:** when the VisibleTables property is empty, all tables are visible by default, while all SP are hidden. If VisibleTables contains any names, then all tables not included in VisibleTables will become hidden. To use them, they must also be included in VisibleTables to be used together with SPs. In this code example, the table "DummyTable" is added to VisibleTables along with our SP to make it visible.
+**Caveat:** when the VisibleDaataSources property is empty, all tables are visible by default, while all SP are hidden. If VisibleDaataSources contains any names, then all tables not included in VisibleDaataSources will become hidden. To use them, they must also be included in VisibleDaataSources to be used together with SPs. In this code example, the table "DummyTable" is added to VisibleDaataSources along with our SP to make it visible and denote the difference in naming between tables and SPs.
 
 ##Adding code for filtering the Equals(Select) drop-down.
 
