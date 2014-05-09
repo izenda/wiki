@@ -265,3 +265,17 @@ The following is the code for the 5 record options provided by default.
 </ul>
 ```
 
+##Open in Designer Button
+
+![Results Per Page Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/designer.png)
+
+This button allows a user to open the current report in the Report Designer. 
+
+```html
+<div class="btn-group">
+  <button type="button" class="btn designer-only hide-locked hide-viewonly" lang-title="js_OpenInDesigner" title="Open in designer" id="designerBtn">
+     <img class="icon" src="rs.aspx?image=ModernImages.design.png" lang-alt="js_OpenInDesigner" alt="Open in designer" />
+     <span class="hide" lang-text="js_OpenInDesigner">Open in designer</span>
+   </button>
+</div>  
+```
