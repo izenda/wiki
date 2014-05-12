@@ -57,3 +57,11 @@ This lesson focuses on the capabilities of Izenda Reports and Dashboards to crea
 ##[[Section 15 - Expressions in Izenda|/Guides/ReportDesign/15.0-Expressions-in-Izenda]]
 
 This lesson focuses on how to use Expressions in Izenda Reports and Dashboards.
+
+##[[Section 16 - Analysis Grid|/Guides/ReportDesign/16.0-Analysis-Grid]]
+
+This lesson focuses on how and why to use the Analysis Grid visual group style.
+
+##[[Section 17 - Analysis Grid|/Guides/ReportDesign/16.0-Analysis-Grid]]
+
+This lesson focuses on the Instant Report designer, which acts as a 'sketchpad' for quick ad-hoc design.
