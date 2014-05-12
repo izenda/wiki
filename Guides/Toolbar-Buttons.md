@@ -353,6 +353,37 @@ AdHocSettings.ShowSqlOutputIcon = false;
 
 ###CSV
 
-![CSV Export Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/csv.gif)
+![CSV Export Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/csvDesigner.gif)
+
+THE CSV Export button causes the report being designed to be exported in csv format. To disable it, set ShowCSVButton to false.
+
+```csharp
+AdHocSettings.ShowCSVButton = false;
+```
+
+###Excel
+
+![Excel Export Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/excelDesigner.gif)
+
+The Excel Export button causes the report being designed to be exported in excel format. To disable it, set ShowXLSButton to false.
+
+```csharp
+AdHocSettings.ShowXLSButton = false;
+```
+
+###Word
+
+![Doc Export Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/wordDesigner.gif)
+
+The Doc Export button exports the report being designed to in a .doc(MS Word) format. To disable it, set ShowDOCButton to false.
+
+```csharp
+AdHocSettings.ShowDOCButton = false;
+```
+
+
+
+
+
 
 ##Tabs
