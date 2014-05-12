@@ -8,7 +8,7 @@ The SVG animation for Visualizations is handled by the D3 framework, which is wr
 
 The original software is available from http://d3js.org/
 
-The software is available under BSD 3-clause license http://opensource.org/licenses/BSD-3-Clause.
+The software is available under BSD 3-clause license https://github.com/mbostock/d3/blob/master/LICENSE.
 
 ##Dundas Gauge
 
