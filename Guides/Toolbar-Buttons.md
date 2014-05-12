@@ -419,7 +419,7 @@ AdHocSettings.ShowSettingsButton = false;
 
 ###Results
 
-![Results Per Page Dropdown](http://wiki.izenda.us/Guides/Toolbar-Buttons/results.png)
+![Results Per Page Dropdown](http://wiki.izenda.us/Guides/Toolbar-Buttons/resultsDesigner.png)
 
 The Results dropdown allows the user to select how many records to display.
 
