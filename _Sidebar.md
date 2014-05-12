@@ -24,5 +24,7 @@
 * [Training Videos](http://www.izenda.com/Site/KB/Training/58)
 * [The AdHocSettings class](http://www.izenda.com/Site/KB/Training/93)
 * [Making Custom Forms Video](http://www.youtube.com/watch?v=5b2axJlgdFs)
+
 ---
+
 * [[Acknowledgements]]
