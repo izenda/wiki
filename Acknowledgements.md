@@ -4,7 +4,7 @@
 
 ##D3
 
-The SVG animation for Visualizations is handled by the D3 framework, which is written and maintained by Michael Bostock.
+The SVG animation for Visualizations is handled by the D3 framework, which is written and maintained by Michael Bostock and is open-source software.
 
 The original software is available from http://d3js.org/
 
