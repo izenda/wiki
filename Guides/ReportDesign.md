@@ -62,6 +62,6 @@ This lesson focuses on how to use Expressions in Izenda Reports and Dashboards.
 
 This lesson focuses on how and why to use the Analysis Grid visual group style.
 
-##[[Section 17 - Analysis Grid|/Guides/ReportDesign/16.0-Analysis-Grid]]
+##[[Section 17 - Instant Reports|/Guides/ReportDesign/17.0-Instant-Reports]]
 
 This lesson focuses on the Instant Report designer, which acts as a 'sketchpad' for quick ad-hoc design.
