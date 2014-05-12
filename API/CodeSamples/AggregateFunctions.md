@@ -4,7 +4,7 @@
 
 ##About
 
-This collection is used to store custom-built aggregation function definitions. By default, this list will add onto the pre-existing set of aggregate function definitions. It will not override the pre-built functions. To access your custom-built aggregate functions, simply click on the [[Fields Tab]] of the Report Designer and select a column that can support your aggregate function. It will appear in the list of functions at the very bottom. There are a variety of methods for [[implementing a custom aggregate function|/FAQ/Questions/Custom_Aggregate_Functions]].
+This collection is used to store custom-built aggregation function definitions. By default, this list will add onto the pre-existing set of aggregate function definitions. It will not override the pre-built functions. To access your custom-built aggregate functions, simply click on the [[Fields Tab|http://wiki.izenda.us/Guides/ReportDesign/4.0-fields-tab]] of the Report Designer and select a column that can support your aggregate function. It will appear in the list of functions at the very bottom. There are a variety of methods for [[implementing a custom aggregate function|/FAQ/Questions/Custom_Aggregate_Functions]].
 
 ##Global.asax (C♯)
 
@@ -53,4 +53,4 @@ End Class
 
 **The Group By Fiscal Year Function**
 
-![]()
+![](/API/CodeSamples/AggregateFunctions/group_by_fiscal_year.png)
