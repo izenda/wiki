@@ -4,62 +4,34 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 
 |Datatype|Setting name|Setting description|Default Value|
 |:-------|:----------:|:-----------------:|:-----------:|
-|string|[[AddAllFilterRegex|API/CodeSamples/AddAllFilterRegex]]|Gets or sets a regular expression to filter data source fields that can be added with the "Add All" button.|(id&#124;guid)$
-|
-|   Dictionary<string,double>|[[AdditionalTimeZones |API/CodeSamples/AdditionalTimeZones ]]||System.Collections.Generic.Dictionary`2[System.String,System.Double]
-|
-|   AdHocConfig|[[AdHocConfig|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]]|Gets or sets the current Ad Hoc configuration.|Izenda.AdHoc.FileSystemAdHocConfig
-|
-|   string|[[AdHocUserKey|API/CodeSamples/AdHocUserKey]]|Gets or sets the password limiting access to the report designer, report list, and report viewer. This is for projects that do not need multi-user security.|
-|
-|   AggregateFunctionCollection|[[AggregateFunctions|API/CodeSamples/AggregateFunctions]]||Izenda.AdHoc.AggregateFunctionCollection
-|
-|   bool|[[AllowAnalysisGrid|API/CodeSamples/AllowAnalysisGrid]]|Gets or sets the value indicating whether to include Analysis Grid in the Visual Group Style field.|True
-|
-|   bool|[[AllowArchivedReportTableCreation|API/CodeSamples/AllowArchivedReportTableCreation]]|Gets or sets whether to allow the application to create an archived reports table on the database.|True
-|
-|   bool|[[AllowClientSorting|API/CodeSamples/AllowClientSorting]]||True
-|
-|   bool|[[AllowComparativeArithmetic|API/CodeSamples/AllowComparativeArithmetic]]|Gets or sets the value indicating whether comparative arithmetic is allowed in arithmetic checkbox. Comparative operators appear in "A" checkboxes at the Fields tab in the ReportDesigner.|False
-|
-|   bool|[[AllowCreateNewCategory|API/CodeSamples/AllowCreateNewCategory]]|Gets or sets the value indicating the possibility to create new categories in Save As dialog in the ReportDesigner.|True
-|
-|   bool|[[AllowDataFieldsInDescription|API/CodeSamples/AllowDataFieldsInDescription]]|Gets or sets whether data fields can be used in report descriptions.|True
-|
-|   bool|[[AllowDeletingReports|API/CodeSamples/AllowDeletingReports]]|This checkbox enables/disables the delete icons at the report list page against reports names, for the current user. Clicking on the red x delete icon deletes the report.|True
-|
-|   bool|[[AllowDeltas|API/CodeSamples/AllowDeltas]]|Gets or sets the value indicating whether "Add Deltas" checkbox should be shown at the fields tab in the ReportDesigner. Any time there is a change in a quantity that change is calculated by taking the later value for that quantity and subtracting from it the earlier value for that quantity.|False
-|
-|   bool|[[AllowDomainJoin|API/CodeSamples/AllowDomainJoin]]|Gets or sets the value indicating that domain joins should be shown on the report designer. Domain join could be useful if you want to join tables on columns with web addresses. For example, if you set up Domain Join option columns with strings "http://www.yourdomain.com" and "www.yourdomain.com" will be equal.|False
-|
-|   bool|[[AllowEqualsSelectForStoredProcedures|API/CodeSamples/AllowEqualsSelectForStoredProcedures]]|Gets or sets the value indicating is it allowed to use Equals(Select) or Equals(Multiple) for filters in case when stored procedure used. These options can be found in the Operator dropdown at the Filters tab in the ReportDesigner.|False
-|
-|   bool|[[AllowFieldsAsValue|API/CodeSamples/AllowFieldsAsValue]]|Gets or sets the value indicating whether field name is allowed in filter value. If set, values like "Is Less Than (Field)" appear in the Operator combobox at the Filters tab in the ReportDesigner. Fields comparison allows you to compare values from one field with values from another field.|True
-|
-|   bool|[[AllowGroupWithoutSelect|API/CodeSamples/AllowGroupWithoutSelect]]|Gets or sets value indicating if it is possible to make invisible fields which are used for Visual Grouping. If set, fields with both "Hide This Field" (in the advanced properties) and "VG"; flags set, will not lead to report being considered as invalid.|False
-|
-|   bool|[[AllowHorizontalBarChart|API/CodeSamples/AllowHorizontalBarChart]]|Gets or sets the value indicating whether Horizontal Bar Chart is allowed. This defines if Horizontal checkbox will be available in the Advanced Properties at the Chart tab in the ReportDesigner, when Bar chart type is used.|True
-|
-|   bool|[[AllowHtmlOutputsInScheduledReports|API/CodeSamples/AllowHtmlOutputsInScheduledReports]]||True
-|
-|   bool|[[AllowInvalidCharacters|API/CodeSamples/AllowInvalidCharacters]]|Gets or sets the value indicating whether invalid characters in report namesare allowed if not striped. If disabled, non-literal characters in the report name, entered in the Report Designer in Save As dialog, will cause error message during saving report. <br>*Note: Invalid characters will be automatically removed from the report name if [[StripInvalidCharacters]] set to true.*|False
-|
-|   bool|[[AllowInvertedGrid|API/CodeSamples/AllowInvertedGrid]]|Allows the inverted checkbox to be shown in the Summary tab in the ReportDesigner. Inverted grid means it exchanges columns for rows (up to 36 rows)|False
-|
-|   bool|[[AllowLineOnBar|API/CodeSamples/AllowLineOnBar]]|Gets or sets the value indicating whether is it allowed line on Bar chart. If true, then Line Value feature is available at the Chart tab in the ReportDesigner, when Bar chart type is selected. Line can show additional values on the Bar chart.|True
-|
-|   bool|[[AllowMultilineHeaders|API/CodeSamples/AllowMultilineHeaders]]|Gets or sets whether headers in the grid report can be multi-line. This setting could be useful if you have many columns in the report or columns names are very long.|False
-|
-|   bool|[[AllowNewFiltersInReportViewer|API/CodeSamples/AllowNewFiltersInReportViewer]]|Gets or sets whether users have the ability to add new filters in the report viewer page of Izenda Reports. <br>*Note: Current filters used on the report will still be displayed.*|True
-|
-|   bool|[[AllowOverwritingReports|API/CodeSamples/AllowOverwritingReports]]|This enables/disables the current user's ability to overwrite reports currently saved. An example of this usage is that many users create base reports for their users to use. Disabling the overwrite report feature ensures that the default reports are not tampered with.|True
-|
-|   bool|[[AllowSelfJoin|API/CodeSamples/AllowSelfJoin]]|Gets or sets the value indicating whether is it allowed datasources self join. If true and ShowDataSourcesAsCheckBoxes, then user can select the same data source twice and selfjoin it at the Data Sources tab in the ReportDesigner.|True
-|
-|   bool|[[AllowStackedBarChart|API/CodeSamples/AllowStackedBarChart]]|Gets or sets the value indicating whether Stacked Bar Chart is allowed. This defines if Stacked checkbox will be available in the Advanced Properties at the Chart tab in the ReportDesigner, when Bar chart type is used.|True
-|
-|   bool|[[AllowSummaryDeltas|API/CodeSamples/AllowSummaryDeltas]]|Gets or sets the value indicating whether the "Show Summary Deltas" checkbox should be shown in the summary tab in the ReportDesigner. Any time there is a change in a quantity, that change is calculated by taking the later value for that quantity and subtracting from it the earlier value for that quantity. The AllowDeltas feature MUST be turned on to use this feature.|True
-|
+|string|[[AddAllFilterRegex|API/CodeSamples/AddAllFilterRegex]]|Gets or sets a regular expression to filter data source fields that can be added with the "Add All" button.|(id&#124;guid)$|
+|   Dictionary<string,double>|[[AdditionalTimeZones |API/CodeSamples/AdditionalTimeZones ]]||Empty list|
+|   AdHocConfig|[[AdHocConfig|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]]|Gets or sets the current Ad Hoc configuration.|new FileSystemAdHocConfig()|
+|   string|[[AdHocUserKey|API/CodeSamples/AdHocUserKey]]|Gets or sets the password limiting access to the report designer, report list, and report viewer. This is for projects that do not need multi-user security.|string.Empty()|
+|   AggregateFunctionCollection|[[AggregateFunctions|API/CodeSamples/AggregateFunctions]]||Empty list|
+|   bool|[[AllowAnalysisGrid|API/CodeSamples/AllowAnalysisGrid]]|Gets or sets the value indicating whether to include Analysis Grid in the Visual Group Style field.|True|
+|   bool|[[AllowArchivedReportTableCreation|API/CodeSamples/AllowArchivedReportTableCreation]]|Gets or sets whether to allow the application to create an archived reports table on the database.|True|
+|   bool|[[AllowClientSorting|API/CodeSamples/AllowClientSorting]]||True|
+|   bool|[[AllowComparativeArithmetic|API/CodeSamples/AllowComparativeArithmetic]]|Gets or sets the value indicating whether comparative arithmetic is allowed in arithmetic checkbox. Comparative operators appear in "A" checkboxes at the Fields tab in the ReportDesigner.|False|
+|   bool|[[AllowCreateNewCategory|API/CodeSamples/AllowCreateNewCategory]]|Gets or sets the value indicating the possibility to create new categories in Save As dialog in the ReportDesigner.|True|
+|   bool|[[AllowDataFieldsInDescription|API/CodeSamples/AllowDataFieldsInDescription]]|Gets or sets whether data fields can be used in report descriptions.|True|
+|   bool|[[AllowDeletingReports|API/CodeSamples/AllowDeletingReports]]|This checkbox enables/disables the delete icons at the report list page against reports names, for the current user. Clicking on the red x delete icon deletes the report.|True|
+|   bool|[[AllowDeltas|API/CodeSamples/AllowDeltas]]|Gets or sets the value indicating whether "Add Deltas" checkbox should be shown at the fields tab in the ReportDesigner. Any time there is a change in a quantity that change is calculated by taking the later value for that quantity and subtracting from it the earlier value for that quantity.|False|
+|   bool|[[AllowDomainJoin|API/CodeSamples/AllowDomainJoin]]|Gets or sets the value indicating that domain joins should be shown on the report designer. Domain join could be useful if you want to join tables on columns with web addresses. For example, if you set up Domain Join option columns with strings "http://www.yourdomain.com" and "www.yourdomain.com" will be equal.|False|
+|   bool|[[AllowEqualsSelectForStoredProcedures|API/CodeSamples/AllowEqualsSelectForStoredProcedures]]|Gets or sets the value indicating is it allowed to use Equals(Select) or Equals(Multiple) for filters in case when stored procedure used. These options can be found in the Operator dropdown at the Filters tab in the ReportDesigner.|False|
+|   bool|[[AllowFieldsAsValue|API/CodeSamples/AllowFieldsAsValue]]|Gets or sets the value indicating whether field name is allowed in filter value. If set, values like "Is Less Than (Field)" appear in the Operator combobox at the Filters tab in the ReportDesigner. Fields comparison allows you to compare values from one field with values from another field.|True|
+|   bool|[[AllowGroupWithoutSelect|API/CodeSamples/AllowGroupWithoutSelect]]|Gets or sets value indicating if it is possible to make invisible fields which are used for Visual Grouping. If set, fields with both "Hide This Field" (in the advanced properties) and "VG"; flags set, will not lead to report being considered as invalid.|False|
+|   bool|[[AllowHorizontalBarChart|API/CodeSamples/AllowHorizontalBarChart]]|Gets or sets the value indicating whether Horizontal Bar Chart is allowed. This defines if Horizontal checkbox will be available in the Advanced Properties at the Chart tab in the ReportDesigner, when Bar chart type is used.|True|
+|   bool|[[AllowHtmlOutputsInScheduledReports|API/CodeSamples/AllowHtmlOutputsInScheduledReports]]||True|
+|   bool|[[AllowInvalidCharacters|API/CodeSamples/AllowInvalidCharacters]]|Gets or sets the value indicating whether invalid characters in report namesare allowed if not striped. If disabled, non-literal characters in the report name, entered in the Report Designer in Save As dialog, will cause error message during saving report. <br>*Note: Invalid characters will be automatically removed from the report name if [[StripInvalidCharacters]] set to true.*|False|
+|   bool|[[AllowInvertedGrid|API/CodeSamples/AllowInvertedGrid]]|Allows the inverted checkbox to be shown in the Summary tab in the ReportDesigner. Inverted grid means it exchanges columns for rows (up to 36 rows)|False|
+|   bool|[[AllowLineOnBar|API/CodeSamples/AllowLineOnBar]]|Gets or sets the value indicating whether is it allowed line on Bar chart. If true, then Line Value feature is available at the Chart tab in the ReportDesigner, when Bar chart type is selected. Line can show additional values on the Bar chart.|True|
+|   bool|[[AllowMultilineHeaders|API/CodeSamples/AllowMultilineHeaders]]|Gets or sets whether headers in the grid report can be multi-line. This setting could be useful if you have many columns in the report or columns names are very long.|False|
+|   bool|[[AllowNewFiltersInReportViewer|API/CodeSamples/AllowNewFiltersInReportViewer]]|Gets or sets whether users have the ability to add new filters in the report viewer page of Izenda Reports.|True|
+|   bool|[[AllowOverwritingReports|API/CodeSamples/AllowOverwritingReports]]|This enables/disables the current user's ability to overwrite reports currently saved. An example of this usage is that many users create base reports for their users to use. Disabling the overwrite report feature ensures that the default reports are not tampered with.|True|
+|   bool|[[AllowSelfJoin|API/CodeSamples/AllowSelfJoin]]|Gets or sets the value indicating whether is it allowed datasources self join. If true and ShowDataSourcesAsCheckBoxes, then user can select the same data source twice and selfjoin it at the Data Sources tab in the ReportDesigner.|True|
+|   bool|[[AllowStackedBarChart|API/CodeSamples/AllowStackedBarChart]]|Gets or sets the value indicating whether Stacked Bar Chart is allowed. This defines if Stacked checkbox will be available in the Advanced Properties at the Chart tab in the ReportDesigner, when Bar chart type is used.|True|
+|   bool|[[AllowSummaryDeltas|API/CodeSamples/AllowSummaryDeltas]]|Gets or sets the value indicating whether the "Show Summary Deltas" checkbox should be shown in the summary tab in the ReportDesigner. Any time there is a change in a quantity, that change is calculated by taking the later value for that quantity and subtracting from it the earlier value for that quantity. The AllowDeltas feature MUST be turned on to use this feature.|True|
 |   bool|[[AllowVisualGroups|API/CodeSamples/AllowVisualGroups]]||True
 |
 |   string|[[ApplicationHeaderImageUrl|API/CodeSamples/ApplicationHeaderImageUrl]]|Gets or sets the URL of the Application Header Logo.|
