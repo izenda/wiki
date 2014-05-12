@@ -14,29 +14,29 @@ Yes, you can use as many custom aggregate functions as you like. Within the AdHo
 
 The SimpleAggregateFunction class in the AdHoc namespace has multiple overloads that allow for various implicitly named aggregate functions. The parameters are as follows:
 
-* Overload 1:
-  * Function - This is the SQL that will perform your custom aggregation function. This can get applied to a SELECTed field or to a field in the GROUP BY clause. Specifying a formatting parameter of "{0}" in your SQL string will tell Izenda to use the Inner Query text as a parameter.
-* Overload 2:
-  * Function - As above.
-  * Caption - This is the text that will appear in the function dropdown menu on the [[Fields tab|http://wiki.izenda.us/Guides/ReportDesign/4.0-fields-tab]].
-* Overload 3:
-  * Function - As above.
-  * Caption - As above.
-  * isGroup - A boolean value specifying whether this is a grouping function. 
-  * isExtraFunction - A boolean value specifying whether this is 
-* Overload 4:
-  * Function - As above.
-  * Caption - As above.
-  * allowedTypeGroups - A list of SqlTypeGroups that use the associated enumeration to determine for which data types this function is valid.
-  * isGroup - As above.
-  * isExtraFunction - As above.
-* Overload 5:
-  * Function - As above.
-  * Caption - As above.
-  * allowedTypeGroups - A list of SqlTypeGroups that use the associated enumeration to determine for which data types this function is valid.
-  * disallowedTypeGroups - A list of SqlTypeGroups that use the associated enumeration to determine for which data types this function is not valid. If allowedTypeGroups is used (not null), this setting has no effect.
-  * isGroup - As above.
-  * isExtraFunction - As above.
+* **Overload 1**:
+  * **Function** - This is the SQL that will perform your custom aggregation function. This can get applied to a SELECTed field or to a field in the GROUP BY clause. Specifying a formatting parameter of "{0}" in your SQL string will tell Izenda to use the Inner Query text as a parameter.
+* **Overload 2**:
+  * **Function** - As above.
+  * **Caption** - This is the text that will appear in the function dropdown menu on the [[Fields tab|http://wiki.izenda.us/Guides/ReportDesign/4.0-fields-tab]].
+* **Overload 3**:
+  * **Function** - As above.
+  * **Caption** - As above.
+  * **isGroup** - A boolean value specifying whether this is a grouping function. 
+  * **isExtraFunction** - A boolean value specifying whether this is 
+* **Overload 4**:
+  * **Function** - As above.
+  * **Caption** - As above.
+  * **allowedTypeGroups** - A list of SqlTypeGroups that use the associated enumeration to determine for which data types this function is valid.
+  * **isGroup** - As above.
+  * **isExtraFunction** - As above.
+* **Overload 5**:
+  * **Function** - As above.
+  * **Caption** - As above.
+  * **allowedTypeGroups** - A list of SqlTypeGroups that use the associated enumeration to determine for which data types this function is valid.
+  * **disallowedTypeGroups** - A list of SqlTypeGroups that use the associated enumeration to determine for which data types this function is not valid. If allowedTypeGroups is used (not null), this setting has no effect.
+  * **isGroup** - As above.
+  * **isExtraFunction** - As above.
 
 And below is what the resulting function could look like.
 
