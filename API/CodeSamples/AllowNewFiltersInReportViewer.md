@@ -4,6 +4,8 @@
 
 ##About
 
+_**Obsolete:** As of version 6.7 this setting is no longer available._
+
 Gets or sets whether users have the ability to add new filters in the report viewer page of Izenda Reports.
 
 _**Note: Current filters used on the report will still be displayed.**_
@@ -53,4 +55,4 @@ End Class
 
 ##Screenshots
 
-![](/API/CodeSamples/AllowNewFiltersInReportViewer/allownewfiltersinreportviewer.png)
+![](http://www.izenda.com/Site/Images/Screenshots/AllowNewFiltersInReportViewerRS.png)
