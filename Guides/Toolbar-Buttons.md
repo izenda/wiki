@@ -375,15 +375,62 @@ AdHocSettings.ShowXLSButton = false;
 
 ![Doc Export Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/wordDesigner.gif)
 
-The Doc Export button exports the report being designed to in a .doc(MS Word) format. To disable it, set ShowDOCButton to false.
+The Doc Export button exports the report being designed in a .doc(MS Word) format. To disable it, set ShowDOCButton to false.
 
 ```csharp
 AdHocSettings.ShowDOCButton = false;
 ```
 
+###XML
 
+![XML Export Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/xmlDesigner.gif)
 
+The XML export button exports the report being designed as a .xml file.
 
+###RTF
 
+![RTF Export Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/rtfDesigner.gif)
+
+The RTF export button exports the report being designed as a .rtf file. To disable it, set ShowRTFButton to false. 
+
+```csharp
+AdHocSettings.ShowRTFButton = false;
+```
+
+###Email
+
+![Email Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/email.gif)
+
+The email button allows the user to email the current report. To disable it, set ShowClientEmailButton to false.
+
+```csharp
+AdHocSettings.ShowClientEmailButton = false;
+```
+
+###Settings
+
+![Settings Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/settings.gif)
+
+The settings button takes the user to the Settings.aspx page. To disable it, set ShowSettingsButton to false.
+
+```csharp
+AdHocSettings.ShowSettingsButton = false;
+```
+
+###Results
+
+![Results Per Page Dropdown](http://wiki.izenda.us/Guides/Toolbar-Buttons/results.png)
+
+The Results dropdown allows the user to select how many records to display.
+
+###Hide Help
+
+![Show/Hide Help Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/help.gif)
+
+The Hide Help button toggles the side help panel.TO disable it, set ShowHelpButton to false.
+
+```csharp
+AdHocSettings.ShowHelpButton = false;
+```
 
 ##Tabs
