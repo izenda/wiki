@@ -279,3 +279,22 @@ This button allows a user to open the current report in the Report Designer.
    </button>
 </div>  
 ```
+
+#Report Designer
+
+Buttons and tabs in the Report Designer are controlled from within the core product. Manipulating these buttons and tabs requires the use of properties within the Global.asax.
+
+##Buttons
+
+###Report List Button
+
+![Report List Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/reportlist.png)
+
+The report list button is used to jump right into the report list. To disable the Report List button in the designer, you need to set the ReportList property to be empty or null. 
+
+```csharp
+AdHocSettings.ReportList = "";
+```
+
+###
+##Tabs
