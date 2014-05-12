@@ -286,7 +286,7 @@ Buttons and tabs in the Report Designer are controlled from within the core prod
 
 ##Buttons
 
-###Report List Button
+###Report List
 
 ![Report List Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/reportlist.png)
 
@@ -296,5 +296,63 @@ The report list button is used to jump right into the report list. To disable th
 AdHocSettings.ReportList = "";
 ```
 
-###
+###New
+
+![New Report Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/new.png)
+
+The New Report button begins designing a report from the beginning. To disable the New Report button in the designer, you need to set the ShowNewButton property to false.
+
+```csharp
+AdHocSettings.ShowNewButtons = false;
+```
+
+###Save
+
+![Save Report Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/savedesigner.png)
+
+The Save Report button saves the report you are currently designing. To disable it, you'll have to set the ShowSaveControls property to false. This will hide both Save and Save As.
+
+```csharp
+AdHocSettings.ShowSaveControls = false;
+```
+
+###Save As
+
+![Save Report As Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/saveAsDesigner.png)
+
+The Save Report As button allows the user to save the report they'll currently working on with a specified name. To disable it, set either ShowSaveAsToolbarButton or ShowSaveControls properties to false. The latter will disable both Save and Save As buttons. 
+
+```csharp
+AdHocSettings.ShowSaveAsToolbarButton = false;
+```
+
+###PDF Print
+
+![PDF Print Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/pdfDesigner.png)
+
+The PDF Print button will export a PDF version of the report being designed. To disable it, set ShowPDFButton to false.
+
+```csharp
+AdHocSettings.ShowPDFButton = false;
+```
+###HTML Print
+
+![HTML Print Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/htmlPrint.png)
+
+The HTML Print button allows a user to print the current report being designed. 
+
+###Show SQL
+
+![Show SQL Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/sql.gif)
+
+The SQL button shows the generated SQL for the report being designed. To disable it, set ShowSqlOutputIcon to false.
+
+```csharp
+AdHocSettings.ShowSqlOutputIcon = false;
+```
+
+###CSV
+
+![CSV Export Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/csv.gif)
+
 ##Tabs
