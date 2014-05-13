@@ -39,6 +39,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Izenda Troubleshooting Tip: Transferring, Moving or Copying Report XML Manually|FAQ/moving-report-xml-manually]]
 - [[Izenda Troubleshooting Tip: Enabling CSS in PDFs and high quality PDF exports|FAQ/enabling-css-in-pdfs]]
 - [[Izenda Troubleshooting Tip: 'Operation is not valid due to the current state of the object.'|FAQ/max-http-keys]]
+- [[Izenda Troubleshooting Tip: Resolving DLL Dependency Issues|FAQ/Questions/DLL-dependency-issues]]
 - [[Why do Chart Images not Render in my Report Thumbnails?|FAQ/chart-images-not-rendering]] 
 - [[How to disable Protected Mode in Office 2010|FAQ/disable-protected-mode-office-2010]]
 
