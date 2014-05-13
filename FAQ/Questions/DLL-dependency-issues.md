@@ -22,10 +22,11 @@ You can manually update the GAC (global assembly cache) to use both versions of 
     3. If you do not have the developer command prompt, you can still use Gacutil by using the regular windows command prompt (as an administrator) and specifying the entire path.
     4. Example: "C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\Gacutil.exe" /i "D:\Downloads\izenda.adhoc.6.7.0.256\bin\itextsharp.dll"
 4. You should be able to use your version of the DLL from your solution and Izenda will use the one registered to the GAC.
+
 ###Method 2: Use Izenda's version
 
 You can rollback your version of the DLL to the one Izenda uses and update your application accordingly.
 
 ###Method 3: Contact Izenda
 
-You can contact us by emailing services@izenda.com and report that 
+You can contact us by emailing services@izenda.com and we can work with you to upgrade our version of the DLL. In the meantime, the workaround mentioned in method 1 can act as a temporary patch.
