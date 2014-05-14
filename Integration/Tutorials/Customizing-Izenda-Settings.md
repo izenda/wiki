@@ -115,7 +115,7 @@ You can use the following steps to allow proper operation of Izenda Reports on d
 1. Call the ``InitializeReporting()`` method from the OnPreInit() method of all pages that utilize the Izenda API except for rs.aspx. by default, the demo site already uses this configuration.
 2. Enable shared state management by setting the mode attribute of sessionstate to "sqlserver" or "stateserver" in the web.config file. Following is an example web.config showing where to place this option.
 
-```html
+```xml
 <configuration>
   <system.web>
     <sessionState mode="StateServer"
