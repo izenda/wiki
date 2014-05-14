@@ -107,3 +107,21 @@ In general, most custom code will be placed in the **Global.asax** file. Custom 
 ##What if my global.asax is already integrated or I cannot use it?
 
 In the case that you will not be using the **global.asax** file or that you are using a different **global.asax** than Izenda's, you can set the license key at the start of the user's session to obtain the same result. You will need to make sure that you set the license key before invoking any of the configuration methods or settings in Izenda Reports.
+
+##Web Farms/Gardens/Clusters/Load Balancers/Clouds/Azure
+
+You can use the following steps to allow proper operation of Izenda Reports on distributed cloud computing systems:
+
+1. Call the ``InitializeReporting()`` method from the OnPreInit() method of all pages that utilize the Izenda API except for rs.aspx. by default, the demo site already uses this configuration.
+2. Enable shared state management by setting the mode attribute of sessionstate to "sqlserver" or "stateserver" in the web.config file. Following is an example web.config showing where to place this option.
+
+```html
+<configuration>
+  <system.web>
+    <sessionState mode="StateServer"
+      stateConnectionString="tcpip=SampleStateServer:42424"
+      cookieless="false"
+      timeout="20"/>
+  </system.web>
+</configuration>
+```
