@@ -455,3 +455,83 @@ The fields tab allows the user to add or modify the fields reported on in a repo
 AdHocSettings.ShowFieldsTab = false;
 ```
 
+###Summary
+
+![Summary Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/summary.png)
+
+The summary tab allows the user to add or modify a summary section in a report through the report designer. To disable it, set ShowSummaryTab to false.
+
+```csharp
+AdHocSettings.ShowSummaryTab = false;
+```
+
+###Chart
+
+![Chart Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/chart.png)
+![Chart2 Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/chart2.png)
+
+The chart tab allows the user to add or modify trend, pie, plot, and bar charts in a report through the report designer. To disable it, set ShowChartTab to false.
+
+```csharp
+AdHocSettings.ShowChartTab = false;
+```
+
+###Gauge
+
+![Gauge Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/gauge.png)
+
+The gauges tab allows the user to add or modify gauges used in a report through the report designer. To disable it, set ShowGaugeTab to false.
+
+```csharp
+AdHocSettings.ShowGaugeTab = false;
+```
+
+###Map
+
+![Map Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/map.png)
+
+The map tab allows the user to add or modify a map to be used in a report through the designer. To disable it, set ShowMapTab to false.
+
+```csharp
+AdHocSettings.ShowMapTab = false;
+```
+
+###Misc
+
+![Misc Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/misc.png)
+
+The misc tab allows the user to set the title, description, header, footer, report scheduler settings (if enabled), and report access permissions for a report through the report designer. To disable it, set ShowMiscTab to false.
+
+```csharp
+AdHocSettings.ShowMiscTab = false;
+```
+
+###Style
+
+![Style Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/style.png)
+
+The style tab allows the user to modify the report colors, print options, visual group advanced options, report order, set report viewer items per page, and modify field value / report layout options through the report designer. To disable it, set ShowStyleTab to false.
+
+```csharp
+AdHocSettings.ShowStyleTab = false;
+```
+
+###Filters
+
+![Filters Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/filters.png)
+
+The filters tab allows the user to add or modify filters used on report data through the report designer. To disable it, set ShowFiltersTab to false. 
+
+```csharp
+AdHocSettings.ShowFiltersTab = false;
+```
+
+###Preview
+
+![Preview Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/preview.png)
+
+The preview tab allows the user to view the current report so they can quickly see any modifications and the report layout through the report designer. To disable it, set ShowPreviewTab to false. 
+
+```csharp
+AdHocSettings.ShowPreviewTab = false;
+```
