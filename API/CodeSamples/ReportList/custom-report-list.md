@@ -6,11 +6,13 @@
 
 The Report List page is included in the Izenda starter kit and is simply called ReportList.aspx in the solution. The Report List is robust and AJAX driven. It includes a list of all report **Categories** and **Recent** reports on the left side. It also has a top banner with the options **Reports**, **Dashboards**, **New**, and **Settings**. And the main portion of the page is comprised of a grid of thumbnails and titles of all the reports in the selected category.
 
+![](/API/CodeSamples/ReportList/custom-report-list/reportlist.png)
+
 ##Left Side Bar
 
 The bar on the left side is where you will select report categories or recent reports. 
 
-![]()
+![](/API/CodeSamples/ReportList/custom-report-list/reportlist_Sidebar.png)
 
 Selecting a recent report will take you directly to the Report Viewer page while selecting a category will update the grid to the right. You can also type a search term into the **Search** box. Pressing enter or clicking the magnifying glass will submit the search. The search will update all sections of the ReportViewer with reports and categories corresponding to the search term entered.
 
@@ -18,17 +20,19 @@ Selecting a recent report will take you directly to the Report Viewer page while
 
 The grid on the right side contains all report thumbnails for the selected category or entered search term. 
 
-![]()
+![](/API/CodeSamples/ReportList/custom-report-list/reportlist_Grid.png)
 
 Each thumbnail has several different options.
 
-![]()
+![](/API/CodeSamples/ReportList/custom-report-list/reportlist_Thumbnail.png)
 
 You can click on a thumbnail to view the report. You can also hover over the report to view options including printing the selected report, editing the report (redirects to the Report Designer), or deleting the report. These options can be enabled or disabled via various [[AdHocSettings|/API/AdHocSettings]]. 
 
 ##Toolbar
 
 The toolbar on this page is included in the Default.Master page. If you are using your own master page, you can incorporate the structure of the Izenda master page into your own solution. You can either paste the structure directly into your existing master page or tweak the structure to fit your own solution.
+
+![](/API/CodeSamples/ReportList/custom-report-list/reportlist_Toolbar.png)
 
 ##Customizing Report List
 
