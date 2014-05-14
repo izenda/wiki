@@ -434,3 +434,24 @@ AdHocSettings.ShowHelpButton = false;
 ```
 
 ##Tabs
+ 
+###Data Sources
+
+![Data Sources Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/dstab.png)
+
+The Data Sources tabs allow report designers to add/remove data sources for a report. To disable it, set ShowDataSourcesTab to false.
+
+```csharp
+AdHocSettings.ShowDataSourcesTab = false;
+```
+
+###Fields 
+
+![Fields Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/fields.png)
+
+The fields tab allows the user to add or modify the fields reported on in a report, the functions used on them, the descriptions, and the formatting of the field through the report designer. To disable it, set ShowFieldsTab to false.
+
+```csharp
+AdHocSettings.ShowFieldsTab = false;
+```
+
