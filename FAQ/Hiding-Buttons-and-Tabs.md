@@ -8,7 +8,7 @@ Izenda offers various methods of controlling the toolbar buttons and tabs that u
 
 ##Report Viewer Buttons
 
-The Report List Button
+* [[The Report List Button|/FAQ/Questions/Hiding-report-list-button]]
 * [[The Save and Save As Button|http://wiki.izenda.us/API/CodeSamples/ShowDesignLinks]]
 * [[The Print HTML and HTML-powered PDF Button|http://wiki.izenda.us/FAQ/Questions/hiding-report-viewer-buttons]]
 * [[The Export dropdown|http://wiki.izenda.us/FAQ/Questions/hiding-report-viewer-buttons]]
