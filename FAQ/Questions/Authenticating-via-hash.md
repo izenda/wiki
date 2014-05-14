@@ -4,7 +4,7 @@
 
 ##Question
 
-
+How Can I Authenticate Against a Hash Sent Via Query String?
 
 ##Answer
 
