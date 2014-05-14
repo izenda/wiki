@@ -18,6 +18,6 @@
 * [Contact Page](http://www.izenda.com/site/Pages/contactus.aspx)
 * [Knowledge Base](http://www.izenda.com/Site/KB/Integration/94)
 
-```
+---
 
 * [[Acknowledgements]]
