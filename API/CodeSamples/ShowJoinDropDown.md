@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the value indicating whether the join type dropdown should be shown on the DataSources tab (Advanced Mode). Advanced mode can be accessed by clicking "Advanced" on the DataSources tab or by setting [[ShowDataSourcesAsCheckBoxes|/API/CodeSamples/ShowDataSourcesAsCheckBoxes]] to true.
+Gets or sets the value indicating whether the join type dropdown should be shown on the DataSources tab (Advanced Mode). Advanced mode can be accessed by clicking "Advanced" on the DataSources tab when [[ShowDataSourcesAsCheckBoxes|/API/CodeSamples/ShowDataSourcesAsCheckBoxes]] is true, or by setting [[ShowDataSourcesAsCheckBoxes|/API/CodeSamples/ShowDataSourcesAsCheckBoxes]] to false.
 
 ##Global.asax (C♯)
 
