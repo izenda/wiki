@@ -104,14 +104,11 @@ After you select all the data you want to see in report, click **Preview** and s
 ![Preview and Save Report](http://izenda.com/Reg/images/src6_previewnew.png)
 
 
-###Troubleshooting Tip:
-
+###Troubleshooting
 
 If you encounter any unexpected behaviors or exceptions, simply perform an IISReset, or a refresh of the your Izenda Reports-enabled site. To perform an IIS reset, Click 'START'; type 'cmd' into your search dialogue, right click the program and choose 'Run as Administrator'. In the command prompt type 'iisreset' and hit enter. Be sure to refresh your browser and empty the cache to ensure you see updated pages.
 
-
 ![IISReset](http://izenda.com/Reg/images/iisresetfinal.png)
-
 
 ##How to Install Izenda on Windows 2008 with IIS 7
 
