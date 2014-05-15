@@ -26,7 +26,7 @@ To start using Izenda Reports Starter Kit you should take a few simple steps. If
 
 ###Step 2. Unzip the contents
 
-**a.** Unzip MVCxxxx.zip into a directory. Once unzipped, copy this directory to **C:\inetpub\wwwroot**, or wherever your websites are located.
+**a.** Unzip webforms-xx.zip into a directory. Once unzipped, copy this directory to **C:\inetpub\wwwroot**, or wherever your websites are located.
 
 **b.** Once this directory is in your C: Drive, name it 'Reporting', i.e. **C:\inetpub\wwwroot\Reporting**
 
