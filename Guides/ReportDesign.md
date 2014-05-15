@@ -4,6 +4,8 @@
 
 ##[[Section 1 - Introduction|/Guides/ReportDesign/1.0 Introduction]]
 
+Building reports with Izenda is intuitive and easy once the tool is connected to your data source. Here is a quick explanation of all  you need to do to create a report once Izenda is installed.
+
 ##[[Section 2 - Quick Start|/Guides/ReportDesign/2.0 Quick Start]]
 
 ##[[Section 3 - Data Sources Tab|/Guides/ReportDesign/3.0 Data Sources tab]]
