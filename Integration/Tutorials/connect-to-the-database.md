@@ -4,7 +4,7 @@
 
 ##Introduction
 
-Izenda Reports lets business users generate simple custom reports without involving SQL experts or developers. Izenda Reports is an agile reporting solution for ASP.NET and can be installed in about an hour. These are the installation instructions for different database versions, if you have a question about the installation process, please contact us. If you have not already downloaded Izenda Reports, you can [[review this article|http://wiki.izenda.us/Integration/Tutorials/Installing-Izenda]] and [[request a trial license key|mailto:sales@izenda.com]].
+Izenda Reports lets business users generate simple custom reports without involving SQL experts or developers. Izenda Reports is an agile reporting solution for ASP.NET and can be installed in about an hour. These are the installation instructions for different database versions, if you have a question about the installation process, please contact us. If you have not already downloaded Izenda Reports, you can [[review this article|http://wiki.izenda.us/Integration/Tutorials/Installing-Izenda]] and [request a trial license key](mailto:sales@izenda.com).
 
 ##Supported Databases
 
