@@ -3,7 +3,7 @@
 
 * [[Installing Izenda on Windows Server|Integration/Tutorials/Installing-Izenda]]
 * [[Installing Izenda on Mac|/Guides/Mac-Install]]
-* [[User Guides|http://wiki.izenda.us/Guides/ReportDesign/15.0-Expressions-in-Izenda]]
+* [[User Guides|http://wiki.izenda.us/Guides/ReportDesign]]
 * [[Developer Guides|Guides/Developer Links and Guides]]
 
 ---
