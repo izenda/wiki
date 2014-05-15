@@ -4,7 +4,7 @@
 
 ##Instructions
 
-Thank you for registering and downloading Izenda. If you do not receive your License Key please check your SPAM box or contact [sales@izenda.com](mailto:sales@Izenda.com).
+Installation requires a license key. To get a new trial key, you may contact [sales@izenda.com]. Or you may try our [[free demo|http://izenda.com/bi/ReportListIntro.aspx]]. 
 
 By downloading software of Izenda LLC, you agree to the [End User License Agreement](http://www.izenda.com/site/downloads/izendaeula.pdf). If you do not agree with such terms and conditions, do not download the software.
 
@@ -12,7 +12,17 @@ To start using Izenda Reports Starter Kit you should take a few simple steps. If
 
 ###Step 1. Download the Starter Kit
 
-The zipped demo website files can be found [[here|http://archives.izenda.us/ri/webforms-cs.zip]].
+**Izenda works with:**
+
+* Non-production, staging, or development server
+* SQL Server, Oracle, MySQL, Web Services and EAV, PostgreSQL, OData, Pervasive SQL, ODBC, and SyBase
+* Windows 2000, Windows 2003, Windows 2008, Windows 2012, Windows 7, Windows Vista Business or Ultimate
+* Microsoft ASP.NET 1.1, 2.0, 3.0, 3.5, 4.0 and 4.5
+* ASP.NET MVC 1.0, 2.0, 3.0, 4.0
+* Razor 1, 2
+
+* [[C♯ Installation Files|http://archives.izenda.us/ri/webforms-cs.zip]].
+* [[VB.NET Installation Files|http://archives.izenda.us/ri/webforms-vb.zip]].
 
 ###Step 2. Unzip the contents
 
@@ -24,15 +34,15 @@ The zipped demo website files can be found [[here|http://archives.izenda.us/ri/w
 
 ###Step 3. Configure website under IIS
 
+Izenda Reports provides an integrated platform for browser-based report customization and works on your application's existing web server. This section will guide you through configuring Izenda Reports for use on Microsoft's Internet Information Server (IIS) on Windows. Izenda recommends doing the initial setup on a non-production server.
+
 If you don’t have IIS, please see the following:
 
 [Install IIS](http://www.izenda.com/Site/Pages/IIS-Install.aspx)
 	
 [Install ASP.NET under IIS](http://www.izenda.com/Site/Pages/ASPNET-Install.aspx)
 	
-
 Once you have IIS installed, continue with the following:
-
 
 **a.** To access IIS Manager (click **Start > Control Panel > Administrative Tools > Internet Information Services (IIS) Manager**) and add new application or virtual directory under Default Web Site.
 			
@@ -65,7 +75,6 @@ Once you have IIS installed, continue with the following:
 		
 
 **f.** Before continuing, make sure the site folder ( **...\Reporting** ) has read permissions for the **NETWORK SERVICE** user. Make sure the reports folder ( **...Reporting\MVC4Razor2\Reporting\Reports** ) and Web.config ( **...Reporting\MVC4Razor2\Web.config** ) have write permissions for the **NETWORK SERVICE** user (Right click on **MySite\Reporting folder => Properties => Security => Edit... => Add... => Type "NETWORK SERVICE" and press OK =>  Click 'NETWORK SERVICE' Click 'Allow - Full Control' Click OK=> Click OK)**.
-
 
 ###Step 4. Set license key and database connection
 
@@ -105,6 +114,27 @@ If you encounter any unexpected behaviors or exceptions, simply perform an IISRe
 
 
 ##How to Install Izenda on Windows 2008 with IIS 7
+
+**Web Server Setup**
+
+Prior to starting, please make sure your system meets the following requirements:
+
+**Requirements:**
+
+* Microsoft Internet Information Server (IIS) 5.1 or higher
+* ASP.NET (any version)
+* SQL Server 2000 - 2012, Oracle 9g or higher, MySQL 5 or higher, OData, Web Services and EAV, a working connection string with proper read permissions to both data and metadata
+* Internet Explorer 6.0 or higher, Firefox 1.5 or higher, Chrome, or Opera
+
+**Selecting a language and .NET version:**
+
+Izenda supports the .NET platform (all versions) for both C# and VB.NET. This is important if any code-level integration is needed. Izenda highly recommends selecting .NET 2.0 and C#. The starter kits referenced above are already configured to use .NET 2.0 and C# or VB.NET respectively.
+
+**Permissions:**
+
+In order to create and save reports, your application will require the ability to read and write to the [[Reports folder|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]] or the [[Stored Reports table|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]] as well as the Izenda.config file. The application runs under the web server's service account. By default, this account is **NT AUTHORITY\NETWORKSERVICE** under Windows 2003 and **ASPNET** under Windows XP. It can be something different if your Administrator has changed it or you are running Microsoft Exchange on the same server. In most cases, it will not have changed.
+
+**Installation Video:**
 
 This video demonstrates a simple install process for Izenda on Windows Server 2008 with IIS 7, connecting to SQL Server 2008 R2. (Redirects to youtube)
 
