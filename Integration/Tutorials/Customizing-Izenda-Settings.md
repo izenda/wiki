@@ -125,3 +125,7 @@ You can use the following steps to allow proper operation of Izenda Reports on d
   </system.web>
 </configuration>
 ```
+
+##The Settings.aspx page
+
+Izenda Reports also allows most common settings to be turned on or off through its settings page. In this page you will find that settings have been grouped into categories depending on the function they server. This page can also provide helpful diagnostic data about your application.
