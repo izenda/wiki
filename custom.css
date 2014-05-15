@@ -21,3 +21,25 @@ body {background-color: white;}
 .tree li label, .tree li a {
   color: black;
 }
+
+.markdown-body ol {
+	counter-reset: custom;
+	list-style-type: none;
+}
+
+.markdown-body ol li:before {
+	content: counter(custom, decimal)". ";
+	counter-increment: custom;
+	margin-right: 5px;
+	font-weight: bold;
+	margin-left: -21px;
+}
+
+.markdown-body ol li ol {
+	counter-reset: custom2;
+}
+
+.markdown-body ol li ol li:before {
+	content: counter(custom2, lower-latin)". ";
+	counter-increment:custom2;
+}
