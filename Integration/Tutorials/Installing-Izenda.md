@@ -4,11 +4,11 @@
 
 ##Instructions
 
-Installation requires a license key. To get a new trial key, you may contact [sales@izenda.com]. Or you may try our [[free demo|http://izenda.com/bi/ReportListIntro.aspx]]. 
+Installation requires a license key. To get a new trial key, you may contact [[sales@izenda.com|mailto:sales@izenda.com]]. Or you may try our [[free demo|http://izenda.com/bi/ReportListIntro.aspx]]. 
 
 By downloading software of Izenda LLC, you agree to the [End User License Agreement](http://www.izenda.com/site/downloads/izendaeula.pdf). If you do not agree with such terms and conditions, do not download the software.
 
-To start using Izenda Reports Starter Kit you should take a few simple steps. If you need more information about setup process, configuring reports, additional features or special cases please visit our [Knowledge Base](http://www.izenda.com/Site/KB/Integration/94)
+To start using Izenda Reports Starter Kit you should take a few simple steps. If you need more information about setup process, configuring reports, additional features or special cases please visit our [Knowledge Base](http://www.izenda.com/Site/KB/Integration/94).
 
 ###Step 1. Download the Starter Kit
 
@@ -68,7 +68,7 @@ Once you have IIS installed, continue with the following:
 ![Application Pool](http://izenda.com/Reg/images/screenshots/InstAppPool.png)
 
 
-**e.** Create and choose the Physical Path to the **\Reporting\MVCxxx** folder and give your website a name. Select the button with the ellipsis **(…)**, and it will allow you to browse for a folder to house the application. Select your **C:** drive and the **Reporting** folder.
+**e.** Create and choose the Physical Path to the **\Reporting\webforms-xx** folder and give your website a name. Select the button with the ellipsis **(…)**, and it will allow you to browse for a folder to house the application. Select your **C:** drive and the **Reporting** folder.
 			
 
 [Replace 1e. with MVC Screenshot]
