@@ -108,4 +108,4 @@ If you encounter any unexpected behaviors or exceptions, simply perform an IISRe
 
 This video demonstrates a simple install process for Izenda on Windows Server 2008 with IIS 7, connecting to SQL Server 2008 R2. (Redirects to youtube)
 
-[[![](http://wiki.izenda.us/Integration/Tutorials/Installing-Izenda/ii7_installation.png)|https://www.youtube.com/watch?v=4E0npCxLi4o]]
+[![IIS7 Integration Video](http://wiki.izenda.us/Integration/Tutorials/Installing-Izenda/ii7_installation.png)](https://www.youtube.com/watch?v=4E0npCxLi4o)
