@@ -110,3 +110,5 @@ If you wish to test your connection string to ensure connectivity, you can perfo
 * The license key and connection string you entered will be hidden, showing only "*******" in its place.
 * Click "Test" below the connection string 
 * Text will appear below the field describing either "SUCCESS" or "FAILURE". Failure lists the reason why it failed.
+
+![](/Integration/Tutorials/connect-to-the-database/settings_aspx.png)
