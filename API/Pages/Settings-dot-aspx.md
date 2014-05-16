@@ -4,6 +4,8 @@
 
 Izenda Reports allows basic configuration through its settings page. In this page you will find many options that can be configured with a simple button click. Using your browser, navigate to http://yourwebsiteroot/ApplicationName/settings.aspx to access this page. This page also includes diagnostic tests that you can use to ensure all the processes function before you begin using Izenda Reports. You can also get a full list of settings, their functions, and their default values by reviewing the [[AdHocSettings|http://wiki.izenda.us/API/AdHocSettings]] class.
 
+![The Settings Page](http://wiki.izenda.us/Integration/Tutorials/connect-to-the-database/settings_aspx.png)
+
 ##Key & DB Connection tab
 
 Here you can set the license key, which DB server type you are using, the connection string, and the visible data sources.
