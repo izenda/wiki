@@ -37,6 +37,11 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Will My ODBC Connection String Work With Izenda Reports?|http://wiki.izenda.us/FAQ/Database/ODBC-Connection-String]]
 - [[I'm getting SQL type errors when connecting to a MySQL database with an ODBC connection. Will this be corrected?|http://wiki.izenda.us/FAQ/Questions/SQL-Type-Errors-When-Using-ODBC-with-MySQL]]
 
+##Formatting
+
+- [[My customers are reporting their pages are not formatted with CSS properly. How can I fix this?|http://wiki.izenda.us/FAQ/Formatting/Customer-Loses-CSS-Formatting-or-Fonts-etc-are-not-Correct]]
+- [[How do I override CSS on reporting pages?|http://wiki.izenda.us/FAQ/Questions/Overriding-page-level-css]]
+
 ##Platform
 
 - [[What browsers does Izenda Reports support?|http://wiki.izenda.us/FAQ/Platform/What-browsers-does-Izenda-Reports-Support]]
