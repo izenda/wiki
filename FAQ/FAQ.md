@@ -58,6 +58,12 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How Do I Apply Security to Scheduled Reports?|/FAQ/Questions/Applying-Security-to-Scheduled-Reports]]
 - [[How Can I Authenticate Against a Hash Sent Via Query String?|/FAQ/Questions/Authenticating-via-hash]]
 
+##Settings
+
+- [[How do I hide output types (export formats)?|http://wiki.izenda.us/FAQ/Formatting/How-do-I-hide-Output-Types]]
+- [[How do I control the alignment of text fields or justification in my report's output?|http://wiki.izenda.us/FAQ/Formatting/How-do-I-control-the-alignment-of-text-fields-or-justification-in-report-output]]
+- [[How do I Remove the Copyright Text from Settings (Settings.aspx)?|/FAQ/Questions/Settings/Hiding-Izenda-Copyright-Footer]]
+
 ##Troubleshooting
 
 - [[Izenda Troubleshooting Tip: ReportList never loads. All other pages work fine.|FAQ/troubleshooting-report-list]]
