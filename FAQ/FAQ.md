@@ -37,6 +37,14 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Will My ODBC Connection String Work With Izenda Reports?|http://wiki.izenda.us/FAQ/Database/ODBC-Connection-String]]
 - [[I'm getting SQL type errors when connecting to a MySQL database with an ODBC connection. Will this be corrected?|http://wiki.izenda.us/FAQ/Questions/SQL-Type-Errors-When-Using-ODBC-with-MySQL]]
 
+##Platform
+
+- [[What browsers does Izenda Reports support?|http://wiki.izenda.us/FAQ/Platform/What-browsers-does-Izenda-Reports-Support]]
+- [[Where can I find information about the company?|http://www.izenda.com/Site/Pages/About.aspx]]
+- [[What do other customers say about Izenda?|http://www.izenda.com/Site/Pages/CaseStudies.aspx]]
+- [[What product features does Izenda offer?|http://www.izenda.com/site/pages/reports.aspx]]
+- [[What benefits does Izenda offer?|http://www.izenda.com/Site/Pages/LandingPages/Ad-Hoc-Reporting.aspx]]
+
 ##Report Design
 
 - [[Izenda Report Design Tip: Running custom Javascript upon clicking a report element|FAQ/running-custom-javascript-on-click]]
