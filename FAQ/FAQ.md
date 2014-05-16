@@ -2,12 +2,12 @@
 
 [[_TOC_]]
 
-###Introduction
+##Introduction
 We are continually developing online Izenda Reports training materials focused on the needs of novice users. The materials will include a basic overview of building reports which utilize bar, pie, and trend charts as well as some advanced topics. These materials include both video and printable formats.
 
 All training materials are available on the Izenda Reports site at no charge. The presentations and lessons assume the availability of a working copy of Izenda Reports connected to a database containing both text and numerical data. You may print and re-distribute these materials to any users within the organization or company that licenses Izenda Reports. 
 
-###API
+##API
 
 - [[What Are All the Settings Izenda Offers?|/API/AdHocSettings]]
 - [[What Are the Best Practices for Constraints & Joins?|FAQ/Izenda-API-Tip-Constraints-Joins-Best-Practices]]
@@ -36,7 +36,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 - [[I'm getting SQL type errors when connecting to a MySQL database with an ODBC connection. Will this be corrected?|http://wiki.izenda.us/FAQ/Questions/SQL-Type-Errors-When-Using-ODBC-with-MySQL]]
 
-###Report Design
+##Report Design
 
 - [[Izenda Report Design Tip: Running custom Javascript upon clicking a report element|FAQ/running-custom-javascript-on-click]]
 - [[How do I use Expressions?|Guides/ReportDesign/15.0-Expressions-in-Izenda]]
@@ -49,7 +49,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How Do I Display Filter Names in My Reports?|http://wiki.izenda.us/Guides/ReportDesign/5.0-Filters-tab#5.6-Other-Filter-Features]]
 - [[How Do I Hide the Report List Button On the Report Viewer?|http://wiki.izenda.us/FAQ/Questions/Hiding-report-list-button]]
 
-###Security
+##Security
 
 - [[How does security work?|FAQ/How user credentials are applied]]
 - [[How do I create Data Source Level Security?|FAQ/data-source-level-security]]
@@ -57,7 +57,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How Do I Apply Security to Scheduled Reports?|/FAQ/Questions/Applying-Security-to-Scheduled-Reports]]
 - [[How Can I Authenticate Against a Hash Sent Via Query String?|/FAQ/Questions/Authenticating-via-hash]]
 
-###Troubleshooting
+##Troubleshooting
 
 - [[Izenda Troubleshooting Tip: ReportList never loads. All other pages work fine.|FAQ/troubleshooting-report-list]]
 - [[Izenda Troubleshooting Tip: 'WCFApplication' error|FAQ/troubleshooting-wcf-application]]
@@ -68,7 +68,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Why do Chart Images not Render in my Report Thumbnails?|FAQ/chart-images-not-rendering]] 
 - [[How to disable Protected Mode in Office 2010|FAQ/disable-protected-mode-office-2010]]
 
-###Misc.
+##Misc.
 
 - [[How do I get the ReportList information to create my own ReportList?|FAQ/getting-reportlist-information]]
 - [[How do I force a user to click on 'Update Results' before showing any data?|FAQ/force-update-results-on-report]]
