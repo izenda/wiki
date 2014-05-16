@@ -64,65 +64,54 @@ Alternately, you can use the [[CssUrl|http://wiki.izenda.us/FAQ/Questions/Overri
       <cc1:adhocreportdesigner id="Adhocreportdesigner1" runat="server">
       </cc1:adhocreportdesigner>
     </form>
-    <!--Place your style tag here-->
+    /* Custom styles for report designer */
+  <style type="text/css">
+    body {
+        font-size: 20px;
+        font-family: Tahoma;
+        color: red;
+    }
+
+    select {
+        font-size: 18px;
+        font-family: Tahoma;
+        color: blue;
+    }
+
+    /* You must use expressions in IE for input elements */
+    INPUT {
+        color: expression(this.type== "button" ? 'red' : 'yellow' );
+    }
+
+    /* For Mozilla and the rest, IE ignores this tag */
+    input[type="button"] {
+        font-size: 12px;
+        font-family: Tahoma;
+        color: yellow;
+    }
+
+    /* Preview tab css settings for the html report preview, it will NOT show this way in report viewer */
+
+    tr.ReportItem td {
+        border-style: solid;
+        border-width: 1px;
+        font-size: 18pt;
+        vertical-align: top;
+    }
+
+    table.ReportTable td {
+        border-style: solid;
+        border-width: 0px;
+        font-family: tahoma;
+    }
+
+    table.ReportTable td {
+        border-color: Black;
+    }
+    tr.ReportItem {
+        color: Black;
+    }
+  </style>
   </div>
 </asp:Content>
-
-<style type='text/css'>
-
-/* Custom styles for report designer */
-/* Place this whole <style></style> section right after the </form> tag */
-
-body
-{
-font-size: 20px;
-font-family: Tahoma;
-color: red;
-}
-
-select
-{
-font-size: 18px;
-font-family: Tahoma;
-color: blue;
-}
-
-/* You must use expressions in IE for input elements */
-INPUT
-{
-color: expression(this.type== "button" ? 'red' : 'yellow' );
-}
-
-/* For Mozilla and the rest, IE ignores this tag */
-input[type="button"]
-{
-font-size: 12px;
-font-family: Tahoma;
-color: yellow;
-}
-
-/* Preview tab css settings for the html report preview, it will NOT show this way in report viewer */
-
-tr.ReportItem td
-{
-border-style: solid;
-border-width: 1px;
-font-size: 18pt;
-vertical-align: top;
-}
-table.ReportTable td
-{
-border-style: solid;
-border-width: 0px;
-font-family: tahoma;
-}
-table.ReportTable td
-{
-border-color: Black;
-}
-tr.ReportItem
-{
-color: Black;
-}
-</style>
 ```
