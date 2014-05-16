@@ -11,7 +11,7 @@ There are four different types of gauges you can create:
 | Type |Description|Image|
 |:----:|:---------:|:---:|
 |Radial||![Radial Gauge](http://wiki.izenda.us/Guides/ReportDesign/8-dot-0-Gauge-tab/radial_gauge.png)|
-|Radial 2||![Radial Gauge 2](http://wiki.izenda.us/Guides/ReportDesign/8-dot-0-Gauge-tab/radial_gauge_2.png)|
+|Radial 2||![Radial Gauge 2](http://wiki.izenda.us/Guides/ReportDesign/8-dot-0-Gauge-tab/radial_2_gauge.png)|
 |Animated Half Circle||![Animated Half Circle](http://wiki.izenda.us/Guides/ReportDesign/8-dot-0-Gauge-tab/animated_half_gauge.png)|
 |Animated Half Circle with KPIs||![Animated Half Circle with KPIs](http://wiki.izenda.us/Guides/ReportDesign/8-dot-0-Gauge-tab/animated_half_kpi_gauge.png)|						
 |Linear||![Linear](http://wiki.izenda.us/Guides/ReportDesign/8-dot-0-Gauge-tab/linear_gauge.png)|
@@ -24,7 +24,7 @@ The Report below is showing the first 4 gauges based on the alphabetical order o
 
 **Gauge tab contents**
 
-![Sample Gauge]()
+![Sample Gauge](http://wiki.izenda.us/Guides/ReportDesign/8-dot-0-Gauge-tab/gauge_result_1.png)
 
 ##8.2 Creating the Top 4 Orders by Country Gauges
 
@@ -34,7 +34,7 @@ You can add four different types of gauges
 
 ![Gauge Tab 2](http://wiki.izenda.us/Guides/ReportDesign/8-dot-0-Gauge-tab/gauge_sample_2.png)
 
-![Gauge Tab 2 Result]()
+![Gauge Tab 2 Result](http://wiki.izenda.us/Guides/ReportDesign/8-dot-0-Gauge-tab/gauge_result_2.png)
 
 ##8.3 Changing Color Ranges
 
@@ -63,7 +63,7 @@ With these new options, you can select the KPI Low and High, and select whether 
 
 ![Gauge Sample 3](http://wiki.izenda.us/Guides/ReportDesign/8-dot-0-Gauge-tab/gauge_sample_3.png)
 
-![Gauge Result 3]()
+![Gauge Result 3](http://wiki.izenda.us/Guides/ReportDesign/8-dot-0-Gauge-tab/gauge_result_3.png)
 
 ##8.4 Gauges with Drill-Down Effects
 
