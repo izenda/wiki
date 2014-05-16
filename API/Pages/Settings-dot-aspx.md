@@ -64,4 +64,16 @@ This tab controls which tabs will be displayed on the Report Designer. You can g
 
 This tab allows you to control miscellaneous settings that are not related to the areas described above and range from very small UI differences to paths for resources.
 
+##Settings Toolbar
+
+The settings toolbar is the grey banner directly above the tabs and has some helpful items on it as well.
+
+* **New Report:** Takes you to the Report Designer page. This item is available even if [[ShowDesignLinks|/API/CodeSamples/ShowDesignLinks]] is turned off.
+* **Report List:** Takes you to the Report List page. This is the default page for Izenda to direct to.
+* **Save to Izenda.config:** Writes your current configuration to the file "Izenda.config" on your server. This is an XML file that contains all of your settings.
+* **Update Schema:** Forces an update of the database schema to Izenda Reports. If changes are made to the database and you do not want to restart the application, you can use this button to do so.
+* **Generate C♯ Code:** This will output a list of all modified settings in a format that is easy to copy and paste into your [[InitializeReporting()|http://wiki.izenda.us/FAQ/InitializeReporting]] method.
+* **Generate VB.NET Code:** Acts just like the above button, except that it will output a list of those settings formatted for VB.NET.
+* **Preview:** Launches another browser window where you can view changes to your settings made with Izenda.config. This will require clearing your browser cache or the old values will persist. Code entered via InitializeReporting cannot be re-evaluated until the application is re-built.
+
 If you have questions or concerns about the features on this page, you can contact [Services@izenda.com](mailto:services@izenda.com)
