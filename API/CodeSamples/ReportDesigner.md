@@ -111,6 +111,9 @@ Alternately, you can use the [[CssUrl|http://wiki.izenda.us/FAQ/Questions/Overri
     tr.ReportItem {
         color: Black;
     }
+    .advancedBtnStyle {
+        color: White;
+    }
   </style>
   </div>
 </asp:Content>
