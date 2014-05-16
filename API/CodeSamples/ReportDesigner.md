@@ -52,7 +52,9 @@ This would hide both the **Save** and **Save As...** toolbar buttons and is more
 
 ##Override Page Level CSS
 
-Here is a code sample that shows how to override the CSS in the Report Designer page. Essentially, you insert a ``<style> </style>`` tag as shown below after the ``</FORM>`` tag in the page. You can then override the CSS elements. In this example, it also overrides the "Preview" tab CSS for the HTML preview. The classes for the report tables in the "Preview" tab are the same CSS tables available in the [[Appearance|/Integration/Tutorials/Appearance]] section of this site. You can use any web browser's developer tools add-on (usually accessed by pressing F12 on the keyboard or ctrl+click if on a Mac with Safari developer tools enabled) to find what CSS classes you need to override. **Caveat:** this will only override them while in the "ReportDesigner.aspx" page.
+Here is a code sample that shows how to override the CSS in the Report Designer page. Essentially, you insert a ``<style> </style>`` tag as shown below after the ``</FORM>`` tag in the page. You can then override the CSS elements. In this example, it also overrides the "Preview" tab CSS for the HTML preview. You can use any web browser's developer tools add-on (usually accessed by pressing F12 on the keyboard or ctrl+click if on a Mac with Safari developer tools enabled) to find what CSS classes you need to override. **Caveat:** this will only override them while in the "ReportDesigner.aspx" page.
+
+Alternately, you can use the [[CssUrl|http://wiki.izenda.us/FAQ/Questions/Overriding-page-level-css#Report-Designer]] settings along with your own CSS files in order to achieve the same result for this page. 
 
 ```csharp
 <asp:Content ID="Content2" ContentPlaceHolderID="PlaceHolder" runat="Server">
