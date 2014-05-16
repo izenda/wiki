@@ -29,7 +29,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
 
 ##Global.asax (VB.NET)
 
-```csharp
+```visualbasic
 'main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
 Public Class CustomAdHocConfig
     Inherits Izenda.AdHoc.DatabaseAdHocConfig
