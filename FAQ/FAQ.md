@@ -32,16 +32,9 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[My control names changed when I deployed from development to production and now I can't access them.|/FAQ/Questions/Control-Names-Break-In-Production]]
 - [[Can I define my own grouping and aggregate functions in Izenda? If so, how?|http://wiki.izenda.us/FAQ/Questions/Custom-Aggregate-Functions]]
 
-###Troubleshooting
+##Database
 
-- [[Izenda Troubleshooting Tip: ReportList never loads. All other pages work fine.|FAQ/troubleshooting-report-list]]
-- [[Izenda Troubleshooting Tip: 'WCFApplication' error|FAQ/troubleshooting-wcf-application]]
-- [[Izenda Troubleshooting Tip: Transferring, Moving or Copying Report XML Manually|FAQ/moving-report-xml-manually]]
-- [[Izenda Troubleshooting Tip: Enabling CSS in PDFs and high quality PDF exports|FAQ/enabling-css-in-pdfs]]
-- [[Izenda Troubleshooting Tip: 'Operation is not valid due to the current state of the object.'|FAQ/max-http-keys]]
-- [[Izenda Troubleshooting Tip: Resolving DLL Dependency Issues|FAQ/Questions/DLL-dependency-issues]]
-- [[Why do Chart Images not Render in my Report Thumbnails?|FAQ/chart-images-not-rendering]] 
-- [[How to disable Protected Mode in Office 2010|FAQ/disable-protected-mode-office-2010]]
+- [[I'm getting SQL type errors when connecting to a MySQL database with an ODBC connection. Will this be corrected?|http://wiki.izenda.us/FAQ/Questions/SQL-Type-Errors-When-Using-ODBC-with-MySQL]]
 
 ###Report Design
 
@@ -63,6 +56,17 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How do I use Windows Active Directory for security?| FAQ/windows-active-directory-security]]
 - [[How Do I Apply Security to Scheduled Reports?|/FAQ/Questions/Applying-Security-to-Scheduled-Reports]]
 - [[How Can I Authenticate Against a Hash Sent Via Query String?|/FAQ/Questions/Authenticating-via-hash]]
+
+###Troubleshooting
+
+- [[Izenda Troubleshooting Tip: ReportList never loads. All other pages work fine.|FAQ/troubleshooting-report-list]]
+- [[Izenda Troubleshooting Tip: 'WCFApplication' error|FAQ/troubleshooting-wcf-application]]
+- [[Izenda Troubleshooting Tip: Transferring, Moving or Copying Report XML Manually|FAQ/moving-report-xml-manually]]
+- [[Izenda Troubleshooting Tip: Enabling CSS in PDFs and high quality PDF exports|FAQ/enabling-css-in-pdfs]]
+- [[Izenda Troubleshooting Tip: 'Operation is not valid due to the current state of the object.'|FAQ/max-http-keys]]
+- [[Izenda Troubleshooting Tip: Resolving DLL Dependency Issues|FAQ/Questions/DLL-dependency-issues]]
+- [[Why do Chart Images not Render in my Report Thumbnails?|FAQ/chart-images-not-rendering]] 
+- [[How to disable Protected Mode in Office 2010|FAQ/disable-protected-mode-office-2010]]
 
 ###Misc.
 
