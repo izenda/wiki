@@ -95,7 +95,7 @@ Open the website that you just created [http://localhost/reporting](http://local
 Now you are ready to start taking advantage of the opportunities in Izenda’s self-service reporting platform. Open [http://localhost/Reporting/ReportDesigner.aspx](http://localhost/Reporting/ReportDesigner.aspx) and create your first report easily!
 
 
-Select your DataSources at the first tab (‘Data Sources’). Then go to the ‘Fields’ tab and select the fields you want to use in the report. There are various options and settings like filters, operators, functions etc. Make sure to check it all out, but for your first report just selecting several fields will be enough.
+Select your DataSources at the [[Data Sources|http://wiki.izenda.us/Guides/ReportDesign/3.0-Data-sources-tab]] tab. Then go to the [[Fields|http://wiki.izenda.us/Guides/ReportDesign/4.0-fields-tab]] tab and select the fields you want to use in the report. There are various options and settings like filters, operators, functions etc. Make sure to check it all out, but for your first report just selecting several fields will be enough.
 
 
 For more information about the report designer features please read our [[user guide|FAQ/UserGuides]]
@@ -104,7 +104,7 @@ For more information about the report designer features please read our [[user g
 ![Using Izenda Reports](http://izenda.com/Reg/images/src5_designnew.png)
 
 
-####Step 5. Preview and Save report
+####Preview and Save report
 
 
 After you select all the data you want to see in report, click **Preview** and see the results immediately. Click **Save** on the tool bar to save your first report report. Categories can be created in the save menu to group reports. Categories self delete when depopulated (empty).
