@@ -78,6 +78,14 @@ Once you have IIS installed, continue with the following:
 
 ###Step 4. Set license key and database connection
 
+You can set the license key and database connection in one of two different ways, depending on how much customization you wish to have with Izenda. We will describe the two below.
+
+####InitializeReporting()
+
+The [[InitializeReporting()|http://wiki.izenda.us/FAQ/InitializeReporting]] method is the ideal place to incorporate your settings since it provides you a high level of control over which settings are applied and the scope of their application. You can learn more by learning how to [[customize Izenda settings|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]].
+
+####Settings.aspx
+
 Open the website that you just created [http://localhost/reporting](http://localhost/reporting). You will be redirected to the Settings page. Go to the Database tab and fill the License Key and Connection String fields with real data. You should have received your trial License Key via email. If you have not received a key, please contact your account manager with Izenda or [sales@izenda.com](mailto:sales@izenda.com).
 	
 ![Set license key and database connection](http://izenda.com/Reg/images/src4_settingsnew.png)
