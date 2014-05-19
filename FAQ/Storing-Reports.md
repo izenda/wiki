@@ -10,9 +10,9 @@ Izenda Reports features two methods for saving reports: file system mode and dat
 |--------|----------|
 |Slower to access saved reports |Faster to access saved reports|
 |Uses your database security features|Allows customized security implementation|
-|No reports are stored in the |Able to customize the way reports are saved and shared|
+|No data is stored on the server|Able to customize the way reports are saved and shared|
 |No default behavior changes required|Behavior implementation required|
-|Copying data between databases not easily done|Easily copy reports between servers for use and testing|
+|Copying data between databases could be troublesome|Easily copy reports between servers for use and testing|
 |Requires modifications to the Schema|Schema of database is not changed at all|
 
 ##File System Mode
