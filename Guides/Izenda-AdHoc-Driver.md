@@ -182,9 +182,8 @@ Getting data from several data source providers may take a lot of time and resou
 
 You can configure the cache yourself by using the following properties and methods:
 
-* **DataCacheExpiration:** Sets the date for cache expiration. All data in the cache older than the specified date will be cleared (removed from the cache). For example, if you want to clear all data more than two days old, you should set: ``fusionDriver.DataCacheExpiration = DateTime.Now.AddDays(-2);``
-* **CacheAllReports method:** Adds all available reports to the cache: ``fusionDriver.CacheAllReports();``
-* **CacheReport method:** Adds a single report with the specified name to the cache: ``fusionDriver.CacheReport(string reportFullName);``
+* **DataCacheExpiration:** Sets the date for cache expiration. All data in the cache older than the specified date will be cleared (removed from the cache). For example, if you want to clear all data more than two days old, you should set: ``AdHocSettings..DataCacheExpiration = DateTime.Now.AddDays(-2);``
+* **CacheReports method:** Indicates that all reports should or should not be cached: ``fusionDriver.CacheReports = true;``
 
 ###Sample use
 
