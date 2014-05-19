@@ -144,3 +144,13 @@ In order to create and save reports, your application will require the ability t
 This video demonstrates a simple install process for Izenda on Windows Server 2008 with IIS 7, connecting to SQL Server 2008 R2. (Redirects to youtube)
 
 [![IIS7 Integration Video](http://wiki.izenda.us/Integration/Tutorials/Installing-Izenda/iis7_installation.png)](https://www.youtube.com/watch?v=4E0npCxLi4o)
+
+##Installing Izenda On Systems With IIS 7.5 or higher
+
+**Process:**
+
+The process to install on systems with IIS version later than 7.0 is the same as with IIS 7.0 but with the following differences:
+
+**Permissions:**
+
+IIS 7.5 and higher, the default account is called [[ApplicationPoolIdentity|http://www.iis.net/learn/manage/configuring-security/application-pool-identities]]. You can either allow this account access as opposed to using **NETWORKSERVICE**, or you can change your **DefaultAppPool** identity to **NETWORKSERVICE**. 
