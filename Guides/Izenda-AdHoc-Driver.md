@@ -115,20 +115,26 @@ AdHocContext.Driver = fusionDriver;
 
 Now you can add connections to the data sources end points. The end point could be a direct connection to the MSSQL database or it can be an OData connection to the MSSQL or Oracle database.
 
-#####a) Adding a connection to the local MSSQL database. 
+#####a) Adding a direct and indirect database connection using the Fusion Driver:
 
-You should specify the connection nickname in first parameter, the connection type of MSSQL in the second parameter, and the connection string in the last parameter:
+You can use the standard SqlServerConnectionString to connect to your database directly and also use the FusionDriver's capabilities to connect to an indirect database connection (like OData) at the same time:
 
 ```csharp
-fusionDriver.AddConnection("SqlNW", FusionConnectionType.MsSql, "server=(local);database=Northwind;Trusted_Connection=True;");
+AdHocSettings.SqlServerConnectionString = "my_direct_connection_string";
+Izenda.Fusion.FusionDriver.AddODataConnection("OD", @"http://url_to_odata_connector.com/provider_endpoint.aspx");
 ```
 
-#####b) Adding a connection to the OData provider. 
+#####b) Adding multiple indirect data connections. 
 
-You should specify the connection nickname in first parameter, the connection type of OData in the second parameter, and the link to the OData end point in the last parameter:
+You can use the FusionDriver to add multiple indirect database connections to your Driver's context:
 
 ```csharp
-fusionDriver.AddConnection("OrclNW", FusionConnectionType.OData, "http://www.providerdomain.com/provider_endpoint.aspx"); 
+//only for direct connections
+//AdHocSettings.SqlServerConnectionString = "my_direct_connection_string";
+Izenda.Fusion.FusionDriver fd = new Izenda.Fusion.FusionDriver();
+fd.AddConnection("OD", Izenda.Fusion.FusionConnectionType.OData, @"http://url_to_odata_connector.com/provider_endpoint.aspx");
+fd.AddConnection("OD2", Izenda.Fusion.FusionConnectionType.OData, @"http://url_to_odata_2_connector.com/provider_endpoint.aspx");
+AdHocSettings.AdHocContext.Driver = fd;
 ```
 
 ####3. Set up additional settings
@@ -140,24 +146,34 @@ The Izenda Fusion Driver has several additional settings:
 This is setup the same way as for a single connection. Only data sources with the specified names will be available:
 
 ```csharp
-fusionDriver.VisibleDataSources = new string[] { "Orders", "Customers", "Order Details" };
+AdHocSettings.VisibleDataSources = new string[] { "Orders", "Customers", "Order Details" };
 ```
 
 #####b) Constraints
 
-This is setup the same as for single connection except that you are able to specify separate constraints for each connection by using connection nicknames. Note that you can use wildcard characters to set up constraints:
+This is setup the same as for single connection except that you are able to specify separate constraints for each connection by using connection aliases. Note that you can use wildcard characters to set up constraints:
+
+**Example 1:** Static context
 
 ```csharp
-fusionDriver.AddConstraint("SqlNW/Order.Id", "SqlNW/*.OrderID");
-fusionDriver.RemoveConstraint("OrclNW/Account.Id", "OrclNW/User.AccountID");
+Izenda.Fusion.FusionDriver.AddConstraintSimple("OD/Order.Id", "OD/*.OrderID");
+Izenda.Fusion.FusionDriver.RemoveConstraintSimple("OD2/Account.Id", "OD2/User.AccountID");
 ```
 
-#####c) ReportingConnectionString
-
-If reports are stored in the database you should specify connection string to that database. Note that in addition to this, you should also use FusionAdHocConfig instead of DatabaseAdHocConfig. The following example sets up the connection string to the database using the reports table. If you store reports in the file system then skip this step(use FileSystemAdHocConfig if you do this).
+**Example 2:** reference context
 
 ```csharp
-((FusionAdHocConfig)AdHocSettings.AdHocConfig).ReportingConnectionString = "server=(local);database=Reports;Trusted_Connection=True;";
+Izenda.Fusion.FusionDriver fd = new FusionDriver();
+fd.AddConstraint("OD/Order.Id", "OD/*.OrderID");
+fd.AddConstraint("OD2/Account.Id", "OD2/User.AccountID");
+```
+
+#####c) Saving Reports with Fusion
+
+If you are using DatabaseAdHocConfig and reports are stored in the database, you need to explicitly specify the connection you will use for saving reports. The following example sets up the connection string to the database that contains the reports table. If you store reports in the file system then skip this step(use FileSystemAdHocConfig if you do this).
+
+```csharp
+((DatabaseAdHocConfig)AdHocSettings.AdHocConfig).SavedReportsDriver = new MSSQLDriver("your_mssql_direct_database_connection_string");
 ```
 
 #####d) Set up cache
@@ -174,12 +190,71 @@ You can configure the cache yourself by using the following properties and metho
 
 Below is a full example of how to set up and configure the Izenda Fusion Driver with several connections and reports stored in your database:
 
+####SQL/Oracle/MySql data connection
+
+The following example describes the process for initializing a FusionDriver connection when you have direct access to a SQL/Oracle/MySQL database where you want to store your reports. This database **does not** have to be the same database you obtain your schema from. Your CustomAdHocConfig class can inherit from either [[DatabaseAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]] or [[FileSystemAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]] in this case:
+
 ```csharp
 <%@ Application Language="C#" %>
 <%@ Import Namespace="System.Data"%>
 <%@ Import Namespace="Izenda.AdHoc.Database"%>
 <%@ Import Namespace="Izenda.AdHoc" %>
 <%@ Import Namespace="System.Configuration" %>
+
+<script runat="server">
+[Serializable]
+//If SavedReportsDriver is set, you can use DatabaseAdHocConfig or FileSystemAdHocConfig
+public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig  //Izenda.AdHoc.FileSystemAdHocConfig
+{
+    public static void InitializeReporting() 
+    {
+        // Set license key. Note: "+FUSION" must be in license key
+        AdHocSettings.LicenseKey = "LICENSE KEY";
+        
+        // Set config. Note: config class must derive from FusionAdHocConfig or FileSystemAdHocConfig
+        AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+        
+        // Create Fusion driver and set it as default driver for AdHoc
+        Izenda.Fusion.FusionDriver fusionDriver = new Izenda.Fusion.FusionDriver();
+        
+        //Initialize the connections on the driver
+        fusionDriver.AddConnection("SqlNW", Izenda.Fusion.FusionConnectionType.MsSql, @"http://url_to_odata_connector.com/provider_endpoint.aspx");
+        fusionDriver.AddConnection("OrclNW", Izenda.Fusion.FusionConnectionType.Oracle, @"http://url_to_odata_connector.com/provider_endpoint.aspx");
+               
+        // Configure constraints for connections
+        fusionDriver.AddConstraint("SqlNW/Order.Id", "SqlNW/*.OrderID");
+        fusionDriver.AddConstraint("OrclNW/Account.Id", "OrclNW/User.AccountID");
+        
+        //set the Driver object
+        AdHocContext.Driver = fusionDriver;
+
+        // Clear cache
+        AdHocSettings.DataCacheExpiration = DateTime.Now;
+        
+        // Cache reports for less database load
+        AdHocSettings.CacheReports = true;
+
+        // Set connection to the database with reports table
+        ((DatabaseAdHocConfig)AdHocSettings.AdHocConfig).SavedReportsDriver = new MSSQLDriver("your_mssql_direct_database_connection_string");
+
+        // Add visible data sources
+        AdHocSettings.VisibleDataSources = new string[] { "Orders", "Customers", "Order Details" };  
+    }
+}
+</script>
+```
+
+####OData connection
+
+The following example describes the process for initializing a FusionDriver connection when you have indirect data connections, such as OData:
+
+```csharp
+<%@ Application Language="C#" %>
+<%@ Import Namespace="System.Data"%>
+<%@ Import Namespace="Izenda.AdHoc.Database"%>
+<%@ Import Namespace="Izenda.AdHoc" %>
+<%@ Import Namespace="System.Configuration" %>
+<%@ Import Namespace="Izenda.Fusion" %>
 
 <script runat="server">
 [Serializable]
@@ -193,30 +268,37 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
         // Set config. Note: config class must derive from FusionAdHocConfig or FileSystemAdHocConfig
         AdHocSettings.AdHocConfig = new CustomFusionAdHocConfig();
         
-        // Create Fusion driver and set it as default driver for AdHoc
-        FusionDriver fusionDriver = new FusionDriver();
-        AdHocContext.Driver = fusionDriver;  
-        
         // Add visible data sources
-        fusionDriver.VisibleDataSources = new string[] { "Orders", "Customers", "Order Details" };  
+        AdHocSettings.VisibleDataSources = new string[] { "Orders", "Customers", "Order Details" };  
                
+        //Add connections to the driver (static context)
+        FusionDriver.AddODataConnection("OD", FusionConnectionType.OData, @"http://your_odata_schema_url");
+        FusionDriver.AddODataConnection("OD2", FusionConnectionType.OData, @"http://your_odata2_schema_url");
+
         // Configure constraints for connections
-        fusionDriver.AddConstraint("SqlNW/Order.Id", "SqlNW/*.OrderID");
-        fusionDriver.RemoveConstraint("OrclNW/Account.Id", "OrclNW/User.AccountID");
+        FusionDriver.AddConstraintSimple("OD/Order.Id", "OD/*.OrderID");
+        FusionDriver.AddConstraintSimple("OD2/Account.Id", "OD2/User.AccountID");
         
         // Clear cache
-        fusionDriver.DataCacheExpiration = DateTime.Now;
+        AdHocSettings.DataCacheExpiration = DateTime.Now;
         
         // Add some reports to the cache
-        fusionDriver.CacheReport("Financial reports\Sales");
-        fusionDriver.CacheReport("Common reports\Employees");
+        AdHocContext.CacheReports = true;
 
-        // Set connection to the database with reports table
-        ((FusionAdHocConfig)AdHocSettings.AdHocConfig).ReportingConnectionString = "server=(local);database=ReportsDB;Trusted_Connection=True;";
+        // Set connection to the database with the reports table. You CANNOT use an OData connection as your SavedReportsDriver connection string
+        ((FusionAdHocConfig)AdHocSettings.AdHocConfig).SavedReportsDriver = new MSSQLDriver("server=(local);database=ReportsDB;Trusted_Connection=True;");
     }
 }
+</script>
+```
+
+##CustomFusionDriver
+
+You can implement your own FusionDriver class to enable more control over features and settings. Below is an example of an overridden FusionDriver:
+
+```csharp
 [Serializable]
-public class CustomFusionAdHocConfig : FusionAdHocConfig
+public class CustomFusionDriver : Izenda.Fusion.FusionDriver
 {
     public CustomFusionDriver()
     {        
@@ -235,7 +317,6 @@ public class CustomFusionAdHocConfig : FusionAdHocConfig
         return base.GetDataSet(command, reportPart);
     }
 }
-</script>
 ```
 
 ###Overriding CustomFusionDriver Methods
@@ -280,19 +361,20 @@ public override bool RemoveConstraint(string fullyQualifiedPrimaryColumn, string
 }
 ```
 
-**Note:** The **fusionConnections** property within the **FusionDriver** class is where all connections for the current driver are stored. You can iterate over the collection and ping the database with a small bit of data in order to determine if the connection string you are using is obtaining results properly.
+**Note:** The **GetAllConnections** method within the **FusionDriver** class is where all connections for the current driver are stored. You can iterate over the collection and ping the database with a small bit of data in order to determine if the connection string you are using is obtaining results properly.
 
-Here is a sample use of fusionConnections:
+Here is a code sample for using the **GetColumns** method to iterate through GetAllConnections:
 
 ```csharp
-public override Column[] GetColumns(Izenda.AdHoc.Database.Table table)
-{
-	foreach (FusionConnection fusionConnection in this.fusionConnections)
-	{
-		Column[] columns = fusionConnection.GetColumns(table);
-		if (columns.Length > 0)
-			return columns;
-	}
-	return new Column[0];
+public override Column[] GetColumns(Izenda.AdHoc.Database.Table table) {
+  //return base.GetColumns(table);
+  Column[] cols = null;
+
+  foreach (Izenda.Fusion.FusionConnection fc in this.GetAllConnections()) {
+      cols = fc.GetColumns(table);
+      if (cols.Length > 0)
+        break;
+  }
+  return cols;
 }
 ```
