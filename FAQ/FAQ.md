@@ -31,6 +31,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[I'm Getting #DIV/0 In My Report Viewer. How Can I Fix This?|FAQ/Divide By Zero]]
 - [[My control names changed when I deployed from development to production and now I can't access them.|/FAQ/Questions/Control-Names-Break-In-Production]]
 - [[Can I define my own grouping and aggregate functions in Izenda? If so, how?|http://wiki.izenda.us/FAQ/Questions/Custom-Aggregate-Functions]]
+- [[How can I set up auditing so that whenever a user accesses or exports report data, an audit is performed?|http://wiki.izenda.us/FAQ/Questions/Auditing-When-Accessing-Reports]]
 
 ##Database
 
