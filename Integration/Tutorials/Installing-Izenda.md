@@ -154,3 +154,17 @@ The process to install on systems with IIS version later than 7.0 is the same as
 **Permissions:**
 
 IIS 7.5 and higher, the default account is called [[ApplicationPoolIdentity|http://www.iis.net/learn/manage/configuring-security/application-pool-identities]]. You can either allow this account access as opposed to using **NETWORKSERVICE**, or you can change your **DefaultAppPool** identity to **NETWORKSERVICE**. 
+
+**Troubleshooting:**
+
+IIS Management Console: If you cannot find the IIS Management Console, you may need to turn it on. Follow the steps below to turn this feature on.
+
+* Open **Control Panel**
+* Click the "View By" dropdown and select **Category**
+* Click **Programs**
+* Click **Turn Windows features on or off**
+* Expand the **Internet Information Services** tree
+* Expand the **Web Management Tools** tree
+* Check the **IIS Management Console** checkbox
+* Wait for the system to find and install the required files
+* Start using the Internet Information Services (IIS) Manager
