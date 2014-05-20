@@ -4,7 +4,7 @@
 
 ##Question
 
-Can I inject SQL "Where Clause" or other expressions into a query or queries?
+Can I inject a customized SQL "Where Clause" or other expression into my queries?
 
 ##Answer
 
