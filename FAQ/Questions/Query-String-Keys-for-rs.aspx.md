@@ -1,4 +1,12 @@
-**Query String Keys for rs.aspx**
+#Query String Keys for rs.aspx
+
+[[_TOC_]]
+
+##Question
+
+What are the different parameters I can pass to the rs.aspx page in the query string, and what do they do?
+
+##Answer
 
 This is the current list of useful rs.aspx query string keys:
 
