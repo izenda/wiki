@@ -4,51 +4,47 @@
 
 ##Izenda Reports Scheduler Setup Instructions
 
-It is recommended that you perform these installation steps on the Web Server on which Izenda Reports is installed.
+First, a little background about how the scheduler works. The scheduler requires the use of the Izenda Scheduler executable that is found in the root of the directory you installed Izenda Reports in. You then need to add a scheduled task to your system that runs every minute. The task uses the Izenda Scheduler to access a page in the application that determines if any reports need to go out. The Izenda Scheduler executable does not actually send out the files or access anything else except for the specific page in the reporting application that you give the .exe file as a parameter.
 
-First, we must allow the schedule controls to be shown in the Report Designer page. This can be done in one of two ways.
+Here are the steps to install the Izenda Scheduler. It is recommended that you perform these installation steps on the Web Server on which Izenda Reports is installed.
+
+1. Click the **Start** button in Windows Server
+2. Click on the **Control Panel** menu option
+3. The **Control Panel** will then expand and show a larger menu. Find the menu option **Scheduled Tasks** and click on it
+4. After it expands click **Add Scheduled Task**.
+5. The **Scheduled Task Wizard** will start. Click **Next**
+6. Select the Izenda scheduler program by clicking **Browse** 
+7. Browse to the folder that you installed Izenda Reports in and select the Izenda scheduler program ( **IzendaScheduler.exe** ) 
+8. Enter a name for the scheduled task and select the frequency. Click **Next**
+9. Set the start time and start date and click **Next**
+10. Enter the user name and password of a user with administrative rights and click **Next**
+11. Check the **Open Advanced Properties for this Task...** checkbox
+12. Click **Finish**
+13. Now we need to add the proper command line parameter into the **Run** box. This will be the path to the rs.aspx page. (ex: **http://yourhost/yourapp/rs.aspx** ) 
+* Click **Apply** and then Click **Ok**
+
+Now that you have setup the scheduler, we will need to setup Izenda Reports. There are two ways to do this. We recommend using the [[InitializeReporting()|/FAQ/InitializeReporting]] method in your CustomAdHocConfig class to do this, but you may also use the settings.aspx page included with our demo to create a config file that will take the place of any settings in code.
+
+Next, we must allow the schedule controls to be shown in the Report Designer page. This can be done in one of two ways.
 
 **Via Settings.aspx**
 
-* Navigate to the Izenda Reports settings.aspx page (e.g. http://yourhost/yourapp/settings.aspx)
-* Click the "Email & Scheduling" tab
-* Check the box next to "Show Schedule Controls"
-* Click "Save to Izenda.Config" in the upper left-hand corner
+1. Navigate to the Izenda Reports settings.aspx page (e.g. http://yourhost/yourapp/settings.aspx)
+2. Click the "Email & Scheduling" tab
+3. Check the box next to "Show Schedule Controls"
+4. Click "Save to Izenda.Config" in the upper left-hand corner
 
 **Via Code**
 
-* Open your global.asax file in your IDE/favorite text editor
-* Look for the [[InitializeReporting|/FAQ/InitializeReporting]] method
-* Add the following line of code into the method
+1. Open your global.asax file in your IDE/favorite text editor
+2. Look for the [[InitializeReporting|/FAQ/InitializeReporting]] method
+3. Add the following line of code into the method
 
 ```csharp
 Izenda.AdHoc.AdHocSettings.ShowScheduleControls = true;
 ```
 
 The schedule controls will now be shown in the report designer under the [[Misc tab|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab]].
-
-Next, a little background about how the scheduler works. The scheduler requires the use of the Izenda Scheduler executable that is found in the root of the directory you installed Izenda Reports in. You then need to add a scheduled task to your system that runs every minute. The task uses the Izenda Scheduler to access a page in the application that determines if any reports need to go out. The Izenda Scheduler executable does not actually send out the files or access anything else except for the specific page in our application that you give the .exe file as a parameter.
-
-You must follow the steps below or the reports will not be e-mailed.
-
-Click the "Start" button in Windows Server, then click on the"Control Panel" menu option, the "Control Panel" will then expand and show a larger menu, Find the menu option "Scheduled Tasks" and click on it, after it expands click "Add Scheduled Task", the "Scheduled Task Wizard" will start. The screen shots and captions below demonstrate how to enable the Izenda scheduler.
-
-* Click on the Windows "Start Menu" and open the "Control Panel" 
-* Click on the "Scheduled Tasks" menu option 
-* Click "Add Scheduled Task" 
-* The "Add Scheduled Task" wizard will start. Click "Next" 
-* Select the Izenda scheduler program by clicking "Browse" 
-* Browse to the folder to which you installed Izenda Reports and select the Izenda scheduler program ( IzendaScheduler.exe ) 
-* Enter a name for the scheduled task and select the frequency 
-* Set the start time and start date 
-* Enter the user name and password of a user with administrative rights and Click "Next" 
-* Check "Open Advanced Properties for this Task..." 
-* Click "Finish" 
-* Now we need to add the proper command line parameter into the "Run" box as indicated by the arrow. 
-* IzendaScheduler.exe takes the path to the rs.aspx page as a parameter (ex: http://yourhost/yourapp/rs.aspx ) 
-* Click "Apply" and then Click "Ok"
-
-Now that you have setup the scheduler, we will need to setup Izenda Reports. There are two ways to do this. We recommend using the [[InitializeReporting()|/FAQ/InitializeReporting]] method in your CustomAdHocConfig class to do this, but you may also use the settings.aspx page included with our demo to create a config file that will take the place of any settings in code.
 
 ##Setup using the Settings.aspx page
 
