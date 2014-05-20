@@ -1,6 +1,8 @@
+#Toolbar Buttons
+
 [[_TOC_]]
 
-#Report Viewer 
+##Report Viewer Buttons
 
 All buttons in the Report Viewer are implemented in pure HTML. They all can be manipulated from Resources/html/ReportViewer-Body.ascx. To completely disable any button, simply remove it from the ascx file. If you wish to conditionally suppress a button, you can write conditional logic in your ascx to hide it based on your own custom logic.
 
