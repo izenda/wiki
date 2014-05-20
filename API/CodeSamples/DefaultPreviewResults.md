@@ -4,7 +4,7 @@
 
 ##About
 
-This changes the default number of results (records) shown in the report designer preview tab. Izenda does not recommend setting this to a large number such as 5000 or larger as the html report will take a long time to generate. When exporting, all results will always be exported. Web browsers can become slow or stop completely when reports with hundreds of thousands of lines are generated, so keep this in mind when changing this setting. Ideally, this should be set to a power of 10 (1, 10, 100, 1000, etc). 
+This changes the default number of results (records) shown in the report designer preview tab. Izenda does not recommend setting this to a large number such as 5000 or larger as the html report will take a long time to generate. When exporting, all results will always be exported. Web browsers can become slow or stop completely when reports with hundreds of thousands of lines are generated, so keep this in mind when changing this setting. Ideally, this should be set to a power of 10 (1, 10, 100, 1000, etc). This will not affect the [[Report Viewer|http://wiki.izenda.us/API/CodeSamples/ReportViewerDefaultPreviewResults]] results.
 
 ##Global.asax (C♯)
 
