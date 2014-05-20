@@ -1,8 +1,16 @@
 #Izenda and UDFs (User Defined Functions)
 
-## How do I utilize a complex UDF from my database within Izenda?
+[[_TOC_]]
 
-**1) Create the UDF in the database that performs your calculation:**
+##Question
+
+How do I utilize a complex UDF from my database within Izenda?
+
+##Answer
+
+Here is a step-by-step tutorial on how to use UDFs from your database in Izenda.
+
+**1)** Create the UDF in the database that performs your calculation:
 
 **EXAMPLE UDF:**
 
@@ -27,7 +35,7 @@ begin
 end;
 ```
 
-**2) Add this function to Izenda:**
+**2)** Add this function to your [[CustomAdHocConfig|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]]:
 ``AdHocSettings.ExtendedFunctions = new string[] { "[dbo].[SafeDivide]" };``
 
 **3a) You can now choose this function in the 'Fields' tab function drop down for any column. (Functions, as the one above, with more than one input parameter cannot be chosen for a single column in the functions drop-down and must be implemented as an expression.)**
