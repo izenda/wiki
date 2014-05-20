@@ -63,6 +63,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How Do I Use a Blank Column in My Exports?|Guides/Blank-Column-in-Export]]
 - [[How Do I Display Filter Names in My Reports?|http://wiki.izenda.us/Guides/ReportDesign/5.0-Filters-tab#5.6-Other-Filter-Features]]
 - [[How Do I Hide the Report List Button On the Report Viewer?|http://wiki.izenda.us/FAQ/Questions/Hiding-report-list-button]]
+- [[Can I change the report title dynamically?|http://wiki.izenda.us/FAQ/Questions/Dynamically-change-report-title]]
 
 ##Security
 
