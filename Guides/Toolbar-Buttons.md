@@ -1,4 +1,4 @@
-#Toolbar Buttons
+#Toolbar Buttons & Tabs Settings
 
 [[_TOC_]]
 
