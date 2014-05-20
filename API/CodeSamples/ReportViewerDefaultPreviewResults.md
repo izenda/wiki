@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the default number of results in the Report Viewer for all reports. Izenda does not recommend setting this to a large number such as 5000 or larger as the html report will take a long time to generate. If you would like to view all the data, we recommend exporting the report. This will always provide the entire report.
+Gets or sets the default number of results in the Report Viewer for all reports. Izenda does not recommend setting this to a large number such as 5000 or larger as the html report will take a long time to generate. If you would like to view all the data, we recommend exporting the report. This will always provide the entire report. This will not affect the [[Preview tab|http://wiki.izenda.us/API/CodeSamples/DefaultPreviewResults]] on the Report Designer.
 
 ##Global.asax (C♯)
 
