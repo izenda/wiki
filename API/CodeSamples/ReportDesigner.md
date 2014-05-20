@@ -40,7 +40,7 @@ And here is a list of button keys for reference:
 * EMailClientButton
 * AdminButton
 
-Similarly, this could be accomplished by calling the following from global.asax:
+Alternately, this could be accomplished by calling the following from global.asax:
 
 ```csharp
     string currentReportName = Request.QueryString["rn"];
@@ -49,6 +49,8 @@ Similarly, this could be accomplished by calling the following from global.asax:
 ```
 
 This would hide both the **Save** and **Save As...** toolbar buttons and is more reliable, as it does not deal with specific string literals.
+
+See [[this resource|http://wiki.izenda.us/FAQ/Hiding-Buttons-and-Tabs#Report-Designer-Buttons]] for a list of all the settings in the AdHocSettings class you can use to modify the toolbar items.
 
 ##Override Page Level CSS
 
