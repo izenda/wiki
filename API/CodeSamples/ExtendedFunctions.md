@@ -1,5 +1,9 @@
 #ExtendedFunctions
 
+[[_TOC_]]
+
+##About
+
 This list allows the user specify additional SQL functions that should be included in the functions dropdown of the Fields tab. 
 
 Below is a sample global.asax using the ExtendedFunctions setting. The code block will appear within ``<script runat="server"> </script>`` tags within global.asax.
