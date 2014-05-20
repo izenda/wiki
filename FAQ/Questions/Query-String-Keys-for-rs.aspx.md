@@ -9,7 +9,9 @@ This is the name specified for the report (e.g. a report named Cost Analysis wou
 This will generate the desired export of the tabular data in the report (e.g. rs.aspx?rn=Cost+Analysis&output=pdf)
 
 **run_scheduled_reports=[Minutes]**
-Schedules a report to run in the Windows Scheduler after a certain period of time
+Adds the report to the [[Izenda Scheduler|http://wiki.izenda.us/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler]] to be run after the designated period of time (e.g. rs.aspx?rn=Cost+Analysis&run_scheduled_reports=30)
+
+_**Note:** The Izenda Scheduler must be configured in order for this parameter to have any effect._
 
 **reportonly=[0 or 1]**
 Specifies whether the returned report will contain styling and scripts (0 indicates no styling or scripts are to be used)
