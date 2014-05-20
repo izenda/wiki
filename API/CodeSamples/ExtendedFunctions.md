@@ -49,4 +49,4 @@ End Class
 
 ##Examples
 
-* [[ExtendedFunctions to use UDFs (User-Defined Functions)|/FAQ/izenda-and-udfs]] (User Defined Functions).
+* [[ExtendedFunctions to use UDFs (User-Defined Functions)|/FAQ/izenda-and-udfs]].
