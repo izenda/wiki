@@ -1,5 +1,7 @@
 #Integrating Izenda
 
+[[_TOC_]]
+
 ##Question
 
 Can I embed Izenda Reports into my application?
