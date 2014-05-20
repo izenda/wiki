@@ -47,3 +47,7 @@ Public Class CustomAdHocConfig
 
 End Class
 ```
+
+##License Key Errors
+
+License key errors are caused by a license key expiring, using an incorrect license key, or by having no license key. These errors will persist and until they are manually corrected. They cannot be handled via code.
