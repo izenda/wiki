@@ -57,8 +57,8 @@ End Class
 ``AdHocSettings.AllowDomainJoin = true``
 
 ``
-![]()
+![](/API/CodeSamples/AllowDomainJoin/domain_join_true.png)
 
 ``AdHocSettings.AllowDomainJoin = false``
 
-![]()
+![](/API/CodeSamples/AllowDomainJoin/domain_join_false.png)
