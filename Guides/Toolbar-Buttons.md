@@ -4,11 +4,12 @@
 
 All buttons in the Report Viewer are implemented in pure HTML. They all can be manipulated from Resources/html/ReportViewer-Body.ascx. To completely disable any button, simply remove it from the ascx file. If you wish to conditionally suppress a button, you can write conditional logic in your ascx to hide it based on your own custom logic.
 
-##Report List Button 
+**Report List Button**
 
 ![Report List Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/report-list.png)
 
-The report list button is used to jump right into the report list. This is the code within the ReportViewer-Body.ascx that renders this button:
+The report list button is used to jump right into the report list. This is the code within the ReportViewer-Body.ascx that renders this button: 
+
 ```html
 <a class="btn" id="rlhref" href="ReportList.aspx" lang-title="js_Reportlist" title="Report list">
   <img class="icon" src="rs.aspx?image=ModernImages.report-list.png" lang-alt="js_Reportlist" alt="Report list" />
@@ -16,7 +17,7 @@ The report list button is used to jump right into the report list. This is the c
 </a>
 ```
 
-##Save Options
+**Save Options**
 
 ![Save Options](http://wiki.izenda.us/Guides/Toolbar-Buttons/save-options.png)
 
@@ -33,7 +34,7 @@ Clicking the downward facing triangle next to the save icon will reveal further 
 </button>
 ```
 
-###Save
+**Save**
 
 ![Save Options Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/save-32.png)
  
@@ -47,11 +48,11 @@ The save button simply saves the current report.
 </a></li>
 ```
 
-###Save As
+**Save As**
 
 ![Save As Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/save-as-32.png)
 
-This button allows a user to save the current report with a specific name. 
+This button allows a user to save the current report with a specific name, and optionally, a report category.
 
 ```html 
 <li><a href="javascript:void(0)" onclick="javascript:ShowSaveAsDialog();">
@@ -62,7 +63,7 @@ This button allows a user to save the current report with a specific name.
 
 ```
 
-##Print Options
+**Print Options**
 
 ![Print Options Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/print-options.png)
 
@@ -79,7 +80,7 @@ Clicking the downward facing triangle next to the print icon will reveal further
 </button>
 ```
 
-###HTML Print
+**HTML Print**
 
 ![HTML Print Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/html-print.png)
 
@@ -93,7 +94,7 @@ This button allows for direct printing of a report from the browser.
 </a></li>
 ```
 
-###PDF Print
+**PDF Print**
 
 ![PDF Print Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/pdf-print.png)
 
@@ -107,7 +108,7 @@ This button allows for printing of a report as a PDF file.
 </a></li>
 ```
 
-##Exports Button
+**Exports Button**
 
 ![Exports Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/exports2.png)
 
@@ -124,7 +125,7 @@ Clicking the downward facing triangle next to the Exports icon will reveal furth
 </button>
 ```
 
-###Excel Button
+**Excel Button**
 
 ![Excel Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/excel.png)
 
@@ -138,7 +139,7 @@ Clicking this causes the current report to be exported as an excel document.
 </a></li>
 ```
 
-###Word Button
+**Word Button**
 
 ![Word Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/word.png)
 
@@ -152,7 +153,7 @@ Clicking this causes the current report to be exported as a word document.
 </a></li>
 ```
 
-###CSV Button
+**CSV Button**
 
 ![CSV Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/csv.png)
 
@@ -166,7 +167,7 @@ Clicking this causes the current report to be exported in CSV format.
 </a></li>
 ```
 
-###XML Button
+**XML Button**
 
 ![XML Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/xml.png)
 
@@ -180,7 +181,7 @@ Clicking this causes the current report to be exported in XML format.
 </a></li>
 ```
 
-###RTF Button
+**RTF Button**
 
 ![RTF Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/rtf.png)
 
@@ -195,7 +196,7 @@ Clicking this causes the current report to be exported in RTF format.
 </li>
 ```
 
-##Send Button
+**Send Button**
 
 ![Send Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/send.png)
 
@@ -210,7 +211,7 @@ Clicking this will send the current report via email.
 </div>  
 ```
 
-##Results Per Page Button
+**Results Per Page Button**
 
 ![Results Per Page Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/results.png)
 
@@ -265,7 +266,7 @@ The following is the code for the 5 record options provided by default.
 </ul>
 ```
 
-##Open in Designer Button
+**Open in Designer Button**
 
 ![Results Per Page Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/designer.png)
 
@@ -280,13 +281,11 @@ This button allows a user to open the current report in the Report Designer.
 </div>  
 ```
 
-#Report Designer
+##Report Designer Buttons
 
-Buttons and tabs in the Report Designer are controlled from within the core product. Manipulating these buttons and tabs requires the use of properties within the Global.asax.
+Buttons in the Report Designer are controlled from within the core product in your CustomAdHocConfig class. Manipulating these buttons requires the use of properties within the Global.asax. Review [[this article|http://wiki.izenda.us/FAQ/Hiding-Buttons-and-Tabs#Report-Designer-Buttons]] for working with the report designer buttons. To simply see what these buttons look like on the Report Designer, continue to scroll down.
 
-##Buttons
-
-###Report List
+**Report List**
 
 ![Report List Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/reportlist.png)
 
@@ -296,7 +295,7 @@ The report list button is used to jump right into the report list. To disable th
 AdHocSettings.ReportList = "";
 ```
 
-###New
+**New**
 
 ![New Report Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/new.png)
 
@@ -306,7 +305,7 @@ The New Report button begins designing a report from the beginning. To disable t
 AdHocSettings.ShowNewButtons = false;
 ```
 
-###Save
+**Save**
 
 ![Save Report Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/savedesigner.png)
 
@@ -316,7 +315,7 @@ The Save Report button saves the report you are currently designing. To disable 
 AdHocSettings.ShowSaveControls = false;
 ```
 
-###Save As
+**Save As**
 
 ![Save Report As Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/saveAsDesigner.png)
 
@@ -326,7 +325,7 @@ The Save Report As button allows the user to save the report they'll currently w
 AdHocSettings.ShowSaveAsToolbarButton = false;
 ```
 
-###PDF Print
+**PDF Print**
 
 ![PDF Print Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/pdfDesigner.png)
 
@@ -335,13 +334,13 @@ The PDF Print button will export a PDF version of the report being designed. To 
 ```csharp
 AdHocSettings.ShowPDFButton = false;
 ```
-###HTML Print
+**HTML Print**
 
 ![HTML Print Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/htmlPrint.png)
 
 The HTML Print button allows a user to print the current report being designed. 
 
-###Show SQL
+**Show SQL**
 
 ![Show SQL Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/sql.gif)
 
@@ -351,7 +350,7 @@ The SQL button shows the generated SQL for the report being designed. To disable
 AdHocSettings.ShowSqlOutputIcon = false;
 ```
 
-###CSV
+**CSV**
 
 ![CSV Export Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/csvDesigner.gif)
 
@@ -361,7 +360,7 @@ THE CSV Export button causes the report being designed to be exported in csv for
 AdHocSettings.ShowCSVButton = false;
 ```
 
-###Excel
+**Excel**
 
 ![Excel Export Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/excelDesigner.gif)
 
@@ -371,7 +370,7 @@ The Excel Export button causes the report being designed to be exported in excel
 AdHocSettings.ShowXLSButton = false;
 ```
 
-###Word
+**Word**
 
 ![Doc Export Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/wordDesigner.gif)
 
@@ -381,13 +380,13 @@ The Doc Export button exports the report being designed in a .doc(MS Word) forma
 AdHocSettings.ShowDOCButton = false;
 ```
 
-###XML
+**XML**
 
 ![XML Export Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/xmlDesigner.gif)
 
 The XML export button exports the report being designed as a .xml file.
 
-###RTF
+**RTF**
 
 ![RTF Export Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/rtfDesigner.gif)
 
@@ -397,7 +396,7 @@ The RTF export button exports the report being designed as a .rtf file. To disab
 AdHocSettings.ShowRTFButton = false;
 ```
 
-###Email
+**Email**
 
 ![Email Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/email.gif)
 
@@ -407,7 +406,7 @@ The email button allows the user to email the current report. To disable it, set
 AdHocSettings.ShowClientEmailButton = false;
 ```
 
-###Settings
+**Settings**
 
 ![Settings Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/settings.gif)
 
@@ -417,13 +416,13 @@ The settings button takes the user to the Settings.aspx page. To disable it, set
 AdHocSettings.ShowSettingsButton = false;
 ```
 
-###Results
+**Results**
 
 ![Results Per Page Dropdown](http://wiki.izenda.us/Guides/Toolbar-Buttons/resultsDesigner.png)
 
 The Results dropdown allows the user to select how many records to display.
 
-###Hide Help
+**Hide Help**
 
 ![Show/Hide Help Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/help.gif)
 
@@ -433,9 +432,11 @@ The Hide Help button toggles the side help panel.TO disable it, set ShowHelpButt
 AdHocSettings.ShowHelpButton = false;
 ```
 
-##Tabs
+##Report Designer Tabs
  
-###Data Sources
+Tabs in the Report Designer are also controlled from within the core product in your CustomAdHocConfig class. Manipulating these tabs requires the use of properties within the Global.asax. You can review [[this article|http://wiki.izenda.us/FAQ/Hiding-Buttons-and-Tabs#Report-Designer-Tabs]] for concise information on manipulating these tabs, or you can get a detailed view by scrolling down.
+
+**Data Sources**
 
 ![Data Sources Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/dstab.png)
 
@@ -445,7 +446,7 @@ The Data Sources tabs allow report designers to add/remove data sources for a re
 AdHocSettings.ShowDataSourcesTab = false;
 ```
 
-###Fields 
+**Fields**
 
 ![Fields Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/fields.png)
 
@@ -455,7 +456,7 @@ The fields tab allows the user to add or modify the fields reported on in a repo
 AdHocSettings.ShowFieldsTab = false;
 ```
 
-###Summary
+**Summary**
 
 ![Summary Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/summary.png)
 
@@ -465,7 +466,7 @@ The summary tab allows the user to add or modify a summary section in a report t
 AdHocSettings.ShowSummaryTab = false;
 ```
 
-###Chart
+**Chart**
 
 ![Chart Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/chart.png)
 ![Chart2 Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/chart2.png)
@@ -476,7 +477,7 @@ The chart tab allows the user to add or modify trend, pie, plot, and bar charts 
 AdHocSettings.ShowChartTab = false;
 ```
 
-###Gauge
+**Gauge**
 
 ![Gauge Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/gauge.png)
 
@@ -486,7 +487,7 @@ The gauges tab allows the user to add or modify gauges used in a report through 
 AdHocSettings.ShowGaugeTab = false;
 ```
 
-###Map
+**Map**
 
 ![Map Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/map.png)
 
@@ -496,7 +497,7 @@ The map tab allows the user to add or modify a map to be used in a report throug
 AdHocSettings.ShowMapTab = false;
 ```
 
-###Misc
+**Misc**
 
 ![Misc Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/misc.png)
 
@@ -506,7 +507,7 @@ The misc tab allows the user to set the title, description, header, footer, repo
 AdHocSettings.ShowMiscTab = false;
 ```
 
-###Style
+**Style**
 
 ![Style Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/style.png)
 
@@ -516,7 +517,7 @@ The style tab allows the user to modify the report colors, print options, visual
 AdHocSettings.ShowStyleTab = false;
 ```
 
-###Filters
+**Filters**
 
 ![Filters Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/filters.png)
 
@@ -526,7 +527,7 @@ The filters tab allows the user to add or modify filters used on report data thr
 AdHocSettings.ShowFiltersTab = false;
 ```
 
-###Preview
+**Preview**
 
 ![Preview Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/preview.png)
 
