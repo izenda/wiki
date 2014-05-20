@@ -1,6 +1,6 @@
 #ExtendedFunctions
 
-This list allows the user specify additional SQL functions that should be included in the functions dropdown of the Fields tab. [[Learn more about UDFs|/FAQ/izenda-and-udfs]] (User Defined Functions).
+This list allows the user specify additional SQL functions that should be included in the functions dropdown of the Fields tab. 
 
 Below is a sample global.asax using the ExtendedFunctions setting. The code block will appear within ``<script runat="server"> </script>`` tags within global.asax.
 
@@ -46,3 +46,7 @@ Public Class CustomAdHocConfig
     End Sub
 End Class
 ```
+
+##Examples
+
+* [[ExtendedFunctions to use UDFs (User-Defined Functions)|/FAQ/izenda-and-udfs]] (User Defined Functions).
