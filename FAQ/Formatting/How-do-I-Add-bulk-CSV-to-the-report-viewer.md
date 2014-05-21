@@ -55,3 +55,5 @@ If you want to test the bulk CSV export option to see if it's correct for you, f
 * Open a larger report in the Report Viewer
 * Append the string "&output=bulkcsv" onto the URL (e.g. http://www.izenda.com/bi/ReportViewer.aspx?rn=Budget&output=bulkcsv)
 * Press enter to export the report as a bulk csv file
+
+_**Note:** The total amount of records that will be exported via the bulk CSV option will still be limited by the [[ExportLimit|/API/CodeSamples/ExportLimit]] setting._
