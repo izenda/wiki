@@ -50,6 +50,8 @@ The string keys which are available are listed [[in this article|/FAQ/Formatting
 
 The Bulk CSV option is for exporting large amounts of data and is inherently dependent on your server's ability to process the data. If you are getting an **Out of memory exception**, the bulk CSV option may not be right for your application. 
 
+If you are getting a **504 Gateway Time-out** error, you may need to set the [[SqlCommandTimeout]] setting to a higher value to allow for larger exports.
+
 If you want to test the bulk CSV export option to see if it's correct for you, follow the steps below.
 
 * Open a larger report in the Report Viewer
