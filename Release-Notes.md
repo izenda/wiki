@@ -1,4 +1,20 @@
 [[_TOC_]]
+# 6.7.0.267 (May 29, 2014)
+* FB-14037: Prevent throwing exception when same name is found several times in the AdHocSettings.VisibleDataSources collection.
+* FB-13954: Fix issue with reports storage in the DB after invalidating reports cache.
+* FB-13941: Fixed erroneous brackets removal from field description when they are specified in field alias.
+* FB-13713: Made fields/filters against HiddenColumns invisible in reportViewer.
+* FB-13946: Fix filters inheritance in sub-reports when filters on calculated columns are used
+* FB-13967: Removed unused button for toolbar
+* FB-13950: Ensured that all connections which are opened in DLL are always reliably closed after usage
+* FB-13950: Ensured that each reader uses individual connection object, and that that connection is closed after reader is closed
+* FB-13950: Removed unnecessary connection closings
+* FB-13950: Ensuring that every datareader closes connection when it finishes work
+* FB-13950: Enclosed all datareaders in using()
+* FB-13950: Fix of System.Exception: ReportName property unknown. and System.Exception: ReportCategory property unknown errors
+* FB-13857: Fixed high charts with '%' value format
+* FB-13947: Implement drill-down reports in HTML Bar Charts.
+* FB-13938: Fixed stored procedures serialization/deserialization error
 
 # 6.7.0.266 (May 7, 2014)
 * FB-13933: API error level logging implemented
