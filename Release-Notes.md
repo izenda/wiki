@@ -1,5 +1,34 @@
 [[_TOC_]]
 # 6.7.0.267 (May 29, 2014)
+* FB-14236: Fixed cascade filters update when filter values are changing rapidly
+* FB-14215: Fixed error after filter removal when filter logic is used
+* FB-13986: Fix color setting (#RRGGBB) for gauges
+* FB-14148: Fixed numerous issues with HTML Charts exporting and Viewing
+* FB-14108: Do not include HTML tags in CSV export
+* FB-13539: Implemented Auto 'Group' support for all other aggregate functions also
+* FB-14121: Preview container now appear only on Preview tab in report designer
+* FB-14118: Fixed CSV export failure when data contains double quotes
+* FB-13766: Enable datepicker for non-English cultures
+* FB-13765: Fix rounding in the Animated Half Circle Gauges.
+* FB-14144: Prevented erroneous grouping by fields from expression if no aggregation is involved in report
+* FB-13600: Made fields with expression not affect grouping
+* FB-14121: Enable caching of visualization files
+* FB-14140: Fix Chart appearance on 'hover' when master report is not saved
+* FB-13539: Made fields from expressions automatically added to group by clause if needed.
+* FB-14046: Properly apply Drill-Down filter if both master report and sub report have Between filter on the same field as a Drill-Down Key
+* FB-13557: Made bulk csv output generator to stream date from DB to client
+* FB-13889: Switched CacheReports default value to true
+* FB-13762: Fix formatting when VG, Pagination and Subtotals are used at the same time
+* FB-14113: Do not show 'null' for empty regions on the Map if hover sub-report is used
+* FB-14108: Do not include HTML tags in CSV export.
+* FB-13978: Loggers conflict fixed
+* FB-13889: Optimized reports table existence checks
+* FB-13372: Disable "Show Legend" check-box if Separator is not selected
+* FB-13971: Respect "Records" value when calculating subtotals
+* FB-13762: Fix formatting when pagination is used with VG
+* FB-14062: Fix Tennessee short name on the USA map
+* FB-13940: Do not copy embedded resources in the Scheduler output
+* FB-13834 Allow to use multiple-value filters for storage procedure fields
 * FB-14037: Prevent throwing exception when same name is found several times in the AdHocSettings.VisibleDataSources collection.
 * FB-13954: Fix issue with reports storage in the DB after invalidating reports cache.
 * FB-13941: Fixed erroneous brackets removal from field description when they are specified in field alias.
