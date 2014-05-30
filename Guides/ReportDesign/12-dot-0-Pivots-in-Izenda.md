@@ -8,9 +8,9 @@ The Izenda reports Pivot feature allows users to generate analytical data grids 
 
 Below is an example of the Design and Output of a standard Pivot View of the Average Amount Spent on Freight. 
 
-![]()
+![](/Guides/ReportDesign/12-dot-0-Pivots-in-Izenda/pivots_section.png)
 
-![]()
+![](/Guides/ReportDesign/12-dot-0-Pivots-in-Izenda/pivot_results_1.png)
 
 ##12.1 Create a Simple Pivot Report
 
@@ -19,7 +19,7 @@ Below is an example of the Design and Output of a standard Pivot View of the Ave
 
 Before Pivot: 
 
-![]()
+![](/Guides/ReportDesign/12-dot-0-Pivots-in-Izenda/ship_column_field_example.png)
 
 Create pivot view on above report:
 
@@ -30,17 +30,17 @@ Create pivot view on above report:
 5. Click Preview
 After Pivot: 
 
-![]()
+![](/Guides/ReportDesign/12-dot-0-Pivots-in-Izenda/pivots_section.png)
 
 Essentially, the pivot capability adds additional columns based on the data to the right of the report. In this example, the first column is essentially a standard report and the 2010, 2011, 2012 columns were added by the pivot capability.
 
 Standard Report View:
 
-![]()
+![](/Guides/ReportDesign/12-dot-0-Pivots-in-Izenda/pivot_results_2.png)
 
 Columns added by Pivot:
 
-![]()
+![](/Guides/ReportDesign/12-dot-0-Pivots-in-Izenda/pivot_results_3.png)
 
 ##12.2 Create an Advanced Pivot Report 
 
@@ -50,7 +50,7 @@ In this report, we want to show the Top 5 companies that accounted for the most 
 
 Here is what the design screen would look like for this report. 
 
-![]()
+![](/Guides/ReportDesign/12-dot-0-Pivots-in-Izenda/pivot_example_1.png)
 
 Here's how we add the non-pivot fields.  
 
@@ -68,7 +68,7 @@ The final step is to add the filter to make it calculate the results from only 2
 
 Finally, here are the results of the report with Pivot: 
 
-[[_TOC_]]
+![](/Guides/ReportDesign/12-dot-0-Pivots-in-Izenda/pivot_group_year_&_mn.png)
 
 To make the report more consumable, you might also want to add highlighting to show the months with lows values. 
 
@@ -76,9 +76,9 @@ For this, click on the [[Advanced Field Settings icon|http://wiki.izenda.us/Guid
 
 Then, set the Cell Highlight to 0 to 50: Red.
 
-![]()
+![](/Guides/ReportDesign/12-dot-0-Pivots-in-Izenda/advanced_pivots_box.png)
 
 Here is the result: 
 
-![]()
+![](/Guides/ReportDesign/12-dot-0-Pivots-in-Izenda/pivot_with_highlighting.png)
 
