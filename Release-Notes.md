@@ -1,5 +1,6 @@
 [[_TOC_]]
 # 6.7.0.267 (Pending)
+* FB-14250: Fixed CROSS join
 * FB-14236: Fixed cascade filters update when filter values are changing rapidly
 * FB-14215: Fixed error after filter removal when filter logic is used
 * FB-13986: Fix color setting (#RRGGBB) for gauges
