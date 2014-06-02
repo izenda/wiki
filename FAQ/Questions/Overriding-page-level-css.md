@@ -68,7 +68,49 @@ To use custom CSS for the Report List page, you can use the method described abo
 
 The CSS classes you will have to override will also be different than the ReportViewer page CSS classes. Here are some examples of classes that can be overridden.
 
+###Pre version 6.7
+
+Before version 6.7, the HTML element styles were hard-coded into the application, but could be overridden by placing a style tag into the page right after the end of the form. Here is a code sample.
+
 ```css
+<uc1:Header ID="Header1" runat="server" />
+<form id="Form1" method="post" runat="server">
+<cc1:ReportList runat="server" id="reportList"></cc1:ReportList>
+</form>
+<style type='text/css'>
+		                
+A:link {font-family: Verdana, Geneva, Arial, Helvetica;}
+A:visited {font-family: Verdana, Geneva, Arial, Helvetica;}
+A:active {font-family: Verdana, Geneva, Arial, Helvetica;}
+A:hover {font-family: Verdana, Geneva, Arial, Helvetica;}
+		                
+table.ReportsListTable
+{
+    border-color:white;
+    border-style:solid;
+    border-width:2px;			
+    font-family: Verdana, Geneva, Arial, Helvetica;
+}
+table.ReportsListTable tr
+{
+    background-color:red;
+}
+tr.ReportsListHeader td
+{
+    border-width:1px;
+    border-style:solid;
+    border-color:white;
+    background-color:silver;
+}
+</style>
+```
+
+###Version 6.7+
+
+As of version 6.7, the downloadable RI includes two files in the Resources -> html folder called ReportList-Body.ascx and ReportList-Head.ascx. To change CSS in this model, generally you will simply have to open the page body and insert your style. Below is an example of styling you can use. Simply insert the following at the bottom of the ReportList-Body.ascx file, or you can create a new CSS file and include that into the head or body portion in a CSS tag.
+
+```css
+<style type="text/css">
 .blue-panel
 {
   background-color:#0d70cd;
@@ -123,6 +165,7 @@ The CSS classes you will have to override will also be different than the Report
 {
   font-family: 'Comic Sans MS' !Important;
 }
+</style>
 ```
 
 ##Dashboards
