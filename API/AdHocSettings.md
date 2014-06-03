@@ -4,7 +4,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 
 |Datatype|Setting name|Setting description|Default Value|
 |:-------|:----------:|:-----------------:|:-----------:|
-|String|[[AddAllFilterRegex|/API/CodeSamples/AddAllFilterRegex]]|Gets or sets the regular expression used for "Add All" filtering.            If name of a column matches this expression then it will not be added on "Add All" click.|(id&124;guid)$|
+|String|[[AddAllFilterRegex|/API/CodeSamples/AddAllFilterRegex]]|Gets or sets the regular expression used for "Add All" filtering.            If name of a column matches this expression then it will not be added on "Add All" click.|(id&#124;guid)$|
 |Dictionary`2|[[AdditionalTimeZones|/API/CodeSamples/AdditionalTimeZones]]|List of additional timezones.|System.Collections.Generic.Dictionary`2[System.String,System.Double]|
 |AdHocConfig|[[AdHocConfig|/API/CodeSamples/AdHocConfig]]|Gets or sets the current  - Ad Hoc configuration.|Izenda.AdHoc.FileSystemAdHocConfig|
 |String|[[AdHocUserKey|/API/CodeSamples/AdHocUserKey]]|Gets or sets a single password limiting access to the report designer, report list and report viewer.|String.Empty|
@@ -128,14 +128,14 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String[]|[[ExtendedFunctions|/API/CodeSamples/ExtendedFunctions]]|Gets or sets the array of additional functions to display in every            "Functions" dropdown lists.|System.String[]|
 |NameValueCollection|[[FieldAliases|/API/CodeSamples/FieldAliases]]|Gets or sets the collection of key-value pairs where the key is the field name and            the value is a field alias.|System.Collections.Specialized.NameValueCollection|
 |Unit|[[FieldDropDownWidth|/API/CodeSamples/FieldDropDownWidth]]|Gets or sets the width of field dropdown.|200px|
-|String|[[FieldFilterRegex|/API/CodeSamples/FieldFilterRegex]]|Gets or sets the regular expression used for column filtering.            If name of a column matches this expression then it will not be shown.|MD5&124;^(Passw)|
+|String|[[FieldFilterRegex|/API/CodeSamples/FieldFilterRegex]]|Gets or sets the regular expression used for column filtering.            If name of a column matches this expression then it will not be shown.|MD5&#124;^(Passw)|
 |Int32|[[FieldLimit|/API/CodeSamples/FieldLimit]]|Limits the number of fields Izenda Reports allows to be used in a single report.|1000|
 |FieldList|[[FieldList|/API/CodeSamples/FieldList]]|Gets or sets the default  control.|Izenda.Web.UI.FieldList|
-|String|[[FieldsRegex|/API/CodeSamples/FieldsRegex]]|Gets or sets the regular expression used for column filtering in Field tab.            If name of a column matches this expression then it will not be shown in fields select in Field tab.|MD5&124;^(Passw)|
+|String|[[FieldsRegex|/API/CodeSamples/FieldsRegex]]|Gets or sets the regular expression used for column filtering in Field tab.            If name of a column matches this expression then it will not be shown in fields select in Field tab.|MD5&#124;^(Passw)|
 |String|[[FieldValueCssUrl|/API/CodeSamples/FieldValueCssUrl]]|Css file to be used on reports with Field|Value style.|rs.aspx?css=FieldValue|
 |Unit|[[FilterParameterWidth|/API/CodeSamples/FilterParameterWidth]]|Gets or sets the width of filter parameter edit.|300px|
 |String|[[FiltersCustomPagesPath|/API/CodeSamples/FiltersCustomPagesPath]]|Gets or sets the relative path to the Equals(PopUp) custom pages.|String.Empty|
-|String|[[FiltersRegex|/API/CodeSamples/FiltersRegex]]|Gets or sets the regular expression used for column filtering in Filter tab.            If name of a column matches this expression then it will not be shown in fields select in Filter tab.|MD5&124;^(Passw)|
+|String|[[FiltersRegex|/API/CodeSamples/FiltersRegex]]|Gets or sets the regular expression used for column filtering in Filter tab.            If name of a column matches this expression then it will not be shown in fields select in Filter tab.|MD5&#124;^(Passw)|
 |Boolean|[[ForceNewNameOnSave|/API/CodeSamples/ForceNewNameOnSave]]|This feature always uses the save as function and requires the user to specify a report name when saving.|False|
 |Unit|[[FormatDropDownWidth|/API/CodeSamples/FormatDropDownWidth]]|Gets or sets the width of format dropdown.|190px|
 |FormatCollection|[[Formats|/API/CodeSamples/Formats]]|Gets or sets the list of available fields formats.|Izenda.AdHoc.FormatCollection|
@@ -382,7 +382,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[StoreImagesToCache|/API/CodeSamples/StoreImagesToCache]]|Gets or sets the value indicating how temporary images should be stored.|True|
 |Boolean|[[StrictANSIOuterJoin|/API/CodeSamples/StrictANSIOuterJoin]]|Gets or sets value indicating that strict ANSI/ISO SQL-92 outer join will be used (affects filters applied to joined tables).|True|
 |Boolean|[[StripInvalidCharacters|/API/CodeSamples/StripInvalidCharacters]]|Gets or sets the value indicating whether invalid characters in report names            should be striped.|True|
-|String|[[SubCalculationFilterRegex|/API/CodeSamples/SubCalculationFilterRegex]]|Gets or sets the regular expression used for subtotals calculation.            If name of a column matches this expression then it will not be added to subtotals.|ID$&124;Id$&124;^id$&124;_id$|
+|String|[[SubCalculationFilterRegex|/API/CodeSamples/SubCalculationFilterRegex]]|Gets or sets the regular expression used for subtotals calculation.            If name of a column matches this expression then it will not be added to subtotals.|ID$&#124;Id$&#124;^id$&#124;_id$|
 |String|[[TabBackgroundImageUrl|/API/CodeSamples/TabBackgroundImageUrl]]|Gets or sets the URL of the tabs background image.|rs.aspx?image=TabStrip.Background.gif|
 |NameDistinctValueCollection|[[TableAliases|/API/CodeSamples/TableAliases]]|Gets or sets the collection of key-value pairs where the key is the table name and            the value is a table alias.|NameDistinctValueCollection|
 |Unit|[[TableDropDownWidth|/API/CodeSamples/TableDropDownWidth]]|Gets or sets the width of table dropdown.|190px|
@@ -420,3 +420,4 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String[]|[[VisibleDataSources|/API/CodeSamples/VisibleDataSources]]|Gets or sets the array of table names should be shown in tables dropdown.|System.String[]|
 |String[]|[[VisibleTables|/API/CodeSamples/VisibleTables]]|Gets or sets the array of table names should be shown in tables dropdown.|System.String[]|
 |VisualGroupStyle|[[VisualGroupStyle|/API/CodeSamples/VisualGroupStyle]]|Gets or set value indicating what style should be used for visual groups.|CommaDelimited|
+
