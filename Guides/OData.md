@@ -22,3 +22,7 @@ Make the following changes to **Global.asax**
 * Replace INSERT_ODATA_URL_HERE with the URL of the OData provider.
   * The URL will be of the form: http://\<your-server\>/odata-provider/WebService.aspx
 * Replace INSERT_LICENSE_KEY_HERE with your license key
+
+##Using odata with the Izenda FUSION driver
+
+To find out more about how to use the oData provider with Izenda FUSION, you can read [[this article|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]].
