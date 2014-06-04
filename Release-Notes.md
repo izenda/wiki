@@ -1,15 +1,15 @@
 [[_TOC_]]
 # 6.7.0.268 (June 4, 2014)
-c2c3981 FB-13960: Fixed issue with displaying base64-encoded images
-f94f476 FB-14116: Fixed enable/disable subtotal logic in the Viewer
-7ac3044 FB-14089: Allow to use arithmetic "-" operator with Date data type fields
-8b2fc3e FB-14285: Do not use Viewer browser dimensions in the Preview render
-b142368 FB-14112: Fixed "Field-Value column pairs" feature behavior in Dashboards
-0858fb9 FB-14221: Allow to use special characters(backslash, single/double quote, etc.) in the Chart axis titles
-16446f4 FB-14101: Fixed images rendering in PDF output if the client browser is IE8
-684396b FB-14237: Fixed issue with adding new filters after removing some filters in the Viewer
-d71193e FB-14170: Hide/Show Advanced properties of the Charts when it's needed
-5ae8334 FB-13811: Implemented value ranges feature for chart separator
+* FB-13960: Fixed issue with displaying base64-encoded images
+* FB-14116: Fixed enable/disable subtotal logic in the Viewer
+* FB-14089: Allow to use arithmetic "-" operator with Date data type fields
+* FB-14285: Do not use Viewer browser dimensions in the Preview render
+* FB-14112: Fixed "Field-Value column pairs" feature behavior in Dashboards
+* FB-14221: Allow to use special characters(backslash, single/double quote, etc.) in the Chart a titles
+* FB-14101: Fixed images rendering in PDF output if the client browser is IE8
+* FB-14237: Fixed issue with adding new filters after removing some filters in the Viewer
+* FB-14170: Hide/Show Advanced properties of the Charts when it's needed
+* FB-13811: Implemented value ranges feature for chart separator
 
 # 6.7.0.267 (May 30, 2014)
 * FB-14250: Fixed CROSS join
