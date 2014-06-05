@@ -6,6 +6,8 @@
 
 Gets or sets whether the current user is an administrator. Admins may see and overwrite all reports for the tenant specified for them with [[CurrentUserTenantID|/API/CodeSamples/CurrentUserTenantID]] regardless of sharing rights.
 
+**Default Value:** True
+
 ##Global.asax (C♯)
 
 ```csharp
