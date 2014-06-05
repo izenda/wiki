@@ -8,6 +8,8 @@ Defines if current user has global administrator rights.
 
 **Default Value:** False
 
+**Deprecated:** This setting is obsolete. Please use [[CurrentUserIsAdmin|/API/CodeSamples/CurrentUserIsAdmin]] instead.
+
 ##Global.asax (C♯)
 
 ```csharp
