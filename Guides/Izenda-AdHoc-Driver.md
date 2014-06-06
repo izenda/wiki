@@ -117,8 +117,9 @@ Now you can add connections to the data sources end points. The end point could 
 You can use the standard SqlServerConnectionString to connect to your database directly and also use the FusionDriver's capabilities to connect to an indirect database connection (like OData) at the same time:
 
 ```csharp
-AdHocSettings.SqlServerConnectionString = "my_direct_connection_string";
-Izenda.Fusion.FusionDriver.AddODataConnection("OD", @"http://url_to_odata_connector.com/provider_endpoint.aspx");
+AdHocSettings.SqlServerConnectionString = "my_first_connection_string";
+Izenda.Fusion.FusionDriver.AddSqlConnection("SqlNW", @"my_second_connection_string");
+Izenda.Fusion.FusionDriver.AddODataConnection("OD", @"http://...aspx");
 ```
 
 #####b) Adding multiple indirect data connections. 
@@ -129,6 +130,7 @@ You can use the FusionDriver to add multiple indirect database connections to yo
 //only for direct connections
 //AdHocSettings.SqlServerConnectionString = "my_direct_connection_string";
 Izenda.Fusion.FusionDriver fd = new Izenda.Fusion.FusionDriver();
+fd.AddConnection("SqlNW", Izenda.Fusion.FusionConnectionType.MsSql, @"http://url_to_sql_connector.com/provider_endpoint.aspx");
 fd.AddConnection("OD", Izenda.Fusion.FusionConnectionType.OData, @"http://url_to_odata_connector.com/provider_endpoint.aspx");
 fd.AddConnection("OD2", Izenda.Fusion.FusionConnectionType.OData, @"http://url_to_odata_2_connector.com/provider_endpoint.aspx");
 AdHocSettings.AdHocContext.Driver = fd;
@@ -140,15 +142,19 @@ The Izenda Fusion Driver has several additional settings:
 
 #####a) VisibleDataSources 
 
-This is setup the same way as for a single connection. Only data sources with the specified names will be available:
+When using a FusionConnection with indirect database connections such as OData, the setup for VisibleDataSources is a little bit different. You will see an example below of setting up VisibleDataSources with indirect connections.
 
 ```csharp
 AdHocSettings.VisibleDataSources = new string[] { "Orders", "Customers", "Order Details" };
+
+fusionDriver.FixVisibleDataSources();
 ```
+
+_**Note:** This does NOT apply to direct database connections. However, calling FixVisibleDataSources with direct database connections will not have any adverse effects on your VisibleDataSources._
 
 #####b) Constraints
 
-This is setup the same as for single connection except that you are able to specify separate constraints for each connection by using connection aliases. Note that you can use wildcard characters to set up constraints:
+This is setup the same as for a single connection except that you are able to specify separate constraints for each connection by using connection aliases. Note that you can use wildcard characters to set up constraints:
 
 **Example 1:** Static context
 
@@ -167,7 +173,7 @@ fd.AddConstraint("OD2/Account.Id", "OD2/User.AccountID");
 
 #####c) Saving Reports with Fusion
 
-If you are using DatabaseAdHocConfig and reports are stored in the database, you need to explicitly specify the connection you will use for saving reports. The following example sets up the connection string to the database that contains the reports table. If you store reports in the file system then skip this step(use FileSystemAdHocConfig if you do this).
+When using indirect database connections and saving your reports to the FileSystem is not an option, you can use the SavedReportsDriver setting to specify a direct link to a database where you can store your reports. The following example sets up the connection string to the database that contains the reports table. If you store reports in the file system then skip this step(use FileSystemAdHocConfig if you do this).
 
 ```csharp
 ((DatabaseAdHocConfig)AdHocSettings.AdHocConfig).SavedReportsDriver = new MSSQLDriver("your_mssql_direct_database_connection_string");
@@ -180,11 +186,11 @@ Getting data from several data source providers may take a lot of time and resou
 You can configure the cache yourself by using the following properties and methods:
 
 * **DataCacheExpiration:** Sets the date for cache expiration. All data in the cache older than the specified date will be cleared (removed from the cache). For example, if you want to clear all data more than two days old, you should set: ``AdHocSettings.DataCacheExpiration = DateTime.Now.AddDays(-2);``
-* **CacheReports method:** Indicates that all reports should or should not be cached: ``fusionDriver.CacheReports = true;``
+* **CacheReports method:** Indicates that all reports should or should not be cached (enabled by default in later versions of Izenda): ``fusionDriver.CacheReports = true;``
 
 ###Sample use
 
-Below is a full example of how to set up and configure the Izenda Fusion Driver with several connections and reports stored in your database:
+Now that we have covered the basics of setting up the Fusion driver, below is a full example of how to set up and configure the Izenda Fusion Driver with several connections:
 
 ####SQL/Oracle/MySql data connection
 
@@ -231,10 +237,13 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig  //Izenda.AdHo
         AdHocSettings.CacheReports = true;
 
         // Set connection to the database with reports table
-        ((DatabaseAdHocConfig)AdHocSettings.AdHocConfig).SavedReportsDriver = new MSSQLDriver("your_mssql_direct_database_connection_string");
+        ((DatabaseAdHocConfig)AdHocSettings.AdHocConfig).SavedReportsDriver = new MSSQLDriver(@"your_mssql_direct_database_connection_string");
 
         // Add visible data sources
         AdHocSettings.VisibleDataSources = new string[] { "Orders", "Customers", "Order Details" };  
+
+        //clean up the DataSources
+        fusionDriver.FixVisibleDatasources();
     }
 }
 </script>
@@ -254,7 +263,7 @@ The following example describes the process for initializing a FusionDriver conn
 
 <script runat="server">
 [Serializable]
-public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
+public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig //DatabaseAdHocConfig You can use either FileSystemAdHocConfig or DatabaseAdHocConfig because we set the SavedReportsDriver below
 {
     public static void InitializeReporting() 
     {
@@ -278,7 +287,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
         // Clear cache
         AdHocSettings.DataCacheExpiration = DateTime.Now;
         
-        // Add some reports to the cache
+        // enable caching (on later versions of Izenda this is enabled by default)
         AdHocContext.CacheReports = true;
 
         // Set connection to the database with the reports table. You CANNOT use an OData connection as your SavedReportsDriver connection string
@@ -373,4 +382,12 @@ public override Column[] GetColumns(Izenda.AdHoc.Database.Table table) {
   }
   return cols;
 }
+```
+
+###Implementing the Custom Fusion Driver
+
+You can then set the AdHocContext.Driver property to your CustomFusionDriver and you're done!
+
+```csharp
+AdHocContext.Driver = new CustomFusionDriver();
 ```
