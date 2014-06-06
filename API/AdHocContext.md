@@ -10,14 +10,14 @@ The AdHocContext class is used to setup the database driver, access the report s
 |:------:|:---------:|
 |ClientLicenses|Gets the maximum number of clients supported by your current license key|
 |CurrentReportSet|Gets the report object that was most recently loaded by the user|
-|CurrentUserName|
+|CurrentUserName|Gets the AdHocSettings.CurrentUserName property for backwards-compatibility reasons|
 |Driver|Gets or sets the database driver that your application will use|
 |ProcessorLicenses|Gets the maximum number of processors your current license key can support|
 |ReportSetCount|Not used|
 |SchedulerExecuting|Gets a value indicating whether the Izenda Scheduler is executing scheduled reports or not|
 |SetSchedulerExecuting|This method takes a boolean value that sets whether or not the Izenda Scheduler is executing|
 |StoreInStaticMemory|Gets or sets whether the CurrentReportSet will be stored in static memory or not|
-|UsersCountModel|Gets the 
+|UsersCountModel|Gets the concurrency model for your current license key|
 |ViewerLicenses|Gets the maximum number of users supported by your current license key|
 
 ##CurrentReportSet
@@ -26,4 +26,30 @@ The CurrentReportSet object is the way that Izenda exposes the most recently loa
 
 ##Driver
 
-The Driver object is the single point of entry for all database traffic and must be set to any of the specific driver classes that Izenda provides. This will use your connection string and datasources to provide the framework for working with Izenda reports.
+The Driver object is the single point of entry for all database traffic and must be set to any of the specific driver classes that Izenda provides. This will use your connection string and datasources to provide the framework for working with Izenda reports. Currently these are the types of drivers Izenda has available.
+
+* MSSQLDriver
+* MySQLDriver
+* PostgreSQLDriver
+* OracleDriver
+* OdbcDriver
+* Db2Driver
+* PervasiveSQLDriver
+* SyBaseDriver
+* [[FusionDriver|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]]
+  * MySqlFusionDriver
+  * OracleFusionDriver
+  * PostgreSqlFusionDriver
+  * SqlFusionDriver
+
+In order to set the driver for your database, you simply need to create a new driver instance and assign it to AdHocContext.
+
+```csharp
+AdHocContext.Driver = new MSSQLDriver();
+```
+
+The default value is a new MSSQLDriver.
+
+##SchedulerExecuting
+
+Normally, this setting will be automatically updated when your rs.aspx is called with the run_scheduled_reports=1 parameter. You can also update this value yourself if you need special kinds of scheduling. This can be done in PreExecuteReportSet and PostExecuteReportSet respectively. 
