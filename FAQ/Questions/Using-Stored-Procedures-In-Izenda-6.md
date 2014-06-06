@@ -219,3 +219,12 @@ string currentReportName = HttpContext.Current.Request.QueryString["rn"];
     }
 }
 ```
+
+##Best Practices with Izenda
+
+Since Izenda primarily uses metadata to obtain information about schemas, views, and other database objects, the same goes with stored procedures. Therefore, there are some expectations to be followed for these procedures that are to be used with Izenda.
+
+* INSERT EXEC - You cannot nest INSERT INTO ... EXEC statements in stored procedures used with Izenda. This is a limitation of SQL server.
+* Return columns - The stored procedure MUST return the same columns in all cases. It is because the metadata expected when running the stored procedure must comply with the specifications given to it.
+* Temp tables - You can build temp tables with the stored procedure and return that as long as the rules above are followed. Just ensure that the returned value is not null. This allows Izenda to obtain metadata from the empty result set of the stored procedure.
+* Multiple values as one parameter - It is possible to pass multiple values as a single parameter. For instance, you can construct a comma separated list of values and pass that resulting string to the SP. It would then be possible to split the string into its respective parts within your SP.
