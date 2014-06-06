@@ -55,8 +55,8 @@ End Class
 
 AdHocSettings.EmptyReportString = null;
 
-![](/API/CodeSamples/EmptyReportString/EmptyReportString_1.png)
+![](/API/CodeSamples/EmptyReportString/emptyreportstring_1.png)
 
 AdHocSettings.EmptyReportString = "There were no reports to display";
 
-![](/API/CodeSamples/EmptyReportString/EmptyReportString_2.png)
+![](/API/CodeSamples/EmptyReportString/emptyreportstring_2.png)
