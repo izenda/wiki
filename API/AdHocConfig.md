@@ -173,7 +173,6 @@ public override string[] ProcessEqualsSelectList(Column column)
 
 // Control what operators are availabile for each field type in the Filters tab or report viewer
 public override string[] GetOperatorList(SqlType type, bool isStoredProcedureUsed)
-public override string[] GetOperatorList(SqlType type, bool isStoredProcedureUsed)
 {
 	string[] result = base.GetOperatorList(type, isStoredProcedureUsed);
 	string[] cutResult = new string[result.Length / 2];
