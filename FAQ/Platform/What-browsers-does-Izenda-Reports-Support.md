@@ -1,13 +1,15 @@
 #What Browsers does Izenda Reports Support?
 
-Izenda Reports Supports both the current and previous versions of:
+Izenda Reports Supports the current and previous version of:
 
-* Microsoft Internet Explorer
+* Microsoft Internet Explorer (8 and above)
 * Mozilla Firefox 
 * Google Chrome
+
+We offer limited support for the current version of:
+
 * Safari
 * Opera
-* Netscape
 
 We also offer support for mobile platforms as well:
 
