@@ -76,11 +76,11 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
     }
 
     // Gets a list of ReportInfo for all loadable reports stored in the storage.
-    public override System.Collections.Generic.Dictionary FilteredListReportsDictionary()
+    public override System.Collections.Generic.Dictionary<Izenda.AdHoc.ReportInfo, Izenda.AdHoc.ReportSet> FilteredListReportsDictionary()
     {
 	ReportInfo[] reports = ListReports();
 	Array.Sort(reports);
-	Dictionary result = new Dictionary();
+	Dictionary<Izenda.AdHoc.ReportInfo, Izenda.AdHoc.ReportSet> result = new Dictionary<Izenda.AdHoc.ReportInfo, Izenda.AdHoc.ReportSet>();
 
 	foreach (ReportInfo info in reports)
 	{
