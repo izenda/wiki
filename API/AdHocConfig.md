@@ -112,13 +112,13 @@ public override string GetReportNameById(string id)
 }
 
 // Method called after ReportSet was executed
-public override void PostExecuteReportSet(ReportSet reportSet)
+public override void PostExecuteReportSet(Izenda.AdHoc.ReportSet reportSet)
 {
 	reportSet.WriteXml();
 }
 
 // Method called after reportSet was loaded
-public override void PostLoadReportSet(string name, ReportSet reportSet)
+public override void PostLoadReportSet(string name, Izenda.AdHoc.ReportSet reportSet)
 {
 	base.PostLoadReportSet(name, reportSet);
 }
@@ -144,14 +144,14 @@ public override void SaveReportRDL(string reportName)
 	File.WriteAllText( rdlFilePath, builder.ToString());
 }
 
-// Returns a list of reports to the reprt viewr and all report list dropdowns
+// Returns a list of reports to the report viewer and all report list dropdowns
 public override ReportInfo[] ListReports()
 {
 	return new ReportInfo[] { new ReportInfo("report 1"), new ReportInfo("report 2") };
 }
 
 // Runs after report export to allow archiving
-public override void ArchiveReportOutput(ReportSet reportSet, 
+public override void ArchiveReportOutput(Izenda.AdHoc.ReportSet reportSet, 
 	string[] emails, 
 	string extension, 
 	byte[] data)
@@ -161,18 +161,18 @@ public override void ArchiveReportOutput(ReportSet reportSet,
 		bw.Write(data);
 }
 
-// This method overrides the default behavor of the Equals(...) 
+// This method overrides the default behavior of the Equals(...) 
 // operators in the filters tab and report viewer.  
 // If using Equals(...) with stored procedures, this is required. 
-public override string[] ProcessEqualsSelectList(Column column)
+public override string[] ProcessEqualsSelectList(Izenda.AdHoc.Database.Column column)
 {
 	if (column.Name == "ParameterField")
 		return new string[] { "Value1", "Value2", "Value3" };
 	return base.ProcessEqualsSelectList(column);
 }
 
-// Control what operators are availabile for each field type in the Filters tab or report viewer
-public override string[] GetOperatorList(SqlType type, bool isStoredProcedureUsed)
+// Control what operators are available for each field type in the Filters tab or report viewer
+public override string[] GetOperatorList(Izenda.AdHoc.Database.SqlType type, bool isStoredProcedureUsed)
 {
 	string[] result = base.GetOperatorList(type, isStoredProcedureUsed);
 	string[] cutResult = new string[result.Length / 2];
@@ -189,7 +189,7 @@ public override ReportSet LoadReportSet(string reportName)
 	return rs;
 }
 
-public override void SaveReportSet(string reportName, ReportSet reportSet)
+public override void SaveReportSet(string reportName, Izenda.AdHoc.ReportSet reportSet)
 {
 	using (StreamWriter sw = new StreamWriter(reportName + ".xml"))
 		sw.Write(reportSet.WriteXml());
@@ -233,7 +233,7 @@ public override System.Drawing.Image CustomizeGuage(double value,
 }
 
 // Dynamically modify the report before execution.  
-public override void PreExecuteReportSet(ReportSet reportSet)
+public override void PreExecuteReportSet(Izenda.AdHoc.ReportSet reportSet)
 {
 	reportSet.Footer = DateTime.Now.ToString();
 }
