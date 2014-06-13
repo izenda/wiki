@@ -24,7 +24,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How do I implement Field-Level Security|http://wiki.izenda.us/FAQ/Questions/Applying-Security#Field-Level-Access]]
 - [[Can I Use My Own Database's Functions With Izenda?|FAQ/izenda-and-udfs]]
 - [[How Do I Enable Izenda Vision?|FAQ/enable-izenda-vision]]
-- [[How do I reset my Fusion Cache via code?|FAQ/reset-fusion-cache]]
+- [[How do I reset my Fusion Cache via code?|http://wiki.izenda.us/FAQ/Questions/Caching#RefreshAllCachedReports]]
 - [[How do I implement Fully Qualified Hidden Filters?|http://wiki.izenda.us/API/CodeSamples/HiddenFilters#Fully-qualified-filters]]
 - [[How do I change the default print settings?|http://wiki.izenda.us/FAQ/Questions/how-to-change-default-print-settings]]
 - [[Can I Add Custom Format Options to the Report Designer?|/FAQ/Questions/Add Formatting Options]]
