@@ -1,7 +1,15 @@
-#Reset Fusion Cache
+#GetRenderedReportSet
 
-To update the cache based on your unique business logic (such as daily, during downtime hours) use this method:
+[[_TOC_]]
 
-``FusionCache.RefreshAllCachedReports();``
+##About
 
-This will allow reports to be cached for performance but have data refreshed based on your logic.
+The ``GetRenderedReportSet`` command is passed through rs.aspx via an [[AjaxRequest|]]. This returns CSS and HTML that is directly plugged into a container to display the report. This makes it very simple to use the report viewer data in your own website.  
+
+Here is the Ajax call to use:
+
+```javascript
+AjaxRequest('./rs.aspx?', 'wscmd=getrenderedreportset&wsarg0=reportName', GotRenderedReportSet, null, 'getrenderedreportset');
+```
+
+The GotRenderedReportSet is a javascript callback that takes two arguments: the returnObj and the id. The returnObj is the raw HTML/CSS data that should get inserted into the container on the report viewer page. The id is the name of the wscmd. In this case, it would be "getrenderedreportset".
