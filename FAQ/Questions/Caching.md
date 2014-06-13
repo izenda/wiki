@@ -24,11 +24,15 @@ The AdHocConfig.InvalidateSchemaCache() method will update the schema for databa
 
 ##CleanUpCache
 
-The FusionCache.CleanUpCache method is part of the Izenda Fusion Driver suite and will clear all cached HTML reports.
+The ``FusionCache.CleanUpCache`` method is part of the Izenda Fusion Driver suite and will clear all cached XML reports and dashboards.
 
 ##RefreshAllCachedReports
 
-The FusionCache.RefreshAllCachedReports method can be called to update the cache of HTML reports. Unlike CleanUpCache above, this will NOT clear the cache. It will include changes made to all HTML reports for the current user.
+The ``FusionCache.RefreshAllCachedReports`` method can be called to update the cache of XML reports and dashboards based on whether the time period specified in the [[DataCacheInterval|/API/CodeSamples/DataCacheInterval]] setting has elapsed since the last time the report was cached. Unlike CleanUpCache above, this will NOT clear the cache. It will include changes made to all HTML reports for the current user. You can call this method yourself to update the cache based on your unique business logic (such as daily, during downtime hours).
+
+##RefreshAllCachedDashboards
+
+The ``FusionCache.RefreshAllCachedDashboards method will update the cache of XML dashboards, but not reports, based on whether the time period specified in the [[DataCacheInterval|/API/CodeSamples/DataCacheInterval]] setting has elapsed since the last time the dashboard was cached. This can be called based on your unique business logic.
 
 ##Limitations
 
