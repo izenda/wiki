@@ -30,3 +30,5 @@ Here is a list of the object keys sent back and their default values
 |DateFormat|m/d/yy|
 |CategoryCharacter|\\|
 |UseBulkCsv|false|
+
+GotReportViewerConfig is a callback method that takes two arguments. The first is the data above. The second is the id of the config object.
