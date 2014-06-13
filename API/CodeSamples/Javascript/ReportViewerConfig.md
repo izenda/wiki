@@ -27,6 +27,6 @@ Here is a list of the object keys sent back and their default values
 |ReportIsLocked|false|
 |AllowNewFiltersInReportViewer|true|
 |AllowRTFExportFormat|false|
-|DateFormatm/d/yy|
+|DateFormat|m/d/yy|
 |CategoryCharacter|\\|
 |UseBulkCsv|false|
