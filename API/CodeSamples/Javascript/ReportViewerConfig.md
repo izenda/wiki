@@ -9,7 +9,7 @@ The ``reportviewrconfig`` command is passed through rs.aspx via an [[AjaxRequest
 Here is the Ajax call to use:
 
 ```javascript
-AjaxRequest('./rs.aspx', wscmd=reportviewerconfig&wsarg0=' + $(window).width() + '&wsarg1=' + $(window).height(), GotReportViewerConfig, null, 'reportviewerconfig');
+AjaxRequest('./rs.aspx', 'wscmd=reportviewerconfig&wsarg0=' + $(window).width() + '&wsarg1=' + $(window).height(), GotReportViewerConfig, null, 'reportviewerconfig');
 ```
 
 Here is a list of the object keys sent back and their default values
