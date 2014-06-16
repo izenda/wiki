@@ -49,3 +49,13 @@ Public Class CustomAdHocConfig
     End Sub
 End Class
 ```
+
+##Screenshots
+
+AdHocSettings.TimeZones.Add("GST", 15, "Galactic Standard Time")
+
+![](/API/CodeSamples/TimeZones/time_zones_1.png)
+
+AdHocSettings.TimeZones = new SchedulerTimeZoneCollection();
+
+![](/API/CodeSamples/TimeZones/time_zones_2.png)
