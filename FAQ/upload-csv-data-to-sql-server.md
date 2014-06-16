@@ -3,8 +3,8 @@
 [[_TOC_]]
 
 ## Prerequisites
-1. You must obtain the csvetl.exe program which is distributed as a part of the Izenda Fusion product
-2. Access to SQL Server with permissions to modify an existing table, or permissions to create a new table 
+* You must obtain the csvetl.exe program which is distributed as a part of the Izenda Fusion product
+* Access to SQL Server with permissions to modify an existing table, or permissions to create a new table 
 
 ## SQL Server Setup
 
