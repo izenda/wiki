@@ -5,10 +5,10 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Datatype|Setting name|Setting description|Default Value|
 |:-------|:----------:|:-----------------:|:-----------:|
 |String|[[AddAllFilterRegex|/API/CodeSamples/AddAllFilterRegex]]|Gets or sets the regular expression used for "Add All" filtering.            If name of a column matches this expression then it will not be added on "Add All" click.|(id&#124;guid)$|
-|Dictionary`2|[[AdditionalTimeZones|/API/CodeSamples/AdditionalTimeZones]]|List of additional timezones.**(deprecated)**|System.Collections.Generic.Dictionary`2[System.String,System.Double]|
+|Dictionary[String,Double]|[[AdditionalTimeZones|/API/CodeSamples/AdditionalTimeZones]]|List of additional timezones.**(deprecated)**|Empty List|
 |AdHocConfig|[[AdHocConfig|/API/CodeSamples/AdHocConfig]]|Gets or sets the current  - Ad Hoc configuration.|Izenda.AdHoc.FileSystemAdHocConfig|
 |String|[[AdHocUserKey|/API/CodeSamples/AdHocUserKey]]|Gets or sets a single password limiting access to the report designer, report list and report viewer.|String.Empty|
-|AggregateFunctionCollection|[[AggregateFunctions|/API/CodeSamples/AggregateFunctions]]||Izenda.AdHoc.AggregateFunctionCollection|
+|AggregateFunctionCollection|[[AggregateFunctions|/API/CodeSamples/AggregateFunctions]]||Empty List|
 |Boolean|[[AllowAnalysisGrid|/API/CodeSamples/AllowAnalysisGrid]]|Gets or sets the value indicating whether it is allowed analysis grid|True|
 |Boolean|[[AllowArchivedReportTableCreation|/API/CodeSamples/AllowArchivedReportTableCreation]]|Gets or sets the value indicating whether it is allowed to create the database table            that contains archived reports if there is no such table in the database.|True|
 |Boolean|[[AllowClientSorting|/API/CodeSamples/AllowClientSorting]]||True|
