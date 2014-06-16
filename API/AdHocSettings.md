@@ -6,7 +6,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |:-------|:----------:|:-----------------:|:-----------:|
 |String|[[AddAllFilterRegex|/API/CodeSamples/AddAllFilterRegex]]|Gets or sets the regular expression used for "Add All" filtering.            If name of a column matches this expression then it will not be added on "Add All" click.|(id&#124;guid)$|
 |Dictionary[String,Double]|[[AdditionalTimeZones|/API/CodeSamples/AdditionalTimeZones]]|List of additional timezones.**(deprecated)**|Empty List|
-|AdHocConfig|[[AdHocConfig|/API/CodeSamples/AdHocConfig]]|Gets or sets the current  - Ad Hoc configuration.|Izenda.AdHoc.FileSystemAdHocConfig|
+|AdHocConfig|[[AdHocConfig|/API/AdHocConfig]]|Gets or sets the current  - Ad Hoc configuration.|Izenda.AdHoc.FileSystemAdHocConfig|
 |String|[[AdHocUserKey|/API/CodeSamples/AdHocUserKey]]|Gets or sets a single password limiting access to the report designer, report list and report viewer.|String.Empty|
 |AggregateFunctionCollection|[[AggregateFunctions|/API/CodeSamples/AggregateFunctions]]||Empty List|
 |Boolean|[[AllowAnalysisGrid|/API/CodeSamples/AllowAnalysisGrid]]|Gets or sets the value indicating whether it is allowed analysis grid|True|
