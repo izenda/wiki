@@ -1,5 +1,9 @@
 #UseBulkCSV
 
+[[_TOC_]]
+
+##About
+
 Gets or sets the value indicating whether Izenda will use Bulk CSV. If true, the CSV button will be replaced with the Bulk CSV button on the toolbar of the ReportDesigner and ReportViewer. This icon looks the same as the regular CSV icon, except that it will perform a different function. The bulk CSV option is constrained by the [[ExportLimit|/API/CodeSamples/ExportLimit]].
 
 ##Global.asax (C♯)
