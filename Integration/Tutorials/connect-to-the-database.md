@@ -12,8 +12,9 @@ Izenda Reports lets business users generate simple custom reports without involv
 
 * SQL Server 2000-2012
 * Oracle 9g
-* MySQL 5, OData
-* Web Services and EAV
+* MySQL 5
+* OData (requires FUSION add-on)
+* Web Services and EAV  (with custom implementation)
 
 [[Izenda Fusion|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]] (additional module) delivers dynamic real-time analytics from **multiple databases** and applications without having to do periodic ETL into a data warehouse. Also, support for other database architectures is possible. Please speak to our sales team for more information.
 
