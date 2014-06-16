@@ -8,7 +8,7 @@ How do I Add the Bulk CSV option to the Report Viewer and Report Designer?
 
 ##Answer
 
-You can turn the CSV option on the report viewer and report designer to use the bulk CSV functionality by setting [[UseBulkCSV|/API/CodeSamples/UseBulkCSV]] = true in your global.asax. If you wish to use regular CSV exports and bulk CSV exports at the same time, there are a few different methods to accomplish this.
+You can alter the CSV option to use the bulk CSV functionality on the report viewer and report designer by setting [[UseBulkCSV|/API/CodeSamples/UseBulkCSV]] = true in your global.asax. If you wish to use regular CSV exports and bulk CSV exports at the same time, there are a few different methods to accomplish this.
 
 Newer versions of Izenda have diverged the Report Viewer from the Report Designer methodology of showing this button. One methodology for the Report Viewer is demonstrated below, but this is not an absolute edict.
 
