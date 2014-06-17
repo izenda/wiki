@@ -1,5 +1,7 @@
 #Divide by Zero
 
+[[_TOC_]]
+
 ##Question
 
 I'm Getting #DIV/0 In My Report preview. What is this? Can I change it?
