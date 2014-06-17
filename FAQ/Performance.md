@@ -12,7 +12,7 @@ Izenda scales well to systems with ~250 users per cpu. Response times on reporti
 
 ###Exporting
 
-Large exports with 100k+ records need to be done in [[CSV format|http://wiki.izenda.us/FAQ/Formatting/How-do-I-Add-bulk-CSV-to-the-report-viewer]]. This is designed to stream the data in parts instead of one large download. This prevents browser timeouts by immediately pushing records to the requesting client. This way, if the full export takes 5 minutes and the browser times out in 1 minute, Izenda can use streaming capabilities to keep the browser active and the client will receive the entire file.
+Large exports with 100k+ records need to be done in [[Bulk CSV format|http://wiki.izenda.us/FAQ/Formatting/How-do-I-Add-bulk-CSV-to-the-report-viewer]]. This is designed to stream the data in parts instead of one large download. This prevents browser timeouts by immediately pushing records to the requesting client. This way, if the full export takes 5 minutes and the browser times out in 1 minute, Izenda can use streaming capabilities to keep the browser active and the client will receive the entire file.
 
 ###Queries
 
