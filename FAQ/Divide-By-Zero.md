@@ -1,6 +1,12 @@
-#I'm Getting #DIV/0 In My Report preview
+#Divide by Zero
 
-If you accidentally divide by zero, Izenda would handle it by outputting the string "#DIV/0". To this end, we have implemented the Div/0 custom format option. This functionality is available in latest maintenance releases past 6.7.258.
+##Question
+
+I'm Getting #DIV/0 In My Report preview. What is this? Can I change it?
+
+##Answer
+
+If you accidentally divide by zero, Izenda would handle it by outputting the string "#DIV/0". However, you can change the output text with a custom format option. This functionality was implemented in release 6.7.0.258.
 
 Usage; code for your Izenda ``global.asax``:
 
