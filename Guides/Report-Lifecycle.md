@@ -27,11 +27,25 @@ This outlines the call structure when accessing the report list page as it perta
 
 This outlines the call structure when accessing the report designer page as it pertains to reports and API hooks.
 
+###New
+
 1. **[[InitializeReporting|http://wiki.izenda.us/FAQ/InitializeReporting]]:** This should be called via the OnPreInit function in the page's code behind file, like all Izenda reports pages (except rs.aspx).
 2. **[[FilteredListReportsDictionary|/FAQ/FilteredListReportsDictionary]]:** This will perform the same operation as in the report list.
 3. **[[ListReports|]]:** If this is the first call to ListReports, or the cache was recently invalidated, this will obtain the reports as before. Otherwise it will skip the individual processing of reports in favor of the cache.
 4. **[[GetReportNameById|/FAQ/GetReportNameById]]:** Called like above.
 5. **[[GetOperatorList|/FAQ/GetOperatorList]]:** The ReportDesigner now gets a list of operators available for the SqlType context. If customizations to the operator list are required, it can be done here.
+
+###Edit
+
+1. **[[InitializeReporting|http://wiki.izenda.us/FAQ/InitializeReporting]]:** This should be called via the OnPreInit function in the page's code behind file, like all Izenda reports pages (except rs.aspx).
+2. **[[PreLoadReportSet|/FAQ/PreLoadReportSet]]:** You can implement auditing or other custom pre-loading operations here.
+3. **[[LoadReportSet|/FAQ/LoadReportSet]]:** Loads the report definition from XML. If you want changes to stick after making them, call base.LoadReportSet before you perform changes or do not call base.LoadReportSet at all.
+4. **[[PostLoadReportSet|/FAQ/PostLoadReportSet]]:** You can perform post-processing of the report set here. This is the recommended point of direct modification.
+5. **[[FilteredListReportsDictionary|/FAQ/FilteredListReportsDictionary]]:** This will perform the same operation as in the report list.
+6. **[[ListReports|]]:** If this is the first call to ListReports, or the cache was recently invalidated, this will obtain the reports as before. Otherwise it will skip the individual processing of reports in favor of the cache.
+7. **[[GetReportNameById|/FAQ/GetReportNameById]]:** Called like above.
+8. **[[GetOperatorList|/FAQ/GetOperatorList]]:** The ReportDesigner now gets a list of operators available for the SqlType context. If customizations to the operator list are required, it can be done here.
+9. **[[GetOperatorList|]]:** This is called as many times as there are fields on the report designer. Each call loads data based on the datatype of the field.
 
 ##Report Viewer
 
