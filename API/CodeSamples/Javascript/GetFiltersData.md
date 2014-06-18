@@ -10,6 +10,7 @@ Here is the AJAX call to use:
 
 ```csharp
 AjaxRequest('./rs.aspx', 'wscmd=getfiltersdata', GotFiltersData, null, 'getfiltersdata');
+```
 
 Here is the hierarchy of the object keys sent back:
 
