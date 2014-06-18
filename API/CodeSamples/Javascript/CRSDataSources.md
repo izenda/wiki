@@ -14,16 +14,12 @@ The GotDataSourcesList variable is a callback method that takes two arguments: t
 
 * returnObj
   * SelectionsList
-    * [0]
+    * [0]...[n]
       * DataType
       * DbName
       * Fields
       * FriendlyName
       * IsStoredProc
-    * [1]
-      * ...
-    * [2]
-      * ...
 
 So if you want to use the returnObj, you could use the javascript standard ``returnObj["SelectionsList"][0].DbName`` statement.
 
