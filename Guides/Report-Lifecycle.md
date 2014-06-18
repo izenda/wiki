@@ -17,7 +17,7 @@ This outlines the call structure when accessing the report list page as it perta
 5. **[[ListReports|http://wiki.izenda.us/FAQ/ListReports]]:** The ListReports method returns a broader range of reports and can also be manipulated in global.asax. This method performs differently depending on if you use DatabaseAdHocConfig or FileSystemAdHocConfig. This will iterate through each report and perform the following operations:
   1. **[[GetReportNameById|/FAQ/GetReportNameById]]:** This will simply return the report name based on the ID of the report. This will run for each report before any other steps below are run.
   2. **[[ClearCachedReportSet|/FAQ/ClearCachedReportSet]]:** The cache is cleared in preparation for the new set of reports.
-  3. **[[PreLoadReportSet|/FAQ/PreLoadReportSet]]:** Here, PreLoadReportSet 
+  3. **[[PreLoadReportSet|/FAQ/PreLoadReportSet]]:** Here you can implement auditing or other pre-load operations.
   4. **[[LoadReportSet|http://wiki.izenda.us/FAQ/LoadReportSet]]:** It is at this point that XML definitions are read for each report and the ReportInfo is returned. If you want to perform your own processing of the report. Note that your customizations will only be kept if you perform them after ``base.LoadReportSet`` is called (if it's called).
   5. **[[PostLoadReportSet|/FAQ/PostLoadReportSet]]:** Alternately, you can perform any post-processing you wish to do in the PostLoadReportSet method. These three methods will always be called when fetching report definitions.
   6. **Caching:** Caching occurs at this point (turned on by default) so the definitions will not have to be loaded again.
