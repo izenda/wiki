@@ -4,7 +4,9 @@
 
 ##About
 
+The ``CrsDataSources`` command sends an [[AjaxRequest|/API/CodeSamples/Javascript/AjaxRequest]] that is used to obtain the CurrentReportSet information. This returns the data structure of the current report set and can be used to make logical choices about how to handle various features on the report viewer.
 
+Here is the AJAX call to use:
 
 ```javascript
 AjaxRequest('./rs.aspx', 'wscmd=crsdatasources', GotDatasourcesList, null, 'crsdatasources');
