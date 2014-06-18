@@ -16,44 +16,44 @@ The AcceptReports variable is a callback method that takes two parameters. The f
 
 * ReportSets
   * [0]...[n]
-    * ImgUrl
-    * Name
-    * Category
-    * CategoryFull
-    * Subcategory
-    * Subcategory
-    * Subcategories
-    * Dashboard
-    * UrlEncodedName
-    * UrlEncodedCategory
-    * ReadOnly
-    * ViewOnly
-    * IsLocked
+     * ImgUrl
+     * Name
+     * Category
+     * CategoryFull
+     * Subcategory
+     * Subcategory
+     * Subcategories
+     * Dashboard
+     * UrlEncodedName
+     * UrlEncodedCategory
+     * ReadOnly
+     * ViewOnly
+     * IsLocked
 * Recent
   * [0]...[n]
-    * ImgUrl
-    * Name
-    * Category
-    * CategoryFull
-    * Subcategory
-    * Subcategories
-    * Dashboard
-    * UrlEncodedName
-    * UrlEncodedCategory
-    * ReadOnly
-    * ViewOnly
-    * IsLocked
+     * ImgUrl
+     * Name
+     * Category
+     * CategoryFull
+     * Subcategory
+     * Subcategories
+     * Dashboard
+     * UrlEncodedName
+     * UrlEncodedCategory
+     * ReadOnly
+     * ViewOnly
+     * IsLocked
 * Frequent
   * [0]...[n]
-    * ImgUrl
-    * Name
-    * Category
-    * CategoryFull
-    * Subcategory
-    * Subcategories
-    * Dashboard
-    * UrlEncodedName
-    * UrlEncodedCategory
-    * ReadOnly
-    * ViewOnly
-    * IsLocked
+     * ImgUrl
+     * Name
+     * Category
+     * CategoryFull
+     * Subcategory
+     * Subcategories
+     * Dashboard
+     * UrlEncodedName
+     * UrlEncodedCategory
+     * ReadOnly
+     * ViewOnly
+     * IsLocked
