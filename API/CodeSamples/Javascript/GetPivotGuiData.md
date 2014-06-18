@@ -14,38 +14,15 @@ AjaxRequest('./rs.aspx', 'wscmd=reportviewerconfig&wsarg0=' + jq$(window).width(
 
 Here is the hierarchy of object keys sent back:
 
-* SelectionsList
+* Currentield
+* CurrentFunction
+* FieldNames
   * [0]...[n]
-    * Fields
-      * [0]...[n]
-        * Selected
-        * Description
-        * Total
-        * VG
-        * Format
-        * FilterOperator
-        * FormatNames
-          * [0]...[n]
-        * FormatValues
-          * [0]...[n]
-        * FilterOperatorNames
-          * [0]...[n]
-        * FilterOperatorValues
-          * [0]...[n]
-        * FunctionNames
-          * [0]...[n]
-        * FunctionValues
-          * [0]...[n]
-        * LabelJ
-        * ValueJ
-        * Hidden
-        * FriendlyName
-        * DbName (field)
-        * DataType
-    * IsStoredProc
-    * FriendlyName
-    * DbName (datasource)
-    * DataType
-  * CanSaveReport
+* FieldIds
+  * [0]...[n]
+* FunctionNames
+  * [0]...[n]
+*FunctionIds
+  * [0]...[n]
 
 GotPivotGuiData is a callback method that takes two parameters. The first is the returnObj and the second is the id of the called method (getpivotguidata).
