@@ -37,23 +37,26 @@ This outlines the call structure when accessing the report designer page as it p
 
 This outlines the call structure when accessing the report viewer page as it pertains to reports and API hooks.
 
-1. **[[InitializeReporting|http://wiki.izenda.us/FAQ/InitializeReporting]]:**
-2. **[[ReportViewerConfig|http://wiki.izenda.us/API/CodeSamples/Javascript/ReportViewerConfig]]:** This is an AJAX command sent by javascript and returns JSON formatted data related to the report viewer configuration.
-3. **[[GetRenderedReportSet|http://wiki.izenda.us/API/CodeSamples/Javascript/GetRenderedReportSet]]:** This AJAX command will get the current report set being loaded by the viewer and return the object to the callback method
-4. **[[PreLoadReportSet|/FAQ/PreLoadReportSet]]:**
-5. **[[LoadReportSet|/FAQ/LoadReportSet]]:**
-6. **[[PostLoadReportSet|/FAQ/PostLoadReportSet]]:**
-7. **[[PreExecuteReportSet|/FAQ/PreExecuteReportSet]]:**
+1. **[[InitializeReporting|http://wiki.izenda.us/FAQ/InitializeReporting]]:** This is called by default again whenever you access a reporting page.
+2. **[[ReportViewerConfig|http://wiki.izenda.us/API/CodeSamples/Javascript/ReportViewerConfig]]: (webServer)** This is an AJAX command sent by javascript and returns JSON formatted data related to the report viewer configuration.
+3. **[[GetRenderedReportSet|http://wiki.izenda.us/API/CodeSamples/Javascript/GetRenderedReportSet]]: (webServer)** This AJAX command will get the current report set being loaded by the viewer and return the object to the callback method
+  1. **[GetReportNameById|/FAQ/GetReportNameById
+4. **[[PreLoadReportSet|/FAQ/PreLoadReportSet]]:** This is run every time a report is viewed before the report set is loaded from the XML definition. You can perform various operations based on the report name.
+5. **[[LoadReportSet|/FAQ/LoadReportSet]]:** This occurs immediately after PreLoadReportSet and 
+6. **[[PostLoadReportSet|/FAQ/PostLoadReportSet]]:** You may perform post-processing of the reportSet here. The result of the post-processed reportSet will be stored as the CurrentReportSet.
+7. **[[GetRenderedReportSet|/API/CodeSamples/Javascript/GetRenderedReportSet]]: (webServer)** This is an AJAX call that will return the HTML of the report and the id of the calling method (getrenderedreportset)
+8. **[[PreExecuteReportSet|/FAQ/PreExecuteReportSet]]:**
   1. **Detail report:** The following API calls are related specifically to the detail section of the report. (The reportPart specified is "Detail")
   2. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** This call to ProcessDataSet returns the headers of the Detail table. It contains one table with as many columns as are in the report before pivot columns are added and one row.
   3. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** This call to ProcessDataSet returns the body of the Detail table. This is where post processing of report viewer data can be performed. The difference between the previous call and this one is the presence of pivot columns and more than one row.
   4. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** The next call to ProcessDataSet is to get the pivot column parameters. It will give as many values as specified by your function returns. For instance, using a Group(Year) function when your data has data for 2010, 2011, 2012, and 2013 will return a datatable with four columns at this particular time. This will repeat for as many pivot columns are on your report.
   5. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** Then we have a call to ProcessDataSet with the totals line being returned as the dataset. Generally, this table will have as many columns as the total columns on your report (plus pivot columns) and one row.
   6. **[[PostExecuteReportSet|/FAQ/PostExecuteReportSet]]:** You can perform any post processing to the actual report here. The [[ReportSet|/API/CodeSamples/ReportSet]]
-8. **[[GetFiltersData|/API/CodeSamples/Javascript/GetFiltersData]] (web server):** AJAX call 
-9. **[[GetOperatorList|/FAQ/GetOperatorList]]:** This call hooks back into your global and applies the filters on the report using the operators in the list. 
-10. **[[ReportViewerConfig|/API/CodeSamples/Javascript/RportViewer]] (web server):**
-11. **[[GetFiltersData|/FAQ/GetFiltersData]]:**
-12. **[[GetOperatorList|/FAQ/GetOperatorList]]:** This call hooks back into your global and applies the filters on the report using the operators in the list. 
+9. **[[GetFiltersData|/API/CodeSamples/Javascript/GetFiltersData]] (web server):** AJAX call 
+  1. [[ProcessEqualsSelectList|/FAQ/ProcessEqualsSelectList]]
+  2. [[ProcessDataSet|/FAQ/ProcessDataSet]]
+  3. [[GetOperatorList|/FAQ/GetOperatorList]]:** This call hooks back into your global and applies the filters on the report using the operators in the list. 
+11. **[[ReportViewerConfig|/API/CodeSamples/Javascript/RportViewer]] (web server):**
+12. **[[GetFiltersData|/API/CodeSamples/Javascript/GetFiltersData]] (webServer):** 
 13. **[[CrsDataSources|/API/CodeSamples/Javascript/CrsDataSources]] (web server):** Sends an AJAX call to the web server to get the current report set's datasources. This is used by the report viewer to get the data used in the inline filter editor.
 14. **[[GetPivotGuiData|/API/CodeSamples/Javascript/GetPivotGuiData]] (web server):** Sends an AJAX call to the web server to get the pivot data for use on the pivots tab on the viewer.
