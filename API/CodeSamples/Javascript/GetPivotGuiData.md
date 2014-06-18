@@ -8,7 +8,7 @@ The ``GetPivotGuiData`` command is passed through rs.aspx via an [[AjaxRequest|/
 
 Here is the AJAX call to use:
 
-```
+```javascript
 AjaxRequest('./rs.aspx', 'wscmd=reportviewerconfig&wsarg0=' + jq$(window).width() + '&wsarg1=' + jq$(window).height(), GotReportViewerConfig, null, 'reportviewerconfig');
 ```
 
