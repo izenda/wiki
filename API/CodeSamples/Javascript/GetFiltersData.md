@@ -8,7 +8,7 @@ The ``GetFiltersData`` command is passed through rs.aspx via an [[AjaxRequest|/A
 
 Here is the AJAX call to use:
 
-```csharp
+```javascript
 AjaxRequest('./rs.aspx', 'wscmd=getfiltersdata', GotFiltersData, null, 'getfiltersdata');
 ```
 
