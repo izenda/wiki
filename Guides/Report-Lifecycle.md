@@ -40,28 +40,21 @@ This outlines the call structure when accessing the report viewer page as it per
 1. **[[InitializeReporting|http://wiki.izenda.us/FAQ/InitializeReporting]]:** This is called by default again whenever you access a reporting page.
 2. **[[ReportViewerConfig|http://wiki.izenda.us/API/CodeSamples/Javascript/ReportViewerConfig]]: (webServer)** This is an AJAX command sent by javascript and returns JSON formatted data related to the report viewer configuration.
 3. **[[GetRenderedReportSet|http://wiki.izenda.us/API/CodeSamples/Javascript/GetRenderedReportSet]]: (webServer)** This AJAX command will get the current report set being loaded by the viewer and return the object to the callback method
-  1. **[[GetReportNameById|/FAQ/GetReportNameById]]:**
-  2. **[[PreLoadReportSet|/FAQ/PreLoadReportSet]]:** This is run every time a report is viewed before the report set is loaded from the XML definition. You can perform various pre-processing operations based on the report name.
-  3. **[[LoadReportSet|/FAQ/LoadReportSet]]:** The XML definition is loaded and the actual reportSet can be manipulated. Or custom loading operations can be implemented.
-  4. **[[PostLoadReportSet|/FAQ/PostLoadReportSet]]:** You may perform post-processing of the reportSet here. The result of the post-processed reportSet will be stored as the CurrentReportSet.
-  5. **[[PreExecuteReportSet|/FAQ/PreExecuteReportSet]]:** Occurs before rendering the reportSet to the screen.
-  6. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** This call to ProcessDataSet returns the result of the combined filters on the report.
-  7. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** This call to ProcessDataSet returns the results of the entire query with pivot columns and filters applied.
-  8. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** If grand totals are added, the ProcessDataSet method is called again to generate and return the dataset.
-  9. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** The result of the grand totals is returned in this call. Therefore, it will be a one-row dataset.
-  9. **[[PostExecuteReportSet|/FAQ/PostExecuteReportSet]]:** Allows any final touch-ups to the report to be made before pushing the report to the screen.
-8. **[[PreExecuteReportSet|/FAQ/PreExecuteReportSet]]:**
-  1. **Detail report:** The following API calls are related specifically to the detail section of the report. (The reportPart specified is "Detail")
-  2. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** This call to ProcessDataSet returns the headers of the Detail table. It contains one table with as many columns as are in the report before pivot columns are added and one row.
-  3. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** This call to ProcessDataSet returns the body of the Detail table. This is where post processing of report viewer data can be performed. The difference between the previous call and this one is the presence of pivot columns and more than one row.
-  4. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** The next call to ProcessDataSet is to get the pivot column parameters. It will give as many values as specified by your function returns. For instance, using a Group(Year) function when your data has data for 2010, 2011, 2012, and 2013 will return a datatable with four columns at this particular time. This will repeat for as many pivot columns are on your report.
-  5. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** Then we have a call to ProcessDataSet with the totals line being returned as the dataset. Generally, this table will have as many columns as the total columns on your report (plus pivot columns) and one row.
-  6. **[[PostExecuteReportSet|/FAQ/PostExecuteReportSet]]:** You can perform any post processing to the actual report here. The [[ReportSet|/API/CodeSamples/ReportSet]]
-9. **[[GetFiltersData|/API/CodeSamples/Javascript/GetFiltersData]] (web server):** AJAX call 
-  1. [[ProcessEqualsSelectList|/FAQ/ProcessEqualsSelectList]]
-  2. [[ProcessDataSet|/FAQ/ProcessDataSet]]
-  3. [[GetOperatorList|/FAQ/GetOperatorList]]:** This call hooks back into your global and applies the filters on the report using the operators in the list. 
-11. **[[ReportViewerConfig|/API/CodeSamples/Javascript/RportViewer]] (web server):**
-12. **[[GetFiltersData|/API/CodeSamples/Javascript/GetFiltersData]] (webServer):** 
-13. **[[CrsDataSources|/API/CodeSamples/Javascript/CrsDataSources]] (web server):** Sends an AJAX call to the web server to get the current report set's datasources. This is used by the report viewer to get the data used in the inline filter editor.
-14. **[[GetPivotGuiData|/API/CodeSamples/Javascript/GetPivotGuiData]] (web server):** Sends an AJAX call to the web server to get the pivot data for use on the pivots tab on the viewer.
+  1. **Detail Report:** The following steps apply to the detail report(The reportPart specified is "Detail").
+  2. **[[GetReportNameById|/FAQ/GetReportNameById]]:**
+  3. **[[PreLoadReportSet|/FAQ/PreLoadReportSet]]:** This is run every time a report is viewed before the report set is loaded from the XML definition. You can perform various pre-processing operations based on the report name.
+  4. **[[LoadReportSet|/FAQ/LoadReportSet]]:** The XML definition is loaded and the actual reportSet can be manipulated. Or custom loading operations can be implemented.
+  5. **[[PostLoadReportSet|/FAQ/PostLoadReportSet]]:** You may perform post-processing of the reportSet here. The result of the post-processed reportSet will be stored as the CurrentReportSet.
+  6. **[[PreExecuteReportSet|/FAQ/PreExecuteReportSet]]:** Occurs before rendering the reportSet to the screen.
+  7. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** If there are pivot columns in the report, this call to ProcessDataSet returns the result of the values for each pivot column group. This is used at the top of the report as column groupings.
+  8. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** This call to ProcessDataSet returns the results of the main query with pivot columns and filters applied.
+  9. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** If grand totals are added, the ProcessDataSet method is called again to generate and return column groupings for the totals line.
+  10. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** The result of the grand totals is returned in this call. Therefore, it will be a one-row dataset with pivot columns and filters taken into consideration.
+  11. **[[PostExecuteReportSet|/FAQ/PostExecuteReportSet]]:** Allows any final touch-ups to the report to be made before pushing the report to the screen.
+4. **[[GetFiltersData|/API/CodeSamples/Javascript/GetFiltersData]] (web server):** AJAX call to obtain the filters used on the CurrentReportSet. This is used to display filters on the page.
+  1. **[[GetOperatorList|/FAQ/GetOperatorList]]:** This call hooks back into your global and applies the filters on the report using the operators in the list. This is called for as many filters as the CurrentReportSet has.
+  2. **[[ProcessEqualsSelectList|/FAQ/ProcessEqualsSelectList]]:** 
+  3. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:**
+5. **[[CrsDataSources|/API/CodeSamples/Javascript/CrsDataSources]] (web server):** Sends an AJAX call to the web server to get the current report set's datasources. This is used by the report viewer to get the data used in the inline filter editor.
+  1. **[[GetOperatorList|/FAQ/GetOperatorList]]:** This is called here in order to return the possible filter operators available for each datasource returned to CrsDataSources.
+6. **[[GetPivotGuiData|/API/CodeSamples/Javascript/GetPivotGuiData]] (web server):** Sends an AJAX call to the web server to get the pivot data for use on the pivots tab on the viewer.
