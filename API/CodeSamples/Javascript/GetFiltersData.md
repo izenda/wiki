@@ -23,5 +23,15 @@ Here is the hierarchy of the object keys sent back:
       * Value
       * Values
         * [0]...[n]
+      * ExistingLabels
+        * [0]...[n]
+      * ExistingValues 
+        * [0]...[n]
+      * uid
+      * ColumnName
+      * Parameter
+      * OperatorFriendlyName
+      * Removed
+      * AgainstHiddenField
 
 GotFiltersData is a callback method that takes two parameters. The first is the returnObj and the second is the id of the called method (getfiltersdata).
