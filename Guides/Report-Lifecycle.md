@@ -40,11 +40,16 @@ This outlines the call structure when accessing the report viewer page as it per
 1. **[[InitializeReporting|http://wiki.izenda.us/FAQ/InitializeReporting]]:** This is called by default again whenever you access a reporting page.
 2. **[[ReportViewerConfig|http://wiki.izenda.us/API/CodeSamples/Javascript/ReportViewerConfig]]: (webServer)** This is an AJAX command sent by javascript and returns JSON formatted data related to the report viewer configuration.
 3. **[[GetRenderedReportSet|http://wiki.izenda.us/API/CodeSamples/Javascript/GetRenderedReportSet]]: (webServer)** This AJAX command will get the current report set being loaded by the viewer and return the object to the callback method
-  1. **[GetReportNameById|/FAQ/GetReportNameById
-4. **[[PreLoadReportSet|/FAQ/PreLoadReportSet]]:** This is run every time a report is viewed before the report set is loaded from the XML definition. You can perform various operations based on the report name.
-5. **[[LoadReportSet|/FAQ/LoadReportSet]]:** This occurs immediately after PreLoadReportSet and 
-6. **[[PostLoadReportSet|/FAQ/PostLoadReportSet]]:** You may perform post-processing of the reportSet here. The result of the post-processed reportSet will be stored as the CurrentReportSet.
-7. **[[GetRenderedReportSet|/API/CodeSamples/Javascript/GetRenderedReportSet]]: (webServer)** This is an AJAX call that will return the HTML of the report and the id of the calling method (getrenderedreportset)
+  1. **[[GetReportNameById|/FAQ/GetReportNameById]]:**
+  2. **[[PreLoadReportSet|/FAQ/PreLoadReportSet]]:** This is run every time a report is viewed before the report set is loaded from the XML definition. You can perform various pre-processing operations based on the report name.
+  3. **[[LoadReportSet|/FAQ/LoadReportSet]]:** The XML definition is loaded and the actual reportSet can be manipulated. Or custom loading operations can be implemented.
+  4. **[[PostLoadReportSet|/FAQ/PostLoadReportSet]]:** You may perform post-processing of the reportSet here. The result of the post-processed reportSet will be stored as the CurrentReportSet.
+  5. **[[PreExecuteReportSet|/FAQ/PreExecuteReportSet]]:** Occurs before rendering the reportSet to the screen.
+  6. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** This call to ProcessDataSet returns the result of the combined filters on the report.
+  7. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** This call to ProcessDataSet returns the results of the entire query with pivot columns and filters applied.
+  8. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** If grand totals are added, the ProcessDataSet method is called again to generate and return the dataset.
+  9. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** The result of the grand totals is returned in this call. Therefore, it will be a one-row dataset.
+  9. **[[PostExecuteReportSet|/FAQ/PostExecuteReportSet]]:** Allows any final touch-ups to the report to be made before pushing the report to the screen.
 8. **[[PreExecuteReportSet|/FAQ/PreExecuteReportSet]]:**
   1. **Detail report:** The following API calls are related specifically to the detail section of the report. (The reportPart specified is "Detail")
   2. **[[ProcessDataSet|/FAQ/ProcessDataSet]]:** This call to ProcessDataSet returns the headers of the Detail table. It contains one table with as many columns as are in the report before pivot columns are added and one row.
