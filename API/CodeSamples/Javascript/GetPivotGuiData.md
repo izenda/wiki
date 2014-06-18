@@ -22,7 +22,7 @@ Here is the hierarchy of object keys sent back:
   * [0]...[n]
 * FunctionNames
   * [0]...[n]
-*FunctionIds
+* FunctionIds
   * [0]...[n]
 
 GotPivotGuiData is a callback method that takes two parameters. The first is the returnObj and the second is the id of the called method (getpivotguidata).
