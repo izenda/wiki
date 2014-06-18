@@ -12,7 +12,7 @@ Izenda caches all your reports and schema information automatically per browser 
 
 ###FilteredListReports
 
-The [[AdHocConfig.FilteredListReports|http://wiki.izenda.us/FAQ/FilteredListReports]] method will return a list of reports that are guaranteed to be available to the current user.
+The [[AdHocConfig.FilteredListReports|http://wiki.izenda.us/FAQ/FilteredListReports]] method will return a list of reports that are guaranteed to be available to the current user. This means that the reports were found in storage, identified as available to the current user, successfully loaded from storage into cache, and ready for use.
 
 ###InvalidateFilteredCaches
 
