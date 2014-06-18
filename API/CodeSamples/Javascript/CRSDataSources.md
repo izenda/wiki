@@ -46,6 +46,4 @@ The GotDataSourcesList variable is a callback method that takes two arguments: t
     * DataType
   * CanSaveReport
 
-So if you want to use the returnObj, you could use the javascript standard ``returnObj["SelectionsList"][0].DbName`` statement.
-
-The id object is the name of the function (crsdadtasources).
+So if you want to use the returnObj, you could use the javascript standard ``returnObj["SelectionsList"]["Fields"][0].DbName`` statement. The id object is the name of the function (crsdadtasources).
