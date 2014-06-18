@@ -23,7 +23,7 @@ Here is a list of the object keys sent back and their default values
 |DashboardsUrl|Dashboards.aspx|		
 |InitialResults|100|
 |ReportIsReadOnly|false|
-|ReportIsViewOnlyfalse|
+|ReportIsViewOnly|false|
 |ReportIsLocked|false|
 |AllowNewFiltersInReportViewer|true|
 |AllowRTFExportFormat|false|
