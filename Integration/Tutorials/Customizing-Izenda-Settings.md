@@ -35,19 +35,43 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
 {
     //the method to be called by each of your reporting web pages in the OnPreInit() method. This will instantiate Izenda reports throughout your reporting application.
     public static void InitializeReporting() {
-        //Check to see if we've already initialized.
-        if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
-            return;
+      //Check to see if we've already initialized.
+      if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+        return;
+      bool isMultiTenant = false;
+      string role = GetUserRole();
+      AdHocSettings.CurrentUserName = (string)HttpContext.Current.Session["UserName"]; //Assumes the authenticated username is stored in a session variable
+      AdHocSettings.CurrentUserIsAdmin = (bool)HttpContext.Current.Session["IsAdmin"]; //Assumes the authenticated user's admin status is stored in a session variable
+      AdHocSettings.ShowSettingsButton = AdHocSettings.CurrentUserIsAdmin;
+      AdHocSettings.ShowModifyButton = AdHocSettings.CurrentUserIsAdmin;
+      Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+
+      if (!isMultiTenant) {
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
         //Creates a connection to Microsoft SQL Server
-        AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
-        Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+        AdHocSettings.SqlServerConnectionString = GetConnectionString();
         //Handle user specific logic
-        AdHocSettings.CurrentUserName = (string)HttpContext.Current.Session["UserName"]; //Assumes the authenticated username is stored in a session variable
-        AdHocSettings.CurrentUserIsAdmin = (bool)HttpContext.Current.Session["IsAdmin"]; //Assumes the authenticated user's admin status is stored in a session variable
-        AdHocSettings.ShowSettingsButton = AdHocSettings.CurrentUserIsAdmin;
+        AdHocSettings.CurrentUserIsAdmin = (bool)HttpContext.Current.Session
         AdHocSettings.VisibleDataSources = GetUserDataSources();
-        HttpContext.Current.Session["ReportingInitialized"] = true;
+      }
+      else {
+        string company = GetUserCompany();
+        //Set connection string per-tenant
+        AdHocSettings.SqlServerConnectionString = GetConnectionStringByCompany(company);
+        //Set the stored reports file folder path per-tenant
+        AdHocSettings.ReportsPath="\\" +  company +  "\\" + GetUserDepartment(AdHocSettings.CurrentUserName);
+        //Set table and view access
+        AdHocSettings.VisibleDataSources = GetTables(role); //get the allowed datasources based on role
+        //Set all other settings
+        if  (company=="AcmeWidget")
+        {
+          AdHocSettings.Formats["Currency"] = "{0:#,###.##}";
+          if (GetUserRole()=="PowerUser") {
+            AdHocSettings.ShowModifyButton=true;
+            AdHocSettings.AllowDeletingReports=false; 
+          }
+       }
+       HttpContext.Current.Session["ReportingInitialized"] = true;
     }
 
     // Dynamically modify the report before execution. 
