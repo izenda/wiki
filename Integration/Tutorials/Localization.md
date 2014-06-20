@@ -73,15 +73,89 @@ Let’s suppose you need Izenda Reports in French. Here is a step-by-step list o
 
 ###How To Set The Language I Want To Use?
 
-You should specify the AdHocSettings.Language setting in the code. Normally it’s done in the PostLogin() method (or ConfigureSettings() method if you’d like to all users use the same language) of CustomAdHocConfig in the Global.asax file:
+You should specify the AdHocSettings.Language setting in the code. This should be done in the [[InitializeReporting() method in the CustomAdHocConfig class in the Global.asax file. You can set this globally for all users or use logic to change the language per user or per tenant as you like.
 
-``` c#
-public override void PostLogin()  
+####Global
+
+``` csharp
+public static void InitializeReporting()  
 {
         AdHocSettings.Language = AdHocLanguage.French;
 }
 
 ```
+
+####Per Country By Tenant(Customer) ID
+
+```csharp
+public static void InitializeReporting()
+{
+      switch ( GetUserCountry()){
+        case "USA":
+        case "UK":
+        case "Ireland":
+          AdHocSettings.Language = AdHocLanguage.English;
+          break;
+        case "France":
+          AdHocSettings.Language = AdHocLanguage.French;
+          break;
+        case "Spain":
+        case "Mexico":
+        case "Venezuela":
+        case "Argentina":
+        case "Brazil":
+          AdHocSettings.Language = AdHocLanguage.Spanish;
+          break;
+        case "Germany":
+        case "Austria":
+        case "Poland":
+        case "Switzerland":
+          AdHocSettings.Language = AdHocLanguage.German;
+          break;
+        case "Russia":
+          AdHocSettings.Language = AdHocLanguage.Russian;
+          break;
+        case "Japan":
+          AdHocSettings.Language = AdHocLanguage.Japanese;
+          break;
+        case "China":
+          AdHocSettings.Language = AdHocLanguage.ChinesePeoplesRepublicofChina;
+          break;
+        case "Taiwan":
+          AdHocSettings.Language = AdHocLanguage.ChineseTaiwan;
+          break;
+        case "Italy":
+          AdHocSettings.Language = AdHocLanguage.Italian;
+          break;
+        case "South Korea":
+        case "North Korea":
+        case "Korea":
+          AdHocSettings.Language = AdHocLanguage.Korean;
+          break;
+        case "Belgium":
+          AdHocSettings.Language = AdHocLanguage.Dutch;
+          break;
+        default:
+          AdHocSettings.Language = AdHocLanguage.English;
+          break;
+      }
+}
+
+public static string GetUserCountry() {
+      String sql = string.Format(@"SELECT [dbo].[Customers].[Country] FROM [dbo].[Customers] WHERE [dbo].[Customers].[CustomerID] = '{0}'", AdHocSettings.CurrentUserTenantId);
+      SqlCommand cmd = new SqlCommand(sql);
+      DataSet ds = new DataSet();
+      using (SqlConnection connection = new SqlConnection(AdHocSettings.SqlServerConnectionString)) {
+        connection.Open();
+        cmd.Connection = connection;
+        IDbDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+        dataAdapter.Fill(ds);
+      }
+      return ds.Tables[0].Rows.Count == 0 ? string.Empty : ds.Tables[0].Rows[0][0].ToString();
+}
+```
+
+In the above example, CurrentUserTenantID will be set to a company ID (such as ALFKI) and the country will be obtained and the language set.
 
 ###Can I Change Some Or All Of The Resources?
 
