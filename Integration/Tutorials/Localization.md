@@ -52,110 +52,16 @@ The language pack consists of a set of \*.resx files inside “Resources” fold
 
 ![](http://wiki.izenda.us/Localization/resources_folder_2.png)
 
-###Set up localization in the code
-
-You can set up the localization language almost anywhere in the code by specifying the AdHocSettings.Language setting.
-But normally you would like to set localization in the PostLogin() method of the CustomAdHocConfig class in the Global.asax file because different users might like to use different languages:
-
-``` c#
-public override void PostLogin()
-{
-        AdHocSettings.Language = AdHocLanguage.French;
-}
-```
-
-Let’s suppose you need Izenda Reports in French. Here is a step-by-step list of actions you need to perform to accomplish this:
+Here is a step-by-step list of actions you need to perform to accomplish this:
   1. Locate the “bin” directory inside the folder with your website. It should contain file named “Izenda.AdHoc.dll”.
   2. Create a “Resources” folder there. So the target folder will be “..\bin\Resources”
   3. Refer to section [What Languages Are Included?](#IncludedLanguages) and get from localization pack the *.resx with name corresponding to the language you need (in our case this will be “French.resx” file).
   4. Copy that file from the localization pack into the previously created “..\bin\Resources” folder of your website (in our case the full file path will be “..\bin\Resources\French.resx”).
   5. Replace your license key with one supporting localization. Please contact support@izenda.com or your account manager for details.
 
-###How To Set The Language I Want To Use?
+###How To Set The Language I Want To Use In Code?
 
-You should specify the AdHocSettings.Language setting in the code. This should be done in the [[InitializeReporting() method in the CustomAdHocConfig class in the Global.asax file. You can set this globally for all users or use logic to change the language per user or per tenant as you like.
-
-####Global
-
-``` csharp
-public static void InitializeReporting()  
-{
-        AdHocSettings.Language = AdHocLanguage.French;
-}
-
-```
-
-####Per Country By Tenant(Customer) ID
-
-```csharp
-public static void InitializeReporting()
-{
-      switch ( GetUserCountry()){
-        case "USA":
-        case "UK":
-        case "Ireland":
-          AdHocSettings.Language = AdHocLanguage.English;
-          break;
-        case "France":
-          AdHocSettings.Language = AdHocLanguage.French;
-          break;
-        case "Spain":
-        case "Mexico":
-        case "Venezuela":
-        case "Argentina":
-        case "Brazil":
-          AdHocSettings.Language = AdHocLanguage.Spanish;
-          break;
-        case "Germany":
-        case "Austria":
-        case "Poland":
-        case "Switzerland":
-          AdHocSettings.Language = AdHocLanguage.German;
-          break;
-        case "Russia":
-          AdHocSettings.Language = AdHocLanguage.Russian;
-          break;
-        case "Japan":
-          AdHocSettings.Language = AdHocLanguage.Japanese;
-          break;
-        case "China":
-          AdHocSettings.Language = AdHocLanguage.ChinesePeoplesRepublicofChina;
-          break;
-        case "Taiwan":
-          AdHocSettings.Language = AdHocLanguage.ChineseTaiwan;
-          break;
-        case "Italy":
-          AdHocSettings.Language = AdHocLanguage.Italian;
-          break;
-        case "South Korea":
-        case "North Korea":
-        case "Korea":
-          AdHocSettings.Language = AdHocLanguage.Korean;
-          break;
-        case "Belgium":
-          AdHocSettings.Language = AdHocLanguage.Dutch;
-          break;
-        default:
-          AdHocSettings.Language = AdHocLanguage.English;
-          break;
-      }
-}
-
-public static string GetUserCountry() {
-      String sql = string.Format(@"SELECT [dbo].[Customers].[Country] FROM [dbo].[Customers] WHERE [dbo].[Customers].[CustomerID] = '{0}'", AdHocSettings.CurrentUserTenantId);
-      SqlCommand cmd = new SqlCommand(sql);
-      DataSet ds = new DataSet();
-      using (SqlConnection connection = new SqlConnection(AdHocSettings.SqlServerConnectionString)) {
-        connection.Open();
-        cmd.Connection = connection;
-        IDbDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-        dataAdapter.Fill(ds);
-      }
-      return ds.Tables[0].Rows.Count == 0 ? string.Empty : ds.Tables[0].Rows[0][0].ToString();
-}
-```
-
-In the above example, CurrentUserTenantID will be set to a company ID (such as ALFKI) and the country will be obtained and the language set.
+You should specify the [[AdHocSettings.Language|/API/CodeSamples/Language]]. This should be done in the [[InitializeReporting() method in the CustomAdHocConfig class in the Global.asax file. You can set this globally for all users or use logic to change the language per user or per tenant as you like.
 
 ###Can I Change Some Or All Of The Resources?
 
