@@ -1,27 +1,13 @@
-#How do I enable basic report sharing?
+#Report Sharing
 
 [[_TOC_]]
 
-Basic report sharing allows users to decide if they want to share a report or keep it in their private sandbox. It also enables sharing reports in read-only mode which act as templates. This mode allows other users to load a report but not overwrite it. Report creators can find these features in the "Misc" tab of the report designer. In order to use basic report sharing, you will need to set the username and admin status. This needs to happen as part of your application's post-login process. These settings should be set right after the user credentials are authenticated. This example shows the specific code that must called to enable basic report sharing.
+##Question
 
-```c#
-public override void PostLogin()
-{  
-	Izenda.AdHoc.AdHocSettings.CurrentUserName = "Bob";  
-	Izenda.AdHoc.AdHocSettings.CurrentUserIsAdmin =  GetAdminStatus(AdHocSettings.CurrentUserName);
-}
-```
+How do I enable basic report sharing?
 
-An essential part of database security is limiting access to tables and views. Izenda Reports provides a setting that allows you to set which tables and views are visible as datasources to your users.
+##Answer
 
-```c#
-public override void PostLogin()
-{  
-	if(GetDept(AdHocSettings.CurrentUserName).Equals("Sales"))   
-		AdHocSettings.VisibleDataSources = new string[]    {"Products", "Categories", "Orders"};  
-	else
-		AdHocSettings.VisibleDataSources = new string[] {"Receivables"};  
-}
-```
+Basic report sharing allows users to decide if they want to share a report or keep it in their private sandbox. It also enables sharing reports in read-only mode which act as templates. This mode allows other users to load a report but not overwrite it. Report creators can find these features in the "Misc" tab of the report designer. In order to use basic report sharing, you will need to set the [[CurrentUserName|/API/CodeSamples/CurrentUserName]], [[CurrentUserRoles|/API/CodeSamples/CurrentUserRoles]], [[CurrentUserIsAdmin|/API/CodeSamples/CurrentUserIsAdmin]], and the [[SharedWithValues|/API/CodeSamples/SharedWithValues]] setting for your users. 
 
-By doing this, you can allow one set of users (or a company) to see some tables, and another set of users to see different tables.
+The CurrentUserName setting will enable all reports created by this user to take ownership of the reports. The CurrentUserRoles sets what other reports this user is allowed to see. If CurrentUserIsAdmin is true, then the user will have full access to all reports within his/her Tenant setting. The SharedWithValues property will  set the values in the **Shared With** dropdown on the [[Misc tab|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights]] of the Report Designer. These can be usernames or role names.
