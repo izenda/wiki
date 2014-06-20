@@ -8,7 +8,7 @@ The Language setting will change the language used within Izenda reports. This c
 
 **Default Value:** AdHocLanguage.English
 
-###Global.asax (C♯)
+##Global.asax (C♯)
 
 ``` csharp
 //main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
