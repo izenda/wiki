@@ -4,7 +4,7 @@
 
 ##Process
 
-This code sample allows a user to create reports using API calls. Any tables added to the **JoinedTables** list must be in the current user's [[VisibleDataSources|/API/CodeSamples/VisibleDataSources]](usually handled in [[ConfigureSettings|/FAQ/ConfigureSettings]] or [[PostLogin|/FAQ/PostLogin]]) before the **CurrentReportSet** is processed. When a report is created this way, a Response.Redirect() call to the Report Viewer page will allow the user to view the report. Alternately, you can redirect to **rs.aspx** using the [[output query string parameter|/FAQ/Questions/Query-String-Keys-for-rs.aspx]] and create fully formed PDFs and Excel-formatted reports with the click of a button.
+This code sample allows a user to create reports using API calls. Any tables added to the **JoinedTables** list must be in the current user's [[VisibleDataSources|/API/CodeSamples/VisibleDataSources]] before the **CurrentReportSet** is processed. You can do this in [[InitializeReporting|/FAQ/InitializeReporting]]. When a report is created this way, a call to the Report Viewer page will allow the user to view the report. Alternately, you can redirect to **rs.aspx** using the [[output query string parameter|/FAQ/Questions/Query-String-Keys-for-rs.aspx]] and create fully formed PDFs and Excel-formatted reports with the click of a button.
 
 ###C♯ Sample
 
