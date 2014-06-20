@@ -61,7 +61,7 @@ Here is a step-by-step list of actions you need to perform to accomplish this:
 
 ###How To Set The Language I Want To Use In Code?
 
-You should specify the [[AdHocSettings.Language|/API/CodeSamples/Language]]. This should be done in the [[InitializeReporting() method in the CustomAdHocConfig class in the Global.asax file. You can set this globally for all users or use logic to change the language per user or per tenant as you like.
+You should specify the [[AdHocSettings.Language|/API/CodeSamples/Language]]. This should be done in the [[InitializeReporting()|/FAQ/InitializeReporting]] method in the CustomAdHocConfig class in the Global.asax file. You can set this globally for all users or use logic to change the language per user or per tenant as you like.
 
 ###Can I Change Some Or All Of The Resources?
 
