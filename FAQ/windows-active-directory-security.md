@@ -46,7 +46,7 @@ Imports System.Security.Principal;
    implementation code
 */
 
-public override void PostLogin()
+public static void InitializeReporting()
 {
 	WindowsIdentity user = WindowsIdentity.GetCurrent();
 	AdHocSettings.CurrentUserName = user.Name;
@@ -60,7 +60,7 @@ Using System.Security.Principal
 
 'implementation code
 
-Public Overrides Sub PostLogin()
+Public Shared Sub InitializeReporting()
 	Dim user As WindowsIdentity = WindowsIdentity.GetCurrent()
 	AdHocSettings.CurrentUserName = user.Name
 	AdHocSettings.CurrentUserIsAdmin = New WindowsPrincipal(user).IsInRole(WindowsBuiltInRole.Administrator)
