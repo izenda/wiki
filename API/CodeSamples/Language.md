@@ -8,7 +8,7 @@ The Language setting will change the language used within Izenda reports. This c
 
 **Default Value:** AdHocLanguage.English
 
-####Global.asax (C♯)
+###Global.asax (C♯)
 
 ``` csharp
 //main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
@@ -28,6 +28,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
   }
 }
 ```
+
 ##Global.asax (VB.NET)
 
 ```visualbasic
@@ -49,7 +50,7 @@ Public Class CustomAdHocConfig
 End Class
 ```
 
-####Per Country By Tenant(Customer) ID
+##Per Country By Tenant(Customer) ID
 
 ```csharp
 public static void InitializeReporting()
@@ -121,7 +122,7 @@ public static string GetUserCountry() {
 
 In the above example, CurrentUserTenantID will be set to a company ID (such as ALFKI) and the country will be obtained and the language set.
 
-###Screenshots
+##Screenshots
 
 ####French
 
