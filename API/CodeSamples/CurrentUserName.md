@@ -22,11 +22,8 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     //Creates a connection to Microsoft SQL Server
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+    AdHocSettings.CurrentUserName = (String)HttpContext.Current.Session["UserName"]; //The relevant settign
     HttpContext.Current.Session["ReportingInitialized"] = true;
-  }
-
-  public override void PostLogin() {
-    AdHocSettings.CurrentUserName = (String)HttpContext.Current.Session["UserName"];
   }
 }
 ```
@@ -46,11 +43,8 @@ Public Class CustomAdHocConfig
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         AdHocSettings.AdHocConfig = New CustomAdHocConfig()
+        AdHocSettings.CurrentUserName = HttpContext.Current.Session("UserName").ToString() 'The relevant setting
         HttpContext.Current.Session("ReortingInitialized") = True
-    End Sub
-    
-    Public Overrides Sub ConfigureSettings()
-        AdHocSettings.CurrentUserName = HttpContext.Current.Session("UserName").ToString()
     End Sub
 End Class
 ```
