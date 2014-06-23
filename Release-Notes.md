@@ -1,4 +1,28 @@
 [[_TOC_]]
+# 6.7.0.269 (June 23, 2014)
+* FB-14182: Added possibility to use XML format in scheduler
+* FB-14430: Fixed dashboard crash when report is modified before save
+* FB-14520: Fixed DIV/0 formatting when OData connection is used
+* FB-13768: Fixed Filters and Fields adding in IE8
+* FB-14486: Fixed report crash when tenantField is specified without any tenants
+* FB-14294: Allow to remove all fields from the report in the Viewer
+* FB-14296: Fixed filters on the Dashboards page
+* FB-14328: Fixed erroneous removal field from "to be grouped" collection if it has itself in expression, and aggregate function is selected
+* FB-13937: API INFO logging implementation
+* FB-14361: Fixed Line HTML Chart export (Trend chart and Pareto Bar chart)
+* FB-14336: Fixed missing SqlOverride value in filters when ExistentValuesList for operators like Equals(Select) is generated with taking into account previous filters
+* FB-13449: Improve embedded sub-reports and column grouping/pivots support in the CSV output
+* FB-13739: Added information about records amount in dataset which is returned by GetDataSet, to log at INFO level
+* FB-14377: Do not crop data labels on the HTML Trend chart
+* FB-14217: Fixed filters on calculated columns in the Viewer
+* FB-14257: Replace spaces with underscores in the XML output
+* FB-14366: Export only Detail and Summary parts to CSV instead of throwing exception if other parts contains in the ReportSet
+* FB-14370: Added a setting to configure hard-drive cache location
+* FB-14337: Fixed count of the Share With drop-downs in Report and Dashboard Designers
+* FB-14265: Made text truncated and last few letters fade to white if label is too long and text orientation is vertical
+* FB-14321: Fixed issue with license key when StaticSharedStorage is used
+* FB-14145: Do not attach ColumnGroup to the Field Description in the Report Viewer
+
 # 6.7.0.268 (June 4, 2014)
 * FB-13960: Fixed issue with displaying base64-encoded images
 * FB-14116: Fixed enable/disable subtotal logic in the Viewer
