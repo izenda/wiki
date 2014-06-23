@@ -4,7 +4,9 @@
 
 ##About
 
-Gets or sets the CSS stylesheet URL for the Dashboards.aspx page. 
+Gets or sets the CSS stylesheet URL for the Dashboards.aspx page. This can be an internal library reference or an external CSS file reference.
+
+**Default Value:** rs.aspx?css=dashboard
 
 ##Global.asax (C♯)
 
