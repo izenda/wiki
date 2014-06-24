@@ -28,6 +28,8 @@ Building reports with Izenda is intuitive and easy once the tool is connected to
 
 ##[[Section 2 - Quick Start|/Guides/ReportDesign/2.0 Quick Start]]
 
+This lesson focuses on creating simple reports using the basic controls in the Report Designer.
+
 ##[[Section 3 - Data Sources Tab|/Guides/ReportDesign/3.0 Data Sources tab]]
 
 This lesson focuses on how to use the Data Sources tab in the Report Designer and its capabilities and features in Izenda Reports and Dashboards.
