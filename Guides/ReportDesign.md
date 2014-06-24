@@ -2,6 +2,26 @@
 
 [[_TOC_]]
 
+##Preface
+
+Izenda is a reporting and business intelligence platform that connects directly to relational and non-relational data sources.  Through its .NET API, it loosely couples with Microsoft-based applications to integrate with your current security, branding, and navigation.
+
+Izenda Reports enables you to easily access your databases directly and quickly transform raw data into useful and readily understood information. 
+
+With Izenda, you can: 
+
+* Extract the information you need from one or more related tables. 
+* Format data into tables, reports, charts, pivots, and gauges. 
+* View the resulting report in your Web-browser and then print it. 
+* Export reports in several formats, including Microsoft Word, Microsoft Excel, and Adobe PDF.
+* Automate many processes through scheduling, sharing, alerting, batch processing, and caching
+* Implement custom layout reports through Izenda Forms
+* Develop user-defined or custom Dashboards and Maps
+
+Izenda’s point-and-click interface is designed for the standard business user, with Advanced options available for those with greater access and skill.  Many users will never design reports, but simply make modifications to current core reports, or use drill-downs to start at a high level overview and click through to get to the required information.  
+
+This user manual will step you through each simple process in using Izenda, and provide you with what you need to know to create your queries and reports. Any data that your application developer has included in the database can be accessible to you in creating ad hoc reports.
+
 ##[[Section 1 - Introduction|/Guides/ReportDesign/1.0 Introduction]]
 
 Building reports with Izenda is intuitive and easy once the tool is connected to your data source. Here is a quick explanation of all  you need to do to create a report once Izenda is installed.
