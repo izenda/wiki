@@ -73,7 +73,7 @@ End Sub
 
 ###Authenticating Over OData
 
-The process for authenticating a user over an OData connection is slightly different in the code that must be implemented to enable this. A sample is shown below.
+As of version 6.7.0.265, you can authenticate OData connections. The process for authenticating a user over an OData connection is slightly different in the code that must be implemented to enable this. A sample is shown below.
 
 ```csharp
 public class CustomAdHocConfig : FileSystemAdHocConfig {
