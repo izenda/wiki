@@ -1,4 +1,10 @@
 [[_TOC_]]
+# 6.7.0.270 (June 26, 2014)
+* FB-14141: Fixed 'Year and Quarter' function in MySQL Driver
+* FB-14628: Show charts indexes in the "Report order" section
+* FB-14403: Fixed conflicts between several changes in the Expression behavior
+* FB-14467: Boolean operators support added to the Expression feature
+
 # 6.7.0.269 (June 23, 2014)
 * FB-14182: Added possibility to use XML format in scheduler
 * FB-14430: Fixed dashboard crash when report is modified before save
