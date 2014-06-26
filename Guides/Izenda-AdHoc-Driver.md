@@ -391,3 +391,7 @@ You can then set the AdHocContext.Driver property to your CustomFusionDriver and
 ```csharp
 AdHocContext.Driver = new CustomFusionDriver();
 ```
+
+###Implementing OAuth2 Security
+
+Optionally, you can use your CustomFusionDriver to authenticate users using the [[OAuth2 spec|http://oauth.net/2/]] standards. You can find out more information about the customizations that need to exist in your CustomFusionDriver [[from this link|http://wiki.izenda.us/FAQ/windows-active-directory-security#Authenticating-Over-OData]]
