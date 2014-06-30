@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the default culture for Ad Hoc. Note: use this only in special cases. Normally you should use Language setting for localization, see links below: 
+Gets or sets the default culture for Ad Hoc. Note: use this only in special cases, like when you want to use the date formats of a culture other than your own. Normally you should use Language setting for localization, see links below: 
 
 [[Language|/API/CodeSamples/Language]]
 
