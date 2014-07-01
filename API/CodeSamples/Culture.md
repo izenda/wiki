@@ -10,6 +10,8 @@ Gets or sets the default culture for Ad Hoc. Note: use this only in special case
 
 [[Izenda Language Pack|http://wiki.izenda.us/Integration/Tutorials/Localization]]
 
+[[A list of valid culture codes|http://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx]]
+
 ##Global.asax (C♯)
 
 ```csharp
