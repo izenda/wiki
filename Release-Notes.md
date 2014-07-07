@@ -1,4 +1,23 @@
 [[_TOC_]]
+# 6.7.0.271 (July 7, 2014)
+* FB-14428: Made stacked pie chart really stacked
+* FB-14712: Fixed Legend and Stacked Chart properties auto-selection
+* FB-14131: Fixed number of first week in year in mysql DB
+* FB-14711: Fixed issues with drill-down reports in HTML Bar Chart caused by FB-14265
+* FB-14427: Fixed labels positioning in highchart piecharts with separator
+* FB-14396: Fixed not showing highcharts in pdf export due to missing scripts
+* FB-14392: Fixed wide charts cutoff in export to word/excel
+* FB-14053: FieldCollection getter by column name implemented
+* FB-14710: Providing backward compatibility in behavior of ConnectionOpened
+* FB-14710: Turned back lost virtual method
+* FB-14429: Made charts 100% wide in pdf export
+* FB-14623: Improved automatically page breaks in PDF print when Multi Level VG style is used
+* FB-14561: Added possibility for easy pagination controls customization
+* FB-14603: Fixed calculated fields filters if LEFT JOIN is used
+* FB-13988: Fixed Gauges drill-down reports
+* FB-14308: Fixed Stored Procedures with a schema name part adding
+* FB-13916: Added VisibleDataSources multiple schemes support for Oracle connections
+
 # 6.7.0.270 (June 26, 2014)
 * FB-14141: Fixed 'Year and Quarter' function in MySQL Driver
 * FB-14628: Show charts indexes in the "Report order" section
