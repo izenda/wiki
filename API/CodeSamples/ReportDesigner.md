@@ -120,3 +120,7 @@ Alternately, you can use the [[CssUrl|http://wiki.izenda.us/FAQ/Questions/Overri
   </div>
 </asp:Content>
 ```
+
+##Default Sharing Rights
+
+You can specify which of the options in the default sharing rights box is the default by setting [[DefaultSharingRights|/API/CodeSamples/DefaultSharingRights]] to your desired value.
