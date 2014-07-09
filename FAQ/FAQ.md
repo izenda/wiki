@@ -75,6 +75,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How do I use Windows Active Directory for security?| FAQ/windows-active-directory-security]]
 - [[How Do I Apply Security to Scheduled Reports?|/FAQ/Questions/Applying-Security-to-Scheduled-Reports]]
 - [[How Can I Authenticate Against a Hash Sent Via Query String?|/FAQ/Questions/Authenticating-via-hash]]
+- [[How Can I Prevent Other Users From Overwriting My Reports?|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights]]
 
 ##Settings
 
