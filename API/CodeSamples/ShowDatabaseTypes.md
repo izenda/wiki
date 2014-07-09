@@ -6,6 +6,8 @@
 
 Gets or sets the value indicating whether the data types of your datasource columns should be shown next to the name in the Field dropdown menu. This can help provide users with a more comprehensive look at which columns can be concatenated or have arithmetic functions performed on them. This can also be helpful to set for administrators only. 
 
+**Default Value:** false
+
 ##Global.asax (C♯)
 
 ```csharp
