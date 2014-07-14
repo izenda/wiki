@@ -1,4 +1,14 @@
 [[_TOC_]]
+# 6.7.0.272 (July 14, 2014)
+* FB-14813: Minor fixes in Designer UI. CSS classes added to some controls in the Designer for easier customization.
+* FB-13982: Secondary ddk implemented.
+* FB-14224: Columns Width property added to the Report
+* FB-14309: Fixed YAxis rounding for bar and trend chart. There was wrong values when selected value format "0,000".
+* FB-13449: Fixed incorrect CSV export reports with several embedded sub-reports.
+* FB-14674: Improved reliability of bulkCsv export
+* FB-14546: Fixed issues with table borders in XLS and DOC exports
+* FB-14725: Enable CSV export for Dashboards
+
 # 6.7.0.271 (July 7, 2014)
 * FB-14428: Made stacked pie chart really stacked
 * FB-14712: Fixed Legend and Stacked Chart properties auto-selection
