@@ -2,7 +2,7 @@
 # 6.7.0.272 (TBD)
 * FB-14548: Unified internal references to jquery as alias jq
 * FB-14813: Minor fixes in Designer UI CSS classes added to some controls in the Designer for easier customization
-* FB-13982: Secondary ddk implemented
+* FB-13982: Implemented ability to utilize multiple or alternate DrillDown keys for sub-reports.
 * FB-14224: Columns Width property added to the Report
 * FB-14309: Fixed Y-Axis rounding for bar and trend chart. There was wrong values when selected value format "0,000".
 * FB-13449: Fixed incorrect CSV export reports with several embedded sub-reports
