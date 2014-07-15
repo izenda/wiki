@@ -1,4 +1,4 @@
-When updating to Izenda **_v6.7.0.272_** there are new changes to the _ReportDesigner.aspx_ file at the root of a standard Izenda deployment.
+When updating to Izenda **_v6_7_0_272_** there are new changes to the _ReportDesigner.aspx_ file at the root of a standard Izenda deployment.
 
 This file is not included with your Maintenance update - so there are two ways to update this to be compatible into the future:
 
