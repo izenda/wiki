@@ -8,6 +8,6 @@ This file is not included with your Maintenance update - so there are two ways t
 
 2) Updtae the ReportDesigner page manually:
 
-  A) Open ReportDesigner.aspx page
+* A) Open ReportDesigner.aspx page
 
-  B) Replace ``$`` with ``jq$`` in the line ``$(document).ready(function() {``
+* B) Replace ``$`` with ``jq$`` in the line ``$(document).ready(function() {``
