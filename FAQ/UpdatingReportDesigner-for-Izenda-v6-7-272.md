@@ -6,7 +6,7 @@ This file is not included with your Maintenance update - so there are two ways t
 
 **--OR--**
 
-2) Update the ReportDesigner.aspx page manually:
+2) Update the _ReportDesigner.aspx_ page manually:
 
 * Open _ReportDesigner.aspx_ page within Notepad++, Visual Studio or another code tool.
 
