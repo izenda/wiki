@@ -2,7 +2,7 @@ When updating to Izenda v6.7.0.272 there are new changes to the ReportDesigner.a
 
 This file is not included with your Maintenance update - so there are two ways to update this.
 
-1) Download the full Izenda RI at  http://izenda.com/Site/DownloadComplete.aspx?msgId=3 and update ReportDesigner.aspx to the newer copy.
+1) Download the full Izenda RI at  http://izenda.com/Site/DownloadComplete.aspx?msgId=3 and update your ReportDesigner.aspx to the newer copy.
 
 --OR--
 
