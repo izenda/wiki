@@ -6,9 +6,9 @@ This file is not included with your Maintenance update - so there are two ways t
 
 **--OR--**
 
-2) Update the ReportDesigner page manually:
+2) Update the ReportDesigner.aspx page manually:
 
-* Open _ReportDesigner.aspx_ page
+* Open _ReportDesigner.aspx_ page within Notepad++, Visual Studio or another code tool.
 
 * Replace the character ``$`` with ``jq$`` in the line ``$(document).ready(function() {``
 
