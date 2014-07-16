@@ -1,5 +1,5 @@
 [[_TOC_]]
-# 6.7.0.272 (TBD)
+# 6.7.0.272 (July 15, 2014)
 * FB-14548: Unified internal references to jquery as alias jq
 * FB-14813: Minor fixes in Designer UI CSS classes added to some controls in the Designer for easier customization
 * FB-13982: Implemented ability to utilize multiple or alternate DrillDown keys for sub-reports.
