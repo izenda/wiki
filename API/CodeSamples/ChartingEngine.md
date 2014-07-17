@@ -3,7 +3,7 @@
 [[_TOC_]]
 
 ##About
-Sets the charting engine to be DundasCharts or HTMLCharts.
+Gets or sets the charting engine to be DundasCharts or HTMLCharts.
 
 **Default Value:** The Global.asax file in C# is defaulted to be HTMLCharts.  If left unspecified in the global.asax file, it will resort to DundasCharts, which is the default in the Izenda DLL.  For VisualBasic, nothing is defaulted in the Global.asax file, so it is defaulted to DundasCharts.
 
@@ -32,7 +32,7 @@ public class CustomAdHocConfig : FileSystemAdHocConfig {
 
 ```
 
-##Global.asax (VisualBasic)
+##Global.asax (VB.net)
 ```visualbasic
 
  <Serializable()> Public Class CustomAdHocConfig
