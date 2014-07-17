@@ -3,7 +3,7 @@
 [[_TOC_]]
 
 ##About 
-Changes the setting that displays a "horizontal" checkbox in the chart editor tab.  When the box is checked, bar charts will run horizontally instead of vertically.  
+Gets or sets access to the "horizontal" checkbox in the chart editor tab.  When the box is checked, bar charts will run horizontally instead of vertically.  
 
 **Default Value:** The default value is set to true, which displays a "Horizontal" check box in the chart editor page.
 
@@ -31,7 +31,7 @@ public class CustomAdHocConfig : FileSystemAdHocConfig {
 
 ```
 
-##Global.asax (VisualBasic)
+##Global.asax (VB.net)
 ```visualbasic
 
  Inherits FileSystemAdHocConfig
