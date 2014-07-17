@@ -32,6 +32,7 @@ public class CustomAdHocConfig : FileSystemAdHocConfig {
 
 ```
 
+##Global.asax (VisualBasic)
 ```visualbasic
 
  <Serializable()> Public Class CustomAdHocConfig
