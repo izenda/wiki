@@ -141,3 +141,32 @@ public static void InitializeReporting()
 	}
 }
 ```
+### Preventing URL Cross Scripting
+
+In order to make sure a URL doesn't allow JavaScript injection, you must make sure that in your web.config that a page element has the validateRequest attribute set to true as you see 
+
+Request Validation Source: [MSDN Request Validation](http://msdn.microsoft.com/en-us/library/hh882339%28v=vs.110%29.aspx)
+Modified Webconfig Source: http://archives.izenda.us/ri/webforms-cs.zip
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <system.web>
+    <compilation debug="true">
+    </compilation>
+    <!-- Needed on .NET 4.0
+      <httpRuntime requestValidationMode="2.0" />
+    -->
+    <pages **validateRequest="true"** enableEventValidation="false" viewStateEncryptionMode="Never" />
+    <customErrors mode="Off">
+      <error statusCode="403" redirect="NoAccess.htm" />
+      <error statusCode="404" redirect="FileNotFound.htm" />
+    </customErrors>
+  </system.web>
+  <system.webServer>
+    <staticContent>
+      <remove fileExtension=".json" />
+      <mimeMap fileExtension=".json" mimeType="application/json" />
+    </staticContent>
+  </system.webServer>
+```
