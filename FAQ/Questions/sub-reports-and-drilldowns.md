@@ -27,3 +27,7 @@ Gauges can also accept sub-reports and will use the Name field in order to selec
 ###Sub-reports on forms
 
 Finally, you can choose to use sub-reports in your FORMS report too. You can see the [[Izenda Forms|http://wiki.izenda.us/Guides/ReportDesign/14.0-Izenda-FORMS#14.3-Advanced-FORMS-Concepts]] section for more information about this feature. Drilldowns are defined in two ways, described in the article above. Sub-reports that you specify in the form with a declaration such as "[subreports/top products by state]" do not get a drilldown key and will be treated as a stand-alone report. You can reference the column alias in order to use drilldown key driven sub-reports.
+
+###Using a URL instead of a sub-report
+
+In addition to drilling down to a sub-report, you can also explicitly define a URL to open. This can be an external URL or an internal URL to the reporting application. You can use field brackets in the URL as well to pass data through query string parameters. e.g. ReportViewer.aspx?rn=Budget&ddkvalue=[OrderID]&ddkvalue2=[ShipCountry]
