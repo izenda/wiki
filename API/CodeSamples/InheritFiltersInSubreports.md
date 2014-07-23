@@ -58,4 +58,4 @@ AdHocSettings.InheritFiltersInSubreports = True
 
 AdHocSettings.InheritFiltersInSubreports = False
 
-![]()
+![](/API/CodeSamples/InheritFiltersInSubreports/InheritFiltersInSubreport2.png)
