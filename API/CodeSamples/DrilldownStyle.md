@@ -16,7 +16,7 @@ Currently, the valid keys are:
 * EmbeddedDetail
 * DetailLinkPopup
 
-Default Value: 
+**Default Value**: 
 * {object[4]}
   * {Izenda.AdHoc.DetailFormat}
   * {Izenda.AdHoc.DetailFormat}
