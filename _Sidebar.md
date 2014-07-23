@@ -22,7 +22,7 @@
 * [Guide To Report Design](/Guides/ReportDesign)
 * [Example Dashboard](http://demo2.izenda.us/bi/Dashboards.aspx?rn=Dashboard)
 * [Training Videos](http://www.izenda.com/Site/KB/Training/58)
-* [The AdHocSettings class](http://www.izenda.com/Site/KB/Training/93)
+* [[The AdHocSettings class|/API/AdHocSettings]]
 * [Making Custom Forms Video](http://www.youtube.com/watch?v=5b2axJlgdFs)
 
 ---
