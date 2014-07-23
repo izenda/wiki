@@ -17,11 +17,11 @@ Currently, the valid keys are:
 * DetailLinkPopup
 
 Default Value: 
-{object[4]}
-    [0]: {Izenda.AdHoc.DetailFormat}
-    [1]: {Izenda.AdHoc.DetailFormat}
-    [2]: {Izenda.AdHoc.EmbeddedDetailFormat}
-    [3]: {Izenda.AdHoc.DetailLinkPopupFormat}
+* {object[4]}
+  * {Izenda.AdHoc.DetailFormat}
+  * {Izenda.AdHoc.DetailFormat}
+  * {Izenda.AdHoc.EmbeddedDetailFormat}
+  * {Izenda.AdHoc.DetailLinkPopupFormat}
 
 ##Global.asax (C♯)
 
