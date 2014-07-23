@@ -30,4 +30,8 @@ Finally, you can choose to use sub-reports in your FORMS report too. You can see
 
 ###Using a URL instead of a sub-report
 
-In addition to drilling down to a sub-report, you can also explicitly define a URL to open. This can be an external URL or an internal URL to the reporting application. You can use field brackets in the URL as well to pass data through query string parameters. e.g. ReportViewer.aspx?rn=Budget&ddkvalue=[OrderID]&ddkvalue2=[ShipCountry]
+In addition to drilling down to a sub-report, you can also explicitly define a URL to open. This can be an external URL or an internal URL to the reporting application. You can use field brackets in the URL as well to pass data through query string parameters. e.g. **ReportViewer.aspx?rn=Subreport&master=MainReport&ddkvalue=[OrderID]&ddkvalue2=[ShipCountry]**. 
+
+###Settings applicable to drilldowns
+* [[InheritFiltersInSubreports|/API/CodeSamples/InheritFiltersInSubreports]]
+* [[DrilldownStyle|/API/CodeSamples/DrilldownStyle]]
