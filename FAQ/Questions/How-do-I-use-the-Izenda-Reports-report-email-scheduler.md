@@ -67,8 +67,6 @@ To test this, go back to a report you wish to schedule and click on it. Click th
 * Navigate to the rs.aspx page in the application (for example, http://yourhost/yourapp/rs.aspx). Now add this to the end of the URL, ?run_scheduled_reports=30 (30 equals the frequency in minutes it will run). The url in the browser should read: http://yourhost/yourapp/rs.aspx?run_scheduled_reports=30
 * This will return a list of scheduled reports into the browser window. In either case, you should receive the link to your scheduled report in your e-mail.
 
-##Alternative Setup using code in [[InitializeReporting()|/FAQ/InitializeReporting]]
-
 To set the settings in code:
 
 * Setup your SMTP Server in the Global.asax file inside of the **InitializeReporting()** method by modifying some settings in it. The Global.asax file is found in the root of the directory to which you installed Izenda Reports.
@@ -99,3 +97,11 @@ To test this, go back to a report you wish to schedule and click on it. Click th
 ##Security On Scheduled Reports
 
 Scheduled reports only supports per-user security using the Link format.  Scheduled attachments will not apply hidden filters normally, but you can apply security through [[PreExecuteReportSet()|/FAQ/PreExecuteReportSet]] based on the security of the report owner.  If per-user security is required, the Link format will require the user to login before seeing the report.
+
+##Overnight batch report processing
+
+One extremely useful function of scheduling reports is batch processing of reports during nighttime hours. Implementation of overnight processing is just a matter of setting which reports will run during office off-hours.
+
+First, you need to open the report you will want to schedule in the ReportDesigner. Navigate to the [[Misc tab|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab]] and choose the time your report will run and the frequency. For overnight processing, just select a time period that does not conflict with your normal business hours. Save the report with the desired frequency. You must do this for each report you want to process.
+
+Next, you will just need to ensure the scheduler process is running. Normally servers are left on overnight anyway, so just as long as the server computer that the scheduler is installed on and the server where the reporting application is installed on are running, the reports will get processed. Generally, these will be on the same machine anyway. The interval of the scheduler you defined when you installed it will ping the reporting application to see if any reports need to be scheduled. If one or more are scheduled, the reporting application will begin processing and sending those reports via email. So essentially, overnight processing is the same process as any other time of day with respect to setup.
