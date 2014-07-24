@@ -69,6 +69,9 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Can I change the report title dynamically?|http://wiki.izenda.us/FAQ/Questions/Dynamically-change-report-title]]
 - [[How do sub-reports and drilldowns work?|/FAQ/Questions/sub-reports-and-drilldowns]]
 
+##Scheduler
+- [[How do I use the Izenda Scheduler?|http://wiki.izenda.us/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler#Overnight-batch-report-processing]]
+
 ##Security
 
 - [[How does security work?|FAQ/How user credentials are applied]]
