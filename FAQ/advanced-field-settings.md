@@ -16,7 +16,7 @@ Advanced field settings provide more granular control over what data is displaye
 * **Width:** Allows you to define a custom field width for your data.
 * **Label Justification:** Sets the column's header justification to either L, R, or M.
 * **Value Justification:** Sets the column's data justification to L, R, M, or none.
-* **Subreport:** Allows you to define a sub-report to use based on this field. More about [[subreports]].
+* **Subreport:** Allows you to define a sub-report to use based on this field. More about [[subreports|http://wiki.izenda.us/FAQ/Questions/sub-reports-and-drilldowns]].
 * **Drill-Down Style:** Allows you to choose how the sub-report will be displayed.
 * **Url:** Allows you to define a url to navigate to.
 * **Subtotal Function:** Allows you to change the function used when creating a sub-total line. The "Add Subtotals" box must be checked for this to have an effect.
