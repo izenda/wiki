@@ -14,10 +14,10 @@ Between version 6.7.0.271 and 6.7.0.272, changes were made to the jQuery library
 
 To complete the upgrade to version 6.7.0.272, you need to modify the ReportDesigner.aspx page manually. This can be achieved by first finding the file in your reporting directory. Below is a screenshot of where to find it.
 
-![]()
+![](/UpdatingReportDesigner-for-Izenda-v6-7-272/report_designer.png)
 
 Once you have located it, open it and change the line marked in red in the screenshot below to read **jq$** instead of just **$**.
 
-![]()
+![](/UpdatingReportDesigner-for-Izenda-v6-7-272/report_designer_2.png)
 
 Once you have done that, and assuming you completed the normal steps in the process, you should no longer see the errors related to "$ is not defined".
