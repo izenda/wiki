@@ -8,20 +8,24 @@ Advanced field settings provide more granular control over what data is displaye
 
 ##Advanced Settings
 
-* **Column group:** Allows you to define column groups for your report. Any columns with the same column group will be displayed together under the title given by the input text.
-* **Hide this field:** Allows a field to be hidden in the report but still used to perform calculations and associated to other data.
-* **Sort (z-a):** Reverses the sort order of the report from Z-A.
-* **Italic:** Displays all data in this field as italic.
-* **Bold:** Displays all data in this field as bold.
-* **Width:** Allows you to define a custom field width for your data.
-* **Label Justification:** Sets the column's header justification to either L, R, or M.
-* **Value Justification:** Sets the column's data justification to L, R, M, or none.
-* **Subreport:** Allows you to define a sub-report to use based on this field. More about [[subreports|http://wiki.izenda.us/FAQ/Questions/sub-reports-and-drilldowns]].
-* **Drill-Down Style:** Allows you to choose how the sub-report will be displayed.
-* **Url:** Allows you to define a url to navigate to.
-* **Subtotal Function:** Allows you to change the function used when creating a sub-total line. The "Add Subtotals" box must be checked for this to have an effect.
-* **Gradient Cells Shading:** Allows you to use a gradient (smooth color transition) effect within your report cells using the Item Color and the Alternating Item Color found on the [[Style tab|/Guides/ReportDesign/10.0-Style-tab]].
-* **Text Highlight:** Alters the color of the text in the cells of the selected field based on the format given. (e.g. 1 to 10:green; 11 to 50:yellow;51 to 100:red)
-* **Cell Highlight:** Highlights the entire cell of the selected field based on the format given. (see example above)
-* **Value Ranges:** Allows you to define a substitute for ranges of values you define (e.g. 0 to 10:Under 10;10 to 100: 10-100)
-* **Expression:** Allows you to use mathematical expressions and conditionals for your selected field if the existing controls do not provide you the level of control you desire. This is formatted as an SQL statement and can accept database column names.
+![](/FAQ/advanced-field-settings/advanced_settings_panel_2.png)
+
+|**Setting Name**|**Description**|
+|:--------------:|:-------------:|
+|Column Group|Applies a label to this column that can work over multiple consecutive columns. Any other column that shares the same label will be included in the grouping. E.g. in a report with columns ShipCountry, ShipCity, Freight, and UnitPrice, you can use a column group on ShipCountry and ShipCity that reads "Shipping" and on Freight and UnitPrice that reads "Finance" and have "Shipping" and "Finance" appear above the columns. But applying "Shipping" to ShipCountry and Freight and "Finance" to ShipCity and UnitPrice would result in four separate labels, two of which read "Shipping" and two which read "Finance".| 
+|Hide this field|Hides the field from display when report the is ran. Useful for using expressions on multiple fields but when only one of the fields should be displayed.|
+|Sort (z-a)|Sorts in descending order|
+|Italic|Sets whether the column is shown in italics|
+|Bold|Sets whether the column is shown in bold|
+|Width|Set the width of the column in number of pixels|
+|Label Justication|Sets the Column label to the left, right, or middle of the row|
+|Value Justication|Sets the Value of the field to the left, right, or middle of the row|
+|Subreport|Sets the drill-down child report. The list contains only reports that have a [[drill-down key|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab#9.2.2-Setting-the-drill-down-key]] set for them.<br>_**Note:** The "Automatic" option will attempt to choose a sub-report by matching the drill-down key to the selected field and cannot discern between two sub-reports that use the same drill-down key._|
+|Drill-Down Style|**Link** – opens in same browser window <br>**Link (New Window)** – opens in new browser window<br>**Embedded** – embeds the drill-down results into the main report<br>**Popup** – opens the results on a pop-up screen<br>**Hover** - Shows the sub-report when you hover the mouse over the item that the sub-report is linked to<br>**ComboKey** - Used in combination with one of the above. When this setting is chosen for the second drilldown key, the value of both fields will be passed from the main report to the sub-report.|
+|Url|Allows you to define a custom Url to redirect to when the sub-report is accessed.|
+|SubTotal Function|Sets a customized function for subtotals displayed with this field. The default value is "Sum". This only applies to the bottom sub-totals and not the side sub-totals.|
+|Gradient Cells Shading|Sets whether cells will use a gradient or solid colors for shading. The larger the value in the cell is, the darker the shading will become.|
+|Text Highlight|Highlights the text for a given range. You can refer to the [[Styles tab|http://wiki.izenda.us/Guides/ReportDesign/10.0-Style-tab]] for a list of valid colors. Example: "5 to 6:Blue;7 to 10:Red".|
+|Cell Highlight|Highlights the entire cell for a given range. This follows the same rules as text highlight.|
+|Value Ranges|Lets you set text values for number ranges. (i.e. setting this to 0 to 10:Under will display the text "Under" when it encounters a value between 0 and 10 for that column).|
+|Expression|Allows you to define a customized mathematical or SQL expression to show as the value for the column cells. See more about [[Expressions|http://wiki.izenda.us/Guides/ReportDesign/15.0-Expressions-in-Izenda]]|
