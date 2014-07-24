@@ -4,7 +4,7 @@
 
 ##Introduction
 
-Advanced field settings provide more granular control over what data is displayed in your report. They can be accessed by clicking on the gear icon to the right of any row on the [fields tab](http://wiki.izenda.us/FAQ/Introduction#Fields-tab) or the [summary tab](http://wiki.izenda.us/FAQ/Introduction#Summary-tab) in the report designer. There are a number of options that can be selected here.
+Advanced field settings provide more granular control over what data is displayed in your report. They can be accessed by clicking on the gear icon to the right of any row on the [[fields tab|/Guides/ReportDesign/4.0-fields-tab]] or the [[summary tab|/Guides/ReportDesign/6.0-Summary-Tab]] in the report designer. There are a number of options that can be selected here.
 
 ##Advanced Settings
 
@@ -20,7 +20,7 @@ Advanced field settings provide more granular control over what data is displaye
 * **Drill-Down Style:** Allows you to choose how the sub-report will be displayed.
 * **Url:** Allows you to define a url to navigate to.
 * **Subtotal Function:** Allows you to change the function used when creating a sub-total line. The "Add Subtotals" box must be checked for this to have an effect.
-* **Gradient Cells Shading:** Allows you to use a gradient (smooth color transition) effect within your report cells using the Item Color and the Alternating Item Color found on the [Style tab](http://wiki.izenda.us/FAQ/Introduction#Style-tab).
+* **Gradient Cells Shading:** Allows you to use a gradient (smooth color transition) effect within your report cells using the Item Color and the Alternating Item Color found on the [[Style tab|/Guides/ReportDesign/10.0-Style-tab]].
 * **Text Highlight:** Alters the color of the text in the cells of the selected field based on the format given. (e.g. 1 to 10:green; 11 to 50:yellow;51 to 100:red)
 * **Cell Highlight:** Highlights the entire cell of the selected field based on the format given. (see example above)
 * **Value Ranges:** Allows you to define a substitute for ranges of values you define (e.g. 0 to 10:Under 10;10 to 100: 10-100)
