@@ -12,7 +12,7 @@ Advanced field settings provide more granular control over what data is displaye
 
 |**Setting Name**|**Description**|
 |:--------------:|:-------------:|
-|Column Group|Applies a label to this column that can work over multiple consecutive columns. Any other column that shares the same label will be included in the grouping. E.g. in a report with columns ShipCountry, ShipCity, Freight, and UnitPrice, you can use a column group on ShipCountry and ShipCity that reads "Shipping" and on Freight and UnitPrice that reads "Finance" and have "Shipping" and "Finance" appear above the columns. But applying "Shipping" to ShipCountry and Freight and "Finance" to ShipCity and UnitPrice would result in four separate labels, two of which read "Shipping" and two which read "Finance".| 
+|Column Group|Applies a label to this column that can work over multiple consecutive columns. Any other column that shares the same label will be included in the grouping. <br> ![](/FAQ/advanced-field-settings/column_groups.png)| 
 |Hide this field|Hides the field from display when report the is ran. Useful for using expressions on multiple fields but when only one of the fields should be displayed.|
 |Sort (z-a)|Sorts in descending order|
 |Italic|Sets whether the column is shown in italics|
