@@ -1,4 +1,18 @@
 [[_TOC_]]
+# 6.7.0.273 (July 28, 2014)
+* FB-13872: Improving CASE statements usage to use it without brackets
+* FB-14906: Made click on legend affecting all stacked pie charts
+* FB-14669: Filter SQL load report request by current TenantID
+* FB-14948: Fixed erroneous adding field from expression to grouping
+* FB-14949: Fixed filters without values in the Viewer
+* FB-14791: Extended palette of barchart colors.
+* FB-13936: Added HTML Report Part control
+* FB-14622: Made different users having separate files for databaseSchema cache on HDD if PerUserCaching is true
+* FB-14908: Fixed broken stored procedure metadata save to izenda.config
+* FB-14756: Fixed grouping by week
+* FB-14805: Update report in reports list cache on save.
+* FB-13119: Fixed Pagination in Oracle when Sort is used
+
 # 6.7.0.272 (July 15, 2014)
 * FB-14548: Unified internal references to jquery as alias jq
 * FB-14813: Minor fixes in Designer UI CSS classes added to some controls in the Designer for easier customization
