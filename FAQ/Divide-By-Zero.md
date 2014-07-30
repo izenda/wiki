@@ -27,3 +27,13 @@ Usage; code for your Izenda ``global.asax``:
 //To Display NULL (nothing)
 (AdHocSettings.Formats.Get("DivisionByZero") as AdHoc.Formats.Formats.DivisionByZeroFormat).ReplaceText = "";
 ```
+
+###Expressions
+
+The use of expressions in a calculated field will cause the SQL server itself to throw a DIV/0 error. This is opposed to arithmetic operators, which will not cause SQL to throw exceptions. In the case of using expressions, you will have to catch possible divide by zero errors in a case statement. One example is detailed below.
+
+```sql
+CASE WHEN [OrderID]=0 THEN CAST(2147483647 AS float) ELSE [Freight]/[OrderID]
+```
+
+Using the number seen in the cast will indicate to Izenda that it should use the DIV/0 format option for that value.
