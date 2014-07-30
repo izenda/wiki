@@ -1,4 +1,9 @@
 [[_TOC_]]
+# 6.7.0.274 (July 30, 2014)
+* FB-14902: Fixed XSS security vulnerability in Designer
+* FB-14315: Fix pie chart "Combine Bottom" for charts with separator.
+* FB-14793: Fixed JS error on reportDesigner page.
+
 # 6.7.0.273 (July 28, 2014)
 * FB-13872: Improving CASE statements usage to use it without brackets
 * FB-14906: Made click on legend affecting all stacked pie charts
