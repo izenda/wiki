@@ -52,11 +52,13 @@ Public Class CustomAdHocConfig
 End Class
 ```
 
-##Screenshots (legacy report list)
+##Screenshots 
+
+###Legacy report list
 
 ![](http://www.izenda.com/Site/Images/Screenshots/HiddenCategoriesDS.png)
 
-##Screenshots (modern report list)
+###Modern report list
 
 Below: The user is "admin" and there are no hidden categories for this user.
 
@@ -76,7 +78,8 @@ AdHocSettings.HiddenCategories = new string[] {"base"}; //base is hidden
 ```
 
 ![](/API/CodeSamples/HiddenCategories/hidden_categories_user.png)
-##Screenshots (report designer)
+
+###Report designer
 
 Below: the user is "admin" and can add reports to the "base" category
 
