@@ -60,8 +60,11 @@ Then you can add HTML like the following to use a ReportPart.
 ```html
 <body>
   <div style="margin:5px; padding:10px; border: 1px solid gray; background-color: white;">
+    <h1>Sales Chart</h1>
     <div class="report-part" data-report="Sales" data-part="chart"></div>
+    <h1>Finance Chart</h1>
     <div class="report-part" data-report="Finance" data-part="chart"></div>
+    <h1>Accounting Details</h1>
     <div class="report-part" data-report="Accounting" data-part="detail"></div>
   </div>
 </body>
@@ -71,4 +74,4 @@ The data-report tag references the complete name of the report and the data-part
 
 The result of the HTML example is shown below.
 
-![]()
+![](/FAQ/Questions/Using-ReportParts/ReportParts.png)
