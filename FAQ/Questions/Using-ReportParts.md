@@ -17,7 +17,7 @@ You can insert ReportParts into aspx webpages using a custom element on the page
 First, your aspx page will have to include a reference to Izenda.AdHoc
 
 ```asp
-<%@ Register TagPrefix="cc1" Namespace="Izenda.Web.UI" Assembly="Izenda.AdHoc" %>
+&lt;%@ Register TagPrefix="cc1" Namespace="Izenda.Web.UI" Assembly="Izenda.AdHoc" %&gt;
 ```
 
 Then you can add HTML like the following to use a ReportPart
@@ -68,3 +68,7 @@ Then you can add HTML like the following to use a ReportPart.
 ```
 
 The data-report tag references the complete name of the report and the data-part identifier should be one of the items listed above, but this is not case-sensitive in this context.
+
+The result of the HTML example is shown below.
+
+![]()
