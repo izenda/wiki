@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the Excel output style for report results grid item.
+Gets or sets the Excel output style for individual grid items in the report.
 
 **Default Value:** font-family: verdana, arial, helvetica, sans-serif; font-size: 11px;color:blue;
 
