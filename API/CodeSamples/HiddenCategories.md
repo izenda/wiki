@@ -66,7 +66,7 @@ AdHocSettings.CurrentUserIsAdmin = true;
 AdHocSettings.HiddenCategories = new string[0]; //nothing hidden
 ```
 
-![]()
+![](/API/CodeSamples/HiddenCategories/hidden_categories_admin.png)
 
 Below: The user is "user" and the "base" category from above is hidden.
 
@@ -75,12 +75,13 @@ AdHocSettings.CurrentUserName = "user";
 AdHocSettings.HiddenCategories = new string[] {"base"}; //base is hidden
 ```
 
+![](/API/CodeSamples/HiddenCategories/hidden_categories_user.png)
 ##Screenshots (report designer)
 
 Below: the user is "admin" and can add reports to the "base" category
 
-![]()
+![](/API/CodeSamples/HiddenCategories/hidden_categories_admin2.png)
 
 Below: The user is "designer" and cannot see the "base" category in the designer
 
-![]()
+![](/API/CodeSamples/HiddenCategories/hidden_categories_designer.png)
