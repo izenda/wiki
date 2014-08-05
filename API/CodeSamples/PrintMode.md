@@ -6,7 +6,7 @@
 
 Gets or sets the value indicating what print mode will be used for printing reports on the ReportDesigner. There are a number of different settings for this property consisting of different combinations of HTML and PDF formats. This setting also controls the legacy ReportViewer toolbar. It currently has no effect on the modern ReportViewer.
 
-_**Default Value:** PrintMode.PdfAndHtml (PrintMode.Html2PdfAndHtml for version 6.6 and higher)_
+**Default Value:** PrintMode.PdfAndHtml (PrintMode.Html2PdfAndHtml for version 6.6 and higher)
 
 Possible values:
 * PdfAndHtml
