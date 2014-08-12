@@ -1,4 +1,31 @@
 [[_TOC_]]
+# 6.7.0.275 (August 12, 2014)
+FB-15034: Fixed drill-down style auto selection in the Advanced field properties
+FB-14792: Fixed bar chart sort with separator
+FB-14723: Fixed Inverted grid export to CSV
+FB-13360: Color highlighting and Value ranges applying to DateTime fields
+FB-15152: Fixed CHart to Picture rendering issue with scroll-bar
+FB-14131: Fixed day of week number, and daysOld function
+FB-14355: Lazy SP metadata pulling
+FB-15069: Fixed footer position processing in html2pdf generator
+FB-15082: Made it possible to override default sql and oracle dataextractors behavior
+FB-15106: Made scale working together with separator for pie charts
+FB-15103: Fixed combine bottom feature for highchart pie chart
+FB-15070: Fixed popup recursion for gauges
+FB-15080: Fixed missing gauge needles in subreport
+FB-15120: Fixed HTML Pie Chart with Separator
+FB-14996: Do not use simple SP execution mode is Records count is specified
+FB-15004: Fixed erroneous chart container height
+FB-14487: Fixed Date columns Equals(Field) filter operator
+FB-15035: Disable redundant aggregate functions for Boolean data type
+FB-14781: Fixed auto-grouping from Expression in Oracle
+FB-15004: Fixed piechart legend overlapping
+FB-14951: userid info added to Message in log.
+FB-14227: Fully localized DatePicker
+FB-14315: Fix js errors for PieChart.
+FB-14488: Optimize Report Viewer tab for narrow screens
+FB-15028: Made reportset renderer to respect changes of reportset.Style in PERS
+
 # 6.7.0.274 (July 30, 2014)
 * FB-14902: Fixed XSS security vulnerability in Designer
 * FB-14315: Fix pie chart "Combine Bottom" for charts with separator.
