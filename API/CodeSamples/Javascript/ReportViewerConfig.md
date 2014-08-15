@@ -4,7 +4,7 @@
 
 ##About
 
-The ``reportviewrconfig`` command is passed through rs.aspx via an [[AjaxRequest|/API/CodeSamples/Javascript/AjaxRequest]]. This returns JSON formatted data related to the Report Viewer page's configuration. It can be used to control whether the current report that is loading is read-only, view-only, or locked. It also returns several settings that are found in [[AdHocSettings|/API/AdHocSettings]] related to the report viewer.
+The ``reportviewerconfig`` command is passed through rs.aspx via an [[AjaxRequest|/API/CodeSamples/Javascript/AjaxRequest]]. This returns JSON formatted data related to the Report Viewer page's configuration. It can be used to control whether the current report that is loading is read-only, view-only, or locked. It also returns several settings that are found in [[AdHocSettings|/API/AdHocSettings]] related to the report viewer.
 
 Here is the Ajax call to use:
 
