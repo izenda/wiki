@@ -1,4 +1,21 @@
 [[_TOC_]]
+# 6.7.0.276 (August 22, 2014)
+* FB-14154: added formatting to bulk csv exports
+* FB-15101: Fixed calculated fields filters for DateTime columns
+* FB-15184: Improved auto-join algorithm when LEFT joins are used
+* FB-15222: Fixed all gauges crash caused by malformed highlight value
+* FB-15193: Added possibility to specify log4net config file
+* FB-14683: Fixed gauges hover autodrilldown report
+* FB-15007: Fixed SP Parameters filters in Dashboards
+* FB-14131: Fixed conversion of week day number to week day name for case of mysql DB
+* FB-15240: Async Thumbnails generation upon report save implemented
+* FB-14832: ExportEncoding setting added
+* FB-14527: Properly populate values for the Equals(Select) filters for SP fields
+* FB-14842: Do not treat ReportSet as Analysis Grid report unless Detail Report has VG specified
+* FB-14232: 3D option for html pie chart hidden
+* FB-15037: Added restriction to chart scale value.
+* FB-13726: Fixed issues with SP with fusion driver
+
 # 6.7.0.275 (August 12, 2014)
 * FB-15034: Fixed drill-down style auto selection in the Advanced field properties
 * FB-14792: Fixed bar chart sort with separator
