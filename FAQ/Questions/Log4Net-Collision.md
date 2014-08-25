@@ -8,7 +8,7 @@ When upgrading to the latest version of Izenda, the website will not compile. Th
 
 ##Answer
 
-Back in January 2013, the public key of the signed DLL for Log4Net was changed. As such, tools developed before that date reference an old public key than the one Izenda uses. A possible work-around for this issue is to change your web.config to specifically add the assemblies in a dependent relationship using the public keys of Izenda's log4net and your own. The following example is what this could look like for you:
+Back in January 2013, the public key of the signed DLL for Log4Net was changed. As such, tools developed before that date reference an older public key than the one Izenda uses. A possible work-around for this issue is to change your web.config to specifically add the assemblies in a dependent relationship using the public keys of Izenda's log4net and your own. The following example is what this could look like for you:
 
 ```xml
 <dependentAssembly>
