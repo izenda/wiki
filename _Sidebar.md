@@ -15,7 +15,6 @@
 * [Gallery](http://www.izenda.com/site/Pages/Gallery.aspx)
 * [Client List](http://www.izenda.com/Site/Pages/Clients.aspx)
 * [Contact Page](http://www.izenda.com/site/Pages/contactus.aspx)
-* [Knowledge Base](http://www.izenda.com/Site/KB/Integration/94)
 
 ---
 
