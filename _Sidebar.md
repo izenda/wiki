@@ -4,6 +4,9 @@
 * [[FAQ]]
 * [[Tutorials]]
 * [[The Izenda API|/API/AdHocConfig]]
+* [[The AdHocSettings class|/API/AdHocSettings]]
+* [Developer Links and Guides](/Guides/Developer-Links-and-Guides)
+
 
 ---
 
@@ -22,8 +25,6 @@
 * [Guide To Report Design](/Guides/ReportDesign)
 * [Training Videos](http://www.izenda.com/Site/KB/Training/58)
 * [Making Custom Forms Video](http://www.youtube.com/watch?v=5b2axJlgdFs) 
-* [Developer Links and Guides](/Guides/Developer-Links-and-Guides)
-* [[The AdHocSettings class|/API/AdHocSettings]]
 
 
 ---
