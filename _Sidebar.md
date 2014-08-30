@@ -20,6 +20,7 @@
 ---
 
 * [Guide To Report Design](/Guides/ReportDesign)
+* [Developer Links and Guides](/Guides/Developer-Links-and-Guides)
 * [Example Dashboard](http://demo2.izenda.us/bi/Dashboards.aspx?rn=Dashboard)
 * [Training Videos](http://www.izenda.com/Site/KB/Training/58)
 * [[The AdHocSettings class|/API/AdHocSettings]]
