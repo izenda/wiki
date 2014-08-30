@@ -12,6 +12,7 @@
 * [Izenda Blog](http://blog.izenda.com/)
 * [Company Page](http://www.izenda.com/site/Pages/company.aspx)
 * [Live Demo](http://demo2.izenda.us/bi/ReportListIntro.aspx)
+* [Example Dashboard](http://demo2.izenda.us/bi/Dashboards.aspx?rn=Dashboard)
 * [Gallery](http://www.izenda.com/site/Pages/Gallery.aspx)
 * [Client List](http://www.izenda.com/Site/Pages/Clients.aspx)
 * [Contact Page](http://www.izenda.com/site/Pages/contactus.aspx)
@@ -20,7 +21,6 @@
 
 * [Guide To Report Design](/Guides/ReportDesign)
 * [Developer Links and Guides](/Guides/Developer-Links-and-Guides)
-* [Example Dashboard](http://demo2.izenda.us/bi/Dashboards.aspx?rn=Dashboard)
 * [Training Videos](http://www.izenda.com/Site/KB/Training/58)
 * [[The AdHocSettings class|/API/AdHocSettings]]
 * [Making Custom Forms Video](http://www.youtube.com/watch?v=5b2axJlgdFs)
