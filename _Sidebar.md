@@ -8,7 +8,7 @@
 ---
 
 * [Izenda Website](http://www.izenda.com/Site/Izenda-Ad-Hoc-Reporting.aspx)
-* [Product Video](http://www.izenda.com/Site/Video/ProductVideo.aspx)
+* [Product Video](https://www.youtube.com/watch?v=1LlHesMCmYs)
 * [Izenda Blog](http://blog.izenda.com/)
 * [Company Page](http://www.izenda.com/site/Pages/company.aspx)
 * [Live Demo](http://demo2.izenda.us/bi/ReportListIntro.aspx)
