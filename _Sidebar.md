@@ -22,6 +22,7 @@
 * [Guide To Report Design](/Guides/ReportDesign)
 * [Training Videos](http://www.izenda.com/Site/KB/Training/58)
 * [Making Custom Forms Video](http://www.youtube.com/watch?v=5b2axJlgdFs) <br>
+<br>
 * [Developer Links and Guides](/Guides/Developer-Links-and-Guides)
 * [[The AdHocSettings class|/API/AdHocSettings]]
 
