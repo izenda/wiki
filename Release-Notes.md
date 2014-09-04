@@ -1,6 +1,6 @@
 [[_TOC_]]
 # 6.7.0.276 (August 22, 2014)
-* FB-14154: added formatting to bulk csv exports
+* FB-14154: added formatting to bulk csv exports (**Backwards Compatibility Enhanced in 6.7.0.277 --> September 4, 2014**)
 * FB-15101: Fixed calculated fields filters for DateTime columns
 * FB-15184: Improved auto-join algorithm when LEFT joins are used
 * FB-15222: Fixed all gauges crash caused by malformed highlight value
