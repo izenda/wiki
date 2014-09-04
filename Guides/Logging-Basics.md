@@ -7,12 +7,33 @@ Izenda utilizes Log4Net as the default logging provider. This logging ability is
 
 ##Basic Configuration
 ```xml
-<root>
-  <level value="FATAL" />
-  <appender-ref ref="rollingFile" />
-</root>
+<log4net>    
+  <appender name="rollingFile" type="log4net.Appender.RollingFileAppender,log4net">        
+    <file value="" />			  
+    <param name="AppendToFile" value="true"/>			  
+    <param name="RollingStyle" value="Date"/>			  
+    <param name="DatePattern" value="MM-dd-yyyy'-FATAL.log'"/>			  
+    <param name="StaticLogFileName" value="false"/>        
+    <layout type="log4net.Layout.PatternLayout">            
+      <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />        
+    </layout>    
+  </appender>    
+  <root>        
+    <level value="FATAL" />        
+    <appender-ref ref="rollingFile" />    
+  </root>
+</log4net>
 ```
-The level value change be changed to any of the following; FATAL, ERROR, WARN, INFO, DEBUG and ALL. These are listed in ascending order of logged output. Set this level appropriately to catch the information you need from the logging. 
+
+##Logging level
+
+```xml
+  <level value="FATAL" /> 
+```
+
+The level value change be changed to any of the following; FATAL, INFO, and ALL. These are listed in ascending order of amount of logged output. Set this level appropriately to catch the information you need from the logging. 
+
+###File name
 
 ```xml
 <param name="DatePattern" value="MM-dd-yyyy'-FATAL.log'"/>
