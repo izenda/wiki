@@ -25,7 +25,7 @@ Izenda utilizes Log4Net as the default logging provider. This logging ability is
 </log4net>
 ```
 
-##Logging level
+###Logging level
 
 ```xml
   <level value="FATAL" /> 
