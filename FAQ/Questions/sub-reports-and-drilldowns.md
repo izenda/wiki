@@ -41,6 +41,7 @@ In addition to drilling down to a sub-report, you can also explicitly define a U
 There are two features, both accessible from the Advanced Field Options, which link parent-child reports with multiple values:
 
 -The Standard Drilldown feature, which supports up to 2 values OR one proxy value and one actual value.
+
 -The URL feature, which supports up to 4 values.
 
 Values are passed from the current record-row, defined as all values on the current row (or current record) that the passing action is called from. If I want to pass values from a row, I must click a value elsewhere on that same row.
@@ -107,7 +108,7 @@ Column B, to Subreport, as ComboKey - finds most recent column...
 
 #####Examples
 
-http ://www.google.com/?q={0} - Takes the value in this column and sends it to Google. It is necessary to add http:// to the beginning of this string to force it to call an external website.
+http://www.google.com/?q={0} - Takes the value in this column and sends it to Google. It is necessary to add http:// to the beginning of this string to force it to call an external website.
 
 ReportDesigner.aspx?rn=My+Category/My+Report&ddkvalue={2}&ddkvalue2={6} - Loads the Report Designer, loads the report named My Report in the category called My Category, takes the value in column 2 and passes it to the first drilldown field, and takes the value in column 6 to pass to the second drilldown field.
 
