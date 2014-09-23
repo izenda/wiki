@@ -43,6 +43,8 @@ There are two features, both accessible from the Advanced Field Options, which l
 -The Standard Drilldown feature, which supports up to 2 values OR one proxy value and one actual value.
 -The URL feature, which supports up to 4 values.
 
+Values are passed from the current record-row, defined as all values on the current row (or current record) that the passing action is called from. If I want to pass values from a row, I must click a value elsewhere on that same row.
+
 ####Standard Drilldown
 In order to build a parent-child subreporting pair, follow these steps:
 
@@ -82,6 +84,11 @@ or
 Column A, to Subreport, as Link(New) - passes A1
 Column B, to Subreport, as Embedded - passes B1
 
+or, with Ignore First Key applied
+
+Column A, to Subreport, as Link(New) - passes B1 and applies it, passes A1 and discards it, so only B1 is effective
+Column B, to Subreport, as ComboKey - finds most recent column...
+
 ####URL Drilldowns
 
 * The URL always passes values from a record from a single field. There are two different values you can use, ddkvalueX, where X is not defined (for first value) and 2 for second value, and pXvalue, where X is an integer from 1 to 4. The components of a URL string are:
@@ -92,19 +99,16 @@ Column B, to Subreport, as Embedded - passes B1
 
 * ddkvalue - this instructs the passed value to be used in a field defined as a drilldown key on the subreport. To pass the first value we set ddkvalue, to pass the second we set ddkvalue2.
 
-* pXvalue - this instructs the passed value to be used in a filter. The filter must be set up ahead of time, it cannot be set dynamically by detecting the field or datatype of the passed value. Izenda supports values being passed into the first 4 filters on any report, numbered on the filter tab from 1 to 4. You cannot pass a value into filter 5, for example.
+* pXvalue - this instructs the passed value to be used in a filter. The filter must be set up ahead of time, it cannot be set dynamically by detecting the field or datatype of the passed value. Izenda supports values being passed into the first 4 filters on any report, numbered on the filter tab from 1 to 4. You cannot pass a value into filter 5 or above.
 
-* {x} - This allows you to specify the column which passes a value on this record-line. A value of 0 means 'this column', values 1 to X indicate specifically columns 1 or X. If I am passing a value from the first column, I could use either {0} or {1} to indicate either 'this column' or 'the first column'
+* {x} - This allows you to specify the column which passes a value on this record-row. A value of 0 means 'this column', values 1 to X indicate specifically columns 1 or X. If I am passing a value from the first column, I could use either {0} or {1} to relatively indicate 'this column' or absolutely indicate 'the first column'.
 
 * ? and & - The first segment of the URL string should be seperated with a ?. Subsequent seperations use &.
 
 #####Examples
 
-http://www.google.com/?q={0} - Takes the value in this column and sends it to Google.
+http ://www.google.com/?q={0} - Takes the value in this column and sends it to Google. It is necessary to add http:// to the beginning of this string to force it to call an external website.
 
 ReportDesigner.aspx?rn=My+Category/My+Report&ddkvalue={2}&ddkvalue2={6} - Loads the Report Designer, loads the report named My Report in the category called My Category, takes the value in column 2 and passes it to the first drilldown field, and takes the value in column 6 to pass to the second drilldown field.
 
 ReportDesigner.aspx?rn=My+Category/My+Report&p1value={0}&p2value={2}&p3value={3} - Loads the Report Designer, loads the report named My Report in the category called My Category, takes the value in the clicked column and passes it into the first filter on the subreport, passes the value from the second column to the second filter, and passes the value in the third column to the third filter.
-
-ReportDesigner.aspx
-
