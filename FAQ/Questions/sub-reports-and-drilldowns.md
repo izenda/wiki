@@ -35,3 +35,29 @@ In addition to drilling down to a sub-report, you can also explicitly define a U
 ###Settings applicable to drilldowns
 * [[InheritFiltersInSubreports|/API/CodeSamples/InheritFiltersInSubreports]]
 * [[DrilldownStyle|/API/CodeSamples/DrilldownStyle]]
+
+###Multi-Value Drilldowns
+
+There are two features, both accessible from the Advanced Field Options, which link parent-child reports with multiple values:
+
+-The Standard Drilldown feature, which supports up to 2 values OR one proxy value and one actual value.
+-The URL feature, which supports up to 4 values.
+
+####Standard Drilldown
+In order to build a parent-child subreporting pair, follow these steps:
+
+* On the child report, set one or more drilldown keys.
+
+* On the parent report, decide which field you want to pass values to the drilldown key of the child report. These fields do not have to have the same name – the only thing Izenda cares about is if it can find a matching value. For example, I have two fields – Country of Origin, and Favorite Food. If I pass the value Turkey from one field to the other, my drilldown will create valid results.
+
+* In the Advanced Field Options for your first chosen field, select the target subreport name from the Subreport dropdown. This will instruct the field _which_ subreport to call. These are the values which will pass to your _first_ drilldown key value in the subreport.
+
+_*NOTE:* If your subreport is not listed in this dropdown, it either has not been saved with a drilldown key value OR the parent report has not been refreshed since the subreport was listed as valid. Check your subreport and re-save it, and reload the parent report from the report list._
+
+* In the Advanced Field Options for your first chosen field, select the ideal behavior for your subreport from the Drill-Down Style dropdown. This will instruct the field _how_ to call the subreport, whether it is a popup, a new link, etc.
+
+* In the Advanced Field Options for your second chosen field, select the same target subreport name as the first field from the Subreport dropdown.
+
+* In the Advanced Field Options for your second chosen field, select the ComboKey behavior. You _must_ select ComboKey for the second report. This behavior instructs this field to search back, find the nearest field above this field in the report list that is targeting the same subreport, and pass its value along with that field.
+
+* *OPTIONAL:* Ingore First Key allows you to ignore the value passed by the first key to the subreport. The value will be passed, but then discarded before the subreport is filtered by values from the parent report. This is used when you want the on-click action to occur on one field, but then pass a second field as the singular drilldown value.
