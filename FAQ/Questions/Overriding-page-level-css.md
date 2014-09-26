@@ -177,3 +177,36 @@ AdHocSettings Properties applicable to Dashboards.aspx
 * [[DashboardsCssUrl|/API/CodeSamples/DashboardsCssUrl]]
 
 _**Note:** You may need to append the **!Important** flag onto certain CSS properties so they will override the existing styles._
+
+##CSS Configuration
+
+You can make changes to css by adding a custom.css file to the dependency chain
+
+````html
+<!DOCTYPE html>
+<head>
+...
+<link rel='stylesheet' href='Resources/css/custom.css' />
+...
+</head>
+````
+
+Then, in the custom.css file you created, you can make any edits you need to overwrite Izenda's styles; this includes bootstrap stylings. You may find it necessary to use !important in some cases.
+
+````css
+.whatever-class {
+font-size: 130% !important;
+}
+
+#whatever-id {
+background-color: rgba(0,0,0,.7);
+}
+````
+
+You will also notice that we now are minifying the css files; the js files will follow suit down the road. The min.css extension should be visible as a reference in the views.
+
+````
+<link rel='stylesheet' href='Resources/css/whatever.min.css' />
+
+````
+
