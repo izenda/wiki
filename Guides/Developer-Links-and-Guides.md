@@ -6,10 +6,10 @@
 
 Here is a friendly set of links to videos, download pages and reference material for developer and end-user use.
 
-| .NET Webforms C#          | .NET Webforms VB          | .NET MVC 3                | .NET MVC 4                |
-| :-----------------------: | :-----------------------: | :-----------------------: | :-----------------------: |
-| [Download and Installation Guide](http://www.izenda.com/Site/DownloadComplete.aspx?msgId=3) | [Download](http://archives.izenda.us/ri/webforms-vb.zip)|[Download with Razor 1](ftp://izenda:reports@dev5.izenda.com/Mvc3Razor1CS.zip) | [Download with Razor 2] (http://archives.izenda.us/ri/mvc4r2.zip) OR [Download without Razor 2](ftp://izenda:reports@dev5.izenda.com/Mvc4CS.zip)|
-| [DLL Download Page](http://www.izenda.com/Site/pages/download.aspx) | [Installation Guide](http://www.izenda.com/Site/DownloadComplete.aspx?msgId=3)|[Installation Guide](http://kb.izenda.com/docs/mvc-installation/) | [Installation Guide](http://kb.izenda.com/docs/mvc-installation/)|
+| .NET Webforms C#          | .NET Webforms VB          |
+| :-----------------------: | :-----------------------: |
+| [Download and Installation Guide](http://www.izenda.com/Site/DownloadComplete.aspx?msgId=3) | [Download](http://archives.izenda.us/ri/webforms-vb.zip) |
+ [DLL Download Page](http://www.izenda.com/Site/pages/download.aspx) | [Installation Guide](http://www.izenda.com/Site/DownloadComplete.aspx?msgId=3)|
 
 ##Developer Guides
 
