@@ -13,7 +13,7 @@ The AdHocContext class is used to setup the database driver, access the report s
 |CurrentUserName|Gets the AdHocSettings.CurrentUserName property for backwards-compatibility reasons|
 |Driver|Gets or sets the database driver that your application will use|
 |ProcessorLicenses|Gets the maximum number of processors your current license key can support|
-|ReportSetCount|Not used|
+|ReportSetCount|Not used internally|
 |SchedulerExecuting|Gets a value indicating whether the Izenda Scheduler is executing scheduled reports or not|
 |SetSchedulerExecuting|This method takes a boolean value that sets whether or not the Izenda Scheduler is executing|
 |StoreInStaticMemory|Gets or sets whether the CurrentReportSet will be stored in static memory or not|
@@ -49,6 +49,8 @@ AdHocContext.Driver = new MSSQLDriver();
 ```
 
 The default value is a new MSSQLDriver.
+
+_**Note:** You should refrain from using the **.Driver** property when working with requests to the database in custom methods, such as with [[ProcessDataSet|http://wiki.izenda.us/FAQ/ProcessDataSet]]. This can interfere with how Izenda works internally and cause various portions of the application to stop functioning correctly._
 
 ##SchedulerExecuting
 
