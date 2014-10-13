@@ -39,6 +39,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[I'm getting SQL type errors when connecting to a MySQL database with an ODBC connection. Will this be corrected?|http://wiki.izenda.us/FAQ/Questions/SQL-Type-Errors-When-Using-ODBC-with-MySQL]]
 - [[Can I inject a customized SQL "Where Clause" or other expression into my queries?|http://wiki.izenda.us/FAQ/Questions/Injecting-where-clause-into-queries]]
 - [[Can you tell me more about SQL connection strings?|https://www.connectionstrings.com/sql-server/]]
+- [[How do I resolve the error: "ExecuteReader requires an open and available Connection. The connection's current state is open."?|http://wiki.izenda.us/FAQ/Questions/ExecuteReader-requires-an-open-and-available-connection]]
 
 ##Formatting
 
