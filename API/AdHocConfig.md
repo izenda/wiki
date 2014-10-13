@@ -34,9 +34,9 @@ These methods are overridable in any class that inherits from FileSystemAdHocCon
 * [[PostLoadReportSet|http://wiki.izenda.us/API/AdHocConfig/PostLoadReportSet]] - Allows customization of the process that occurs after the ReportSet is loaded
 * [[PostLogin|http://wiki.izenda.us/API/AdHocConfig/PostLogin]] - **Obsolete** Allows customization of per-user settings once the user has logged in
 * [[PostProcessEqualsSelectList|http://wiki.izenda.us/API/AdHocConfig/PostProcessEqualsSelectList]] - Allows customization of the process that runs after the Equals(Select/Checkbox/Popup/Multiple) values have been obtained
-* [[PostSaveReportSet|http://wiki.izenda.us/API/AdHocConfig/PostSaveReportSet]] - Allows customization of the process that occurs after saving a report
+* [[PostSaveReportSet|http://wiki.izenda.us/API/AdHocConfig/PostSaveReportSet]] - **Obsolete** Allows customization of the process that occurs after saving a report
 * [[PreLoadReportSet|http://wiki.izenda.us/API/AdHocConfig/PreLoadReportSet]] - Allows customization of the process that occurs before loading a report
-* [[PreSaveReportSet|http://wiki.izenda.us/API/AdHocConfig/PreSaveReportSet]] - Allows customization of the process that occurs before saving a report
+* [[PreSaveReportSet|http://wiki.izenda.us/API/AdHocConfig/PreSaveReportSet]] - **Obsolete** Allows customization of the process that occurs before saving a report
 * [[ProcessDataSet|http://wiki.izenda.us/API/AdHocConfig/ProcessDataSet]] - Allows customization of the process that loads data from the database
 * [[ProcessEqualsSelectList|http://wiki.izenda.us/API/AdHocConfig/ProcessEqualsSelectList]] - Allows customization of the process that loads the Equals(Select/Checkbox/Popup/Multiple) values for filters
 * [[ProcessFriendlyException|http://wiki.izenda.us/API/AdHocConfig/ProcessFriendlyException]] - Allows customization of how exceptions are handled when UseFriendlyExceptions is true
