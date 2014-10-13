@@ -136,7 +136,7 @@ In the case that you will not be using the **global.asax** file or that you are 
 
 You can use the following steps to allow proper operation of Izenda Reports on distributed cloud computing systems:
 
-1. Call the ``InitializeReporting()`` method from the OnPreInit() method of all pages that utilize the Izenda API except for rs.aspx. by default, the demo site already uses this configuration.
+1. Call the ``InitializeReporting()`` method from the OnPreInit() method of all pages that utilize the Izenda API. by default, the demo site already uses this configuration.
 2. Enable shared state management by setting the mode attribute of sessionstate to "sqlserver" or "stateserver" in the web.config file. Following is an example web.config showing where to place this option.
 
 ```xml
@@ -149,6 +149,8 @@ You can use the following steps to allow proper operation of Izenda Reports on d
   </system.web>
 </configuration>
 ```
+
+_**Note:** Due to the heavy use of session state Izenda relies on for caching images, javascript, and CSS, performance may suffer while using SQL as your state server. We recommend using a third party session state tool such as [[AppFabric|http://msdn.microsoft.com/en-us/library/ee677312(v=azure.10).aspx]] to handle your sessions on a farm. If that isn't an option, you can also use a [[memory optimized session state provider|http://blogs.technet.com/b/dataplatforminsider/archive/2014/07/10/new-asp-net-session-state-provider-for-sql-server-in-memory-oltp.aspx]] for your SQL session state server cluster._
 
 ##The Settings.aspx page
 
