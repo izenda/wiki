@@ -6,6 +6,47 @@
 
 The AdHocConfig class is where Izenda Reports will perform all of its initialization and configuration. You can also override various methods used by the base class in order to control various aspects of the reporting application. At a minimum, you will need to set the [[LicenseKey|/API/CodeSamples/LicenseKey]] and the [[connection string|/API/CodeSamples/SqlServerConnectionString]]. However, there are many more customizations you can make to Izenda Reports. We will provide a template with a full list of overridden methods below. You can also find a full list of [[settings|/API/AdHocsettings]] that Izenda can be customized with on our site. This code should be placed in the Global.asax file of your web site.
 
+##Method List
+
+These methods are overridable in any class that inherits from FileSystemAdHocConfig or DatabaseAdHocConfig
+
+* [[ArchiveReportOutput|http://wiki.izenda.us/API/AdHocConfig/ArchiveReportOutput]] - Allows archival of any reports that are viewed/exported/scheduled.
+* [[ConfigureSettings|http://wiki.izenda.us/API/AdHocConfig/ConfigureSettings]] - **Obsolete** Allows configuration of global settings all users of the system depend on
+* [[CustomizeChart|http://wiki.izenda.us/API/AdHocConfig/CustomizeChart]] - Allows customization of chart objects before they appear on screen.
+* [[CustomizeDundasChart|http://wiki.izenda.us/API/AdHocConfig/CustomizeDundasChart]] - Allows chart customization specific to the DundasCharts charting engine.
+* [[CustomizeGuage|http://wiki.izenda.us/API/AdHocConfig/CustomizeGuage]] - Allows customization of gauge objects before they appear on screen.
+* [[DeleteReportSet|http://wiki.izenda.us/API/AdHocConfig/DeleteReportSet]] - Allows customization for deleting reports.
+* [[DeleteTemplate|http://wiki.izenda.us/API/AdHocConfig/DeleteTemplate]] - Allows customization for deleting forms associated with specific reports
+* [[DeleteThumbnail|http://wiki.izenda.us/API/AdHocConfig/DeleteThumbnail]] - Allows customization for deleting report thumbnails.
+* [[FilteredListReportsDictionary|http://wiki.izenda.us/API/AdHocConfig/FilteredListReportsDictionary]] - Allows customization of the list of reports guaranteed to be available to the user
+* [[GetCustomFooter|http://wiki.izenda.us/API/AdHocConfig/GetCustomFooter]] - Allows customization of the footer that appears on all reports
+* [[GetCustomHeader|http://wiki.izenda.us/API/AdHocConfig/GetCustomHeader]] - Allows customization of the header that appears on all reports
+* [[GetOperatorList|http://wiki.izenda.us/API/AdHocConfig/GetOperatorList]] - Allows a customized list of possible SQL logic operators to be used
+* [[GetPossibleValuesAsTree|http://wiki.izenda.us/API/AdHocConfig/GetPossibleValuesAsTree]] - Allows a special Equals(Select) dropdown menu to be created that contains a tree structure of values for filters
+* [[GetReportIDByName|http://wiki.izenda.us/API/AdHocConfig/GetReportIDByName]] - Allows customization of the process that gets a report ID based on the report name
+* [[GetReportNameById|http://wiki.izenda.us/API/AdHocConfig/GetReportNameById]] - Allows customization of the process that gets a report name based on the report ID
+* [[IsFieldAllowedInFilters|http://wiki.izenda.us/API/AdHocConfig/IsFieldAllowedInFilters]] - Allows customization of determining whether or not to allow field names in filters
+* [[ListReports|http://wiki.izenda.us/API/AdHocConfig/ListReports]] - Allows customization of the process used for obtaining a list of all reports 
+* [[LoadReportSet|http://wiki.izenda.us/API/AdHocConfig/LoadReportSet]] - Allows customization of the process for loading report sets
+* [[LoadThumbnail|http://wiki.izenda.us/API/AdHocConfig/LoadThumbnail]] - Allows customization of the process for loading report thumbnails
+* [[PerformCustomRendering|http://wiki.izenda.us/API/AdHocConfig/PerformCustomRendering]] - Allows customization of the rendering method used when a form report is being rendered
+* [[PostExecuteReportSet|http://wiki.izenda.us/API/AdHocConfig/PostExecuteReportSet]] - Allows customization of the ReportSet object currently being processed to be displayed/exported/sent via scheduler
+* [[PostLoadReportSet|http://wiki.izenda.us/API/AdHocConfig/PostLoadReportSet]] - Allows customization of the process that occurs after the ReportSet is loaded
+* [[PostLogin|http://wiki.izenda.us/API/AdHocConfig/PostLogin]] - **Obsolete** Allows customization of per-user settings once the user has logged in
+* [[PostProcessEqualsSelectList|http://wiki.izenda.us/API/AdHocConfig/PostProcessEqualsSelectList]] - Allows customization of the process that runs after the Equals(Select/Checkbox/Popup/Multiple) values have been obtained
+* [[PostSaveReportSet|http://wiki.izenda.us/API/AdHocConfig/PostSaveReportSet]] - Allows customization of the process that occurs after saving a report
+* [[PreLoadReportSet|http://wiki.izenda.us/API/AdHocConfig/PreLoadReportSet]] - Allows customization of the process that occurs before loading a report
+* [[PreSaveReportSet|http://wiki.izenda.us/API/AdHocConfig/PreSaveReportSet]] - Allows customization of the process that occurs before saving a report
+* [[ProcessDataSet|http://wiki.izenda.us/API/AdHocConfig/ProcessDataSet]] - Allows customization of the process that loads data from the database
+* [[ProcessEqualsSelectList|http://wiki.izenda.us/API/AdHocConfig/ProcessEqualsSelectList]] - Allows customization of the process that loads the Equals(Select/Checkbox/Popup/Multiple) values for filters
+* [[ProcessFriendlyException|http://wiki.izenda.us/API/AdHocConfig/ProcessFriendlyException]] - Allows customization of how exceptions are handled when UseFriendlyExceptions is true
+* [[SaveReportRDL|http://wiki.izenda.us/API/AdHocConfig/SaveReportRDL]] - Allows customization of the process that saves the RDL file to disk
+* [[SaveReportSet|http://wiki.izenda.us/API/AdHocConfig/SaveReportSet]] - Allows customization of the process that saves the report to the disk/database
+* [[SaveTemplate|http://wiki.izenda.us/API/AdHocConfig/SaveTemplate]] - Allows customization of the process that saves the form attached to a report
+* [[SaveThumbail|http://wiki.izenda.us/API/AdHocConfig/SaveThumbail]] - Allows customization of the process that saves thumbnails for reports
+* [[ThumbnailExists|http://wiki.izenda.us/API/AdHocConfig/ThumbnailExists]] - Allows customization of the process that checks whether thumbnail pictures exist for reports
+* [[UpdateMetatdata|http://wiki.izenda.us/API/AdHocConfig/UpdateMetatdata]] - **Obsolete** Forces an update of the database schema
+
 ##C♯ Example
 
 ```csharp
