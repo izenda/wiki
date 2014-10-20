@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the maximum number of records to allow during any single export operation. This applies to all exports including [[Bulk CSV|/API/CodeSamples/UseBulkCSV]] and is intended to avoid timeout issues when exporting extremely large amounts of data as well as providing users with a way to request a more extensive look into the data than what the report viewer will display.
+Gets or sets the maximum number of records to allow during any single export operation. This applies to all exports including [[Bulk CSV|/API/CodeSamples/UseBulkCSV]] and is intended to avoid timeout issues when exporting extremely large amounts of data as well as providing users with a way to request a more extensive look into the data than what the report viewer will display. This setting overrides the number input into the [[Records|http://wiki.izenda.us/Guides/ReportDesign/4.0-fields-tab]] input box on the fields tab of the report designer if the number input there exceeds the number specified by this setting. Otherwise, reports will be constrained to the amount specified by Records.
 
 **Default Value:** 100000
 
