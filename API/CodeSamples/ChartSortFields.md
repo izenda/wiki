@@ -53,12 +53,12 @@ End Class
 ##Screenshots
 
 A sample report definition. Note the chart separator value.
-![]()
+![](http://wiki.izenda.us/API/CodeSamples/ChartSortFields/chart_sort_fields_report_def.png)
 
 AdHocSettings.ChartSortFields = {"*", "ShipCountry"}
 
-![]()
+![](http://wiki.izenda.us/API/CodeSamples/ChartSortFields/chart_sort_fields_set.png)
 
 AdHocSettings.ChartSortFields = null
 
-![]()
+![](http://wiki.izenda.us/API/CodeSamples/ChartSortFields/chart_sort_fields_empty.png)
