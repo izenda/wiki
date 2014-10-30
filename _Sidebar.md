@@ -1,4 +1,4 @@
-![alt text](http://demo2.izenda.us/bi/rs.aspx?image=ModernImages.izenda-logo-4.gif)
+![Izenda Logo](http://izenda.com/img/header/Izenda.png)
 ---
 * [[Release Notes]]
 * [[FAQ]]
