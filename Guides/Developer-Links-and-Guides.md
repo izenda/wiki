@@ -46,7 +46,11 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 ###Javascript Guides
 
 * [[Customize Chart Colors|Guides/Customize-Chart-Colors]]
-
+* [[Using the ReportViewerConfig object|http://wiki.izenda.us/API/CodeSamples/Javascript/ReportViewerConfig]]
+* [[Using the ReportListDataLite object|http://wiki.izenda.us/API/CodeSamples/Javascript/ReportListDataLite]]
+* [[Using the ReportListConfig object|http://wiki.izenda.us/API/CodeSamples/Javascript/ReportListConfig]]
+* [[Using the GetRenderedReportSet object|http://wiki.izenda.us/API/CodeSamples/Javascript/GetRenderedReportSet]]
+* [[Using the GetFiltersData object|http://wiki.izenda.us/API/CodeSamples/Javascript/GetFiltersData]]
 ###CSS Guides
 
 * [[Overriding page level CSS|/FAQ/Questions/Overriding-page-level-css]]
