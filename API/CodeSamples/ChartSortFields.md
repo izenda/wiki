@@ -60,6 +60,32 @@ AdHocSettings.ChartSortFields = {"*", "ShipCountry"}
 
 ![](http://wiki.izenda.us/API/CodeSamples/ChartSortFields/chart_sort_fields_set.png)
 
+###Query Results
+
+```sql
+SELECT DISTINCT TOP 10 
+[dbo].[Employees].[LastName] AS 'Label', SUM([dbo].[Orders].[Freight]) AS 'Value', [dbo].[Shippers].[CompanyName] AS 'Separator', COUNT([dbo].[Orders].[ShipCountry]) AS 'LineValue'
+FROM [dbo].[Orders] WITH(NOLOCK) 
+INNER JOIN [dbo].[Shippers] WITH(NOLOCK)  ON [dbo].[Shippers].[ShipperID]=[dbo].[Orders].[ShipVia]
+INNER JOIN [dbo].[Customers] WITH(NOLOCK)  ON [dbo].[Customers].[CustomerID]=[dbo].[Orders].[CustomerID]
+INNER JOIN [dbo].[Employees] WITH(NOLOCK)  ON [dbo].[Employees].[EmployeeID]=[dbo].[Orders].[EmployeeID]
+GROUP BY [dbo].[Employees].[LastName], [dbo].[Shippers].[CompanyName]
+ORDER BY SUM([dbo].[Orders].[Freight]) DESC, COUNT([dbo].[Orders].[ShipCountry]);
+```
+
 AdHocSettings.ChartSortFields = null
 
 ![](http://wiki.izenda.us/API/CodeSamples/ChartSortFields/chart_sort_fields_empty.png)
+
+###Query Results
+
+```sql
+SELECT DISTINCT TOP 10 
+[dbo].[Employees].[LastName] AS 'Label', SUM([dbo].[Orders].[Freight]) AS 'Value', [dbo].[Shippers].[CompanyName] AS 'Separator', COUNT([dbo].[Orders].[ShipCountry]) AS 'LineValue'
+FROM [dbo].[Orders] WITH(NOLOCK) 
+INNER JOIN [dbo].[Shippers] WITH(NOLOCK)  ON [dbo].[Shippers].[ShipperID]=[dbo].[Orders].[ShipVia]
+INNER JOIN [dbo].[Customers] WITH(NOLOCK)  ON [dbo].[Customers].[CustomerID]=[dbo].[Orders].[CustomerID]
+INNER JOIN [dbo].[Employees] WITH(NOLOCK)  ON [dbo].[Employees].[EmployeeID]=[dbo].[Orders].[EmployeeID]
+GROUP BY [dbo].[Employees].[LastName], [dbo].[Shippers].[CompanyName]
+ORDER BY SUM([dbo].[Orders].[Freight]) DESC;
+```
