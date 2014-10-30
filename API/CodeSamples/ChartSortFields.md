@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the list of additional columns that are used to sort chart data. This will apply only when using charts that have a separator value corresponding to one of the values in the array. The resulting chart will sort elements according to any sort already specified by the report designer plus the value of the separator column. The strings entered into the array should be the column name without the schema and table.
+Gets or sets the list of additional columns that are used to sort chart data. This will apply only when using charts that have an additional chart element, such as Pareto charts. The resulting chart will sort elements according to any sort already specified by the report designer plus the value of the separator column. The strings entered into the array should be the column name without the schema and table.
 
 _**Note:** The wildcard "*" denotes the list of existing sort items on the chart._
 ##Global.asax (C♯)
@@ -52,7 +52,8 @@ End Class
 
 ##Screenshots
 
-A sample report definition. Note the chart separator value.
+A sample report definition. Note the chart's "line value" field value.
+
 ![](http://wiki.izenda.us/API/CodeSamples/ChartSortFields/chart_sort_fields_report_def.png)
 
 AdHocSettings.ChartSortFields = {"*", "ShipCountry"}
