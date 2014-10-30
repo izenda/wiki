@@ -8,7 +8,7 @@ Here is a friendly set of links to videos, download pages and reference material
 
 | .NET Webforms C#          | .NET Webforms VB          |
 | :-----------------------: | :-----------------------: |
-| [Download and Installation Guide](http://www.izenda.com/Site/DownloadComplete.aspx?msgId=3) | [Download](http://archives.izenda.us/ri/webforms-vb.zip) |
+| [Download and Installation Guide](http://www.izenda.com/Site/DownloadComplete.aspx?msgId=3) | [Download](http://archives.izenda.us/ri/webforms/webforms-vb.zip) |
  [DLL Download Page](http://www.izenda.com/Site/pages/download.aspx) | [Installation Guide](http://www.izenda.com/Site/DownloadComplete.aspx?msgId=3)|
 
 ##Developer Guides
