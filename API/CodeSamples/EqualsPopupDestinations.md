@@ -27,7 +27,7 @@ public class CustomAdHocConfig : FileSystemAdHocConfig {
       AdHocSettings.AdHocConfig = new CustomAdHocConfig();
       AdHocSettings.PrintMode = PrintMode.Html2PdfAndHtml;
       AdHocSettings.ChartingEngine = ChartingEngine.HtmlChart;
-      AdHocSettings.EqualsPopupDestinations["MyCustomFilters"] = new string[] { "ShipCountry", "ShipCity", "ShipRegion" };     //relevent setting
+      AdHocSettings.EqualsPopupDestinations["MyCustomFilters"] = new string[] { "ShipCountry", "ShipCity", "ShipRegion" };     //relevent setting. The string in the Key must match the name of the custom filters page. The string array values represent the columns that are associated with the page.
 ```
 
 ##Global.asax (VB.NET)
@@ -52,5 +52,5 @@ Public Class CustomAdHocConfig
             AdHocSettings.ShowBetweenDateCalendar = True
             AdHocSettings.AdHocConfig = New CustomAdHocConfig()
             AdHocSettings.ChartingEngine = ChartingEngine.HtmlChart
-            AdHocSettings.EqualsPopupDestinations("MyCustomFilters") = New String() {"ShipCountry", "ShipCity", "ShipRegion" }       // relevent setting
+            AdHocSettings.EqualsPopupDestinations("MyCustomFilters") = New String() {"ShipCountry", "ShipCity", "ShipRegion" }       // relevent setting. The string in the Key must match the name of the custom filters page. The string array values represent the columns that are associated with the page.
 ```
