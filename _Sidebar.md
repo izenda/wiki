@@ -13,7 +13,7 @@
 * [Izenda Website](http://www.izenda.com)
 * [Product Video](https://www.youtube.com/watch?v=1LlHesMCmYs)
 * [Izenda Blog](http://www.izenda.com/blog)
-* [Company Page](http://www.izenda.com/site/Pages/company.aspx)
+* [Company Page](http://www.izenda.com/about/)
 * [Live Demo](http://demo2.izenda.us/bi/ReportListIntro.aspx)
 * [Example Dashboard](http://demo2.izenda.us/bi/Dashboards.aspx?rn=Dashboard)
 * [Gallery](http://www.izenda.com/Gallery)
