@@ -97,12 +97,14 @@
 * FB-15859:  Call PreExecuteReportSet and PostExecuteReportSet when exporting to Bulk CSV
 * FB-15887:  Fixed Edit/View controls on the Dashboards page when saving new report
 * FB-15913:  Export to PDF now uses currently selected breadcrumb node to render the report
+* FB-15949:  Fixed Chart formatting
 * FB-15955:  Do not show Edit and Delete buttons in the Report List when ShowDesignLinks setting is false
 * FB-15975:  Fixed stored procedures interaction with fusiondriver
 * FB-15990:  Fixed automatic subreports in Gauges
 * FB-16020:  Fixed "Zoom To Data" property of the Map
 * FB-16064:  Fixed inputs justification
 * FB-16077:  Apply "require filter value" rules to Stored Procedure Parameters
+
 
 
 # 6.7.0.276 (August 22, 2014)
