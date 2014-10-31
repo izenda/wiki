@@ -28,12 +28,11 @@ public class CustomAdHocConfig : FileSystemAdHocConfig {
       AdHocSettings.PrintMode = PrintMode.Html2PdfAndHtml;
       AdHocSettings.ChartingEngine = ChartingEngine.HtmlChart;
       AdHocSettings.AllowHorizontalBarChart = false;     //relevent setting, setting to false removes horizontal checkbox option for bar chart editor
-
 ```
 
 ##Global.asax (VB.net)
 ```visualbasic
-
+Public Class CustomAdHocConfig
  Inherits FileSystemAdHocConfig
         Public Shared Sub InitializeReporting()
             'Check to see if we've already initialized.
@@ -53,5 +52,4 @@ public class CustomAdHocConfig : FileSystemAdHocConfig {
             AdHocSettings.AdHocConfig = New CustomAdHocConfig()
             AdHocSettings.ChartingEngine = ChartingEngine.HtmlChart
             AdHocSettings.AllowHorizontalBarChart = False        // relevent setting
-
 ```
