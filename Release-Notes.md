@@ -1,4 +1,110 @@
 [[_TOC_]]
+
+# 6.8.0.1 (October 31, 2014)
+
+##Features: 
+* FB-13936: Pure HTML Report Parts
+* FB-14462: Responsive Grids - Refactored tables to diplay data responsively for smaller screens
+* FB-14865: Vision - Visualizations are a D3-based visual supplement to Izenda’s core charting engine
+
+##Enhancements: 
+* FB-13393: JQuery version Upgrade and move of jquery into /resources/js
+* FB-13872: Simplified Expressions - supports statements with/out parenthesis
+* FB-13982: Secondary Drill Down Keys
+* FB-14227: Date picker localization 
+* FB-14383: Extraction of CSS/JS/Images from DLL
+* FB-14488: Navigation, Toolbar and Breadcrumb Responsive 
+* FB-14548: Jquery namespace change from $ to jq$
+* FB-14898: Optimize PostProcessEqualsSelectList
+* FB-15057: Multiple Self Join Alias Support /Displaying the values of multiple datasources
+
+##Bug Fix: 
+* FB-13282:  Fix subtotals order in Forms
+* FB-13557:  Optimize bulk CSV streaming operation
+* FB-13847:  Avoid truncation of datasource names 
+* FB-14216:  Separate Null and Empty String values if both are presented in the data set.
+* FB-14219:  Smoothly cut long labels in the Funnel chart
+* FB-14310:  Optimized reportParts with htmlCharts
+* FB-14448:  Removed overlapping of breadcrumb and field with metric selector
+* FB-14528:  BreakPage property added to the Field advanced properties
+* FB-14601:  Fixed unexpected increasing chart height
+* FB-14715:  Fixed highcharts legend cut off when chart is exported
+* FB-14780:  Hide Fields tab in the Viewer for View Only reports
+* FB-14836:  Added support Equals(Field) filters in the Viewer
+* FB-14870:  Fixed Auto Chart not working on IE8
+* FB-14937:  Apply DIV/0 formatter if there is a division operation in Expression
+* FB-14942:  Fixed subtotals calculation if arithmetic is used
+* FB-15068:  Fix phantom "Summary" and "Detail" creation for new dashboards.
+* FB-15070:  Fixed broken gauge subreports
+* FB-15081:  Fixed several issues related to gauge hover subreports
+* FB-15097:  Use CurrentThread.CurrentUICulture to format dates
+* FB-15103:  Fixed broken legends in piechart
+* FB-15115:  Fixed rendering of Pie/Doughnuts charts with Separator
+* FB-15148:  Made reportset created/modified dates to be correct in logs
+* FB-15160:  Fixed sorted grid columns export
+* FB-15165:  Fixed missing styles in report viewer, not-working styles application to sample grid
+* FB-15169:  Made page numbers disabled by default
+* FB-15176:  Fixed VisibleDataSources saving form the Settings page
+* FB-15238:  Removed unnecessary changing of chart type, added storing of legend data while changing of chart type
+* FB-15276:  Use LEFT join if it is available in auto-join algorithm
+* FB-15280:  Do not add redundant ddk filters to automatic subreport
+* FB-15288:  Fields responsive design in the Viewer and InstantReport page
+* FB-15304:  Fixed Group(Week) format in charts
+* FB-15322:  Style tab header color only applies to all guages
+* FB-15326:  Fixed erroneous adding to grouping of field with expression which effectively doesn't present in report
+* FB-15344:  Made simple databaseSchema (de)serialize optimization
+* FB-15351:  Populate correct ReportInfo.OwnerName in FilteredListReports method
+* FB-15370:  Added line-polar and spline-polar chart types
+* FB-15377:  Fixed pagination when SP is used as a data source
+* FB-15379:  Fixed issues with downloading data when authentication is used on the site
+* FB-15383:  Fixed Filter Logic in the classic ReportViewer
+* FB-15390:  Additional pagination controls implemented
+* FB-15398:  Added message about forcibly fields reordering
+* FB-15405:  Implemented datasource alias support in reportviewer
+* FB-15472:  Fixed behavior when Total is checked in report viewer.
+* FB-15482:  Fixed hidden filters when fusion is used.
+* FB-15488:  UseReportID affects subreport references on fields and TargetReport property in ReportSet
+* FB-15529:  Fixed client side alphanumeric sorting
+* FB-15547:  Fixed Report saving and report name titles in Viewer and Designer when ReportID is used
+* FB-15550:  Fixed formatting in csv output generator after 10000-th line
+* FB-15566:  Fixed erroneous write to log
+* FB-15584:  Allow to close image modal dialog when image is invalid
+* FB-15586:  Trimmed description to avoid undefined exporting behavior
+* FB-15625:  ReportScripting.js in FromDLL directory updated
+* FB-15652:  Do not attach volatile Form to the random reports
+* FB-15657:  Implemented simple form designer for elrte-incompatible browsers
+* FB-15685:  Fixed JS error in IE8
+* FB-15686:  Fixed numeric formats in Chart Labels
+* FB-15699:  Fixed js error on hover item in Timelime chart
+* FB-15700:  Fixed out of memory exception in gauges
+* FB-15704:  Fixed scheduled reports sending to many recipients
+* FB-15715:  Added indexes to the reports table
+* FB-15725:  Fixed required parameters filters for operators without value in the Viewer
+* FB-15733:  Removed unnecessary resources from outside of dll
+* FB-15750:  Changed AdHocSettings.ShowTableNames setting behavior
+* FB-15753:  Implemented ExtendedFunctions support in expressions
+* FB-15753:  Fixed issue with ExtendedFunctions and refactored Fusion
+* FB-15760:  Fixed issues with dup fields in reportViewer
+* FB-15762:  Fixed animated gauges in reportparts
+* FB-15797:  Fixed issues with Time Slider
+* FB-15801:  Fixed axis labels on the Linear Gauge
+* FB-15823:  Fixed auto-complete filters in the Viewer
+* FB-15851:  Fixed simple-mode filters for Dashboards
+* FB-15852:  UI improvements on the Instant Report page
+* FB-15853:  Update to allow modification of resources in English
+* FB-15857:  Fixed date filters when Thread Culture is not default en-US
+* FB-15858:  Removed all RTF funcationality
+* FB-15859:  Call PreExecuteReportSet and PostExecuteReportSet when exporting to Bulk CSV
+* FB-15887:  Fixed Edit/View controls on the Dashboards page when saving new report
+* FB-15913:  Export to PDF now uses currently selected breadcrumb node to render the report
+* FB-15955:  Do not show Edit and Delete buttons in the Report List when ShowDesignLinks setting is false
+* FB-15975:  Fixed stored procedures interaction with fusiondriver
+* FB-15990:  Fixed automatic subreports in Gauges
+* FB-16020:  Fixed "Zoom To Data" property of the Map
+* FB-16064:  Fixed inputs justification
+* FB-16077:  Apply "require filter value" rules to Stored Procedure Parameters
+
+
 # 6.7.0.276 (August 22, 2014)
 * FB-14154: added formatting to bulk csv exports (**Backwards Compatibility Enhanced in 6.7.0.277 --> September 4, 2014**)
 * FB-15101: Fixed calculated fields filters for DateTime columns
