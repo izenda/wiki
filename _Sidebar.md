@@ -10,7 +10,7 @@
 
 ---
 
-* [Izenda Website](http://www.izenda.com/Site/Izenda-Ad-Hoc-Reporting.aspx)
+* [Izenda Website](http://www.izenda.com)
 * [Product Video](https://www.youtube.com/watch?v=1LlHesMCmYs)
 * [Izenda Blog](http://blog.izenda.com/)
 * [Company Page](http://www.izenda.com/site/Pages/company.aspx)
