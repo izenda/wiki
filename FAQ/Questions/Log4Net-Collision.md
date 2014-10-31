@@ -4,7 +4,7 @@
 
 ##Question
 
-When upgrading to the latest version of Izenda, the website will not compile. The issue is with a third party tool I use that references Log4Net and it's not compatible due to Izenda using a differently signed Log4Net driver. How can I resolve this conflict?
+When upgrading to the latest version of Izenda, the website will not compile. The cause of this issue is with a third party tool that references the Log4Net assembly signed by a public key other than the Log4Net assembly referenced by Izenda.AdHoc.dll. How can I resolve this conflict?
 
 ##Answer
 
