@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the relative path to the Equals(Popup) custom pages. The directory separator will be automatically appended.
+Gets or sets the relative path to the Equals(Popup) custom pages. The directory separator will be automatically appended. You can learn more about the usage of this setting by reviwing our documentation on [[EqualsPopupDestinations|EqualsPopupDestinations]] and [[using custom pages for the equals(Popup) filter|http://wiki.izenda.us/API/CodeSamples/Equals-Popup-Custom-Page]].
 
 ##Global.asax (C#)
 
