@@ -16,9 +16,8 @@
 * [Company Page](http://www.izenda.com/site/Pages/company.aspx)
 * [Live Demo](http://demo2.izenda.us/bi/ReportListIntro.aspx)
 * [Example Dashboard](http://demo2.izenda.us/bi/Dashboards.aspx?rn=Dashboard)
-* [Gallery](http://www.izenda.com/site/Pages/Gallery.aspx)
-* [Client List](http://www.izenda.com/Site/Pages/Clients.aspx)
-* [Contact Page](http://www.izenda.com/site/Pages/contactus.aspx)
+* [Gallery](http://www.izenda.com/Gallery)
+* [Contact Page](http://www.izenda.com/contact-us/)
 
 ---
 
