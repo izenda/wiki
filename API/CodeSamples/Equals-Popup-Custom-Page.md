@@ -17,7 +17,7 @@ To implement custom filters page you need to perform following steps:
 
     `AdHocSettings.EqualsPopupDestinations["MyCustomFilter"] = new string[] { "Col1", "Col2", "ProductName", "CategoryName" };`
 
-3. Get the CustomFiltersTemplate page (.aspx and .aspx.cs files), which we can provide for you, and rename it to MyCustomFilter. Then you can paste it into the CustomFilters folder. Below is a screenshot demonstrating this with the default template name.                                                  
+3. Get the CustomFiltersTemplate page (.aspx and .aspx.cs files), [[which you can download here|http://wiki.izenda.us/API/CodeSamples/Equals-Popup-Custom-Page/CustomFiltersTemplate.zip]], and rename it to MyCustomFilter. Then you can paste it into the CustomFilters folder. Below is a screenshot demonstrating this with the default template name.                                                  
 ![](http://wiki.izenda.us/API/CodeSamples/Equals-Popup-Custom-Page/customfilters-1.png)
 4. In the MyCustomFilter.aspx page, add necessary controls between following lines:
 ```html
