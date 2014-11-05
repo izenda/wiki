@@ -18,7 +18,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 ###Quick Reference Guides
 
 * [[IIS7 Installation Video|http://www.izenda.com/site/kb/uploads/media/videos/vistainstallvideo.zip]]
-* [Installation Guide](/Integration/Tutorials/Installing-Izenda)
+* [Installation Guide](/Integration/Guides/Installing-Izenda)
 * [[Security Guide|/Integration/Tutorials/Security]]
 * [[Basic Security Sample|Home#Basic-Login-Scenario]]
 * [[Adding Code|Integration/Tutorials/Customizing-Izenda-Settings]]
