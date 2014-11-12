@@ -85,3 +85,47 @@ public override void PreExecuteReportSet(Izenda.AdHoc.ReportSet reportSet)
   reportSet.Filters.AddHidden(f);
 }
 ```
+
+##Field Value Concealing
+
+Field value concealing allows you to return all data in a data set but hide the data with a string you provide. By using this method, you can modify the conditions in which the override occurs using any data that the global.asax has access to (for example tenant ID, user ID, parsed cookie/user data).
+
+Insert the following code block inside the CustomAdhocConfig class in the global.asax after the InitializeReporting() function.
+In order to adjust what column to block out with "- -" and the conditions in which it happens, alter the "if" blocks within the public object Format() block.
+
+In this example, any value of freight that is below 50 will be replaced with "--".
+
+```csharp
+
+public class ConcealingFormatter : IFormatter
+{
+public Type GetOutputDataType(System.Data.DataTable table, int columnNumber, ReportOutputOptions reportOutputOptions, Field field)
+{
+return typeof(string);
+}
+
+public object Format(System.Data.DataTable table, int rowNumber, int columnNumber, Field field, System.Data.DataTable originalTable, Field nameField)
+{
+object value = table.Rows[rowNumber][columnNumber];
+float val;
+if (field.DbColumn.Name == "Freight" && value != null && value != DBNull.Value && float.TryParse(value.ToString().Trim(new char[] {'(', ')', '$'}), out val)) {
+
+//any kind of conditions can be checked here - username, field name, table name, column name, currentreportset properties, particular field value, etc
+if (val < 50)
+value = "--";
+}
+return value;
+}
+}
+
+public override void PreExecuteReportSet(ReportSet reportSet)
+{
+reportSet.CustomFormatter = new ConcealingFormatter();
+}
+
+public override void PostExecuteReportSet(ReportSet reportSet)
+{
+reportSet.CustomFormatter = null;
+}
+
+```
