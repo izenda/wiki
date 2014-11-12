@@ -82,6 +82,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How Do I Apply Security to Scheduled Reports?|/FAQ/Questions/Applying-Security-to-Scheduled-Reports]]
 - [[How Can I Authenticate Against a Hash Sent Via Query String?|/FAQ/Questions/Authenticating-via-hash]]
 - [[How Can I Prevent Other Users From Overwriting My Reports?|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights]]
+- [[How Do I Mask Specified Field Values?|http://wiki.izenda.us/FAQ/Questions/Applying-Security#Field-Value-Concealing]]
 
 ##Settings
 
