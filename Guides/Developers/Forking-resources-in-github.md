@@ -8,3 +8,6 @@ The resources repository is where the HTML, CSS, and javascript reside within th
 
 ##How to fork
 
+<script type="text/javascript">
+alert("hello");
+</script>
