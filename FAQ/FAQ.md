@@ -117,3 +117,4 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How Can I Use a Custom Filter on my Dashboards?|/FAQ/Questions/Adding-custom-filters-to-dashboards]]
 - [[What kinds of caching does Izenda use?|http://wiki.izenda.us/FAQ/Questions/Caching]]
 - [[I'm seeing a version collision between a third party library referencing Log4Net and Izenda. How do I fix this?|/FAQ/Questions/Log4Net-Collision]]
+- [How do I customize the English.resx file?](http://wiki.izenda.us/FAQ/How-do-i-customize-the-English-dot-resx-file)
