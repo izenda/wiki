@@ -88,4 +88,4 @@ Newer versions of the demo site that are distributed on the Izenda site include 
 
 If you want to incorporate the report list page into your existing application, you have some options. The first option is to use the placeholder tags for the report list in your masterpage. They are called HeadPlaceHolder, PlaceHolder, and FooterPlaceHolder respectively, although they can be changed at your discretion as long as they remain consistent throughout the application. These placeholders will only be displayed on pages that use the placeholders and insert additional content into them. Therefore, you will end up with your own business's masterpage being used on reporting pages. If you want to retain the links that are normally displayed in the toolbar then you can either make that part of your masterpage or part of your reporting section by extracting the HTML for those list items and placing them where you see fit. Below is an example of the aforementioned process.
 
-![]()
+![](http://wiki.izenda.us/API/CodeSamples/ReportList/custom-report-list/custom_report_list.png)
