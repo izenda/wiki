@@ -83,3 +83,7 @@ This code sample utilizes asp controls and prints out a list of reports using th
 ###6.7 And Later
 
 Newer versions of the demo site that are distributed on the Izenda site include a different page structure that leverages jQuery technologies and can be customized by modifying the javascript. It is pre-built to perform necessary functions that leverage the page structure and naming conventions. However, since it is open for editing, you can see how the Report List is built. As such, there will not be any code samples included here.
+
+###Incorporating the report list into an existing application
+
+If you want to incorporate the report list page into your existing application, you have some options. The first option is to use the placeholder tags for the report list in your masterpage. They are called HeadPlaceHolder, PlaceHolder, and FooterPlaceHolder respectively, although they can be changed at your discretion as long as they remain consistent throughout the application. These placeholders will only be displayed on pages that use the placeholders and insert additional content into them. Therefore, you will end up with your own business's masterpage being used on reporting pages. If you want to retain the links that are normally displayed in the toolbar then you can either make that part of your masterpage or part of your reporting section by extracting the HTML for those list items and placing them where you see fit.
