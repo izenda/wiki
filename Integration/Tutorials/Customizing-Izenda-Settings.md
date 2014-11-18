@@ -130,7 +130,7 @@ In general, most custom code will be placed in the **Global.asax** file. Custom 
 
 ##What if my global.asax is already integrated or I cannot use it?
 
-In the case that you will not be using the **global.asax** file or that you are using a different **global.asax** than Izenda's, you can set the license key at the start of the user's session to obtain the same result. You will need to make sure that you set the license key before invoking any of the configuration methods or settings in Izenda Reports.
+In the case that you will not be using the **global.asax** file or that you are using a different **global.asax** than Izenda's, you can set the license key at the start of the user's session to obtain the same result. You will need to make sure that you set the license key before invoking any of the configuration methods or settings in Izenda Reports. You can also use [[this guide|http://wiki.izenda.us/Guides/Integrating-Izenda]] to decide how to integrate Izenda into your existing application. _**Note:** This requires knowledge of asp.net and C# at the least._
 
 ##Web Farms/Gardens/Clusters/Load Balancers/Clouds/Azure
 
