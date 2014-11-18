@@ -6,7 +6,7 @@
 * [MSDN Open Data Article](http://msdn.microsoft.com/en-us/data/hh237663.aspx)
 
 ## OData Provider
-[The OData Provider](http://archives.izenda.us/ri/odata-provider.zip) is required to fully utilize Izenda's capabilities over OData out of the box.  It exposes your database(s) over OData.
+[The OData Provider](http://archives.izenda.us/ri/odata/odata-provider.zip) is required to fully utilize Izenda's capabilities over OData out of the box.  It exposes your database(s) over OData.
 
 Make the following changes to **WebService.aspx.cs**
 
