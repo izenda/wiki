@@ -6,7 +6,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |:-------|:----------:|:-----------------:|:-----------:|
 |String|[[AddAllFilterRegex|/API/CodeSamples/AddAllFilterRegex]]|Gets or sets the regular expression used for "Add All" filtering.            If name of a column matches this expression then it will not be added on "Add All" click.|(id&#124;guid)$|
 |Dictionary|[[AdditionalTimeZones|/API/CodeSamples/AdditionalTimeZones]]|List of additional timezones.**(deprecated)**|null|
-|AdHocConfig|[[AdHocConfig|/API/CodeSamples/AdHocConfig]]|Gets or sets the current Izenda.AdHoc.AdHocSettings.AdHocConfig - Ad Hoc configuration.|null|
+|AdHocConfig|[[AdHocConfig|/API/AdHocConfig]]|Gets or sets the current Izenda.AdHoc.AdHocSettings.AdHocConfig - Ad Hoc configuration.|null|
 |String|[[AdHocUserKey|/API/CodeSamples/AdHocUserKey]]|Gets or sets a single password limiting access to the report designer, report list and report viewer.|String.Empty|
 |AggregateFunctionCollection|[[AggregateFunctions|/API/CodeSamples/AggregateFunctions]]||{None,AVG,COUNT,<br>COUNT_DISTINCT,MAX,MIN,<br>SUM,TimeSUM,SUM_DISTINCT,<br>GROUP_BY_DAY,GROUP_BY_MONTH,GROUP_BY_YEAR,<br>GROUP_BY_MONTH_NAME,GROUP_BY_DAY_OF_WEEK,GROUP_BY_DATE,<br>GROUP_BY_YEAR_AND_MONTH,GROUP_BY_YEAR_AND_MONTH_NAME,GROUP_BY_WEEK,<br>GROUP_BY_QUARTER,DAYS_OLD,AVG_DAYS_OLD,<br>SUM_DAYS_OLD,GROUP}|
 |Boolean|[[AllowAnalysisGrid|/API/CodeSamples/AllowAnalysisGrid]]|Gets or sets the value indicating whether it is allowed analysis grid|True|
