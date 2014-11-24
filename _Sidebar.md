@@ -15,7 +15,7 @@
 * [Izenda Blog](http://blog.izenda.com/)
 * [Company Page](http://www.izenda.com/about/)
 * [Live Demo](http://izenda.com/bi/ReportList.aspx )
-* [Example Dashboard](http://demo2.izenda.us/bi/Dashboards.aspx?rn=Dashboard)
+* [Example Dashboard](http://izenda.com/bi/Dashboards.aspx?rn=Dashboard)
 * [Gallery](http://www.izenda.com/Gallery)
 * [Contact Page](http://www.izenda.com/contact-us/)
 
