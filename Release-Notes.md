@@ -1,5 +1,78 @@
 [[_TOC_]]
 
+# 6.8.0.2 (November 26, 2014)
+ 
+* FB-10702: Language Pack GUI Updated
+* FB-13603: Disable VG automatically if report contain Form
+* FB-14598: Implemented support of multiple drilldown keys in reportset
+* FB-14969: Encode HTML in inputs on misc tab
+* FB-14976: Added auto refresh functionality in viewers
+* FB-15075: Added sub report filter control from master report
+* FB-15077: Added multi line header and width field properties
+* FB-15164: Hide Summary with Title if there are no summary rows on the current page is pagination is used
+* FB-15300: Fixed Instant Report schema loading when HiddenColumns setting isused
+* FB-15320: Legend disabled for piecharts with separator
+* FB-15322: Fixed gauge color styling
+* FB-15471: Implemented confirmation of saving reportset which was modified onserver side by other user
+* FB-15556: Increased subtotals calculation performance when VG is used
+* FB-15579: Fixed slowdown caused by Preview button handling in IE8
+* FB-15623: Support Stored Procedures in BulkCSV output
+* FB-15624: Send all scheduled emails using single SmtpClient
+* FB-15631: Scheduler for Dashboards implemented
+* FB-15671: FORMS - Default adjusted to x
+* FB-15686: Fixed broken Save button in dashboard preview, made join aliases hiddable, fixed in highcharts error related to overflowing number of styles in IE8
+* FB-15708: Use AdHocSettings.Culture to format Date values in filters description
+* FB-15716: Fixed js exception in animated gauges
+* FB-15737: Fixed missing datetime stamp in excel/word export
+* FB-15776: Disable filters inputs when loading
+* FB-15782: Fixed overlapping labels in pie charts
+* FB-15784: Report List page - show message when no reports found
+* FB-15794: Fixed slowdown when adding many fields through QuickAdd
+* FB-15801: Fixed axis labels on the Linear Gauge
+* FB-15804: Fixed subtotals when single SP is used as a data source
+* FB-15864: Removed hidden filter fields from fieldlist while viewing
+* FB-15876: Removed redundant report refreshes in the Viewer
+* FB-15877: Format labels and tooltip values in Combo Chart
+* FB-15883: Fixed issue with HTML Footer in HTML2PDF print
+* FB-15889: Properly sort DateTime values on the client if format is not specified
+* FB-15896: Updated Waterfall/Doc.html preview to show the preview image afterclicking the help box on the report designer.
+* FB-15900: Removed onhover checkboxes from InstantReport page. Also removed old data-sources.css from Resources/css folder.
+* FB-15922: Fixed css for instant report table
+* FB-15949: Properly apply Value format in the Dundas Pie chart when "Show percentage" is checked
+* FB-15953: Adjusted the settings tabs to make them more responsive to UI changes.Added missing separators to the toolbar menu to make the UI more consistent.
+* FB-15981: Improved locating of Vis folder in site folders tree
+* FB-15983: Altered css to fix thumbnail API defect
+* FB-15984: Enhanced security in Dashboards
+* FB-16015: Fixed responsiveness in Pie and Funnel charts
+* FB-16032: Subtotals added to BulkCSV export
+* FB-16037: Properly sort results from the SP in a simple mode
+* FB-16039: Show Loading message in Filters/Fields tabs during initialization
+* FB-16050: Show only valid to join data sources sets in the Recent Data Sources list
+* FB-16052: Fixed report export after exporting to Bulk CSV
+* FB-16079: Optimized query Cache for all SQL requests
+* FB-16105: Removed duplicate Report List javascript reference
+* FB-16122: Fixed apostrophes in fields aliases
+* FB-16123: fixed world tour animation pathing
+* FB-16135: Fixed VG and Pivots when AdHocSettings.ExpandVisualGroupGrids is false
+* FB-16137: Fixed Gauges in reports with pagination
+* FB-16145: Fixed Pivot columns Advanced Properties
+* FB-16162: Fixed Forms reports rendering when filter operators with no valuesareused
+* FB-16194: Apply Field Description to the corresponding Filter in the filtersdescription
+* FB-16200: Fixed Count Distinct function in Maps
+* FB-16201: Adjust Charts height in Excel export
+* FB-16210: Do not try to create clustered index on IzendaAdHocReports table if index already exists
+* FB-16226: Allow for data sources to be in multiple categories in the Designer
+* FB-16243: Refresh report Thumbnail with every save
+* FB-16253: Summary title now wraps around if too long
+* FB-16254: Fixed emails from the client Subject text encoding
+* FB-16297: Fixed resources folder location when dll works in offline mode
+* FB-16317: Combine Bottom option fixed for piechart with separator
+* FB-16320: Bread crumbs alignment improvement in the Heatmap vis
+* FB-16360: Added intelligently forced disabling value labels on trend High Charts
+* FB-16372: Fixed Stored Procedures without available columns serialization
+* FB-16377: Use appropriate Parameters types for Ansi and Unicode strings
+* FB-16445: Fixed crash on second reportset viewing
+
 # 6.8.0.1 (October 31, 2014)
 
 ##Features: 
@@ -18,7 +91,7 @@
 * FB-14898: Optimize PostProcessEqualsSelectList
 * FB-15057: Multiple Self Join Alias Support /Displaying the values of multiple datasources
 
-##Bug Fix: 
+##Fixes: 
 * FB-13282:  Fix subtotals order in Forms
 * FB-13557:  Optimize bulk CSV streaming operation
 * FB-13847:  Avoid truncation of datasource names 
