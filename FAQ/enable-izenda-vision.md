@@ -1,5 +1,13 @@
 #Enable Izenda Vision & HTML Charting
 
+**To Enable HTML Charting**
+
+- Set ``AdHocSettings.ChartingEngine = ChartingEngine.HtmlChart;`` - typically inside your _global.asax_.
+
+- Create sample reports.
+
+**To Enable VISION**
+
 Izenda Vision is a rich extension to the API to include many cutting-edge data visualizations to your Izenda-enabled application. Here are the steps required to start using Izenda Vision.
 
 - Purchase a Vision License.
