@@ -1,6 +1,6 @@
 [[_TOC_]]
 
-# 6.8.0.2 (November 26, 2014)
+# 6.8.0.2 (November 25, 2014)
  
 * FB-10702: Language Pack GUI Updated
 * FB-13603: Disable VG automatically if report contain Form
