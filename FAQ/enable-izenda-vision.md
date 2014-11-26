@@ -1,4 +1,4 @@
-#Enable Izenda Vision
+#Enable Izenda Vision & HTML Charting
 
 Izenda Vision is a rich extension to the API to include many cutting-edge data visualizations to your Izenda-enabled application. Here are the steps required to start using Izenda Vision.
 
