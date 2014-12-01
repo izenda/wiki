@@ -73,6 +73,8 @@
 * FB-16377: Use appropriate Parameters types for Ansi and Unicode strings
 * FB-16445: Fixed crash on second reportset viewing
 
+* HF-15686: Fixed adhoc failure when query caching is disabled
+
 # 6.8.0.1 (October 31, 2014)
 
 ##Features: 
