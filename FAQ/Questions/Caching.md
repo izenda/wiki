@@ -20,7 +20,7 @@ The AdHocConfig.InvalidateFilteredCaches() method will clean up the results cach
 
 ###InvalidateSchemaCache
 
-The AdHocConfig.InvalidateSchemaCache() method will update the schema for database changes, all filtered report lists, queries to the database that were cached, cached HTML results of reports, and cached XML report definitions.
+The AdHocConfig.Driver.InvalidateSchemaCache() method will update the schema for database changes, all filtered report lists, queries to the database that were cached, cached HTML results of reports, and cached XML report definitions.
 
 ###CleanUpCache
 
