@@ -39,6 +39,21 @@ BEGIN
 END;
 ```
 
+##PostgreSQL Table Script
+
+```sql
+CREATE TABLE IzendaAdHocReports (
+	"Name" varchar(255) NOT NULL,
+	"Xml" text,
+	"createddate" date,
+	"modifieddate" date,
+	"tenantid" varchar(255),
+	"izendaadhocreportsid" integer,
+	"reportsourceid" integer,
+	"thumbnail" bytea
+);
+```
+
 ##Izenda FORMS plugin
 
 The Izenda [[FORMS|/Guides/ReportDesign/14.0-Izenda-FORMS]] plugin uses a unique process to generate the pixel-perfect forms that the report viewers see. To do this, it needs a special column in the database. Here is the table script with the new column added.
@@ -78,6 +93,22 @@ BEGIN
 END;
 ```
 
+###PostgreSQL Table Script
+
+```sql
+CREATE TABLE IzendaAdHocReports (
+	"Name" varchar(255) NOT NULL,
+	"Xml" text,
+	"createddate" date,
+	"modifieddate" date,
+	"tenantid" varchar(255),
+	"izendaadhocreportsid" integer,
+	"form" text,
+	"reportsourceid" integer,
+	"thumbnail" bytea
+);
+```
+
 ###MSSQL Alter table script
 
 And here is an SQL statement to add the field to an existing table.
@@ -97,4 +128,13 @@ ALTER TABLE IzendaAdHocReports
 ADD (Form NCLOB);
 COMMIT;
 END;
+```
+
+###PostgreSQL Alter table script
+
+Here is the PostgreSQL equivalent of the above alter table script
+
+```sql
+ALTER TABLE IzendaAdHocReports 
+ADD Form text;
 ```
