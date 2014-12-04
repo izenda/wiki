@@ -28,7 +28,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
 		Directory.CreateDirectory(reportPath);
 	
 	// Save report output to the archive
-	using (FileStream sw = new FileStream(reportPath   reportSet.Name + "." + extension, FileMode.Create))
+	using (FileStream sw = new FileStream(reportPath + reportSet.ReportName+ "." + extension, FileMode.Create))
 		using (BinaryWriter bw = new BinaryWriter(sw))
 			bw.Write(data);
     }
