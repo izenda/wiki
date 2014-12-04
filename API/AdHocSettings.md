@@ -8,7 +8,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Dictionary|[[AdditionalTimeZones|/API/CodeSamples/AdditionalTimeZones]]|List of additional timezones.**(deprecated)**|null|
 |AdHocConfig|[[AdHocConfig|/API/AdHocConfig]]|Gets or sets the current Izenda.AdHoc.AdHocSettings.AdHocConfig - Ad Hoc configuration.|null|
 |String|[[AdHocUserKey|/API/CodeSamples/AdHocUserKey]]|Gets or sets a single password limiting access to the report designer, report list and report viewer.|String.Empty|
-|AggregateFunctionCollection|[[AggregateFunctions|/API/CodeSamples/AggregateFunctions]]||{None,AVG,COUNT,<br>COUNT_DISTINCT,MAX,MIN,<br>SUM,TimeSUM,SUM_DISTINCT,<br>GROUP_BY_DAY,GROUP_BY_MONTH,GROUP_BY_YEAR,<br>GROUP_BY_MONTH_NAME,GROUP_BY_DAY_OF_WEEK,GROUP_BY_DATE,<br>GROUP_BY_YEAR_AND_MONTH,GROUP_BY_YEAR_AND_MONTH_NAME,GROUP_BY_WEEK,<br>GROUP_BY_QUARTER,DAYS_OLD,AVG_DAYS_OLD,<br>SUM_DAYS_OLD,GROUP}|
+|AggregateFunctionCollection|[[AggregateFunctions|/API/CodeSamples/AggregateFunctions]]||{None, AVG, COUNT,<br> COUNT_DISTINCT, MAX, MIN,<br> SUM, TimeSUM, SUM_DISTINCT,<br> GROUP_BY_DAY, GROUP_BY_MONTH, GROUP_BY_YEAR,<br> GROUP_BY_MONTH_NAME, GROUP_BY_DAY_OF_WEEK, GROUP_BY_DATE,<br> GROUP_BY_YEAR_AND_MONTH, GROUP_BY_YEAR_AND_MONTH_NAME, GROUP_BY_WEEK,<br> GROUP_BY_QUARTER, DAYS_OLD, AVG_DAYS_OLD,<br> SUM_DAYS_OLD, GROUP}|
 |Boolean|[[AllowAnalysisGrid|/API/CodeSamples/AllowAnalysisGrid]]|Gets or sets the value indicating whether it is allowed analysis grid|True|
 |Boolean|[[AllowArchivedReportTableCreation|/API/CodeSamples/AllowArchivedReportTableCreation]]|Gets or sets the value indicating whether it is allowed to create the database table            that contains archived reports if there is no such table in the database.|True|
 |Boolean|[[AllowClientSorting|/API/CodeSamples/AllowClientSorting]]||True|
@@ -107,7 +107,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |NameValueCollection|[[DetailReportFormatString|/API/CodeSamples/DetailReportFormatString]]|Gets or sets the extended link formats for "Detail Link" format.**(deprecated)**|null|
 |Boolean|[[Distinct|/API/CodeSamples/Distinct]]|Gets or sets the initial value for Izenda.AdHoc.Report.Distinct field.|True|
 |Boolean|[[DistinctSubtotalInnerQuery|/API/CodeSamples/DistinctSubtotalInnerQuery]]|Gets or sets the value indicating whether DISTINCT option should be used            in inner query for the subtotals calculating.|True|
-|FormatCollection|[[DrillDownStyle|/API/CodeSamples/DrillDownStyle]]|Gets or sets the list of available drill-down report fields formats.|{DetailLink,DetailLinkNewWindow,EmbeddedDetail,<br>DetailLinkPopup}|
+|FormatCollection|[[DrillDownStyle|/API/CodeSamples/DrillDownStyle]]|Gets or sets the list of available drill-down report fields formats.|{DetailLink, DetailLinkNewWindow, EmbeddedDetail, <br>DetailLinkPopup}|
 |AggregateFunctionCollection|[[DundasAggregateFunctions|/API/CodeSamples/DundasAggregateFunctions]]||{None,AVG,COUNT,<br>COUNT_DISTINCT,SUM}|
 |String|[[EmailFromAddress|/API/CodeSamples/EmailFromAddress]]|Email from address for the automated scheduler.|adhoc@yourdomain.com|
 |String|[[EmailSubjectFormatString|/API/CodeSamples/EmailSubjectFormatString]]|Gets or set subject of the emailed report for scheduler.|{0}|
@@ -224,7 +224,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String|[[ReportList|/API/CodeSamples/ReportList]]|Gets or sets the URL of the report list page.|ReportList.aspx|
 |ReportListSettings|[[ReportListSettings|/API/CodeSamples/ReportListSettings]]|Gets or sets the value indicating ReportList display**(deprecated)**|HideAll|
 |ReportSetEventWatcherCollection|[[ReportSetEventWatchers|/API/CodeSamples/ReportSetEventWatchers]]|Gets or sets the collection of registered Izenda.AdHoc.IReportSetEventWatcherwhich can do some actions on Izenda.AdHoc.ReportSet-related events.|null|
-|String|[[ReportsPath|/API/CodeSamples/ReportsPath]]|Gets or sets the path of the folder where Izenda.AdHoc.FileSystemAdHocConfigstores its reports.If the value is <see langword="null then reports will be storedin "Reports" subfolder of application folder.|C:\cygwin64\home\Joseph\adhocsettings_output\Reports|
+|String|[[ReportsPath|/API/CodeSamples/ReportsPath]]|Gets or sets the path of the folder where Izenda.AdHoc.FileSystemAdHocConfigstores its reports.If the value is null then reports will be stored in "Reports" subfolder of application folder.|[drive]:\[ApplicationFolder]\Reports|
 |Boolean|[[ReportsSharedByDefault|/API/CodeSamples/ReportsSharedByDefault]]||True|
 |StorageMode|[[ReportStorageMode|/API/CodeSamples/ReportStorageMode]]|Defines how reports are stored - in the file system or in the database**(deprecated)**|Filesystem|
 |ReportTypeCollection|[[ReportTypes|/API/CodeSamples/ReportTypes]]|Gets or sets the report types.**(deprecated)**|{Detail,Summary,Chart,<br>Gauge}|
