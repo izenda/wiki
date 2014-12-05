@@ -37,7 +37,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[AutoJoinOnRenderedRows|/API/CodeSamples/AutoJoinOnRenderedRows]]|Gets or sets the value indicating whether auto-join function should work for server-rendered rows in Izenda.AdHoc.AdHocSettings.JoinedTablesList**(deprecated)**|True|
 |Boolean|[[AutoPostBackOnFilterChange|/API/CodeSamples/AutoPostBackOnFilterChange]]|Gets or sets the value indicating whether should be postback on filter change.|True|
 |Boolean|[[CacheEqualsSelect|/API/CodeSamples/CacheEqualsSelect]]|Gets or sets the value indicating whether "Equals (Select)" value should be cached.|False|
-|String|[[CacheFolder|/API/CodeSamples/CacheFolder]]|Gets or sets the folder where cache is stored|C:\Users\Joseph\AppData\Local\Temp\|
+|String|[[CacheFolder|/API/CodeSamples/CacheFolder]]|Gets or sets the folder where cache is stored|[systemdrive]:\Temp\|
 |Boolean|[[CacheQueries|/API/CodeSamples/CacheQueries]]|Gets or sets the value indicating whether all queries for the Izenda.AdHoc.Database.Driver should be cached.|True|
 |Boolean|[[CacheReports|/API/CodeSamples/CacheReports]]|Gets or sets the value indicating whether all loaded reports should be cached.|True|
 |Boolean|[[CacheSchema|/API/CodeSamples/CacheSchema]]|Gets or sets the value indicating whether Izenda.AdHoc.Database.Driver.DatabaseSchema should be cached.|True|
@@ -68,7 +68,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String|[[DashboardDesignerUrlWithDelimiter|/API/CodeSamples/DashboardDesignerUrlWithDelimiter]]|Gets the Izenda.AdHoc.AdHocSettings.DashboardDesignerUrl with "?" or "&amp;" char at the end.|DashboardDesigner.aspx?|
 |Int32|[[DashboardFieldsCount|/API/CodeSamples/DashboardFieldsCount]]|Gets or sets the count of additional reports.|3|
 |Double|[[DashboardGaugeMax|/API/CodeSamples/DashboardGaugeMax]]|Gets or sets the gauge max value for "Dashboard Gauge" format.**(deprecated)**|1.79769313486232E+308|
-|Double|[[DashboardGaugeMin|/API/CodeSamples/DashboardGaugeMin]]|Gets or sets the guage min value for "Dashboard Gauge" format.**(deprecated)**|-1.79769313486232E+308|
+|Double|[[DashboardGaugeMin|/API/CodeSamples/DashboardGaugeMin]]|Gets or sets the gauge min value for "Dashboard Gauge" format.**(deprecated)**|-1.79769313486232E+308|
 |Int32|[[DashboardGaugeWidth|/API/CodeSamples/DashboardGaugeWidth]]|Gets or sets value, indicating how long (minutes) reportSet output html will stay in cache. Zero means cache disabled.|200|
 |Int32|[[DashboardMinimumWidth|/API/CodeSamples/DashboardMinimumWidth]]|Gets or set minimum dashboard width.**(deprecated)**|1000|
 |Boolean|[[DashboardMode|/API/CodeSamples/DashboardMode]]|Gets or sets the value indicating whether dashboard mode is enabled.**(deprecated)**|False|
@@ -262,7 +262,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[ShowAllTables|/API/CodeSamples/ShowAllTables]]|Gets or sets the value indicating whether all tables should be shown in tables dropdown.**(deprecated)**|True|
 |Boolean|[[ShowArithmeticInSummary|/API/CodeSamples/ShowArithmeticInSummary]]|Gets or sets the value indicating whether arithmetic operations are shown in the summary tab of Izenda.Web.UI.AdHocReportDesigner.|False|
 |Boolean|[[ShowArithmeticOperations|/API/CodeSamples/ShowArithmeticOperations]]|Gets or sets the value indicating whether arithmetic operations are shown in Izenda.AdHoc.AdHocSettings.FieldList.|True|
-|Boolean|[[ShowBackButton|/API/CodeSamples/ShowBackButton]]|Gets or sets the value indicating whether "Back" button should beshown in the Izenda.Web.UI.AdHocToolbarNavigation.|False|
+|Boolean|[[ShowBackButton|/API/CodeSamples/ShowBackButton]]|Gets or sets the value indicating whether "Back" button should be shown in the Izenda.Web.UI.AdHocToolbarNavigation.|False|
 |Boolean|[[ShowBetweenDateCalendar|/API/CodeSamples/ShowBetweenDateCalendar]]||True|
 |Boolean|[[ShowBulkCSVButton|/API/CodeSamples/ShowBulkCSVButton]]|Gets or sets the value indicating possibility export to BulkCSV**(deprecated)**|False|
 |Boolean|[[ShowCategoryTextboxInSaveDialog|/API/CodeSamples/ShowCategoryTextboxInSaveDialog]]|Gets or sets the value indicating whether category checkbox should be shown            in the save dialog.|True|
@@ -280,7 +280,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[ShowDatabaseDiagramIcon|/API/CodeSamples/ShowDatabaseDiagramIcon]]|Gets or sets the value indicating whether the Database Diagram icon should be            shown in the toolbar.|True|
 |Boolean|[[ShowDatabaseTypes|/API/CodeSamples/ShowDatabaseTypes]]|Gets or set value indicating whether database types should be shown in the fields dropdown.|False|
 |Boolean|[[ShowDataSourcesAsCheckBoxes|/API/CodeSamples/ShowDataSourcesAsCheckBoxes]]|Gets or sets the value indicating mode of data sources list is showed.|True|
-|Boolean|[[ShowDataSourcesTab|/API/CodeSamples/ShowDataSourcesTab]]|Gets or sets the value indicating whether Izenda.Web.UI.AdHocReportDesigner tab withdata sources list is showed.|True|
+|Boolean|[[ShowDataSourcesTab|/API/CodeSamples/ShowDataSourcesTab]]|Gets or sets the value indicating whether Izenda.Web.UI.AdHocReportDesigner tab with data sources list is showed.|True|
 |Boolean|[[ShowDataWhenParametersBlank|/API/CodeSamples/ShowDataWhenParametersBlank]]|Gets or sets the value indicating whether data should be shown            in report viewer if all parameters is blank.**(deprecated)**|True|
 |Boolean|[[ShowDescriptionsInReportsTab|/API/CodeSamples/ShowDescriptionsInReportsTab]]|Gets or sets the value indicating whether reports descriptions should beshown in the reports tab of Izenda.Web.UI.AdHocReportDesigner.**(deprecated)**|False|
 |Boolean|[[ShowDesignDashboardLink|/API/CodeSamples/ShowDesignDashboardLink]]|Gets or sets the value indicating whether design new dashboard link is shown|True|
@@ -298,7 +298,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[ShowFilterLogic|/API/CodeSamples/ShowFilterLogic]]|Gets or sets the value indicating whether Filter Logic should be shown in the Izenda.Web.UI.FilterList.|True|
 |Boolean|[[ShowFiltersInDashboards|/API/CodeSamples/ShowFiltersInDashboards]]|Gets or set value indicating whether filters should be shown in Izenda.AdHoc.AdHocSettings.ReportViewer.|True|
 |Boolean|[[ShowFiltersInReportViewer|/API/CodeSamples/ShowFiltersInReportViewer]]|Gets or set value indicating whether filters should be shown in Izenda.AdHoc.AdHocSettings.ReportViewer.**(deprecated)**|True|
-|Boolean|[[ShowFiltersTab|/API/CodeSamples/ShowFiltersTab]]|Gets or sets the value indicating whether Izenda.Web.UI.AdHocReportDesigner tab withfilters list is showed.|True|
+|Boolean|[[ShowFiltersTab|/API/CodeSamples/ShowFiltersTab]]|Gets or sets the value indicating whether Izenda.Web.UI.AdHocReportDesigner tab with filters list is showed.|True|
 |Boolean|[[ShowFunctions|/API/CodeSamples/ShowFunctions]]|Gets or sets the value indicating whether functions should be shown in the Izenda.AdHoc.AdHocSettings.FieldList.|True|
 |Boolean|[[ShowGaugePercentage|/API/CodeSamples/ShowGaugePercentage]]|Gets or sets the value indicating whether percentage at gauges should be shown.|False|
 |Boolean|[[ShowGaugeTab|/API/CodeSamples/ShowGaugeTab]]|Gets or sets the value indicating whether gauges tab should be shown in report designer.|True|
@@ -325,7 +325,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[ShowNewButton|/API/CodeSamples/ShowNewButton]]|Gets or sets the value indicating whether the "New" icon should be            shown in the toolbar.|True|
 |Boolean|[[ShowNonIndexedJoinFields|/API/CodeSamples/ShowNonIndexedJoinFields]]|Gets or sets the value indicating whether non-indexed join fields should be shown.|True|
 |Boolean|[[ShowODTButton|/API/CodeSamples/ShowODTButton]]|Gets or sets the value indicating possibility export to ODT**(deprecated)**|False|
-|Boolean|[[ShowOnlineDocumentation|/API/CodeSamples/ShowOnlineDocumentation]]|Gets or sets the value indicating if it's nessesary to show Details button in Settings.|True|
+|Boolean|[[ShowOnlineDocumentation|/API/CodeSamples/ShowOnlineDocumentation]]|Gets or sets the value indicating if it's necessary to show Details button in Settings.|True|
 |Boolean|[[ShowOpenOfficeButton|/API/CodeSamples/ShowOpenOfficeButton]]|Gets or sets the value indicating possibility export to OpenOffice|False|
 |Boolean|[[ShowPDFButton|/API/CodeSamples/ShowPDFButton]]|Gets or sets the value indicating possibility export to PDF|True|
 |Boolean|[[ShowPivot|/API/CodeSamples/ShowPivot]]|Enables/disables the option of adding pivots to reports.|True|
