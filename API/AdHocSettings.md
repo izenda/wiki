@@ -75,7 +75,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String|[[DashboardsCss|/API/CodeSamples/DashboardsCss]]|Gets or sets the css style for the Izenda.Web.UI.TabStrip.**(deprecated)**|@import url(rs.aspx?css=dashboard);|
 |String|[[DashboardsCssUrl|/API/CodeSamples/DashboardsCssUrl]]|Gets or sets the css stylesheet URL for the Izenda.Web.UI.TabStrip.|rs.aspx?css=dashboard|
 |String|[[DashboardTabBackgroundImageUrl|/API/CodeSamples/DashboardTabBackgroundImageUrl]]|Gets or sets the URL of the tabs background image for Dashboard.|String.Empty|
-|String|[[DashboardViewer|/API/CodeSamples/DashboardViewer]]|Gets or sets the URL of the dashboard viewer page.|ReportViewer.aspx|
+|String|[[DashboardViewer|/API/CodeSamples/DashboardViewer]]|Gets or sets the URL of the dashboard viewer page.|Dashboards.aspx|
 |String|[[DashboardViewerWithDelimiter|/API/CodeSamples/DashboardViewerWithDelimiter]]|Gets the report viewer page with "?" or "&" char at the end.|ReportViewer.aspx?|
 |String|[[DatabaseDiagramImageUrl|/API/CodeSamples/DatabaseDiagramImageUrl]]|Gets or sets the URL of image with database diagram.|String.Empty|
 |Int32|[[DataCacheInterval|/API/CodeSamples/DataCacheInterval]]||0|
