@@ -75,3 +75,28 @@ The data-report tag references the complete name of the report and the data-part
 The result of the HTML example is shown below.
 
 ![](/FAQ/Questions/Using-ReportParts/ReportParts.png)
+
+###What if my custom dashboard is in a separate virtual directory from Izenda?
+
+If you are trying to implement report parts on a page that exists in a separate virtual directory from Izenda's response server (rs.aspx), you will likely have trouble rendering those report parts, as the JavaScript files will not be retrieved.  You must add a tag to your ASPX or HTML page to embed the necessary scripts:
+
+In ASPX:
+
+```html
+<body> 
+  <form id="form1" runat="server">  
+    <div>  
+      <cc1:ReportPart id=ReportPartID1 runat="server" Report="ord" Part="Chart" ResourcesInclusion="Embedded" CombineScripts="true"/>
+    </div>
+  </form>
+</body>
+```
+
+Pure HTML:
+
+```html
+<body>
+  <div class="report-part" data-report="Sales" data-part="chart" data-embedscripts="true"></div>
+</body>
+```
+
