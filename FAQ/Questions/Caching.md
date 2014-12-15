@@ -8,7 +8,7 @@ What kinds of caching does Izenda use? Can I update the cache?
 
 ##Answer
 
-Izenda caches all your reports and schema information automatically per browser session. Here is a list of the caching methods that are available in case you wish to manually update the cache, although generally the cache will self-update as needed.
+Izenda caches all your reports and schema information automatically per browser session. By default, caching is stored in memory and in the temp folder of the server that Izenda is hosted on. Here is a list of the caching methods that are available in case you wish to manually update the cache, although generally the cache will self-update as needed.
 
 ###FilteredListReports
 
@@ -20,7 +20,7 @@ The AdHocConfig.InvalidateFilteredCaches() method will clean up the results cach
 
 ###InvalidateSchemaCache
 
-The AdHocConfig.Driver.InvalidateSchemaCache() method will update the schema for database changes, all filtered report lists, queries to the database that were cached, cached HTML results of reports, and cached XML report definitions.
+The AdHocConfig.Driver.InvalidateSchemaCache() method will update the schema for database changes on, all filtered report lists, queries to the database that were cached, cached HTML results of reports, and cached XML report definitions.
 
 ###CleanUpCache
 
