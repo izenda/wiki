@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets whether sorting fields is allowed for report viewers. Report designers may still sort fields how they wish. This only applies to the grid as charts cannot be sorted.
+Gets or sets whether sorting fields is allowed for report viewers. Report designers may still sort fields how they wish. Reports will obey the sort order given when the report was designed if this is false. This only applies to the grid as charts cannot be sorted.
 
 ##Global.asax (C♯)
 
