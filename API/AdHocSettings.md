@@ -393,7 +393,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String|[[TabsCss|/API/CodeSamples/TabsCss]]|Gets or sets the css style for the Izenda.Web.UI.TabStrip.**(deprecated)**|@import url(rs.aspx?css=tabs);|
 |String|[[TabsCssUrl|/API/CodeSamples/TabsCssUrl]]|Gets or sets the css stylesheet URL for the Izenda.Web.UI.TabStrip.|rs.aspx?css=tabs|
 |String|[[TempFiles|/API/CodeSamples/TempFiles]]|Gets or set value indicating path to temporary files.|TempFiles|
-|String|[[TemplatesPath|/API/CodeSamples/TemplatesPath]]|Gets or sets the path of the folder where templates are stored.|C:\cygwin64\home\Joseph\adhocsettings_output\Reports|
+|String|[[TemplatesPath|/API/CodeSamples/TemplatesPath]]|Gets or sets the path of the folder where templates are stored.|[drive]:\[ApplicationFolder]\Reports|
 |String|[[TenantField|/API/CodeSamples/TenantField]]|The name of the database field which stores a user's tenant.  This is required for multi-tenant schedulin|String.Empty|
 |FieldHighlightInfoDictionary|[[TextHighlight|/API/CodeSamples/TextHighlight]]||null|
 |Int32|[[ThumbnailHeight|/API/CodeSamples/ThumbnailHeight]]|Gets or sets the value indicating thumbnail size in pixels.|220|
