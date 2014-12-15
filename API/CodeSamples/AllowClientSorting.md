@@ -53,8 +53,8 @@ End Class
 
 AdHocSettings.AllowClientSorting = true
 
-![](API/CodeSamples/AllowClientSorting/allowclientsorting_true.png)
+![](http://wiki.izenda.us/Home/allowclientsorting_true.png)
 
 AdHocSettings.AllowClientSorting = false
 
-![](API/CodeSamples/AllowClientSorting/allowclientsorting_false.png)
+![](http://wiki.izenda.us/Home/allowclientsorting_false.png)
