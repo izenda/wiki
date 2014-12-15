@@ -22,6 +22,10 @@ The AdHocConfig.InvalidateFilteredCaches() method will clean up the results cach
 
 The AdHocConfig.Driver.InvalidateSchemaCache() method will update the schema for database changes on, all filtered report lists, queries to the database that were cached, cached HTML results of reports, and cached XML report definitions.
 
+###InvalidateSchemaOnNew
+
+The AdHocSettings.InvalidateSchemaOnNew is a Boolean which tells the system if it should should update the schema for database changes when a new report is being created. This is useful for environments where the database is constantly changing.
+
 ###CleanUpCache
 
 The ``FusionCache.CleanUpCache`` method is part of the Izenda Fusion Driver suite and will clear all cached XML reports and dashboards.
