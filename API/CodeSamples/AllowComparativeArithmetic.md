@@ -54,7 +54,7 @@ End Class
 
 Field "Quantity" compared to field "ExtendedPrice" with alias "Sales"
 
-![]()
+![](http://wiki.izenda.us/API/CodeSamples/AllowComparativeArithmetic/AllowComparativeArithmetic_lt.png)
 
 Provided "Average" is selected, this will generate SQL like the following:
 CASE WHEN ([dbo].[Invoices].[ExtendedPrice]<AVG(CAST([dbo].[Invoices].[Quantity] AS float))) THEN 1 ELSE 0 END AS 'Sales'
