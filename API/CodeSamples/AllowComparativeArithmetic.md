@@ -52,10 +52,24 @@ End Class
 
 ##Screenshots (Report Designer)
 
-Field "Quantity" compared to field "ExtendedPrice" with alias "Sales"
+Field "Quantity" compared to field "ExtendedPrice" with alias "Sales" (less than arithmetic) (average operator)
 
-![](http://wiki.izenda.us/API/CodeSamples/AllowComparativeArithmetic/AllowComparativeArithmetic_lt.png)
+![](http://wiki.izenda.us/API/CodeSamples/AllowComparativeArithmetic/AllowComparativeArithmetic_lt2.png)
 
-Provided "Average" is selected, this will generate SQL like the following:
 CASE WHEN ([dbo].[Invoices].[ExtendedPrice]<AVG(CAST([dbo].[Invoices].[Quantity] AS float))) THEN 1 ELSE 0 END AS 'Sales'
 
+---
+
+Field "Quantity" compared to field "ExtendedPrice" with alias "Sales" (equals arithmetic) (group operator)
+
+![](http://wiki.izenda.us/API/CodeSamples/AllowComparativeArithmetic/AllowComparativeArithmetic_eq.png)
+
+CASE WHEN ([dbo].[Invoices].[ExtendedPrice]=[dbo].[Invoices].[Quantity]) THEN 1 ELSE 0 END AS 'Sales'
+
+---
+
+Field "Quantity" compared to field "ExtendedPrice" with alias "Sales" (greater than arithmetic) (sum operator)
+
+![](http://wiki.izenda.us/API/CodeSamples/AllowComparativeArithmetic/AllowComparativeArithmetic_gt.png)
+
+CASE WHEN ([dbo].[Invoices].[ExtendedPrice]>SUM([dbo].[Invoices].[Quantity])) THEN 1 ELSE 0 END AS 'Sales'
