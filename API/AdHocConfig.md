@@ -105,7 +105,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
                 //Limit users' ability to design reports
                 AdHocSettings.ShowDesignLinks = false;
         }
-        HttpContext.Current.Session("ReportingInitialized") = True;
+        HttpContext.Current.Session["ReportingInitialized"] = true;
     }
 
     // Gets a list of ReportInfo objects for all loadable reports stored.
