@@ -54,7 +54,8 @@ These methods are overridable in any class that inherits from FileSystemAdHocCon
 //The main reporting class, usually declared in global.asax. This can inherit FileSystemAdHocConfig or DatabaseAdHocConfig
 public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
 {
-    //Initializing these settings in a static context is a best practice for Izenda to run smoothly. This method will need to be called on your reporting pages or from Session_Start().
+    //Initializing these settings in a static context is a best practice for Izenda to run smoothly. 
+    //This method will need to be called on your reporting pages in the OnPreInit() method.
     public static void InitializeReporting()
     {
         //Check to see if we've already initialized.
@@ -77,7 +78,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
 
 	//Pass User Credentials. Set user-specific settings after we initialize the user
 	AdHocSettings.CurrentUserName = HttpContext.Current.Session["UserName"] as string;
-	AdHocSettings.CurrentUserIsAdmin = true;
+	AdHocSettings.CurrentUserIsAdmin = HttpContext.Current.Request.Params["UserIsAdmin"] == null ? false : HttpContext.Current.Request.Params["UserIsAdmin"].ToString().ToLower() == "true" ? true : false;
 	AdHocSettings.VisibleDataSources = new string[] { "Orders", "Employees", "AdminData" };
 
 	//Filters results for data sources containing ClientID  
