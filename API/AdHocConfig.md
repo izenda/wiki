@@ -78,7 +78,6 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
 
 	//Pass User Credentials. Set user-specific settings after we initialize the user
 	AdHocSettings.CurrentUserName = HttpContext.Current.Session["UserName"] as string;
-	AdHocSettings.CurrentUserIsAdmin = HttpContext.Current.Request.Params["UserIsAdmin"] == null ? false : HttpContext.Current.Request.Params["UserIsAdmin"].ToString().ToLower() == "true" ? true : false;
 	AdHocSettings.VisibleDataSources = new string[] { "Orders", "Employees", "AdminData" };
 
 	//Filters results for data sources containing ClientID  
@@ -86,6 +85,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
 
 	//Multi-Role Scenario - Apply specific limitations to certain roles
 	string role = HttpContext.Current.Session["Role"] as string;
+	AdHocSettings.CurrentUserIsAdmin = role == "Administrator" ? true : false;
 	if (!role.Equals("Administrator"))
 	{
 		// Limit user to the orders table    
@@ -97,6 +97,14 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
 		AdHocSettings.ShowSettingsButton = false;
 		AdHocSettings.HiddenCategories = new string[] { "Admin Reports", "Sensitive Reports" };
 	}
+        if (role.Equals("Viewer"))
+        {
+                //Limit users' ability to save, modify, or delete reports
+                AdHocsettings.ShowSaveControls = false;
+                AdHocSettings.AllowDeletingReports = false;
+                //Limit users' ability to design reports
+                AdHocSettings.ShowDesignLinks = false;
+        }
         HttpContext.Current.Session("ReportingInitialized") = True;
     }
 
