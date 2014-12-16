@@ -53,7 +53,7 @@ End Class
 
 ##Parts of a Connection String
 
-Izenda uses a third party .NET data provider to connect to PostgreSQL instances, called Npgsql.  There are certain patterns that are recognized as settings within the connection string itself. The username and password are among them. You can read more about the parts of the Npgsql PostgreSQL connection string [[here|https://github.com/npgsql/npgsql/wiki/User-Manual#connection-string-parametersx]]. Here are the essential parts of the connection string:
+Izenda uses a third party .NET data provider to connect to PostgreSQL instances, called Npgsql.  There are certain patterns that are recognized as settings within the connection string for Npgsql, such as the User ID and Password, and the structure of the connection string differs from other ODBC, JDBC, and OLE DB providers for PostgreSQL databases.  You can read more about the parts of the Npgsql PostgreSQL connection string [[here|https://github.com/npgsql/npgsql/wiki/User-Manual#connection-string-parametersx]]. Here are the essential parts of the connection string:
 
 * **Server** - Address/Name of PostgreSQL Server.
 * **Port** - Port to connect to.  Default is 5432.
