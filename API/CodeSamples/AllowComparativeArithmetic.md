@@ -6,6 +6,8 @@
 
 Gets or sets the value indicating whether comparative arithmetic is allowed in arithmetic checkbox. Logical comparisons (less than and greater than) can be used between the preceding field and the selected field when cycling through values on the "A" checkbox of the report designer. Certain datatypes behave differently when this is enabled.
 
+**Default Value:** false
+
 ##Global.asax (C♯)
 
 ```csharp
@@ -21,7 +23,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    AdHocSettings.AllowComparativeArithmetic = true;
+    AdHocSettings.AllowComparativeArithmetic = true; //The relevant setting
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
@@ -44,7 +46,7 @@ Public Class CustomAdHocConfig
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
-        AdHocSettings.AllowComparativeArithmetic = True
+        AdHocSettings.AllowComparativeArithmetic = True 'The relevant setting
         HttpContext.Current.Session("ReportingInitialized") = True
     End Sub
 End Class
