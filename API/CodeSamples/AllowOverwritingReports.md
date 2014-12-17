@@ -53,8 +53,8 @@ End Class
 
 AdHocSettings.AllowOverwritingReports = true
 
-![](http://wiki.izenda.us/API/CodeSamples/AllowOverwritingReports/allowoverwritingreports_true.png)
+![](http://wiki.izenda.us/API/CodeSamples/AllowOverwritingReports/allowoverwritingreports_true.PNG)
 
 AdHocSettings.AllowOverwritingReports = false
 
-![](http://wiki.izenda.us/API/CodeSamples/AllowOverwritingReports/allowoverwritingreports_false.png)
+![](http://wiki.izenda.us/API/CodeSamples/AllowOverwritingReports/allowoverwritingreports_false.PNG)
