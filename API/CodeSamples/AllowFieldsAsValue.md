@@ -7,6 +7,7 @@
 Gets or sets the value indicating whether field name is allowed in filter value. This will enable or disable the Field Comparison section of the filter dropdown menu.
 
 **Default Value:** true
+
 ##Global.asax (C♯)
 
 ```csharp
@@ -22,7 +23,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    AdHocSettings.AllowFieldsAsValue = true;
+    AdHocSettings.AllowFieldsAsValue = true; //The relevant setting
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
@@ -45,7 +46,7 @@ Public Class CustomAdHocConfig
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
-        AdHocSettings.AllowFieldsAsValue = True
+        AdHocSettings.AllowFieldsAsValue = True 'The relevant setting
         HttpContext.Current.Session("ReportingInitialized") = True
     End Sub
 End Class
