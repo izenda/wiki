@@ -1,6 +1,6 @@
 [[_TOC_]]
 
-# 6.8.0.4 (December 17, 2014)
+# 6.8.0.3 (December 17, 2014)
 
 * FB-15865: Fixed bulk CSV output for reports with custom ProcessDataSet results
 * FB-17715: Probable fix of null reference exception
