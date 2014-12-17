@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the value indicating whether "Invert" checkbox should be shown in the summary tab. Inverting the summary grid will use the first selected field as the column headers and each subsequent field selected will be used as normal fields, but the values will be arranged according to the new headers. The  [[InvertedGridLimit|/API/CodeSamples/InvertedGridLimit]] setting determines the maximum number of header values can be used in a report.
+Gets or sets the value indicating whether "Invert" checkbox should be shown in the summary tab. Inverting the summary grid will use the first selected field as the column headers and each subsequent field selected will be used as its own row with the values arranged according to the new headers. The  [[InvertedGridLimit|/API/CodeSamples/InvertedGridLimit]] setting determines the maximum number of header values can be used in a report.
 
 **Default Value:** false
 
