@@ -6,6 +6,7 @@
 
 Gets or sets the value indicating whether field name is allowed in filter value. This will enable or disable the Field Comparison section of the filter dropdown menu.
 
+**Default Value:** true
 ##Global.asax (C♯)
 
 ```csharp
