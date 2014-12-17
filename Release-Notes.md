@@ -1,5 +1,59 @@
 [[_TOC_]]
 
+# 6.8.0.4 (December 17, 2014)
+
+* FB-15865: Fixed bulk CSV output for reports with custom ProcessDataSet results
+* FB-17715: Probable fix of null reference exception
+* FB-17765: Fixed not-working "update results" button when report is without filters.
+* FB-16228: Chose correct base table for join when Forced Left Joins are used.
+* FB-15157: fixed RemoveUsedFields function
+* FB-15884: Implemented storing custom chart legend in report
+* FB-14600: Filter field quoted to prevent js-injection
+* FB-15330: Borders, background and chart sizes in HTML-print fixed
+* FB-17760: Synchronize calculated fields descriptions in the Designer
+* FB-17759: Fixed rendering HTML report parts
+* FB-17682: Added blank option to InTimePeriod values
+* FB-17536: Fixed shift of plus symbol on collapsed grid rows
+* FB-14714: Update calculated fields and filters automatically when Field Description is changed in the Viewer
+* FB-14703: SMTP SSL support added to the Scheduler
+* FB-16350: Fixed adding fields from the data source with join alias in the Viewer
+* FB-16443: Always align report title, header, description and footer to the left in Excel output
+* FB-17721: Implemented possibility to embed scripts in server response when using reportPart on HTML page
+* FB-17710: Made highcharts stretching to the width of hosting container
+* FB-17669: Filters functionality added to the HTML Report Parts
+* FB-15672: Numerous javascript fixes
+* FB-17701: Fixed crash of summary report with subtotals when VG style is set to VGHierarchy.
+* FB-17729: Fixed possible out of range error when copying rows between tables.
+* FB-17542: Fixed dynamic filters with HTML markup in values
+* FB-17669: Fixed subtotals calculation of non-numeric fields
+* FB-17709: Fixed report deletion on the Report List page
+* FB-17702: Insert Quick Add fields below all selected fields
+* FB-13700: Added 'X' to report list search
+* FB-17644: Fixed issues on IR page
+* FB-15815: Fixed show thumbnails of the visualization (Auto Chart, Sunburst).
+* FB-15895: Headers style changed
+* FB-15501: Changed position of the legend of the "Combo" visualization.
+* FB-15118: Fixed missing form on first reportset save operation
+* FB-17475: Fixed issue with pivots and FusionDriverMySql+MsSqlConnection
+* FB-17460: Fixed issue with pivots when FusionDriver is used
+* FB-16405: Fixed losing pivots when INFO logging level enabled and subtotals enabled.
+* FB-16439: Autocharts fixed with pivoted source
+* FB-15157: Copy resources to DLL
+* FB-17654: Fixed filters values update in the Viewer
+* FB-17594: Correct hiding fields and filters columns in Viewer
+* FB-16350: Show data sources join aliases in the Viewer.
+* FB-15157: Fix issue with modifying existing field
+* FB-15746: Do not modify aggregate function when Total field property is changed in the Viewer
+* FB-15157: Numerous fixes and performance upgrades
+* FB-16090: Properly sort fields list at the Viewer Fields tab
+* FB-17483: Fixed several issues relating to hidden fields.
+* FB-15684: Show Vis documentation if Vis is failed to render
+* FB-17518: Fixed  Field-Value grids PDF printing
+* FB-17558: Fixed data extraction when AdHocSettings.CacheQueries is false
+* FB-17503: Fixed report Title in the Viewer
+* FB-16189: Reload some settings when lic key is changed
+* FB-16255: Fixed reports with hidden fields formatting
+
 # 6.8.0.2 (November 25, 2014)
  
 * FB-10702: Language Pack GUI Updated
