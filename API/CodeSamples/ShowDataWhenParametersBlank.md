@@ -25,7 +25,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    AdHocSettings.ShowDataWhenParametersBlank = true;
+    AdHocSettings.ShowDataWhenParametersBlank = true; //The relevant setting
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
@@ -47,7 +47,7 @@ Public Class CustomAdHocConfig
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
-        AdHocSettings.ShowDataWhenParametersBlank = true
+        AdHocSettings.ShowDataWhenParametersBlank = True 'The relevant setting
         HttpContext.Current.Session("ReportingInitialized") = True
     End Sub
 End Class
