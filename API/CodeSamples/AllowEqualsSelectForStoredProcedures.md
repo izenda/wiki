@@ -6,6 +6,8 @@
 
 Gets or sets the value indicating whether Equals(Select) or Equals(Multiple) filters are allowed for stored procedures. This setting works in conjunction with several other areas of Izenda's API and more information can be found in [[this article|http://wiki.izenda.us/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]].
 
+**Default Value:** false
+
 ##Global.asax (C♯)
 
 ```csharp
@@ -21,7 +23,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    AdHocSettings.AllowEqualsSelectForStoredProcedures = true;
+    AdHocSettings.AllowEqualsSelectForStoredProcedures = true; //The relevant setting
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
@@ -44,7 +46,7 @@ Public Class CustomAdHocConfig
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
-        AdHocSettings.AllowEqualsSelectForStoredProcedures = True
+        AdHocSettings.AllowEqualsSelectForStoredProcedures = True 'The relevant setting
         HttpContext.Current.Session("ReportingInitialized") = True
     End Sub
 End Class
