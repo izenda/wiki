@@ -69,4 +69,4 @@ AdHocSettings.AllowInvertedGrid = false
 
 Results
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowInvertedGrid/allowinvertedgrid_results_false.png)
+![](http://wiki.izenda.us//API/CodeSamples/AllowInvertedGrid/allowinvertedgrid_results_false2.png)
