@@ -4,7 +4,11 @@
 
 ##About
 
+_**Obsolete:** As of Izenda 6, this setting is not recommended for use._
+
 Gets or sets the value indicating whether visual groups are allowed. When this is enabled, the "VG" checkbox on the fields tab will be displayed. You can learn more about visual groups through [[this link|http://wiki.izenda.us/Guides/ReportDesign/10.0-Style-tab#10.5-Visual-Group-Styles]].
+
+**Default Value:** true
 
 ##Global.asax (C♯)
 
