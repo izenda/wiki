@@ -52,9 +52,3 @@ Public Class CustomAdHocConfig
     End Sub
 End Class
 ```
-
-##Screenshots
-
-AutoJoinOnRenderedRows = true
-
-AutoJoinOnRenderedRows = false
