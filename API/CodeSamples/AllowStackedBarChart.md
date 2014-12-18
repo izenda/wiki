@@ -57,7 +57,7 @@ AdHocSettings.AllowStackedBarChart = true
 
 Results
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowStackedBarChart/allowstackedbarchart_results_true.png)
+![](http://wiki.izenda.us//API/CodeSamples/AllowStackedBarChart/allowstackedbarchart_true_results.png)
 
 ---
 
@@ -67,4 +67,4 @@ AdHocSettings.AllowStackedBarChart = false
 
 Results
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowStackedBarChart/allowstackedbarchart_results_false.png)
+![](http://wiki.izenda.us//API/CodeSamples/AllowStackedBarChart/allowstackedbarchart_false_results.png)
