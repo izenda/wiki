@@ -10,9 +10,9 @@
 
 ---
 
-* [Izenda Website](http://www.izenda.com)
+* [Izenda Website](http://www.izenda.com rel="nofollow" target="_blank")
 * [Product Video](https://www.youtube.com/watch?v=1LlHesMCmYs)
-* [Izenda Blog](http://www.izenda.com/blog)
+* [Izenda Blog](http://www.izenda.com/blog rel="nofollow" target="_blank")
 * [Company Page](http://www.izenda.com/about/)
 * [Live Demo](http://izenda.com/bi/ReportList.aspx )
 * [Example Dashboard](http://izenda.com/bi/Dashboards.aspx?rn=Dashboard)
