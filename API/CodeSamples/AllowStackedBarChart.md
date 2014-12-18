@@ -6,6 +6,8 @@
 
 Gets or sets the value indicating whether Stacked Bar Chart is allowed. This defines if the "Stacked" checkbox will be available in the Advanced Properties on the Chart tab in the ReportDesigner when Bar chart type is used.
 
+**Default Value:** true
+
 ##Global.asax (C♯)
 
 ```csharp
