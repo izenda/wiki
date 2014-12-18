@@ -1,4 +1,4 @@
-![Izenda Logo](http://www.izenda.com/wp-content/uploads/2014/11/izenda-logo-4.gif)
+![Izenda Logo](http://www.izenda.com/wp-content/uploads/2014/12/150x33OutLook.png)
 ---
 * [[Release Notes]]
 * [[FAQ]]
