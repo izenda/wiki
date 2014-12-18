@@ -61,7 +61,7 @@ AdHocSettings.AllowSummaryDeltas = true
 
 Results
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowSummaryDeltas/allowsummarydeltas_results_true.png)
+![](http://wiki.izenda.us//API/CodeSamples/AllowSummaryDeltas/allowsummarydeltas_results_true2.png)
 
 ---
 
@@ -71,4 +71,4 @@ AdHocSettings.AllowSummaryDeltas = false
 
 Results
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowSummaryDeltas/allowsummarydeltas_results_false.png)
+![](http://wiki.izenda.us//API/CodeSamples/AllowSummaryDeltas/allowsummarydeltas_results_false2.png)
