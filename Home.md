@@ -8,7 +8,7 @@ Izenda reports includes a flexible API that can be configured to integrate with 
 
 Please watch our ten minute integration video to see how to do a core integration with Visual Studio (redirects to Youtube):
 
-[![Izenda Core Integration Video](/Home/izenda_intro_video.png)](https://www.youtube.com/watch?v=2FXYG6sqKF0)
+[![Izenda Core Integration Video](/Home/izenda_intro_video.png)](https://www.youtube.com/watch?v=4E0npCxLi4o)
 
 ###Izenda Reports Quick Setup
 To integrate Izenda into your own website, you will first need a development environment, such as Visual Studio. Once you have a development environment, you can get our website template from [[here|http://www.izenda.com/Site/DownloadComplete.aspx?msgId=0]]. Once you have followed the steps there, return here and find out more about how you can get started using Izenda Reports.
