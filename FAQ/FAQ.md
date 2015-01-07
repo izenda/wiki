@@ -32,6 +32,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[My control names changed when I deployed from development to production and now I can't access them.|/FAQ/Questions/Control-Names-Break-In-Production]]
 - [[Can I define my own grouping and aggregate functions in Izenda? If so, how?|http://wiki.izenda.us/FAQ/Questions/Custom-Aggregate-Functions]]
 - [[How can I set up auditing so that whenever a user accesses or exports report data, an audit is performed?|http://wiki.izenda.us/FAQ/Questions/Auditing-When-Accessing-Reports]]
+- [[How can I export columns that are normally hidden?|http://wiki.izenda.us/FAQ/Questions/exporting-hidden-columns]]
 
 ##Database
 
