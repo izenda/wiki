@@ -64,3 +64,4 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 ###Misc
 
 * [[Forking the Izenda Resources repository|/Guides/Developers/Forking-resources-in-github]]
+* [[How do I use alternate filter values with stored procedure parameters versus what I display to the user?|http://wiki.izenda.us/FAQ/Questions/using-alternate-filter-values-with-stored-procedures]]
