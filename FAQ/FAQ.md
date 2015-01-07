@@ -106,6 +106,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ##Misc.
 
+- [[How do I turn off the screen size Responsive Grid?|FAQ/How do I turn off the screen size Responsive Grid]]
 - [[How do I get the ReportList information to create my own ReportList?|FAQ/getting-reportlist-information]]
 - [[How do I force a user to click on 'Update Results' before showing any data?|FAQ/force-update-results-on-report]]
 - [[How do I upgrade/download a new file-set?|FAQ/Download and Update Resources]]
