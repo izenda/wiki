@@ -118,6 +118,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[What are the query string keys for rs.aspx?|http://wiki.izenda.us/FAQ/Questions/Query-String-Keys-for-rs.aspx]]
 - [[How Can I Apply a Hidden Filter Using an Inner Query?|/FAQ/applying-hidden-filter-using-inner-query]]
 - [[How Do I Use Stored Procedures With Izenda Reports?|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
+- [[How do I use alternate filter values with stored procedure parameters versus what I display to the user?|http://wiki.izenda.us/FAQ/Questions/using-alternate-filter-values-with-stored-procedures]]
 - [[How Can I Use a Custom Filter on my Dashboards?|/FAQ/Questions/Adding-custom-filters-to-dashboards]]
 - [[What kinds of caching does Izenda use?|http://wiki.izenda.us/FAQ/Questions/Caching]]
 - [[I'm seeing a version collision between a third party library referencing Log4Net and Izenda. How do I fix this?|/FAQ/Questions/Log4Net-Collision]]
