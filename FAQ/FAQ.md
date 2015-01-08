@@ -106,7 +106,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How to update your legacy deployment to be compatible with Izenda 6.7.0.272+|/FAQ/UpdatingReportDesigner-for-Izenda-6.7.0.272]]
 
 ##Upgrading to 6.8.0.1 +
-- [[What's new in the 6.8.0.1 + Reference Implementation?]]
+- [[What's new in the 6.8.0.1 + Reference Implementation?|http://wiki.izenda.us/Whats-new-in-the-6-dot-8-0-dot-1-Reference-Implementation]]
 
 ##Misc.
 
