@@ -1,5 +1,45 @@
 [[_TOC_]]
 
+
+# 6.8.0.4 (January 8, 2015)
+
+* FB-13507: Moved forms out of sessions, switched to new form designer, moved templates out of sessins, fixed issue with forms being modified concurrently
+* FB-13832: Fix of null reference exception for two different users with the same tenantid and optimize report list loading
+* FB-15612: Fix charts width in PDF render and increase timeout limits
+* FB-16097: PieChart doesn't smash anymore on mousemove while starting
+* FB-16120: Fixed radius of the inner circle in Sunburst visualization.
+* FB-16228: Fixed not working in some cases forced left joins
+* FB-16286: Added missing variable to JoinedTablesList.js
+* FB-16295: Fixed error when url doesn't contain port number.
+* FB-16351: Implemented switch from advanced to simple datasources
+* FB-16415: Fixed Pie char labels cutting off
+* FB-17478: Combine Bottom % - ViZ Pie implementation
+* FB-17513: Fixed showing visualization on dashboards (reports with VG).
+* FB-17543: Use current report state when exporting charts as images
+* FB-17586: Fixed subreports cascade filters loading
+* FB-17663: Buttons below field list
+* FB-17699: Fixed logo sizing issue and hanged main navbar color scheme and logo
+* FB-17718: Join aliases of self-joined tables support in Viewer
+* FB-17723: Added forms data to objects in report list cache
+* FB-17787: Fixed broken charts when report part is on page without rs.aspx in folder, missing dashboard.css, implemented support of custom reportpart locations in visualizations 
+* FB-17788: Respect fields visibility in Bulk CSV export
+* FB-17793: Made it possible to configure path to rs.aspx in html reportpart
+* FB-17796: Fixed funnel cutoff in dashboards
+* FB-17797: Removed jquery191 script from reportpart
+* FB-17801: Switch between plus-minus icons in responsive grid
+* FB-17803: Added deprecation information for AllowSelfJoin
+* FB-17805: Fixed dialog dropdowns "Loading..." issue
+* FB-17819: Case-insensitive  AdHocSettings.DataSourceCategories
+* FB-17822: Fixed Bulk CSV export with Oracle connection and filters
+* FB-17844: Avoid zero columns for pie charts
+* FB-17856: Fixed Heatmap visualization vertical justification and size
+* FB-17857: Fixed false messages upon 2nd+ saves in the Designer.
+* FB-17861: Added percents to animated half circle gauge and implemented percentage values in animated gauges
+* FB-17870: Fixed Equals(Select) filters in the Designe6c54ac5 FB-17829: Fixed GaugeRadial.png resource loading
+* FB-17940: Fixed crash when fieldForHaving is null
+* FB-17959: Added using _global_ report if report for current user tenant is not found
+
+
 # 6.8.0.3 (December 17, 2014)
 
 * FB-15865: Fixed bulk CSV output for reports with custom ProcessDataSet results
