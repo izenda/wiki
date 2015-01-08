@@ -187,6 +187,7 @@ You can configure the cache yourself by using the following properties and metho
 
 * **DataCacheExpiration:** Sets the date for cache expiration. All data in the cache older than the specified date will be cleared (removed from the cache). For example, if you want to clear all data more than two days old, you should set: ``AdHocSettings.DataCacheExpiration = DateTime.Now.AddDays(-2);``
 * **CacheReports method:** Indicates that all reports should or should not be cached (enabled by default in later versions of Izenda): ``fusionDriver.CacheReports = true;``
+* **DataCache Interval:** Sets the number of seconds between cache refreshes. Example: ``AdHocSettings.DataCacheInterval = 60 * 24 * 30;``
 
 ###Sample use
 
