@@ -44,4 +44,4 @@ The dependency chain has been optimized in the Default.master.  Previously, the 
 
 Also, pathing changes have been made to a majority of the css files.  Notice that they all have .min.css extensions.  As mentioned before, many of our css files have minified versions now.  Removing white space helps reduce the size of the file and increase loading times.  The RI now comes with the paths defaulted to the .min.css files of Reset2, print, fun, and main.  
 
-*Note* Although the .min.css files are present, the .css files also still exist in the folder.  So having a path point at, for example, main.css instead of main.min.css will still work.  
+**Note**- Although the .min.css files are present, the .css files also still exist in the folder.  So having a path point at, for example, main.css instead of main.min.css will still work.  
