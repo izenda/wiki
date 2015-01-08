@@ -19,6 +19,7 @@ These methods are overridable in any class that inherits from FileSystemAdHocCon
 * [[DeleteTemplate|http://wiki.izenda.us/API/AdHocConfig/DeleteTemplate]] - Allows customization for deleting forms associated with specific reports
 * [[DeleteThumbnail|http://wiki.izenda.us/API/AdHocConfig/DeleteThumbnail]] - Allows customization for deleting report thumbnails.
 * [[FilteredListReportsDictionary|http://wiki.izenda.us/API/AdHocConfig/FilteredListReportsDictionary]] - Allows customization of the list of reports guaranteed to be available to the user
+* [[GetAutoRefreshIntervals|http://wiki.izenda.us/API/AdHocConfig/GetAutoRefreshIntervals]] - Allows end-users to set automatic refresh times on reports and dashboards.
 * [[GetCustomFooter|http://wiki.izenda.us/API/AdHocConfig/GetCustomFooter]] - Allows customization of the footer that appears on all reports
 * [[GetCustomHeader|http://wiki.izenda.us/API/AdHocConfig/GetCustomHeader]] - Allows customization of the header that appears on all reports
 * [[GetOperatorList|http://wiki.izenda.us/API/AdHocConfig/GetOperatorList]] - Allows a customized list of possible SQL logic operators to be used
