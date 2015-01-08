@@ -104,6 +104,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Why do Chart Images not Render in my Report Thumbnails?|FAQ/chart-images-not-rendering]] 
 - [[How to disable Protected Mode in Office 2010|FAQ/disable-protected-mode-office-2010]]
 - [[How to update your legacy deployment to be compatible with Izenda 6.7.0.272+|/FAQ/UpdatingReportDesigner-for-Izenda-6.7.0.272]]
+- [[Izenda Troubleshooting Tips: Upgrading to 6.8.0.1+]]
 
 ##Misc.
 
