@@ -37,3 +37,9 @@ The Vis folder contains the files for Izenda Vision.  Izenda Vision is a product
 The scripts folder contains the necessary scripts for the d3.js library and other necessary scripting libraries.  
 
 Each category houses one or more visualization folder.  For example, the Circular folder contains the folder for the Sunburst visualization.  Inside the Sunburst folder, you will notice some key files- the view.html, the doc.html, and the preview.png.  Every visualization will contain these three files.  Some visualizations contain other helper files, including scripts or additional views.  It is highly recommended that these not be altered.
+
+###Default.master
+
+The dependency chain has been optimized in the Default.master.  Previously, the <style> tag for the main.css was being overridden by the bootstrap references, making it difficult to have changes in the main.css respected.  Now that both the main.css and main.js are at the bottom of the chain, changes to those files will be respected.  
+
+Also, pathing changes have been made to a majority of the css files.  Notice that they all have .min.css extensions.  As mentioned before, many of our css files have minified versions now.  Removing white space helps reduce the size of the file and increase loading times.  The RI now comes with the paths defaulted to the .min.css files of Reset2, print, fun, and main.  
