@@ -78,7 +78,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String|[[DashboardViewer|/API/CodeSamples/DashboardViewer]]|Gets or sets the URL of the dashboard viewer page.|ReportViewer.aspx|
 |String|[[DashboardViewerWithDelimiter|/API/CodeSamples/DashboardViewerWithDelimiter]]|Gets the report viewer page with "?" or "&" char at the end.|ReportViewer.aspx?|
 |String|[[DatabaseDiagramImageUrl|/API/CodeSamples/DatabaseDiagramImageUrl]]|Gets or sets the URL of image with database diagram.|String.Empty|
-|Int32|[[DataCacheInterval|/API/CodeSamples/DataCacheInterval]]||0|
+|Int32|[[DataCacheInterval|/API/CodeSamples/DataCacheInterval]]|Sets the number of seconds between cache refreshes.|0|
 |NameDistinctValueCollection|[[DataSourceAliases|/API/CodeSamples/DataSourceAliases]]|Gets or sets the collection of key-value pairs where the key is the table name and            the value is a table alias.|null|
 |NameStringsCollection|[[DataSourceCategories|/API/CodeSamples/DataSourceCategories]]|This allows to assign sets of datasources to different categories.|null|
 |TimeSpan|[[DataSourceDropDownTimeout|/API/CodeSamples/DataSourceDropDownTimeout]]|Gets or sets the timeout between starting loading dropdown values from server            and redicecting to About page.|00:00:15|
