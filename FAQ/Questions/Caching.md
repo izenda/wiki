@@ -18,6 +18,10 @@ The [[AdHocConfig.FilteredListReports|http://wiki.izenda.us/FAQ/FilteredListRepo
 
 The AdHocConfig.InvalidateFilteredCaches() method will clean up the results cached in the FilteredListReports method and can be called manually if needed. Like, for instance, when the XML definitions of one or more reports change outside the environment.
 
+###DataCache Interval
+
+Sets the number of seconds between cache refreshes. Example: ``AdHocSettings.DataCacheInterval = 60 * 24 * 30;``
+
 ###InvalidateSchemaCache
 
 The AdHocConfig.Driver.InvalidateSchemaCache() method will update the schema for database changes on, all filtered report lists, queries to the database that were cached, cached HTML results of reports, and cached XML report definitions.
