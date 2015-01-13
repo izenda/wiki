@@ -1,4 +1,4 @@
-# Upgrading to Izenda 6.8.0.1 +
+#6.8.0.1 + Reference Implementation Changes
 
 [[_TOC_]]
 
@@ -30,7 +30,7 @@ FromDLL/Resources contains a large group of images used in the product, as well 
 
 FromDLL/Scripts holds 30+ scripts previously unavailable to the customer.  These scripts scan now be freely viewed, but modifications to them are not recommended.
 
-###Vis folder
+###Resources/Vis folder
 
 The Vis folder contains the files for Izenda Vision.  Izenda Vision is a product add on utilizing the d3.js library for enhanced and interactive data visualizations.  Inside this folder, you will find 5 subfolders: scripts, Animated, Circular, Rectangular, and Uncategorized.  
 
