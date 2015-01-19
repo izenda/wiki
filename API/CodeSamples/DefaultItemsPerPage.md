@@ -1,4 +1,4 @@
-#DefaultItemsPerPAge
+#DefaultItemsPerPage
 
 [[_TOC_]]
 
