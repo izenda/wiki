@@ -1,4 +1,4 @@
-#CurrentUserName
+#DefaultItemsPerPAge
 
 [[_TOC_]]
 
