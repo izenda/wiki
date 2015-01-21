@@ -49,7 +49,7 @@ In this example, we show how to create a custom formatter. This example is for f
 
 You may use the DatesCustomFormatFormatter below as a reference. This will get inserted into your global.asax below your [[CustomAdHocConfig|http://wiki.izenda.us/API/AdHocConfig]] class definition. You can implement this custom formatter in your [[InitializeReporting()|http://wiki.izenda.us/FAQ/InitializeReporting]] method by creating a "new" DatesCustomFormatFormatter in the [[Formats|http://wiki.izenda.us/API/CodeSamples/Formats]] collection.
 
-_*Note:* You can use this as a template and any other format that requires a bit more work than a simple format like in the above examples can be easily implemented by changing the **Format** method and what **allowedTypeGroups** are in the collection._
+_**Note:** You can use this as a template and any other format that requires a bit more work than a simple format like in the above examples can be easily implemented by changing the **Format** method and what **allowedTypeGroups** are in the collection._
 
 ```csharp
   [Serializable]
