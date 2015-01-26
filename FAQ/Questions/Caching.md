@@ -24,7 +24,7 @@ Sets the number of seconds between cache refreshes. Example: ``AdHocSettings.Dat
 
 ###InvalidateSchemaCache
 
-The AdHocConfig.Driver.InvalidateSchemaCache() method will update the schema for database changes on, all filtered report lists, queries to the database that were cached, cached HTML results of reports, and cached XML report definitions.
+The AdHocContext.Driver.InvalidateSchemaCache() method will update the schema for database changes on, all filtered report lists, queries to the database that were cached, cached HTML results of reports, and cached XML report definitions.
 
 ###InvalidateSchemaOnNew
 
