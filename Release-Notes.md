@@ -1,6 +1,37 @@
 [[_TOC_]]
 
 
+# 6.8.0.5 (January 29, 2015)
+
+* FB-15635: Fixed chart name position for pie charts
+* FB-15913: Fixed "Print HTML" and "HTML-powered PDF" for visualizations ("Auto Chart", "Sunburst", "Heatmap"). Fixed a bug of printing inconsistent data (Chart and Table).
+* FB-16304: Pass only parameters with values to the SP
+* FB-17519: Show note message in Preview if labels on the Line Chart were hidden automatically
+* FB-17524: Implemented front-end Money and % formatters for autocharts. Implemented front-end PercentOfGroupFormatter for aurocharts
+* FB-17640: Fixed exception which could occur if table is not found during constraints deserialization
+* FB-17698: Changed powered by Izenda logo to new logo
+* FB-17753: Fixed Time-slider values changing
+* FB-17754: Use current Thread culture to format dates in the Slider control
+* FB-17771: Fixed field properties button in reportviewer
+* FB-17807: Implemented changing pdf export button when itextsharp is engaged
+* FB-17818: Do not auto group fields with aggregate function in expression
+* FB-17825: Fixed Drill-Down links in AG value cells
+* FB-17826: Apply font style to values cells in AG
+* FB-17827: Apply column Width to AG value columns
+* FB-17828: Fixed labels and values alignment in AG
+* FB-17851: Trim long labels in Heatmap Vis
+* FB-17858: Apply Width, font style and justification settings to AG hierarchy columns
+* FB-17951: Fixed Numbers subtotal calculation in PostgreSQL
+* FB-17969: Quick fix of tiny issue - not showing thumbnail image in reportlist which was requested first. ReportList optimizations #1
+* FB-17976: Remove used fields from the available columns panel in the Viewer
+* FB-18071: Fixed error with thumbnail retrieval in database mode
+* FB-18104: Fixed issue which caused ignoring overriden methods.
+* FB-18110: Fixed failure of creating thumbnails when there are two or more thumbnail generation tasks in queue. Reverted back public methods signatures which were erroneously modified.
+* Changed button colors to new color scheme
+* Implemented printing report using current position on breadcrumb (Sunburst, Heatmap).
+* Modified build script to move phantomJS dependencies to bin
+
+
 # 6.8.0.4 (January 8, 2015)
 
 * FB-13507: Moved forms out of sessions, switched to new form designer, moved templates out of sessins, fixed issue with forms being modified concurrently
