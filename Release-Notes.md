@@ -9,6 +9,7 @@
 * FB-17519: Show note message in Preview if labels on the Line Chart were hidden automatically
 * FB-17524: Implemented front-end Money and % formatters for autocharts. Implemented front-end PercentOfGroupFormatter for aurocharts
 * FB-17640: Fixed exception which could occur if table is not found during constraints deserialization
+* FB-17692: UseTablesFromSchemaOnly setting implemented for MSSQL connections. Load objects from different schemas mechanism implemented for PostgreSQL connections
 * FB-17698: Changed powered by Izenda logo to new logo
 * FB-17753: Fixed Time-slider values changing
 * FB-17754: Use current Thread culture to format dates in the Slider control
@@ -22,11 +23,18 @@
 * FB-17851: Trim long labels in Heatmap Vis
 * FB-17858: Apply Width, font style and justification settings to AG hierarchy columns
 * FB-17951: Fixed Numbers subtotal calculation in PostgreSQL
+* FB-17958: Made Cancel button always enabled in form designer
 * FB-17969: Quick fix of tiny issue - not showing thumbnail image in reportlist which was requested first. ReportList optimizations #1
 * FB-17976: Remove used fields from the available columns panel in the Viewer
+* FB-17982: Do not show labels if container is too small in Heatmap Visualization
 * FB-18071: Fixed error with thumbnail retrieval in database mode
+* FB-18081: Fixed Trend(Line) chart value labels
 * FB-18104: Fixed issue which caused ignoring overriden methods.
 * FB-18110: Fixed failure of creating thumbnails when there are two or more thumbnail generation tasks in queue. Reverted back public methods signatures which were erroneously modified.
+* FB-18130: Fixed Gauges headers formatting
+* FB-18157: Use minimum value as a floor of the Y axis in linear chart
+* FB-18158: Do not cache requests to the table with reports
+* FB-18278: Fixed appearing invisible datasources on IR page
 * Changed button colors to new color scheme
 * Implemented printing report using current position on breadcrumb (Sunburst, Heatmap).
 * Modified build script to move phantomJS dependencies to bin
