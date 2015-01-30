@@ -10,7 +10,7 @@
 
 ---
 
-*<a href="http://www.izenda.com" rel="nofollow" target="_blank">Izenda Website</a>
+* <a href="http://www.izenda.com" rel="nofollow" target="_blank">Izenda Website</a>
 * [Izenda Website](http://www.izenda.com)
 * [Product Video](https://www.youtube.com/watch?v=1LlHesMCmYs)
 * [Izenda Blog](http://www.izenda.com/blog)
