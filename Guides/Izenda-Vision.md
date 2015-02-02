@@ -156,6 +156,31 @@ INSERT IMAGE HERE
 * * You must sort Fields 1 and 2 to make coherent charts. If your charts look odd, make sure that the sorting behavior is correct.
 
 
+##Tree
+
+INSERT IMAGE HERE
+
+* Tree displays a tree design with a set of linked nodes.  Each node in a tree has zero or more child nodes.  
+* Field 1... **Group** - This group represents the hierarchical levels which structure the tree.
+* Field 2+ - **Metric** - This field will represent the value on the chart. The metric currently being displayed is selectable from a drop-down.
+
+##Waterfall
+
+INSERT IMAGE HERE
+
+* Waterfall displays a bar chart with a built in pareto function - that is, the bottom of each bar begins at the top of the previous bar.
+* Field 1 - **Group** - This field represents each bar along the X axis.
+* Field 2 - **Metric** - This field represents the value of each bar.
+
+##World Tour
+
+INSERT IMAGE HERE
+
+* World Tour displays countries and a single metric associated with that country.
+* Field 1 - **Geographical Field** - This field represents the country.
+* Field 2 - **Metric** - This field represents the value associated with each country.
+
+
 
 
 
