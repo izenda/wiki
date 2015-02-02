@@ -146,7 +146,7 @@ INSERT IMAGE HERE
 
 ##Transitions
 
-INSERT IMAGE HERE
+![Transitions](http://wiki.izenda.us/Guides/Izenda-Vision/Transitions.png)
 
 * Transitions displays multiple common graph styles in a fixed cycle.
 * Field 1 - **Group** - This field represents categories on the Y axis or slices of proportional charts.
@@ -158,7 +158,7 @@ INSERT IMAGE HERE
 
 ##Tree
 
-INSERT IMAGE HERE
+![Tree](http://wiki.izenda.us/Guides/Izenda-Vision/Tree.png)
 
 * Tree displays a tree design with a set of linked nodes.  Each node in a tree has zero or more child nodes.  
 * Field 1... **Group** - This group represents the hierarchical levels which structure the tree.
