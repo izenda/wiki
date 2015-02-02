@@ -117,15 +117,7 @@ INSERT IMAGE HERE
 
 [Sunburst](C:/Users/Sunburst)
 
-![Sunburst](http://wiki.izenda.us/edit/Guides/Izenda-Vision/Sunburst.png)
-
-
-
-![Sunburst](http://kb.izenda.com/Reg/images/src4_settingsnew.png)
-
-
-
-
+![Sunburst](http://wiki.izenda.us/Guides/Izenda-Vision/Sunburst.png)
 
 
 * Sunburst displays a tree-like hierarchy of items layered in a circular arrangement, each of which proportionally represents the aggregate metric at each level of the hierarchy. The layers from inner to outer represent each level of the hierarchy. Larger groups are displayed from the 12 o’clock position clockwise.
