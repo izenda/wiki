@@ -98,9 +98,9 @@ INSERT IMAGE HERE
 
 INSERT IMAGE HERE
 
-Heat Map displays a tree-like hierarchy of squares, each of which proportionally represents the aggregate metric at each level of the hierarchy.
-Field 1... - **Group** - This field represents the hierarchical levels which structure the heat map.
-Field 2+ - **Metric** - This field will represent the value on the chart. The metric currently being displayed is selectable from a drop-down.
+* Heat Map displays a tree-like hierarchy of squares, each of which proportionally represents the aggregate metric at each level of the hierarchy.
+* Field 1... - **Group** - This field represents the hierarchical levels which structure the heat map.
+* Field 2+ - **Metric** - This field will represent the value on the chart. The metric currently being displayed is selectable from a drop-down.
 
 ##Matrix
 
