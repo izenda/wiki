@@ -59,7 +59,7 @@ These terms refer to the types of columns that each visualization reads.
 
 ##Auto Chart
 
-INSERT AUTO CHARTS HERE
+![Auto Chart](http://wiki.izenda.us/Guides/Izenda-Vision/Auto-Chart.png)
 
 * Auto Chart permits the generation of many simple chart types. Some of these charts display a single metric at a time, others display multiple metrics at one time.
 * Field 1 - **Group** - This field will represent the categories along the X axis, the Y axis, or the slices or items displayed on a proportional chart.
