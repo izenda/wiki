@@ -67,7 +67,7 @@ INSERT AUTO CHARTS HERE
 
 ##Bubble Grid 
 
-INSERT IMAGE HERE
+![Bubble Grid](http://wiki.izenda.us/Guides/Izenda-Vision/Bubble-Grid.png)
 
 * Bubble Grid displays a circle with the area representing the metric field by the group field and the time field.
 * Field 1 - **Group** - This field will represent the categories along the Y axis.
