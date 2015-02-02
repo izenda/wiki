@@ -96,7 +96,7 @@ INSERT IMAGE HERE
 
 ##Heat Map
 
-![Heat Map](http://wiki.izenda.us/Guides/Izenda-Vision/Heat Map.png)
+![Heat Map](http://wiki.izenda.us/Guides/Izenda-Vision/Heat-Map.png)
 
 * Heat Map displays a tree-like hierarchy of squares, each of which proportionally represents the aggregate metric at each level of the hierarchy.
 * Field 1... - **Group** - This field represents the hierarchical levels which structure the heat map.
