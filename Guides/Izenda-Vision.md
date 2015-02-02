@@ -50,8 +50,8 @@ Some visualizations do not care where a field is, so long as it exists. These fi
 
 These terms refer to the types of columns that each visualization reads.
 
-**Group** - This column can be any data type, aggregated or not aggregated. These columns are used to group data in other columns, and often serve as the axis or scale of a particular visualization. 
-**Time** - This column must be a Datetime data type. 
+**Group** - This column can be any data type, aggregated or not aggregated. These columns are used to group data in other columns, and often serve as the axis or scale of a particular visualization.  
+**Time** - This column must be a Datetime data type.  
 **Metric** - This column can be any data type. It is generally an aggregate, and most commonly a numeric, but does not have to be. These columns are the elements that are being charted, mapped, or displayed on your visualization. 
 **Geographic Field** - This column is a special case. It is used in map-style visualizations. It must be a list of geographic entities, such as a list of countries, regions, or states.
 
@@ -60,6 +60,41 @@ These terms refer to the types of columns that each visualization reads.
 **Auto Chart
 
 INSERT AUTO CHARTS HERE
+
+* Auto Chart permits the generation of many simple chart types. Some of these charts display a single metric at a time, others display multiple metrics at one time.
+* Field 1 - **Group** - This field will represent the categories along the X axis, the Y axis, or the slices or items displayed on a proportional chart.
+* Field 2+ - **Metric** - This field will represent the value on the chart. The metric currently being displayed is selectable from a drop-down.
+
+##Bubble Grid 
+
+INSERT IMAGE HERE
+
+* Bubble Grid displays a circle with the area representing the metric field by the group field and the time field.
+* Field 1 - **Group** - This field will represent the categories along the Y axis.
+* Field 2 - **Time** - This field will represent the categories along the X axis. This field must have the function set to Group(Year & Month).
+* Field 3 - **Metric** - This field will represent the value of each bubble.
+
+##Combo
+
+INSERT IMAGE HERE
+
+* Combo displays metrics with a series of bars and lines on the same graph. Each metric gets its own Y axis, with the X axis determined by the single group field. The first half of the metric fields will be displayed with bars, the second half with lines.
+* Field 1 - **Group** - This field will represent the categories along the X axis.
+* Field 2+ - **Metric** - This field will represent the values of each bar or line. Each bar or line will receive its own scale on the Y axis.
+* Notes:
+* * Metric fields will be split between bar and line graphs. The first half of your metric fields will be bars, the second half will be lines. 
+
+##Crossfilter
+
+INSERT IMAGE HERE
+
+* Crossfilter displays multiple charts, one for the datetime grouping field and one for each metric. Clicking and dragging on any chart will establish a range, which acts as a filter on all other charts. You can also drag the range itself to move it without changing its size. This chart is useful for finding clusters of data within other data, for example we have less orders in June vs. August but they are worth more money.
+* Field 1? - **Datetime** - This field will represent the time factor by which other metrics can be filtered. Range of values is displayed on the X axis and count of values is displayed on the Y axis.
+* Field 2+ - **Metric** - This field will represent the value. Range of values is displayed on the X axis and count of values is displayed on the Y axis.
+* Notes:
+* * Some group categories for Datetime will produce too many or invalid results. If your chart does not work, try a different grouping on the datetime or filtering the dataset from the Filter tab.
+
+
 
 
 
