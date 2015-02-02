@@ -115,10 +115,7 @@ INSERT IMAGE HERE
 
 ##Sunburst
 
-[Sunburst](C:/Users/Sunburst)
-
 ![Sunburst](http://wiki.izenda.us/Guides/Izenda-Vision/Sunburst.png)
-
 
 * Sunburst displays a tree-like hierarchy of items layered in a circular arrangement, each of which proportionally represents the aggregate metric at each level of the hierarchy. The layers from inner to outer represent each level of the hierarchy. Larger groups are displayed from the 12 o’clock position clockwise.
 * Field 1... - **Group** - This field represents the hierarchical levels which structure the heat map.
