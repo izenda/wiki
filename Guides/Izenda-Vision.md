@@ -76,7 +76,7 @@ INSERT IMAGE HERE
 
 ##Combo
 
-INSERT IMAGE HERE
+![Crombo](http://wiki.izenda.us/Guides/Izenda-Vision/Combo.png)
 
 * Combo displays metrics with a series of bars and lines on the same graph. Each metric gets its own Y axis, with the X axis determined by the single group field. The first half of the metric fields will be displayed with bars, the second half with lines.
 * Field 1 - **Group** - This field will represent the categories along the X axis.
