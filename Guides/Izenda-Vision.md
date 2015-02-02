@@ -158,7 +158,7 @@ INSERT IMAGE HERE
 
 ##Tree
 
-![Tree](http://wiki.izenda.us/Guides/Izenda-Vision/Tree.png)
+![Tree](http://wiki.izenda.us/Guides/Izenda-Vision/Tree.jpeg)
 
 * Tree displays a tree design with a set of linked nodes.  Each node in a tree has zero or more child nodes.  
 * Field 1... **Group** - This group represents the hierarchical levels which structure the tree.
