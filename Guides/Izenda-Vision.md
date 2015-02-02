@@ -104,7 +104,7 @@ INSERT IMAGE HERE
 
 ##Matrix
 
-INSERT IMAGE HERE
+![Matrix](http://wiki.izenda.us/Guides/Izenda-Vision/Matrix.png)
 
 * Matrix displays a series of squares, arranged by group and time, in the style of a pivot. The squares are shaded according to each metric value.
 * Field 1 - **Group** -  This field will represent the categories along the Y axis.
