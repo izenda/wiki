@@ -166,7 +166,7 @@ INSERT IMAGE HERE
 
 ##Waterfall
 
-INSERT IMAGE HERE
+![Waterfall](http://wiki.izenda.us/Guides/Izenda-Vision/Waterfall.png)
 
 * Waterfall displays a bar chart with a built in pareto function - that is, the bottom of each bar begins at the top of the previous bar.
 * Field 1 - **Group** - This field represents each bar along the X axis.
