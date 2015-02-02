@@ -32,7 +32,7 @@ Count(Order ID), Year(Order Date), Count(Customer ID), Ship City, Country
 
 **Drill-downs and Dynamic Filtering**
 
-Some visualizations support dynamic filtering and drill-down-like behavior. Currently, a full drill-down - connecting through a visualization to another Izenda report - is not possible. A visualization can exist on a child report, and can exist on a parent report, but no part of the visualization is clickable to activate a downhill. The drill-down terminology in this case means that some visualizations, like heatmap and sunburst, can drill-down within themselves. This is more accurately described as dynamic filtering. Dynamic filtering the visualization will also filter the linked summary or detail view.
+Some visualizations support dynamic filtering and drill-down-like behavior. Currently, a full drill-down - connecting through a visualization to another Izenda report - is not possible. A visualization can exist on a child report, and can exist on a parent report, but no part of the visualization is clickable to activate a downhill. The drill-down terminology in this case means that some visualizations, like heat map and sunburst, can drill-down within themselves. This is more accurately described as dynamic filtering. Dynamic filtering the visualization will also filter the linked summary or detail view.
 
 **Fields labeled with a plus (+) sign**
 
@@ -111,7 +111,52 @@ INSERT IMAGE HERE
 * Field 2 - **Time** - This field will represent the categories along the X axis. This field must have the function set to Group(Year & Month).
 * Field 3 - **Metric** - This field will represent the value of each square. 
 * Notes:
-* * Matrix can only render so many squares. If you aren’t getting enough data on the time based X axis, try filtering out some items from the group based Y axis.
+* * Matrix can only render so many squares. If you aren't getting enough data on the time based X axis, try filtering out some items from the group based Y axis.
+
+##Sunburst
+
+INSERT IMAGE HERE
+
+* Sunburst displays a tree-like hierarchy of items layered in a circular arrangement, each of which proportionally represents the aggregate metric at each level of the hierarchy. The layers from inner to outer represent each level of the hierarchy. Larger groups are displayed from the 12 o’clock position clockwise.
+* Field 1... - **Group** - This field represents the hierarchical levels which structure the heat map.
+* Field 2+ - **Metric** - This field will represent the value on the chart. The metric currently being displayed is selectable from a drop-down.
+
+##Time Bubble
+
+INSERT IMAGE HERE
+
+* Time Bubble is a multidimensional graph which displays circles which change in size and position over time. Mousing over the time label at the bottom right of the chart will move forward and backward in time.
+* Field 1 - **Group** - This field will represent each circle. 
+* Field 2 - **Date time** - This field will determine the scale at which circles move and change size. This field must be set to Group(Year & Month).
+* Field 3 - **Metric** - This field will represent the Y axis.
+* Field 4 - **Metric** - This field will represent the X axis.
+* Field 5 - **Metric** - This field will represent the Z axis, represented by the area of the circle.
+
+##Timeline
+
+INSERT IMAGE HERE
+
+* Timeline displays a single metric between two points in time. The length of each item represents the distance between your start and end times.
+* Field 1 - **Group** - This field represents the Y axis.
+* Field 2 - **Metric** - This field represents the item charted.
+* Field 3 - **Datetime** - This field represents the beginning point from which the metric will be drawn.
+* Field 4 - **Datetime** - This field represents the end point to which the metric will be drawn.
+* Notes:
+* * Timeline can only display up to a fixed amount of data. If you are not seeing all the data you expect to see, try filtering down your report set - particularly the time dimension.
+
+##Transitions
+
+INSERT IMAGE HERE
+
+•	Transitions displays multiple common graph styles in a fixed cycle.
+•	Field 1 - Group - This field represents categories on the Y axis or slices of proportional charts.
+•	Field 2 - Datetime - This field represents the X axis when applicable. It must be set to Group(Year & Month)
+•	Field 3 - Metric - This field represents the value.
+•	Notes:
+o	You must sort Fields 1 and 2 to make coherent charts. If your charts look odd, make sure that the sorting behavior is correct.
+
+
+
 
 
 
