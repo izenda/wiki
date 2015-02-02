@@ -148,12 +148,12 @@ INSERT IMAGE HERE
 
 INSERT IMAGE HERE
 
-•	Transitions displays multiple common graph styles in a fixed cycle.
-•	Field 1 - Group - This field represents categories on the Y axis or slices of proportional charts.
-•	Field 2 - Datetime - This field represents the X axis when applicable. It must be set to Group(Year & Month)
-•	Field 3 - Metric - This field represents the value.
-•	Notes:
-o	You must sort Fields 1 and 2 to make coherent charts. If your charts look odd, make sure that the sorting behavior is correct.
+* Transitions displays multiple common graph styles in a fixed cycle.
+* Field 1 - **Group** - This field represents categories on the Y axis or slices of proportional charts.
+* Field 2 - **Datetime** - This field represents the X axis when applicable. It must be set to Group(Year & Month)
+* Field 3 - **Metric** - This field represents the value.
+* Notes:
+* * You must sort Fields 1 and 2 to make coherent charts. If your charts look odd, make sure that the sorting behavior is correct.
 
 
 
