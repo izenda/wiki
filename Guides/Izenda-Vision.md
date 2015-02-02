@@ -86,7 +86,7 @@ INSERT IMAGE HERE
 
 ##Crossfilter
 
-INSERT IMAGE HERE
+![Crossfilter](http://wiki.izenda.us/Guides/Izenda-Vision/Crossfilter.png)
 
 * Crossfilter displays multiple charts, one for the datetime grouping field and one for each metric. Clicking and dragging on any chart will establish a range, which acts as a filter on all other charts. You can also drag the range itself to move it without changing its size. This chart is useful for finding clusters of data within other data, for example we have less orders in June vs. August but they are worth more money.
 * Field 1? - **Datetime** - This field will represent the time factor by which other metrics can be filtered. Range of values is displayed on the X axis and count of values is displayed on the Y axis.
