@@ -123,7 +123,7 @@ INSERT IMAGE HERE
 
 ##Time Bubble
 
-![Time Bubble](http://wiki.izenda.us/Guides/Izenda-Vision/Time-Bubble.png)
+![Time Bubble](http://wiki.izenda.us/Guides/Izenda-Vision/Time Bubble.png)
 
 * Time Bubble is a multidimensional graph which displays circles which change in size and position over time. Mousing over the time label at the bottom right of the chart will move forward and backward in time.
 * Field 1 - **Group** - This field will represent each circle. 
