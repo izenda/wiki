@@ -12,7 +12,7 @@ When creating a visualization, you must pay specific attention to the field orde
 
 INSERT IMAGE HERE
 
-*Field Order and Group Hierarchy**
+**Field Order and Group Hierarchy**
 
 Some visualizations permit multiple group fields. Group field hierarchy must be placed in proper field order! This means highest category first, and lowest category last. Here are some examples:
 
@@ -30,7 +30,7 @@ Visualizations sort in an order defined by the columns in the Summary or Fields 
 
 Count(Order ID), Year(Order Date), Count(Customer ID), Ship City, Country
 
-*Drill-downs and Dynamic Filtering**
+**Drill-downs and Dynamic Filtering**
 
 Some visualizations support dynamic filtering and drill-down-like behavior. Currently, a full drill-down - connecting through a visualization to another Izenda report - is not possible. A visualization can exist on a child report, and can exist on a parent report, but no part of the visualization is clickable to activate a downhill. The drill-down terminology in this case means that some visualizations, like heatmap and sunburst, can drill-down within themselves. This is more accurately described as dynamic filtering. Dynamic filtering the visualization will also filter the linked summary or detail view.
 
@@ -57,7 +57,7 @@ These terms refer to the types of columns that each visualization reads.
 
 #Visualization Styles:
 
-**Auto Chart
+##Auto Chart
 
 INSERT AUTO CHARTS HERE
 
@@ -94,6 +94,24 @@ INSERT IMAGE HERE
 * Notes:
 * * Some group categories for Datetime will produce too many or invalid results. If your chart does not work, try a different grouping on the datetime or filtering the dataset from the Filter tab.
 
+##Heat Map
+
+INSERT IMAGE HERE
+
+Heat Map displays a tree-like hierarchy of squares, each of which proportionally represents the aggregate metric at each level of the hierarchy.
+Field 1... - **Group** - This field represents the hierarchical levels which structure the heat map.
+Field 2+ - **Metric** - This field will represent the value on the chart. The metric currently being displayed is selectable from a drop-down.
+
+##Matrix
+
+INSERT IMAGE HERE
+
+* Matrix displays a series of squares, arranged by group and time, in the style of a pivot. The squares are shaded according to each metric value.
+* Field 1 - **Group** -  This field will represent the categories along the Y axis.
+* Field 2 - **Time** - This field will represent the categories along the X axis. This field must have the function set to Group(Year & Month).
+* Field 3 - **Metric** - This field will represent the value of each square. 
+* Notes:
+* * Matrix can only render so many squares. If you aren’t getting enough data on the time based X axis, try filtering out some items from the group based Y axis.
 
 
 
