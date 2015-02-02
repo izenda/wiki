@@ -174,7 +174,7 @@ INSERT IMAGE HERE
 
 ##World Tour
 
-![WorldTour](http://wiki.izenda.us/Guides/Izenda-Vision/WorldTour.png)
+![WorldTour](http://wiki.izenda.us/Guides/Izenda-Vision/World Tour.png)
 
 * World Tour displays countries and a single metric associated with that country.
 * Field 1 - **Geographical Field** - This field represents the country.
