@@ -90,6 +90,6 @@ This lesson focuses on how and why to use the Analysis Grid visual group style.
 
 This lesson focuses on the Instant Report designer, which acts as a 'sketchpad' for quick ad-hoc design.
 
-##[[Section 18 - Izenda Vision|/Guides/ReportDesign/18.0 Izenda-Vision]]
+##[[Section 18 - Izenda Vision|/Guides/Izenda-Vision]]
 
 This lesson focuses on Izenda Vision.
