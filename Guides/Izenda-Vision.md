@@ -12,7 +12,7 @@ When creating a visualization, you must pay specific attention to the field orde
 
 **Field Order and Group Hierarchy**
 
-Some visualizations permit multiple group fields. Group field hierarchy must be placed in proper field order! This means highest category first, and lowest category last. Here are some examples:
+Some visualizations permit multiple group fields. Group field hierarchy must be placed in proper field order. This means highest category first, and lowest category last. Here are some examples:
 
 Country, State/Region, City, Neighborhood
 
@@ -20,7 +20,7 @@ Company, Department, Office, Desk
 
 Tera, Giga, Mega, Kilo
 
-Expressions read the exact field order as you define it. If I place Neighborhood before Country, my visualization will not make any sense by definition! Double check that fields are in the correct order if the visualization does not appear to be correct.
+Expressions read the exact field order as you define it. If I place Neighborhood before Country, my visualization will not make any sense by definition. Double check that fields are in the correct order if the visualization does not appear to be correct.
 
 **Field Sorting**
 
@@ -48,10 +48,10 @@ Some visualizations do not care where a field is, so long as it exists. These fi
 
 These terms refer to the types of columns that each visualization reads.
 
-**Group** - This column can be any data type, aggregated or not aggregated. These columns are used to group data in other columns, and often serve as the axis or scale of a particular visualization.  
-**Time** - This column must be a Datetime data type.  
-**Metric** - This column can be any data type. It is generally an aggregate, and most commonly a numeric, but does not have to be. These columns are the elements that are being charted, mapped, or displayed on your visualization. 
-**Geographic Field** - This column is a special case. It is used in map-style visualizations. It must be a list of geographic entities, such as a list of countries, regions, or states.
+* **Group** - This column can be any data type, aggregated or not aggregated. These columns are used to group data in other columns, and often serve as the axis or scale of a particular visualization.  
+* **Time** - This column must be a Datetime data type.  
+* **Metric** - This column can be any data type. It is generally an aggregate, and most commonly a numeric, but does not have to be. These columns are the elements that are being charted, mapped, or displayed on your visualization. 
+* **Geographic Field** - This column is a special case. It is used in map-style visualizations. It must be a list of geographic entities, such as a list of countries, regions, or states.
 
 #Visualization Styles:
 
