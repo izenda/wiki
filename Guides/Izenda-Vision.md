@@ -1,4 +1,4 @@
-[[Contents]]
+[[_Contents_]]
 
 Izenda Visualizations are a D3-based visual supplement to Izenda’s core charting engine. Visualizations are rendered in a chart report part, but are built on the columnar data in your summary or fields tab. These columns must be arranged in a specific order to provide valid data for certain visualizations. This document lists which column arrangement works with each visualization style.
 
