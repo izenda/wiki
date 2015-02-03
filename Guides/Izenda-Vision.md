@@ -179,11 +179,3 @@ These terms refer to the types of columns that each visualization reads.
 * World Tour displays countries and a single metric associated with that country.
 * Field 1 - **Geographical Field** - This field represents the country.
 * Field 2 - **Metric** - This field represents the value associated with each country.
-
-
-
-
-
-
-
-
