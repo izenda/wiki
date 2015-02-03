@@ -40,7 +40,7 @@ These methods are overridable in any class that inherits from FileSystemAdHocCon
 * [[PreSaveReportSet|http://wiki.izenda.us/API/AdHocConfig/PreSaveReportSet]] - **Obsolete** Allows customization of the process that occurs before saving a report
 * [[ProcessDataSet|http://wiki.izenda.us/API/AdHocConfig/ProcessDataSet]] - Allows customization of the process that loads data from the database
 * [[ProcessEqualsSelectList|http://wiki.izenda.us/API/AdHocConfig/ProcessEqualsSelectList]] - Allows customization of the process that loads the Equals(Select/Checkbox/Popup/Multiple) values for filters
-* [[ProcessFriendlyException|http://wiki.izenda.us/API/AdHocConfig/ProcessFriendlyException]] - Allows customization of how exceptions are handled when AdHocSettings.UseFriendlyErrors is true
+* [[ProcessFriendlyException|http://wiki.izenda.us/API/AdHocConfig/ProcessFriendlyException]] - Allows customization of how exceptions are handled when AdHocSettings.UseFriendlyErrors is true (Default value is true)
 * [[SaveReportRDL|http://wiki.izenda.us/API/AdHocConfig/SaveReportRDL]] - Allows customization of the process that saves the RDL file to disk
 * [[SaveReportSet|http://wiki.izenda.us/API/AdHocConfig/SaveReportSet]] - Allows customization of the process that saves the report to the disk/database
 * [[SaveTemplate|http://wiki.izenda.us/API/AdHocConfig/SaveTemplate]] - Allows customization of the process that saves the form attached to a report
