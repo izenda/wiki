@@ -1,4 +1,4 @@
-![alt text](http://demo2.izenda.us/bi/rs.aspx?image=ModernImages.izenda-logo-4.gif)
+![Izenda Logo](http://izenda.com/wp-content/uploads/2014/12/IzendaNewLogoBlueTR.png)
 ---
 
 * [[Installing Izenda on Windows Server|http://wiki.izenda.us/Guides/Installing-Izenda]]
