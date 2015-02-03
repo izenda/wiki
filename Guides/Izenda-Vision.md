@@ -10,8 +10,6 @@ In Izenda terms, a field and a column are the same thing. This documentation wil
 
 When creating a visualization, you must pay specific attention to the field order. This is the idea that fields, from top to bottom, can be numbered - the first field in the list is 1, the second field is 2, and so on. Likewise, the leftmost column is column 1, the column immediately to the right is column 2, and so on. This field order is critical, as visualizations demand a specific order to fields which dictates not only if they will be used, but how they will be used.
 
-INSERT IMAGE HERE
-
 **Field Order and Group Hierarchy**
 
 Some visualizations permit multiple group fields. Group field hierarchy must be placed in proper field order! This means highest category first, and lowest category last. Here are some examples:
