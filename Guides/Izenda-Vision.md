@@ -1,12 +1,8 @@
 [[_TOC_]]
 
-##[[Visualization Styles - Izenda Vision|/Guides/Izenda Vision/Combo]]
-
 Izenda Visualizations are a D3-based visual supplement to Izenda’s core charting engine. Visualizations are rendered in a chart report part, but are built on the columnar data in your summary or fields tab. These columns must be arranged in a specific order to provide valid data for certain visualizations. This document lists which column arrangement works with each visualization style.
 
 Given that visualizations rely on the teamwork between the chart itself and the column data which supports it, this means that visualizations may not be easy to include in a complex report. Currently, any data in the Summary tab will be read, and if this tab is empty, the Fields tab will be used instead.
-
-INSERT IMAGE HERE
 
 In Izenda terms, a field and a column are the same thing. This documentation will refer to fields and columns interchangeably. To be precise, fields are listed from top to bottom on the Fields tab, and displayed as columns from left to right.
 
