@@ -75,7 +75,7 @@ Once you have IIS installed, continue with the following:
 [Replace 1e. with MVC Screenshot]
 		
 
-**f.** Before continuing, make sure the site folder ( **...\Reporting** ) has read permissions for the **NETWORK SERVICE** user. Make sure the reports folder ( **...Reporting\MVC4Razor2\Reporting\Reports** ) and Web.config ( **...Reporting\MVC4Razor2\Web.config** ) have write permissions for the **NETWORK SERVICE** user (Right click on **MySite\Reporting folder => Properties => Security => Edit... => Add... => Type "NETWORK SERVICE" and press OK =>  Click 'NETWORK SERVICE' Click 'Allow - Full Control' Click OK=> Click OK)**.
+**f.** Before continuing, make sure the site folder ( **...\Reporting** ) has full permissions for the **NETWORK SERVICE** user. Make sure the reports folder ( **...Reporting\MVC4Razor2\Reporting\Reports** ) and Web.config ( **...Reporting\MVC4Razor2\Web.config** ) have full permissions for the **NETWORK SERVICE** user also (Right click on **MySite\Reporting folder => Properties => Security => Edit... => Add... => Type "NETWORK SERVICE" and press OK =>  Click 'NETWORK SERVICE' Click 'Allow - Full Control' Click OK=> Click OK)**.
 
 ###Step 4. Set license key and database connection
 
