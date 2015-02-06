@@ -73,6 +73,8 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How Do I Hide the Report List Button On the Report Viewer?|http://wiki.izenda.us/FAQ/Questions/Hiding-report-list-button]]
 - [[Can I change the report title dynamically?|http://wiki.izenda.us/FAQ/Questions/Dynamically-change-report-title]]
 - [[How do sub-reports and drilldowns work?|/FAQ/Questions/sub-reports-and-drilldowns]]
+- [[How do allow text wrapping on headers?|/API/CodeSamples/AllowMultilineHeaders]]
+- [[How do I set the column width for each individual field?|/FAQ/advanced-field-settings]]
 
 ##Scheduler
 - [[How do I use the Izenda Scheduler?|http://wiki.izenda.us/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler#Overnight-batch-report-processing]]
