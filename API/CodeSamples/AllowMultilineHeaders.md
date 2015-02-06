@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets if headers in the grid report can be multi-line. This setting could be useful if you have many columns in the report or column names are very long. This does not affect pivot column names. By default, pivot column names will always be multi-lined if the values become too long.
+Gets or sets if headers in the grid report can be multi-line (text wrap). This setting could be useful if you have many columns in the report or column names are very long. This does not affect pivot column names. By default, pivot column names will always be multi-lined if the values become too long.
 
 ##Global.asax (C♯)
 
