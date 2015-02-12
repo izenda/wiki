@@ -4,8 +4,6 @@
 
 ##About
 
-**This method is obsolete. Use [[InitializeReporting|/FAQ/InitializeReporting]] instead**.
-
 The PostLogin method allows you to call it from your login page using the line of code: ``Izenda.AdHoc.AdHocSettngs.AdHocConfig.PostLogin();``
 
 This will enable you to run any user/role related code, before the global settings are run from either the _Settings.aspx_ page or the ConfigureSettings() method in the _Global.asax_. 
@@ -13,6 +11,7 @@ This will enable you to run any user/role related code, before the global settin
 > Call Izenda.AdHoc.AdHocSettngs.AdHocConfig.PostLogin() from your login
 > page after authentication is successful
 
+_**Obsolete:** This method has been replaced with [[InitializeReporting|/FAQ/InitializeReporting]] in Izenda 6.7 and later._
 ```csharp
 public override void PostLogin()
   { 
