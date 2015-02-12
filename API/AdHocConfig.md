@@ -10,43 +10,43 @@ The AdHocConfig class is where Izenda Reports will perform all of its initializa
 
 These methods are overridable in any class that inherits from FileSystemAdHocConfig or DatabaseAdHocConfig
 
-* [[ArchiveReportOutput|http://wiki.izenda.us/API/AdHocConfig/ArchiveReportOutput]] - Allows archival of any reports that are viewed/exported/scheduled.
-* [[ConfigureSettings|http://wiki.izenda.us/API/AdHocConfig/ConfigureSettings]] - **Obsolete** Allows configuration of global settings all users of the system depend on
-* [[CustomizeChart|http://wiki.izenda.us/API/AdHocConfig/CustomizeChart]] - Allows customization of chart objects before they appear on screen.
-* [[CustomizeDundasChart|http://wiki.izenda.us/API/AdHocConfig/CustomizeDundasChart]] - Allows chart customization specific to the DundasCharts charting engine.
-* [[CustomizeGuage|http://wiki.izenda.us/API/AdHocConfig/CustomizeGuage]] - Allows customization of gauge objects before they appear on screen.
-* [[DeleteReportSet|http://wiki.izenda.us/API/AdHocConfig/DeleteReportSet]] - Allows customization for deleting reports.
-* [[DeleteTemplate|http://wiki.izenda.us/API/AdHocConfig/DeleteTemplate]] - Allows customization for deleting forms associated with specific reports
-* [[DeleteThumbnail|http://wiki.izenda.us/API/AdHocConfig/DeleteThumbnail]] - Allows customization for deleting report thumbnails.
-* [[FilteredListReportsDictionary|http://wiki.izenda.us/API/AdHocConfig/FilteredListReportsDictionary]] - Allows customization of the list of reports guaranteed to be available to the user
-* [[GetAutoRefreshIntervals|http://wiki.izenda.us/API/AdHocConfig/GetAutoRefreshIntervals]] - Allows end-users to set automatic refresh times on reports and dashboards.
-* [[GetCustomFooter|http://wiki.izenda.us/API/AdHocConfig/GetCustomFooter]] - Allows customization of the footer that appears on all reports
-* [[GetCustomHeader|http://wiki.izenda.us/API/AdHocConfig/GetCustomHeader]] - Allows customization of the header that appears on all reports
-* [[GetOperatorList|http://wiki.izenda.us/API/AdHocConfig/GetOperatorList]] - Allows a customized list of possible SQL logic operators to be used
-* [[GetPossibleValuesAsTree|http://wiki.izenda.us/API/AdHocConfig/GetPossibleValuesAsTree]] - Allows a special Equals(Select) dropdown menu to be created that contains a tree structure of values for filters
-* [[GetReportIDByName|http://wiki.izenda.us/API/AdHocConfig/GetReportIDByName]] - Allows customization of the process that gets a report ID based on the report name
-* [[GetReportNameById|http://wiki.izenda.us/API/AdHocConfig/GetReportNameById]] - Allows customization of the process that gets a report name based on the report ID
-* [[IsFieldAllowedInFilters|http://wiki.izenda.us/API/AdHocConfig/IsFieldAllowedInFilters]] - Allows customization of determining whether or not to allow field names in filters
-* [[ListReports|http://wiki.izenda.us/API/AdHocConfig/ListReports]] - Allows customization of the process used for obtaining a list of all reports 
-* [[LoadReportSet|http://wiki.izenda.us/API/AdHocConfig/LoadReportSet]] - Allows customization of the process for loading report sets
-* [[LoadThumbnail|http://wiki.izenda.us/API/AdHocConfig/LoadThumbnail]] - Allows customization of the process for loading report thumbnails
-* [[PerformCustomRendering|http://wiki.izenda.us/API/AdHocConfig/PerformCustomRendering]] - Allows customization of the rendering method used when a form report is being rendered
-* [[PostExecuteReportSet|http://wiki.izenda.us/API/AdHocConfig/PostExecuteReportSet]] - Allows customization of the ReportSet object currently being processed to be displayed/exported/sent via scheduler
-* [[PostLoadReportSet|http://wiki.izenda.us/API/AdHocConfig/PostLoadReportSet]] - Allows customization of the process that occurs after the ReportSet is loaded
-* [[PostLogin|http://wiki.izenda.us/API/AdHocConfig/PostLogin]] - **Obsolete** Allows customization of per-user settings once the user has logged in
-* [[PostProcessEqualsSelectList|http://wiki.izenda.us/API/AdHocConfig/PostProcessEqualsSelectList]] - Allows customization of the process that runs after the Equals(Select/Checkbox/Popup/Multiple) values have been obtained
-* [[PostSaveReportSet|http://wiki.izenda.us/API/AdHocConfig/PostSaveReportSet]] - **Obsolete** Allows customization of the process that occurs after saving a report
-* [[PreLoadReportSet|http://wiki.izenda.us/API/AdHocConfig/PreLoadReportSet]] - Allows customization of the process that occurs before loading a report
-* [[PreSaveReportSet|http://wiki.izenda.us/API/AdHocConfig/PreSaveReportSet]] - **Obsolete** Allows customization of the process that occurs before saving a report
-* [[ProcessDataSet|http://wiki.izenda.us/API/AdHocConfig/ProcessDataSet]] - Allows customization of the process that loads data from the database
-* [[ProcessEqualsSelectList|http://wiki.izenda.us/API/AdHocConfig/ProcessEqualsSelectList]] - Allows customization of the process that loads the Equals(Select/Checkbox/Popup/Multiple) values for filters
-* [[ProcessFriendlyException|http://wiki.izenda.us/API/AdHocConfig/ProcessFriendlyException]] - Allows customization of how exceptions are handled when AdHocSettings.UseFriendlyErrors is true (Default value is true)
-* [[SaveReportRDL|http://wiki.izenda.us/API/AdHocConfig/SaveReportRDL]] - Allows customization of the process that saves the RDL file to disk
-* [[SaveReportSet|http://wiki.izenda.us/API/AdHocConfig/SaveReportSet]] - Allows customization of the process that saves the report to the disk/database
-* [[SaveTemplate|http://wiki.izenda.us/API/AdHocConfig/SaveTemplate]] - Allows customization of the process that saves the form attached to a report
-* [[SaveThumbail|http://wiki.izenda.us/API/AdHocConfig/SaveThumbail]] - Allows customization of the process that saves thumbnails for reports
-* [[ThumbnailExists|http://wiki.izenda.us/API/AdHocConfig/ThumbnailExists]] - Allows customization of the process that checks whether thumbnail pictures exist for reports
-* [[UpdateMetatdata|http://wiki.izenda.us/API/AdHocConfig/UpdateMetatdata]] - **Obsolete** Forces an update of the database schema
+* [[ArchiveReportOutput|/FAQ/ArchiveReportOutput]] - Allows archival of any reports that are viewed/exported/scheduled.
+* [[ConfigureSettings|/FAQ/ConfigureSettings]] - **Obsolete** Allows configuration of global settings all users of the system depend on
+* [[CustomizeChart|/FAQ/CustomizeChart]] - Allows customization of chart objects before they appear on screen.
+* [[CustomizeDundasChart|/FAQ/CustomizeDundasChart]] - Allows chart customization specific to the DundasCharts charting engine.
+* [[CustomizeGuage|/FAQ/CustomizeGuage]] - Allows customization of gauge objects before they appear on screen.
+* [[DeleteReportSet|/FAQ/DeleteReportSet]] - Allows customization for deleting reports.
+* [[DeleteTemplate|/FAQ/DeleteTemplate]] - Allows customization for deleting forms associated with specific reports
+* [[DeleteThumbnail|/FAQ/DeleteThumbnail]] - Allows customization for deleting report thumbnails.
+* [[FilteredListReportsDictionary|/FAQ/FilteredListReportsDictionary]] - Allows customization of the list of reports guaranteed to be available to the user
+* [[GetAutoRefreshIntervals|/FAQ/GetAutoRefreshIntervals]] - Allows end-users to set automatic refresh times on reports and dashboards.
+* [[GetCustomFooter|/FAQ/GetCustomFooter]] - Allows customization of the footer that appears on all reports
+* [[GetCustomHeader|/FAQ/GetCustomHeader]] - Allows customization of the header that appears on all reports
+* [[GetOperatorList|/FAQ/GetOperatorList]] - Allows a customized list of possible SQL logic operators to be used
+* [[GetPossibleValuesAsTree|/FAQ/GetPossibleValuesAsTree]] - Allows a special Equals(Select) dropdown menu to be created that contains a tree structure of values for filters
+* [[GetReportIDByName|/FAQ/GetReportIDByName]] - Allows customization of the process that gets a report ID based on the report name
+* [[GetReportNameById|/FAQ/GetReportNameById]] - Allows customization of the process that gets a report name based on the report ID
+* [[IsFieldAllowedInFilters|/FAQ/IsFieldAllowedInFilters]] - Allows customization of determining whether or not to allow field names in filters
+* [[ListReports|/FAQ/ListReports]] - Allows customization of the process used for obtaining a list of all reports 
+* [[LoadReportSet|/FAQ/LoadReportSet]] - Allows customization of the process for loading report sets
+* [[LoadThumbnail|/FAQ/LoadThumbnail]] - Allows customization of the process for loading report thumbnails
+* [[PerformCustomRendering|/FAQ/PerformCustomRendering]] - Allows customization of the rendering method used when a form report is being rendered
+* [[PostExecuteReportSet|/FAQ/PostExecuteReportSet]] - Allows customization of the ReportSet object currently being processed to be displayed/exported/sent via scheduler
+* [[PostLoadReportSet|/FAQ/PostLoadReportSet]] - Allows customization of the process that occurs after the ReportSet is loaded
+* [[PostLogin|/API/AdHocConfig/PostLogin]] - **Obsolete** Allows customization of per-user settings once the user has logged in
+* [[PostProcessEqualsSelectList|/FAQ/PostProcessEqualsSelectList]] - Allows customization of the process that runs after the Equals(Select/Checkbox/Popup/Multiple) values have been obtained
+* [[PostSaveReportSet|/FAQ/PostSaveReportSet]] - **Obsolete** Allows customization of the process that occurs after saving a report
+* [[PreLoadReportSet|/FAQ/PreLoadReportSet]] - Allows customization of the process that occurs before loading a report
+* [[PreSaveReportSet|/FAQ/PreSaveReportSet]] - **Obsolete** Allows customization of the process that occurs before saving a report
+* [[ProcessDataSet|/FAQ/ProcessDataSet]] - Allows customization of the process that loads data from the database
+* [[ProcessEqualsSelectList|/FAQ/ProcessEqualsSelectList]] - Allows customization of the process that loads the Equals(Select/Checkbox/Popup/Multiple) values for filters
+* [[ProcessFriendlyException|/FAQ/ProcessFriendlyException]] - Allows customization of how exceptions are handled when AdHocSettings.UseFriendlyErrors is true (Default value is true)
+* [[SaveReportRDL|/FAQ/SaveReportRDL]] - Allows customization of the process that saves the RDL file to disk
+* [[SaveReportSet|/FAQ/SaveReportSet]] - Allows customization of the process that saves the report to the disk/database
+* [[SaveTemplate|/FAQ/SaveTemplate]] - Allows customization of the process that saves the form attached to a report
+* [[SaveThumbail|/FAQ/SaveThumbail]] - Allows customization of the process that saves thumbnails for reports
+* [[ThumbnailExists|/FAQ/ThumbnailExists]] - Allows customization of the process that checks whether thumbnail pictures exist for reports
+* [[UpdateMetatdata|/FAQ/UpdateMetatdata]] - **Obsolete** Forces an update of the database schema
 
 ##C♯ Example
 
