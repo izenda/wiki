@@ -33,7 +33,7 @@ These methods are overridable in any class that inherits from FileSystemAdHocCon
 * [[PerformCustomRendering|/FAQ/PerformCustomRendering]] - Allows customization of the rendering method used when a form report is being rendered
 * [[PostExecuteReportSet|/FAQ/PostExecuteReportSet]] - Allows customization of the ReportSet object currently being processed to be displayed/exported/sent via scheduler
 * [[PostLoadReportSet|/FAQ/PostLoadReportSet]] - Allows customization of the process that occurs after the ReportSet is loaded
-* [[PostLogin|/API/AdHocConfig/PostLogin]] - **Obsolete** Allows customization of per-user settings once the user has logged in
+* [[PostLogin|/FAQ/PostLogin]] - **Obsolete** Allows customization of per-user settings once the user has logged in
 * [[PostProcessEqualsSelectList|/FAQ/PostProcessEqualsSelectList]] - Allows customization of the process that runs after the Equals(Select/Checkbox/Popup/Multiple) values have been obtained
 * [[PostSaveReportSet|/FAQ/PostSaveReportSet]] - **Obsolete** Allows customization of the process that occurs after saving a report
 * [[PreLoadReportSet|/FAQ/PreLoadReportSet]] - Allows customization of the process that occurs before loading a report
