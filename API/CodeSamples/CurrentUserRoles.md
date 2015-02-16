@@ -1,4 +1,4 @@
-#CurrentUserName
+#CurrentUserRoles
 
 [[_TOC_]]
 
@@ -6,7 +6,7 @@
 
 Gets or sets the roles of the current user. This is used to customize security based on roles already established client-side. It can be used in addition to a User ID and Tenant ID.
 
-In the following example, the user's role(s) are pulled from session. If the role of Power User is within their set of roles, they will be see the modify button but will not be allowed to delete reports.
+In the following example, the user's role(s) are pulled from session. If the role of Power User is within their set of roles, they will be able to see the modify button but will not be allowed to delete reports.
 
 ##Global.asax (C♯)
 
