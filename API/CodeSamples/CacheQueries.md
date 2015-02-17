@@ -11,7 +11,8 @@ You can change the expiration time for this cache using something like:
 ```csharp 
 AdHocContext.Driver.QueryCachingTime = TimeSpan.FromMinutes(1) 
 ``` 
-(Default is 5 minutes).
+The default time is 5 minutes.
+
 Caching the result sets of queries may result in a report not displaying the latest data (if the table has changed and the cache has not been refreshed), unless you change the number of results, or anything else that would change the query itself.
 
 **Default Value:** True
