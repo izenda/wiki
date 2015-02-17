@@ -8,7 +8,7 @@ What kinds of caching does Izenda use? Can I update the cache?
 
 ##Answer
 
-Izenda caches all your reports and schema information automatically per browser session. By default, caching is stored in memory and in the temp folder of the server that Izenda is hosted on. Here is a list of the caching methods that are available in case you wish to manually update the cache, although generally the cache will self-update as needed.
+Izenda caches your reports and schema information automatically per browser session. By default, caching is stored in memory and in the temp folder of the server that Izenda is hosted on. Here is a list of the caching methods - and links to their individual articles - that are available in case you wish to manipulate the cache, although generally the cache will self-update as needed:
 
 ###FilteredListReports
 
@@ -16,11 +16,11 @@ The [[AdHocConfig.FilteredListReports|http://wiki.izenda.us/FAQ/FilteredListRepo
 
 ###InvalidateFilteredCaches
 
-The AdHocConfig.InvalidateFilteredCaches() method will clean up the results cached in the FilteredListReports method and can be called manually if needed. Like, for instance, when the XML definitions of one or more reports change outside the environment.
+The AdHocConfig.InvalidateFilteredCaches() method will clean up the results cached in the FilteredListReports method and can be called manually if needed. For instance, when the XML definitions of one or more reports change outside the environment.
 
-###DataCache Interval
+###DataCacheInterval
 
-Sets the number of seconds between cache refreshes. Example: ``AdHocSettings.DataCacheInterval = 60 * 24 * 30;``
+[[AdHocSettings.DataCacheInterval|http://wiki.izenda.us/API/CodeSamples/DataCacheInterval]] sets the number of seconds between cache refreshes for FUSION (HTML) cache. Example: ``AdHocSettings.DataCacheInterval = 60 * 24 * 30;``
 
 ###InvalidateSchemaCache
 
@@ -28,7 +28,27 @@ The AdHocContext.Driver.InvalidateSchemaCache() method will update the schema fo
 
 ###InvalidateSchemaOnNew
 
-The AdHocSettings.InvalidateSchemaOnNew is a Boolean which tells the system if it should should update the schema for database changes when a new report is being created. This is useful for environments where the database is constantly changing.
+[[AdHocSettings.InvalidateSchemaOnNew|http://wiki.izenda.us/API/CodeSamples/InvalidateSchemaOnNew]] is a Boolean which tells the system if it should should update the schema for database changes when a new report is being created. This is useful for environments where the database is constantly changing.
+
+###CacheQueries
+
+The [[AdHocSettings.CacheQueries|http://wiki.izenda.us/API/CodeSamples/CacheQueries]] setting is a Boolean (default is true) which tells Izenda whether or not the result set of a particular query should be cached.  You can manipulate how long the query is cached using AdHocContext.Driver.QueryCachingTime (see the CacheQueries article for more).
+
+###CacheReports
+
+The [[AdHocSettings.CacheReports|http://wiki.izenda.us/API/CodeSamples/CacheReports]] setting is Boolean (default = true) which gets or sets the value indicating whether all loaded reports should be cached.
+
+###PerUserCaching
+
+The [[AdHocSettings.PerUserCaching|http://wiki.izenda.us/API/CodeSamples/PerUserCaching]] setting is another Boolean value (default = false) which determines whether or not a user-specific DatabaseSchema object is cached in the session for each user.
+
+###CacheSchema
+
+[[AdHocSettings.CacheSchema|http://wiki.izenda.us/API/CodeSamples/CacheSchema]] (default = true) is a Boolean setting which tells Izenda whether or not the DatabaseSchemaObject should be cached.  By default, it is cached in memory (use PerUserCaching to store in session).
+
+###StoreImagesToCache
+
+[[AdHocSettings.StoreImagesToCache|http://wiki.izenda.us/API/CodeSamples/StoreImagesToCache]] will inform Izenda whether to store images to the disk (true) or session (false) during the rendering of a report.
 
 ###CleanUpCache
 
