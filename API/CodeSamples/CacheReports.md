@@ -7,7 +7,7 @@
 Gets or sets the value indicating whether all loaded reports should be cached. 
 This feature can be very useful if you have problems with performance in your data base or slow connection to it. 
 Loaded ReportSet will be cached, so there will be no extra queries to the data base. 
-When you save the Reportset cache for it will be removed and it will be added again when ReportSet will be loaded again. 
+When you save the Reportset cache, it will be removed and it will be added again when ReportSet is loaded again. 
 Report caching may cause problems if you are running more than one instance of Izenda Adhoc with the same reports source (i.e. the same database and table or same reports folder)
 
 **Default Value:** True
