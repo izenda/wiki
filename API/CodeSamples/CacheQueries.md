@@ -7,7 +7,7 @@
 Gets or sets the value indicating whether the result sets of individual queries should be cached. 
 This feature can be very useful if you have problems with performance in your database or slow connection to it. 
 Results for default query (SELECT TOP 100...) will be cached, so there will be no extra queries to the data base. 
-You can change the expiration time for this cache using something like AdHocContext.Driver.QueryCachingTime = TimeSpan.FromMinutes(1) (Default is 5 minutes).
+You can change the expiration time for this cache using something like: ```csharp AdHocContext.Driver.QueryCachingTime = TimeSpan.FromMinutes(1) ``` (Default is 5 minutes).
 Caching the result sets of queries may result in a report not displaying the latest data (if the table has changed and the cache has not been refreshed), unless you change the number of results, or anything else that would change the query itself.
 
 **Default Value:** True
