@@ -10,7 +10,7 @@ Can I run javascript when a user clicks on a report element?
 
 Yes, you can run javascript within any report element (like a field value) by adding the **javascript:** keyword in the URL field on the [[advanced properties|/FAQ/advanced-field-settings]] of the field you want to use the URL with. You can see the screenshot below for an example of how this is used with the column name and value being used in the javascript as well.
 
-![]()
+![](/FAQ/Questions/running-javascript-on-report-elements/URL_Javascript_Code.png)
 
 In the above screenshot, you see a couple of items in curly braces **{}**. These are parameters that will be passed into the javascript. They can be used as variables or literal strings.
 
