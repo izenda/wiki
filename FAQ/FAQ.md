@@ -75,6 +75,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How do sub-reports and drilldowns work?|/FAQ/Questions/sub-reports-and-drilldowns]]
 - [[How do allow text wrapping on headers?|/API/CodeSamples/AllowMultilineHeaders]]
 - [[How do I set the column width for each individual field?|/FAQ/advanced-field-settings]]
+- [[Can I run javascript when a user clicks on a report element?|/FAQ/Questions/running-javascript-on-report-elements]]
 
 ##Scheduler
 - [[How do I use the Izenda Scheduler?|http://wiki.izenda.us/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler#Overnight-batch-report-processing]]
