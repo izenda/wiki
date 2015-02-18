@@ -1,4 +1,4 @@
-#CacheReports
+#InvalidateSchemaOnNew
 
 [[_TOC_]]
 
