@@ -16,3 +16,7 @@ In the above screenshot, you see a couple of items in curly braces **{}**. These
 
 * **{column}**: This identifier will be replaced by the description of the field that this script is being used on.
 * **{0} - {n}**: These identifiers refer to the value of the column referenced by the number. In this case, we are using the value of column 1. This can be used to access any column's value in this javascript section. An error will be thrown if there are less columns in the report than the number referenced in the curly braces. (e.g. using {4} when there are three columns in the report) Zero is special and will refer to the current column's value instead of a specific column number.
+
+Below is the result of the above javascript as applied to a report with three fields. Product Name is column {1}, Ship City is column {2} and Ship Name is column {3}. {0} will refer to Ship City in this case since it is the column with the URL applied to it.
+
+![](/FAQ/Questions/running-javascript-on-report-elements/URL_Javascript_Code_result.png)
