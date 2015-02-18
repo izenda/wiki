@@ -4,7 +4,9 @@
 
 ##Izenda Reports Scheduler Setup Instructions
 
-First, a little background about how the scheduler works. The scheduler requires the use of the Izenda Scheduler executable that is found in the root of the directory you installed Izenda Reports in. You then need to add a scheduled task to your system that runs every minute. The task uses the Izenda Scheduler to access a page in the application that determines if any reports need to go out. The Izenda Scheduler executable does not actually send out the files or access anything else except for the specific page in the reporting application that you give the .exe file as a parameter.
+###Task-based scheduler
+
+First, a little background about how the scheduler works. The scheduler requires the use of the Izenda Scheduler executable that is packaged with our [[reference implementation starter kit|http://www.izenda.com/update-your-izenda-version/]]. You then need to add a scheduled task to your system that runs on an interval you specify. The task will execute the Izenda Scheduler to send a command to the response server (rs.aspx) that determines if any reports need to go out. You can specify the URL of your rs.aspx page as a command line parameter when setting up the task as will be discussed below.
 
 Here are the steps to install the Izenda Scheduler. It is recommended that you perform these installation steps on the Web Server on which Izenda Reports is installed.
 
@@ -25,16 +27,35 @@ Here are the steps to install the Izenda Scheduler. It is recommended that you p
 
 Now that you have setup the scheduler, we will need to setup Izenda Reports. There are two ways to do this. We recommend using the [[InitializeReporting()|/FAQ/InitializeReporting]] method in your CustomAdHocConfig class to do this, but you may also use the settings.aspx page included with our demo to create a config file that will take the place of any settings in code.
 
+###Service-based scheduler
+
+Izenda now also offers the option of using a service-based scheduler. The msi installer is available upon request. After running the installer, there will be an executable in the directory you specified in the installer wizard along with a config file called **IzendaService.exe.config**. Here is how to configure the service-based scheduler:
+
+1. Open task manager
+2. Locate "IzendaService"
+3. The service should be running. Right click the service and select "Stop".
+4. Open the windows explorer
+5. Navigate to where the IzendaService scheduler is installed (by default C:/Program Files (x86)/IzendaService).
+6. Open IzendaService.exe.config in the text editor of your choice with administrator privileges.
+7. Edit the "url" setting to the location of your rs.aspx page with the "run_scheduled_reports=1" query string parameter.
+8. Edit the "interval" setting to the time in milliseconds that will elapse between calls to the URL specified.
+9. Save the config file with the modified settings.
+10. Go back to the task manager and restart the IzendaService.
+
+The service-based scheduler is now ready to run and will call the requested URL each time the interval elapses from the time the service was started.
+
+##Enabling scheduling controls in the application
+
 Next, we must allow the schedule controls to be shown in the Report Designer page. This can be done in one of two ways.
 
-**Via Settings.aspx**
+###Via Settings.aspx
 
 1. Navigate to the Izenda Reports settings.aspx page (e.g. http://yourhost/yourapp/settings.aspx)
 2. Click the "Email & Scheduling" tab
 3. Check the box next to "Show Schedule Controls"
 4. Click "Save to Izenda.Config" in the upper left-hand corner
 
-**Via Code**
+###Via Code
 
 1. Open your global.asax file in your IDE/favorite text editor
 2. Look for the [[InitializeReporting|/FAQ/InitializeReporting]] method
