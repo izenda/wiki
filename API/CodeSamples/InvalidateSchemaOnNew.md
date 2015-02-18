@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the value indicating whether database schema is invalidated when user creates new report.  If [[CacheSchema|http://wiki.izenda.us/create/API/CodeSamples/CacheSchema]] is set to true, InvalidateSchemaOnNew ensures that new reports (especially if you are using DatabaseAdHocConfig and/or any ReportSet overrides) will appear in the Report List immediately.  The DatabaseSchema object is cleared from cache **after** the report is saved.
+Gets or sets the value indicating whether database schema is invalidated when user creates new report.  If [[CacheSchema|http://wiki.izenda.us/create/API/CodeSamples/CacheSchema]] is set to true, InvalidateSchemaOnNew ensures that new reports (especially if you are using DatabaseAdHocConfig and/or any ReportSet overrides) will appear in the Report List immediately.  The DatabaseSchema object is cleared from cache as soon as the **New** button is selected.
 
 **Default Value:** False
 
