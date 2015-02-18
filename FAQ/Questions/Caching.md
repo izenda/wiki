@@ -8,7 +8,7 @@ What kinds of caching does Izenda use? Can I update the cache?
 
 ##Answer
 
-Izenda caches your reports and schema information automatically per browser session. By default, caching is stored in memory and in the temp folder of the server that Izenda is hosted on. Here is a list of the caching methods - and links to their individual articles - that are available in case you wish to manipulate the cache, although generally the cache will self-update as needed:
+Izenda caches your queries, reports and schema information automatically per browser session. By default, caching is stored in memory and in the temp folder of the server that Izenda is hosted on. Here is a list of the caching methods - and links to their individual articles - that are available in case you wish to manipulate the different caches, although generally the caches will self-update as needed:
 
 ###FilteredListReports
 
