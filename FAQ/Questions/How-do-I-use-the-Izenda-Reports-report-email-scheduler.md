@@ -31,16 +31,16 @@ Now that you have setup the scheduler, we will need to setup Izenda Reports. The
 
 Izenda now also offers the option of using a service-based scheduler. The msi installer is available upon request. After running the installer, there will be an executable in the directory you specified in the installer wizard along with a config file called **IzendaService.exe.config**. Here is how to configure the service-based scheduler:
 
-1. Open task manager
-2. Locate "IzendaService"
+1. Open **task manager**.
+2. Locate **IzendaService**.
 3. The service should be running. Right click the service and select "Stop".
-4. Open the windows explorer
-5. Navigate to where the IzendaService scheduler is installed (by default C:/Program Files (x86)/IzendaService).
-6. Open IzendaService.exe.config in the text editor of your choice with administrator privileges.
-7. Edit the "url" setting to the location of your rs.aspx page with the "run_scheduled_reports=1" query string parameter.
-8. Edit the "interval" setting to the time in milliseconds that will elapse between calls to the URL specified.
+4. Open the **Windows Explorer**.
+5. Navigate to where the **IzendaService** scheduler is installed (by default C:/Program Files (x86)/IzendaService).
+6. Open **IzendaService.exe.config** in the text editor of your choice with administrator privileges.
+7. Edit the **url** setting to the location of your rs.aspx page with the **run_scheduled_reports=1** query string parameter.
+8. Edit the **interval** setting to the time in milliseconds that will elapse between calls to the URL specified.
 9. Save the config file with the modified settings.
-10. Go back to the task manager and restart the IzendaService.
+10. Go back to the **task manager** and restart the **IzendaService**.
 
 The service-based scheduler is now ready to run and will call the requested URL each time the interval elapses from the time the service was started.
 
