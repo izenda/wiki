@@ -143,7 +143,7 @@ public static void InitializeReporting()
 ```
 ### Preventing URL Cross Scripting
 
-In order to make sure a URL doesn't allow JavaScript injection, you must make sure that in your web.config that a page element has the validateRequest attribute set to true as you see 
+In order to make sure a URL doesn't allow JavaScript injection, you must make sure that in your web.config that a page element has the **validateRequest** attribute set to true as you see 
 
 Request Validation Source: [MSDN Request Validation](http://msdn.microsoft.com/en-us/library/hh882339%28v=vs.110%29.aspx)
 Modified Webconfig Source: http://archives.izenda.us/ri/webforms-cs.zip
@@ -157,7 +157,7 @@ Modified Webconfig Source: http://archives.izenda.us/ri/webforms-cs.zip
     <!-- Needed on .NET 4.0
       <httpRuntime requestValidationMode="2.0" />
     -->
-    <pages **validateRequest="true"** enableEventValidation="false" viewStateEncryptionMode="Never" />
+    <pages validateRequest="true" enableEventValidation="false" viewStateEncryptionMode="Never" />
     <customErrors mode="Off">
       <error statusCode="403" redirect="NoAccess.htm" />
       <error statusCode="404" redirect="FileNotFound.htm" />
@@ -170,3 +170,7 @@ Modified Webconfig Source: http://archives.izenda.us/ri/webforms-cs.zip
     </staticContent>
   </system.webServer>
 ```
+
+###Determining user privileges
+
+Another consideration to take into account when setting up security with Izenda is to use a restricted database user account in your connection string. Every relational DBMS supported by Izenda uses some kind of database server security model, and we encourage our customers to take full advantage of that. Restricting access to create or delete tables, restricting which schemas are able to be viewed, and which stored procedures can be executed are important considerations in any instance where a new entry point is introduced to a secure or sensitive system.
