@@ -3,7 +3,7 @@
 
 # 6.8.0.5 (January 29, 2015)
 
-[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)
+**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
 
 * FB-15635: Fixed chart name position for pie charts
 * FB-15913: Fixed "Print HTML" and "HTML-powered PDF" for visualizations ("Auto Chart", "Sunburst", "Heatmap"). Fixed a bug of printing inconsistent data (Chart and Table).
@@ -44,7 +44,7 @@
 
 # 6.8.0.4 (January 8, 2015)
 
-[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)
+[**Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
 
 * FB-13507: Moved forms out of sessions, switched to new form designer, moved templates out of sessins, fixed issue with forms being modified concurrently
 * FB-13832: Fix of null reference exception for two different users with the same tenantid and optimize report list loading
@@ -85,7 +85,7 @@
 
 # 6.8.0.3 (December 17, 2014)
 
-[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)
+**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
 
 * FB-15865: Fixed bulk CSV output for reports with custom ProcessDataSet results
 * FB-17715: Probable fix of null reference exception
@@ -141,7 +141,7 @@
 
 # 6.8.0.2 (November 25, 2014)
 
-[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)
+**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
  
 * FB-10702: Language Pack GUI Updated
 * FB-13603: Disable VG automatically if report contain Form
@@ -217,7 +217,9 @@
 * HF-15686: Fixed adhoc failure when query caching is disabled
 
 # 6.8.0.1 (October 31, 2014)
-[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)
+
+**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
+
 ##Features: 
 * FB-13936: Pure HTML Report Parts
 * FB-14462: Responsive Grids - Refactored tables to diplay data responsively for smaller screens
