@@ -2,7 +2,7 @@
 
 [[_TOC_]]
 
-Gets or sets the array of names for tables and views that should be shown in the "Data Sources (Tables and Views)" dropdown in the ReportDesigner on the Data Sources tab. Setting any values in this list will completely override the normally constructed list of tables and views on a per-user basis.
+Gets or sets the array of names for tables and views that should be shown in the "Data Sources (Tables and Views)" dropdown in the ReportDesigner on the Data Sources tab. Setting any values in this list will completely override the normally constructed list of tables and views on a per-user basis. Additionally, any reports that use a datasource that is hidden from the current user will not be available for a user to access.
 
 ##Global.asax (C♯)
 ```csharp
