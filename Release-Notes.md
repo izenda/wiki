@@ -44,7 +44,7 @@
 
 # 6.8.0.4 (January 8, 2015)
 
-[**Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
+**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
 
 * FB-13507: Moved forms out of sessions, switched to new form designer, moved templates out of sessins, fixed issue with forms being modified concurrently
 * FB-13832: Fix of null reference exception for two different users with the same tenantid and optimize report list loading
