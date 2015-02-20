@@ -40,7 +40,7 @@ One of the advantages of file system mode is that it allows for custom saving be
 * [[SaveReportSet|/FAQ/SaveReportSet]]
 * [[DeleteReportSet|/FAQ/DeleteReportSet]]
 
-Each of these methods may be over-ridden in order to implement custom behavior. Please see the global.asax example and the Izenda Reports API for examples. To set the default reports folder path that Izenda Reports should use, you must first create a folder in the file system and then ensure that the *NETWORK SERVICE* machine account has read and write access (if using ASP.NET 2.0) or that the *ASP.NET* machine account has read and write access (if using ASP.NET 1.1). Once this is complete, we must now tell Izenda Reports which folder to use by setting the "ReportsPath" property as shown in the example.
+Each of these methods may be over-ridden in order to implement custom behavior. Please see the global.asax example and the Izenda Reports API for examples. To set the default reports folder path that Izenda Reports should use, you must first create a folder in the file system and then ensure that the *NETWORK SERVICE* machine account has read and write access (if using ASP.NET 2.0) or that the *ASP.NET* machine account has read and write access (if using ASP.NET 1.1). Once this is complete, we must now tell Izenda Reports which folder to use by setting the [[ReportsPath|/API/CodeSamples/ReportsPath]] property as shown in the example.
 
 ###Setting the Saved Reports Path
 
