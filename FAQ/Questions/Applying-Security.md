@@ -95,6 +95,8 @@ In order to adjust what column to block out with "- -" and the conditions in whi
 
 In this example, any value of freight that is below 50 will be replaced with "--".
 
+_**Note:** This method will not cause filters for the concealed field to read the concealed value instead of the actual value. Therefore, if you set a filter on freight = 50, then despite the value being concealed, it will still show up in the result set._
+
 ```csharp
 
 public class ConcealingFormatter : IFormatter
