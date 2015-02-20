@@ -6,19 +6,21 @@ Izenda Reports fully integrates with the security of existing ASP.NET applicatio
 
 Type of security|Example|Implementation Details
 ----------------|-------|----------------------
-[Login](#Login-Security) |Users must login before gaining access to reports.|[[RequireLogin]] <br> [[CurrentUserName]] <br> [[CurrentUserIsAdmin]] <br> [[Your Login Page Integration]]
-[Data Sources](#Data-Sources)|A specific user can only see certain data sources.|[[RequireLogin]] <br> [[Basic Report Sharing]] <br> [[VisibleDataSource]] <br> [[Database Security]]
-[User Driven Report Sharing](#User-Driven-Report-Sharing)|A user can save a report and decide if they want other users to see this report. They can also mark a report read-only meaning it can be viewed but not saved over.|[[Basic Report Sharing]] <br> [[CurrentUserIsAdmin]] <br> [[ReportsPath]] <br> [[Read-Only & Shared Checkboxes]]
-[Custom Report Control](#Custom-Report-Control)|Different departments can see different base reports.|[[VisibleDataSources hides reports for non-accessible datasources]] <br>[[ReportsList may be overridden]] <br>[[Storing Reports]]<br> [[ReportsPath]]
-[Overwriting and Deleting Reports](#Overwriting-and-Deleting-Reports)|Users can load shared or base reports, but should not be able to delete them or overwrite them.|[[AllowOverwritingReports]] <br>[[AllowDeletingReports]] <br>[[CurrentUserIsAdmin]]<br>
-[Altering Capabilities by Role](#Altering-Capabilities-by-Role)|Only power users should see the modify report button on the report viewer. Others will only access the report viewer.|[[ShowDesignLinks]] [[ShowModifyButton]]<br> [[AllowOverwritingReports]] [[ShowSettingsButton|/API/CodeSamples/ShowSettingsButton]]
-[Field/Record or Tenant Level Security](#Field/Record-or-Tenant-Level-Security)|Salespeople look at the same report but see different data based on their territory and credentials. In a multi-tenant environment, reports and data for each customer, group, or tenant should be isolated.|[[PreExecuteReportSet - Hidden Filters]] <br>[[ProcessEqualsSelectList]] <br>[[Field & Record Level Security]]
+[Login](#Login-Security) |Users must login before gaining access to reports.|[[RequireLogin|/API/CodeSamples/RequireLogin]] <br> [[CurrentUserName|/API/CodeSamples/CurrentUserName]] <br> [[CurrentUserIsAdmin|/API/CodeSamples/CurrentUserIsAdmin]] <br> [[Your Login Page Integration|/FAQ/integrate-login-page]] |
+[Data Sources](#Data-Sources)|A specific user can only see certain data sources.|[[RequireLogin|/API/CodeSamples/RequireLogin]] <br> [Basic Report Sharing](http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights) <br> [[VisibleDataSources|/API/CodeSamples/VisibleDataSources]] <br> [Database Security](http://wiki.izenda.us/Integration/Tutorials/connect-to-the-database#Per-user-database-connections) |
+[User Driven Report Sharing](#User-Driven-Report-Sharing)|A user can save a report and decide if they want other users to see this report. They can also mark a report read-only meaning it can be viewed but not saved over.|[Basic Report Sharing](http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights) <br> [[CurrentUserIsAdmin|/API/CodeSamples/CurrentUserIsAdmin]] <br> [[ReportsPath|/API/CodeSamples/ReportsPath]] |
+[Custom Report Control](#Custom-Report-Control)|Different departments can see different base reports.|[[VisibleDataSources hides reports for non-accessible datasources|/API/CodeSamples/VisibleDataSources]] <br>[[The ListReports method may be overridden|/FAQ/ListReports]] <br>[[Storing Reports|]]<br> [[ReportsPath|/API/CodeSamples/ReportsPath]] |
+[Overwriting and Deleting Reports](#Overwriting-and-Deleting-Reports)|Users can load shared or base reports, but should not be able to delete them or overwrite them.|[[AllowOverwritingReports|/API/CodeSamples/AllowOverwritingReports]] <br>[[AllowDeletingReports|/API/CodeSamples/AllowDeletingReports]] <br>[[CurrentUserIsAdmin|/API/CodeSamples/CurrentUserIsAdmin]]<br>
+[Altering Capabilities by Role](#Altering-Capabilities-by-Role)|Only power users should see the modify report button on the report viewer. Others will only access the report viewer.|[[ShowDesignLinks|/API/CodeSamples/ShowDesignLinks]] <br> [[AllowOverwritingReports|/API/CodeSamples/AllowOverwritingReports]] [[ShowSettingsButton|/API/CodeSamples/ShowSettingsButton]]
+[Field/Record or Tenant Level Security](#Field/Record-or-Tenant-Level-Security)|Salespeople look at the same report but see different data based on their territory and credentials. In a multi-tenant environment, reports and data for each customer, group, or tenant should be isolated.|[[PreExecuteReportSet - Hidden Filters|/FAQ/applying-hidden-filter-using-inner-query]] <br>[[ProcessEqualsSelectList|/FAQ/ProcessEqualsSelectList]] <br>[Field & Record Level Security](http://wiki.izenda.us/FAQ/Questions/Applying-Security#Field-Level-Access)
 
 ###Login Security
 
-To enable basic login security, add the following code to the ``InitializeReporting()`` method of your CustomAdHocConfig class. This is normally found in Global.asax file. The code should look up user credentials from your application, database or windows authentication and provide it to the Izenda Reports API. Furthermore, specifying your login page will ensure that users do not see reports without being logged in. If a login page is specified this way, you should ensure that ``InitializeReporting()`` is called again after the login process to ensure the user is properly authenticated. 
+Login security is fairly basic in Izenda to accommodate our customers' existing login processes. Logging into Izenda basically consists of four settings: [[CurrentUserName|/API/CodeSamples/CurrentUserName]], [[CurrentUserIsAdmin|/API/CodeSamples/CurrentUserIsAdmin]], [[CurrentUserRoles|/API/CodeSamples/CurrentUserRoles]], and [[CurrentUserTenantID|/API/CodeSamples/CurrentUserTenantID]] with the first one being the only one that is absolutely required to be considered logged in. However, it is good practice to set the user's admin status all the time. 
 
-```c#
+You can use the login page packaged with the starter kit or your own login page and login process to authenticate users who access the reporting tool. However you wish to get the user's information, Izenda can mold itself to your basic structure. A final consideration is that if a login page is specified this way, you should ensure that ``InitializeReporting()`` is called again AFTER the login process to ensure the user is properly authenticated. In the below example, **LookupUserName**, **LookupAdminRole**, and **GetTenantID** are used to represent methods that get the values associated with the various settings.
+
+```csharp
 public static void InitializeReporting()
 {  
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
@@ -29,7 +31,7 @@ public static void InitializeReporting()
 	AdHocSettings.CurrentUserRoles = new string[] {(string)HttpContext.Current.Session["Role"]};
         AdHocSettings.VisibleDataSources = new string[]  { "Products", "Orders", "Customers" }; 
         AdHocsettings.LoginPage = "YOUR_LOGIN_PAGE.aspx";
-        AdHocSettings.RequireLogin = true;
+        AdHocSettings.RequireLogin = true; //Require user to be directed to the login page when they have no username or the default username
 }
 ```
 
@@ -37,7 +39,7 @@ public static void InitializeReporting()
 
 The [[API|/API/AdHocSettings]] allows control over which data sources a user sees based on their [[credentials|/FAQ/How-user-credentials-are-applied]]. In the following example, members of the "Sales" role would see additional data sources that normal users would not. Any reports that utilize these data sources would only be visible to members of the sales role.
 
-```c#
+```csharp
  
     AdHocSettings.VisibleDataSources = new string[] {"Products"};         
     if(IsInRole("Sales"))  
@@ -49,21 +51,17 @@ The [[API|/API/AdHocSettings]] allows control over which data sources a user see
 
 The method will need to be called from your login process with the following line.
 
-```c#
+```csharp
 global_asax.CustomAdHocConfig.InitializeReporting();
 ```
 
 ###User Driven Report Sharing
 
-Once the login security is implemented, users can set the shared and read only status of a report. If a report is shared, other members of that tenant will be able to see it. If it is marked read-only, users will be able to load the report, but any modifications will need to be saved as a different report name. These limitations do not apply to users with admin rights enabled via CurrentUserIsAdmin.
-
-![Share and read only](http://wiki.izenda.us/Integration/Share-and-Read_only.png)
-
-**A screenshot of the Misc tab in the Report Designer showing the "Shared" & "Read Only" checkboxes that a user can select on a per report basis.**
+You can learn more about sharing reports and controlling accessibility [[here|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights]].
 
 ###Custom Report Control
 
-To apply additional constraints to which users see what reports, it is necessary to override the ListReports method. See Report Management for additional details.
+To apply additional constraints to which users see what reports, it is necessary to override the FilteredListReports method. This is a list of reports that are guaranteed to be available to the current user based on their roles or tenant ID. If you need additional checks to be performed, you can either call the base implementation and then apply any other parameters you require or simply leave out the base implementation and perform the checks yourself.
 
 ```csharp
 public override ReportInfo[] FilteredListReports() {
@@ -83,9 +81,9 @@ public override ReportInfo[] FilteredListReports() {
 
 ###Overwriting and Deleting Reports</a>
 
-The API allows control of deleting or modifying reports. Reports marked Read-Only can not be modified or deleted even if the settings below are enabled. 
+The API allows control of deleting or modifying reports. Reports marked Read-Only or locked can not be modified or deleted even if the settings below are enabled. 
 
-```c#
+```csharp
 	AdHocSettings.AllowOverwritingReports = true;           
 	AdHocSettings.AllowDeletingReports = true;
 ```
@@ -95,7 +93,7 @@ The API allows control of deleting or modifying reports. Reports marked Read-Onl
 The versatility of Izenda reports allows for all settings to be applied on a per-user basis. The only limit to the customization level of Izenda's settings is your relevant coding experience, since this does require basic knowledge of either VB.NET or C#. 
 The following code applies properties like the connection string, where reports are stored and visibility of the modify button modify button based on the user.
 
-```c#
+```csharp
 public static void InitializeReporting()
 {  
         //GetConnectionForUser, GetUserCompany, GetUserDepartment, GetUserRole, and GetTables are all user-defined methods in global.asax
@@ -121,7 +119,7 @@ public static void InitializeReporting()
 
 Many applications limit users to specific records based on their credentials. The HiddenFilters API Setting may be used to add hidden filters to reports which limit the results based on the user, their credentials and their tenant. In this example, anyone reporting on the AcmeWidgetSales view will be limited to data in their TerritoryID.
 
-```c# 
+```csharp
 public static void InitializeReporting()
 {
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
