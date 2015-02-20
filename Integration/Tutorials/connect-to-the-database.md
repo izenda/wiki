@@ -113,3 +113,40 @@ If you wish to test your connection string to ensure connectivity, you can perfo
 * Text will appear below the field describing either "SUCCESS" or "FAILURE". Failure lists the reason why it failed.
 
 ![](/Integration/Tutorials/connect-to-the-database/settings_aspx.png)
+
+##Per-user database connections
+
+If you wish to have different connections for different users, it can be accomplished easily in Izenda by simply setting up a conditional section in your InitializeReporting method to check whether your condition is true or not before setting the connection string. By default, this setting is initialized with each user who logs in or accesses the application. If you already have a login process in place with the conditions for each user's connection already worked out, then it is simply a matter of setting the connection string. Below is an example of a multi-conditional connection string. In the example, **WebServiceRequest** is a static interface to a web service that has a method called **GetCurrentApplicationUser** that returns an object of type **User**.
+
+**C♯ example**
+
+```csharp
+public static void InitializeReporting() {
+    //Check to see if we've already initialized.
+    if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+      return;
+    User myApplicationUser = WebServiceRequest.GetCurrentApplicationUser(); //your method for obtaining the authenticated user
+    AdHocSettings.CurrentUserName = myApplicationUser.UserName; //Set the CurrentUserName
+    if (myApplicationUser.IsAdministrator)
+      AdHocSettings.SqlConnectionString = WebServiceRequest.GetConnectionStringForAdmin(); //Set the connection string for an admin
+    else
+      AdHocSettings.SqlConnectionString = WebServiceRequest.GetConnectionStringForUser(); //Set the connection string for a regular user
+}    
+```
+
+**VB.NET example**
+
+```visualbasic
+Public Shared Sub InitializeReporting()
+    'Check to see if we've already initialized.
+    If HttpContext.Current.Session Is Nothing OrElse HttpContext.Current.Session("ReportingInitialized") IsNot Nothing Then
+      Return
+    Dim myApplicationUser As User = WebServiceRequest.GetCurrentApplicationUser() 'your method for obtaining the authenticated user
+    AdHocSettings.CurrentUserName = myApplicationUser.UserName 'Set the CurrentUserName
+    If myApplicationUser.IsAdministrator Then
+      AdHocSettings.SqlConnectionString = WebServiceRequest.GetConnectionStringForAdmin() 'Set the connection string for an admin
+    Else
+      AdHocSettings.SqlConnectionString = WebServiceRequest.GetConnectionStringForUser() 'Set the connection string for a regular user
+    End If
+End Sub
+```
