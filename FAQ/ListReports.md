@@ -53,8 +53,6 @@ In [[Database Mode|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]], yo
 ### [[FileSystemAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]]
 
 ```csharp
-/* BEGIN Filesystem Mode Code Sample */
-
 public override ReportInfo[] ListReports() {
   ArrayList reportNames = new ArrayList();
 
@@ -91,7 +89,25 @@ public override ReportInfo[] ListReports() {
       }//end foreach
     }//end if
   }//end if
+  string[] reportNamesArray = new string[reportNames.Count];
+  reportNames.CopyTo(reportNamesArray, 0);
+  return (ReportInfo[])reportNames.ToArray(typeof(ReportInfo));
 }//end method
+
+private static void GetAllXmlFiles(System.IO.DirectoryInfo dir, ArrayList files)
+{
+    try
+    {
+        files.AddRange(dir.GetFiles("*.xml"));
+        System.IO.DirectoryInfo[] subDirs = dir.GetDirectories();
+        foreach (System.IO.DirectoryInfo subDir in subDirs)
+            if (!subDir.Name.StartsWith("~"))
+                GetAllXmlFiles(subDir, files);
+    }
+    catch (UnauthorizedAccessException)
+    {
+    }
+}
 ```
 
 ##Sample VB.NET Methods
@@ -126,4 +142,60 @@ Public Class CustomAdHocConfig
         Return DirectCast(reportNames.ToArray(GetType(Izenda.AdHoc.ReportInfo)), Izenda.AdHoc.ReportInfo())
     End Sub
 End Class
+```
+
+###FileSystemAdHocConfig
+
+```visualbasic
+'BEGIN Filesystem Mode Code Sample
+
+Public Overrides Function ListReports() As ReportInfo()
+  Dim reportNames As New ArrayList()
+
+  If AdHocSettings.ReportsPath IsNot Nothing Then
+    Dim dir As DirectoryInfo = New DirectoryInfo(AdHocSettings.ReportsPath)
+    If dir.Exists Then
+      Dim dirName As String = Path.GetFullPath(dir.FullName)
+      Dim fileArray As New ArrayList()
+      GetAllXmlFiles(dir, fileArray)
+      Dim files As FileInfo() = (FileInfo[])fileArray.ToArray(typeof(FileInfo))
+      For Each file As FileInfo In files
+        If file.Extension = ".xml" Then
+          Try
+            Dim reader As StreamReader = file.OpenText()
+            reader.Close()
+          Catch e As Exception
+            Continue For
+          End Try
+          Dim readOnly As Boolean = False
+          Try
+            Dim writer As StreamWriter = file.AppendText()
+            writer.Close()
+          catch e As Exception
+            readOnly = True
+          End Try
+          Dim fileName As String = Path.GetFullPath(file.FullName)
+          Dim reportName As String = fileName.Substring(dirName.Length + CStr(IIf((dirName.EndsWith("\\"), 0, 1))))
+          reportName = StringHelper.TrimEnd(reportName, ".xml")
+          reportNames.Add(New ReportInfo(reportName, readOnly, file.CreationTime, _
+          file.LastWriteTime))
+        End If
+      Next
+    End If
+  End If
+  Dim reportNamesArray As New String(reportNames.Count)
+  reportNames.CopyTo(reportNamesArray, 0)
+  Return (ReportInfo[])reportNames.ToArray(typeof(ReportInfo))
+End Function
+
+Private Shared Sub GetAllXmlFiles(ByVal dir As System.IO.DirectoryInfo, ByVal files As ArrayList)
+    Try
+        files.AddRange(dir.GetFiles("*.xml"))
+        Dim subDirs As System.IO.DirectoryInfo[] = dir.GetDirectories()
+        For Each subDir As System.IO.DirectoryInfo In subDirs
+            If Not subDir.Name.StartsWith("~"))
+                GetAllXmlFiles(subDir, files)
+    Catch uae As UnauthorizedAccessException
+    End Try
+End Sub
 ```
