@@ -37,7 +37,6 @@ public override Izenda.AdHoc.ReportInfo[] ListReports() {
   if (command.Connection.State == System.Data.ConnectionState.Open)
     command.Connection.Close();
   return (Izenda.AdHoc.ReportInfo[])reportNames.ToArray(typeof(Izenda.AdHoc.ReportInfo));
-  /* END Database Mode Code Sample */
 }
 
 ```
@@ -145,8 +144,6 @@ End Class
 ###FileSystemAdHocConfig
 
 ```visualbasic
-'BEGIN Filesystem Mode Code Sample
-
 Public Overrides Function ListReports() As ReportInfo()
   Dim reports As New ArrayList()
 
