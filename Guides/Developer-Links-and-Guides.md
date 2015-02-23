@@ -4,7 +4,7 @@
 
 ##Helpful Links
 
-Here are two useful links to our downloads page, and a link to our installation guide.
+Here are two useful links to our downloads page and our installation guide.
 
  [Download Izenda Here](http://www.izenda.com/update-your-izenda-version/) | [Installation Guide](http://wiki.izenda.us/Guides/Installing-Izenda)
 
