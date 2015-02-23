@@ -54,7 +54,7 @@ In [[Database Mode|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]], yo
 
 ```csharp
 public override ReportInfo[] ListReports() {
-  ArrayList reportNames = new ArrayList();
+  ArrayList reports = new ArrayList();
 
   if (AdHocSettings.ReportsPath != null) {
     DirectoryInfo dir = new DirectoryInfo(AdHocSettings.ReportsPath);
@@ -83,15 +83,13 @@ public override ReportInfo[] ListReports() {
           string fileName = Path.GetFullPath(file.FullName);
           string reportName = fileName.Substring(dirName.Length + (dirName.EndsWith("\\") ? 0 : 1));
           reportName = StringHelper.TrimEnd(reportName, ".xml");
-          reportNames.Add(new ReportInfo(reportName, readOnly, file.CreationTime,
+          reports.Add(new ReportInfo(reportName, readOnly, file.CreationTime,
           file.LastWriteTime));
         }
       }//end foreach
     }//end if
   }//end if
-  string[] reportNamesArray = new string[reportNames.Count];
-  reportNames.CopyTo(reportNamesArray, 0);
-  return (ReportInfo[])reportNames.ToArray(typeof(ReportInfo));
+  return (ReportInfo[])reports.ToArray();
 }//end method
 
 private static void GetAllXmlFiles(System.IO.DirectoryInfo dir, ArrayList files)
@@ -150,7 +148,7 @@ End Class
 'BEGIN Filesystem Mode Code Sample
 
 Public Overrides Function ListReports() As ReportInfo()
-  Dim reportNames As New ArrayList()
+  Dim reports As New ArrayList()
 
   If AdHocSettings.ReportsPath IsNot Nothing Then
     Dim dir As DirectoryInfo = New DirectoryInfo(AdHocSettings.ReportsPath)
@@ -177,18 +175,16 @@ Public Overrides Function ListReports() As ReportInfo()
           Dim fileName As String = Path.GetFullPath(file.FullName)
           Dim reportName As String = fileName.Substring(dirName.Length + CStr(IIf((dirName.EndsWith("\\"), 0, 1))))
           reportName = StringHelper.TrimEnd(reportName, ".xml")
-          reportNames.Add(New ReportInfo(reportName, readOnly, file.CreationTime, _
+          reports.Add(New ReportInfo(reportName, readOnly, file.CreationTime, _
           file.LastWriteTime))
         End If
       Next
     End If
   End If
-  Dim reportNamesArray As New String(reportNames.Count)
-  reportNames.CopyTo(reportNamesArray, 0)
-  Return (ReportInfo[])reportNames.ToArray(typeof(ReportInfo))
+  Return DirectCast(reports.ToArray(), ReportInfo());
 End Function
 
-Private Shared Sub GetAllXmlFiles(ByVal dir As System.IO.DirectoryInfo, ByVal files As ArrayList)
+Private Shared Sub GetAllXmlFiles(ByVal dir As System.IO.DirectoryInfo, ByRef files As ArrayList)
     Try
         files.AddRange(dir.GetFiles("*.xml"))
         Dim subDirs As System.IO.DirectoryInfo[] = dir.GetDirectories()
