@@ -181,13 +181,13 @@ Public Overrides Function ListReports() As ReportInfo()
       Next
     End If
   End If
-  Return DirectCast(reports.ToArray(), ReportInfo());
+  Return DirectCast(reports.ToArray(), ReportInfo())
 End Function
 
 Private Shared Sub GetAllXmlFiles(ByVal dir As System.IO.DirectoryInfo, ByRef files As ArrayList)
     Try
         files.AddRange(dir.GetFiles("*.xml"))
-        Dim subDirs As System.IO.DirectoryInfo[] = dir.GetDirectories()
+        Dim subDirs As System.IO.DirectoryInfo() = dir.GetDirectories()
         For Each subDir As System.IO.DirectoryInfo In subDirs
             If Not subDir.Name.StartsWith("~"))
                 GetAllXmlFiles(subDir, files)
