@@ -22,7 +22,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     //Creates a connection to Microsoft SQL Server
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    AdHocSettings.CurrentUserName = (String)HttpContext.Current.Session["UserName"]; //The relevant settign
+    AdHocSettings.CurrentUserName = (String)HttpContext.Current.Session["UserName"]; //The relevant setting
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
