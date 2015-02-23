@@ -19,6 +19,8 @@ Columns:
 * Thumbnail: The serialized image data for the thumbnail saved for this report. This can be avoided when [[GenerateThumbnails|/API/CodeSamples/GenerateThumbnails]] is set to false.
 * Form: Contains the HTML definition of any form that is associated with the report.
 
+**Default Value:** IzendaAdHocReports
+
 ##Global.asax (C♯)
 
 ```csharp
