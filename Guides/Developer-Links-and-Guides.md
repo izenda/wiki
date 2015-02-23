@@ -4,9 +4,9 @@
 
 ##Helpful Links
 
-Here is a friendly set of links to videos, download pages and reference material for developer and end-user use.
+Here are two useful links to our downloads page, and a link to our installation guide.
 
-| [Download](http://www.izenda.com/update-your-izenda-version/) | [Install Guide](http://wiki.izenda.us/Guides/Installing-Izenda) |
+ [Download Izenda Here](http://www.izenda.com/update-your-izenda-version/) | [Installation Guide](http://wiki.izenda.us/Guides/Installing-Izenda)
 
 
 ##Developer Guides
