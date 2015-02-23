@@ -8,6 +8,8 @@ You could use this feature if you want to modify how users save reports. Normall
 
 **Note:** The report name will be automatically added to the url query string as a parameter named "rn". Therefore, your URL could look like ``www.yourdomain.com/CustomSave.aspx?rn=SavedReportName`` and you will be able to grab the report from the file system or database with the query string parameter.
 
+**Default Value:** String.Empty
+
 ##Global.asax (C♯)
 
 ```csharp
