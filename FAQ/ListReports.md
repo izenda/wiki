@@ -14,8 +14,6 @@ These examples are basic customized methods of obtaining a list of reports done 
 
 ```csharp
 public override Izenda.AdHoc.ReportInfo[] ListReports() {
-  /* BEGIN Database Mode Code Sample */
-
   ArrayList reportNames = new ArrayList();
   string sql = String.Format("SELECT Name, CreatedDate, ModifiedDate FROM {0} ORDER BY Name",
   AdHocSettings.SavedReportsTable);
@@ -84,7 +82,7 @@ public override ReportInfo[] ListReports() {
           reportName = StringHelper.TrimEnd(reportName, ".xml");
           reports.Add(new ReportInfo(reportName, readOnly, file.CreationTime,
           file.LastWriteTime));
-        }
+        }//end if
       }//end foreach
     }//end if
   }//end if
