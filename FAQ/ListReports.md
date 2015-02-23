@@ -156,7 +156,7 @@ Public Overrides Function ListReports() As ReportInfo()
       Dim dirName As String = Path.GetFullPath(dir.FullName)
       Dim fileArray As New ArrayList()
       GetAllXmlFiles(dir, fileArray)
-      Dim files As FileInfo() = (FileInfo[])fileArray.ToArray(typeof(FileInfo))
+      Dim files As FileInfo() = DirectCast(fileArray.ToArray(typeof(FileInfo)), FileInfo())
       For Each file As FileInfo In files
         If file.Extension = ".xml" Then
           Try
