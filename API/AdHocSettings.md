@@ -194,7 +194,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[OpenCustomUrlInNewWindow|/API/CodeSamples/OpenCustomUrlInNewWindow]]|Gets or sets the value indicating whether CustomUrl field links should open in a new window.|True|
 |Int32|[[OracleCommandTimeout|/API/CodeSamples/OracleCommandTimeout]]|Sets the time Izenda Reports will wait for an Oracle command to execute before timing out.|3600|
 |String|[[OracleConnectionString|/API/CodeSamples/OracleConnectionString]]|Gets or sets the connection string for Oracle.|String.Empty|
-|ReportOutputGeneratorCollection|[[OutputTypes|/API/CodeSamples/OutputTypes]]| Gets or sets the registered Izenda.AdHoc.ReportOutputGenerators. |{SQL, PDF, HTMLREPORT, <br>CSV, BULKCSV, XLS(MIME), <br>DOC, XML, JSON, <br>JSA}|
+|ReportOutputGeneratorCollection|[[OutputTypes|/FAQ/Formatting/How-do-I-hide-Output-Types]]| Gets or sets the registered Izenda.AdHoc.ReportOutputGenerators. |{SQL, PDF, HTMLREPORT, <br>CSV, BULKCSV, XLS(MIME), <br>DOC, XML, JSON, <br>JSA}|
 |String|[[ParentReportDesignerUrl|/API/CodeSamples/ParentReportDesignerUrl]]||String.Empty|
 |String|[[ParentReportListUrl|/API/CodeSamples/ParentReportListUrl]]||String.Empty|
 |String|[[ParentReportViewerUrl|/API/CodeSamples/ParentReportViewerUrl]]||String.Empty|
