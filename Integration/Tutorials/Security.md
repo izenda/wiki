@@ -117,7 +117,7 @@ public static void InitializeReporting()
 
 ###Field/Record Level Security
 
-Many applications limit users to specific records based on their credentials. The HiddenFilters API Setting may be used to add hidden filters to reports which limit the results based on the user, their credentials and their tenant. In this example, anyone reporting on the AcmeWidgetSales view will be limited to data in their TerritoryID.
+Many applications limit users to specific records based on their credentials. The HiddenFilters API Setting may be used to add hidden filters to reports which limit the results based on the user, their credentials and their tenant. In this example, non-administrators will have data they report on limited when the field **TerritoryID** is present in any of the tables the report is using. In this case, a function called **GetCurrentUserTerritory** returns the value that the hidden filter will use. This will be specific to the user being initialized and will not apply to other users. Therefore, each user will have data filtered according to his/her territory.
 
 ```csharp
 public static void InitializeReporting()
@@ -129,7 +129,7 @@ public static void InitializeReporting()
 	if (!Izenda.AdHoc.AdHocSettings.CurrentUserIsAdmin)  
 	{    
 		//needs to return an array of strings!    
-		string[] TerritoryID = GetCurrentUserTerritories(UserName);            
+		string[] TerritoryID = GetCurrentUserTerritory(UserName);            
 		//add the filters to the reports based on the tenancy of this user    
 		AdHocSettings.HiddenFilters["TerritoryID"] = TerritoryID; 
 			// or new string[] {"1","2","3","4"};
