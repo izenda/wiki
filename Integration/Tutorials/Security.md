@@ -81,7 +81,7 @@ public override ReportInfo[] FilteredListReports() {
 
 ###Overwriting and Deleting Reports</a>
 
-The API allows control of deleting or modifying reports. Reports marked Read-Only or locked can not be modified or deleted even if the settings below are enabled. 
+The API allows control of deleting or modifying reports. Reports marked Read-Only or locked can not be modified even if users can overwrite and delete reports. Additionally, locked reports can only be deleted by the owner and not modified.
 
 ```csharp
 	AdHocSettings.AllowOverwritingReports = true;           
