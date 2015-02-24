@@ -134,8 +134,8 @@ public static void InitializeReporting()
 		AdHocSettings.HiddenFilters["TerritoryID"] = TerritoryID; 
 			// or new string[] {"1","2","3","4"};
 		
-		AdHocSettings.ShowModifyButton=false; //set regular permissions
-		AdHocSettings.AllowDeletingReports=false; 
+		AdHocSettings.ShowSettingsButton = false; 
+		AdHocSettings.AllowDeletingReports = false; 
 	}
 }
 ```
