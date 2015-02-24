@@ -109,8 +109,8 @@ public static void InitializeReporting()
 	AdHocSettings.VisibleDataSources = GetTables(AdHocSettings.CurrentUserRoles);
 	if (AdHocSettings.CurrentUserRoles.Contains("PowerUser"))  //User level security
 	{    
-		AdHocSettings.ShowModifyButton=true;    
-		AdHocSettings.AllowDeletingReports=false;      
+		AdHocSettings.ShowSettingsButton = true;    
+		AdHocSettings.AllowDeletingReports = false;      
 	}
 }
 ```
