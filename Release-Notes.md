@@ -7,12 +7,15 @@
 
 * FB-13156: Show friendly error when Analysis Grid report is designed incorrectly
 * FB-13980: Fixed formatting values for: Matrix, Waterfall, Time Bubble, World Tour, Combo, Tree and Autochart Visualizations. Fixed displaying "Others" and percent values in Autochart.
+* FB-14319: Grammatical issue was fixed "does" not "do"
+* FB-14067: Fix common filters in Dashboards when there are several filters on the same column and with the same Operator.
 * FB-14744: Fixed Appearance tab on Settings page.
 * FB-14779: Fixed correct rendering of visualization in small containers. Hide breadcrumbs if the content overflows an element's container.
 * FB-15238: Fixed behavior of Pie and Funnel chart types.
 * FB-15790: Implement Filters on the Instant Report page
 * FB-16415: ReportDesigner fixed to handle browser width while piechart generates
 * FB-17549: Fixed bulkcsv export crash when pivots are used
+* FB-17669: Added possibility to post-process highcharts labels
 * FB-17790: Expand analysis grid groups in Scheduler output
 * FB-17821: Fixed missing of FusionConnection.getDataSetUrl value in new session
 * FB-17852: Scheduler - Include category in the Report link
@@ -27,6 +30,7 @@
 * FB-18091: Properly select reports from DB when name contains special symbols or spaces
 * FB-18100: Respect UseBulkCSV setting in scheduled output. Fixed subtotals in Bulk CSV export when filters are used
 * FB-18117: Apply new color scheme to the Filters, Field Properties and Instant Report page elements
+* FB-18132 Fixed waterfall/html-charts component updated
 * FB-18144: Fix :hover behavior in Report List on touch interfaces. Use link controls on the ReportList page.
 * FB-18155: Simplified instant reports UI related to totals/subtotals. Disabled applying SUM subtotal function on IR page.
 * FB-18175: Reconciliation of changes in 15602 with 18175
@@ -34,6 +38,7 @@
 * FB-18251: Fixed datetime formatting when exporting to excel
 * FB-18276: Or issue in hidden filters fixed
 * FB-18336: Optimize ReportSet objects writing. Do not include GUIDs of the hidden filters. Do not use auto-generated IDs when calculating ReportSet cache key
+* FB-18344: Fixed stack overflow when loading reports from DB (issue introduced in FB-16086)
 * FB-18352: Added codemagic as the new source editor for forms. Added z-index property to pop up box.
 * FB-18356: Fixed issue where a user with full access is unable to move from the fields tab and no user is able to view the report thereafter.
 * FB-18381: Fixed infinite recursion when updating report in reportviewer
