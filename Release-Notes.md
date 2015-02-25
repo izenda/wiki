@@ -1,6 +1,49 @@
 [[_TOC_]]
 
 
+# 6.8.0.6 (February 25, 2015)
+
+**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
+
+* FB-13156: Show friendly error when Analysis Grid report is designed incorrectly
+* FB-13980: Fixed formatting values for: Matrix, Waterfall, Time Bubble, World Tour, Combo, Tree and Autochart Visualizations. Fixed displaying "Others" and percent values in Autochart.
+* FB-14744: Fixed Appearance tab on Settings page.
+* FB-14779: Fixed correct rendering of visualization in small containers. Hide breadcrumbs if the content overflows an element's container.
+* FB-15238: Fixed behavior of Pie and Funnel chart types.
+* FB-15790: Implement Filters on the Instant Report page
+* FB-16415: ReportDesigner fixed to handle browser width while piechart generates
+* FB-17549: Fixed bulkcsv export crash when pivots are used
+* FB-17790: Expand analysis grid groups in Scheduler output
+* FB-17821: Fixed missing of FusionConnection.getDataSetUrl value in new session
+* FB-17852: Scheduler - Include category in the Report link
+* FB-17869: Added support for DB Mode in PostGreSQL and Amazon Red Shift
+* FB-17901: Implemented Loader... until print window is closed. Fixed multiple html-prints in ReportDesigner
+* FB-17918: Implemented possibility to export reports without redirection. Changed name of setting.
+* FB-17935: Made FORMSCRIPT and VISUALISATION Forms smart-tags case-insensitive
+* FB-17948: Re-implemented AddAll and RemoveAll on fields tab
+* FB-17961: Fixed issue with scheduler where clients were getting multiple copies of the same email
+* FB-17981: Fixed indicators in dundas map
+* FB-18008: Finished changes to wrap labels on horizontal bar chart
+* FB-18091: Properly select reports from DB when name contains special symbols or spaces
+* FB-18100: Respect UseBulkCSV setting in scheduled output. Fixed subtotals in Bulk CSV export when filters are used
+* FB-18117: Apply new color scheme to the Filters, Field Properties and Instant Report page elements
+* FB-18144: Fix :hover behavior in Report List on touch interfaces. Use link controls on the ReportList page.
+* FB-18155: Simplified instant reports UI related to totals/subtotals. Disabled applying SUM subtotal function on IR page.
+* FB-18175: Reconciliation of changes in 15602 with 18175
+* FB-18175: Optimization of first reportlist loading
+* FB-18251: Fixed datetime formatting when exporting to excel
+* FB-18276: Or issue in hidden filters fixed
+* FB-18336: Optimize ReportSet objects writing. Do not include GUIDs of the hidden filters. Do not use auto-generated IDs when calculating ReportSet cache key
+* FB-18352: Added codemagic as the new source editor for forms. Added z-index property to pop up box.
+* FB-18356: Fixed issue where a user with full access is unable to move from the fields tab and no user is able to view the report thereafter.
+* FB-18381: Fixed infinite recursion when updating report in reportviewer
+* FB-18419: Prevent recursion call of GetDataSet method when CurrentReportSet is not initialized
+* FB-18439: Populate columns for data sources when VisibleDataSources collection is changed
+* FB-18470: Fixed Virtual Data Sources column names generating
+* FB-18528: Altered ToolbarBackgroundImageUrl's default value to be empty
+* FB-18605: Allow only fields from the Details to be used for the new Filters in the Viewer
+
+
 # 6.8.0.5 (January 29, 2015)
 
 **[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
