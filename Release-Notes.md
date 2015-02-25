@@ -40,6 +40,7 @@
 * FB-18336: Optimize ReportSet objects writing. Do not include GUIDs of the hidden filters. Do not use auto-generated IDs when calculating ReportSet cache key
 * FB-18344: Fixed stack overflow when loading reports from DB (issue introduced in FB-16086)
 * FB-18352: Added codemagic as the new source editor for forms. Added z-index property to pop up box.
+* FB-18357: Forms popup hidden behind main navigation bar
 * FB-18356: Fixed issue where a user with full access is unable to move from the fields tab and no user is able to view the report thereafter.
 * FB-18381: Fixed infinite recursion when updating report in reportviewer
 * FB-18419: Prevent recursion call of GetDataSet method when CurrentReportSet is not initialized
