@@ -3,10 +3,10 @@
 
 # 6.8.0.6 (February 25, 2015)
 
-**Important Known Issue for 6.8.0.6 Predefined Constraints Not Being Recognized Hot Fix In Process**
 
 **[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
 
+* **HF-18699: Predefined Constraints Not Being Recognized - Download links updated 2/26/2015**
 * FB-13156: Show friendly error when Analysis Grid report is designed incorrectly
 * FB-13980: Fixed formatting values for: Matrix, Waterfall, Time Bubble, World Tour, Combo, Tree and Autochart Visualizations. Fixed displaying "Others" and percent values in Autochart.
 * FB-14319: Grammatical issue was fixed "does" not "do"
