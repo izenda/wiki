@@ -6,7 +6,7 @@
 
 Gets or sets the value enabling the Settings button on the Izenda Reports toolbar. The settings button launches the settings page, which allows for a GUI-oriented interface for modifying various common settings. However, we highly recommend using the ``InitializeReporting()`` method to perform your initialization.
 
-_**Note:** This setting replaced [[ShowAdminButton|/API/CodeSamples/ShowAdminButton]] and should be used instead.
+**Default Value:** True
 
 ##Global.asax (C♯)
 
