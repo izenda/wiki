@@ -52,10 +52,10 @@ All training materials are available on the Izenda Reports site at no charge. Th
 ##Platform
 
 - [[What browsers does Izenda Reports support?|http://wiki.izenda.us/FAQ/Platform/What-browsers-does-Izenda-Reports-Support]]
-- [[Where can I find information about the company?|http://www.izenda.com/Site/Pages/About.aspx]]
-- [[What do other customers say about Izenda?|http://www.izenda.com/Site/Pages/CaseStudies.aspx]]
-- [[What product features does Izenda offer?|http://www.izenda.com/site/pages/reports.aspx]]
-- [[What benefits does Izenda offer?|http://www.izenda.com/Site/Pages/LandingPages/Ad-Hoc-Reporting.aspx]]
+- [[Where can I find information about the company?|http://www.izenda.com/company/]]
+- [[What do other customers say about Izenda?|http://www.izenda.com/case-studies/]]
+- [[What product features does Izenda offer?|http://www.izenda.com/products/]]
+- [[What benefits does Izenda offer?|http://www.izenda.com/why-choose-izenda]]
 - [[How does Izenda perform on large databases?|http://wiki.izenda.us/FAQ/Performance]]
 - [[How do I use ReportParts?|/FAQ/Questions/Using ReportParts]]
 
