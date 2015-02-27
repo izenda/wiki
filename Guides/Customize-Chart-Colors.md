@@ -24,4 +24,4 @@ The following code snippet should be added to the default.master page in a webfo
 
 This would achieve the color scheme from the example image above. 
 
-As a caveat, you will need a recent copy of the Izenda core product. This ability was added in 6.7.0.264, and can be downloaded [[here|http://www.izenda.com/Site/Pages/Download.aspx]]
+As a caveat, you will need a recent copy of the Izenda core product. This ability was added in 6.7.0.264, and can be downloaded [[here|http://www.izenda.com/update-your-izenda-version/]]
