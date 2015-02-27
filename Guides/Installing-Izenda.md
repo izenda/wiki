@@ -10,7 +10,7 @@ This guide is designed to instruct first-time users how to download, extract, an
 
 Installation requires a license key. To get a new trial key, you may contact [sales@izenda.com](mailto:sales@izenda.com). Or you may try our [[free demo|http://www.izenda.com/demo-it-yourself/]]. 
 
-By downloading software of Izenda LLC, you agree to the [End User License Agreement](http://www.izenda.com/site/downloads/izendaeula.pdf). If you do not agree with such terms and conditions, do not download the software.
+By downloading software of Izenda LLC, you agree to the [End User License Agreement](http://www.izenda.com/wp-content/uploads/2014/10/IzendaSoftwareLicenseAgreement.pdf). If you do not agree with such terms and conditions, do not download the software.
 
 To start using Izenda Reports Starter Kit you should take a few simple steps. If you need more information about setup process, configuring reports, additional features or special cases please visit our [Knowledge Base](http://www.izenda.com/Site/KB/Integration/94).
 
