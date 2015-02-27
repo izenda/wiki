@@ -8,7 +8,7 @@ How do I update Izenda to a new release?
 
 ##Answer
 
-To update Izenda to a new release, you first need to visit our [[download page|http://www.izenda.com/Site/Pages/download.aspx]] and download the zip file. Once that is done, there are just a couple of steps to perform.
+To update Izenda to a new release, you first need to visit our [[download page|http://www.izenda.com/update-your-izenda-version/]] and download the zip file. Once that is done, there are just a couple of steps to perform.
 
 ###Step 1 Updating the binary files
 
