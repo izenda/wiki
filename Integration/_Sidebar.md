@@ -16,7 +16,7 @@
 * [Live Demo](http://demo2.izenda.us/bi/ReportListIntro.aspx)
 * [Gallery](http://www.izenda.com/izenda-vision/)
 * [Client List](http://www.izenda.com/case-studies/)
-* [Contact Page](http://www.izenda.com/site/Pages/contact-us/)
+* [Contact Page](http://www.izenda.com/contact-us/)
 * [Knowledge Base](http://www.izenda.com/Site/KB/Integration/94)
 
 ---
