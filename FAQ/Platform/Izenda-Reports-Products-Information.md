@@ -2,4 +2,4 @@
 
 For more information about our products and product details, click here:
 
-[Products](http://www.izenda.com/site/pages/products.aspx)
+[Products](http://www.izenda.com/products)
