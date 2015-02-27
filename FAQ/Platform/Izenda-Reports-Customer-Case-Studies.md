@@ -2,4 +2,4 @@
 
 For customer case studies, click here:
 
-[Case Studies](http://www.izenda.com/Site/Pages/CaseStudies.aspx)
+[Case Studies](http://www.izenda.com/case-studies/)
