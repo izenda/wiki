@@ -55,7 +55,7 @@ GROUP BY DATEPART(year, [dbo].[Invoices].[OrderDate]), DATEPART(month, [dbo].[In
 ORDER BY DATEPART(year, [dbo].[Invoices].[OrderDate]) ASC;
 ```
 
-##Modifying An Existing Time Period
+###Modifying An Existing Time Period
 
 You may at any time modify your existing set of custom time periods. You cannot, however, modify built-in time periods this way.
 
