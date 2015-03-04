@@ -2,7 +2,13 @@
 
 [[_TOC_]]
 
-##Adding Custom TimePeriods
+##Question
+
+How can I add a new time period to the list of time period filter options?
+
+##Answer
+
+You can use our [[CustomTimePeriods|/API/CodeSamples/CustomTimePeriods]] setting to dynamically add time periods with a **StartDate** and a **TimePeriod**.
 
 Here is an example of how to add custom time spans to the filters. Apply this code within [[InitializeReporting()|/FAQ/InitializeReporting]] in your Global.asax.
 
@@ -15,7 +21,7 @@ if (!AdHocSettings.CustomTimePeriods.ContainsKey("Lunar Cycle")) {
 }
 ```
 
-Since we didn't specify a **StartDate**, Izenda will assume the server's current time as the **StartDate** of the time period. If we run a report with an **in time period** filter on OrderDate that used **lunar cycle** as its time period on March 4, 2015 at 3:46:58 PM, the query results of this would like similar to the below SQL:
+Since we didn't specify a **StartDate**, Izenda will assume the server's current date and time as the **StartDate** of the time period. If we run a report with an **in time period** filter on OrderDate that used **lunar cycle** as its time period on March 4, 2015 at 3:46:58 PM, the query results of this would like similar to the below SQL:
 
 ```sql
 SELECT TOP 100000  
@@ -57,13 +63,3 @@ You may at any time modify your existing set of custom time periods. You cannot,
       CustomTimePeriod ctp = AdHocSettings.CustomTimePeriods["Lunar Cycle"];
       ctp.StartDate = DateTime.Now + ctp.Period; //passed by reference so the original list will update
 ```
-
-##Screenshots
-
-###Report Designer
-
-![](/FAQ/Questions/Adding-Custom-Time-Periods/custom_in_time_period.png)
-
-###Report Viewer
-
-![](/FAQ/Questions/Adding-Custom-Time-Periods/custom_in_time_period_viewer.png)
