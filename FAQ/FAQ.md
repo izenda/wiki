@@ -33,6 +33,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Can I define my own grouping and aggregate functions in Izenda? If so, how?|http://wiki.izenda.us/FAQ/Questions/Custom-Aggregate-Functions]]
 - [[How can I set up auditing so that whenever a user accesses or exports report data, an audit is performed?|http://wiki.izenda.us/FAQ/Questions/Auditing-When-Accessing-Reports]]
 - [[How can I export columns that are normally hidden?|http://wiki.izenda.us/FAQ/Questions/exporting-hidden-columns]]
+- [[How can I add a new time period to the list of time period filter options?|/FAQ/Questions/Adding-Custom-Time-Periods]]
 
 ##Database
 
