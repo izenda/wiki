@@ -47,3 +47,13 @@ Public Class CustomAdHocConfig
     End Sub
 End Class
 ```
+
+##Screenshots
+
+###Report Designer
+
+![](/FAQ/Questions/Adding-Custom-Time-Periods/custom_in_time_period.png)
+
+###Report Viewer
+
+![](/FAQ/Questions/Adding-Custom-Time-Periods/custom_in_time_period_viewer.png)
