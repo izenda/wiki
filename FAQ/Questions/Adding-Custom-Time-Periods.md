@@ -21,7 +21,7 @@ if (!AdHocSettings.CustomTimePeriods.ContainsKey("Lunar Cycle")) {
 }
 ```
 
-Since we didn't specify a **StartDate**, Izenda will assume the server's current date and time as the **StartDate** of the time period. If we run a report with an **in time period** filter on OrderDate that used **lunar cycle** as its time period on March 4, 2015 at 3:46:58 PM, the query results of this would like similar to the below SQL:
+Since we didn't specify a **StartDate**, Izenda will assume the server's current date and time as the **StartDate** of the time period. If we run a report with an **in time period** filter on OrderDate that used **lunar cycle** as its time period on March 4, 2015 at 3:46:58 PM, the query results of this would look similar to the below SQL:
 
 ```sql
 SELECT TOP 100000  
