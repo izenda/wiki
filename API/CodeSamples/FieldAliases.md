@@ -61,4 +61,4 @@ AdHocSettings.FieldAliases.Add("[dbo].[Orders].[ShipCity]", "DepartureCity")
 
 ###Screenshots
 
-![](/API/CodeSamples/FieldAliasesfield_alias_qualified.png)
+![](/API/CodeSamples/FieldAliases/field_alias_qualified.png)
