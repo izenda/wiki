@@ -99,8 +99,6 @@ Now you are ready to start taking advantage of the opportunities in Izenda’s s
 Select your DataSources at the [[Data Sources|http://wiki.izenda.us/Guides/ReportDesign/3.0-Data-sources-tab]] tab. Then go to the [[Fields|http://wiki.izenda.us/Guides/ReportDesign/4.0-fields-tab]] tab and select the fields you want to use in the report. There are various options and settings like filters, operators, functions etc. Make sure to check it all out, but for your first report just selecting several fields will be enough.
 
 
-For more information about the report designer features please read our [[user guide|FAQ/UserGuides]]
-
 	
 ![Using Izenda Reports](http://kb.izenda.com/Reg/images/src5_designnew.png)
 
