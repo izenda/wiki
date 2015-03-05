@@ -109,7 +109,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How to disable Protected Mode in Office 2010|FAQ/disable-protected-mode-office-2010]]
 - [[How to update your legacy deployment to be compatible with Izenda 6.7.0.272+|/FAQ/UpdatingReportDesigner-for-Izenda-6.7.0.272]]
 
-##Upgrading to 6.8.0.1 +
+##Upgrading Izenda
 - [[What's new in the 6.8.0.1 + Reference Implementation?|http://wiki.izenda.us/Whats-new-in-the-6-dot-8-0-dot-1-Reference-Implementation]]
 - [[How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL]]
 - [[Izenda-Update-Best-Practices]]
