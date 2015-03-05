@@ -50,3 +50,15 @@ Public Class CustomAdHocConfig
     End Sub
 End Class
 ```
+
+##Fully-qualified column names
+
+You can use fully-qualified column names to allow columns from different tables and schemas with the same name to be aliased differently if you so desire. To do that, simply use bracket notation to specify the schema and table:
+
+```csharp
+AdHocSettings.FieldAliases.Add("[dbo].[Orders].[ShipCity]", "DepartureCity")
+```
+
+###Screenshots
+
+![](/API/CodeSamples/FieldAliasesfield_alias_qualified.png)
