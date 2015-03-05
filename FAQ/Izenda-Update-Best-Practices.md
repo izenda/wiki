@@ -1,6 +1,6 @@
 ##When you update Izenda, you should perform a few steps:
 
-###If you are upgrading within a point release using a 'Maintenance Package'(Ex: 6.8.0.1-> 6.8.0.3)
+###If you are upgrading within a point release using a 'Maintenance Package' (Ex: 6.8.0.1-> 6.8.0.3)
 
 1) Preserve any customized files in /Resources - This is typically CSS, but could be HTML or JS.
 
