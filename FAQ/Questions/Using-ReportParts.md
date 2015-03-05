@@ -86,7 +86,7 @@ In ASPX:
 <body> 
   <form id="form1" runat="server">  
     <div>  
-      <cc1:ReportPart id=ReportPartID1 runat="server" Report="ord" Part="Chart" ResourcesInclusion="Embedded" CombineScripts="true"/>
+      <cc1:ReportPart id=ReportPartID1 runat="server" Report="ord" Part="Chart" ResourcesInclusion="Embedded" CombineScripts="true" ResponseServerPath="../rs.aspx"/>
     </div>
   </form>
 </body>
@@ -96,7 +96,7 @@ Pure HTML:
 
 ```html
 <body>
-  <div class="report-part" data-report="Sales" data-part="chart" data-embedscripts="true"></div>
+  <div class="report-part" data-report="Sales" data-part="chart" data-responseserverpath="../rs.aspx"></div>
 </body>
 ```
 
