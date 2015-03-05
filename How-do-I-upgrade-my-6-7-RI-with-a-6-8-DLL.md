@@ -14,9 +14,9 @@ Do to the number of changes in the Reference Implementation, some extra precauti
 
 2) Download an Izenda 'Full Download' that includes all files and pages.
 
-3) Launch this 'vanilla' installation with only license key. Should be sent to settings page to ask for a connection string.
+3) Launch this 'vanilla' installation with only license key. You should be sent to the settings.aspx page to ask for a connection string.
 
-4) Compare customized files from Step #1 to new updated files and merge over your customizations to new files, starting with the global.asax and connection info (if contained somewhere besides the global). Move over customizations one at a time, testing each.
+4) Compare customized files from Step #1 to new updated files and merge over your customizations to the new files, starting with the global.asax and connection info (if contained somewhere besides the global). Move over customizations one at a time, testing each.
 
 Full Download links can be found here- |http://www.izenda.com/update-your-izenda-version/ .  
 
@@ -31,4 +31,7 @@ As mentioned in step 1) the suggested solution to this is to keep your existing 
 You will notice the [changes](http://wiki.izenda.us/Whats-new-in-the-6-dot-8-0-dot-1-Reference-Implementation) to the Reference Implementation includes slight modification to the Default.master page of Izenda.  The big difference is the rearrangement of the dependency chain.  It is optimized to better receive custom code changes to the main.css and main.js.  It also has paths to the new minified versions of the css files, *.min.css.  Though Izenda will still function properly with the previous Default.master, it is suggested that these changes be made to optimize the product.  You can find the new file for the Reference Implementation here- |https://github.com/izenda/reference-implementations/blob/webforms-cs/Default.master .  
 
 ###Important note for 6.8.0.4+
-In an out-of-the-box Reference Implementation of 6.8.0.4+, you will notice that there is no Forms folder.  Customers who utilize our Forms add-on will now find the form resources in Resources/tinymce.  In 6.8.0.4+, there is no need for the Forms folder anymore.  In fact, you may get build errors if it is left in when upgrading to 6.8.0.4+.  
+In an out-of-the-box Reference Implementation of 6.8.0.4+, you will notice that there is no Forms folder.  Customers who utilize our Forms add-on will now find the form resources in Resources/tinymce.  In 6.8.0.4+, there is no need for the Forms folder anymore.  In fact, you may get build errors if it is left in when upgrading to 6.8.0.4+.
+
+_See Also:_ 
+[[Izenda-Update-Best-Practices]] 
