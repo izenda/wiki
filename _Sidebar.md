@@ -13,7 +13,7 @@
 * <a href="http://www.izenda.com" rel="nofollow" target="_blank">Izenda Website</a>
 * [Product Video](https://www.youtube.com/watch?v=1LlHesMCmYs)
 * <a href="http://www.izenda.com/blog" rel="nofollow" target="_blank">Izenda Blog</a>
-* [Company Page](http://www.izenda.com/about/)
+*<a href="http://www.izenda.com/about/" rel="nofollow" target="_blank">Company Page</a>
 * [Live Demo](http://izenda.com/bi/ReportList.aspx )
 * [Example Dashboard](http://izenda.com/bi/Dashboards.aspx?rn=Dashboard)
 * <a href="http://www.izenda.com/izenda-vision/" rel="nofollow" target="_blank">Gallery</a>
