@@ -17,9 +17,9 @@
 
 2) Download an Izenda 'Full Download' that includes all files and pages.
 
-3) Launch this 'vanilla' installation with only license key. Should be sent to settings page to ask for a connection string.
+3) Launch this 'vanilla' installation with only license key. You should be sent to the settings.aspx page to ask for a connection string.
 
-4) Compare customized files from Step #1 to new updated files and merge over your customizations to new files, starting with the global.asax and connection info (if contained somewhere besides the global). Move over customizations one at a time, testing each.
+4) Compare customized files from Step #1 to new updated files and merge over your customizations to the new files, starting with the global.asax and connection info (if contained somewhere besides the global). Move over customizations one at a time, testing each.
 
 _See Also:_
 [[How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL]]
