@@ -8,7 +8,7 @@ This guide is designed to instruct first-time users how to download, extract, an
 
 ##Instructions
 
-Installation requires a license key. To get a new trial key, you may contact [sales@izenda.com](mailto:sales@izenda.com). Or you may try our [[free demo|http://www.izenda.com/demo-it-yourself/]]. 
+Installation requires a license key. To get a new trial key, you may contact [sales@izenda.com](mailto:sales@izenda.com). Or you may try our <a href="http://www.izenda.com/demo-it-yourself/" rel="nofollow" target="_blank">free demo</a>. 
 
 By downloading software of Izenda LLC, you agree to the [End User License Agreement](http://www.izenda.com/wp-content/uploads/2014/10/IzendaSoftwareLicenseAgreement.pdf). If you do not agree with such terms and conditions, do not download the software.
 
