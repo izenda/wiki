@@ -10,6 +10,7 @@ More information regarding information leakage can be found at:  https://www.owa
 
 Adding the below code to the rs.aspx page will help you control what a user is able to see. The “Prohibited” quotes is where you put the literal information displayed to the end user. 
 
+##Global.asax (C♯)
 '''<script runat="server">
 private bool SystemInfoPresents(ControlCollection controls)
   {
