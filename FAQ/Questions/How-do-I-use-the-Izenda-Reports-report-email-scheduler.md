@@ -147,7 +147,7 @@ public partial class SchedulerPage : System.Web.UI.Page
 ```
 
 How to use:
-* Create a report and schedule it. In this case we need to save to the folder -- so instead of emails specify folders in which to save your report.
+* Create a report and schedule it. In this case, we need to save to a folder -- so instead of an email recipient, specify the folder in which to save your report.
 * Open the SchedulerPage.aspx page in the browser.
 
 
