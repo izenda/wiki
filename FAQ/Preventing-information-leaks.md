@@ -13,6 +13,7 @@ Adding the below code to the rs.aspx page will help you control what a user is a
 ##rs.aspx (C♯)
 ```csharp
 <script runat="server">
+
 private bool SystemInfoPresents(ControlCollection controls)
   {
     foreach (Control c in controls)
@@ -33,5 +34,6 @@ private bool SystemInfoPresents(ControlCollection controls)
         Controls.Add(new LiteralControl("Prohibited"));
     }
   }
-  </script>
+
+</script>
 ```
