@@ -119,7 +119,7 @@ To test this, go back to a report you wish to schedule and click on it. Click th
 
 Scheduled reports only supports per-user security using the Link format.  Scheduled attachments will not apply hidden filters normally, but you can apply security through [[PreExecuteReportSet()|/FAQ/PreExecuteReportSet]] based on the security of the report owner.  If per-user security is required, the Link format will require the user to login before seeing the report.
 
-##Saving to Reports to Disk
+##Saving Reports to Disk
 
 The Scheduler can be used to save reports to disk, if desired.
 
@@ -130,8 +130,7 @@ Here are some basic instructions for setting up this functionality with the Sche
 
 From your root, create your SchedulerPage.aspx with code behind, as such:
 
-csharp'''
-
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Web;
@@ -145,7 +144,7 @@ public partial class SchedulerPage : System.Web.UI.Page
         FileScheduler.RunScheduledReports(Response.Output, DateTime.Now);
     }
 }
-'''
+```
 
 How to use:
 * Create a report and schedule it. In this case we need to save to the folder -- so instead of emails specify folders in which to save your report.
