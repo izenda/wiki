@@ -125,8 +125,8 @@ The Scheduler can be used to save reports to disk, if desired.
 
 Here are some basic instructions for setting up this functionality with the Scheduler.
 
-*Add your FileScheduler.cs -> \App_Code\
-*SchedulerPage.aspx, SchedulerPage.aspx.cs -> \
+* Add your FileScheduler.cs -> \App_Code\
+* SchedulerPage.aspx, SchedulerPage.aspx.cs -> \
 
 From your root, create your SchedulerPage.aspx with code behind, as such:
 
