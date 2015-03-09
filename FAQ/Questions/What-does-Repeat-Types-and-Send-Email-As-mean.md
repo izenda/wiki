@@ -10,14 +10,15 @@ Repeat Types exist in the "Misc" section of ReportDesigner.aspx and are simply e
 
 |Type|Effect|
 |-------------|-------------|
-|Every Day|Email will be sent daily. Time part (hours amd minutes) will be the same as the original time.|
-|Every Weekday|Email will be sent daily excluding weekends.|
-|Every Week|Email will be sent every 7 days.|
-|Every Two Weeks|Email will be sent every 14 days.|
-|Every Month|Email will be sent monthly. Note that number of days in the month is taken into account, so it is not just "send every 30 days" or "send every 31 days" as it is for weeks schedule.|
-|Every Quarter|Email will be sent every 3 months.|
-|Alert Hourly|Email will be sent every hour. Minutes will remain the same.|
-|Alert Daily|Email will be sent daily. If report returned zero results under some conditions the Email will not be sent.|
+|...|No schedule will be used for this report.|
+|Every Day|This report will be scheduled and sent to its recipients daily.|
+|Every Weekday|This report will be scheduled and sent to its recipients Monday through Friday.|
+|Every Week|This report will be scheduled and sent to its recipients once a week starting from the date specified on the report.|
+|Every Two Weeks|This report will be scheduled and sent to its recipients once every other week starting from the date specified on the report.|
+|Every Month|This report will be scheduled and sent to its recipients once a month starting from the date specified on the report. This is sensitive to the variant number of days in each month and will remain consistent throughout the year.|
+|Every Quarter|This report will be scheduled and sent to its recipients quarterly (every three months) starting from the date specified on the report.|
+|Alert Hourly|This report will be scheduled and sent to its recipients every hour only if the report has more than zero results in it.|
+|Alert Daily|This report will be scheduled and sent to its recipients every day only if the report has more than zero results in it.|
 
 
 
