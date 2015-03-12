@@ -1,12 +1,13 @@
 ##How do I customize the report viewer filter order?
 
-Currently there is no API way to arrange the filters. They by default are in selected order.
+Currently there is no API way to arrange the filters. They, by default, are in the selected order.
 
-The easiest way for such customization is to change  
+The easiest way for such customization is to change:  
 
-``RefreshFilters(returnObj)``
+`RefreshFilters(returnObj)`
 
 function in the Resources\js\ReportViewerFilters.js file.
+
 The hook is here:
 
 `var filterContent = GetFilterContent(returnObj.Filters, index, divsId, hasFilterLogic, false);`
