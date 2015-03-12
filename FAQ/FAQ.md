@@ -18,6 +18,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[What Is the PreExecuteReportSet() method?|FAQ/PreExecuteReportSet]]
 - [[What Is the ProcessEqualsSelectList() method?|FAQ/ProcessEqualsSelectList]]
 - [[What Is the ProcessDataSet() method?|FAQ/ProcessDataSet]]
+- [[How Do I customize the Report Viewer Filter Order?|Customizing-Report-Viewer-Filter-Order]]
 - [[How Do I Programatically switch databases?|FAQ/switching-databases-via-code]]
 - [[How do I hide the settings page button or aspx page from users?|http://wiki.izenda.us/API/CodeSamples/ShowSettingsButton]]
 - [[How do I integrate with my login page?|FAQ/integrate-login-page]]
