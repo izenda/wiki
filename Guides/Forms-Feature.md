@@ -14,7 +14,7 @@ never design FORMS, but simply make modifications to current core FORMS.
 Izenda when a FORM is attached to a report; the FORM is what the engine renders. To use a standard Izenda report in tandem with a FORM, you must call the report into the HTML 
 FORM itself.
 
-**With Izenda FORMS, you can:**
+##Features
 
 - Create WYSIWYG forms using HTML.
 
@@ -31,6 +31,8 @@ FORM itself.
 - Employ flexible filters and high performance repeaters.
 
 - Customize the product through our rich API.
+
+![](/Guides/ReportDesign/14.0-Izenda-FORMS/employee_form_example.png)
 
 ##Forms Tutorials
 
