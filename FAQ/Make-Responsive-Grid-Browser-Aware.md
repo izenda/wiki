@@ -3,7 +3,7 @@
 [[_TOC_]]
 
 ##Preface
-When the width of the fields added to a report exceeded the width of the window, fields are removed from the horizontal header and added to an expandable section indicated by a "+". This feature is useful when you have multiple windows on your screen concurrently and do not want to scroll horizontally. If you want this option to only appear when on mobile, use the solution below.
+When the width of the fields added to a report exceeded the width of the window, fields are removed from the horizontal header and added to an expandable section indicated by a "+". This feature is useful when you have multiple windows on your screen concurrently and do not want to scroll horizontally.
 
 ##Solution
 To ensure that the "+" only appears for mobile browsers, navigate to your shrinkable-grid.js file and remove the jq$(document).ready(function () code block.
