@@ -2,11 +2,17 @@
 
 [[_TOC_]]
 
-##About
+##Preface
 
-The DeleteReportSet method is used to delete reports from your storage system. This method can be overridden in your [[CustomAdHocConfig|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]] class. The code samples below demonstrate method of overriding the method to implement custom functionality using both [[DatabaseAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]] and [[FileSystemAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]].
+The DeleteReportSet method is used to delete reports from your storage system. This method can be overridden in your [[CustomAdHocConfig|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]] class. 
 
-##DatabaseAdHocConfig Sample
+##Usage
+If you have overwritten [SaveReportSet()](http://wiki.izenda.us/FAQ/SaveReportSet) to change the location where reports are saved, it is necessary to use this override to indicate where the deletion will occur.
+
+##Examples
+The code samples below demonstrate method of overriding the method to implement custom functionality using both [[DatabaseAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]] and [[FileSystemAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]].
+
+###DatabaseAdHocConfig Sample
 
 ```csharp
 /* BEGIN Database Mode Code Sample */
@@ -26,7 +32,7 @@ public override void DeleteReportSet() {
 /* END Database Mode Code Sample */
 ```
 
-##FileSystemAdHocConfig Sample
+###FileSystemAdHocConfig Sample
 
 ```csharp
 /* BEGIN Filesystem Mode Code Sample */
