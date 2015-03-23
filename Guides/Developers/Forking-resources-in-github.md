@@ -8,7 +8,7 @@ The resources repository is where the HTML, CSS, and Javascript reside within th
 
 ##How to fork
 
-To fork the resources repository, you will need a github account. This can be obtained through your organization or personally and is a straightforward process. Once you have a github account, visit our [[resources repository page|https://github.com/izenda/resources]]. There will be a button at the top of the page that says "Fork". Click this and the repository will be added to your personal repositories. 
+To fork the resources repository, you will need a github account. This can be obtained through your organization or personally and is a straightforward process. Once you have a github account, visit our [[resources repository page|https://github.com/izenda/reference-implementations]]. There will be a button at the top of the page that says "Fork". Click this and the repository will be added to your personal repositories. 
 
 ![](/Guides/Developers/Forking-resources-in-github/resources_repo.png)
 
