@@ -6,6 +6,8 @@
 
 **[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
 
+Note: The Visualizations help text contains a link directing the user to the Visualization feature page. If you would like to remove this like, you can modify the Doc.html files within the Resources/Vis folder for each chart type.
+
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
 |FB:12976|API|PostgreSQL|PostgreSQL type mapping reviewed.|
