@@ -60,7 +60,7 @@ Note: The Visualizations help text contains a link directing the user to the Vis
 |FB:18641|Report Design|Filters|Fixed '(blank)' behavior of the multi-selection operators in the filters.|
 |FB:18696|API|Security|Implemented concealing connectionstring in logs|
 |FB:18715|API|Data Sources|Made virtual datasources working correctly together with changes from 16086|
-|FB:18721|Report Design|Visualization|Upgraded Visualization Helptext|
+|FB:18721|Report Design|Visualization|Upgraded Visualization Helptext. This text contains a reference to the Izenda wiki that can be removed in the doc.html file for each visualization contained in the Resources folder|
 |FB:18731|Report Design|UI|Fixed hiding of service field.|
 |FB:18732|Report Viewer|Resizing|Fixed report title, description and other header items from maximum 33% size to100%, removed nowrap from description, header and footer of report.|
 |FB:18735|API|Broswer|Fixed error in IE9 when cssText property is changed.|
