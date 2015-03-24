@@ -1,6 +1,76 @@
 [[_TOC_]]
 
 
+# 6.8.0.7 (March 24, 2015)
+
+
+**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|FB:12976|API|PostgreSQL|PostgreSQL type mapping reviewed.|
+|FB:13008|Report Design|Filters|Selecting a value for "Require" in the Report Viewer will no longer throw an exception when calculated columns are being filtered upon.|
+|FB:14209|Report Viewer|Visualization|Text labels are removed from the World Tour when the user takes control using the mouse. Resume the animation by clicking the visualization.|
+|FB:14271|Report Design|Joining|Automatically COLLATE Stored Procedures columns to the database_default if Stored Procedure is used in the JOIN|
+|FB:15381|Report Design|Fusion|Fixed Pivots and Filters when Fusion connection is used|
+|FB:17588|Save|Export|Modified exports to use the report name as the file name. If the report has not been saved, the name will default to 'Report.xxx'|
+|FB:17695|Scheduler|Resources|Internal static resources load directly instead of using HttpRequests so emailed reports appear correctly|
+|FB:17783|API|Caching|Implemented updating databaseschema on new session  |
+|FB:17942|Report Design|Pagination|Fixed pagination error in Report Designer where changing pages would result in "No field selected"|
+|FB:17943|API|Browser|WorldMap in FireFox now appears correctly|
+|FB:18080|Save|Export|Pie charts can now cross pages without being cut off.|
+|FB:18082|Report Viewer|Responsive Grid|Updated Responsive Grid to work with higher rowcounts|
+|FB:18107|Scheduler|Dundas Charts|Fixed bug in rendering DundasChart within scheduled reports.|
+|FB:18140|Report Design|Gauge|Pass correct parent report param to the drill-down report of the Gauge report inDashboard|
+|FB:18165|Report Design|Pivots|Properties of columns in Pivots and Fields are not independent of eachother|
+|FB:18171|Report Viewer|Fields|Fixed group issue on fields adding in report viewer|
+|FB:18218|API|License Key|Fixed Data Sources page error when license contains no +MAPS.|
+|FB:18226|Report Viewer|Charts|Fixed inconsistency between Value field and available Functions in charts.|
+|FB:18231|API|Data Sources|Fixed issue in fusion driver when odata connection to webservice behind load balancer is used|
+|FB:18245|Report Design|Filter|FilterLogic with HAVING fixed|
+|FB:18295|Report Design|Expressions|Allow NOT key word in Expression|
+|FB:18304|API|Caching|Do not include Report Position in the cache signature|
+|FB:18323|API|Performance|made driver calls to the ParentReportSet more consistent|
+|FB:18349|Report Design|Charts|Fixed inconsistency in formatting between Field and Chart (Trend, Pie, Funnel).|
+|FB:18354|Dashboards|Analysis Grid|Fixed showing Analysis Grid on Dashboard.|
+|FB:18359|Report Viewer|Fields|Do not show fields that are part of the arithmetic in the Viewer Fields control|
+|FB:18369|Report Viewer|Fields|Persist field properties when it's moved to the unused pane in the Viewer|
+|FB:18370|API|Caching|Synchronize report list cache in DB storage mode when App server and DB server have different time zones|
+|FB:18380|Report Design|Forms|Ensure tinymce empty form is removed from report|
+|FB:18390|Save|Dashboards|Use real form id instead of the hard-coded one on the Dashboards page|
+|FB:18413|API|Caching|Fixed showing obsolete data on UpdateResults click when CacheQueries enabled|
+|FB:18455|Report Design|Forms|Allowed to put fields absent in Form without sorting to the top of selection list|
+|FB:18491|Report Viewer|Summary|Fixed Gradient Cell Shading in Summary.|
+|FB:18508|API|Export|Execute report only one time for BulkCSV export & ProcessDataRow method added to the API|
+|FB:18509|Instant Reports|Fields|Properly sort field names on the Instant Report page.|
+|FB:18532|Report Design|Auto Chart|"Auto chart" refactoring. Fixed non-unique element ids.|
+|FB:18534|Save|Export|Allow HTML content (in report header/footer/title and field description) to be rendered in export output|
+|FB:18545|UI|Filters|Filters with long names UI issue fixed|
+|FB:18552|API|Forms|updated CodeMagic to use syntax highlighting|
+|FB:18559|Report Design|Visualization|Use Visualization from any Chart tab rather than from the first only|
+|FB:18573|Report Viewer|Report List|Authentication no longer impedes thumnail viewing|
+|FB:18577|Save|Database Mode|Properly handle SavedReportsTable with schema name|
+|FB:18602|Dashboards|Security|Encode user input on the Dashboard Designer page|
+|FB:18610|Report Design|Fusion|Do not auto group fields with aggregate function in expression - Fusion connection fix|
+|FB:18621|API|Save|AdHocSettings.ShowModifiedReportMessage setting added|
+|FB:18622|API|Export|Modified build script. Only distributes phantomjs exe now.|
+|FB:18624|Save|Export|Fixed exporting of the visualizations.|
+|FB:18641|Report Design|Filters|Fixed '(blank)' behavior of the multi-selection operators in the filters.|
+|FB:18696|API|Security|Implemented concealing connectionstring in logs|
+|FB:18715|API|Data Sources|Made virtual datasources working correctly together with changes from 16086|
+|FB:18721|Report Design|Visualization|Upgraded Visualization Helptext|
+|FB:18731|Report Design|UI|Fixed hiding of service field.|
+|FB:18732|Report Viewer|Resizing|Fixed report title, description and other header items from maximum 33% size to100%, removed nowrap from description, header and footer of report.|
+|FB:18735|API|Broswer|Fixed error in IE9 when cssText property is changed.|
+|FB:18793|Report Design|Arithmetic|Fixed checking on division by zero.|
+|FB:18833|Report Design|Forms|Made autocompletion hidden on forms by default|
+|FB:18834|API|Visible  Datasources|Fixed missing constraints|
+|FB:18838|API||Fixed izenda crash on null value in Xml column in reports table|
+|FB:18871|Report Design|Visualization|Fixed Timeline visualization not working.|
+|FB:18902|Dashboards|Charts|Fixed charts on dashboards not working.|
+|FB:18939|Instant Reports|Auto Chart|AutoChart fixed on the Instant Report page|
+|FB:18961|Report Viewer|Saving|Added confirmation of overwriting reportset in reportviewer|
+
 # 6.8.0.6 (February 25, 2015)
 
 
