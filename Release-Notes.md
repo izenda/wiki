@@ -10,6 +10,7 @@ Note: The Visualizations help text contains a link directing the user to the Vis
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
+|HF:19020|API|Filters|Fixed issue resulting in unneeded HAVING clauses|
 |FB:12976|API|PostgreSQL|PostgreSQL type mapping reviewed.|
 |FB:13008|Report Design|Filters|Selecting a value for "Require" in the Report Viewer will no longer throw an exception when calculated columns are being filtered upon.|
 |FB:14209|Report Viewer|Visualization|Text labels are removed from the World Tour when the user takes control using the mouse. Resume the animation by clicking the visualization.|
