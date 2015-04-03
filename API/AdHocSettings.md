@@ -322,6 +322,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[ShowMapTab|/API/CodeSamples/ShowMapTab]]|Gets or sets the value indicating whether the Map Tab should be            shown in the report viewer.|True|
 |Boolean|[[ShowMenuInReportViewer|/API/CodeSamples/ShowMenuInReportViewer]]| Gets or set value indicating whether menu should be shown in Izenda.AdHoc.AdHocSettings.ReportViewer. **(deprecated)**|False|
 |Boolean|[[ShowMiscTab|/API/CodeSamples/ShowMiscTab]]|This checkbox enables/disables the misc tab from the Izenda Reports application report designer page.|True|
+|Boolean|[[ShowModifiedReportMessage|/API/CodeSamples/ShowModifiedReportMessage]]|Gets or sets the value indicating whether the modified save message can appear on save.|True|
 |Boolean|[[ShowModifyButton|/API/CodeSamples/ShowModifyButton]]|Gets or sets the value indicating whether the "Modify" button should be            shown in the report viewer.**(deprecated)**|True|
 |Boolean|[[ShowMultiLineControls|/API/CodeSamples/ShowMultiLineControls]]|Gets or sets the value indicating whether "Multi-Line" feature is enabled.|False|
 |Boolean|[[ShowNewButton|/API/CodeSamples/ShowNewButton]]|Gets or sets the value indicating whether the "New" icon should be            shown in the toolbar.|True|
