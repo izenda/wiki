@@ -53,3 +53,8 @@ Public Class CustomAdHocConfig
     End Sub
 End Class
 ```
+
+## Screenshot
+Screenshot of warning popping up on save.
+
+![ShowModifiedReportMessage](/API/CodeSamples/ShowModifiedReportMessage/ShowModifiedReportWarning.png)
