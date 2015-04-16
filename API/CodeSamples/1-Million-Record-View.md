@@ -1,4 +1,4 @@
-#1 Million Record View
+#Changing Decimal Type Precision
 
 ##About
 
