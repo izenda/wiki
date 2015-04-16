@@ -8,8 +8,9 @@ Below is the SQL sample to create a View with 1 million records using the Northw
 ## What To Change
 
 
+
+DECIMAL(18,6) to NUMERIC(22,8)
 ```c#
-DECIMAL(18,6) to NUMERIC(22,8):
 List<KeyValuePair<string, string>> typeOverrides = AdHocContext.Driver.NativeTypesOverrides;
 for (int i = 0; i < typeOverrides.Count; i++)
     if (typeOverrides[i].Key == "Decimal")
