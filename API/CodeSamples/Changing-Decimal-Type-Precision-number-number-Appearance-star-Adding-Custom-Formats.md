@@ -1,18 +1,17 @@
 
 
-
 #Changing Decimal Type Precision
 
 ##About
 
-Below is the SQL sample to create a View with 1 million records using the Northwind example database. This query can be used to load test your application with before you send it out to production.
+Below is the code sample to change the hard-coded Decimal Type Precision from DECIMAL(18,6) to NUMERIC(22,8)
 
 
 ## What To Change
 
 
 
-DECIMAL(18,6) to NUMERIC(22,8)
+DECIMAL(18,6) to NUMERIC(22,8):
 ```c#
 List<KeyValuePair<string, string>> typeOverrides = AdHocContext.Driver.NativeTypesOverrides;
 for (int i = 0; i < typeOverrides.Count; i++)
