@@ -97,6 +97,7 @@ _**Note:** Some of the items below are listed more than once. This is because th
 * [[Combining Multiple Event Based Fields with UNION|http://wiki.izenda.us/FAQ/Questions/Combining-Fields-with-Union]]
 * [[Organizing Dates by Week|http://wiki.izenda.us/Integration/Tutorials/Views]]
 * [[1 Million Record View|/API/CodeSamples/1 Million Record View]]
+* [[Changing Hard-coded Decimal Type Precision|/API/CodeSamples/1 Million Record View]]
 
 ##Appearance
 
