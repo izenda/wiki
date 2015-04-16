@@ -55,7 +55,7 @@ Public Class CustomAdHocConfig
 End Class
 ```
 
-##Alternate Usage
+##Alternate Usage: All Tables, Views and Stored Procedures Visible
 
 If you would like for all tables, views and stored procedures to be shown, use the following snippet.
 
