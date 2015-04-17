@@ -35,7 +35,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How can I set up auditing so that whenever a user accesses or exports report data, an audit is performed?|http://wiki.izenda.us/FAQ/Questions/Auditing-When-Accessing-Reports]]
 - [[How can I export columns that are normally hidden?|http://wiki.izenda.us/FAQ/Questions/exporting-hidden-columns]]
 - [[How can I add a new time period to the list of time period filter options?|/FAQ/Questions/Adding-Custom-Time-Periods]]
-- [[How can I change default data precision?|/FAQ/Questions/Changing-Data-Precision]]
+- [[How can I change default data precision setting?|/FAQ/Questions/Changing-Data-Precision]]
 
 
 ##Database
