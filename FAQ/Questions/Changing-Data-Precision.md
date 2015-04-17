@@ -7,7 +7,7 @@ How can I change default data precision setting?
 
 When Izenda loads a report that uses a stored procedure, it creates a temporary table to store the values. For string, it creates NVARCHAR(MAX) columns and for numeric fields a DECIMAL(18,6). Therefore, if any field with greater precision such as NUMERIC(22,8) is used, the report then fails with a conversion error as below because it cannot fit the NUMERIC(22,8) value into a DECIMAL(18,6) column.
 
-[![Test Image](/Home/Conversion.jpg)]
+[![Izenda Core Integration Video](/Home/izenda_intro_video.png)](https://www.youtube.com/watch?v=4E0npCxLi4o)
 
 The hard-code default setting, DECIMAL(18,6) can be easily modified by adding below setting code to the Driver (within InitializeReporting() method) .
 
