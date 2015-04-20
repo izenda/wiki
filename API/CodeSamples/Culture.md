@@ -4,7 +4,11 @@
 
 ##About
 
-Gets or sets the default culture for Ad Hoc. Note: use this only in special cases, like when you want to use the date formats of a culture other than your own. Normally you should use Language setting for localization. See links below: 
+Gets or sets the default culture for Ad Hoc. Note: use this only in special cases, like when you want to use the date formats of a culture other than your own. Normally you should use Language setting for localization. 
+
+**NOTE: If you experience a compilation error, you may need to add System.Globalization.CultureInfo()**
+
+See links below: 
 
 [[Language|/API/CodeSamples/Language]]
 
