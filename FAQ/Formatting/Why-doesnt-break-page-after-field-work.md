@@ -1,6 +1,6 @@
 ##Question
 
-Why doesn't 'Brake Page After Field' work?
+Why doesn't 'Break Page After Field' work?
 
 ##Answer
 
