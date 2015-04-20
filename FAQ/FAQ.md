@@ -52,6 +52,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How do I override CSS on reporting pages?|http://wiki.izenda.us/FAQ/Questions/Overriding-page-level-css]]
 - [How do I hide Output Types?](http://wiki.izenda.us/FAQ/Formatting/How-do-I-hide-Output-Types)
 - [How do I control the alignment of text fields or justification in report output?](http://wiki.izenda.us/FAQ/Formatting/How-do-I-control-the-alignment-of-text-fields-or-justification-in-report-output)
+- [Why doesn't 'Break Page After Field' work?](http://wiki.izenda.us/FAQ/Formatting/Why-doesn't-break-page-after-field-work)
 
 ##Platform
 
