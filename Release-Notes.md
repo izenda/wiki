@@ -1,6 +1,82 @@
 [[_TOC_]]
 
 
+# 6.8.0.8 (April 21, 2015)
+
+
+**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
+
+Note: The Visualizations help text contains a link directing the user to the Visualization feature page on the Izenda Wiki. If you would like to remove this like, you can modify the Doc.html files within the Resources/Vis folder for each chart type.
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|FB:14779|Report Design|Visualization|Corrected allowable size of bars (Auto Chart, Combo).|
+|FB:17625|API|UI|Adressed localization not being applied in new UI elements.|
+|FB:17962|API|Logging|Internal logger can now be completely disabled|
+|FB:18248|Report Design|Visualization|Fixed breaking visualization with URL Advanced Field Setting.|
+|FB:18281|API|Constraints|Implemented bulk adding constraints, Optimized FusionDriver.GetAllTables method, FusionConnection.GetColumns() method and Driver.ExtractSchema method|
+|FB:18303|API|UI|Implemented possibility to configure join aliases in Advanced mode, and possibility to switch from Advanced to Simple mode without loosing join aliases|
+|FB:18332|API|Optimization|Fixed error in JS when opening field properties window several times|
+|FB:18371|API|Optimization|Trim trailing space to group Visual Grouping according to the ANSI/ISO SQL-92 standard for MSSQL|
+|FB:18373|API|Optimization|Cleaned up .ascx pages in RI/Resources|
+|FB:18418|API|Optimization|Removed excess string concatenations, made "variable cache" optimization in ResponseServer.IsTableVisible and ResponseServer.GetFunctionsList, removed excess ToLowerInvariant calls. Refactored AllTablesWithColumns member in Drivers, and thus fixed not-working part of disk schema cache for oracle and postgresql drivers. Changed linear search to picking from dictionary in "Column[] GetColumns(Table table)" methods of Driver-s.|
+|FB:18422|Instant Reports|UI|Automatically sort VG fields in the report created on the Instant Report page|
+|FB:18474|API|Optimization|Try to load only particular itextsharp assembly version to avoid versions conflicts|
+|FB:18485|Report Design|UI|Visual Group headers now respect colors set for fields|
+|FB:18508|API|Export|Apply all formatting levels to the Bulk CSV output|
+|FB:18515|Instant Reports|Optimization|Improve autocomplete performance on the Instant Report page|
+|FB:18560|API|Optimization|Fixed data filtering bug.|
+|FB:18591|Report Design|Optimization|Fixed drill-down key field showing as a smart-tag|
+|FB:18594|Report Design|Charts|Fixed applying simple custom formats to DundasCharts. Added properties to Funnel and Plot (Dundas) and Funnel (HtmlChart)|
+|FB:18595|Report Design|Filters|Do not include extra param when filter operator is changed to Between|
+|FB:18597|Report Design|Filters|Client-side sorting of dates before 1970 fixed|
+|FB:18661|Report Design|Filters|Do not refresh filters automatically in the Viewer if CascadeFilterValues is set to false. Properly handle filters with identical structure in the Viewer.|
+|FB:18670|API|Database Mode|Fixed null reference error when Fusion Driver is used together with DatabaseAdHocConfig and reportList caching|
+|FB:18695|API|Optimization|API to specify a valid native type to override internal DB type for temp SP table creation|
+|FB:18710|Report Design|Optimization|Apply "Page Break After VG" setting to the field-value styled VG|
+|FB:18714|API|Fusion|Made it possible to create and use virtual datasources with FusionDriver against databases exposed via fusion connections|
+|FB:18736|API|Pagination|Removed pagination from dashboards.|
+|FB:18737|API|Optimization|Apply AdHocSettings.TimeZoneOffset to some Date aggregate functions, AdHocSettings.TimeZoneOffset datatype is now double|
+|FB:18756|API|Optimization|New auto-join algorithm|
+|FB:18766|API|Pagination|Tiny fix for correct calculation of the amount of pages. Properly format both Detail and Summary grids when pagination is used|
+|FB:18802|API|Expressions|Properly handle FieldAliases in the expressions|
+|FB:18828|API|Caching|Fixed cherry pick conflict|
+|FB:18845|Report Viewer|Charts|Restore fade-out of the long labels in a vertical Bar Chart|
+|FB:18849|API|Data Sources|Do not show SavedReportsTable as available data source. Properly handle SavedReportsTable with schema name in Oracle and PostGreSQL|
+|FB:18854|API|Optimization|Fixed out of range exception in DrillDownKeys|
+|FB:18858|API|Expressions|Allow tabulation chars in the Expression for better formatting|
+|FB:18859|UI|Expressions|Refresh calculated fields list when Arithmetic or Expression is changed|
+|FB:18869|API|Export|Fixed exporting from the Designer (regression bug from the FB-17901)|
+|FB:18873|API|Visualization|Refactored Visualization charts and fixed help text|
+|FB:18915|Report Design|Joining|Fixed missing joins on switching between modes, and another issue with join aliases after switching to simple mode|
+|FB:18919|UI|Database Mode|Do not create duplicates in the report list in DatabaseAdHocConfig when CurrentUserTenantId is specified|
+|FB:18920|API|Pagination|Use cache with pagination so SQL request is not required to change the page|
+|FB:18942|Report Design|UI|Fixed Gradient Cell not working in case of some formats.|
+|FB:18949|Report Design|Charts|Properly round Axis labels in Bar and Trend charts when integer format is used|
+|FB:18955|API|Optimization|Removed unused empty class.|
+|FB:18970|API|Optimization|Distinct keys values in the AdHocSettings.FieldAliases collection|
+|FB:18973|Save|Visualization|Fixed bug saving the properties in the case of two or more visualizations in a single report.|
+|FB:18974|Report Design|Visualization|Fixed showing subreport charts in expand panel of the Auto Chart.|
+|FB:18977|Report Design|Optimization|Fixed the Record Count metric.|
+|FB:18980|API|Optimization|Fixed malformed mime type header|
+|FB:18998|Report Design|Optimization|Avoid to add empty HAVING clause|
+|FB:19014|API|Saving|NullReferenceException on save when UseReportID setting is set to true fixed|
+|FB:19022|Save|Forms|Save Form in the proper location when CurrentUserTenantId is set|
+|FB:19030|API|Optimization|Replace text for Divide-By-Zero will now show empty strings|
+|FB:19034|API|Optimization|Prevent XSS attack via HTTP header on the Settings and rs pages|
+|FB:19044|API|Logging|Added logging to ListReportsCache/ReportListCacheStorage classes.|
+|FB:19046|Report Design|Optimization|Fixed NullReferenceException when processing hidden filter with empty column|
+|FB:19061|API|Expressions|Subtotals Expression feature implemented|
+|FB:19080|API|Optimization|Fixed deadloop in GetConstraintsInfo|
+|FB:19087|Report Design|UI|Properly handle VG Hierarchy rows visibility according to the ExpandVisualGroupGrids setting value|
+|FB:19107|API|Optimization|Added public method Utility.InitFakeHttpContext() which customer can call to ensure that Izenda is not running null http context in win32 (not web) application.|
+|FB:19110|Report Viewer|Export|Fixed hiding wrong fields when using /csv and BulkCSV.|
+|FB:19123|UI|Optimization|Changed margin of the AllowNulls checkbox.|
+|FB:19125|API|Caching|Added disabling query cache if SavedReportsTable occurs in parameters values.|
+|FB:19294|API|Arithmetic|Changed ShowArithmetics default value to true|
+|FB:19304|Report Viewer|Optimization|Fixed JS error when opening field properties in viewer|
+
+
 # 6.8.0.7 (March 24, 2015)
 
 
