@@ -1,4 +1,4 @@
-#Title
+#Wiki Template - Variables
 
 [[_TOC_]]
 
