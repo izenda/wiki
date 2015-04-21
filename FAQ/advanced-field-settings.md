@@ -13,7 +13,7 @@ Advanced field settings provide more granular control over what data is displaye
 |**Setting Name**|**Description**|
 |:--------------:|:-------------:|
 |Column Group|Applies a label to this column that can work over multiple consecutive columns. Any other column that shares the same label will be included in the grouping. <br> ![](/FAQ/advanced-field-settings/column_groups.png)|
-|Page Break After Field||If 'Page Break After Field' box is checked and this field is also a visual group, then it will trigger a page break in a printed report every time this field has different value.
+|Page Break After Field|If 'Page Break After Field' box is checked and this field is also a visual group, then it will trigger a page break in a printed report every time this field has different value.|
 |Multiline Header|| 
 |Hide this field|Hides the field from display when report the is ran. Useful for using expressions on multiple fields but when only one of the fields should be displayed.|
 |Sort (z-a)|Sorts in descending order|
