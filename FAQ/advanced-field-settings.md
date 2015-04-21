@@ -12,7 +12,9 @@ Advanced field settings provide more granular control over what data is displaye
 
 |**Setting Name**|**Description**|
 |:--------------:|:-------------:|
-|Column Group|Applies a label to this column that can work over multiple consecutive columns. Any other column that shares the same label will be included in the grouping. <br> ![](/FAQ/advanced-field-settings/column_groups.png)| 
+|Column Group|Applies a label to this column that can work over multiple consecutive columns. Any other column that shares the same label will be included in the grouping. <br> ![](/FAQ/advanced-field-settings/column_groups.png)|
+|Page Break After Field|Hides the field from display when report the is ran. Useful for using expressions on multiple fields but when only one of the fields should be displayed.|
+|Multiline Header|Hides the field from display when report the is ran. Useful for using expressions on multiple fields but when only one of the fields should be displayed.| 
 |Hide this field|Hides the field from display when report the is ran. Useful for using expressions on multiple fields but when only one of the fields should be displayed.|
 |Sort (z-a)|Sorts in descending order|
 |Italic|Sets whether the column is shown in italics|
