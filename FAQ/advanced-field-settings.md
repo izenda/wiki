@@ -8,7 +8,7 @@ Advanced field settings provide more granular control over what data is displaye
 
 ##Advanced Settings
 
-![](/FAQ/advanced-field-settings/advanced_settings_panel_2.png)
+![](/FAQ/advanced-field-settings/advanced_settings_panel_042115.PNG)
 
 |**Setting Name**|**Description**|
 |:--------------:|:-------------:|
