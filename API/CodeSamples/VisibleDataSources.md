@@ -57,7 +57,7 @@ End Class
 
 ##Alternate Usage: All Tables, Views and Stored Procedures Visible 
 
-If you would like for all tables, views and stored procedures to be shown (you must limit Stored Procedures that are not used for reporting using the where clause in this query), use the following snippet.
+If you would like for all tables, views and stored procedures to be shown you can use the following schema query to populate the visible datasources. (Stored Procedures that are not used for reporting must be limited using the where clause in this query. Stored Procedures are run when loading the data source list, so any that are used to drop tables, delete records, etc. should not be included )
 
 ```csharp
 //setting vis datasources
