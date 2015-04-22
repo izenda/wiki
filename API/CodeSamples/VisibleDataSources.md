@@ -55,9 +55,9 @@ Public Class CustomAdHocConfig
 End Class
 ```
 
-##Alternate Usage: All Tables, Views and Stored Procedures Visible
+##Alternate Usage: All Tables, Views and Stored Procedures Visible 
 
-If you would like for all tables, views and stored procedures to be shown, use the following snippet.
+If you would like for all tables, views and stored procedures to be shown (you must limit Stored Procedures that are not used for reporting using the where clause in this query), use the following snippet.
 
 ```csharp
 //setting vis datasources
