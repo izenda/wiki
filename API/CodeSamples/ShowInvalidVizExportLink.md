@@ -9,25 +9,19 @@ ShowInvalidVizExportLink is a boolean variable that determines whether the messa
 ##Global.asax (C♯)
 
 ```csharp
-//main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
-public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
-{
-  // Configure settings
-  // Add custom settings after setting the license key and connection string by overriding the ConfigureSettings() method
-  public static void InitializeReporting() {
-    //Check to see if we've already initialized.
-    if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
-      return;
-    AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
-    //Creates a connection to Microsoft SQL Server
-    AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
-    Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    AdHocSettings.ShowJoinDropDown = true; //the relevant setting
-    HttpContext.Current.Session["ReportingInitialized"] = true;
-  }
-}
+public class CustomAdHocConfig : FileSystemAdHocConfig {
+    public static void InitializeReporting() {
+
+        
+      AdHocSettings.ShowInvalidVizExportLink = false;
+        
+
+    } // End of InitializReporting
+   
+   
+  } // End of CustomAdHocConfig
 ```
 
 ##Screenshots
 
-![](http://izenda.com/Site/Images/Screenshots/ShowJoinDropDownDS.png)
+![](/API/CodeSamples/ShowInvalidVizExportLink/ShowInvalidviz.png)
