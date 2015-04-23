@@ -16,10 +16,10 @@ public class CustomAdHocConfig : FileSystemAdHocConfig {
       AdHocSettings.ShowInvalidVizExportLink = false;
         
 
-    } // End of InitializReporting
+    } // End of InitializeReporting
    
    
-  } // End of CustomAdHocConfig
+  } // End of  CustomAdHocConfig
 ```
 
 ##Screenshots
