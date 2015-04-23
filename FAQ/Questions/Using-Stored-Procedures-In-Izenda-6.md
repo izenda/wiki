@@ -6,12 +6,12 @@
 
 Since version 6.0, Izenda Reports can expose existing SPs (Stored Procedures) in MSSQL databases as DataSources for designed reports. This tutorial explains how you can create the appropriate SP in MSSQL 2005, and include it as a DataSource in a report. The Northwind sample database will be used in the examples. The main considerations are: 
 
-* Creating or using an existing stored procedure in MSSQL 2005
+* Creating or using an existing stored procedure in MSSQL
 * Making SPs visible in Izenda Reports
 * IMPORTANT- Filtering the Equals select drop-down
 * Building the report
 
-##Creating SPs in MSSQL 2005 to use in Izenda Reports
+##Creating SPs in MSSQL to use in Izenda Reports
 
 When SPs are detected in your MSSQL database, their names will appear in the list of available DataSources in the Report Designer. Currently, Izenda AdHoc supports only input parameters, while parameters of other types are ignored. Input parameters play the role of the columns that are used in the WHERE clause of the SELECT statement.
 To be suitable for AdHoc, SPs must return a standard SELECT statement. This will be treated as the result of a standard SELECT statement being performed on a table. The column names returned from the SP will be available as fields in your DataSource.
