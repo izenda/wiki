@@ -4,7 +4,7 @@
 
 ##Usage
 
-Since version 6.0, Izenda Reports can expose existing SPs (Stored Procedures) in MSSQL databases as DataSources for designed reports. This tutorial explains how you can create the appropriate SP in MSSQL 2005, and include it as a DataSource in a report. The Northwind sample database will be used in the examples. The main considerations are: 
+Since version 6.0, Izenda Reports can expose existing SPs (Stored Procedures) in MSSQL databases as DataSources for designed reports. This tutorial explains how you can create the appropriate SP in MSSQL, and include it as a DataSource in a report. The Northwind sample database will be used in the examples. The main considerations are: 
 
 * Creating or using an existing stored procedure in MSSQL
 * Making SPs visible in Izenda Reports
