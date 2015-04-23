@@ -1,10 +1,10 @@
-#ShowJoinDropDown
+#ShowInvalidVizExportLink
 
 [[_TOC_]]
 
 ##About
 
-Gets or sets the value indicating whether the join type dropdown should be shown on the DataSources tab (Advanced Mode). Advanced mode can be accessed by clicking "Advanced" on the DataSources tab when [[ShowDataSourcesAsCheckBoxes|/API/CodeSamples/ShowDataSourcesAsCheckBoxes]] is true, or by setting [[ShowDataSourcesAsCheckBoxes|/API/CodeSamples/ShowDataSourcesAsCheckBoxes]] to false.
+ShowInvalidVizExportLink is a boolean variable that determines whether the message "To view the interactive visualization please click this link." is displayed when charts of type visualization is exported to Word,Excel, and other document form. By default ShowInvalidVizExportLink is true. When the user set it to false then message "To view the interactive visualization please click this link." will not be shown.
 
 ##Global.asax (C♯)
 
@@ -26,29 +26,6 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
-```
-
-##Global.asax (VB.NET)
-
-```visualbasic
-'main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
-Public Class CustomAdHocConfig
-    Inherits Izenda.AdHoc.DatabaseAdHocConfig
-
-    'Configure settings
-    'Add custom settings after setting the license key and connection string by overriding the ConfigureSettings() method
-    Shared Sub InitializeReporting()
-        'Check to see if we've already initialized.
-        If HttpContext.Current.Session Is Nothing OrElse HttpContext.Current.Session("ReportingInitialized") IsNot Nothing Then
-            Return
-        'Initialize System
-        AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
-        AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
-        Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
-        AdHocSettings.ShowJoinDropDown = True 'The relevant setting
-        HttpContext.Current.Session("ReportingInitialized") = True
-    End Sub
-End Class
 ```
 
 ##Screenshots
