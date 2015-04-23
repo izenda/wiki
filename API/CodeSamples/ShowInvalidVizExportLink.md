@@ -19,7 +19,7 @@ public class CustomAdHocConfig : FileSystemAdHocConfig {
     } // End of InitializeReporting
    
    
-  } // End of  CustomAdHocConfig
+  } // End of CustomAdHocConfig
 ```
 
 ##Screenshots
