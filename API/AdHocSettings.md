@@ -206,6 +206,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String|[[PreviewColumnLimitMessage|/API/CodeSamples/PreviewColumnLimitMessage]]|Gets or set value indicating message displayed when PreviewColumnLimit is exceeded|Reports with more than 100 fields must be exported to CSV.  Please check CSV Export to view data.|
 |Int32|[[PreviewTimeout|/API/CodeSamples/PreviewTimeout]]| Gets or sets the System.Data.IDbCommand.CommandTimeout for SQL commands. |0|
 |PrintMode|[[PrintMode|/API/CodeSamples/PrintMode]]|Gets or sets the value indicating what print mode will be used, PDF or HTML.|PdfAndHtml|
+|PdfPrintMode|[[PdfPrintMode|/API/CodeSamples/PdfPrintMode]]|Gets or sets the value indicating what print mode will be used for PDF exports.|EOPDF|
 |ProcessFiltersDelegate|[[ProcessFiltersDelegate|/API/CodeSamples/ProcessFiltersDelegate]]| Represents a method that handles Izenda.AdHoc.Report execution. **(deprecated)**|String.Empty|
 |Int32|[[QuickAddFieldWidth|/API/CodeSamples/QuickAddFieldWidth]]|Gets or set value indicating max length of string in one QuickAdd column|20|
 |Int32|[[QuickAddMinElementsInColumn|/API/CodeSamples/QuickAddMinElementsInColumn]]|Gets or set value indicating how many elements are in one QuickAdd column|20|
