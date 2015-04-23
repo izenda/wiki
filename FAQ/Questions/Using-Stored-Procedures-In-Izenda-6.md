@@ -34,7 +34,7 @@ GO
 
 ![MSSQL stored procedure results](/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6/mssql_stored_procedure.png)
  
-***Figure 1.** Results of sample SP execution in MSSQL 2005.*
+***Figure 1.** Results of sample SP execution in MSSQL.*
 
 ##Making SPs visible in Izenda Reports
 
