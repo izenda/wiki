@@ -310,6 +310,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[ShowHelpButton|/API/CodeSamples/ShowHelpButton]]|Gets or sets the value indicating whether the "HideHelpPanel" icon should be            shown in the toolbar.|False|
 |Boolean|[[ShowHtmlAsCode|/API/CodeSamples/ShowHtmlAsCode]]|This feature enables/disables showing HTML code containing in database fields as plain text.|False|
 |Boolean|[[ShowInTimePeriod|/API/CodeSamples/ShowInTimePeriod]]|Gets or sets the value indicating whether "In Time Period" item is shown in operators dropdown.|True|
+|Boolean|[[ShowInvalidVizExportLink|/API/CodeSamples/ShowInTimePeriod]]|Gets or sets the value indicating whether "In Time Period" item is shown in operators dropdown.|True|
 |Boolean|[[ShowInvertSummaryCheckbox|/API/CodeSamples/ShowInvertSummaryCheckbox]]|Gets or sets the value indicating whether "Invert" checkbox should be shown             in the summary tab.**(deprecated)**|False|
 |Boolean|[[ShowInvisible|/API/CodeSamples/ShowInvisible]]| Gets or sets the value indicating whether invisible checkboxes should be shown in the Izenda.AdHoc.AdHocSettings.FieldList. **(deprecated)**|False|
 |Boolean|[[ShowJoinAliasTextboxes|/API/CodeSamples/ShowJoinAliasTextboxes]]||False|
