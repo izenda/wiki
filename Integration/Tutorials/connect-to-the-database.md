@@ -51,7 +51,7 @@ Izenda Reports supports connecting to multiple data sources simultaneously by us
 **Requirements (must be installed prior to database setup):**
 
 * Izenda Reports requires the [[Microsoft .NET Runtime|http://msdn.microsoft.com/en-us/netframework/default.aspx]]. Download and install if you do not have it already.
-* Izenda Reports requires the [[Oracle Data Provider for .NET|ttp://www.oracle.com/technetwork/topics/dotnet/index-085163.html]]. Download and install if you do not have it already.
+* Izenda Reports requires the [[Oracle Data Provider for .NET|http://www.oracle.com/technetwork/topics/dotnet/index-085163.html]]. Download and install if you do not have it already.
 * Follow the directions to setup your web server.
 * The database must have at least 1 table.
 
