@@ -4,7 +4,7 @@ If you wish to use one of the reports already created as a data source instead o
 2. Create a report as usual
 3. In Misc. Tab, near the bottom click the checkbox that says, "Expose as data source."
 
-![Enable VirtualDataSource](http://wiki.izenda.us/Virtualdatasource/AllowVirtualDataSources.png)
+![Enable VirtualDataSource](http://wiki.izenda.us/Virtualdatasource/AllowVirtualDatasources.png)
 
 4. Make sure to save the report.
 5. Create a new report. The data sources will include the saved report preceded by the folder you saved it under.  You will also notice some Data Sources have become links.  When you select one, a popup will appear, displaying all of the reports that currently use that data source.
