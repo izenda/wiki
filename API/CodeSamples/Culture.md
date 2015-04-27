@@ -8,6 +8,8 @@ Gets or sets the default culture for Ad Hoc. Note: use this only in special case
 
 **NOTE: If you experience a compilation error, you may need to add System.Globalization.CultureInfo()**
 
+**ALSO NOTE: Izenda is built on ASP.NET 2.0, which does not support the use of Neutral Culture codes, such as zh-CHT (Chinese Traditional) or zh-CHS (Chinese Simplified).**
+
 See links below: 
 
 [[Language|/API/CodeSamples/Language]]
