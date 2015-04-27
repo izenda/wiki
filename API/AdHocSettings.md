@@ -32,6 +32,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[AllowSelfJoin|/API/CodeSamples/AllowSelfJoin]]|Gets or sets the value indicating whether is it allowed datasources self join.|True|
 |Boolean|[[AllowStackedBarChart|/API/CodeSamples/AllowStackedBarChart]]|Gets or sets the value indicating whether Stacked Bar Chart is allowed|True|
 |Boolean|[[AllowSummaryDeltas|/API/CodeSamples/AllowSummaryDeltas]]|Gets or sets the value indicating whether "Show Summary Deltas" checkbox should be shown             in the summary tab.|True|
+|Boolean|[[AllowVirtualDataSources|/Virtualdatasource]]|Gets or sets the value indicating whether virtual data sources are allowed.|False|
 |Boolean|[[AllowVisualGroups|/API/CodeSamples/AllowVisualGroups]]|Gets or sets the value indicating whether visual groups are allowed.**(deprecated)**|True|
 |String|[[ApplicationHeaderImageUrl|/API/CodeSamples/ApplicationHeaderImageUrl]]|Gets or sets the URL of the Header Logo.|String.Empty|
 |Boolean|[[AutoJoinOnRenderedRows|/API/CodeSamples/AutoJoinOnRenderedRows]]| Gets or sets the value indicating whether auto-join function should work  for server-rendered rows in Izenda.AdHoc.AdHocSettings.JoinedTablesList**(deprecated)**|True|
