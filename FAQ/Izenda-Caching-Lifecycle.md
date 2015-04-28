@@ -141,3 +141,5 @@ When the data is requested from the given cache by the successive block through 
 If cache doesn't find data - then it requests this data through the arrow "incoming" into its figure from the previous block. When previous block produces this data, cache stores it and also sends it to the successive block through "outgoing" arrow.
 
 So there is no any kind of "full cycle of data flow" through all these arrows each time when user does something. Instead, each of these caches work like buffer/accumulator/floodgate - each of them acts independently in the data flow into which it is inserted, either returning previously cached data with prevention of "deeper" blocks work. Or if data is not cached yet - then it passes execution to the "deeper" blocks of code which should produce necessary data.
+
+![Caching Lifecycle](/FAQ/Izenda-Caching-Lifecycle/Caching-Lifecycle.png)
