@@ -1,3 +1,7 @@
+# Izenda Caching Lifecycle
+
+[[_TOC_]]
+
 ## Izenda Caching Lifecycle
 
 There is no single life-cycle of caching in Izenda. There are several caches which act simultaneously and independently on each other, the 'cycle' will always be different depending on your given Izenda usage scenario.
