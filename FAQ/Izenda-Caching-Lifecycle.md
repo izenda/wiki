@@ -1,4 +1,3 @@
-# Izenda Caching Lifecycle
 
 [[_TOC_]]
 
