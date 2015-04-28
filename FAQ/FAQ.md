@@ -139,3 +139,4 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[I'm seeing a version collision between a third party library referencing Log4Net and Izenda. How do I fix this?|/FAQ/Questions/Log4Net-Collision]]
 - [How do I customize the English.resx file?](http://wiki.izenda.us/FAQ/How-do-i-customize-the-English-dot-resx-file)
 - [[Is Izenda 508 Commpliant?|http://wiki.izenda.us/FAQ/Questions/Section508-compliance]]
+- [[Izenda Caching Lifecycle|http://wiki.izenda.us/FAQ/Izenda Caching Lifecycle]]
