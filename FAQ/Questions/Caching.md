@@ -73,3 +73,6 @@ StaticSharedStorage.Activate(true);
 ###Limitations
 
 Izenda Reports is a web application. Therefore, caching is susceptible to the client state. For example, do not have Izenda Reports running in separate windows or tabs of Internet Explorer. Otherwise, you could get the following behavior: by loading a report in one window and then loading a different report in another window, you may have unknowingly cached the second report, overriding the first. To properly enforce caching, only have a single instance of Izenda Reports running at a time per browser session. If you do open other browser windows and create/modify reports in that window, be sure you do not go back to the previous tab to continue modifying reports. Otherwise, you may see the newly cached report in your viewer instead of the one you were expecting to see.
+
+###More Information
+[[Izenda Caching Lifecycle|http://wiki.izenda.us/FAQ/Izenda Caching Lifecycle]]
