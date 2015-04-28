@@ -10,6 +10,7 @@ Note: The Visualizations help text contains a link directing the user to the Vis
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
+|**HF:19382**| **MVC Builds Only**|**API**|**In 6.8.0.x MVC kits downloaded prior to 4/24/2015, there was an issue where using AdHoc settings would not disable the ability to create new reports and dashboards. To fix this issue, please replace the _SiteLayout.cshtml file located in Views/Shared with [this one](https://izenda.sharefile.com/d-scab81cb6d6e43b3a).**|
 |FB:14779|Report Design|Visualization|Corrected allowable size of bars (Auto Chart, Combo).|
 |FB:17625|API|UI|Adressed localization not being applied in new UI elements.|
 |FB:17962|API|Logging|Internal logger can now be completely disabled|
