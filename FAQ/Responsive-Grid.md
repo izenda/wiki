@@ -9,7 +9,7 @@ Responsive Grid is a feature that re-sizes and re-positions report parts in resp
 This feature is useful when you have multiple windows on your screen concurrently or you are viewing reports on a mobile device and do not want to scroll horizontally.
 
 ##Remove Responsive Grid
-If you prefer the horizontal scrolling functionality, remove the following code from the shrinkable-grid.js file.
+If you prefer the horizontal scrolling functionality, remove the following code from the ReportViewer-Head.js file.
 
 ``<script type="text/javascript" src="./Resources/js/shrinkable-grid.js"></script>``
 
