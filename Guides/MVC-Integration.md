@@ -10,7 +10,7 @@ This guide will use Izenda mvc5r3 kit, a simple MVC application, which is downlo
 
 ##Instructions
 
-###Step 1. Open the MVC application in Visual Studio
+###Step 1. Open the simple MVC application in Visual Studio
 
 
 ![Open the Application](/Guides/MVC-Integration/Open_Application.png)
