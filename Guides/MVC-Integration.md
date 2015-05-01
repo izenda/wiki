@@ -158,9 +158,13 @@ The below is how the project's Global.asax should look like.
 
 ###Step 9. Copy specificFilerouter and IzendaResource constraint classes from Globa.asax.cs and paste them above MVCapplication class in Global.asax.cs of the project
 
-Copy specificFilerouter and IzendaResource constraint classes from Globa.asax.cs and paste them above MVCapplication class in Global.asax.cs of the project
+Copy specificFilerouter and IzendaResource constraint classes from Globa.asax.cs and paste them above MVCapplication class in Global.asax.cs of project
 
+
+Copy below two constraints from Globa.asax.cs of mvc5r3
 ```csharp
+
+//IRouteConstraint
 public class SpecificFileRouterConstraint : IRouteConstraint {
     private string extensionToBeRouted = null;
     private string fileToBeRouted = null;
@@ -176,6 +180,11 @@ public class SpecificFileRouterConstraint : IRouteConstraint {
       fileToBeRouted = fileName.ToLower();
     }
   }
+
+
+
+
+//IRouteConstraint
 public class IzendaResourceConstraint : IRouteConstraint {
     private string extensionToBeRouted = null;
 
@@ -234,6 +243,113 @@ public class IzendaResourceConstraint : IRouteConstraint {
 ```
 
 
+Below is the how the Global.asax.cs should look like
+```csharp
+
+namespace Sample_MVCApp
+{
+    public class SpecificFileRouterConstraint : IRouteConstraint
+    {
+        private string extensionToBeRouted = null;
+        private string fileToBeRouted = null;
+
+        public bool Match(HttpContextBase httpContext, Route route, string parameterName, RouteValueDictionary values, RouteDirection routeDirection)
+        {
+            return !String.IsNullOrEmpty(extensionToBeRouted) && !String.IsNullOrEmpty(fileToBeRouted) && values[extensionToBeRouted] != null && values[extensionToBeRouted].ToString().ToLower().Contains(fileToBeRouted);
+        }
+
+        public SpecificFileRouterConstraint() { }
+
+        public SpecificFileRouterConstraint(string extension, string fileName)
+        {
+            extensionToBeRouted = extension.ToLower();
+            fileToBeRouted = fileName.ToLower();
+        }
+    }
+
+    public class IzendaResourceConstraint : IRouteConstraint
+    {
+        private string extensionToBeRouted = null;
+
+        public bool Match(HttpContextBase httpContext, Route route, string parameterName, RouteValueDictionary values, RouteDirection routeDirection)
+        {
+            if (String.IsNullOrEmpty(extensionToBeRouted) || values[extensionToBeRouted] == null)
+            {
+                return false;
+            }
+            string requestUrl = values[extensionToBeRouted].ToString().ToLower();
+            bool result = false;
+            if (extensionToBeRouted == "js")
+            {
+                result = result || requestUrl.Contains("reportviewerfilters.js");
+                result = result || requestUrl.Contains("reportlist.js");
+                result = result || requestUrl.Contains("data-sources.js");
+                result = result || requestUrl.Contains("data-sources-preview.js");
+                result = result || requestUrl.Contains("charts.js");
+                result = result || requestUrl.Contains("datasources-search.js");
+                result = result || requestUrl.Contains("jquery-1.6.1.min.js");
+                result = result || requestUrl.Contains("jquery-ui-1.8.13.custom.min.js");
+                result = result || requestUrl.Contains("elrte.full.js");
+                result = result || requestUrl.Contains("elrte.ru.js");
+                result = result || requestUrl.Contains("fieldproperties.js");
+                result = result || requestUrl.Contains("shrinkable-grid.js");
+            }
+            if (extensionToBeRouted == "css")
+            {
+                result = result || requestUrl.Contains("tabs.css");
+                result = result || requestUrl.Contains("report.css");
+                result = result || requestUrl.Contains("filters.css");
+                result = result || requestUrl.Contains("base.css");
+                result = result || requestUrl.Contains("report-list-modal.css");
+                result = result || requestUrl.Contains("data-sources.css");
+                result = result || requestUrl.Contains("charts.css");
+                result = result || requestUrl.Contains("jquery-ui-1.8.13.custom.css");
+                result = result || requestUrl.Contains("elrte.min.css");
+                result = result || requestUrl.Contains("elrte-inner.css");
+                result = result || requestUrl.Contains("shrinkable-grid.css");
+            }
+            if (extensionToBeRouted == "png")
+            {
+                result = result || requestUrl.Contains("elrtebg.png");
+                result = result || requestUrl.Contains("elrte-toolbar.png");
+            }
+            if (extensionToBeRouted == "gif")
+            {
+                result = result || requestUrl.Contains("elrte/images/pixel.gif");
+            }
+            return result;
+        }
+
+        public IzendaResourceConstraint() { }
+
+        public IzendaResourceConstraint(string extension)
+        {
+            extensionToBeRouted = extension.ToLower();
+        }
+    }
+
+
+
+    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
+    // visit http://go.microsoft.com/?LinkId=9394801
+
+    public class MvcApplication : System.Web.HttpApplication
+    {
+        protected void Application_Start()
+        {
+            AreaRegistration.RegisterAllAreas();
+
+            WebApiConfig.Register(GlobalConfiguration.Configuration);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            AuthConfig.RegisterAuth();
+        }
+    }
+}
+
+
+```
 
 
 ###Step 10. Copy RegisterRoutes in MvcApplication class from Global.asax.cs and put it in MvcApplication class of the project’s Global.asax.cs
