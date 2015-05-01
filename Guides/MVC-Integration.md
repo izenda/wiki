@@ -16,13 +16,13 @@ This guide will use Izenda mvc5r3 kit, a simple MVC application, which is downlo
 ![Open the Application](http://wiki.izenda.com/image)
 
 
-###Step 2. Add Izenda.AdHoc.dll, log4net.dll, which are under mvc5r3\bin,  to the project’s reference
+###Step 2. Add Izenda.AdHoc.dll and log4net.dll, which are under mvc5r3\bin,  to the project’s reference
 
-**a.** Unzip webforms-xx.zip into a directory. Once unzipped, copy this directory to **C:\inetpub\wwwroot**, or wherever your websites are located.
+**a.** Right click on 'References' under project name in Solution Explorer window, then click 'Add Reference'
 
-**b.** Once this directory is in your C: Drive, name it 'Reporting', i.e. **C:\inetpub\wwwroot\Reporting**
+**b.** Click the 'Browse' button and browse to \mvc5r3\bin, where Izenda.AdHoc.dll and log4net.dll are. Add them to reference. 
 
-![Create Site Folder](http://kb.izenda.com/Reg/images/InstCreateFolderNEW.png)
+![Create Site Folder](http://wiki.izenda.com/)
 
 ###Step 3. Configure website under IIS
 
