@@ -22,7 +22,7 @@ Right click on 'References' under project name in Solution Explorer window, then
 
 Click the 'Browse' button and browse to \mvc5r3\bin, where Izenda.AdHoc.dll and log4net.dll are. Add them to reference. 
 
-![Create Site Folder](/Guides/MVC-Integration/Open_Application.png/DLLs.png)
+![Create Site Folder](/Guides/MVC-Integration/DLLs.png)
 
 
 ###Step 3. Add IzendaStaticResourcesController.cs and IzendaReportingController.cs to the project
