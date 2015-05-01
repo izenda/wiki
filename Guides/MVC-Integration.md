@@ -369,16 +369,44 @@ public static void RegisterRoutes(RouteCollection routes) {
     }
 ```
 
-
-
-
 Copy RegisterRoutes in MvcApplication class from Global.asax.cs and put it in MvcApplication class of the project’s Global.asax.cs
 
-![Controllers](/Guides/MVC-Integration/Namespace.png)
+```csharp
+public class MvcApplication : System.Web.HttpApplication
+    {
 
-###Step 11. Change the LicenseKey and ConnnectionString in Global.asax of the project
+        public static void RegisterRoutes(RouteCollection routes)
+        {
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapRoute("IzendaResources", "Reporting/Resources/{*resource}", new { controller = "IzendaStaticResources", action = "Index" });
+            routes.MapRoute("IzendaJsResources", "{*js}", new { controller = "IzendaStaticResources", action = "Index" }, new { irc = new IzendaResourceConstraint("js") });
+            routes.MapRoute("IzendaCssResources", "{*css}", new { controller = "IzendaStaticResources", action = "Index" }, new { irc = new IzendaResourceConstraint("css") });
+            routes.MapRoute("IzendaPngResources", "{*png}", new { controller = "IzendaStaticResources", action = "Index" }, new { irc = new IzendaResourceConstraint("png") });
+            routes.MapRoute("IzendaGifResources", "{*gif}", new { controller = "IzendaStaticResources", action = "Index" }, new { irc = new IzendaResourceConstraint("gif") });
+            routes.MapRoute("IzendaReporting", "{controller}/{action}/{id}", new { controller = "Reporting", id = UrlParameter.Optional });
+            routes.MapRoute("StarterKitDefault", "{controller}/{action}/{id}", new { controller = "Reporting", action = "ReportList", id = UrlParameter.Optional });
+            routes.MapRoute("HomeDefault", "{*pathInfo}", new { controller = "Home", action = "Index", id = UrlParameter.Optional });
+        }
 
-Change the LicenseKey and ConnnectionString in Global.asax of the project
+        protected void Application_Start()
+        {
+            AreaRegistration.RegisterAllAreas();
 
-![Controllers](/Guides/MVC-Integration/Namespace.png)
+            WebApiConfig.Register(GlobalConfiguration.Configuration);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            AuthConfig.RegisterAuth();
+        }
+    }
 
+```
+
+###Step 11. Change the LicenseKey and ConnnectionString in Global.asax of project
+
+```csharp
+
+AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";   
+AdHocSettings.SqlServerConnectionString = @"INSERT_CONNECTION_STRING_HERE";
+
+```
