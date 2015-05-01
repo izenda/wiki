@@ -41,9 +41,13 @@ Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK
 
 ###Step 5. Add Reporting and Resources folders to the project
 
-Add 'Reporting' and 'Resources' from \mvc5r3 to project by dragging and dropping them under Sample_MVCApp in Solution Explorer 
+**a.** Add 'Reporting' and 'Resources' from \mvc5r3 to project by dragging and dropping them under Sample_MVCApp in Solution Explorer 
 
 ![Controllers](/Guides/MVC-Integration/Resources_Reporting.png)
+
+**b.** In Solution Explorer, exclude Dashboards-Body.ascx and Dashboards-Head.ascx from \Resources\html by right click on them and click 'Exclude From Project'
+
+![Controllers](/Guides/MVC-Integration/Exclude.png)
 
 ###Step 6. Add mvc5r3\Views\Reporting folder 
 
