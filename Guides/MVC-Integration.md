@@ -45,12 +45,11 @@ Add 'Reporting' and 'Resources' from \mvc5r3 to project by dragging and dropping
 
 ![Controllers](/Guides/MVC-Integration/Resources_Reporting.png)
 
-
 ###Step 6. Add mvc5r3\Views\Reporting folder 
 
 Add the Reporting folder in mvc5r3\Views to the project's Views
 
-![Controllers](/Guides/MVC-Integration/Namespace.png)
+![Controllers](/Guides/MVC-Integration/VR.png)
 
 ###Step 7. Add  _sitelayout (mvc5r3\Views\Shared) to the project’s Shared under Views
 
