@@ -431,4 +431,4 @@ After Step 11, the Sample_MVCApp should build and work without a problem. To see
 
 **c.** Notice 'Izenda' item added to the menu as below. Click it and see if it leads to Izenda ReportList page.
 
-![Test](/Guides/MVC-Integration/Test.png)
+![Test](/Guides/MVC-Integration/Test.PNG)
