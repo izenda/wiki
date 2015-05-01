@@ -55,22 +55,23 @@ Add the Reporting folder in mvc5r3\Views to the project's Views
 
 ![Controllers](/Guides/MVC-Integration/VR.png)
 
-###Step 7. Add  _sitelayout (mvc5r3\Views\Shared) to the project’s Shared under Views
+###Step 7. Add  _sitelayout to project’s Views\Shared
 
-Add  _sitelayout (mvc5r3\Views\Shared) to the project’s Shared under Views
+Drag _sitelayout from mvc5r3\Views\Shared and drop it at project’s Views\Shared
 
 ![Controllers](/Guides/MVC-Integration/SiteLayout.png)
 
-###Step 8. Copy code from Global.asax except the first line and paste in project’s Global.asax
+###Step 8. Copy code from Global.asax except the first line
 
-Copy code from Global.asax except the first line and paste in project’s Global.asax
+Copy code from Global.asax except the first line and paste it in project’s Global.asax
 
 
-##Global.asax from mvc5r3(C♯)
+###Global.asax from mvc5r3(C♯)
 
 ```csharp
 
 <%@ Application Codebehind="Global.asax.cs" Inherits="MVC4Razor2.MvcApplication" Language="C#" %> //Copy except this line
+
 <%@ Import Namespace="Izenda.AdHoc"%>
 <%@ Import Namespace="System.IO"%>
 
@@ -112,9 +113,9 @@ Copy code from Global.asax except the first line and paste in project’s Global
 
 ```
 
+Below is how project's Global.asax should look like.
 
-The below is how the project's Global.asax should look like.
-##Global.asax from Sample_MVCApp(C♯)
+###Global.asax from Sample_MVCApp(C♯)
 ```csharp
 <%@ Application Codebehind="Global.asax.cs" Inherits="Sample_MVCApp.MvcApplication" Language="C#" %>
 
@@ -160,12 +161,10 @@ The below is how the project's Global.asax should look like.
 ```
 
 
-###Step 9. Copy specificFilerouter and IzendaResource constraint classes from Globa.asax.cs and paste them above MVCapplication class in Global.asax.cs of the project
-
-Copy specificFilerouter and IzendaResource constraint classes from Globa.asax.cs and paste them above MVCapplication class in Global.asax.cs of project
+###Step 9. Copy constraints classes from Globa.asax.cs
 
 
-Copy below two constraints from Globa.asax.cs of mvc5r3
+**a.** Copy below two constraints from Globa.asax.cs of mvc5r3
 ```csharp
 
 //IRouteConstraint
@@ -242,12 +241,10 @@ public class IzendaResourceConstraint : IRouteConstraint {
     }
   }
 
-
-
 ```
 
+**b.** Paste it above MVCapplication class in Global.asax.cs of project
 
-Below is the how the Global.asax.cs should look like
 ```csharp
 
 namespace Sample_MVCApp
@@ -356,9 +353,10 @@ namespace Sample_MVCApp
 ```
 
 
-###Step 10. Copy RegisterRoutes in MvcApplication class from Global.asax.cs of mvc5r3 and put it in MvcApplication class of the project’s Global.asax.cs
+###Step 10. Copy over RegisterRoutes in MvcApplication
 
-Copy the below class from Global.asax.cs of mvc5r3
+**a.** Copy the below class from Global.asax.cs of mvc5r3
+
 ```csharp
 public static void RegisterRoutes(RouteCollection routes) {
       routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
@@ -373,7 +371,7 @@ public static void RegisterRoutes(RouteCollection routes) {
     }
 ```
 
-Copy RegisterRoutes in MvcApplication class from Global.asax.cs and put it in MvcApplication class of the project’s Global.asax.cs
+**b.** Paste it inside MvcApplication class of tproject’s Global.asax.cs
 
 ```csharp
 public class MvcApplication : System.Web.HttpApplication
