@@ -416,7 +416,7 @@ AdHocSettings.SqlServerConnectionString = @"INSERT_CONNECTION_STRING_HERE";
 ```
 ###Step 12. Run it!
 
-After Step 11, the Sample_MVCApp should build and work without a problem. To see Izenda is integrated with this web application,
+After Step 11, the Sample_MVCApp should build and work without a problem. To see if Izenda is integrated with this web application,
 
 **a.** Open _Layout.cshtml in Views\Shared\ in Solution Explorer
 
