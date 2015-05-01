@@ -1,4 +1,4 @@
-#Izenda MVC Kit Integration Guide 
+#Izenda MVC Kit Integration (Phase I) Guide 
 
 [[_TOC_]]
 
