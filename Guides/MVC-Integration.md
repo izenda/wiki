@@ -13,7 +13,7 @@ This guide will use Izenda mvc5r3 kit, a simple MVC application, which is downlo
 ###Step 1. Open the MVC application in Visual Studio
 
 
-![Open the Application](http://wiki.izenda.com/image)
+![Open the Application](/Guides/MVC-Integration/Open_Application.png)
 
 
 ###Step 2. Add Izenda.AdHoc.dll and log4net.dll, which are under mvc5r3\bin,  to the project’s reference
