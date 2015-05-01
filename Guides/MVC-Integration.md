@@ -16,13 +16,13 @@ This guide will use Izenda mvc5r3 kit, a simple MVC application, which is downlo
 ![Open the Application](/Guides/MVC-Integration/Open_Application.png)
 
 
-###Step 2. Add Izenda.AdHoc.dll and log4net.dll, which are under mvc5r3\bin,  to the project’s reference
+###Step 2. Add Izenda.AdHoc.dll and log4net.dll to the project’s reference
 
 **a.** Right click on 'References' under project name in Solution Explorer window, then click 'Add Reference'
 
 **b.** Click the 'Browse' button and browse to \mvc5r3\bin, where Izenda.AdHoc.dll and log4net.dll are. Add them to reference. 
 
-![Create Site Folder](http://wiki.izenda.com/)
+![Create Site Folder](/Guides/MVC-Integration/Open_Application.png/DLLs.png)
 
 
 ###Step 3. Add  IzendaStaticResourcesController.cs and IzendaReportingController.cs (mvc5r3\Controllers ) in the project’s Controllers
