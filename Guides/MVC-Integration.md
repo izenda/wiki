@@ -414,3 +414,22 @@ AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
 AdHocSettings.SqlServerConnectionString = @"INSERT_CONNECTION_STRING_HERE";
 
 ```
+###Step 12. Run it!
+
+After Step 11, the Sample_MVCApp should build and work without a problem. To see Izenda is integrated with this web application,
+
+**a.** Click _Layout.cshtml in Views\Shared\ in Solution Explorer
+
+**b.** Add an actionlink to Izenda as below
+
+```html
+<li>@Html.ActionLink("Home", "Index", "Home")</li>
+<li>@Html.ActionLink("About", "About", "Home")</li>
+<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+<li>@Html.ActionLink("Izenda", "ReportList", "Reporting")</li>
+
+```
+
+
+
+
