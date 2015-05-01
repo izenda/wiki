@@ -418,7 +418,7 @@ AdHocSettings.SqlServerConnectionString = @"INSERT_CONNECTION_STRING_HERE";
 
 After Step 11, the Sample_MVCApp should build and work without a problem. To see Izenda is integrated with this web application,
 
-**a.** Click _Layout.cshtml in Views\Shared\ in Solution Explorer
+**a.** Open _Layout.cshtml in Views\Shared\ in Solution Explorer
 
 **b.** Add an ActionLink to Izenda as below
 
@@ -429,6 +429,6 @@ After Step 11, the Sample_MVCApp should build and work without a problem. To see
 <li>@Html.ActionLink("Izenda", "ReportList", "Reporting")</li>  //Add this line
 ```
 
-
+**c.** Notice 'Izenda' item added to the menu as below. Click it and see if it leads to Izenda ReportList page.
 
 
