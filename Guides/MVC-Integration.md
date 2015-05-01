@@ -10,11 +10,13 @@ This guide will use Izenda mvc5r3 kit, a simple MVC application, which is downlo
 
 ##Instructions
 
-###Step 1. Open the MVC application in Visual Studio (In this 
+###Step 1. Open the MVC application in Visual Studio
 
 
+![Open the Application](http://wiki.izenda.com/image)
 
-###Step 2. Unzip the contents
+
+###Step 2. Add Izenda.AdHoc.dll, log4net.dll, which are under mvc5r3\bin,  to the project’s reference
 
 **a.** Unzip webforms-xx.zip into a directory. Once unzipped, copy this directory to **C:\inetpub\wwwroot**, or wherever your websites are located.
 
