@@ -63,8 +63,7 @@ Add _sitelayout from mvc5r3\Views\Shared to project’s Views\Shared
 
 ###Step 8. Copy code from Global.asax except the first line
 
-Copy code from Global.asax except the first line and paste it in project’s Global.asax
-
+**a.** Copy code from Global.asax except the first line 
 
 ###Global.asax from mvc5r3(C♯)
 
@@ -113,7 +112,7 @@ Copy code from Global.asax except the first line and paste it in project’s Glo
 
 ```
 
-Below is how project's Global.asax should look like.
+**b.** paste it in project’s Global.asax
 
 ###Global.asax from Sample_MVCApp(C♯)
 ```csharp
