@@ -5,25 +5,14 @@
 ##About
 
 This guide is designed to instruct first-time users how to integrate Izenda with simple MVC application. 
-This tutorial will use Izenda MVC5r3 kit and a simple MVC application which is downloadable at [http://wiki.izenda.us/Guides/MVC-Integration/Sample_MVCApp.zip](http://wiki.izenda.us/Guides/MVC-Integration/Sample_MVCApp.zip)
+This guide will use Izenda mvc5r3 kit, a simple MVC applicatio, which is downloadable at [http://wiki.izenda.us/Guides/MVC-Integration/Sample_MVCApp.zip](http://wiki.izenda.us/Guides/MVC-Integration/Sample_MVCApp.zip), and Visual Studio Express 2013 for Web. 
+
+
 ##Instructions
 
-Installation requires a license key. To get a new trial key, you may contact [sales@izenda.com](mailto:sales@izenda.com). Or you may try our <a href="http://www.izenda.com/demo-it-yourself/" rel="nofollow" target="_blank">free demo</a>. 
+###Step 1. Open the MVC application in Visual Studio (In this 
 
-By downloading software of Izenda LLC, you agree to the [End User License Agreement](http://www.izenda.com/wp-content/uploads/2014/10/IzendaSoftwareLicenseAgreement.pdf). If you do not agree with such terms and conditions, do not download the software.
 
-To start using Izenda Reports Starter Kit you should take a few simple steps. If you need more information about setup process, configuring reports, additional features or special cases please visit our [Knowledge Base](http://www.izenda.com/Site/KB/Integration/94).
-
-###Step 1. Download the Starter Kit
-
-**Izenda works with:**
-
-* Non-production, staging, or development server
-* SQL Server, Oracle, MySQL, and PostgreSQL
-* Windows 2003, Windows 2008, Windows 2012, Windows 7, Windows Vista Business or Ultimate
-* Microsoft ASP.NET 2.0 and Higher
-* ASP.NET MVC 4 and 5
-* Razor Visual Engine 2 and 3
 
 ###Step 2. Unzip the contents
 
