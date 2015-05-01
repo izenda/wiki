@@ -18,17 +18,18 @@ This guide will use Izenda mvc5r3 kit, a simple MVC application, which is downlo
 
 ###Step 2. Add Izenda.AdHoc.dll and log4net.dll to the project’s reference
 
-**a.** Right click on 'References' under project name in Solution Explorer window, then click 'Add Reference'
+Right click on 'References' under project name in Solution Explorer window, then click 'Add Reference'
 
-**b.** Click the 'Browse' button and browse to \mvc5r3\bin, where Izenda.AdHoc.dll and log4net.dll are. Add them to reference. 
+Click the 'Browse' button and browse to \mvc5r3\bin, where Izenda.AdHoc.dll and log4net.dll are. Add them to reference. 
 
 ![Create Site Folder](/Guides/MVC-Integration/Open_Application.png/DLLs.png)
 
 
-###Step 3. Add  IzendaStaticResourcesController.cs and IzendaReportingController.cs (mvc5r3\Controllers ) in the project’s Controllers
+###Step 3. Add IzendaStaticResourcesController.cs and IzendaReportingController.cs to the project
 
-Izenda Reports provides an integrated platform for browser-based report customization and works on your application's existing web server. This section will guide you through configuring Izenda Reports for use on Microsoft's Internet Information Server (IIS) on Windows. Izenda recommends doing the initial setup on a non-production server.
+**a.** Add IzendaStaticResourcesController.cs and IzendaReportingController.cs to the project
 
+**b.** Click the 'Browse' button and browse to \mvc5r3\bin, where Izenda.AdHoc.dll and log4net.dll are. Add them to reference. 
 If you don’t have IIS, please see the following:
 
 [Install IIS](http://kb.izenda.com/Site/Pages/IIS-Install.aspx)
