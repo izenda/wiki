@@ -55,7 +55,7 @@ Add the Reporting folder in mvc5r3\Views to the project's Views
 
 Add  _sitelayout (mvc5r3\Views\Shared) to the project’s Shared under Views
 
-![Controllers](/Guides/MVC-Integration/Namespace.png)
+![Controllers](/Guides/MVC-Integration/SiteLayout.png)
 
 ###Step 8. Copy code from Global.asax except the first line and paste in project’s Global.asax
 
