@@ -57,7 +57,7 @@ Add the Reporting folder in mvc5r3\Views to the project's Views
 
 ###Step 7. Add  _sitelayout to project’s Views\Shared
 
-Drag _sitelayout from mvc5r3\Views\Shared and drop it at project’s Views\Shared
+Add _sitelayout from mvc5r3\Views\Shared to project’s Views\Shared
 
 ![Controllers](/Guides/MVC-Integration/SiteLayout.png)
 
