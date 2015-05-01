@@ -406,6 +406,8 @@ public class MvcApplication : System.Web.HttpApplication
 
 ###Step 11. Change the LicenseKey and ConnnectionString in Global.asax of project
 
+ To get a new trial key, you may contact [sales@izenda.com](mailto:sales@izenda.com).
+
 ```csharp
 
 AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";   
