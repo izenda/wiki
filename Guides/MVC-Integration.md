@@ -420,7 +420,7 @@ After Step 11, the Sample_MVCApp should build and work without a problem. To see
 
 **a.** Open _Layout.cshtml in Views\Shared\ in Solution Explorer
 
-**b.** Add an ActionLink to Izenda as below
+**b.** Add an ActionLink which leads to Izenda as below
 
 ```html
 <li>@Html.ActionLink("Home", "Index", "Home")</li>
