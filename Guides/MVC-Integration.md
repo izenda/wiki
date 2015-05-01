@@ -4,7 +4,8 @@
 
 ##About
 
-This guide is designed to instruct first-time users how to integrate Izenda with simple MVC application This tutorial will use Izenda MVC5r3 kit and a simple MVC application which is downloadable at [http://wiki.izenda.us/Guides/MVC-Integration/Sample_MVCApp.zip](http://wiki.izenda.us/Guides/MVC-Integration/Sample_MVCApp.zip)
+This guide is designed to instruct first-time users how to integrate Izenda with simple MVC application. 
+This tutorial will use Izenda MVC5r3 kit and a simple MVC application which is downloadable at [http://wiki.izenda.us/Guides/MVC-Integration/Sample_MVCApp.zip](http://wiki.izenda.us/Guides/MVC-Integration/Sample_MVCApp.zip)
 ##Instructions
 
 Installation requires a license key. To get a new trial key, you may contact [sales@izenda.com](mailto:sales@izenda.com). Or you may try our <a href="http://www.izenda.com/demo-it-yourself/" rel="nofollow" target="_blank">free demo</a>. 
