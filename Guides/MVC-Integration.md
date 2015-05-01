@@ -18,7 +18,7 @@ This guide will use Izenda mvc5r3 kit, a simple MVC application, which is downlo
 
 ###Step 2. Add Izenda.AdHoc.dll and log4net.dll to the project’s reference
 
-Right click on 'References' under project name in Solution Explorer window, then click 'Add Reference'
+Right click on 'References' under project name in Solution Explorer window, then click 'Add Reference'.
 
 Click the 'Browse' button and browse to \mvc5r3\bin, where Izenda.AdHoc.dll and log4net.dll are. Add them to reference. 
 
