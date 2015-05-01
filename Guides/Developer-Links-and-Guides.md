@@ -23,7 +23,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[OData|Guides/OData]]
 * [[Using the Izenda Fusion Driver|/Guides/Izenda-AdHoc-Driver]]
 * [[The report lifecycle|/Guides/Report-Lifecycle]]
-* [[MVC Phase I Integration Guid|/Guides/Report-Lifecycle]]
+* [[MVC Phase I Integration Guide|/Guides/Report-Lifecycle]]
 
 ###C♯/VB.NET Guides
 
