@@ -27,7 +27,7 @@ Click the 'Browse' button and browse to \mvc5r3\bin, where Izenda.AdHoc.dll and 
 
 ###Step 3. Add IzendaStaticResourcesController.cs and IzendaReportingController.cs to the project
 
-IzendaStaticResourcesController.cs and IzendaReportingController.cs are at mvc5r3\Controllers. Add them under Controllers as below.
+IzendaStaticResourcesController.cs and IzendaReportingController.cs are at mvc5r3\Controllers. Add them under Controllers as below (You can add by either 'drag and drop' or 'right click->Add->Existing Item)
 
 ![Controllers](/Guides/MVC-Integration/Controllers.png)
 	
