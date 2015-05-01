@@ -112,12 +112,13 @@ Add _sitelayout from mvc5r3\Views\Shared to project’s Views\Shared
 
 ```
 
-**b.** paste it in project’s Global.asax
+**b.** Paste it in project’s Global.asax
 
 ###Global.asax from Sample_MVCApp(C♯)
 ```csharp
 <%@ Application Codebehind="Global.asax.cs" Inherits="Sample_MVCApp.MvcApplication" Language="C#" %>
 
+//THE BELOW IS PASTED CODE
 
 <%@ Import Namespace="Izenda.AdHoc"%>
 <%@ Import Namespace="System.IO"%>
