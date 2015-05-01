@@ -41,16 +41,44 @@ Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK
 
 ###Step 5. Add Reporting and Resources folders to the project
 
-Change namespaces of IzendaStaticResourcesController.cs and IzendaReportingController.cs to match all other controllers in the application. 
-Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK.Controllers -> ABC.Controllers
+Add 'Reporting' and 'Resources' from \mvc5r3 to project by dragging and dropping them under Sample_MVCApp in Solution Explorer 
+
+![Controllers](/Guides/MVC-Integration/Reporting.png)
+
+
+###Step 6. Add mvc5r3\Views\Reporting folder 
+
+Add the Reporting folder in mvc5r3\Views to the project's Views
 
 ![Controllers](/Guides/MVC-Integration/Namespace.png)
 
+###Step 7. Add  _sitelayout (mvc5r3\Views\Shared) to the project’s Shared under Views
 
+Add  _sitelayout (mvc5r3\Views\Shared) to the project’s Shared under Views
 
+![Controllers](/Guides/MVC-Integration/Namespace.png)
 
-You can set the license key and database connection in one of two different ways, depending on how much customization you wish to have with Izenda. We will describe the two below.
+###Step 8. Copy code from Global.asax except the first line and paste in project’s Global.asax
 
-####InitializeReporting()
+Copy code from Global.asax except the first line and paste in project’s Global.asax
 
-T
+![Controllers](/Guides/MVC-Integration/Namespace.png)
+
+###Step 9. Copy specificFilerouter and IzendaResource constraint classes from Globa.asax.cs and paste them above MVCapplication class in Global.asax.cs of the project
+
+Copy specificFilerouter and IzendaResource constraint classes from Globa.asax.cs and paste them above MVCapplication class in Global.asax.cs of the project
+
+![Controllers](/Guides/MVC-Integration/Namespace.png)
+
+###Step 10. Copy RegisterRoutes in MvcApplication class from Global.asax.cs and put it in MvcApplication class of the project’s Global.asax.cs
+
+Copy RegisterRoutes in MvcApplication class from Global.asax.cs and put it in MvcApplication class of the project’s Global.asax.cs
+
+![Controllers](/Guides/MVC-Integration/Namespace.png)
+
+###Step 11. Change the LicenseKey and ConnnectionString in Global.asax of the project
+
+Change the LicenseKey and ConnnectionString in Global.asax of the project
+
+![Controllers](/Guides/MVC-Integration/Namespace.png)
+
