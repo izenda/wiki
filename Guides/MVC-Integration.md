@@ -24,7 +24,8 @@ This guide will use Izenda mvc5r3 kit, a simple MVC application, which is downlo
 
 ![Create Site Folder](http://wiki.izenda.com/)
 
-###Step 3. Configure website under IIS
+
+###Step 3. Add  IzendaStaticResourcesController.cs and IzendaReportingController.cs (mvc5r3\Controllers ) in the project’s Controllers
 
 Izenda Reports provides an integrated platform for browser-based report customization and works on your application's existing web server. This section will guide you through configuring Izenda Reports for use on Microsoft's Internet Information Server (IIS) on Windows. Izenda recommends doing the initial setup on a non-production server.
 
@@ -68,7 +69,7 @@ Once you have IIS installed, continue with the following:
 
 **f.** Before continuing, make sure the site folder ( **...\Reporting** ) has full permissions for the **NETWORK SERVICE** user. Make sure the reports folder ( **...Reporting\MVC4Razor2\Reporting\Reports** ) and Web.config ( **...Reporting\MVC4Razor2\Web.config** ) have full permissions for the **NETWORK SERVICE** user also (Right click on **MySite\Reporting folder => Properties => Security => Edit... => Add... => Type "NETWORK SERVICE" and press OK =>  Click 'NETWORK SERVICE' Click 'Allow - Full Control' Click OK=> Click OK)**.
 
-###Step 4. Set license key and database connection
+###Step 4. Change namespaces of IzendaStaticResourcesController.cs and IzendaReportingController.cs to match all other controllers in the application. Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK.Controllers -> ABC.Controllers
 
 You can set the license key and database connection in one of two different ways, depending on how much customization you wish to have with Izenda. We will describe the two below.
 
@@ -82,7 +83,7 @@ Open the website that you just created [http://localhost/reporting](http://local
 	
 ![Set license key and database connection](http://kb.izenda.com/Reg/images/src4_settingsnew.png)
 
-###Step 5. Start using Izenda Reports
+###Step 5. Add Reporting and Resources folders to the project
 
 Now you are ready to start taking advantage of the opportunities in Izenda’s self-service reporting platform. Open [http://localhost/Reporting/ReportDesigner.aspx](http://localhost/Reporting/ReportDesigner.aspx) and create your first report easily!
 
@@ -93,6 +94,9 @@ Select your DataSources at the [[Data Sources|http://wiki.izenda.us/Guides/Repor
 	
 ![Using Izenda Reports](http://kb.izenda.com/Reg/images/src5_designnew.png)
 
+
+
+###Step 6. Add Reporting and Resources folders to the project
 
 ####Preview and Save report
 
