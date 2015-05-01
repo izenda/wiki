@@ -5,7 +5,7 @@
 ##About
 
 This guide is designed to instruct first-time users how to integrate Izenda with simple MVC application. 
-This guide will use Izenda mvc5r3 kit, a simple MVC applicatio, which is downloadable at [http://wiki.izenda.us/Guides/MVC-Integration/Sample_MVCApp.zip](http://wiki.izenda.us/Guides/MVC-Integration/Sample_MVCApp.zip), and Visual Studio Express 2013 for Web. 
+This guide will use Izenda mvc5r3 kit, a simple MVC application, which is downloadable at [http://wiki.izenda.us/Guides/MVC-Integration/Sample_MVCApp.zip](http://wiki.izenda.us/Guides/MVC-Integration/Sample_MVCApp.zip), and Visual Studio Express 2013 for Web. 
 
 
 ##Instructions
