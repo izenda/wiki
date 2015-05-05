@@ -52,5 +52,5 @@ End Class
 ```
 
 ##Screenshots
-
-![](http://izenda.com/Site/Images/Screenshots/ShowJoinDropDownDS.png)
+![](/API/CodeSamples/ShowJoinAliasTextboxes/Aliasing_TextBox.png)
+![](/API/CodeSamples/ShowJoinAliasTextboxes/No_Aliasing_TextBox.png)
