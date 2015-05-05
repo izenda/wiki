@@ -55,9 +55,20 @@ Public Class CustomAdHocConfig
 
         HttpContext.Current.Session("ReportingInitialized") = True
     End Sub
-End Class
+End
 ```
 
 ##Screenshots
 ![](/API/CodeSamples/ShowJoinAliasTextboxes/Aliasing_TextBox.png)
 ![](/API/CodeSamples/ShowJoinAliasTextboxes/No_Aliasing_TextBox.png)
+
+##Instruction
+
+By default, when the same table is used multiple times as joined table, Izenda differentiate them by number as below.
+
+Using join alias textbox, user can distinguish the joined tables more clearly
+
+1. After enabling Join Alias Textbox as below, type alias in the textbox. Click 'Update datasources aliases'.
+
+2. In FIELDS tab, the aliased joined tables appear as below
+
