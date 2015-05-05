@@ -22,7 +22,12 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     //Creates a connection to Microsoft SQL Server
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    AdHocSettings.ShowJoinAliasTextboxes = true; //the relevant setting
+
+
+    AdHocSettings.ShowJoinAliasTextboxes = true; // Enable join alias text boxes
+
+
+
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
@@ -45,7 +50,9 @@ Public Class CustomAdHocConfig
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
-        AdHocSettings.ShowJoinAliasTextboxes = True 'The relevant setting
+
+        AdHocSettings.ShowJoinAliasTextboxes = false; // Disable join alias text boxes
+
         HttpContext.Current.Session("ReportingInitialized") = True
     End Sub
 End Class
