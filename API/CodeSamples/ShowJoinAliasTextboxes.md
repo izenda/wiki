@@ -65,9 +65,13 @@ End
 ##Instruction
 
 By default, when the same table is used multiple times as joined table, Izenda differentiate them by number as below.
+
 ![screenshot](/Guides/MVC-Integration/SiteLayout.pngd)
+
 Using Join Alias Textbox, user can distinguish the joined tables more clearly
+
 ![screenshot](/Guides/MVC-Integration/SiteLayout.pngd)
+
 **a.** After enabling Join Alias Textbox as below, type alias in the textbox. Click 'Update datasources aliases'.
 
 **b.** In FIELDS tab, the aliased joined tables appear as below
