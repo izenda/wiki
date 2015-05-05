@@ -51,7 +51,7 @@ Public Class CustomAdHocConfig
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
 
-        AdHocSettings.ShowJoinAliasTextboxes = false; // Disable join alias text boxes
+        AdHocSettings.ShowJoinAliasTextboxes = false // Disable join alias text boxes. By default, this is set to false.
 
         HttpContext.Current.Session("ReportingInitialized") = True
     End Sub
