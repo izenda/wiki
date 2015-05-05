@@ -68,7 +68,7 @@ By default, when the same table is used multiple times as joined table, Izenda d
 
 Using join alias textbox, user can distinguish the joined tables more clearly
 
-1. After enabling Join Alias Textbox as below, type alias in the textbox. Click 'Update datasources aliases'.
+**a.** After enabling Join Alias Textbox as below, type alias in the textbox. Click 'Update datasources aliases'.
 
-2. In FIELDS tab, the aliased joined tables appear as below
+**b.** In FIELDS tab, the aliased joined tables appear as below
 
