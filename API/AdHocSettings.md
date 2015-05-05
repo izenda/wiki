@@ -315,7 +315,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[ShowInvalidVizExportLink|/API/CodeSamples/ShowInvalidVizExportLink]]|Sets whether message "To view the interactive visualization please click this link." is displayed or not when charts of type visualization are exported to Word,Excel, and HTML|True|
 |Boolean|[[ShowInvertSummaryCheckbox|/API/CodeSamples/ShowInvertSummaryCheckbox]]|Gets or sets the value indicating whether "Invert" checkbox should be shown             in the summary tab.**(deprecated)**|False|
 |Boolean|[[ShowInvisible|/API/CodeSamples/ShowInvisible]]| Gets or sets the value indicating whether invisible checkboxes should be shown in the Izenda.AdHoc.AdHocSettings.FieldList. **(deprecated)**|False|
-|Boolean|[[ShowJoinAliasTextboxes|/API/CodeSamples/ShowJoinAliasTextboxes]]||False|
+|Boolean|[[ShowJoinAliasTextboxes|/API/CodeSamples/ShowJoinAliasTextboxes]]|Gets or sets the value indicating whether ShowJoinAliasTextboxes should be shown in the Izenda.AdHoc.AdHocSettings.JoinedTablesList.|False|
 |Boolean|[[ShowJoinDropDown|/API/CodeSamples/ShowJoinDropDown]]| Gets or sets the value indicating whether join type dropdown should be shown in the Izenda.AdHoc.AdHocSettings.JoinedTablesList. |False|
 |Boolean|[[ShowJustification|/API/CodeSamples/ShowJustification]]|Gets or sets the value indicating whether justification type should be            shown in the field tab.|True|
 |Boolean|[[ShowLinkFormats|/API/CodeSamples/ShowLinkFormats]]|This feature enables/disables the link format function options for fields in the fields tab of reportdesigner.**(deprecated)**|True|
