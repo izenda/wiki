@@ -408,7 +408,7 @@ public class MvcApplication : System.Web.HttpApplication
 **a.** Open _SiteLayout.cshtml in Views\Shared\ in Solution Explorer
 
 **b.** Find the below two lines in the body of html
-
+```html
 <div class="left-logo">
                     <img src="~/Resources/FromDLL/Resources/ModernImages/bi-logo.png" alt="Business intelligence" />      //top-left logo
                 </div>
@@ -422,7 +422,7 @@ public class MvcApplication : System.Web.HttpApplication
                         <text>
                          <a href="http://izenda.com" style="position: relative; top: 4px;"><img class="right-logo" src="~/Resources/FromDLL/Resources/ModernImages/IzendaNewLogoBlue.png" alt="Izenda Reports" /></a>
                         </text>
-                    }```html
+                    }
 
 
 
