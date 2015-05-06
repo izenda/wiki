@@ -459,6 +459,6 @@ In this guide, two images, Logo.png and batman.png, were put in the project fold
 <a href="http://batman.com" style="position: relative; top: 4px;"><img class="right-logo" src="~/batman.png" alt="Batman.Com" /></a> //top-right image
 ```
 
-The result should look as below
+Two top logos have changed as below
 ![Logo_Change](/Guides/MVC-Integration/Logo_Change.png)
 
