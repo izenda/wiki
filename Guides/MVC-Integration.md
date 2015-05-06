@@ -443,7 +443,6 @@ After Step#11, the Sample_MVCApp should build and work without a problem. To see
 **b.** Find below two lines in the body of the html and edit the source image directory, alt, and the link address for top-right image
 
 ```html
-
 <img src="~/Resources/FromDLL/Resources/ModernImages/bi-logo.png" alt="Business intelligence" />  //top-left image
 
 <a href="http://izenda.com" style="position: relative; top: 4px;"><img class="right-logo" src="~/Resources/FromDLL/Resources/ModernImages/IzendaNewLogoBlue.png" alt="Izenda Reports" /></a> //top-right image
@@ -455,14 +454,11 @@ After Step#11, the Sample_MVCApp should build and work without a problem. To see
 In this guide, two images, Logo.png and batman.png, were put in the project folder, /Sample_MVCApp, and the above two lines were edited as below 
 
 ```html
-
 <img src="~/Logo.png" alt="Batmans intelligence" />  //top-left image
 
 <a href="http://batman.com" style="position: relative; top: 4px;"><img class="right-logo" src="~/batman.png" alt="Batman.Com" /></a> //top-right image
-
 ```
 
-
-
-
+The result should look as below
+![Logo_Change](/Guides/MVC-Integration/Logo_Change.png)
 
