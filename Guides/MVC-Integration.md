@@ -410,23 +410,22 @@ public class MvcApplication : System.Web.HttpApplication
 **b.** Find the below two lines in the body of html
 ```html
 <div class="left-logo">
-                    <img src="~/Resources/FromDLL/Resources/ModernImages/bi-logo.png" alt="Business intelligence" />      //top-left logo
-                </div>
-                <div class="right-logo">
-                    @if (!String.IsNullOrEmpty(Izenda.AdHoc.AdHocSettings.ApplicationHeaderImageUrl)) {
-                        <text>
-                        <a href="http://izenda.com" style="position: relative; top: 4px;"><img class="right-logo" src="@Html.Raw(Izenda.AdHoc.AdHocSettings.ApplicationHeaderImageUrl)" alt="Izenda Reports" /></a>
-                        ></text>
-                    }
-                    else {
-                        <text>
-                         <a href="http://izenda.com" style="position: relative; top: 4px;"><img class="right-logo" src="~/Resources/FromDLL/Resources/ModernImages/IzendaNewLogoBlue.png" alt="Izenda Reports" /></a>
-                        </text>
-                    }
+<img src="~/Resources/FromDLL/Resources/ModernImages/bi-logo.png" alt="Business intelligence" />      //top-left logo
+</div>
+<div class="right-logo">
+@if (!String.IsNullOrEmpty(Izenda.AdHoc.AdHocSettings.ApplicationHeaderImageUrl)) {
+<text>
 
-
-
-         
+<a href="http://izenda.com" style="position: relative; top: 4px;"><img class="right-logo" src="@Html.Raw(Izenda.AdHoc.AdHocSettings.ApplicationHeaderImageUrl)" alt="Izenda Reports" /></a>>
+</text>
+ }else {
+                        
+<text>
+                         
+<a href="http://izenda.com" style="position: relative; top: 4px;"><img class="right-logo" src="~/Resources/FromDLL/Resources/ModernImages/IzendaNewLogoBlue.png" alt="Izenda Reports" /></a>
+                       
+</text>
+         }      
 
 ```
 
