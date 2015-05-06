@@ -403,8 +403,38 @@ public class MvcApplication : System.Web.HttpApplication
     }
 
 ```
+###Step 11. Change the Logo 
 
-###Step 11. Change the LicenseKey and ConnnectionString in Global.asax of project
+**a.** Open _SiteLayout.cshtml in Views\Shared\ in Solution Explorer
+
+**b.** Find the below two lines in the body of html
+
+<div class="left-logo">
+                    <img src="~/Resources/FromDLL/Resources/ModernImages/bi-logo.png" alt="Business intelligence" />      //top-left logo
+                </div>
+                <div class="right-logo">
+                    @if (!String.IsNullOrEmpty(Izenda.AdHoc.AdHocSettings.ApplicationHeaderImageUrl)) {
+                        <text>
+                        <a href="http://izenda.com" style="position: relative; top: 4px;"><img class="right-logo" src="@Html.Raw(Izenda.AdHoc.AdHocSettings.ApplicationHeaderImageUrl)" alt="Izenda Reports" /></a>
+                        ></text>
+                    }
+                    else {
+                        <text>
+                         <a href="http://izenda.com" style="position: relative; top: 4px;"><img class="right-logo" src="~/Resources/FromDLL/Resources/ModernImages/IzendaNewLogoBlue.png" alt="Izenda Reports" /></a>
+                        </text>
+                    }```html
+
+
+
+         
+
+```
+
+**c .** Each line corresponds to top-left and top-right logos respectively.
+
+
+
+###Step 12. Change the LicenseKey and ConnnectionString in Global.asax of project
 
  To get a new trial key, you may contact [sales@izenda.com](mailto:sales@izenda.com).
 
@@ -414,7 +444,7 @@ AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
 AdHocSettings.SqlServerConnectionString = @"INSERT_CONNECTION_STRING_HERE";
 
 ```
-###Step 12. Run it!
+###Step 13. Run it!
 
 After Step 11, the Sample_MVCApp should build and work without a problem. To see if Izenda is integrated with this web application,
 
