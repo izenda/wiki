@@ -83,6 +83,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Can I run javascript when a user clicks on a report element?|/FAQ/Questions/running-javascript-on-report-elements]]
 
 ##Scheduler
+
 - [[How do I use the Izenda Scheduler?|http://wiki.izenda.us/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler#Overnight-batch-report-processing]]
 
 ##Security
@@ -121,6 +122,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ##Misc.
 
+- [[How do I disable the redirect on the ReportList if I have no reports?|http://wiki.izenda.us/FAQ/Disabling-ReportList-Redirect]]
 - [[How do I turn off the screen size Responsive Grid?|http://wiki.izenda.us/FAQ/Responsive-Grid#Remove-Responsive-Grid]]
 - [[How do I make Responsive Grid browser aware?|http://wiki.izenda.us/FAQ/Responsive-Grid#Make-Responsive-Grid-Browser-Aware]]
 - [[How do I get the ReportList information to create my own ReportList?|FAQ/getting-reportlist-information]]
