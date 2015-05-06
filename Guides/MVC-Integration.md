@@ -451,6 +451,7 @@ After Step#11, the Sample_MVCApp should build and work without a problem. To see
 ```
 **c.** Run the application and check if the images appear as edited.
 
+
 In this guide, two images, Logo.png and batman.png, were put in the project folder, /Sample_MVCApp, and the above two lines were edited as below 
 
 ```html
