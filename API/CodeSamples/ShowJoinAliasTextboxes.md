@@ -70,7 +70,7 @@ By default, when the same table is used multiple times as joined table, Izenda d
 
 Using Join Alias Textbox, user can distinguish the joined tables more clearly
 
-**a.** Enable Join Alias Textbox. Refer to above [Global.asax](http://wiki.izenda.us/API/CodeSamples/ShowJoinAliasTextboxes#Global.asax-(C♯) )
+**a.** Enable Join Alias Textbox. Refer to above [Global.asax](http://wiki.izenda.us/API/CodeSamples/ShowJoinAliasTextboxes#About)
 
 **b.** In Join Alias Textbox, enter aliases and click 'Update datasources aliases'. 
 
