@@ -70,9 +70,16 @@ By default, when the same table is used multiple times as joined table, Izenda d
 
 Using Join Alias Textbox, user can distinguish the joined tables more clearly
 
-![screenshot](/Guides/MVC-Integration/SiteLayout.pngd)
+**a.** Enable Join Alias Textbox. Refer to [Global.asax]()
 
-**a.** After enabling Join Alias Textbox as below, type alias in the textbox. Click 'Update datasources aliases'.
+**b.** In Join Alias Textbox, enter aliases and click 'Update datasources aliases'. 
 
-**b.** In FIELDS tab, the aliased joined tables appear as below
+**c.**In FIELDS tab, the oined tables should appear as aliased as below 
+
+![JoinAlias](/Guides/MVC-Integration/JoinAlias2.png)
+
+
+
+
+
 
