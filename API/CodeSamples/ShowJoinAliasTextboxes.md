@@ -76,7 +76,7 @@ Using Join Alias Textbox, user can distinguish the joined tables more clearly
 
 **c.**In FIELDS tab, the oined tables should appear as aliased as below 
 
-![JoinAlias](/Guides/MVC-Integration/JoinAlias2.png)
+![JoinAlias](/API/CodeSamples/ShowJoinAliasTextboxes/JoinAlias2.png)
 
 
 
