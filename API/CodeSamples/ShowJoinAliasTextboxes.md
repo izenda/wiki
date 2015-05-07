@@ -59,7 +59,7 @@ End
 ```
 
 ##Screenshots
-![](/API/CodeSamples/ShowJoinAliasTextboxes/Aliasing_TextBox.png)
+![](/API/CodeSamples/ShowJoinAliasTextboxes/Aliasing_TextBox2.png)
 ![](/API/CodeSamples/ShowJoinAliasTextboxes/No_Aliasing_TextBox.png)
 
 ##Instruction
