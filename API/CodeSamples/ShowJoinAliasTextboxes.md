@@ -64,7 +64,7 @@ End
 
 ##Instruction
 
-By default, when the same table is used multiple times as joined table, Izenda differentiate them by number as below.
+By default, when the same table is used multiple times as joined table, Izenda differentiates them by number as below.
 
 ![JoinAlias](/API/CodeSamples/ShowJoinAliasTextboxes/JoinAlias.png)
 
