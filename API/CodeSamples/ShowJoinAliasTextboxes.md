@@ -79,6 +79,66 @@ Using Join Alias Textbox, user can distinguish the joined tables more clearly
 ![JoinAlias](/API/CodeSamples/ShowJoinAliasTextboxes/JoinAlias2.png)
 
 
+## How to implement 'join alias' via hardcoding
+
+Below is a sample code that shows how to hardcode aliasing specific table names
+
+```csharp
+public override void PreSaveReportSet(string name, ReportSet reportSet) {
+      //the collection of table names and the associated alias
+      Dictionary<string, string> tableNameToAlias = new Dictionary<string, string>();
+
+      //loop through the report's set of tables
+      foreach (JoinedTable jt in reportSet.JoinedTables) {
+        if (!String.IsNullOrEmpty(jt.Alias))
+          return;
+        if (!tableNameToAlias.ContainsKey(jt.TableName))
+          tableNameToAlias.Add(jt.TableName, LookupTableAlias(jt.TableName)); //Add the table and set the alias as the full name with special characters replaced
+      }
+      //Set all the tables in the report to have the table on the right side of the join reflect the alias of itself.
+      foreach (JoinedTable jt in reportSet.JoinedTables) {
+        jt.Alias = tableNameToAlias[jt.TableName];
+        if (!String.IsNullOrEmpty(jt.RightConditionTable))
+          jt.RightAlias = tableNameToAlias[jt.RightConditionTable];
+      }
+      //update the selected fields and filters on the report to reflect the new aliases of the joined tables
+      foreach (Report report in reportSet.Reports.AllValues) {
+        foreach (Field field in report.Fields)
+          if (field.DbColumn != null && field.DbColumn.Table != null)
+            field.AliasTable = tableNameToAlias[field.DbColumn.Table.FullName];
+        foreach (Filter filter in report.Filters)
+          if (filter.dbColumn != null && filter.dbColumn.Table != null)
+            filter.AliasTable = tableNameToAlias[filter.dbColumn.Table.FullName];
+      }
+      //update the selected filters on the entire reportSet to reflect the new aliases of the joined tables (in case of a dashboard)
+      foreach (Filter filter in reportSet.Filters)
+        if (filter.dbColumn != null && filter.dbColumn.Table != null)
+          filter.AliasTable = tableNameToAlias[filter.dbColumn.Table.FullName];
+    }
+
+
+// In this case, 'Orders' table is to be aliased as 'o1','Customers' as 'c1','Order Details' as 'od1' and so on
+    public string LookupTableAlias(string tableName) {
+      switch (tableName) {
+        case "[dbo].[Orders]":
+          return "o1";
+        case "[dbo].[Customers]":
+          return "c1";
+        case "[dbo].[Order Details]":
+          return "od1";
+        case "[dbo].[Employees]":
+          return "e1";
+        case "[dbo].[Suppliers]":
+          return "s1";
+        default:
+          return tableName.Replace("[", "").Replace("]", "").Replace(".", "_");
+      }
+
+
+```
+
+
+
 
 
 
