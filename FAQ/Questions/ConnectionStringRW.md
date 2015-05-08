@@ -1,10 +1,9 @@
-##Question
+##About
 
-How do I add Read-Write user permission to DB?
+ConnectionStringRW is one of Izenda Driver's properties, which enables users to have Read-Write access permission to Database
 
-##Answer
 
-Using 'ConnectionStringRW' property, user permissions to DB can be specified. This property should be assigned similarly to normal connection string as below - in the initialization of reporting.
+Below is a sample global.asax using the ConnectionStringRW setting. The code block will appear within <script runat="server"> </script> tags within global.asax
 
 ```csharp
 
@@ -21,6 +20,58 @@ Using 'ConnectionStringRW' property, user permissions to DB can be specified. Th
       }
 }
 ```
+
+
+
+##Question
+
+How do I add Read-Write user permission to DB?
+
+##Answer
+
+Using 'ConnectionStringRW' property, user permissions to DB can be specified. This property should be assigned similarly to normal connection string as below - in the initialization of reporting.
+
+##Global.asax (C♯)
+```csharp
+
+ public class CustomAdHocConfig : FileSystemAdHocConfig {
+    public static void InitializeReporting() {
+      //Check to see if we've already initialized.
+      if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+        return;
+      //Initialize System
+      AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
+      AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
+      AdHocContext.Driver.ConnectionStringRW = "INSERT_CONNECTION_STRING_HERE";   // ConnectionStringRW was used
+      ...
+      }
+}
+```
+##Global.asax (VB.NET)
+
+```visualbasic
+
+'main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
+Public Class CustomAdHocConfig
+    Inherits Izenda.AdHoc.DatabaseAdHocConfig
+
+    Shared Sub InitializeReporting()
+        'Check to see if we've already initialized
+        If HttpContext.Current.Session Is Nothing OrElse HttpContext.Current.Session("ReportingInitialized") IsNot Nothing Then
+            Return
+        'Initialize System
+        AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
+        AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
+        AdHocContext.Driver.ConnectionStringRW = "INSERT_CONNECTION_STRING_HERE
+
+
+    End Sub
+
+End Class
+```
+
+
+
 If it's not assigned, Izenda as before uses Driver.ConnectionString for all operations against DB
 
 
