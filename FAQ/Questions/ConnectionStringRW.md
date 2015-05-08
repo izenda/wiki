@@ -5,8 +5,6 @@
 ##About
 
 ConnectionStringRW is one of Izenda Driver's properties, which enables users to have Read-Write access permission to Database
-
-
 Below is a sample global.asax using the ConnectionStringRW setting. The code block will appear within <script runat="server"> </script> tags within global.asax
 
 ##Global.asax (C♯)
