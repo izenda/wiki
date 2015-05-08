@@ -5,32 +5,6 @@ ConnectionStringRW is one of Izenda Driver's properties, which enables users to 
 
 Below is a sample global.asax using the ConnectionStringRW setting. The code block will appear within <script runat="server"> </script> tags within global.asax
 
-```csharp
-
- public class CustomAdHocConfig : FileSystemAdHocConfig {
-    public static void InitializeReporting() {
-      //Check to see if we've already initialized.
-      if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
-        return;
-      //Initialize System
-      AdHocSettings.LicenseKey = " License Key Here";
-      AdHocSettings.SqlServerConnectionString = @" Connection String Here";
-      AdHocContext.Driver.ConnectionStringRW = @" Connection String RW Here";   // ConnectionStringRW was used
-
-      }
-}
-```
-
-
-
-##Question
-
-How do I add Read-Write user permission to DB?
-
-##Answer
-
-Using 'ConnectionStringRW' property, user permissions to DB can be specified. This property should be assigned similarly to normal connection string as below - in the initialization of reporting.
-
 ##Global.asax (C♯)
 ```csharp
 
@@ -47,6 +21,7 @@ Using 'ConnectionStringRW' property, user permissions to DB can be specified. Th
       }
 }
 ```
+
 ##Global.asax (VB.NET)
 
 ```visualbasic
@@ -62,13 +37,26 @@ Public Class CustomAdHocConfig
         'Initialize System
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
-        AdHocContext.Driver.ConnectionStringRW = "INSERT_CONNECTION_STRING_HERE
+        AdHocContext.Driver.ConnectionStringRW = "INSERT_CONNECTION_STRING_HERE"
 
 
     End Sub
 
 End Class
 ```
+
+
+
+##Question
+
+How do I add Read-Write user permission to DB?
+
+##Answer
+
+Using 'ConnectionStringRW' property, user permissions to DB can be specified. This property should be assigned similarly to normal connection string as below - in the initialization of reporting.
+
+
+
 
 
 
