@@ -64,9 +64,9 @@ FusionDriver fd = new FusionDriver();
 
 2) If ConnectionStringRW is also assigned, then Izenda will
 
-  a) Use Driver.ConnectionString for Read-Only operations against DB, thus Driver.ConnectionString can have ReadOnly access to the DB
+  ---a) Use Driver.ConnectionString for Read-Only operations against DB, thus Driver.ConnectionString can have ReadOnly access to the DB
 
-  b) Use Driver.ConnectionStringRW for Read-Write operations. At this moment this includes only following:
+  ---b) Use Driver.ConnectionStringRW for Read-Write operations. At this moment this includes only following:
 
     - Create Reports table if it doesn't exist
 
