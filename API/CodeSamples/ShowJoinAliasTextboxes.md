@@ -79,8 +79,9 @@ Using Join Alias Textbox, user can distinguish the joined tables more clearly
 ![JoinAlias](/API/CodeSamples/ShowJoinAliasTextboxes/JoinAlias2.png)
 
 
-## How to hardcode 'join ali
-Below is a sample code that shows how to hardcode aliasing specific table names. 
+## How to hardcode 'join alias'
+
+Below is a sample code that shows how to hardcode aliasing specific table names. In this sample, Aliased table names will appear in FIELDS tab once the report is saved.
 
 ```csharp
   public class CustomAdHocConfig : FileSystemAdHocConfig {
