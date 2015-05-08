@@ -47,6 +47,16 @@ Public Class CustomAdHocConfig
 End Class
 ```
 
+Though ConnectionStringRW doesn't require Fusion, if you want to use Fusion together with ConnectionStringRW, read-only connection strings should be used everywhere in Fusion/DB initialization, and assign read/write connection string here:
+
+```csharp
+FusionDriver fd = new FusionDriver();
+      fd.AddConnection("_alias_", FusionConnectionType.MsSql, "_read_only_connection_string_");
+      AdHocContext.Driver = fd;
+      AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+      ((DatabaseAdHocConfig) AdHocSettings.AdHocConfig).SavedReportsDriver = new MSSQLDriver("_read_only_connection_string_");
+      ((DatabaseAdHocConfig) AdHocSettings.AdHocConfig).SavedReportsDriver.ConnectionStringRW = "_read/write_connection_string_";
+```
 
 ##How ConnectionStringRW works
 
@@ -73,3 +83,7 @@ End Class
 
 ##Usage
 ConnectionStringRW can be used always. General case is just safety improvement - if user specifies ConnectionStringRW, and uses read-only DB account for usual Driver.ConnectionString - he can be 100% sure that users will not be able to modify anything in DB by any means - like using SQL injections. Just because everything which user can input - goes to DB via read-only connection string.
+
+##
+
+
