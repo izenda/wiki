@@ -1,5 +1,4 @@
-#SqlServerConnectionString
-
+#ConnectionStringRW
 [[_TOC_]]
 
 
