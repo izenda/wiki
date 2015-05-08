@@ -79,11 +79,13 @@ Using Join Alias Textbox, user can distinguish the joined tables more clearly
 ![JoinAlias](/API/CodeSamples/ShowJoinAliasTextboxes/JoinAlias2.png)
 
 
-## How to implement 'join alias' via hardcoding
-
-Below is a sample code that shows how to hardcode aliasing specific table names
+## How to hardcode 'join ali
+Below is a sample code that shows how to hardcode aliasing specific table names. 
 
 ```csharp
+  public class CustomAdHocConfig : FileSystemAdHocConfig {
+public static void InitializeReporting() {
+...}
 public override void PreSaveReportSet(string name, ReportSet reportSet) {
       //the collection of table names and the associated alias
       Dictionary<string, string> tableNameToAlias = new Dictionary<string, string>();
@@ -133,7 +135,7 @@ public override void PreSaveReportSet(string name, ReportSet reportSet) {
         default:
           return tableName.Replace("[", "").Replace("]", "").Replace(".", "_");
       }
-
+}// End of CustomAdHocConfig class
 
 ```
 
