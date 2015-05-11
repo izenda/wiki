@@ -144,3 +144,4 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [How do I customize the English.resx file?](http://wiki.izenda.us/FAQ/How-do-i-customize-the-English-dot-resx-file)
 - [[Is Izenda 508 Commpliant?|http://wiki.izenda.us/FAQ/Questions/Section508-compliance]]
 - [[Izenda Caching Lifecycle|http://wiki.izenda.us/FAQ/Izenda Caching Lifecycle]]
+- [[How to alias joined tables names|http://wiki.izenda.us/API/CodeSamples/ShowJoinAliasTextboxes]]
