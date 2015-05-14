@@ -451,16 +451,17 @@ After Step#11, the Sample_MVCApp should build and work without a problem. To see
 **c.** Run the application and check if the images appear as edited.
 
 
-In this guide, two images, Logo.png and batman.png, were put in the project folder, /Sample_MVCApp, and the above two lines were edited as below 
+In this guide, two images, Logo.png and SeaEagle.png, were put in the project folder, /Sample_MVCApp, and the above two lines were edited as below 
 
 ```html
-<img src="~/Logo.png" alt="Batmans intelligence" />  //top-left image
+<img src="~/Logo.png" alt="Angry Sea Eagle" />  //top-left image
 
-<a href="http://batman.com" style="position: relative; top: 4px;"><img class="right-logo" src="~/batman.png" alt="Batman.Com" /></a> //top-right image
+<a href="http://SeaEagle.com" style="position: relative; top: 4px;"><img class="right-logo" src="~/SeaEagle.png" alt="SeaEagle.Com" /></a> //top-right image
 ```
 
 
 
 Two top logos have changed as below
 
+![Test](/Guides/MVC-Integration/Logo_Change2.png)
 
