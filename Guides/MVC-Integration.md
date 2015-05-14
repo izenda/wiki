@@ -462,5 +462,5 @@ In this guide, two images, Logo.png and batman.png, were put in the project fold
 
 
 Two top logos have changed as below
-![Logo_Change](/Guides/MVC-Integration/Logo_Change1.png)
+
 
