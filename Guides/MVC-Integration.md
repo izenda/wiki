@@ -1,4 +1,4 @@
-#Izenda MVC Kit Integration (Phase I) Guide 
+#Izenda MVC Kit Integration Guide Phase I 
 
 [[_TOC_]]
 
@@ -465,3 +465,4 @@ Two top logos have changed as below
 
 ![Test](/Guides/MVC-Integration/Logo_Change2.png)
 
+#Izenda MVC Kit Integration Guide Phase II 
