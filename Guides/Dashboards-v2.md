@@ -4,7 +4,8 @@
 
 #Guide
 ##Creating a New Dashboard
-### Click on the arrow to expose the drop down menu under New
+
+**a.** Click on the arrow to expose the drop down menu under New
 ![](/Guides/Dashboards-v2/1.png)
 Select Dashboard from the Menu drop down. A New Blank Dashboard will be exposed with a blank tile.
 Click on the + sign to add a Report Part to the new Dashboard
