@@ -74,6 +74,42 @@ The additional following menu items are available for use on the back of each da
 |![](/Guides/Dashboards-v2/20.png)|Add a new report part to tile (change report part selected from original report)|
 |![](/Guides/Dashboards-v2/21.png)|Change the Number of Records to be displayed in the tile|
 
+
+##Viewing an Existing Dashboard
+
+Click on Dashboard at the Top Navigation Bar
+
+![](/Guides/Dashboards-v2/22.png)
+
+Dashboards will be displayed as tabs in the window with the active window highlighted from below
+
+![](/Guides/Dashboards-v2/23.png)
+
+
+##Main Dashboard Menu
+
+This menu offers the following menu options are available from the menu button in the top left navigation bar when expanded
+
+![](/Guides/Dashboards-v2/24.png)
+
+![](/Guides/Dashboards-v2/25.png)
+
+|**Appearance**|**Description**|
+|:------------:|:-------------:|
+|![](/Guides/Dashboards-v2/26.png)|Collapse Menu|
+|![](/Guides/Dashboards-v2/27.png)|Presentation Mode – Allows the user to scroll through the Dashboard tiles in a carousel |
+|![](/Guides/Dashboards-v2/28.png)|Create a New Dashboard|
+|![](/Guides/Dashboards-v2/29.png)||
+|![](/Guides/Dashboards-v2/30.png)|Share Dashboard with other users |
+|![](/Guides/Dashboards-v2/31.png)|Schedule Dashboard|
+|![](/Guides/Dashboards-v2/32.png)|Print Dashboard 
+⋅⋅*Print Dashboard HTML
+⋅⋅*Print Report PDF
+|
+
+
+
+
 #Features
 
 #Installation
