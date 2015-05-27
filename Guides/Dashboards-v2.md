@@ -9,12 +9,18 @@
 
 ![](/Guides/Dashboards-v2/1.png)
 
-Select Dashboard from the Menu drop down. A New Blank Dashboard will be exposed with a blank tile.
-Click on the + sign to add a Report Part to the new Dashboard
+**b.** Select Dashboard from the Menu drop down. A New Blank Dashboard will be exposed with a blank tile.
+
+**c.** Click on the + sign to add a Report Part to the new Dashboard
+
  ![](/Guides/Dashboards-v2/2.png)
+
 A New window will be displayed allowing you to select the report the user would like to add to the dashboard
+
 ##Adding Report Parts to the Dashboard Tile
+
  ![](/Guides/Dashboards-v2/3.png)
+
 The user can now select a report to use in the dashboard
 Once a report is selected, the user is presented with a window displaying all of the report parts as options to add to the new dashboard. These can include charts, maps, summaries or report details.
  ![](/Guides/Dashboards-v2/4.png)
