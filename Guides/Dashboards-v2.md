@@ -2,6 +2,12 @@
 
 #Introduction
 
+#Guide
+##Creating a New Dashboard
+### Step 1. Click on the arrow to expose the drop down menu under New
+![](/Guides/Dashboards-v2/1.png)
+
+ 
 #Features
 
 #Installation
