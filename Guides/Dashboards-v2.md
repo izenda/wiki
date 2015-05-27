@@ -69,8 +69,10 @@ The additional following menu items are available for use on the back of each da
 |![](/Guides/Dashboards-v2/15.png)|Print tile report – prints the tile from dashboard|
 |![](/Guides/Dashboards-v2/16.png)|Export tile report to Excel|
 |![](/Guides/Dashboards-v2/17.png)|Opens the Report the tile is created from in report editor|
-
-
+|![](/Guides/Dashboards-v2/18.png)|Opens the Report the tile is created from in the report viewer|
+|![](/Guides/Dashboards-v2/19.png)|Reloads the tile from report|
+|![](/Guides/Dashboards-v2/20.png)|Add a new report part to tile (change report part selected from original report)|
+|![](/Guides/Dashboards-v2/21.png)|Change the Number of Records to be displayed in the tile|
 
 #Features
 
