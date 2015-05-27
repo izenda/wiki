@@ -63,6 +63,15 @@ The additional following menu items are available for use on the back of each da
 ![](/Guides/Dashboards-v2/13.png)
 ![](/Guides/Dashboards-v2/14.png)
 
+
+|**Appearance**|**Description**|
+|:------------:|:-------------:|
+|![](/Guides/Dashboards-v2/15.png)|Print tile report – prints the tile from dashboard|
+|![](/Guides/Dashboards-v2/16.png)|Export tile report to Excel|
+|![](/Guides/Dashboards-v2/17.png)|Opens the Report the tile is created from in report editor|
+
+
+
 #Features
 
 #Installation
