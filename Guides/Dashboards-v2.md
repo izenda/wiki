@@ -31,10 +31,25 @@ Tiles can also be moved around the Dashboard. When the tile shows a green hue, i
 Properly Positioned Tile for move (green hue)
 ![](/Guides/Dashboards-v2/8.png)
 
+Improperly Placed Tile for move (red hue)
 
+![](/Guides/Dashboards-v2/9.png)
 
+##Tile Customizations
 
+There are several options available for customizing a tile. These options can be found by clicking on the menu button in the top right corner of the specific tile. The tile will then spin to the reverse side, revealing the additional options. To remove a tile, simply click the “X” in the top right corner of the tile.
 
+![](/Guides/Dashboards-v2/10.png)
+![](/Guides/Dashboards-v2/11.png)
+
+The user can now choose to add a Tile that is displayed on the front of the tile along with a Description that is also displayed on the tile
+
+![](/Guides/Dashboards-v2/12.png)
+
+The additional following menu items are available for use on the back of each dashboard tile
+
+![](/Guides/Dashboards-v2/13.png)
+![](/Guides/Dashboards-v2/14.png)
 
 #Features
 
