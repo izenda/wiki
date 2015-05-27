@@ -93,3 +93,7 @@ This lesson focuses on the Instant Report designer, which acts as a 'sketchpad' 
 ##[[Section 18 - Izenda Vision|/Guides/Izenda-Vision]]
 
 This lesson focuses on Izenda Vision.
+
+## Section 19 - Dashboards 2.0
+
+This lesson focuses on the new dashboards in Izenda 6.9
