@@ -18,6 +18,7 @@
 A New window will be displayed allowing you to select the report the user would like to add to the dashboard
 
 
+
 ##Adding Report Parts to the Dashboard Tile
 
  ![](/Guides/Dashboards-v2/3.png)
