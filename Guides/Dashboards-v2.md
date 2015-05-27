@@ -24,6 +24,7 @@ A New window will be displayed allowing you to select the report the user would 
 
 The user can now select a report to use in the dashboard
 Once a report is selected, the user is presented with a window displaying all of the report parts as options to add to the new dashboard. These can include charts, maps, summaries or report details.
+
  ![](/Guides/Dashboards-v2/4.png)
 
  ![](/Guides/Dashboards-v2/5.png)
