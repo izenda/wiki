@@ -280,7 +280,8 @@ Note: The Visualizations help text contains a link directing the user to the Vis
 * FB-17856: Fixed Heatmap visualization vertical justification and size
 * FB-17857: Fixed false messages upon 2nd+ saves in the Designer.
 * FB-17861: Added percents to animated half circle gauge and implemented percentage values in animated gauges
-* FB-17870: Fixed Equals(Select) filters in the Designe6c54ac5 FB-17829: Fixed GaugeRadial.png resource loading
+* FB-17870: Fixed Equals(Select) filters in the Designer 
+* FB-17829: Fixed GaugeRadial.png resource loading
 * FB-17940: Fixed crash when fieldForHaving is null
 * FB-17959: Added using _global_ report if report for current user tenant is not found
 
