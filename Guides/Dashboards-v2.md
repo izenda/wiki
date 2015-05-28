@@ -26,13 +26,11 @@ Izenda now offers its new Angular.js Dashboard Designer / Viewer with the platfo
 1. Download the full MVC kit for 6.9
 2. Copy the bin and resources from the kit downloaded into your project
 3. Add:  _Dashboards-New-Head-Angular, _Dashboards-New-Body-Angular and Dash files to Views/Reporting. Ensure they are included in the project.
-
 4. Update the IzendaReportingController.cs to include
     public ActionResult Dash() {
 
       return View();
     }
-
 5. In the global, update the following: AdHocSettings.DashboardViewer = "Dash" and AdHocSettings.DashboardDesignerUrl = "Dash";
 
 ### Tips
