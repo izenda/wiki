@@ -141,7 +141,9 @@ This menu offers the following menu options are available from the menu button i
 |![](/Guides/Dashboards-v2/27.png)|Presentation Mode – Allows the user to scroll through the Dashboard tiles in a carousel |
 |![](/Guides/Dashboards-v2/28.png)|Create a New Dashboard|
 |![](/Guides/Dashboards-v2/29.png)||
-|![](/Guides/Dashboards-v2/30.png)|Share Dashboard with other users |
-|![](/Guides/Dashboards-v2/31.png)|Schedule Dashboard|
-|![](/Guides/Dashboards-v2/32.png)|Print Dashboard ⋅⋅*Print Dashboard HTML⋅⋅*Print Report PDF|
-
+|![](/Guides/Dashboards-v2/30.png)|View Filters – Each report in the dashboard must share the same filter to be displayed |
+|![](/Guides/Dashboards-v2/31.png)|Share Dashboard with other users |
+|![](/Guides/Dashboards-v2/32.png)|Schedule Dashboard|
+|![](/Guides/Dashboards-v2/33.png)|Print Dashboard Print Dashboard HTML Print Report PDF|
+|![](/Guides/Dashboards-v2/34.png)|Save Dashboard Save Dashboard Save Dashboard as|
+|![](/Guides/Dashboards-v2/35.png)|Change Dashboard Background Change Background Color Select Background Color Rotate Select Image for Background|
