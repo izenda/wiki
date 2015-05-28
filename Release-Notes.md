@@ -4,7 +4,7 @@
 # 6.9.0.1 (May 28, 2015)
 
 ## Important Note about 6.9:
-**The command AdHocSettings.PrintMode is now deprecated. It has been replaced with AdHocSettings.PDFPrintMode which is a string that will allow you to select between EO, iTextSharp and PhantomJS  PDF export engines. Please ensure that you have replaced this variable before running 6.9. AdHocSettings.ShowHtmlButton and AdHocSettings.ShowPdfButton have been introduced to specific control over the appearance of said buttons.**
+**The command AdHocSettings.PrintMode is now deprecated. It has been replaced with AdHocSettings.PDFPrintMode will allow you to select between PDFMode.EO, PDFMode.iTextSharp and PDFMode.PhantomJS  PDF export engines. Please ensure that you have replaced this variable before running 6.9. AdHocSettings.ShowHtmlButton and AdHocSettings.ShowPdfButton have been introduced to specific control over the appearance of said buttons.**
 
 ## New Features: 
 * **Auto-Gauges** - A new set of four gauges with a modern look and feel.
