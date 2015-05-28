@@ -13,7 +13,7 @@
 * **Pivoted Analysis Grid** - New functionality offering a better breakdown of data over categories or periods of time
 
 ##Enhancements:
-* **Visual Data Sources** - A convenient way to use an existing report as a data source. Click [here](http://wiki.izenda.us/Virtualdatasource) for more information.
+* **Virtual Data Sources** - A convenient way to use an existing report as a data source. Click [here](http://wiki.izenda.us/Virtualdatasource) for more information.
 
 
 ## Fixes:
