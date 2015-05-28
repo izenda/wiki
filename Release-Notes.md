@@ -1,6 +1,85 @@
 [[_TOC_]]
 
 
+# 6.9.0.1 (May 28, 2015)
+
+## Important Note about 6.9:
+**The command AdHocSettings.PrintMode is now deprecated. It has been replaced with AdHocSettings.PDFPrintMode which is a string that will allow you to select between EO, iTextSharp and PhantomJS  PDF export engines. Please ensure that you have replaced this variable before running 6.9. AdHocSettings.ShowHtmlButton and AdHocSettings.ShowPdfButton have been introduced to specific control over the appearance of said buttons.**
+
+## New Features: 
+* **Auto-Gauges** - A new set of four gauges with a modern look and feel.
+* **Dashboards 2.0** - A completely overhauled module which provides greater control over the look and feel of your dashboards. Learn how to install and use Dashboards 2.0 [here](http://wiki.izenda.us/Guides/Dashboards-v2).
+* **PhantomJS Exporter** - An additional exporter emphasizing speed. It uses an EXE on the server instead of a DLL to move processing PDFs to a different thread than the Izenda's regular processing. Read more about it [here](http://wiki.izenda.us/API/CodeSamples/PdfPrintMode#PdfPrintMode).
+* **Pivoted Analysis Grid** - New functionality offering a better breakdown of data over categories or periods of time
+
+##Enhancements:
+* **Visual Data Sources** - A convenient way to use an existing report as a data source. Click [here](http://wiki.izenda.us/Virtualdatasource) for more information.
+
+
+## Fixes:
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|FB:10310|Report Design|Charts|Implemented Auto Gauges with four styles: Simple, Linear, Round and Trending|
+|FB:13120|Dashboards|UI|New Dashboards Support|
+|FB:14686|Report Design|Analysis Grid|Fixed issues around alignment with Analysis Grid and Pivoted Analysis Grid|
+|FB:15484|Dashboards|Filters|Added cascading for dashboard filters..|
+|FB:18052|UI|Optimization|Optimized Mobile Support|
+|FB:18253|API|Joining|AdHocSettings.TrimTimeInJoins setting added to eliminate time stamp from joins|
+|FB:18285|UI|Charts|Fixed minimizeGridWidth when switching from Instant Report to Report Designer/Viewer|
+|FB:18348|UI|Gauge|Implemented formatting value for gauges|
+|FB:18350|Report Design|Auto Chart|Implemented aggregate function support in the Auto Chart visualization and improved general date behavior|
+|FB:18457|Dashboards|Filters|Apply URL filters parameters to the Dashboard filters|
+|FB:18572|API|Filters|Now able to specify column name in different formats for the hidden filter|
+|FB:18575|API|Caching|Changed default QueryCachingTime value from 5 min to 1 min to maintain data relevance|
+|FB:18615|Report Viewer|Export|AdHocSettings.EOPdfLoadWaitTime setting added to give users the ability to set the loading timeout for a PDF export|
+|FB:18844|API|Optimization|Additional security optimizations|
+|FB:18900|API|Filters|Properly handle unicode strings in Filters|
+|FB:18975|Report Viewer|Charts|Removed halo effect of Pie chart (Highcharts) when hoving cursor over pie piece|
+|FB:18979|Report List|UI|Corrected size and position of the dashboards icons when zooming out|
+|FB:18996|Report Viewer|Filters|Fixed not showing filter name in case of Equals(Autocomplete).|
+|FB:19010|Report Design|UI|Made AdvancedProperties modified flag work for all changed properties|
+|FB:19072|Report Design|UI|Implemented changing of the chart labels when turned on/off "Horizontal" checkbox.|
+|FB:19086|Report Design|Forms|Fixed summary causing issues in forms|
+|FB:19098|Dashboards|Optimization|Fixed Dashboards page issue related to single quote in dashboard name|
+|FB:19100|UI|Optimization|Do not show empty data source categories|
+|FB:19115|Report Design|Charts|Fixed Dundas Bar chart numeric labels handling|
+|FB:19120|API|Saving|Fixed null reference exception when re-saving report|
+|FB:19139|Report Design|Visualization|Fixed inconsistency of items and columns in the Matrix visualization.|
+|FB:19144|Instant Reports|Auto Chart|Fix for correct hiding Auto Chart icon on the Instant Report page.|
+|FB:19155|Report Design|Expressions|Support zero-argument SQL functions in the Expressions.|
+|FB:19160|Report Design|UI|Manual field descriptions are now changed when a new column or function is selected|
+|FB:19173|API|Optimization|Made unnecessary protections against sql injections in 5 places|
+|FB:19183|API|Charts|Enabled custom filters to be used in charts|
+|FB:19203|UI|Optimization|Html Print and Pdf Print settings reorganized|
+|FB:19216|Report Design|Expressions|Group By Expression feature implemented|
+|FB:19221|Report Design|Optimization|Properly sort data sources within each category|
+|FB:19222|Report Viewer|Filters|Fixed issue with Equals(Field) operator|
+|FB:19223|API|Caching|IvalidateSchemaCache improved to update OperativeSchema with AdHocSettings.CacheSchema = false|
+|FB:19224|Instant Reports|Optimization|Optimization of JavaScript on Instant Report page for search|
+|FB:19240|Report Design|Visualization|Added user friendly visualization errors.|
+|FB:19242|API|Optimization|Added error message for failed requests|
+|FB:19246|UI|Optimization|Fixed share modal dialog|
+|FB:19247|UI|Optimization|Appropriately scale windows with screen ratios so that windows are too large to make buttons accessable|
+|FB:19274|API|Optimization|Prevented possibility to get contents of files from site root folder via rs.aspx|
+|FB:19278|API|Optimization|ReImplemented AdHocSettings.Culture to work correctly for dates|
+|FB:19285|Report Design|UI|Datasources are no longer lost when switching from Advanced to Simple Datasource Selection modes|
+|FB:19292|Report Design|Optimization|Fixed Value Ranges/Cell Highlight when using Arithmetic.|
+|FB:19293|API|Optimization|Fixed issue with cultures like "zh-zht"|
+|FB:19317|Report Viewer|Saving|Implemented multilevel categories support in reportViewer save-as dialog|
+|FB:19321|Report Viewer|Export|Added AdHocSettings.ConvertNullToEmptyString to allow a blank to display in outputs instead of (NULL)|
+|FB:19325|API|Optimization|Localization resources loading from the shared folder fixed|
+|FB:19334|Report Design|Saving|Fixed disappearing controls after cancelling a save|
+|FB:19351|API|Optimization|Removed erroneous node in "WHERE" clause in case of left outer join|
+|FB:19360|Report Design|UI|Fixed Visualization localization which resulted in the word Heatmap not being displayed|
+|FB:19397|API|Optimization|Removed json length limitation|
+|FB:19456|Report Viewer|Export|Fixed exporting of all visualizations.|
+|FB:19524|Report Viewer|Optimization|Fixed not showing loading icon in ReportViewer.|
+|FB:19542|Report Viewer|Visualization|Fixed issue with Visualizations not centering|
+|FB:19706|API|Fields|Properly show currency format according to the AdHocSettings.Culture setting|
+|FB:19719|Report Design|Auto Chart|Fixed Auto-Chart aggregate function error.|
+
+
 # 6.8.0.8 (April 21, 2015)
 
 
@@ -83,7 +162,7 @@ Note: The Visualizations help text contains a link directing the user to the Vis
 
 **[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
 
-Note: The Visualizations help text contains a link directing the user to the Visualization feature page on the Izenda Wiki. If you would like to remove this like, you can modify the Doc.html files within the Resources/Vis folder for each chart type.
+Note: The Visualizations help text contains a link directing the user to the Visualization feature page on the Izenda Wiki. If you would like to remove this link, you can modify the Doc.html files within the Resources/Vis folder for each chart type.
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
