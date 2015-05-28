@@ -1,15 +1,41 @@
 [[_TOC_]]
 
 #Introduction
+Izenda now offers its new Angular.js Dashboard Designer / Viewer with the platform’s latest update to 6.9. Once implemented, any existing dashboards will automatically convert to the new dashboard format. While previous versions were limited to a static structure for the dashboard, tiles can now be resized. Users can add new tiles to any point on the grid in the Dashboard Designer. The dashboard displays with more fluid animation as well. The new Dashboard Designer/Viewer also includes a presentation mode, which allows the user to slide through dashboard tiles on a carousel.
+
 
 #Features
 
-* Intuitive Creation Process
-* User Friendly User Interface
+* New responsive Angular.js Dashboards 
+* User friendly user interface
 * Modern Look and Feel
-* Movable and Resizable Cells
-* Presentation Mode to scroll through Full Screen Dashboard Tiles
+* Movable and resizable tiles
+* Presentation Mode to scroll through full screen dashboard tiles
 
+#Installation
+
+##Webforms
+
+1. Update as normal by downloading and replacing the bin and resources folder
+2. Download the full Webforms Kit and take the Dash.aspx file and copy it to your project.
+1. Update Dashboards.Master
+3. In the global, update the dashboard viewer setting to AdHocSettings.DashboardViewer = "Dash.aspx";
+
+##MVC
+
+1. Download the full MVC kit for 6.9
+2. Copy the bin and resources from the kit downloaded into your project
+3. Add:  _Dashboards-New-Head-Angular, _Dashboards-New-Body-Angular and Dash files to Views/Reporting. Ensure they are included in the project.
+4. Update the IzendaReportingController.cs to include
+    public ActionResult Dash() {
+
+      return View();
+    }
+5. In the global, update the following: AdHocSettings.DashboardViewer = "Dash" and AdHocSettings.DashboardDesignerUrl = "Dash";
+
+### Tips
+* When upgrading, ensure log4net.dll and log4net.xml are in the Bin folder
+* If you get an error stating System.Web.Mvc or System.Web.Mvc.Ajax are not in the namespace, right-click the file in the references, click properties and ensure Copy Local is true.
 
 #Guide
 ##Creating a New Dashboard
@@ -115,30 +141,7 @@ This menu offers the following menu options are available from the menu button i
 |![](/Guides/Dashboards-v2/27.png)|Presentation Mode – Allows the user to scroll through the Dashboard tiles in a carousel |
 |![](/Guides/Dashboards-v2/28.png)|Create a New Dashboard|
 |![](/Guides/Dashboards-v2/29.png)||
-|![](/Guides/Dashboards-v2/30.png)|View Filters – Each report in the dashboard must share the same filter to be displayed  |
-|![](/Guides/Dashboards-v2/31.png)|Share Dashboard with other users |
-|![](/Guides/Dashboards-v2/32.png)|Schedule Dashboard|
-|![](/Guides/Dashboards-v2/33.png)|Print Dashboard ⋅⋅*Print Dashboard HTML⋅⋅*Print Report PDF|
-|![](/Guides/Dashboards-v2/34.png)|Save Dashboard ⋅⋅*Print Dashboard HTML⋅⋅*Print Report PDF|
-|![](/Guides/Dashboards-v2/35.png)|Change Dashboard Background ⋅⋅*Print Dashboard HTML⋅⋅*Print Report PDF|
+|![](/Guides/Dashboards-v2/30.png)|Share Dashboard with other users |
+|![](/Guides/Dashboards-v2/31.png)|Schedule Dashboard|
+|![](/Guides/Dashboards-v2/32.png)|Print Dashboard ⋅⋅*Print Dashboard HTML⋅⋅*Print Report PDF|
 
-
-
-#Installation
-
-##Webforms
-
-1. Update as normal by downloading and replacing the bin and resources folder
-2. Download the Webforms Kit and take the Dash.aspx file and copying it to your project.
-3. In the global, update the dashboard viewer setting to AdHocSettings.DashboardViewer = "Dash.aspx";
-
-##MVC
-
-1. Update as normal by downloading and replacing the bin and resources folder
-2. Download the MVC kit for 6.9 and add the new view to your project
-3. Update the IzendaReportingController.cs to include
-    public ActionResult Dash() {
-
-      return View();
-    }
-4. In the global, update the dashboard viewer setting to AdHocSettings.DashboardViewer = "Dash";
