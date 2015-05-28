@@ -140,10 +140,10 @@ This menu offers the following menu options are available from the menu button i
 |![](/Guides/Dashboards-v2/26.png)|Collapse Menu|
 |![](/Guides/Dashboards-v2/27.png)|Presentation Mode – Allows the user to scroll through the Dashboard tiles in a carousel |
 |![](/Guides/Dashboards-v2/28.png)|Create a New Dashboard|
-|![](/Guides/Dashboards-v2/29.png)||
+|![](/Guides/Dashboards-v2/29.png)|Refresh Dashboard|
 |![](/Guides/Dashboards-v2/30.png)|View Filters – Each report in the dashboard must share the same filter to be displayed |
-|![](/Guides/Dashboards-v2/31.png)|Share Dashboard with other users |
-|![](/Guides/Dashboards-v2/32.png)|Schedule Dashboard|
-|![](/Guides/Dashboards-v2/33.png)|Print Dashboard Print Dashboard HTML Print Report PDF|
-|![](/Guides/Dashboards-v2/34.png)|Save Dashboard Save Dashboard Save Dashboard as|
-|![](/Guides/Dashboards-v2/35.png)|Change Dashboard Background Change Background Color Select Background Color Rotate Select Image for Background|
+|![](/Guides/Dashboards-v2/31.png)|Share Dashboard with other users|
+|![](/Guides/Dashboards-v2/32.png)|Schedule Dashboard - Send dashboard via email at a scheduled time|
+|![](/Guides/Dashboards-v2/33.png)|Print Dashboard = Print Dashboard HTML or Report PDF |
+|![](/Guides/Dashboards-v2/34.png)|Save Dashboard - Save dashboard as different name or pdf file|
+|![](/Guides/Dashboards-v2/35.png)|Change Dashboard - Change background image|
