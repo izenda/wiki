@@ -117,10 +117,7 @@ This menu offers the following menu options are available from the menu button i
 |![](/Guides/Dashboards-v2/29.png)||
 |![](/Guides/Dashboards-v2/30.png)|Share Dashboard with other users |
 |![](/Guides/Dashboards-v2/31.png)|Schedule Dashboard|
-|![](/Guides/Dashboards-v2/32.png)|Print Dashboard 
-⋅⋅*Print Dashboard HTML
-⋅⋅*Print Report PDF
-|
+|![](/Guides/Dashboards-v2/32.png)|Print Dashboard ⋅⋅*Print Dashboard HTML⋅⋅*Print Report PDF|
 
 
 
