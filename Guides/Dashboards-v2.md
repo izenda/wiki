@@ -118,8 +118,8 @@ This menu offers the following menu options are available from the menu button i
 |![](/Guides/Dashboards-v2/30.png)|Share Dashboard with other users |
 |![](/Guides/Dashboards-v2/31.png)|Schedule Dashboard|
 |![](/Guides/Dashboards-v2/32.png)|Print Dashboard ⋅⋅*Print Dashboard HTML⋅⋅*Print Report PDF|
-
-
+|![](/Guides/Dashboards-v2/33.png)|Save Dashboard ⋅⋅*Print Dashboard HTML⋅⋅*Print Report PDF|
+|![](/Guides/Dashboards-v2/34.png)|Change Dashboard Background ⋅⋅*Print Dashboard HTML⋅⋅*Print Report PDF|
 
 
 
