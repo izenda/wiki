@@ -145,7 +145,7 @@ This menu offers the following menu options are available from the menu button i
 |![](/Guides/Dashboards-v2/29.png)|Refresh Dashboard|
 |![](/Guides/Dashboards-v2/30.png)|View Filters – Each report in the dashboard must share the same filter to be displayed |
 |![](/Guides/Dashboards-v2/31.png)|Share Dashboard with other users|
-|![](/Guides/Dashboards-v2/32.png)|Schedule Dashboard - Send dashboard via email at a scheduled time|
-|![](/Guides/Dashboards-v2/33.png)|Print Dashboard = Print Dashboard HTML or Report PDF |
-|![](/Guides/Dashboards-v2/34.png)|Save Dashboard - Save dashboard as different name or pdf file|
-|![](/Guides/Dashboards-v2/35.png)|Change Dashboard - Change background image|
+|![](/Guides/Dashboards-v2/32.png)|Schedule Dashboard - Sends dashboard via email at a scheduled time|
+|![](/Guides/Dashboards-v2/33.png)|Print Dashboard = Prints Dashboard HTML or Report PDF |
+|![](/Guides/Dashboards-v2/34.png)|Save Dashboard - Saves dashboard as different name or pdf file|
+|![](/Guides/Dashboards-v2/35.png)|Change Dashboard - Changes background image|
