@@ -133,7 +133,7 @@ Dashboards will be displayed as tabs in the window with the active window highli
 
 This menu offers the following menu options are available from the menu button in the top left navigation bar when expanded
 
-![](/Guides/Dashboards-v2/24_25png)
+![](/Guides/Dashboards-v2/24_25.png)
 
 
 |**Appearance**|**Description**|
