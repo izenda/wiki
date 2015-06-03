@@ -12,6 +12,11 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 
 
 
+
+
+
+
+
 |Datatype|Setting name|Setting description|Default Value|
 |:---|:---:|:---:|:---:|
 |String|[[AddAllFilterRegex|/API/CodeSamples/AddAllFilterRegex]]|Gets or sets the regular expression used for "Add All" filtering.            If name of a column matches this expression then it will not be added on "Add All" click.|(id&#124;guid)$|
