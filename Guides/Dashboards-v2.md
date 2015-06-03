@@ -18,8 +18,8 @@ Izenda now offers its new Angular.js Dashboard Designer / Viewer with the platfo
 
 1. [Download](http://www.izenda.com/update-your-izenda-version/) the full Webforms kit and replace the bin and resources folders within your projectt
 2. Take the Dash.aspx and Dash.aspx.cs files from the downloaded kit and copy it to your project
-3. Update Dashboards.Master with the new changes
-4. In the global, update the dashboard viewer setting to AdHocSettings.DashboardViewer = "Dash.aspx";
+3. Update Default.Master with the new changes
+4. In the global, update the dashboard viewer setting to AdHocSettings.DashboardViewer = "Dash.aspx";, as well as the dashboard designer setting to AdHocSettings.DashboardDesigner = "Dash.aspx";
 
 ##MVC
 
