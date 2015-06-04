@@ -465,7 +465,7 @@ Two top logos have changed as below
 
 ![Test](/Guides/MVC-Integration/Logo_Change2.png)
 
-![#Izenda MVC Kit Integration Guide Phase II](/Guides/MVC-Integration/Phase_II_Draft)
+![Izenda MVC Kit Integration Guide Phase II](/Guides/MVC-Integration/Phase_II_Draft)
 
 
  
