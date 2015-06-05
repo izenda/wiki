@@ -309,6 +309,15 @@ namespace Sample_MVCApp.Controllers {
   @Scripts.Render("~/bundles/jqueryval")
 }
 ```
+
+### Step 7. Run and Test it
+
+After step 6, the application's login page should work as below
+
+![](/Guides/MVC-Integration/Phase-II-Draft/9.png) 
+
+
+
 ### Step 7. Add user role model
 
 Add 
