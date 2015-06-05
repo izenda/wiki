@@ -22,10 +22,10 @@ Delete UserController.cs, UserModels.cs, and the whole User folder under Views a
 
 ### Step 3. Add Link to Izenda
 
-**a. ** Open _Layout.cshtml in Views\Shared\ in Solution Explorer
-**b. ** Cut the ActionLink which leads to Izenda as below
-**c. ** Open _LoginPartial.cshtml in Views\Shared\ in Solution Explorer
-**d. ** Paste the ActionLink in IF block as below so that Izenda link is visible only after logging in
+**a.** Open _Layout.cshtml in Views\Shared\ in Solution Explorer
+**b.** Cut the ActionLink which leads to Izenda as below
+**c.** Open _LoginPartial.cshtml in Views\Shared\ in Solution Explorer
+**d.** Paste the ActionLink in IF block as below so that Izenda link is visible only after logging in
 
 
 
