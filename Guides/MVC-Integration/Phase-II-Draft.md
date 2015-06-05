@@ -22,14 +22,42 @@ Delete UserController.cs, UserModels.cs, and the whole User folder under Views a
 
 ### Step 3. Add Link to Izenda
 
+Since the link to Izenda will be visible only to logged in users, cut the actionlink we made in step 12 of Phase I and paste it in _LoginPartial.cshtml, which contains conditional statements on login. 
+
 **a.** Open _Layout.cshtml in Views\Shared\ in Solution Explorer
 
 **b.** Cut the ActionLink which leads to Izenda as below
 
+```html
+<li>@Html.ActionLink("Home", "Index", "Home")</li>
+<li>@Html.ActionLink("About", "About", "Home")</li>
+<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    <li>@Html.ActionLink("Izenda", "ReportList", "Reporting")</li>  //Cut this line
+```
+
 **c.** Open _LoginPartial.cshtml in Views\Shared\ in Solution Explorer
 
-**d.** Paste the ActionLink in IF block as below so that Izenda link is visible only after logging in
+**d.** Paste the ActionLink in IF block as below so that link to Izenda is visible only after logging in
 
+```html
+<li>@Html.ActionLink("Home", "Index", "Home")</li>
+<li>@Html.ActionLink("About", "About", "Home")</li>
+<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    <li>@Html.ActionLink("Izenda", "ReportList", "Reporting")</li>  //Cut this line
+```
+@if (Request.IsAuthenticated) {
+
+    <text>
+        Hello, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+            @Html.AntiForgeryToken()
+            <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+          
+  <li>@Html.ActionLink("Izenda", "ReportList", "Reporting")</li>        // Paste the action link here
+
+        }
+    </text>
+}
 
 
 ### Step 4. Add Login User Model
