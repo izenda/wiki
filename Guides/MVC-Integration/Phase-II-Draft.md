@@ -219,11 +219,6 @@ namespace Sample_MVCApp.Controllers {
   ViewBag.Title = "Login";
 }
 
-
-@{
-  ViewBag.Title = "Log in";
-}
-
 <h2>@ViewBag.Title.</h2>
 <div class="row">
   <div class="col-md-8">
