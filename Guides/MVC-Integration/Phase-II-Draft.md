@@ -314,13 +314,13 @@ namespace Sample_MVCApp.Controllers {
 
 ### Step 7. Run and Test it
 
-After step 6, the application's login page should work as below
+After step 6, user should be able to register an account and log in. Then, the link to Izenda should be visible as below
 
 ![](/Guides/MVC-Integration/Phase-II-Draft/9.png) 
 
 
 
-### Step 7. Add user role model
+### Step 8. Add user role model
 
 Add 
 
