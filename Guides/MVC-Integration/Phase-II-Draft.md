@@ -214,6 +214,9 @@ namespace Sample_MVCApp.Controllers {
 **b.** Copy and paste below code in Login.cshtml
 
 ```html
+//This is how Login.cshtml should look like
+
+
 @model Sample_MVCApp.Models.User
 @{
   ViewBag.Title = "Login";
@@ -266,9 +269,10 @@ namespace Sample_MVCApp.Controllers {
 
 **c.** Right click on public ActionResult Register() -> Add View -> Name it Register -> Add
 
-**d.** Copy and paste the below code to corresponding file
+**d.** Copy and paste the below code in Register.cshtml
 
 ```html
+//This is how Register.cshtml should look like
 
 @model Sample_MVCApp.Models.User
 
