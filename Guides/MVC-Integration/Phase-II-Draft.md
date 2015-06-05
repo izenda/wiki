@@ -10,7 +10,7 @@ Phase II Integration is a continuation to the last step of Phase I integration. 
 
 Get the ConnectionString
 
-### Step 2. Delete unnecessary Login User Model files.
+### Step 2. Delete unnecessary Login Model files.
 
 The sample MVC app used in the guide already contains its own user login model, since we will add a simpler user login model, in order to avoid any unnecessary conflict, delete existing user login files, Controller, Model, and View.
 
