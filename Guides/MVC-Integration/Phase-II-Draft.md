@@ -18,4 +18,6 @@ Phase II Integration is a continuation to the last step of Phase I integration. 
 
 ## Step 6. Add Views
 
+## Step 7. Add user role model
+
  
