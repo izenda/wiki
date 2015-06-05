@@ -330,7 +330,7 @@ then open command prompt and type 'sqllocaldb.exe stop v11.0' and 'sqllocaldb.ex
 ### Step 8. Update AccountConroller to set up user roles
 
 
-**a.** Open AccountController.cs and add the below user role code.
+**a.** Open AccountController.cs and add user role code in post login action as below
 
 ```csharp
 //Sample User Role Model
