@@ -311,4 +311,36 @@ namespace Sample_MVCApp.Controllers {
 ```
 ### Step 7. Add user role model
 
- 
+Add 
+
+
+```csharp
+//Sample User Role Model
+                //Namespace Izenda.Adhoc is needed
+
+                AdHocSettings.CurrentUserName = (string)user.Username;
+
+                if (!AdHocSettings.CurrentUserIsAdmin) {
+                  //Sam is an administrator in the system and has full access to everything
+                  AdHocSettings.SharedWithValues = new string[] { "Bob", "Sales", "Alice", "Marketing", "Sam", "Mallory" }; //Sam can freely choose who to share with based on department or username
+                }
+                else {
+                  if (AdHocSettings.CurrentUserName == "Bob") {
+                    AdHocSettings.CurrentUserRoles = new string[] { "Sales" };
+                    AdHocSettings.SharedWithValues = new string[] { "Bob", "Sales", "Alice", "Marketing", "Sam", "PR" }; //Bob can share reports with anyone but Mallory but cannot view reports that are not shared with "Bob" or "Sales"
+                  }
+                  else if (AdHocSettings.CurrentUserName == "Alice") {
+                    AdHocSettings.CurrentUserRoles = new string[] { "Sales", "Marketing" };
+                    AdHocSettings.SharedWithValues = new string[] { "Sales", "Alice", "Marketing", "Sam" }; //Alice cannot share reports with Bob or Mallory specifically but Bob can still view reports created by Alice if they are shared with "Sales" and Mallory can view reports shared by Alice if they are shared with "Marketing"
+                  }
+                  else if (AdHocSettings.CurrentUserName == "Mallory") {
+                    AdHocSettings.CurrentUserRoles = new string[] { "PR" };
+                    AdHocSettings.SharedWithValues = new string[] { "Sales", "Marketing", "Mallory", "Sam", "Visitor" }; //Mallory can share reports with the Visitor role. 
+                  }
+                  else {
+                    AdHocSettings.CurrentUserRoles = new string[] { "Visitor" }; //visitors cannot share with anyone but can see reports shared with the "Visitor" role
+                  }
+                }
+
+
+``` 
