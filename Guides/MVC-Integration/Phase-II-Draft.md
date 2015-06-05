@@ -111,6 +111,107 @@ namespace Sample_MVCApp.Models {
 ```
 ### Step 5. Add Controller
 
+![](/Guides/MVC-Integration/Phase-II-Draft/3.png) 
+
+**a.** Right click on Controllers folder -> Add -> Controller -> Name it AccountController.cs -> Add
+
+**b.** Copy and paste the below code in AccountController.cs
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using Sample_MVCApp.Models;
+using System.Web.Security;
+using Izenda.AdHoc;
+
+
+
+namespace Sample_MVCApp.Controllers {
+  public class AccountController : Controller {
+
+
+    
+    // Login Action. This leads to login page
+
+    public ActionResult Login() {
+      return View();
+    }
+
+    // Register Action. This leads to register view page
+    public ActionResult Register() {
+      return View();
+    }
+
+
+
+    // Post Register Action
+ 
+    [HttpPost]
+    public ActionResult Register(User user) {
+      using (UserContext db = new UserContext()) {
+        if (ModelState.IsValid) {
+          db.Users.Add(user);
+          db.SaveChanges();
+          return RedirectToAction("Login");
+        }
+        else {
+          ModelState.AddModelError("", "Some error has occured.");
+          View();
+        }
+      }
+      return View();
+    }
+
+
+    
+
+
+    // Post Login Action
+
+    [HttpPost]
+    public ActionResult Login(User user) {
+      using (UserContext db = new UserContext()) {
+        try {
+          if (ModelState.IsValid) {
+            User us = db.Users.SingleOrDefault(m => m.Username == user.Username);
+            if (us != null) {
+              if (us.Password == user.Password) {
+                FormsAuthentication.SetAuthCookie(user.Username, false);
+                return RedirectToAction("Index", "Home");
+              }
+              ModelState.AddModelError("", "Invalid Username or Password");
+              return View();
+            }
+            throw new ArgumentException("User doesn't exists");
+          }
+        }
+        catch (ArgumentException e) {
+          ModelState.AddModelError("", e.Message);
+          return View();
+        }
+      }
+      return View();
+    }
+
+
+
+    //Log Out.
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public ActionResult LogOff() {
+      FormsAuthentication.SignOut();
+
+      return RedirectToAction("Index", "Home");
+    }
+
+  }
+}
+
+```
+
 ### Step 6. Add Views
 
 ### Step 7. Add user role model
