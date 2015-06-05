@@ -327,14 +327,14 @@ then open command prompt and type 'sqllocaldb.exe stop v11.0' and 'sqllocaldb.ex
 ![](/Guides/MVC-Integration/Phase-II-Draft/10.png)
  
 
-### Step 8. Add user role model
+### Step 8. Update AccountConroller to set up user roles
 
-Add 
 
+**a.** Open AccountController.cs and add the below user role code.
 
 ```csharp
 //Sample User Role Model
-                //Namespace Izenda.Adhoc is needed
+ //Namespace Izenda.Adhoc is needed
 
                 AdHocSettings.CurrentUserName = (string)user.Username;
 
