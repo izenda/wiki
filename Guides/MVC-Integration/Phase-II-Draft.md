@@ -118,6 +118,9 @@ namespace Sample_MVCApp.Models {
 **b.** Copy and paste the below code in AccountController.cs
 
 ```csharp
+
+//This is how AccountController.cs should look like
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -128,12 +131,10 @@ using System.Web.Security;
 using Izenda.AdHoc;
 
 
-
 namespace Sample_MVCApp.Controllers {
   public class AccountController : Controller {
 
-
-    
+   
     // Login Action. This leads to login page
 
     public ActionResult Login() {
@@ -144,8 +145,6 @@ namespace Sample_MVCApp.Controllers {
     public ActionResult Register() {
       return View();
     }
-
-
 
     // Post Register Action
  
@@ -164,10 +163,6 @@ namespace Sample_MVCApp.Controllers {
       }
       return View();
     }
-
-
-    
-
 
     // Post Login Action
 
@@ -196,8 +191,6 @@ namespace Sample_MVCApp.Controllers {
       return View();
     }
 
-
-
     //Log Out.
     [HttpPost]
     [ValidateAntiForgeryToken]
@@ -214,6 +207,70 @@ namespace Sample_MVCApp.Controllers {
 
 ### Step 6. Add Views
 
+![](/Guides/MVC-Integration/Phase-II-Draft/4.png) 
+
+**a.** In AccountController.cs, right click on public ActionResult Login()-> Add View->Name it Login -> Add
+
+**b.** Copy and paste below code in Login.cshtml
+
+```html
+@model Sample_MVCApp.Models.User
+@{
+  ViewBag.Title = "Login";
+}
+
+
+@{
+  ViewBag.Title = "Log in";
+}
+
+<h2>@ViewBag.Title.</h2>
+<div class="row">
+  <div class="col-md-8">
+    <section id="loginForm">
+      @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" })) {
+        @Html.AntiForgeryToken()
+        <h4>Use a local account to log in.</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+          @Html.LabelFor(m => m.Username, new { @class = "col-md-2 control-label" })
+          <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+          </div>
+        </div>
+        <div class="form-group">
+          @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+          <div class="col-md-10">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Log in" class="btn btn-default" />
+          </div>
+        </div>
+        <p>
+          @Html.ActionLink("Register as a new user, "Register")
+        </p>
+      }
+    </section>
+  </div>
+
+</div>
+
+@section Scripts {
+  @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+```
+
+Right click on public ActionResult Register() -> Add View -> Name it Register -> Add
+Copy and paste the below code to corresponding file
 ### Step 7. Add user role model
 
  
