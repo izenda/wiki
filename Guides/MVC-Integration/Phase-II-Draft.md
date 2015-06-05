@@ -209,7 +209,7 @@ namespace Sample_MVCApp.Controllers {
 
 ![](/Guides/MVC-Integration/Phase-II-Draft/4.png) 
 
-**a.** In AccountController.cs, right click on public ActionResult Login()-> Add View->Name it Login -> Add
+**a.** Open AccountController.cs. Right click on public ActionResult Login()-> Add View->Name it Login -> Add
 
 **b.** Copy and paste below code in Login.cshtml
 
@@ -267,7 +267,7 @@ namespace Sample_MVCApp.Controllers {
 
 ```
 
-**c.** Right click on public ActionResult Register() -> Add View -> Name it Register -> Add
+**c.** Open AccountController.cs. Right click on public ActionResult Register() -> Add View -> Name it Register -> Add
 
 **d.** Copy and paste the below code in Register.cshtml
 
