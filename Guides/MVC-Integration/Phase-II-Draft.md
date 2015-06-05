@@ -264,8 +264,47 @@ namespace Sample_MVCApp.Controllers {
 
 ```
 
-Right click on public ActionResult Register() -> Add View -> Name it Register -> Add
-Copy and paste the below code to corresponding file
+**c.** Right click on public ActionResult Register() -> Add View -> Name it Register -> Add
+
+**d.** Copy and paste the below code to corresponding file
+
+'''html
+
+@model Sample_MVCApp.Models.User
+
+@{
+  ViewBag.Title = "Register";
+}
+
+<hgroup class="title">
+  <h1>@ViewBag.Title.</h1>
+  <h2>Create a new account.</h2>
+</hgroup>
+
+@using (Html.BeginForm()) {
+  @Html.AntiForgeryToken()
+  @Html.ValidationSummary()
+
+  <fieldset>
+    <legend>Registration Form</legend>
+    <ol>
+      <li>
+        @Html.LabelFor(m => m.Username)
+        @Html.TextBoxFor(m => m.Username)
+      </li>
+      <li>
+        @Html.LabelFor(m => m.Password)
+        @Html.PasswordFor(m => m.Password)
+      </li>
+    </ol>
+    <input type="submit" value="Register" />
+  </fieldset>
+}
+
+@section Scripts {
+  @Scripts.Render("~/bundles/jqueryval")
+}
+'''
 ### Step 7. Add user role model
 
  
