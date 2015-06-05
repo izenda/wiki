@@ -14,6 +14,8 @@ Get the ConnectionString
 
 The sample MVC app used in the guide already contains its own user login model, since we will add a simpler user login model, in order to avoid any unnecessary conflict, delete existing user login files, Controller, Model, and View.
 
+Delete UserController.cs, UserModels.cs, and the whole User folder under Views as below
+
 ![](/Guides/MVC-Integration/Phase-II-Draft/1.png) 
 
 
