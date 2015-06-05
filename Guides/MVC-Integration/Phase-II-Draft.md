@@ -85,10 +85,23 @@ namespace Sample_MVCApp.Models {
 
 
 ```
+**c.** Right click on Models folder -> Add -> New Item -> Choose class. Name it UserContext.cs ->Add
+**d.** Copy and paste below code in UserContext.cs
 
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
 
+namespace Sample_MVCApp.Models {
+  public class UserContext : DbContext {
+    public DbSet<User> Users { get; set; }
+  }
+}
 
-
+```
 ### Step 5. Add Controller
 
 ### Step 6. Add Views
