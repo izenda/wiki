@@ -252,7 +252,7 @@ namespace Sample_MVCApp.Controllers {
           </div>
         </div>
         <p>
-          @Html.ActionLink("Register as a new user, "Register")
+          @Html.ActionLink("Register as a new user", "Register")
         </p>
       }
     </section>
