@@ -318,7 +318,14 @@ After step 6, user should be able to register an account and log in. Then, the l
 
 ![](/Guides/MVC-Integration/Phase-II-Draft/9.png) 
 
+If the application does not run correctly, and instead the below error message appears,
 
+![](/Guides/MVC-Integration/Phase-II-Draft/5.png) 
+
+then open command prompt and type 'sqllocaldb.exe stop v11.0' and 'sqllocaldb.exe delete v11.0' in order as below
+
+![](/Guides/MVC-Integration/Phase-II-Draft/10.png)
+ 
 
 ### Step 8. Add user role model
 
