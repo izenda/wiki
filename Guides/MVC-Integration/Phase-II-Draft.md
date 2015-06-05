@@ -59,6 +59,8 @@ Since the link to Izenda will be visible only to logged in users, cut the action
 
 ### Step 4. Add Login User Model
 
+![](/Guides/MVC-Integration/Phase-II-Draft/2.png) 
+
 **a.** Right click on Models folder -> Add -> New Item -> Choose class. Name it User.cs ->Add
 
 **b.** Copy and paste below code in User.cs
