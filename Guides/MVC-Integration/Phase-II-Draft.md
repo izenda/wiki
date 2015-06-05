@@ -8,7 +8,9 @@ Phase II Integration is a continuation of the last step of Phase I integration. 
 
 ### Step 1. Connecting to Northwind Database
 
-Get the ConnectionString
+
+(To be added)
+
 
 ### Step 2. Delete unnecessary Login Model files.
 
