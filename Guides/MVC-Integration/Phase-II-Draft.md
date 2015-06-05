@@ -64,6 +64,9 @@ Since the link to Izenda will be visible only to logged in users, cut the action
 **b.** Copy and paste below code in User.cs
 
 ```csharp
+// This is how User.cs should look like
+// Our User model only contains username and password
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
