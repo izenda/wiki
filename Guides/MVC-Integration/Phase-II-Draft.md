@@ -268,7 +268,7 @@ namespace Sample_MVCApp.Controllers {
 
 **d.** Copy and paste the below code to corresponding file
 
-'''html
+```html
 
 @model Sample_MVCApp.Models.User
 
@@ -304,7 +304,7 @@ namespace Sample_MVCApp.Controllers {
 @section Scripts {
   @Scripts.Render("~/bundles/jqueryval")
 }
-'''
+```
 ### Step 7. Add user role model
 
  
