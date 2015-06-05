@@ -40,11 +40,7 @@ Since the link to Izenda will be visible only to logged in users, cut the action
 **d.** Paste the ActionLink in IF block as below so that link to Izenda is visible only after logging in
 
 ```html
-<li>@Html.ActionLink("Home", "Index", "Home")</li>
-<li>@Html.ActionLink("About", "About", "Home")</li>
-<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-    <li>@Html.ActionLink("Izenda", "ReportList", "Reporting")</li>  //Cut this line
-```
+
 @if (Request.IsAuthenticated) {
 
     <text>
@@ -59,6 +55,7 @@ Since the link to Izenda will be visible only to logged in users, cut the action
     </text>
 }
 
+```
 
 ### Step 4. Add Login User Model
 
