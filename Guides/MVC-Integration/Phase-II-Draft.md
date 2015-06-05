@@ -59,6 +59,33 @@ Since the link to Izenda will be visible only to logged in users, cut the action
 
 ### Step 4. Add Login User Model
 
+**a.** Right click on Models folder -> Add -> New Item -> Choose class. Name it User.cs ->Add
+
+**b.** Copy and paste below code in User.cs
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+
+namespace Sample_MVCApp.Models {
+  public class User {
+    [Required]
+    [Key]
+    public string Username { get; set; }
+    [Required]
+    public string Password { get; set; }
+  }
+}
+
+
+```
+
+
+
+
 ### Step 5. Add Controller
 
 ### Step 6. Add Views
