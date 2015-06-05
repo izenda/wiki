@@ -87,10 +87,13 @@ namespace Sample_MVCApp.Models {
 
 
 ```
+
 **c.** Right click on Models folder -> Add -> New Item -> Choose class. Name it UserContext.cs ->Add
 
 
+
 **d.** Copy and paste below code in UserContext.cs
+
 
 ```csharp
 using System;
