@@ -338,7 +338,7 @@ then open command prompt and type 'sqllocaldb.exe stop v11.0' and 'sqllocaldb.ex
 
                 AdHocSettings.CurrentUserName = (string)user.Username;
 
-                if (!AdHocSettings.CurrentUserIsAdmin) {
+                if (AdHocSettings.CurrentUserIsAdmin) {
                   //Sam is an administrator in the system and has full access to everything
                   AdHocSettings.SharedWithValues = new string[] { "Bob", "Sales", "Alice", "Marketing", "Sam", "Mallory" }; //Sam can freely choose who to share with based on department or username
                 }
