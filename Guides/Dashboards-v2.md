@@ -24,9 +24,9 @@ Izenda now offers its new Angular.js Dashboard Designer / Viewer with the platfo
       <div class="page">
         <ul id="topnav" style="margin: 0px; padding: 0px;">
           <li class="top-nav-item"><a href="ReportList.aspx">Reports</a></li>
-          <li class="top-nav-item"><a href="Dashboards.aspx?clear=1" onclick="ShowRlToDbLoading();">Dashboards</a></li>
+          <li class="top-nav-item"><a href="Dash.aspx?clear=1" onclick="ShowRlToDbLoading();">Dashboards</a></li>
 ```
-4. In the global, update the dashboard viewer setting to AdHocSettings.DashboardViewer = "Dash.aspx";, as well as the dashboard designer setting to AdHocSettings.DashboardDesigner = "Dash.aspx";
+4. In the global, update the dashboard viewer setting to AdHocSettings.DashboardViewer = "Dash.aspx";, as well as the dashboard designer setting to AdHocSettings.DashboardDesignerUrl = "Dash.aspx";
 
 ##MVC
 
