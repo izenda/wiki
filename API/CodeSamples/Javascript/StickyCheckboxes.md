@@ -28,7 +28,7 @@ Simply replace or merge the file Root/Resources/js/ReportViewerFilters.js with t
 
 ##Link
 
-[ReportViewerFilters javascript](/API/CodeSamples/Javascript/StickyCheckboxes/ReportViewerFilters.js)
+[ReportViewerFilters](/API/CodeSamples/Javascript/StickyCheckboxes/ReportViewerFilters.js).js (right click to Save As)
 
 
 
