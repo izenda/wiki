@@ -124,10 +124,10 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ##Misc.
 
-- [[How do I disable the redirect on the ReportList if I have no reports?|http://wiki.izenda.us/FAQ/Disabling-ReportList-Redirect]]
+- [[How do I disable the redirect on the Report List if I have no reports?|http://wiki.izenda.us/FAQ/Disabling-ReportList-Redirect]]
 - [[How do I turn off the screen size Responsive Grid?|http://wiki.izenda.us/FAQ/Responsive-Grid#Remove-Responsive-Grid]]
 - [[How do I make Responsive Grid browser aware?|http://wiki.izenda.us/FAQ/Responsive-Grid#Make-Responsive-Grid-Browser-Aware]]
-- [[How do I get the ReportList information to create my own ReportList?|FAQ/getting-reportlist-information]]
+- [[How do I get the ReportList information to create my own Report List?|FAQ/getting-reportlist-information]]
 - [[How do I force a user to click on 'Update Results' before showing any data?|FAQ/force-update-results-on-report]]
 - [[How do I upgrade/download a new file-set?|FAQ/Download and Update Resources]]
 - [[How to upload CSV data to SQL Server|FAQ/upload-csv-data-to-sql-server]]
@@ -139,9 +139,10 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How Do I Use Stored Procedures With Izenda Reports?|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
 - [[How do I use alternate filter values with stored procedure parameters versus what I display to the user?|http://wiki.izenda.us/FAQ/Questions/using-alternate-filter-values-with-stored-procedures]]
 - [[How Can I Use a Custom Filter on my Dashboards?|/FAQ/Questions/Adding-custom-filters-to-dashboards]]
-- [[What kinds of caching does Izenda use?|http://wiki.izenda.us/FAQ/Questions/Caching]]
+- [[What kinds of caching does Izenda use?|/FAQ/Questions/Caching]]
 - [[I'm seeing a version collision between a third party library referencing Log4Net and Izenda. How do I fix this?|/FAQ/Questions/Log4Net-Collision]]
-- [How do I customize the English.resx file?](http://wiki.izenda.us/FAQ/How-do-i-customize-the-English-dot-resx-file)
-- [[Is Izenda 508 Commpliant?|http://wiki.izenda.us/FAQ/Questions/Section508-compliance]]
-- [[Izenda Caching Lifecycle|http://wiki.izenda.us/FAQ/Izenda Caching Lifecycle]]
-- [[How to alias joined tables names|http://wiki.izenda.us/API/CodeSamples/ShowJoinAliasTextboxes]]
+- [How do I customize the English.resx file?](/FAQ/How-do-i-customize-the-English-dot-resx-file)
+- [[Is Izenda 508 Compliant?|/FAQ/Questions/Section508-compliance]]
+- [[Izenda Caching Lifecycle|/FAQ/Izenda Caching Lifecycle]]
+- [[How to alias joined tables names|/API/CodeSamples/ShowJoinAliasTextboxes]]
+- [[How do I control page breaking inside of an Image?|/FAQ/Questions/Preventing-page-break-in-images]]
