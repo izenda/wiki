@@ -50,7 +50,8 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[Using the ReportListConfig object|http://wiki.izenda.us/API/CodeSamples/Javascript/ReportListConfig]]
 * [[Using the GetRenderedReportSet object|http://wiki.izenda.us/API/CodeSamples/Javascript/GetRenderedReportSet]]
 * [[Using the GetFiltersData object|http://wiki.izenda.us/API/CodeSamples/Javascript/GetFiltersData]]
-* [[Implementing Sticky Checkboxes|API/CodeSamples/Javascript/StickyCheckboxes
+* [[Implementing Sticky Checkboxes|API/CodeSamples/Javascript/StickyCheckboxes]]
+
 ###CSS Guides
 
 * [[Overriding page level CSS|/FAQ/Questions/Overriding-page-level-css]]
