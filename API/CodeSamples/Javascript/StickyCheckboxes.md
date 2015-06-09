@@ -28,6 +28,7 @@ Simply replace or merge the file Root/Resources/js/ReportViewerFilters.js with t
 
 ##Link
 
+[ReportViewerFilters javascript](http://wiki.izenda.us/edit/API/CodeSamples/Javascript/StickyCheckboxes/ReportViewerFilters.js)
 
 
 
