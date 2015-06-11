@@ -22,6 +22,8 @@ public override void CustomizeChart(object obj)
 }//end method
 ```
 
+http://support2.dundas.com/OnlineDocumentation/WebChart2005/webframe.html
+
 ##HtmlCharts
 
 The HTMLCharts objects are more difficult to work with. Since HighCharts is a javascript library, there is no explicit C# namespace to call. In this case, the entire chart exists within a StringBuilder object and will be injected into the page when it is rendered. In order to interact with this type of chart, one must modify the StringBuilder object with whatever customizations are required. A sample output chart will be displayed below to provide a glimpse of what to expect when working with the CustomizeChart method with respect to HTMLCharts.
