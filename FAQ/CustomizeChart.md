@@ -152,3 +152,7 @@ _**Note:** Since the chart is rendered after any javascript page events are call
         </script>
 </div>
 ```
+
+##VISION
+
+Visualizations must be customized directly within the /Vis directory. Please see the D3 documentation for more information. https://github.com/mbostock/d3/wiki
