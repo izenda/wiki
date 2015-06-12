@@ -49,6 +49,9 @@ Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK
 
 ![Controllers](/Guides/MVC-Integration/Exclude.png)
 
+**c.** Copy ./Resources folder in the root of the application into the ./Reporting folder, creating the ./Reporting/Resources path.  Be sure to include all but the html folder in the Reporting\Resources folder.
+
+
 ###Step 6. Add mvc5r3\Views\Reporting folder 
 
 Add the Reporting folder in mvc5r3\Views to the project's Views
@@ -161,10 +164,10 @@ Add _sitelayout from mvc5r3\Views\Shared to project’s Views\Shared
 ```
 
 
-###Step 9. Copy constraints classes from Globa.asax.cs
+###Step 9. Copy constraints classes from Global.asax.cs
 
 
-**a.** Copy below two constraints from Globa.asax.cs of mvc5r3
+**a.** Copy below two constraints from Global.asax.cs of mvc5r3
 ```csharp
 
 //IRouteConstraint
