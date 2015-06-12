@@ -49,13 +49,15 @@ Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK
 
 ![Controllers](/Guides/MVC-Integration/Exclude.png)
 
-**c.** Copy ./Resources folder in the root of the application into the ./Reporting folder, creating the ./Reporting/Resources path.  Be sure to include all but the html folder in the Reporting\Resources folder.
+
+
+<!-- **c.** Copy ./Resources folder in the root of the application into the ./Reporting folder, creating the ./Reporting/Resources path.  Be sure to include all but the html folder in the Reporting\Resources folder. --> 
 
 
 ###Step 6. Add mvc5r3\Views\Reporting folder 
 
 Add the Reporting folder in mvc5r3\Views to the project's Views
-
+0
 ![Controllers](/Guides/MVC-Integration/VR.png)
 
 ###Step 7. Add  _sitelayout to project’s Views\Shared
