@@ -57,6 +57,8 @@ Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK
 
 ![](/Guides/MVC-Integration/rs.png)
 
+**** If Izenda toolbar icons don't appear, check if Resources/html contains rs.aspx  ****
+
 
 ###Step 6. Add mvc5r3\Views\Reporting folder 
 
