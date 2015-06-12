@@ -53,7 +53,7 @@ Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK
 
 <!-- **c.** Copy ./Resources folder in the root of the application into the ./Reporting folder, creating the ./Reporting/Resources path.  Be sure to include all but the html folder in the Reporting\Resources folder. --> 
 
-**c.** Copy rs.aspx under /Reporting and paste it in /Resources/html as below
+**c.** Copy rs.aspx from /Reporting and paste it in /Resources/html as below
 
 ![](/Guides/MVC-Integration/rs.png)
 
