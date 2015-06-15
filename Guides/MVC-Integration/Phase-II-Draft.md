@@ -322,10 +322,11 @@ If the application does not run correctly, and instead the below error message a
 
 ![](/Guides/MVC-Integration/Phase-II-Draft/5.png) 
 
-then open command prompt and type 'sqllocaldb.exe stop v11.0' and 'sqllocaldb.exe delete v11.0' in order as below
+then open command prompt and type 'sqllocaldb.exe stop v11.0' and 'sqllocaldb.exe delete v11.0' in order as below.
 
 ![](/Guides/MVC-Integration/Phase-II-Draft/10.png)
  
+(Clearing browser's cache helps too)
 
 ### Step 8. Update AccountConroller to set up user roles
 
