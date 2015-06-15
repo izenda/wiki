@@ -1,6 +1,6 @@
 ##Question
 
-How can I change default data precision setting?
+Is there a way to store a pre-built string or object at the application level? so that the application does not have to call the AddConstraint() method every time a user wants to connect to a database
 
 
 ##Answer
