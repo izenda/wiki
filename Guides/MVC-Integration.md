@@ -41,23 +41,25 @@ Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK
 
 ###Step 5. Add Reporting and Resources folders to the project
 
-**a.** Add 'Reporting' and 'Resources' from \mvc5r3 to project by dragging and dropping them under Sample_MVCApp in Solution Explorer 
+**a.** Add 'Reporting' from \mvc5r3 to project by dragging and dropping it in Solution Explorer 
 
 ![Controllers](/Guides/MVC-Integration/Resources_Reporting.png)
 
-**b.** In Solution Explorer, exclude Dashboards-Body.ascx and Dashboards-Head.ascx from \Resources\html by right click on them and click 'Exclude From Project'
+
+**b.** In the same way, Add 'Resources' from \mvc5r3 to \Reporting as below 
+
+
+**c.** In Solution Explorer, exclude Dashboards-Body.ascx and Dashboards-Head.ascx from \Resources\html by right click on them and click 'Exclude From Project'
 
 ![Controllers](/Guides/MVC-Integration/Exclude.png)
 
 
-
 <!-- **c.** Copy ./Resources folder in the root of the application into the ./Reporting folder, creating the ./Reporting/Resources path.  Be sure to include all but the html folder in the Reporting\Resources folder. --> 
 
-**c.** Copy rs.aspx from /Reporting and paste it in /Resources/html as below
+<!-- **c.** Copy rs.aspx from /Reporting and paste it in /Resources/html as below   ![](/Guides/MVC-Integration/rs.png) -->
 
-![](/Guides/MVC-Integration/rs.png)
 
-**** If Izenda toolbar icons don't appear, check if Resources/html contains rs.aspx  ****
+**** If Izenda toolbar icons don't appear, check if Reporting folder contains rs.aspx and Resources folder  ****
 
 
 ###Step 6. Add mvc5r3\Views\Reporting folder 
