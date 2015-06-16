@@ -213,9 +213,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Int32|[[QuickAddMinElementsInColumn|/API/CodeSamples/QuickAddMinElementsInColumn]]|Gets or set value indicating how many elements are in one QuickAdd column|20|
 |String|[[RDLFolder|/API/CodeSamples/RDLFolder]]|Gets or sets path to Folder where RDL files whould be saved|RDLFiles|
 |Int32|[[RecentlyUpdatedCountAtReportList|/API/CodeSamples/RecentlyUpdatedCountAtReportList]]|Gets or sets the value indicating how many reports will shown at recent list at ReportList|0|
-
-|Boolean|[[RedirectExports|/API/CodeSamples/ReportViewPageTitle]]|Gets or sets the title of report view page.|String.Empty|
-
+|Boolean|[[RedirectExports|/API/CodeSamples/ReportViewPageTitle]]|Gets or sets the value indicating whether response redirection should be done when exporting reportset|False|
 |Color|[[ReportAlternatingItemColor|/API/CodeSamples/ReportAlternatingItemColor]]|Gets or sets the color of report alternating item.|Color [Gainsboro]|
 |Color|[[ReportBorderColor|/API/CodeSamples/ReportBorderColor]]|Gets or sets the color of report border.|Color [White]|
 |String|[[ReportCss|/API/CodeSamples/ReportCss]]|Gets or sets the css style for the report HTML and Word output.**(deprecated)**|@import url(rs.aspx?css=Report);|
