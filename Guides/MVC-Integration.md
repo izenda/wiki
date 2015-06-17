@@ -49,11 +49,12 @@ Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK
 
 ![Controllers](/Guides/MVC-Integration/Exclude.png)
 
-**c.** Copy rs.aspx from /Reporting and paste it in /Resources/html as below
+**c.** Copy /Resources folder from the root of the application into the /Reporting folder
+
+**d.** Copy rs.aspx from /Reporting and paste it in /Resources/html as below
 
 ![](/Guides/MVC-Integration/rs.png)   
 
-**d.** Copy /Resources folder in the root of the application into the /Reporting folder
 
 **** If Izenda toolbar icons don't appear, check if Reporting folder contains rs.aspx and Resources folder  ****
 
