@@ -108,6 +108,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ##Troubleshooting
 
+- [[Error when opening XLS Exports in Excel|/FAQ/XLS-Exports-Error-when-opened-in-Excel]]
 - [[Izenda Troubleshooting Tip: ReportList never loads. All other pages work fine.|FAQ/troubleshooting-report-list]]
 - [[Izenda Troubleshooting Tip: 'WCFApplication' error|FAQ/troubleshooting-wcf-application]]
 - [[Izenda Troubleshooting Tip: Transferring, Moving or Copying Report XML Manually|FAQ/moving-report-xml-manually]]
