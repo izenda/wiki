@@ -2,7 +2,7 @@
 '[filename]', is in a different format than specified by the file extension. Verify that the file is not corrupted and is from a trusted source before opening the file. Do you want to open the file now?"  [Yes | No | Help]
 
 ##Solution
-There is no way to avoid this using our current HTML- Office export process:
+There is no way to avoid this using our current HTML- Office export process to create XLS exports:
 
 http://blogs.msdn.com/b/vsofficedeveloper/archive/2008/03/11/excel-2007-extension-warning.aspx
 
