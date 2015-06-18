@@ -38,7 +38,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How can I change default data precision setting?|/FAQ/Questions/Changing-Data-Precision]]
 - [[Is there a way to store a pre-built string or object at the application level?|/FAQ/Questions/Storing-Custom-Constraints]]
 - [[How to turn off "Report has been modified and report will be overridden" warning message?|http://wiki.izenda.us/API/CodeSamples/ShowModifiedReportMessage]]
-
+- [[How can I export reportset without placing it to session?|http://wiki.izenda.us/API/CodeSamples/RedirectExports]]
 ##Database
 
 - [[Will My ODBC Connection String Work With Izenda Reports?|http://wiki.izenda.us/FAQ/Database/ODBC-Connection-String]]
