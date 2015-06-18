@@ -1,10 +1,10 @@
-#ReportHeaderImageUrl
+#RedirectExports
 
 [[_TOC_]]
 
 ##About
 
-This setting allows the user to set an image to be used on every report's header section. You should make sure the image is web searchable (public) since the application will need to access the server to pull the image.  Now when you load up a report, the image will display above the data.
+When exporting reportset, Izenda checks RedirectExports value. If RedirectExports is true, then it returns exported reportset without placing it to session and redirecting response.
 
 ##Global.asax (C♯)
 
@@ -21,7 +21,10 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    AdHocSettings.ReportHeaderImageUrl = "www.yoursite.com/reporting/resources/company_logo.png";
+
+    AdHocSettings.RedirectExports = true; // false by default
+
+
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
@@ -42,7 +45,9 @@ Public Class CustomAdHocConfig
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
-        AdHocSettings.ReportHeaderImageUrl = "www.yoursite.com/reporting/resources/company_logo.png"
+
+        AdHocSettings.RedirectExports = true  
+
         HttpContext.Current.Session("ReportingInitialized") = True
     End Sub
 End Class
