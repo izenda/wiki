@@ -1,5 +1,3 @@
-#How to Minify CSS Files
-
 [[_TOC_]]
 
 #Introduction
