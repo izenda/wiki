@@ -154,4 +154,4 @@ _**Note:** Due to the heavy use of session state Izenda relies on for caching im
 
 ##The Settings.aspx page
 
-Izenda Reports also allows most common settings to be turned on or off through its settings page. In this page you will find that settings have been grouped into categories depending on the function they server. This page can also provide helpful diagnostic data about your application.
+Izenda Reports also allows most common settings to be turned on or off through its settings page. In this page you will find that settings have been grouped into categories depending on the function they server. This page can also provide helpful diagnostic data about your application. It is an Izenda best practice to only use the settings.aspx page and izenda.config for trials and evaluations, and not in production.
