@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the value enabling the Settings button on the Izenda Reports toolbar. The settings button launches the settings page, which allows for a GUI-oriented interface for modifying various common settings. However, we highly recommend using the ``InitializeReporting()`` method to perform your initialization.
+Gets or sets the value enabling the Settings button on the Izenda Reports toolbar. The settings button launches the settings page, which allows for a GUI-oriented interface for modifying various common settings. However, we highly recommend either removing the settings page entirely, or implementing a custom settings page (example in the third code sample), and using the ``InitializeReporting()`` method to perform your initialization.
 
 **Default Value:** True
 
@@ -51,6 +51,32 @@ Public Class CustomAdHocConfig
         HttpContext.Current.Session("ReportingInitialized") = True
     End Sub
 End Class
+```
+
+##Settings.aspx.cs (C♯)
+
+```csharp
+public partial class Settings : System.Web.UI.Page {
+  protected override void OnLoad(System.EventArgs e) {
+        ListDictionary tests = Izenda.AdHoc.Utility.DiagnosticTest();
+        foreach (DictionaryEntry de in tests) {
+            if (!(de.Value is bool))
+                continue;
+            if (!(bool) de.Value) {
+                if (de.Key == "Connection String") {
+                    errorlabel.Text = "Sorry, your Connection String is corrupted";
+                }
+
+                else if (de.Key == "License Key") {
+
+                     errorlabel.Text = "Your License Key is invalid.";
+
+                }
+
+                 else if...
+            }
+        }
+  }
 ```
 
 ##Screenshots
