@@ -1,10 +1,12 @@
+#How To Minify CSS Files
+
 [[_TOC_]]
 
-#Introduction
+##Introduction
 
 Izenda uses a host of minified files for performance improvement. When making updates the the .CSS files or occasionally when updating, the minified versions (.min.css) of the CSS files will need to be updated or generated. This can be done using Grunt.
 
-# Instructions
+## Instructions
 
 1. Go to nodejs.org and download the latest version of NodeJS.
 2. Open your command line and type **_npm install -g grunt-cli_**
