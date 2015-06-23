@@ -7,7 +7,7 @@
 ## Non-Control UI Elements
 
 
-||Setting name|Setting description|Default Value|
+|Setting name|Setting description|Default Value|
 |:---|:---:|:---:|
 |Thumbnail Width|AdHocSettings.ThumbnailWidth||
 |Thumbnail Height|AdHocSettings.ThumbnailHeight||
