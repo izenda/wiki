@@ -7,5 +7,7 @@
 
 ## Non-Control UI Elements
 
+## Rendering Settings
+
 ## CSS Elements
 
