@@ -5,7 +5,16 @@
 ## About
 
 ## Non-Control UI Elements
-- Thumbnail Width - AdHocSettings.ThumbnailWidth
+
+
+||Setting name|Setting description|Default Value|
+|:---|:---:|:---:|
+|Thumbnail Width|AdHocSettings.ThumbnailWidth||
+|Thumbnail Height|AdHocSettings.ThumbnailHeight||
+|Gauge(Dashboard) Width|AdHocSettings.DashboardGaugeWidth||
+|Gauge Width|AdHocSettings.GaugeWidth||
+|Thumbnail Width|AdHocSettings.GaugeHeight||
+
 - Thumbnail Height - AdHocSettings.ThumbnailHeight
 - Width of the Gauge in the Dashboard, height is changed proportionally - AdHocSettings.DashboardGaugeWidth
 - Width of the Gauge for non-Dashboard rendering - AdHocSettings.GaugeWidth
