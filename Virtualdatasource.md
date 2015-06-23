@@ -1,4 +1,4 @@
-If you wish to use one of the reports already created as a data source instead of existing tables:
+If you wish to use one of the reports already created as a data source instead of existing tables. Virtual Data Sources can be used with direct database connections and with direct fusion connections against datasources (MsSql, MySql, Oracle, etc.). This feature is NOT compatible with OData datasources.
 
 1 -- Set AdHocSettings.AllowVirtualDataSources = true;  
 
