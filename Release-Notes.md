@@ -1,6 +1,80 @@
 [[_TOC_]]
 
 
+# 6.9.0.2 (June 23, 2015)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|FB:18576|API|Optimization|Rename form script &lt;div id="launchmeplease"&gt; to &lt;div id="iz-custom-js"&gt;|
+|FB:18972|Dashboards|Optimization|jQuery slider overlap in dashboard tiles in Dashboard 1.0 |
+|FB:18976|Report Design|Expressions|Properly update format according to the Expression Type - Advanced Field Settings updates|
+|FB:18997|Report Design|Visualization|Fixed incorrect calculation of visualization width when scrollbar exist.|
+|FB:19000|Dashboards|Export|Added ability to email link and PDF from Dashboard 2.0|
+|FB:19055|API|Optimization| Made two members public to allow customer to use optimized izenda api calls (ReportListAuxData() and  ReadXml(string xml, ReportListAuxData auxData) )|
+|FB:19159|Report Design|Visualization|Metric selection on Visualization Save - updated|
+|FB:19189|Report Design|Filters|Initialization of Filters corrected for use of same field in 2 filters|
+|FB:19199|Report Design|Export| Fixed Page Break for Field Value visual group style and Multi Level Visual Group Style. Removed Doc type support to be ready in subsequent release - PDF support only now|
+|FB:19213|API|Optimization| Version locks with License Key and related legacy code removed|
+|FB:19235|Report Viewer|Charts| Added possibility to wrap labels of width exceeding certain value on all highcharts|
+|FB:19282|Report Viewer|Optimization|Text (cell) highlight in a Analysis Grid style fixed|
+|FB:19300|Report Design|Expressions| Fixed update format according to the Expression Type.|
+|FB:19314|Report Design|Filters| Cascade filters with Calculation fields and filter logic fixed|
+|FB:19319|Report Design|Filters| Unhanded exception in the Designer with Equals(Select)-like filters when design is incorrect fixed.|
+|FB:19330|Report Design|Filters|Hidden Columns showing in filters fixed |
+|FB:19364|Instant Reports|Charts|Instant Report Designer where while building an instant report with both an Autochart and Visual Grouping, the styling will break and the alternating item colors will change behaviors fixed|
+|FB:19368|Report Design|Auto Chart|Autochart - Start At Zero functionality fixed|
+|FB:19386|Report Design|Auto Chart|AutoChart - Scale changes as user drills down - fixed.|
+|FB:19388|API|Optimization| Fixed deleting reports using an apostrophe in title.|
+|FB:19405|Report Design|Saving|Concurrency and the ShowModifiedReportMessage|
+|FB:19420|API|Fusion|Fixed FusionDriver when it generates SQL for report built against tables from different databases from the same db server. Previously it modified on demand the Schema property of certain Tables from DatabaseSchema to add database names to fully qualified tables/columns names in generated SQL. Now it doesn't modify on demand, instead now FusionDriver always uses all Tables/Columns with database name added to Schema property (which means it now always uses fully qualified Tables/Columns name with database name included)|
+|FB:19441|UI|Optimization| Enable PopUp drill down interactivity by adding Close button to the dialog|
+|FB:19472|API|Joining|Added additional constraints operator - now user can select multiple conditions on the join - see article (Setting to implement AdHocSettings.ShowAdditionalJoinConditions = true;)|
+|FB:19497|UI|Optimization|Removed Obsolete Warning Messages|
+|FB:19519|Scheduler|Optimization| Modified the scheduler to use the report name as the attachment name|
+|FB:19528|API|Optimization|Removed unused method from Driver|
+|FB:19543|API|Optimization|Added Resources Version Marker for identification |
+|FB:19552|Report Design|Filters|Filters from Instant Report duplicate in Report Viewer fixed|
+|FB:19553|Report Design|Pivots|Visual Grouping with Pivots conflicts removed|
+|FB:19573|API|Optimization|Sorting on numeric fields as dates updated to use strict mode of the date parsing to avoid sorting errors|
+|FB:19582|UI|Optimization| Hide "Update data sources aliases" button when aliases are disabled|
+|FB:19586|API|Export|Bulk Constraints - New setting - AdHocSettings.ThrowExceptionOnAddConstraintError Default value - true. This setting controls whether error message is thrown on constraints not found or if errors are only logged. For example if tenant does not have access to table in constraint error should be logged rather than presented to user.|
+|FB:19635|API|Forms| Fixed inconstancy in the Tenant Field behavior with Forms|
+|FB:19646|API|Optimization|Languages in Izenda AdHocSettings.Language -1) Languages enum updated 2) French Canadian fr-CA resources file renamed so now it can be processed just like all other languages in the enum|
+|FB:19656|UI|Optimization|"Expand All" option overriding all the expand options within the report using Visual Group Analysis Grid Fixed|
+|FB:19657|UI|Optimization|Scroll Bar is not available in Dashboard 2.0 for the reports when the grid expands beyond the screen space - fixed|
+|FB:19688|API|Export|Bulk CSV and Fusion connections updated to work with all supported database types|
+|FB:19689|Report Design|Joining|Tables are not joined automatically if ShowDataSourcesTab=false fixed|
+|FB:19695|Report Viewer|Optimization|Formatting Separators Updated for Displayed filters |
+|FB:19698|Dashboards|Saving|Corrected users ability to save and save as an empty Dashboard 2.0|
+|FB:19700|Dashboards|Export|Corrected users ability to print empty Dashboard 2.0|
+|FB:19711|UI|Optimization|"Records Count" scroll bar is not adjusted back to correct position when changed from default Fixed Dashboard 2.0|
+|FB:19730|Dashboards|Export|Exception is thrown when user try to print on a empty tile fixed|
+|FB:19757|API|Optimization|When Gauges tab is hidden, getting js error - fixed|
+|FB:19774|Report Viewer|Pivots|Pivot Report Output showing column identifiers instead of column headers - fixed|
+|FB:19810|Dashboards|Saving|Save and Save As errors fixed for Dashboard 2.0 - Save shows no error and Save as errors showing dashboard exists (user must change name to use save as)|
+|FB:19828|Report Viewer|Charts|Legend Disabled in Bar Charts -fixed|
+|FB:19870|Report Viewer|Optimization|Running a report does not respect the Results per page setting - fixed|
+|FB:19894|API|Optimization|Fixed issue with filter list report object when AdHocSettings.UseReportID = true;|
+|FB:19897|Report Viewer|Optimization|Drilldown Report (popup) not working - fixed|
+|FB:19960|API|Optimization|Driver.InvalidateSchemaCache doesn't clean stored procedures from cache - fixed|
+|FB:19989|API|Joining|JoinedTableCollection modified in error during work of JoinedTableCollection.SQL getter - fixed|
+|FB:20004|API|Optimization|Time zone offset fixed for Oracle and PosGreSQL|
+|FB:20015|Report Viewer|Auto Chart|Autochart auto rebuild of y-axis fixed|
+|FB:20019|Report Viewer|Visualization|Shading Heat Map - added a 'simple color change' function to heat map|
+|FB:20022|API|Optimization|AJAX of Phantom export stops - fixed|
+|FB:20026|API|Expressions|Expressions adding unwanted Group By clause - fixed|
+|FB:20036|Report Design|Filters|Use Previous OR Error - support reinstated|
+|FB:20039|API|Fusion|Virtual Data sources supported with Fusion - NOT SUPPORTED ON ODATA|
+|FB:20058|Report Design|Optimization|TinyMCE Code Short Cuts creating unexpected behavior - fixed|
+|FB:20070|API|Export|Chart Exports No Longer Work - Latest Windows Server 2012R2 Updates - fixed|
+|FB:20075|Report Viewer|Charts|Pie Chart Exception Error fixed.|
+|FB:20114|Dashboards|Saving|Fixed Dashboard 2.0 error when more than 5 tiles added|
+|FB:20116|API|Optimization|Aliased field error - using incorrect alias fixed|
+|FB:20126|API|Optimization|Security change bool ContainsTableName(string)  fixed|
+|FB:20186|Report Design|Filters|Equal (Multiple) & Equal (Popup) in Filters doesn't work when user enter a name in "Join Alias" - fixed|
+|FB:20191|API|Fusion|Datasource categories don't work in designer if FusionDriver is used - fixed|
+
+
 # 6.9.0.1 (May 28, 2015)
 
 ## Important Note about 6.9:
