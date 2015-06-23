@@ -7,13 +7,14 @@
 ## Non-Control UI Elements
 
 
-|Setting name|Setting description|Default Value|
+|Setting Name|Setting Description|Default Value|
 |:---|:---:|:---:|
-|Thumbnail Width|AdHocSettings.ThumbnailWidth||
-|Thumbnail Height|AdHocSettings.ThumbnailHeight||
-|Gauge(Dashboard) Width|AdHocSettings.DashboardGaugeWidth||
-|Gauge Width|AdHocSettings.GaugeWidth||
-|Thumbnail Width|AdHocSettings.GaugeHeight||
+|AdHocSettings.ThumbnailWidth|Thumbnail Width||
+|AdHocSettings.ThumbnailHeight|Thumbnail Height||
+|AdHocSettings.DashboardGaugeWidth|Width of the Gauge in the Dashboard, height is changed proportionally||
+|AdHocSettings.GaugeWidth|Width of the Gauge for non-Dashboard rendering||
+|AdHocSettings.GaugeHeight|Height of the Gauge for non-Dashboard rendering||
+|AdHocSettings.HighChartLabelWidth|Label width in HTML Charts. By default width is calculated automatically||
 
 - Thumbnail Height - AdHocSettings.ThumbnailHeight
 - Width of the Gauge in the Dashboard, height is changed proportionally - AdHocSettings.DashboardGaugeWidth
