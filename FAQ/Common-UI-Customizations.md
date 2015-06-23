@@ -11,6 +11,7 @@
 - Width of the Gauge for non-Dashboard rendering - AdHocSettings.GaugeWidth
 - Height of the Gauge for non-Dashboard rendering - AdHocSettings.GaugeHeight
 - Label width in HTML Charts. By default width is calculated automatically so this settings is used when some particular type of data is used in the Chart, for example very long labels - AdHocSettings.HighChartLabelWidth
+
 ## Rendering Settings
 - AdHocSettings.DefaultAlternatingItemColor
 - AdHocSettings.DefaultHeaderForegroundColor
