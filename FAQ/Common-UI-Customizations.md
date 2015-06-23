@@ -18,12 +18,15 @@
 
 
 ## Rendering Settings
-- AdHocSettings.DefaultAlternatingItemColor
-- AdHocSettings.DefaultHeaderForegroundColor
-- AdHocSettings.DefaultItemForegroundColor
-- AdHocSettings.DefaultReportBorderColor
-- AdHocSettings.DefaultReportHeaderColor
-- AdHocSettings.DefaultReportItemColor
+
+|Setting Name|Setting Description|Default Value|
+|:---|:---:|:---:|
+|AdHocSettings.DefaultAlternatingItemColor|||
+|AdHocSettings.DefaultHeaderForegroundColor|||
+|AdHocSettings.DefaultItemForegroundColor|||
+|AdHocSettings.DefaultReportBorderColor|||
+|AdHocSettings.DefaultReportHeaderColor|||
+|AdHocSettings.DefaultReportItemColor|||
 
 ## CSS Elements
 
