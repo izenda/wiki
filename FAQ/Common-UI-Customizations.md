@@ -42,5 +42,5 @@ This page lists commonly used settings for UI customizations. AdHoc Settings are
 |Footer|[id$="_ReportsDiv"].Footer||
 
 
-## Example
+## Examples
 
