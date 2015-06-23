@@ -41,3 +41,6 @@ This page lists commonly used settings for UI customizations. AdHoc Settings are
 |Report Header|[id$="_ReportsDiv"].Header||
 |Footer|[id$="_ReportsDiv"].Footer||
 
+
+## Example
+
