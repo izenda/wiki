@@ -32,7 +32,6 @@
 
 |Element|CSS Class|Default Value|
 |:---|:---:|:---:|
-
 |Title|[id$="_ReportsDiv"].ReportTitle||
 |Description|[id$="_ReportsDiv"].Description||
 |Report Header|[id$="_ReportsDiv"].Header||
