@@ -30,12 +30,12 @@ Each adHoc setting corresponds to the below setting under Style Tab
 
 |Setting Name|Setting Description|Default Value|
 |:---|:---:|:---:|
-|AdHocSettings.DefaultAlternatingItemColor|Alternating Cell Background Color||
-|AdHocSettings.DefaultHeaderForegroundColor|Header Value Color||
-|AdHocSettings.DefaultItemForegroundColor|Cell Value Color||
-|AdHocSettings.DefaultReportBorderColor|Border Color||
-|AdHocSettings.DefaultReportHeaderColor|Header Color||
-|AdHocSettings.DefaultReportItemColor|Cell Background Color||
+|AdHocSettings.DefaultAlternatingItemColor|Alternating Cell Background Color|"Gainsboro"|
+|AdHocSettings.DefaultHeaderForegroundColor|Header Value Color|"White"|
+|AdHocSettings.DefaultItemForegroundColor|Cell Value Color|"Black"|
+|AdHocSettings.DefaultReportBorderColor|Border Color|"White"|
+|AdHocSettings.DefaultReportHeaderColor|Header Color|"DarkSlateBlue"|
+|AdHocSettings.DefaultReportItemColor|Cell Background Color|"White|
 
 ## CSS Elements
 
