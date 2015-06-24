@@ -74,3 +74,30 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
   }
 ```
 ![](/FAQ/Common-UI-Customizations/TH_Height_400.png)
+
+
+###Global.asax (C♯)  - Default Item Foreground Color Change
+
+
+```csharp
+
+
+public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
+{
+
+  public static void InitializeReporting() {
+
+    if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+      return;
+    AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
+
+    AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
+    Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+    HttpContext.Current.Session["ReportingInitialized"] = true;
+
+  AdHocSettings.DefaultItemForegroundColor = "990000";     // set to 990000, which is 'RED' in hex
+
+
+  }
+```
+![](/FAQ/Common-UI-Customizations/foreground.png)
