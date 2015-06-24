@@ -23,6 +23,11 @@ This page lists commonly used settings for UI customizations. AdHoc Settings are
 
 ## Rendering Settings
 
+Each AdHoc setting corresponds to the below setting under Style Tab
+
+![]()
+
+
 |Setting Name|Setting Description|Default Value|
 |:---|:---:|:---:|
 |AdHocSettings.DefaultAlternatingItemColor|||
