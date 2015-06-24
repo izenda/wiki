@@ -13,12 +13,12 @@ This page lists commonly used settings for UI customizations. AdHoc Settings are
 
 |Setting Name|Setting Description|Default Value|
 |:---|:---:|:---:|
-|AdHocSettings.ThumbnailWidth|Thumbnail Width||
-|AdHocSettings.ThumbnailHeight|Thumbnail Height||
-|AdHocSettings.DashboardGaugeWidth|Width of the Gauge in the Dashboard, height is changed proportionally||
-|AdHocSettings.GaugeWidth|Width of the Gauge for non-Dashboard rendering||
-|AdHocSettings.GaugeHeight|Height of the Gauge for non-Dashboard rendering||
-|AdHocSettings.HighChartLabelWidth|Label width in HTML Charts. By default width is calculated automatically||
+|AdHocSettings.ThumbnailWidth|Thumbnail Width|170|
+|AdHocSettings.ThumbnailHeight|Thumbnail Height|220|
+|AdHocSettings.DashboardGaugeWidth|Width of the Gauge in the Dashboard, height is changed proportionally|200|
+|AdHocSettings.GaugeWidth|Width of the Gauge for non-Dashboard rendering|250|
+|AdHocSettings.GaugeHeight|Height of the Gauge for non-Dashboard rendering|50|
+|AdHocSettings.HighChartLabelWidth|Label width in HTML Charts. By default width is calculated automatically|n/a|
 
 
 ## Rendering Settings (Style Tab AdhocSettings)
