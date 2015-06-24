@@ -39,12 +39,12 @@ Each adHoc setting corresponds to the below setting under Style Tab
 
 ## CSS Elements
 
-|Element|CSS Class|Default Value|
+|Description|CSS Class|
 |:---|:---:|:---:|
-|Title|[id$="_ReportsDiv"].ReportTitle|18pt|
-|Description|[id$="_ReportsDiv"].Description||
-|Report Header|[id$="_ReportsDiv"].Header||
-|Footer|[id$="_ReportsDiv"].Footer||
+|Report Title|[id$="_ReportsDiv"].ReportTitle|
+|Report Description|[id$="_ReportsDiv"].Description|
+|Report Header|[id$="_ReportsDiv"].Header|
+|Report Footer|[id$="_ReportsDiv"].Footer|
 
 
 ## Examples
