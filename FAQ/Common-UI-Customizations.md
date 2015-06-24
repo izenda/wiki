@@ -5,8 +5,7 @@
 ## Note
 
 This page lists commonly used settings for UI customizations. AdHoc Settings are used in global.asax and CSS can be applied to report.css. 
-(Refer to below example) 
-
+(Refer to below example) ***Browser cache reset is required for the changes to be seen***
 
 ## Non-Control UI Elements
 
