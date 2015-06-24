@@ -101,3 +101,12 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
   }
 ```
 ![](/FAQ/Common-UI-Customizations/foreground.png)
+
+
+### /Resources/css/Report.css - Report Title Font Size Change
+
+*** Make sure you delete all the cached files before applying any change ***
+
+![](/FAQ/Common-UI-Customizations/ReportTitle.png)
+
+
