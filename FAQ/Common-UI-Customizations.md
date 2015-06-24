@@ -23,7 +23,7 @@ This page lists commonly used settings for UI customizations. AdHoc Settings are
 
 ## Rendering Settings
 
-Each AdHoc setting corresponds to the below setting under Style Tab
+Each adHoc setting corresponds to the below setting under Style Tab
 
 ![](/FAQ/Common-UI-Customizations/StyleTab.png)
 
