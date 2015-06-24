@@ -49,3 +49,29 @@ Each adHoc setting corresponds to the below setting under Style Tab
 
 ## Examples
 
+Thumbnail Height
+
+###Global.asax (C♯)
+
+```csharp
+
+
+public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
+{
+
+  public static void InitializeReporting() {
+
+    if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+      return;
+    AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
+
+    AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
+    Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+    HttpContext.Current.Session["ReportingInitialized"] = true;
+
+    AdHocSettings.ThumbnailHeight = 400;     // ThumbnailHeight set to 400
+
+
+  }
+```
+![](/FAQ/Common-UI-Customizations/TH_Height_400.png)
