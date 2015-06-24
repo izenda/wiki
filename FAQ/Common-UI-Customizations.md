@@ -21,7 +21,7 @@ This page lists commonly used settings for UI customizations. AdHoc Settings are
 |AdHocSettings.HighChartLabelWidth|Label width in HTML Charts. By default width is calculated automatically||
 
 
-## Rendering Settings
+## Rendering Settings (Style Tab AdhocSettings)
 
 Each adHoc setting corresponds to the below setting under Style Tab
 
@@ -30,12 +30,12 @@ Each adHoc setting corresponds to the below setting under Style Tab
 
 |Setting Name|Setting Description|Default Value|
 |:---|:---:|:---:|
-|AdHocSettings.DefaultAlternatingItemColor|||
-|AdHocSettings.DefaultHeaderForegroundColor|||
-|AdHocSettings.DefaultItemForegroundColor|||
-|AdHocSettings.DefaultReportBorderColor|||
-|AdHocSettings.DefaultReportHeaderColor|||
-|AdHocSettings.DefaultReportItemColor|||
+|AdHocSettings.DefaultAlternatingItemColor|Alternating Cell Background Color||
+|AdHocSettings.DefaultHeaderForegroundColor|Header Value Color||
+|AdHocSettings.DefaultItemForegroundColor|Cell Value Color||
+|AdHocSettings.DefaultReportBorderColor|Border Color||
+|AdHocSettings.DefaultReportHeaderColor|Header Color||
+|AdHocSettings.DefaultReportItemColor|Cell Background Color||
 
 ## CSS Elements
 
