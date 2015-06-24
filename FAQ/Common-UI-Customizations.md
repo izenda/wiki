@@ -25,7 +25,7 @@ This page lists commonly used settings for UI customizations. AdHoc Settings are
 
 Each AdHoc setting corresponds to the below setting under Style Tab
 
-![]()
+![](/FAQ/Common-UI-Customizations/StyleTab.png)
 
 
 |Setting Name|Setting Description|Default Value|
