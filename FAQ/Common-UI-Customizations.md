@@ -76,6 +76,9 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
 ![](/FAQ/Common-UI-Customizations/TH_Height_400_2.png)
 
 
+
+
+
 ###Global.asax (C♯)  - Default Item Foreground Color Change
 
 
@@ -101,6 +104,10 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
   }
 ```
 ![](/FAQ/Common-UI-Customizations/foreground.png)
+
+
+
+
 
 
 ### /Resources/css/Report.css - Report Title Font Size Change
