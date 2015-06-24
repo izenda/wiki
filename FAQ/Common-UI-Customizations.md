@@ -41,7 +41,7 @@ Each adHoc setting corresponds to the below setting under Style Tab
 
 |Element|CSS Class|Default Value|
 |:---|:---:|:---:|
-|Title|[id$="_ReportsDiv"].ReportTitle||
+|Title|[id$="_ReportsDiv"].ReportTitle|18pt|
 |Description|[id$="_ReportsDiv"].Description||
 |Report Header|[id$="_ReportsDiv"].Header||
 |Footer|[id$="_ReportsDiv"].Footer||
