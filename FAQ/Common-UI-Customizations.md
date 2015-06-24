@@ -49,9 +49,8 @@ Each adHoc setting corresponds to the below setting under Style Tab
 
 ## Examples
 
-Thumbnail Height
+###Global.asax (C♯)  - Thumbnail Height Change
 
-###Global.asax (C♯)
 
 ```csharp
 
