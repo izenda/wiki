@@ -28,7 +28,7 @@
 |FB:19405|Report Design|Saving|Concurrency and the ShowModifiedReportMessage|
 |FB:19420|API|Fusion|Fixed FusionDriver when it generates SQL for report built against tables from different databases from the same db server. Previously it modified on demand the Schema property of certain Tables from DatabaseSchema to add database names to fully qualified tables/columns names in generated SQL. Now it doesn't modify on demand, instead now FusionDriver always uses all Tables/Columns with database name added to Schema property (which means it now always uses fully qualified Tables/Columns name with database name included)|
 |FB:19441|UI|Optimization| Enable PopUp drill down interactivity by adding Close button to the dialog|
-|FB:19472|API|Joining|Added additional constraints operator - now user can select multiple conditions on the join - see article (Setting to implement AdHocSettings.ShowAdditionalJoinConditions = true;)|
+|FB:19472|API|Joining|Added additional constraints operator - now user can select multiple conditions on the join - see article on [ShowAdditionalJoinConditions](http://wiki.izenda.us/API/ShowAdditionalJoinConditions) for more information|
 |FB:19497|UI|Optimization|Removed Obsolete Warning Messages|
 |FB:19519|Scheduler|Optimization| Modified the scheduler to use the report name as the attachment name|
 |FB:19528|API|Optimization|Removed unused method from Driver|
