@@ -48,8 +48,8 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Can I inject a customized SQL "Where Clause" or other expression into my queries?|http://wiki.izenda.us/FAQ/Questions/Injecting-where-clause-into-queries]]
 - [[Can you tell me more about SQL connection strings?|https://www.connectionstrings.com/sql-server/]]
 - [[How do I resolve the error: "ExecuteReader requires an open and available Connection. The connection's current state is open."?|http://wiki.izenda.us/FAQ/Questions/ExecuteReader-requires-an-open-and-available-connection]]
-- [[How to add Read-Write User Access to DB|http://wiki.izenda.us/FAQ/Questions/ConnectionStringRW]]
-- [[How do I store multiple constraints at application level |http://wiki.izenda.us/FAQ/Questions/MultipleConstraints]]
+- [[How do I add Read-Write User Access to DB?|http://wiki.izenda.us/FAQ/Questions/ConnectionStringRW]]
+- [[How do I store multiple constraints at application level?|http://wiki.izenda.us/FAQ/Questions/MultipleConstraints]]
 
 
 ##Formatting
