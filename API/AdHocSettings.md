@@ -259,6 +259,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String[]|[[SharedWithValues|/API/CodeSamples/SharedWithValues]]|This sets the users or roles available in the Shared With dropdown of the Misc tab in the report designer.|String.Empty|
 |Boolean|[[ShowAddAll|/API/CodeSamples/ShowAddAll]]| Gets or sets the value indicating whether AddAll button and dropdown should be shown in the Izenda.AdHoc.AdHocSettings.FieldList. **(deprecated)**|False|
 |Boolean|[[ShowAddFieldInReportViewer|/API/CodeSamples/ShowAddFieldInReportViewer]]||True|
+|Boolean|[ShowAdditionalJoinConditions](http://wiki.izenda.us/API/ShowAdditionalJoinConditions)|Gets or sets the value indicating whether additional join conditions will be enabled in the Advanced Data Sources tab.|False|
 |Boolean|[[ShowAdminButton|/API/CodeSamples/ShowAdminButton]]|Gets or sets the value indicating showing buttons for administration**(deprecated)**|True|
 |Boolean|[[ShowAdvancedChartingButton|/API/CodeSamples/ShowAdvancedChartingButton]]| Gets or sets the value indicating whether "Show Advanced" button should be shown  in the Izenda.Web.UI.ChartControl. |True|
 |Boolean|[[ShowAllInPreview|/API/CodeSamples/ShowAllInPreview]]|Gets or sets the value indicating whether "CombinedTop Count" dropdown list should have the            "All" item in preview.|True|
