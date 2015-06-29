@@ -14,19 +14,19 @@ Multiple constraints can be stored in application as below.
 
 
 
-1) Before adding constraints, put this line of code:
+**a.** Before adding constraints, put this line of code:
 
-  Izenda.AdHoc.Database.Driver driver = AdHocContext.Driver;
+  ***Izenda.AdHoc.Database.Driver driver = AdHocContext.Driver;***
 
 and change all their "AdHocContext.Driver.AddConstraint(...)" lines to "driver.AddConstraint(...)"
 
-2) Add following line of code right before adding first custom constraint:
+**b.** Add following line of code right before adding first custom constraint:
 
-  AdHocContext.Driver.BeginAddingMultipleConstraints();
+  ***AdHocContext.Driver.BeginAddingMultipleConstraints();***
 
-3) Add following line of code right after adding last custom constraint:
+**c.** Add following line of code right after adding last custom constraint:
 
-  AdHocContext.Driver.EndAddingMultipleConstraints();
+  ***AdHocContext.Driver.EndAddingMultipleConstraints();***
 
 ##Global.asax (C♯)
 ```csharp
