@@ -5,6 +5,10 @@
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
+|HF:20251|Report Design|Filters|Fixed Filter UI - Separated from Fields UI - APPEARANCE CHANGE in Report Viewer and Instant Reports 6/30/2015|
+|HF:20244|UI|Dashboards|Fixed Layout of Dashboards (Legacy Dashboards) 6/30/2015|
+|HF:20196|Report Design|Data Sources|Fixed Pivots not working properly with Join Alias 6/30/2015|
+|HF:20235|API|Fusion|Virtual Data Sources not appearing when Fusion Driver used 6/30/2015|
 |FB:18576|API|Optimization|Rename form script &lt;div id="launchmeplease"&gt; to &lt;div id="iz-custom-js"&gt;|
 |FB:18972|Dashboards|Optimization|jQuery slider overlap in dashboard tiles in Dashboard 1.0 |
 |FB:18976|Report Design|Expressions|Properly update format according to the Expression Type - Advanced Field Settings updates|
