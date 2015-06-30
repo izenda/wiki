@@ -3,12 +3,14 @@
 
 # 6.9.0.2 (June 23, 2015)
 
+**NOTE** Advanced joins has been enhanced to allow multiple join conditions. [Read more here.](http://wiki.izenda.us/API/ShowAdditionalJoinConditions)
+
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
-|HF:20251|Report Design|Filters|Fixed Filter UI - Separated from Fields UI - APPEARANCE CHANGE in Report Viewer and Instant Reports 6/30/2015|
-|HF:20244|UI|Dashboards|Fixed Layout of Dashboards (Legacy Dashboards) 6/30/2015|
-|HF:20196|Report Design|Data Sources|Fixed Pivots not working properly with Join Alias 6/30/2015|
-|HF:20235|API|Fusion|Virtual Data Sources not appearing when Fusion Driver used 6/30/2015|
+|**HF:20196**|Report Design|Joins| Fixed issue where the join alias was attributed incorrectly|
+|**HF:20224**|Dashboards|Optimization| Fixed issue where Old Dashboards no longer rendered in 6902|
+|**HF:20235**|Report Design|Data Sources| Fixed issue where virtual data sources would appear but still throw a stack trace error|
+|**HF:20251**|Instant Reports|Filters| Fixed issue where filters were working improperly|
 |FB:18576|API|Optimization|Rename form script &lt;div id="launchmeplease"&gt; to &lt;div id="iz-custom-js"&gt;|
 |FB:18972|Dashboards|Optimization|jQuery slider overlap in dashboard tiles in Dashboard 1.0 |
 |FB:18976|Report Design|Expressions|Properly update format according to the Expression Type - Advanced Field Settings updates|
