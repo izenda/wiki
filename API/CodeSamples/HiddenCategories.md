@@ -4,7 +4,7 @@
 
 ##About
 
-Sets which categories are hidden for the current user. The category and any reports from those categories will not be shown to the current user in the report list or the report designer (when selecting a cateogry for the report). 
+Sets which categories are hidden for the current user. The category and any reports from those categories will not be shown to the current user in the report list or the report designer (when selecting a category for the report). 
 
 _**Note:** If a user with [[AllowCreateNewCategory|/API/CodeSamples/AllowCreateNewCategory]] set to true can type in the name of the hidden category and save a report to it, but when the user navigates back to the report viewer, the category and report will not be accessible anymore._
 
