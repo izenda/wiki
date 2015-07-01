@@ -10,7 +10,7 @@
 |**HF:20196**|Report Design|Joins| Fixed issue where the join alias was attributed incorrectly  6/30/2015|
 |**HF:20224**|Dashboards|Optimization| Fixed issue where Old Dashboards no longer rendered in 6.9.0.2.  6/30/2015|
 |**HF:20235**|Report Design|Data Sources| Fixed issue where virtual data sources would appear but still throw a stack trace error  6/30/2015|
-|**HF:20251**|Instant Reports|Filters| Fixed issue where filters were working improperly  6/30/2015|
+|**HF:20251**|Instant Reports|Filters| Fixed issue where filters were working improperly. Appearance Change of Filter Properties - separated from field properties   6/30/2015|
 |FB:18576|API|Optimization|Rename form script &lt;div id="launchmeplease"&gt; to &lt;div id="iz-custom-js"&gt;|
 |FB:18972|Dashboards|Optimization|jQuery slider overlap in dashboard tiles in Dashboard 1.0 |
 |FB:18976|Report Design|Expressions|Properly update format according to the Expression Type - Advanced Field Settings updates|
