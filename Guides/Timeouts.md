@@ -13,7 +13,7 @@ This setting allows the user to increase the database query time for building th
 AdHocSettings.EqualsDropDownTimeout = 1000;
 ```
 
-##Equals Select 
+##[Equals Select](http://wiki.izenda.us/API/CodeSamples/EqualsSelectTimeout) 
 
 This setting allows the user to increase the database query time for building the drop down selection options at the Filters tab in the Report Designer. If you have a large or unoptimized database increasing this setting can help with proper reporting performance.
 
