@@ -20,7 +20,7 @@ Company, Department, Office, Desk
 
 Tera, Giga, Mega, Kilo
 
-Expressions read the exact field order as you define it. If I place Neighborhood before Country, my visualization will not make any sense by definition. Double check that fields are in the correct order if the visualization does not appear to be correct.
+Visualizations read the exact field order as you define it. If I place Neighborhood before Country, my visualization will not make any sense by definition. Double check that fields are in the correct order if the visualization does not appear to be correct.
 
 **Field Sorting**
 
