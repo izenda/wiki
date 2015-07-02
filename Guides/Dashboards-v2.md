@@ -26,7 +26,7 @@ Izenda now offers its new Angular.js Dashboard Designer / Viewer with the platfo
           <li class="top-nav-item"><a href="ReportList.aspx">Reports</a></li>
           <li class="top-nav-item"><a href="Dash.aspx?clear=1" onclick="ShowRlToDbLoading();">Dashboards</a></li>
 ```
-4. In the global, update the dashboard viewer setting to AdHocSettings.DashboardViewer = "Dash.aspx";, as well as the dashboard designer setting to AdHocSettings.DashboardDesignerUrl = "Dash.aspx";
+4. In the global, update the dashboard viewer setting to AdHocSettings.DashboardViewer = "Dash.aspx";, as well as the dashboard designer setting to AdHocSettings.DashboardDesignerUrl = "Dash.aspx";. Additionally, set AdHocSettings.DashboardDateSliderMode = DashboardDateSliderMode.None;, this will enable between date filters to be exposed in the new dashboard. Without this setting date filters will not be exposed.
 
 ##MVC
 
@@ -40,7 +40,7 @@ Izenda now offers its new Angular.js Dashboard Designer / Viewer with the platfo
       return View();
     }
 ```
-5. In the global, update the following: AdHocSettings.DashboardViewer = "Dash" and AdHocSettings.DashboardDesignerUrl = "Dash";
+5. In the global, update the following: AdHocSettings.DashboardViewer = "Dash" and AdHocSettings.DashboardDesignerUrl = "Dash";. Additionally, set AdHocSettings.DashboardDateSliderMode = DashboardDateSliderMode.None;, this will enable between date filters to be exposed in the new dashboard. Without this setting date filters will not be exposed.
 
 ### Tips
 * When upgrading, ensure log4net.dll and log4net.xml are in the Bin folder
