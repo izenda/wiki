@@ -33,5 +33,8 @@ You will notice the [changes](http://wiki.izenda.us/Whats-new-in-the-6-dot-8-0-d
 ###Important note for 6.8.0.4+
 In an out-of-the-box Reference Implementation of 6.8.0.4+, you will notice that there is no Forms folder.  Customers who utilize our Forms add-on will now find the form resources in Resources/tinymce.  In 6.8.0.4+, there is no need for the Forms folder anymore.  In fact, you may get build errors if it is left in when upgrading to 6.8.0.4+.
 
+###Zedgraph is no Longer supported
+AdHocSettings.ChartingEngine = ChartingEngine.HtmlChart;
+
 _See Also:_ 
 [[Izenda-Update-Best-Practices]] 
