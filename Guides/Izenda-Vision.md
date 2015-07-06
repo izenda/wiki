@@ -57,11 +57,11 @@ These terms refer to the types of columns that each visualization reads.
 
 #Lifecycle of a VIS report:
  
-1. To render a Detail or Summary part of report us two tables of type .NET DateTable (SourceTable - raw data, FormattedTable - formated data) are generated based on the corresponding datasource. Next, these tables are used to render html tables (grid).
-2. After that starts the process of generation of visualization.
-3. Forming all necessary data: number of fields, field types and data of the report.
-4. Data for the visualization is generated using tables "SourceTable" and "FormattedTable". Data generated on the server in the form of the object that contains info about rows and columns. Then it is serialized to a JSON string and sent to the client side.
-5. On the client side data is deserialized to JS object and used to render visualization.
+1. First, the Detail (the tab is labeled Fields) or Summary report part in generated on the underlying report. These are .NET DateTable objects, at first called SourceTable for raw data from the database, and FormattedTable after formatting is applied.
+2. These tables are then used to render the HTML grids that are populated and displayed to the user.
+3. The Visualization reads and formats the data from the underlying SourceTable and FormattedTable that forms either the Summary or Detail (Field) grid.
+4. This data is then serialized into a JSON string and sent to the client.
+5. The JSON string is then deserialized into the Javascript object which renders the visualization.
 
 #Visualization Styles:
 
@@ -101,6 +101,56 @@ These terms refer to the types of columns that each visualization reads.
 * Field 2+ - **Metric** - This field will represent the value. Range of values is displayed on the X axis and count of values is displayed on the Y axis.
 * Notes:
 * * Some group categories for Datetime will produce too many or invalid results. If your chart does not work, try a different grouping on the datetime or filtering the dataset from the Filter tab.
+
+##(Auto) Gauges
+
+Automatic Gauges have four different modes:  
+
+* Round
+* Linear
+* Simple
+* Trend
+
+### Round Auto Gauge Style
+
+* Round style draws a round dial gauge for each value of Field 1. The literal value will be displayed in the center of the gauge, and the proportion of this value to some maximal value will be displayed in blue around the edge of the gauge, starting from the 12 o'clock position or straight up, filling clockwise or to the right. You may place arbitrary indicators on this gauge to serve as Key Performance Indicators (KPI).
+* Field 1 - **Group** - This field will determine what each gauge represents.
+* Field 2 - **Metric** - This field will determine the numeric value displayed in each gauge. Supplying only one metric means that the gauge will always be 100%, as it is equal to itself.
+* Field 3 - **Metric** - **OPTIONAL** - This field will establish a secondary metric in relation to the metric in Field 2. If Field 2 has a value of 50, and Field 3 has a value of 100, then the value displayed will be 50/100, and the gauge will be half full.
+* The following fields do not have to be in any particular order: They read text in the description box to determine how they should behave.
+* Field 4 - **Metric** - **OPTIONAL** - This field must have the text "Max" in the description box. It will establish an upper limit for the gauge itself, and any values in the gauge will be rendered as a proportion of the Max metric.
+* Field 5 - **Metric** - **OPTIONAL** - This field must have the text "Low" in the description box. It will establish a red KPI indicator at the specified value.
+* Field 6 - **Metric** - **OPTIONAL** - This field must have the text "High" in the description box. It will establish a green KPI indicator at the specified value.
+* Field 7 - **Metric** - **OPTIONAL** - This field must have the text "Target" in the description box. It will establish a blue KPI indicator at the specified value.
+
+### Linear Auto Gauge Style
+
+* Linear style displays a series of linear gauges which display a number from 0 to 100, from left to right. You may set KPI areas for this gauge.
+* Field 1 - **Group** - This field will determine what each gauge represents.
+* Field 2 - **Metric** - This field will determine the value in each gauge.
+* The following fields do not have to be in any particular order: They read text in the description box to determine how they should behave.
+* Field 3 - **Metric** - **OPTIONAL** - This field must have the text "Low" in the description box. It will establish a green KPI region at and around the specified value.
+* Field 4 - **Metric** - **OPTIONAL** - This field must have the text "High" in the description box. It will establish a red KPI region at and around the specified value.
+* Field 5 - **Metric** - **OPTIONAL** - This field must have the text "Target" in the description box. It will establish a blue KPI region at and around the specified value.
+
+### Simple Auto Gauge Style
+
+* Simple style displays the name of each group value in Field 1, and then a numeric value as text from Field 2. You can establish a color gradient of this text value, as well as specify a Units value as a string to display beneath the gauge.
+* Field 1 - **Group** - This field will determine what each gauge represents.
+* Field 2 - **Metric** - This field will determine the value in each gauge.
+* The following fields do not have to be in any particular order: They read text in the description box to determine how they should behave.
+* Field 3 - **Metric** - **OPTIONAL** - This field must have the text "Low" in the description box. It will establish the lower bound of a KPI region. Field 2's value will be shaded a bright green as it approaches but does drop below this value.
+* Field 4 - **Metric** - **OPTIONAL** - This field must have the text "High" in the description box. It will establish a upper bound of a KPI region. Field 2's value will be shaded a deep red as it approaches but does not exceed this value. 
+* Field 5 - **Metric** - **OPTIONAL** - This field must have the text "Target" in the description box. It will establish a blue KPI region at and around the specified value. Field's 2's value will be shaded a bright blue as it approaches this value.
+* Field 6 - **Group** - **OPTIONAL** - This field's value will be displayed as a string beneath each gauge as a subtext. 
+
+### Trend Auto Gauge Style
+
+* Trend displays a series of data over time, as well as a proportional indicator showing the currently moused over time value in relation to the first time value of each gauge. You may also set a bulls-eye target indicator for a certain value. 
+* Field 1 - **Group** - This field will determine what each gauge represents.
+* Field 2 - **Datetime** - This field will determine the time order of the values for each gauge. This field must be sorted chronologically from oldest to newest (default sort) and grouped by Year & Month.
+* Field 3 - **Metric** - This field determines the numerical value displayed for each time value.
+* Field 4 - ** Metric** - **OPTIONAL* - This field determines a target value superimposed atop the gauge, indicating if the current value of Field 2 is too low or too high.
 
 ##Heat Map
 
