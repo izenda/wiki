@@ -8,14 +8,6 @@ Given that visualizations rely on the teamwork between the chart itself and the 
 
 In Izenda terms, a field and a column are the same thing. This documentation will refer to fields and columns interchangeably. To be precise, fields are listed from top to bottom on the Fields tab, and displayed as columns from left to right.
 
-#Lifecycle of a VIS report:
- 
-1. To render a Detail or Summary part of report us two tables of type .NET DateTable (SourceTable - raw data, FormattedTable - formated data) are generated based on the corresponding datasource. Next, these tables are used to render html tables (grid).
-2. After that starts the process of generation of visualization.
-3. Forming all necessary data: number of fields, field types and data of the report.
-4. Data for the visualization is generated using tables "SourceTable" and "FormattedTable". Data generated on the server in the form of the object that contains info about rows and columns. Then it is serialized to a JSON string and sent to the client side.
-5. On the client side data is deserialized to JS object and used to render visualization.
-
 ##Field Order
 
 When creating a visualization, you must pay specific attention to the field order. This is the idea that fields, from top to bottom, can be numbered - the first field in the list is 1, the second field is 2, and so on. Likewise, the leftmost column is column 1, the column immediately to the right is column 2, and so on. This field order is critical, as visualizations demand a specific order to fields which dictates not only if they will be used, but how they will be used.
@@ -62,6 +54,14 @@ These terms refer to the types of columns that each visualization reads.
 * **Time** - This column must be a Datetime data type.  
 * **Metric** - This column can be any data type. It is generally an aggregate, and most commonly a numeric, but does not have to be. These columns are the elements that are being charted, mapped, or displayed on your visualization. 
 * **Geographic Field** - This column is a special case. It is used in map-style visualizations. It must be a list of geographic entities, such as a list of countries, regions, or states.
+
+#Lifecycle of a VIS report:
+ 
+1. To render a Detail or Summary part of report us two tables of type .NET DateTable (SourceTable - raw data, FormattedTable - formated data) are generated based on the corresponding datasource. Next, these tables are used to render html tables (grid).
+2. After that starts the process of generation of visualization.
+3. Forming all necessary data: number of fields, field types and data of the report.
+4. Data for the visualization is generated using tables "SourceTable" and "FormattedTable". Data generated on the server in the form of the object that contains info about rows and columns. Then it is serialized to a JSON string and sent to the client side.
+5. On the client side data is deserialized to JS object and used to render visualization.
 
 #Visualization Styles:
 
