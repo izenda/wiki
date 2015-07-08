@@ -5,6 +5,14 @@
 
 Izenda utilizes Log4Net as the default logging provider. This logging ability is included with every implementation of Izenda since version 6.7.1.265. By default, the logging level is set to FATAL, so almost nothing is logged. To change this, and "enable" logging, just change the error level in the log4net.xml file to something less restrictive. In the next section, the specifics of how to make this change will be shown. 
 
+##Disabling Logging
+
+To disable logging, add this setting in your Global:
+
+AdHocContext.DisableLogging = true;
+
+Add it before any other call, for example before the connection string, in the initialization or start event.
+
 ##Basic Configuration
 ```xml
 <log4net>    
@@ -42,4 +50,4 @@ The value here ends up being the name of the log file output. It is recommended 
 
 ##More Information
 
-For more information about logging, please visit the [log4net documentation](http://logging.apache.org/log4net/release/features.html). There is significantly more information there than anyone will ever need. 
+For more information about logging, please visit the [log4net documentation](http://logging.apache.org/log4net/release/features.html).
