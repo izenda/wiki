@@ -152,3 +152,4 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Izenda Caching Lifecycle|/FAQ/Izenda Caching Lifecycle]]
 - [[How to alias joined tables names|/API/CodeSamples/ShowJoinAliasTextboxes]]
 - [[How do I control page breaking inside of an Image?|/FAQ/Questions/Preventing-page-break-in-images]]
+- [How do I toggle word wrapping in the report list?](http://wiki.izenda.us/FAQ/Toggle-Text-Wrapping-on-the-Report-List)
