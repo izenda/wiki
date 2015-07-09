@@ -1,5 +1,3 @@
-#How Does SSL Work In Izenda?
-
 [[_TOC_]]
 
 ###Izenda And SSL
