@@ -2,11 +2,13 @@
 
 [[_TOC_]]
 
-##Izenda And SSL
+###Izenda And SSL
 
 Izenda does not have any special SSL handlers. All Izenda pages will behave the same way as all other pages on the SSL-protected site.
 
 The only extra factor is how Izenda loads internal resources. In many cases, Izenda embeds static resources into the HTML. Those resources must be downloaded first, using WebClient. There is some internal logic to make these resources accessible via HTTPS.
+
+###How do I test to ensure secure connections work as expected?
 
 Classes that are used to download data are all internal so there is no way to manually verify how they work. However, you can test this functionality by verifying these features work properly:
 
