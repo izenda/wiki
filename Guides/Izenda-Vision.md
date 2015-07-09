@@ -36,15 +36,15 @@ Some visualizations support dynamic filtering and drill-down-like behavior. Curr
 
 ##Fields labeled with a plus (+) sign
 
-Some visualizations can accept an indefinite number of fields as metrics. These fields are noted with a + after the field number order. That is to say, if a visualization requires 3 and only 3 fields, its fields will be listed as 1, 2, 3. However, if a visualization can have multiple fields after the first two fields which define its boundaries, its fields would be listed as 1, 2, 3+. In other words, after the mandatory fields 1 and 2, we could have fields 3, 4, 5, 6 which all serve as additional selectable metrics. Generally only one of these fields will be displayed at a time, but with the option of selecting between them.
+Some visualizations can accept an indefinite number of fields as metrics. These fields are noted with a plus sign after the field number order. That is to say, if a visualization requires 3 and only 3 fields, its fields will be listed as 1, 2, 3. However, if a visualization can have multiple fields after the first two fields which define its boundaries, its fields would be listed as 1, 2, 3+. In other words, after the mandatory fields 1 and 2, we could have fields 3, 4, 5, 6 which all serve as additional selectable metrics. Generally only one of these fields will be displayed at a time, but with the option of selecting between them.
 
 ##Fields labeled with ellipsis (...)
 
-Some visualizations can accept a large number of fields as groups. These fields are noted with a … after the field order number. This means that if a visualization accepts multiple levels of hierarchical data, I could have 5 group fields representing hierarchy in fields 1 through 5, and begin my metrics at field 6. In this documentation, this will be noted as Field 1…, Field 2. This does not mean that the metric needs to be in the actual second field. This means that the metric field(s) must be placed after all of the group fields in fields 1 through X.
+Some visualizations can accept a large number of fields as groups. These fields are noted with an ellipsis after the field order number. This means that if a visualization accepts multiple levels of hierarchical data, I could have 5 group fields representing hierarchy in fields 1 through 5, and begin my metrics at field 6. In this documentation, this will be noted as Field 1…, Field 2. This does not mean that the metric needs to be in the actual second field. This means that the metric field(s) must be placed after all of the group fields in fields 1 through X.
 
 ##Fields labeled with a question mark (?)
 
-Some visualizations do not care where a field is, so long as it exists. These fields are noted with a ? after the field order number. This means that you don’t necessarily have to place that field in the noted order, if you have some reason not to follow the recommended best practice.
+Some visualizations do not care where a field is, so long as it exists. These fields are noted with a question mark after the field order number. This means that you don’t necessarily have to place that field in the noted order, if you have some reason not to follow the recommended best practice.
 
 ##Terms
 
@@ -57,9 +57,9 @@ These terms refer to the types of columns that each visualization reads.
 
 #Lifecycle of a VIS report:
  
-1. First, the Detail (the tab is labeled Fields) or Summary report part in generated on the underlying report. These are .NET DateTable objects, at first called SourceTable for raw data from the database, and FormattedTable after formatting is applied.
+1. First, the Detail (the tab is labeled Fields) or Summary report part is generated on the underlying report. These are .NET DateTable objects, initially termed SourceTable for raw data from the database, and FormattedTable after formatting is applied.
 2. These tables are then used to render the HTML grids that are populated and displayed to the user.
-3. The Visualization reads and formats the data from the underlying SourceTable and FormattedTable that forms either the Summary or Detail (Field) grid.
+3. The Visualization reads and formats the data from the underlying SourceTable and FormattedTable that forms either the Summary or Detail (Fields) grid.
 4. This data is then serialized into a JSON string and sent to the client.
 5. The JSON string is then deserialized into the Javascript object which renders the visualization.
 
@@ -88,8 +88,8 @@ These terms refer to the types of columns that each visualization reads.
 
 * Combo displays metrics with a series of bars and lines on the same graph. Each metric gets its own Y axis, with the X axis determined by the single group field. The first half of the metric fields will be displayed with bars, the second half with lines.
 * Field 1 - **Group** - This field will represent the categories along the X axis.
-* Field 2+ - **Metric** - This field will represent the values of each bar or line. Each bar or line will receive its own scale on the Y axis.
-* Notes:
+* Field 2+ - **Metric** - This field will represent the values of each bar or line. Each bar or line will receive its own scale on the Y axis.  
+**Notes:**
 * * Metric fields will be split between bar and line graphs. The first half of your metric fields will be bars, the second half will be lines. 
 
 ##Crossfilter
@@ -99,17 +99,17 @@ These terms refer to the types of columns that each visualization reads.
 * Crossfilter displays multiple charts, one for the datetime grouping field and one for each metric. Clicking and dragging on any chart will establish a range, which acts as a filter on all other charts. You can also drag the range itself to move it without changing its size. This chart is useful for finding clusters of data within other data, for example we have less orders in June vs. August but they are worth more money.
 * Field 1? - **Datetime** - This field will represent the time factor by which other metrics can be filtered. Range of values is displayed on the X axis and count of values is displayed on the Y axis.
 * Field 2+ - **Metric** - This field will represent the value. Range of values is displayed on the X axis and count of values is displayed on the Y axis.
-* Notes:
+**Notes:**
 * * Some group categories for Datetime will produce too many or invalid results. If your chart does not work, try a different grouping on the datetime or filtering the dataset from the Filter tab.
 
-##(Auto) Gauges
+##Auto Gauges
 
 Automatic Gauges have four different modes:  
 
 * Round
 * Linear
 * Simple
-* Trend
+* Trending
 
 ### Round Auto Gauge Style
 
@@ -144,13 +144,13 @@ Automatic Gauges have four different modes:
 * Field 5 - **Metric** - **OPTIONAL** - This field must have the text "Target" in the description box. It will establish a blue KPI region at and around the specified value. Field's 2's value will be shaded a bright blue as it approaches this value.
 * Field 6 - **Group** - **OPTIONAL** - This field's value will be displayed as a string beneath each gauge as a subtext. 
 
-### Trend Auto Gauge Style
+### Trending Auto Gauge Style
 
-* Trend displays a series of data over time, as well as a proportional indicator showing the currently moused over time value in relation to the first time value of each gauge. You may also set a bulls-eye target indicator for a certain value. 
+* Trending style displays a series of data over time, as well as a proportional indicator showing the currently moused over time value in relation to the first time value of each gauge. You may also set a bulls-eye target indicator for a certain value. 
 * Field 1 - **Group** - This field will determine what each gauge represents.
 * Field 2 - **Datetime** - This field will determine the time order of the values for each gauge. This field must be sorted chronologically from oldest to newest (default sort) and grouped by Year & Month.
 * Field 3 - **Metric** - This field determines the numerical value displayed for each time value.
-* Field 4 - ** Metric** - **OPTIONAL* - This field determines a target value superimposed atop the gauge, indicating if the current value of Field 2 is too low or too high.
+* Field 4 - ** Metric** - **OPTIONAL** - This field determines a target value superimposed atop the gauge, indicating if the current value of Field 2 is too low or too high.
 
 ##Heat Map
 
@@ -167,8 +167,8 @@ Automatic Gauges have four different modes:
 * Matrix displays a series of squares, arranged by group and time, in the style of a pivot. The squares are shaded according to each metric value.
 * Field 1 - **Group** -  This field will represent the categories along the Y axis.
 * Field 2 - **Time** - This field will represent the categories along the X axis. This field must have the function set to Group(Year & Month).
-* Field 3 - **Metric** - This field will represent the value of each square. 
-* Notes:
+* Field 3 - **Metric** - This field will represent the value of each square.  
+**Notes:**
 * * Matrix can only render so many squares. If you aren't getting enough data on the time based X axis, try filtering out some items from the group based Y axis.
 
 ##Sunburst
@@ -198,8 +198,8 @@ Automatic Gauges have four different modes:
 * Field 1 - **Group** - This field represents the Y axis.
 * Field 2 - **Metric** - This field represents the item charted.
 * Field 3 - **Datetime** - This field represents the beginning point from which the metric will be drawn.
-* Field 4 - **Datetime** - This field represents the end point to which the metric will be drawn.
-* Notes:
+* Field 4 - **Datetime** - This field represents the end point to which the metric will be drawn.  
+**Notes:**
 * * Timeline can only display up to a fixed amount of data. If you are not seeing all the data you expect to see, try filtering down your report set - particularly the time dimension.
 
 ##Transitions
@@ -209,8 +209,8 @@ Automatic Gauges have four different modes:
 * Transitions displays multiple common graph styles in a fixed cycle.
 * Field 1 - **Group** - This field represents categories on the Y axis or slices of proportional charts.
 * Field 2 - **Datetime** - This field represents the X axis when applicable. It must be set to Group(Year & Month)
-* Field 3 - **Metric** - This field represents the value.
-* Notes:
+* Field 3 - **Metric** - This field represents the value.  
+**Notes:**
 * * You must sort Fields 1 and 2 to make coherent charts. If your charts look odd, make sure that the sorting behavior is correct.
 
 
