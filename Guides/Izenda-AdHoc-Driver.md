@@ -86,8 +86,8 @@ You can also see more coding examples [[here|http://wiki.izenda.us/API/CodeSampl
 
 The Izenda Fusion Driver composes data sources from several connections (data providers) into a single data source. This is very similar to how [[SSAS|http://technet.microsoft.com/en-us/library/ms175609(v=sql.90).aspx]] works, but using Fusion you can aggregate data not only from MSSQL databases but from very different data sources. For example, you can get data from the [[OData|Guides/OData]] data provider (i.e. without a direct connection to the database). All you need to do is set up the data sources' connections and you will be able to work with aggregated data as a single data source.
 
-![Izenda Fusion Driver Schematic](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/fusion_driver_schematic.png)
-**Figure :** Schematics of how the Fusion Driver interacts with different datasources. Instead of working with individual datasources, it aggregates the datasources into one.
+Currently, Izenda Fusion driver supports MSSQL, XML, ODATA, ORACLE, MYSQL, and PostgreSql
+
 
 ###Configuring the Izenda Fusion Driver
 
