@@ -15,7 +15,7 @@ Classes that are used to download data are all internal so there is no way to ma
 * Thumbnail generation and viewing
 * Scheduler exports
 
-If no problems arise, then this should be all that is necessary to verify no further issues with secure connections in your application.
+If no problems arise, then this should be all that is necessary to verify that no further issues with secure connections exist in your application.
 
 There are several settings that allow you to specify static resource URLs. These settings can also be verified to ensure expected operation:
 * AdHocSettings.ReportCssUrl
