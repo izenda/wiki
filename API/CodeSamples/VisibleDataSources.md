@@ -61,6 +61,8 @@ If you would like for all tables, views and stored procedures to be shown you ca
 **Note:** On initial loading of Izenda with this method, this could take moment to load depending on the number of data sources being loaded. It may give the appearance that the page is stalling. Please wait a few minutes to allow all data sources to be loaded and stored procedures to be run.
 
 ```csharp
+<%@ Import Namespace="System.Data" %>
+
 //setting vis datasources
 DataSet ds = AdHocContext.Driver.GetDataSet(AdHocContext.Driver.CreateCommand("select * from sys.objects where type in ('U','P','V')"));
 string[] results = new string[ds.Tables[0].Rows.Count];
