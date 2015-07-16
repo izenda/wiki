@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the width of the column containing the string name of a field on the Quick Add popup box.
+Gets or sets the width in characters of the column containing the string name of a field on the Quick Add popup box. Strings which are too long will be truncated with an ellipsis (...) such that the string "Customers" will be displayed as "Cu..." with a width of 5 characters.
 
 **Default Value:** 20
 
