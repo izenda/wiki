@@ -138,7 +138,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |FieldList|[[FieldList|/API/CodeSamples/FieldList]]| Gets or sets the default Izenda.AdHoc.AdHocSettings.FieldList control. **(deprecated)**|null|
 |String|[[FieldsRegex|/API/CodeSamples/FieldsRegex]]|Gets or sets the regular expression used for column filtering in Field tab.            If name of a column matches this expression then it will not be shown in fields select in Field tab.|MD5&#124;^(Passw)|
 |String|[[FieldValueCssUrl|/API/CodeSamples/FieldValueCssUrl]]|Css file to be used on reports with Field&#124;Value style.|rs.aspx?css=FieldValue|
-|Unit|[[FilterParameterWidth|/API/CodeSamples/FilterParameterWidth]]|Gets or sets the width of filter parameter edit.|300px|
+|Unit|[[FilterParameterWidth|/API/CodeSamples/FilterParameterWidth]]|Gets or sets the width of the Filter Logic box.|300px|
 |String|[[FiltersCustomPagesPath|/API/CodeSamples/FiltersCustomPagesPath]]|Gets or sets the relative path to the Equals(PopUp) custom pages.|String.Empty|
 |String|[[FiltersRegex|/API/CodeSamples/FiltersRegex]]|Gets or sets the regular expression used for column filtering in Filter tab.            If name of a column matches this expression then it will not be shown in fields select in Filter tab.|MD5&#124;^(Passw)|
 |Boolean|[[ForceNewNameOnSave|/API/CodeSamples/ForceNewNameOnSave]]|This feature always uses the save as function and requires the user to specify a report name when saving.|False|
