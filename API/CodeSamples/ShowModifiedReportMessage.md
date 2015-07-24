@@ -27,7 +27,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    AdHocSettings.ShowModifiedReportMessage= false; //The relevant setting
+    AdHocSettings.ShowModifiedReportMessage = false; //The relevant setting
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
