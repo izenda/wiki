@@ -8,7 +8,7 @@
 
 First, a little background about how the scheduler works. The scheduler requires the use of the Izenda Scheduler executable that is packaged with our [[reference implementation starter kit|http://www.izenda.com/update-your-izenda-version/]]. You then need to add a scheduled task to your system that runs on an interval you specify. The task will execute the Izenda Scheduler to send a command to the response server (rs.aspx) that determines if any reports need to go out. You can specify the URL of your rs.aspx page as a command line parameter when setting up the task as will be discussed below.
 
-Here are the steps to install the Izenda Scheduler. It is recommended that you perform these installation steps on the Web Server on which Izenda Reports is installed.
+Here are the steps to install the Izenda Scheduler. It is recommended that you perform these installation steps on the Web Server on which Izenda Reports is installed. The Windows' Scheduled Task Functionality described is only available on Windows Server operating systems. 
 
 1. Click the **Start** button in Windows Server
 2. Click on the **Control Panel** menu option
