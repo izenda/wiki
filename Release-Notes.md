@@ -1,5 +1,84 @@
 [[_TOC_]]
 
+# 6.9.0.3 (July 27, 2015)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|15400|Dashboards|Optimization|Added automatic dashboard tile update when source report was updated|
+|18324|API|Optimization|Changed report.ParentReportSet to report._parentReportSet in SQL generation routine, movedparent |
+|18333|API|Optimization|SetValueInternal set to internal|
+|18769|API|Optimization|Fixed possible exception when existing constraints collection has duplicates|
+|19042|Report Viewer|Export|Print Page Headers not Loading for All Pages |
+|19149|API|Optimization|Text with bracket issue - escape square brackets in names with a '\'.|
+|19171|API|Visualization|Removing insufficient width error from autochart|
+|19427|Report Design|Optimization|Fixed Formats for Fields Selected from Quik Add in Report Designer|
+|19438|API|Optimization|Duplicate Resources Fixed|
+|19442|Report Design|Gauge|Fixed "Radial 2" Gauge style rendering when value hits the extreme|
+|19477|API|Save| Prevent "report has been modified" warning false alarms|
+|19500|API|Optimization|View Results Drop down Not Updating - Made GetNTopSql case-insensitive|
+|19522|Report Design|Optimization|Fixed duplicating columns of stored procedures via OData connection|
+|19557|Report Design|Export|Fixed Sub Report Data not being Exported into CSV or XML files|
+|19568|UI|Optimization|MVC4R2 Kit images fixed with Starter Kit|
+|19638|API|Optimization|Removed ETL Code not used due to security Concern|
+|19653|Report Design|Charts|Fixed labels in barchart when using object type labels.|
+|19690|API|Optimization|Possible inconsistency in JoinedTable class|
+|19731|Dashboards|Filter|Filters are now displayed on dashboard before saving |
+|19745|Scheduler|Optimization|Added word support to scheduler form|
+|19787|API|Optimization|Full support of UseTablesFromSchemaOnly and DefaultSchemaName implemented for Oracle connections|
+|19820|Report Design|Visualization|New Calendar Visualization Type|
+|19830|Dashboards|UI|New Folder Structure for dashboards Category Dropdown|
+|19846|API|Optimization|Formatting is not working in subtotal when field function is set to count -Apply ReportSet.CustomFormatter to all values|
+|19861|API|Optimization|Report Header Image - Justification Switch Fixed|
+|19868|Report Design|Visualization|New Flow Chart  - Visualization |
+|19874|API|Optimization|DefaultItemsPerPage setting for VG and Analysis Grid |
+|19893|Report Design|Optimization|Fixed reportDesigner crash when opening report with joined SP+table+filters|
+|19915|Dashboards|Optimization|Auto Refresh Support added for Dashboard 2.0|
+|19931|Report Design|Optimization|Subreport doesn't apply the combokey if using Analysis Grid - Fixed|
+|19968|API|Optimization|Duplicate/overlapping delete/clear icons in IE 10/11|
+|19969|UI|Optimization|Slider comment bubble hidden behind category drop down In IE Fixed|
+|19973|API|Optimization|Updated Global In Starter Kit with new Dashboard Settings as Default|
+|20010|Dashboards|Optimization|Turned off AdHocSettings.DashboardDateSliderMode = DashboardDateSliderMode.None; not supported in new dashboards|
+|20014|Report Design|Pivots|Fixed Pivot Column Group Naming|
+|20016|Report Design|Forms|Forms editor is now draggable for larger editing area|
+|20023|API|Pagination|Pagination Slows load of report - fixed|
+|20042|Report Design|Optimization|Summary subtotal broken|
+|20044|API|Optimization|Fixed Additional Plus sign added to filter on JS event |
+|20045|API|Optimization|showMiscTab = False fixed|
+|20046|Report Viewer|UI|Resolved Text issues in Column Headers (hex char)|
+|20055|Dashboards|Optimization|Resolve Routing issues on Report Viewer / Report Editor buttons for MVC New Dashboards|
+|20061|Report Design|Optimization|Fixed subtotals on Function "Days Old"|
+|20071|Dashboards|Optimization|Dashboards loading fixed when using custom methods to store reports|
+|20097|API|Optimization|Fixed ExtendedFunctions handling in the Expression if name of the functions contains in the string literal or field nam|
+|20107|Report Design|Filters|Filters remain after table deleted from join - fixed|
+|20123|Report List|UI|Fixed Black Thumbnails caused by MS Security Update|
+|20133|Report Viewer|Export|Enable HTML2PDF Pdf rendering for all licenses by default|
+|20151|Report Viewer|Dundas Charts|Fixed typo issues in BulkCsvReportOuputGenerator, CsvReportOuputGenerator, SqlReportOuputGenerator |
+|20182|Instant Reports|Optimization|Instant Report page  to sort data source names by alias name |
+|20192|Report Viewer|Export|Exporting to CSV does not respect Value Ranges - fixed|
+|20196|Report Viewer|Optimization|Fixed Issues in HTMLREportRenderer|
+|20197|API|Optimization|Update Schema Button Resolved for New Tables|
+|20204|Scheduler|Charts|Charts not displaying in scheduled emails fixed|
+|20205|Report Design|Gauge|Fixed incorrect Auto Gauge values|
+|20236|Dashboards|Export|Fixed html/pdf printing on new dashbords|
+|20240|Instant Reports|UI|Instant Reports Data Source Categories still provide Uncategorized Group when all are catagorized - Fixed|
+|20245|API|Optimization|Fusion Driver and Constraints fixed when using two different servers, Primary server cannot be Azure SQL Instance|
+|20261|UI|Optimization|Fixed - Removing Advanced Field settings when changing to new field|
+|20267|Report Viewer|Optimization|Fixed XSS issues in rs.aspx page and review viewer|
+|20325|Report Design|Filters|Filters do not consistently use the AND operator by default - Fixed|
+|20362|API|Optimization|Security Issue: Path Traversal  Fixed|
+|20372|API|Optimization|Stored  Procedures do not render data - LAdHocSettings.LazySpMetadataPulling = true; fixed|
+|20383|Dashboards|Visualization|Visualization layout inside New Dashboards fixed (autochart)|
+|20396|API|Optimization|ItextSharp Setting added to increase performance |
+|20412|API|Optimization|Isn't Between filter fixed|
+|20433|API|Optimization|Security Issue: File Inclusion - Fixed|
+|20475|Report Design|Filters|Make Utility.GetMd5Sum changed to  public |
+|20490|API|Optimization|Synchronized resources in DLL and in RI |
+|20511|Instant Reports|UI|Some icons are not loading on Instant Reports|
+|20587|Dashboards|Optimization|Refresh Dashboard Error fixed|
+|20588|Dashboards|Export|Update Print Functions for Dashboard 1.0 |
+|20592|Report Viewer|Pagination|Pagination error in Pivoted Analysis Grid - fixed|
+|20655|Report Viewer|Export|Print Issues both HTML and PDF with all visualizations - Fixed|
+
 
 # 6.9.0.2 (June 23, 2015)
 
