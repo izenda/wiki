@@ -87,6 +87,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How do allow text wrapping on headers?|/API/CodeSamples/AllowMultilineHeaders]]
 - [[How do I set the column width for each individual field?|/FAQ/advanced-field-settings]]
 - [[Can I run javascript when a user clicks on a report element?|/FAQ/Questions/running-javascript-on-report-elements]]
+- [[How do I use datediff function in expression|/FAQ/How-to-use-datediff]]
 
 ##Scheduler
 
