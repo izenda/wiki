@@ -1,6 +1,6 @@
 ##About
 
-datediff() is one of the functions in expression. This page shows how to use datediff()
+Datediff() is one of the functions in expression. This page shows how to use datediff().
 
 ##Syntax
 
