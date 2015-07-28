@@ -1,4 +1,3 @@
-
 ##Syntax
 
 datediff( datepart , startdate , enddate )
@@ -10,7 +9,6 @@ Is the part of startdate and enddate that specifies the type of boundary crossed
 
 |**datepart**|**Abbreviations**|
 |:------------:|:-------------:|
-
 |year|yy, yyyy|
 |quarter|qq, q|
 |month|mm, m|
