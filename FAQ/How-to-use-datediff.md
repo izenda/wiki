@@ -42,4 +42,4 @@ See startdate.
 ##Example
 
 
- ![](/FAQ/How-to-use-datediff/datediff_1 "datediff in week")
+ ![](/FAQ/How-to-use-datediff/datediff_1.png "datediff in week")
