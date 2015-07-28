@@ -39,7 +39,7 @@ See startdate.
 ##Example
 
 
-###Expression applied to the third column. The below expression does calculation shippeddate - orderdate in week. Expression type doesn't necessarily have to be 'string' as below.
+###Expression applied to the third column. The below expression does calculation shippeddate - orderdate in week. (Expression type doesn't necessarily have to be 'string' as below).
 
  ![](/FAQ/How-to-use-datediff/datediff_1.png "datediff in week")
 
