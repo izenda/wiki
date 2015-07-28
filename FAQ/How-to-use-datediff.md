@@ -42,12 +42,14 @@ See startdate.
 ##Example
 
  ![](/FAQ/How-to-use-datediff/datediff_1.png "datediff in week")
+
 Expression applied to the third column. The above expression does calculation shippeddate - orderdate in week. Expression type doesn't necessarily have to be 'string' as above'
 
 
 
 
  ![](/FAQ/How-to-use-datediff/datediff_2.png "datediff in month")
+
 1st argument of datediff() has changed to month. Thus the above expression does shippeddate - orderdate in month.
 
 
