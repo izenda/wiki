@@ -9,6 +9,8 @@ datediff() is one of the functions in expression. This page shows how to use dat
 
 datediff( datepart , startdate , enddate )
 
+datediff( datepart , startdate , enddate ) calculates the difference between enddate and startdate in the unit of datepart.
+
 ##Argument
 
 ###datepart
@@ -35,4 +37,9 @@ Is an expression that can be resolved to a time, date, smalldatetime, datetime, 
 
 ###enddate
 See startdate.
+
+
+##Example
+
+
 
