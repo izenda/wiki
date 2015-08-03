@@ -101,7 +101,7 @@ Configuring the Izenda Fusion Driver consists of several steps:
 
 ####1. Create the Fusion Driver
 
-At first you should create FusionDriver object and set up it as default driver for the Izenda AdHoc. Here is example how to do it in C#:
+At first you should create a FusionDriver object and set up it as default driver for the Izenda AdHoc. Here is example how to do it in C#:
 
 ```csharp
 FusionDriver fusionDriver = new FusionDriver();
@@ -173,7 +173,7 @@ fd.AddConstraint("OD2/Account.Id", "OD2/User.AccountID");
 
 #####c) Saving Reports with Fusion
 
-When using indirect database connections and saving your reports to the FileSystem is not an option, you can use the SavedReportsDriver setting to specify a direct link to a database where you can store your reports. The following example sets up the connection string to the database that contains the reports table. If you store reports in the file system then skip this step(use FileSystemAdHocConfig if you do this).
+When using indirect database connections and saving your reports to the FileSystem is not an option, you can use the SavedReportsDriver setting to specify a direct link to a database where you can store your reports. The following example sets up the connection string to the database that contains the reports table. If you store reports in the file system then skip this step (Use FileSystemAdHocConfig if you do this).
 
 ```csharp
 ((DatabaseAdHocConfig)AdHocSettings.AdHocConfig).SavedReportsDriver = new MSSQLDriver("your_mssql_direct_database_connection_string");
@@ -181,7 +181,7 @@ When using indirect database connections and saving your reports to the FileSyst
 
 #####d) Set up cache
 
-Getting data from several data source providers may take a lot of time and resources when many connections are added. This will result in a slow connection to the providers due to large amount of data being transferred, etc. That’s why the cache is enabled by default for the Izenda Fusion Driver. By default, cache expiration time is set to 12PM on Saturday. This means that every Saturday, the cache will be cleared and all data will be requested from the providers during the next session.
+Getting data from several data source providers may take a lot of time and resources when many connections are added. This will result in a slow connection to the providers due to large amount of the data being transferred, etc. That’s why the cache is enabled by default for the Izenda Fusion Driver. By default, cache expiration time is set to 12PM on Saturday. This means that every Saturday, the cache will be cleared and all data will be requested from the providers during the next session.
 
 You can configure the cache yourself by using the following properties and methods:
 
