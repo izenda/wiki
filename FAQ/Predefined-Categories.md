@@ -9,7 +9,7 @@ Izenda allows you to save reports and dashboards into categories for organizatio
 This feature is useful when you want to limit the users ability to create new categories. It is also useful if you know all of the categories ahead of time and there is no need for users to create them.
 
 ##Instructions
-In Webforms, add the following code snippet to the header of the ReportDesigner.aspx file.
+In Webforms, add the following code snippet to the header of the ReportDesigner.aspx file.  
 In MVC, add the following code snippet to the ReportDesigner-Head.ascx file.
 
 ```html
