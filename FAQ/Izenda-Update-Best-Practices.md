@@ -1,4 +1,4 @@
-##Updating within a point release - a 'Maintenance Update' - (Ex: 6.9.0.1-> 6.9.0.3)
+##Updating within a point release / Performing a 'Maintenance Update' (Ex: 6.9.0.1-> 6.9.0.3)
 
 1) Set aside any customized files in /Resources - This is typically CSS, but could be HTML or JS.
 
