@@ -15,7 +15,7 @@ To integrate Izenda into your own website, you will first need a development env
 
 ###[[Configuring Settings|Integration/Tutorials/Customizing-Izenda-Settings]]
 
-The Izenda Reports API contains specific settings that alter the behavior of the tool on a per-user basis. Settings can be applied through the Settings.aspx page or via a [[CustomAdHocConfig|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]] class. Your global.asax should contain a definition for this that inherits from either FileSystemAdHocConfig or DatabaseAdHocConfig. Examples of important settings include the [[license key|/API/CodeSamples/LicenseKey]], the [[connection string|/API/CodeSamples/SqlServerConnectionString]], and the [[user name|/API/CodeSamples/CurrentUserName]]. 
+The Izenda Reports API contains specific settings that alter the behavior of the tool on a per-user basis. Settings can be applied through the Settings.aspx page (please see important information on [[settings|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings#The-Settings.aspx-page]] page - this is typically only used for trials and evaluations) or via a [[CustomAdHocConfig|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]] class. Your global.asax should contain a definition for this that inherits from either FileSystemAdHocConfig or DatabaseAdHocConfig. Examples of important settings include the [[license key|/API/CodeSamples/LicenseKey]], the [[connection string|/API/CodeSamples/SqlServerConnectionString]], and the [[user name|/API/CodeSamples/CurrentUserName]]. 
 
 ###[[Creating Views|Integration/Tutorials/Views]]
 
