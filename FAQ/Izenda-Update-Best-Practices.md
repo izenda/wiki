@@ -7,7 +7,7 @@
 3) Compare customized files from Step #1 to new updated files and copy your customizations to new files one at a time, testing each.
 
 
-##Updating across point releases (Ex: 6.8.0.1-> 6.9.0.3)
+##Upgrading across point releases (Ex: 6.8.0.1-> 6.9.0.3)
 
 1) Set aside any customized files in the entire Izenda deployment - This is typically the global.asax, code-behind files, sometimes individual page code, CSS, HTML or JS.
 
