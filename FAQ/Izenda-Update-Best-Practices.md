@@ -2,9 +2,9 @@
 
 1) Set aside any customized files in /Resources - This is typically CSS, but could be HTML or JS.
 
-2) Copy the /Resources & /BIN from the Izenda 'Maintenance' download and replace the existing folders
+2) Copy the /Resources & /BIN from the Izenda 'Maintenance' download and after removing your old /Resources &/BIN directories completely, replace with the new folders.
 
-3) Compare customized files from Step #1 to new updated files and copy your customizations to new files one at a time, testing each.
+3) Compare the customized files from Step #1 to new updated files and copy your customizations to new files one at a time, testing each.
 
 
 ##Upgrading across point releases (Ex: 6.8.0.1-> 6.9.0.3)
