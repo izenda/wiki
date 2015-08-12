@@ -107,3 +107,6 @@ _**Note:** You can use this as a template and any other format that requires a b
 The results of the above custom formatter are displayed here. The column "Ship Time" is the time difference between the Required Date and the Order Date.
 
 ![](http://wiki.izenda.us/FAQ/Questions/Add-Formatting-Options/custom_format_object.png)
+
+
+_**Note:** By default, custom format applied dates are treated as text. If you want to sort the column with custom date format applied as date, then make sure to check the 'Sort' check box in the fields tab which enables SQL level sorting. With 'Sort' check box checked, custom format dates can be sorted as date.
