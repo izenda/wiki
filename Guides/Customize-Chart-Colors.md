@@ -28,7 +28,7 @@ This would achieve the color scheme from the example image above.
 
 #Visualizations
 
-Visualizations use the D3 javascript library, which means that to customize the colors used in a specific visualization you must modify that feature's base code. There is no global setting to change the colors used in a visualization, as each visualization has its own independent codebase.
+Visualizations use the D3 javascript library (http://d3js.org/), which means that to customize the colors used in a specific visualization you must modify that feature's base code. There is no global setting to change the colors used in a visualization, as each visualization has its own independent codebase.
 
 ##Example
 
