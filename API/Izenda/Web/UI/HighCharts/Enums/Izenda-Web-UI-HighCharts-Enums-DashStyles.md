@@ -1,17 +1,17 @@
 #DashStyles
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* DashStyles
-* DashStyles
-* DashStyles
-* DashStyles
-* DashStyles
-* DashStyles
-* DashStyles
-* DashStyles
-* DashStyles
-* DashStyles
-* DashStyles
+* Solid
+* ShortDash
+* ShortDot
+* ShortDashDot
+* ShortDashDotDot
+* Dot
+* Dash
+* LongDash
+* DashDot
+* LongDashDot
+* LongDashDotDot
