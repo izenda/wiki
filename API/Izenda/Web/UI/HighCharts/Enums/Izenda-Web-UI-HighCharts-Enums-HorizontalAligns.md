@@ -1,9 +1,9 @@
 #HorizontalAligns
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* HorizontalAligns
-* HorizontalAligns
-* HorizontalAligns
+* Left
+* Right
+* Center
