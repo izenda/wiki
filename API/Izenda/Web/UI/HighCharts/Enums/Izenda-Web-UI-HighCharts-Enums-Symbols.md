@@ -1,11 +1,11 @@
 #Symbols
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* Symbols
-* Symbols
-* Symbols
-* Symbols
-* Symbols
+* Circle
+* Diamond
+* Square
+* Triangle
+* Triangle_down
