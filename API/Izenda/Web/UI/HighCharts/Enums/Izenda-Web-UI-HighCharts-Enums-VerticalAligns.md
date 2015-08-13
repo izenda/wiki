@@ -1,9 +1,9 @@
 #VerticalAligns
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* VerticalAligns
-* VerticalAligns
-* VerticalAligns
+* Top
+* Middle
+* Bottom
