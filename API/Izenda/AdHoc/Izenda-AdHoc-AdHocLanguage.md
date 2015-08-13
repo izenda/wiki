@@ -1,23 +1,23 @@
 #AdHocLanguage
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* AdHocLanguage -  Specifies an unrecognized language setting. 
-* AdHocLanguage -  Specifies the Arabic language. 
-* AdHocLanguage -  Specifies the Bulgarian language. 
-* AdHocLanguage -  Specifies the Taiwanese dialect of the Chinese Mandarin language. 
-* AdHocLanguage -  Specifies the German language. 
-* AdHocLanguage -  Specifies the English language. 
-* AdHocLanguage -  Specifies the French language. 
-* AdHocLanguage -  Specifies the Canadian dialect of the French language. 
-* AdHocLanguage -  Specifies the Italian language. 
-* AdHocLanguage -  Specifies the Japanese language. 
-* AdHocLanguage -  Specifies the Korean language. 
-* AdHocLanguage -  Specifies the Russian language. 
-* AdHocLanguage -  Represents the Hindi language. 
-* AdHocLanguage -  Specifies the Mandarin Chinese language. 
-* AdHocLanguage -  Specifies the Portuguese language. 
-* AdHocLanguage -  Specifies the Spanish language. 
-* AdHocLanguage -  Specifies the Dutch language. 
+* Unknown -  Specifies an unrecognized language setting. 
+* Arabic -  Specifies the Arabic language. 
+* Bulgarian -  Specifies the Bulgarian language. 
+* ChineseTaiwan -  Specifies the Taiwanese dialect of the Chinese Mandarin language. 
+* German -  Specifies the German language. 
+* English -  Specifies the English language. 
+* French -  Specifies the French language. 
+* FrenchCanadian -  Specifies the Canadian dialect of the French language. 
+* Italian -  Specifies the Italian language. 
+* Japanese -  Specifies the Japanese language. 
+* Korean -  Specifies the Korean language. 
+* Russian -  Specifies the Russian language. 
+* Hindi -  Represents the Hindi language. 
+* ChinesePeoplesRepublicofChina -  Specifies the Mandarin Chinese language. 
+* Portuguese -  Specifies the Portuguese language. 
+* Spanish -  Specifies the Spanish language. 
+* Dutch -  Specifies the Dutch language. 
