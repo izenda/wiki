@@ -1,9 +1,9 @@
 #EasingTypes
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* EasingTypes
-* EasingTypes
-* EasingTypes
+* Linear
+* Swing
+* EaseOutBounce
