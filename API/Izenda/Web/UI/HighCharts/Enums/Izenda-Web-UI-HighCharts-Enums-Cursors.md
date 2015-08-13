@@ -1,15 +1,15 @@
 #Cursors
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* Cursors -  Default. The browser sets a cursor	 
-* Cursors -  The cursor render as a crosshair 
-* Cursors -  The default cursor 
-* Cursors -  The cursor indicates that help is available 
-* Cursors -  The cursor indicates something that should be moved 
-* Cursors -  The cursor render as a pointer 
-* Cursors -  The cursor indicates that the program is busy (in progress)	 
-* Cursors -  The cursor indicates text 
-* Cursors -  The cursor indicates that the program is busy 
+* Auto -  Default. The browser sets a cursor	 
+* Crosshair -  The cursor render as a crosshair 
+* Default -  The default cursor 
+* Help -  The cursor indicates that help is available 
+* Move -  The cursor indicates something that should be moved 
+* Pointer -  The cursor render as a pointer 
+* Progress -  The cursor indicates that the program is busy (in progress)	 
+* Text -  The cursor indicates text 
+* Wait -  The cursor indicates that the program is busy 
