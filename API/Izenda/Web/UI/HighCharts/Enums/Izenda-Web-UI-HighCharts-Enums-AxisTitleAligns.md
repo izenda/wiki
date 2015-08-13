@@ -1,9 +1,9 @@
 #AxisTitleAligns
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* AxisTitleAligns
-* AxisTitleAligns
-* AxisTitleAligns
+* High
+* Middle
+* Low
