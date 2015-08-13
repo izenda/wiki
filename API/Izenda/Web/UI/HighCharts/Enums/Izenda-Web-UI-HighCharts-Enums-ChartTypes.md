@@ -1,22 +1,22 @@
 #ChartTypes
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* ChartTypes
-* ChartTypes
-* ChartTypes
-* ChartTypes
-* ChartTypes
-* ChartTypes
-* ChartTypes
-* ChartTypes
-* ChartTypes
-* ChartTypes
-* ChartTypes
-* ChartTypes
-* ChartTypes
-* ChartTypes
-* ChartTypes
-* ChartTypes
+* Line
+* Spline
+* Area
+* Areaspline
+* Column
+* Bar
+* Pie
+* Scatter
+* Arearange
+* Areasplinerange
+* Columnrange
+* Gauge
+* Boxplot
+* Waterfall
+* Funnel
+* Bubble
