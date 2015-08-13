@@ -1,8 +1,8 @@
 #Stackings
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* Stackings
-* Stackings
+* Normal
+* Percent
