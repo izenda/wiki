@@ -1,9 +1,9 @@
 #ZoomTypes
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* ZoomTypes
-* ZoomTypes
-* ZoomTypes
+* X
+* Y
+* Xy
