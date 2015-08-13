@@ -1,8 +1,8 @@
 #Placement
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* Placement
-* Placement
+* On
+* Between
