@@ -1,8 +1,8 @@
 #RelativeTo
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* RelativeTo
-* RelativeTo
+* Plot
+* Chart
