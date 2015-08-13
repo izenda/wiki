@@ -1,8 +1,8 @@
 #TickPositions
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* TickPositions
-* TickPositions
+* Inside
+* Outside
