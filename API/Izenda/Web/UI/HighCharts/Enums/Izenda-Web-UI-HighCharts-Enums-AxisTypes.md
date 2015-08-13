@@ -1,10 +1,10 @@
 #AxisTypes
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* AxisTypes
-* AxisTypes
-* AxisTypes
-* AxisTypes
+* Linear
+* Logarithmic
+* Datetime
+* Category
