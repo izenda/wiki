@@ -1,8 +1,8 @@
 #Layouts
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* Layouts
-* Layouts
+* Horizontal
+* Vertical
