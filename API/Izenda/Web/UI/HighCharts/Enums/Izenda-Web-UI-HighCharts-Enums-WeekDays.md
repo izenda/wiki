@@ -1,13 +1,13 @@
 #WeekDays
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* WeekDays
-* WeekDays
-* WeekDays
-* WeekDays
-* WeekDays
-* WeekDays
-* WeekDays
+* Sunday
+* Monday
+* Tuesday
+* Wednesday
+* Thursday
+* Friday
+* Saturday
