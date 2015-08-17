@@ -1,8 +1,8 @@
 #JobTypeEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* JobTypeEnum - <remarks />
-* JobTypeEnum - <remarks />
+* User
+* System
