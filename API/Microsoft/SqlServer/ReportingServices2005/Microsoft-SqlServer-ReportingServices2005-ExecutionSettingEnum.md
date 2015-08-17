@@ -1,8 +1,8 @@
 #ExecutionSettingEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* ExecutionSettingEnum - <remarks />
-* ExecutionSettingEnum - <remarks />
+* Live
+* Snapshot
