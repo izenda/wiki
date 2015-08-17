@@ -1,11 +1,11 @@
 #ScheduleStateEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* ScheduleStateEnum - <remarks />
-* ScheduleStateEnum - <remarks />
-* ScheduleStateEnum - <remarks />
-* ScheduleStateEnum - <remarks />
-* ScheduleStateEnum - <remarks />
+* Ready
+* Running
+* Paused
+* Expired
+* Failing
