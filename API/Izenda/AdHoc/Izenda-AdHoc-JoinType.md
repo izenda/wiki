@@ -1,12 +1,12 @@
 #JoinType
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* JoinType -  Represents INNER JOIN. 
-* JoinType -  Represents LEFT OUTER JOIN. 
-* JoinType -  Represents RIGHT OUTER JOIN. 
-* JoinType -  Represents FULL OUTER JOIN. 
-* JoinType -  Represents CROSS JOIN. 
-* JoinType -  Represents DOMAIN JOIN. 
+* INNER -  Represents INNER JOIN. 
+* LEFT_OUTER -  Represents LEFT OUTER JOIN. 
+* RIGHT_OUTER -  Represents RIGHT OUTER JOIN. 
+* FULL_OUTER -  Represents FULL OUTER JOIN. 
+* CROSS_JOIN -  Represents CROSS JOIN. 
+* DOMAIN -  Represents DOMAIN JOIN. 
