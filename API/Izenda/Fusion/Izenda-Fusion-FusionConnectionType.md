@@ -1,11 +1,11 @@
 #FusionConnectionType
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* FusionConnectionType
-* FusionConnectionType
-* FusionConnectionType
-* FusionConnectionType
-* FusionConnectionType
+* MsSql
+* OData
+* Oracle
+* MySql
+* PostgreSql
