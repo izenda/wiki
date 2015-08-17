@@ -1,14 +1,14 @@
 #FieldOperator
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* FieldOperator -  No operator. 
-* FieldOperator -  Multiplication operator. 
-* FieldOperator -  Division operator. 
-* FieldOperator -  Addition operator. 
-* FieldOperator -  Spubtraction operator. 
-* FieldOperator -  Logical equality operator. 
-* FieldOperator -  Logical greater than operator. 
-* FieldOperator -  Logical less than operator. 
+* None -  No operator. 
+* Product -  Multiplication operator. 
+* Ratio -  Division operator. 
+* Plus -  Addition operator. 
+* Minus -  Spubtraction operator. 
+* Equal -  Logical equality operator. 
+* Greater -  Logical greater than operator. 
+* Less -  Logical less than operator. 
