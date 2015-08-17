@@ -1,8 +1,8 @@
 #ItemNamespaceEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* ItemNamespaceEnum - <remarks />
-* ItemNamespaceEnum - <remarks />
+* PathBased
+* GUIDBased
