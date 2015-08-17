@@ -1,12 +1,12 @@
 #ModelItemTypeEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* ModelItemTypeEnum - <remarks />
-* ModelItemTypeEnum - <remarks />
-* ModelItemTypeEnum - <remarks />
-* ModelItemTypeEnum - <remarks />
-* ModelItemTypeEnum - <remarks />
-* ModelItemTypeEnum - <remarks />
+* Model
+* EntityFolder
+* FieldFolder
+* Entity
+* Attribute
+* Role
