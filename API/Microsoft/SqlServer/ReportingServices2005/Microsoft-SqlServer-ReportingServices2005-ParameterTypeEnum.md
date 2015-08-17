@@ -1,11 +1,11 @@
 #ParameterTypeEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* ParameterTypeEnum - <remarks />
-* ParameterTypeEnum - <remarks />
-* ParameterTypeEnum - <remarks />
-* ParameterTypeEnum - <remarks />
-* ParameterTypeEnum - <remarks />
+* Boolean
+* DateTime
+* Integer
+* Float
+* String
