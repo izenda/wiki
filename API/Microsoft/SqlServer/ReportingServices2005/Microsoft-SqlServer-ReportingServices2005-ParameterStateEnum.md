@@ -1,10 +1,10 @@
 #ParameterStateEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* ParameterStateEnum - <remarks />
-* ParameterStateEnum - <remarks />
-* ParameterStateEnum - <remarks />
-* ParameterStateEnum - <remarks />
+* HasValidValue
+* MissingValidValue
+* HasOutstandingDependencies
+* DynamicValuesUnavailable
