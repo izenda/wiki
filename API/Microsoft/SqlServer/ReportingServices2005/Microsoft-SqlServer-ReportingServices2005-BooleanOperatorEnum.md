@@ -1,8 +1,8 @@
 #BooleanOperatorEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* BooleanOperatorEnum - <remarks />
-* BooleanOperatorEnum - <remarks />
+* And
+* Or
