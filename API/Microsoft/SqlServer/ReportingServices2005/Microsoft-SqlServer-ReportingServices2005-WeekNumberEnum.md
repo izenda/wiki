@@ -1,11 +1,11 @@
 #WeekNumberEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* WeekNumberEnum - <remarks />
-* WeekNumberEnum - <remarks />
-* WeekNumberEnum - <remarks />
-* WeekNumberEnum - <remarks />
-* WeekNumberEnum - <remarks />
+* FirstWeek
+* SecondWeek
+* ThirdWeek
+* FourthWeek
+* LastWeek
