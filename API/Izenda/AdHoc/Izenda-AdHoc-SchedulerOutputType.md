@@ -1,9 +1,9 @@
 #SchedulerOutputType
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* SchedulerOutputType
-* SchedulerOutputType -  Specifies that the email should include the report as a PDF attachment. 
-* SchedulerOutputType -  Specifies that the email should include the report as a CSV attachment. 
+* Link
+* PDF -  Specifies that the email should include the report as a PDF attachment. 
+* CSV -  Specifies that the email should include the report as a CSV attachment. 
