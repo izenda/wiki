@@ -1,11 +1,11 @@
 #TimePeriodSliderInterval
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* TimePeriodSliderInterval
-* TimePeriodSliderInterval
-* TimePeriodSliderInterval
-* TimePeriodSliderInterval
-* TimePeriodSliderInterval
+* Auto
+* Day
+* Month
+* Quarter
+* Year
