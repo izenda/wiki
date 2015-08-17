@@ -4,7 +4,7 @@
 
 ##Enum Properties 
 
-* System - <remarks />
-* Catalog - <remarks />
-* Model - <remarks />
-* All - <remarks />
+* System
+* Catalog
+* Model
+* All
