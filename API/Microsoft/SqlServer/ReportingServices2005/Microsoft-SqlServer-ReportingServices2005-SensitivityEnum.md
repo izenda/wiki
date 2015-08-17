@@ -1,9 +1,9 @@
 #SensitivityEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* SensitivityEnum - <remarks />
-* SensitivityEnum - <remarks />
-* SensitivityEnum - <remarks />
+* True
+* False
+* Auto
