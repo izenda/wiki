@@ -1,13 +1,13 @@
 #ItemTypeEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* ItemTypeEnum - <remarks />
-* ItemTypeEnum - <remarks />
-* ItemTypeEnum - <remarks />
-* ItemTypeEnum - <remarks />
-* ItemTypeEnum - <remarks />
-* ItemTypeEnum - <remarks />
-* ItemTypeEnum - <remarks />
+* Unknown
+* Folder
+* Report
+* Resource
+* LinkedReport
+* DataSource
+* Model
