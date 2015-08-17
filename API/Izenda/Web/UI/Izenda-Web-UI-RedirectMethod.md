@@ -1,8 +1,8 @@
 #RedirectMethod
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* RedirectMethod -  Redirection should open a new window. 
-* RedirectMethod -  Redirection should open in a new frame of the same window. 
+* Window -  Redirection should open a new window. 
+* Frame -  Redirection should open in a new frame of the same window. 
