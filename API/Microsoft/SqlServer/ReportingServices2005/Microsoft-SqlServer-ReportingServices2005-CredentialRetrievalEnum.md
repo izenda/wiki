@@ -1,10 +1,10 @@
 #CredentialRetrievalEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* CredentialRetrievalEnum - <remarks />
-* CredentialRetrievalEnum - <remarks />
-* CredentialRetrievalEnum - <remarks />
-* CredentialRetrievalEnum - <remarks />
+* Prompt
+* Store
+* Integrated
+* None
