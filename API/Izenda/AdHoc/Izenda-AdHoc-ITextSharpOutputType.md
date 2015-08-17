@@ -1,7 +1,7 @@
 #ITextSharpOutputType
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* ITextSharpOutputType -  Specifies the export will output a PDF document 
+* Pdf -  Specifies the export will output a PDF document 
