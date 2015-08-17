@@ -1,10 +1,10 @@
 #SecurityScopeEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* SecurityScopeEnum - <remarks />
-* SecurityScopeEnum - <remarks />
-* SecurityScopeEnum - <remarks />
-* SecurityScopeEnum - <remarks />
+* System - <remarks />
+* Catalog - <remarks />
+* Model - <remarks />
+* All - <remarks />
