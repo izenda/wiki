@@ -1,9 +1,9 @@
 #JobStatusEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* JobStatusEnum - <remarks />
-* JobStatusEnum - <remarks />
-* JobStatusEnum - <remarks />
+* New - <remarks />
+* Running - <remarks />
+* CancelRequested - <remarks />
