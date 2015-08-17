@@ -1,8 +1,8 @@
 #DrillthroughType
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* DrillthroughType - <remarks />
-* DrillthroughType - <remarks />
+* Detail
+* List
