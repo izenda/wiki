@@ -1,8 +1,8 @@
 #ConditionOperator
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* ConditionOperator
-* ConditionOperator
+* AND
+* OR
