@@ -1,8 +1,8 @@
 #ConditionEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* ConditionEnum - <remarks />
-* ConditionEnum - <remarks />
+* Contains
+* Equals
