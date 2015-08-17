@@ -1,10 +1,10 @@
 #JobActionEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* JobActionEnum - <remarks />
-* JobActionEnum - <remarks />
-* JobActionEnum - <remarks />
-* JobActionEnum - <remarks />
+* Render
+* SnapshotCreation
+* ReportHistoryCreation
+* ExecuteQuery
