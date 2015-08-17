@@ -1,14 +1,14 @@
 #RequestType
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* RequestType
-* RequestType
-* RequestType
-* RequestType
-* RequestType
-* RequestType
-* RequestType
-* RequestType
+* Schema
+* Constraints
+* DataSet
+* Version
+* TestConnection
+* InvalidateClientSideSchemaCache
+* GetInstance
+* GetDatabase
