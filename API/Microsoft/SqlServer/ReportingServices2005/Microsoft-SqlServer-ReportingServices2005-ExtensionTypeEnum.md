@@ -1,10 +1,10 @@
 #ExtensionTypeEnum
 
-[[TOC]]
+[[_TOC_]]
 
 ##Enum Properties 
 
-* ExtensionTypeEnum - <remarks />
-* ExtensionTypeEnum - <remarks />
-* ExtensionTypeEnum - <remarks />
-* ExtensionTypeEnum - <remarks />
+* Delivery
+* Render
+* Data
+* All
