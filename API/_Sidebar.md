@@ -35,11 +35,7 @@
 ├────────[[Enums|API/Izenda/Web/UI/HighCharts/Enums/Izenda-Web-UI-HighCharts-Enums]]  
 ├────────[[Helpers|API/Izenda/Web/UI/HighCharts/Helpers/Izenda-Web-UI-HighCharts-Helpers]]  
 ├────────[[Options|API/Izenda/Web/UI/HighCharts/Options/Izenda-Web-UI-HighCharts-Options]]  
-├──────[[Slider|API/Izenda/Web/UI/Slider/Izenda-Web-UI-Slider]]  
-├Microsoft  
-├──SqlServer  
-├────[[ReportingServices2005|API/Microsoft/SqlServer/ReportingServices2005/Microsoft-SqlServer-ReportingServices2005]]  
-├[[Rdl|API/Rdl/Rdl]]  
+├──────[[Slider|API/Izenda/Web/UI/Slider/Izenda-Web-UI-Slider]]    
 
 ---
 
