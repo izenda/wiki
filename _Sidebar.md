@@ -4,8 +4,8 @@
 * [[Upgrade Instructions|FAQ/Izenda-Update-Best-Practices]]
 * [[FAQ]]
 * [[Tutorials]]
-* [[The Izenda API|/API/Izenda/AdHoc/Izenda-AdHoc-AdHocConfig]]
-* [[The AdHocSettings class|/API/Izenda/AdHoc/Izenda-AdHoc-AdHocSettings]]
+* [[The Izenda API|/API/AdHocConfig]]
+* [[The AdHocSettings class|/API/AdHocSettings]]
 * [Developer Links and Guides](/Guides/Developer-Links-and-Guides)
 
 
