@@ -39,7 +39,7 @@ public override void CustomizeChart(object chart, Hashtable properties)
 			return;
 
 		string pattern = @"var\s+(?BarChart\d+Instance);";
-		string chartVarName = Regex.Match(strChart, pattern).Groups["chartvarname"].Value;
+		string chartVarName = Regex.Match(strChart, pattern).Groups[1].Value;
 
 		sb = sb.Replace("} catch (e) {", "var yAxisLength = " + chartVarName + ".yAxis.length; if(yAxisLength > 1){ for(var i = 1; i < yAxisLength; ++i){" + chartVarName + ".options.yAxis[i].labels.enabled = false; " + chartVarName + ".options.yAxis[i].title.text = null; " + chartVarName + ".yAxis[i].update();}}} catch (e) {");
 	}
