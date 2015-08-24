@@ -69,7 +69,7 @@ public override void CustomizeChart(object chart, Hashtable properties)
 ```
 
 
-###VB
+###VB (Dundas Engine)
 ```visualbasic
 Public Overrides Sub CustomizeDundasChart(chart As Object, properties As Hashtable, chartType As Type)
  If chartType.FullName <> "Izenda.AdHoc.DundasBarChart" Then
