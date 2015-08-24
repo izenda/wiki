@@ -4,7 +4,9 @@
 
 ##Purpose
 
-By default, Izenda charts will display two or more y axes on a chart if multiple plotted items have different ranges. This is to prevent very high values from making lower values unreadably small on the chart, and allow for proportional comparison.
+By default, Izenda uses HTML charting engine. Charting engine can be set via AdHocSettings.ChartingEngine. For more information, refer to [[ChartingEngine|http://wiki.izenda.us/API/CodeSamples/ChartingEngine]]
+
+Izenda charts will display two or more y axes on a chart if multiple plotted items have different ranges. This is to prevent very high values from making lower values unreadably small on the chart, and allow for proportional comparison.
 
 If you would like to override this feature and display only one chart, you can use the following code:
 
