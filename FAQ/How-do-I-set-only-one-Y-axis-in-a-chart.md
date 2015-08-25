@@ -12,7 +12,7 @@ Izenda charts will display two or more y axes on a chart if multiple plotted ite
 
 If you would like to override this feature and display only one chart, you can use the following code:
 
-_Please note that hide an axis and use a common axis - it's not the same thing and charts will look different_**.
+_Please note that hiding an axis and using a common axis are not the same thing, and charts will look different_**.
 
 ### C# (HTML engine)
 
