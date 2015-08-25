@@ -30,7 +30,7 @@
 |20262|API|Optimization|TrimSqlFilterInput setting implemented -  AdHocSettings.TrimSqlFilterInput = false and leading spaces will be kept to make filters work properly for db columns containing leading spaces which must be preserved|
 |20282|Report Design|Export|Fixed drilldown filter loss in export|
 |20297|Report Design|Export|Fixed applying AllowClientSorting settings when using Scheduler.|
-|20313|Report Design|Export|XXS Issues in Report Designer - Added Setting to Avoid XSS issues in Designer AdHocSettings.ApplyAntiXssToReportOutput = True. Please note this could cause any existing HTML customizations on reports to not render. Especially with use of URL links in reports designer.|
+|20313|Report Design|Export|XXS Issues in Report Designer - Added Setting to Avoid XSS issues in Designer AdHocSettings.ApplyAntiXssToReportOutput = True. Please note this could cause any existing HTML customizations on reports to not render. Especially with use of URL links in report designer.|
 |20316|Report Design|Optimization|New Header Formatting Options added to Make Headers Bold or Italicized located on the Style Tab|
 |20321|Dashboards|Optimization|Removed extrawhitespace when datasource tab is hidden|
 |20322|Report Design|Optimization|Properly handle Footer justification when AdHocSettings.ShowJustification is false|
