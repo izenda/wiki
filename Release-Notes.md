@@ -1,5 +1,83 @@
 [[_TOC_]]
 
+# 6.9.0.4 (August 24, 2015)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|13518|Report Design|Pivots|Pivot Reports Now Available to be Saved as Datasources|
+|15076|UI|Optimization|Improve "expand" border concept for popup|
+|18540|API|Optimization|Properly handle inputs where HTML input is allowed|
+|18555|API|Optimization|English Resx File Missing Translation|
+|18717|API|Optimization|Update to Driver Performance|
+|19492|API|Filters|Filters for Report Parts & Exports Fix|
+|19876|API|Responsive Grid|responsive grid fails with embedded subreport fixed|
+|19950|UI|Optimization|Update to Izenda License Text|
+|20054|API|Data Sources|Optimization to getting schema of stored procedures|
+|20130|UI|Optimization|CSS for dropdowns text color fixed|
+|20132|Dashboards|Visualization|Issue with Dashboards v2 tiles and AutoCharts with Drilldowns resolved|
+|20134|UI|Dashboards|Color overlay issue on slides in presentation mode in Dashboards v2 resolved|
+|20175|Dashboards|UI|Dashboards v2 Thumbnails Don't Generate resolved (outside of Azure PaaS)|
+|20180|Dashboards|UI|Resovled Dashboard 2.0 Toolbar issue with Min/Max Screen Resolution|
+|20184|API|Optimization|Multiple instances of Izenda in one browser - Multiple current reportset available|
+|20195|Report Design|UI|Remove Join Alias box if only one table is used |
+|20199|Report Design|UI|Properly handle data source aliases in multi-conditional joins|
+|20217|UI|Analysis Grid|Problems with the Analysis Grid style - Move VG fields to the top of the list automatically and show warning message when issues found|
+|20223|Report Design|Expressions|Expression type on advanced options does not set function list - Properly update Functions list when Expression type is changed|
+|20224|Report Design|Expressions|Apply Expression type during the Arithmetic SQL construction|
+|20228|Report Design|Expressions|Apply Expression type when calculating subtotals|
+|20239|Report Design|Visualization|Do not hide grouped header of the grid if Visualization is attached to this grid|
+|20252|Report Design|UI|AutoCharts Subtotals Don't Appear After DrillDown - fixed|
+|20262|API|Optimization|TrimSqlFilterInput setting implemented -  AdHocSettings.TrimSqlFilterInput = false and leading spaces will be kept to make filters work properly for db columns containing leading spaces which must be preserved|
+|20282|Report Design|Export|Fixed drilldown filter loss in export|
+|20297|Report Design|Export|Fixed applying AllowClientSorting settings when using Scheduler.|
+|20313|Report Design|Export|XXS Issues in Report Designer - Added Setting to Avoid XSS issues in Designer AdHocSettings.ApplyAntiXssToReportOutput = True. Please note this could cause any existing HTML customizations on reports to not render.|
+|20316|Report Design|Optimization|New Header Formatting Options added to Make Headers Bold or Italicized located on the Style Tab|
+|20321|Dashboards|Optimization|Removed extrawhitespace when datasource tab is hidden|
+|20322|Report Design|Optimization|Properly handle Footer justification when AdHocSettings.ShowJustification is false|
+|20323|API|Optimization|Fixed icons not appearing in IE8 in reportList on hover & JS Errors|
+|20377|UI|Optimization|Do not drop join condition selection when data source is added to the join above specified data source|
+|20379|UI|Optimization|Settings page Page width corrected|
+|20400|API|Optimization|Report List SQL Calls Optimized|
+|20421|API|Data Sources|Changed conditions of the definition of a simple stored procedure.|
+|20428|Dashboards|UI|Changing background option in new dashboards in IE fixed|
+|20464|UI|Optimization|MVC Settings page missing images resolved|
+|20475|API|Optimization|Make Utility.GetMd5Sum public|
+|20492|Report Design|Charts|Fixed displaing horizontal labels of bar chart (HighChart).|
+|20494|Report Design|UI|Hide Field Not Respected When using Invert on Summary - Resolved|
+|20501|Report Viewer|UI|Fix fields in UI when arithmetic is used.|
+|20513|Report Design|Optimization|XSS Issues Resolved|
+|20529|Report Design|Forms|Fixed subtotals in forms|
+|20542|Report Design|Optimization|XSS Issues Resolved|
+|20543|API|Security|Security Scan Cryptographic Issues - Remove obsolete feature causing issue|
+|20544|API|Security|Security Scan Directory Traversal resolved|
+|20545|API|Security|Security Scan Information Leakage - XXE issue|
+|20624|Report Design|Optimization|Resolved AutoGroup Feature Not working in Designer|
+|20630|Dashboards|Optimization|Dashboard event system improvement. |
+|20689|API|Dashboards|MVC4r2 reference Install and new dashboards|
+|20697|Instant Reports|Filter|Filter condition (Equals Popup) doesn't work on Instant Reports - Resolved|
+|20708|Dashboards|Visualization|Fixed autochart broken in dashboard if reportset is created on IR page|
+|20717|API|Visualization|Handling of server errors in Visualizations|
+|20718|Dashboards|Filters|Fixed Applying Filters in Dashboard 2.0|
+|20720|UI|Optimization|Added Warning Text to Settings Page|
+|20745|Report Design|Fusion|Fusion Driver + Stored Procedures with constraints issue resolved|
+|20754|Report Design|UI|Fix inconsistent behavior when Column property of the Fields is changed automatically|
+|20756|Instant Reports|Optimization|Fix error on the Instant Report page when Uncategorized category is absent|
+|20774|Report Design|Forms|Fixed Issue with Forms Editor in Google Chrome browser|
+|20780|Report Design|Data Sources|Fixed stored  procedures designation to datasources categories|
+|20795|Report Design|Pagination|Properly handle pagination in reports with Form|
+|20853|UI|Optimization|Adjust doughnut Pie Chart style thickness|
+|20867|API|Optimization|MVC4r2 namespace change in RI for MVC5r3 branch |
+|20882|Report Design|Optimization|Izenda Vulnerability Issue - XSS issue resolved|
+|20908|Dashboards|UI|Fixed wrong "detail", "summary" and "chart" tiles.|
+|20941|Instant Reports|Optimization|Instant report filter Table Names Corrected|
+|20957|API|Optimization|Possible null reference exception in Utility.UnifyReportName method|
+|20978|Report Design|Forms|Forms Editor reference error resolved|
+|21031|API|Optimization|Fix in field.GetSql |
+|21045|API|Optimization|Resource files desynchronized in FromDLL folder and in DLL |
+|21050|UI|Optimization|Fixed scrolling of container inside tooltip|
+|21105|Dashboards|Expressions|Subtotals in Dashboards Not Appearing correctly resolved|
+|21120|Report Viewer|Export|Export Failure for back of dashboard tile resolved|
+
 # 6.9.0.3 (July 27, 2015)
 
 |Case|Category|Subcategory|Description|
