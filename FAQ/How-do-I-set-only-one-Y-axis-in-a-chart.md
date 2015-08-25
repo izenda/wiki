@@ -11,6 +11,49 @@ Izenda charts will display two or more y axes on a chart if multiple plotted ite
 
 
 If you would like to override this feature and display only one chart, you can use the following code:
+### C# (HTML engine)
+
+```csharp
+//Code to hide the right Y axis:
+public override void CustomizeChart(object chart, Hashtable properties)
+{
+	if (chart is StringBuilder)
+	{
+		StringBuilder sb = (StringBuilder)chart;
+		String strChart = sb.ToString();
+
+		if (!strChart.Contains("BarChart"))
+			return;
+
+		string pattern = @"var\s+(?<chartvarname>BarChart\d+Instance);";
+		string chartVarName = Regex.Match(strChart, pattern).Groups["chartvarname"].Value;
+
+		sb = sb.Replace("} catch (e) {", "var yAxisLength = " + chartVarName + ".yAxis.length; if(yAxisLength > 1){ for(var i = 1; i < yAxisLength; ++i){" + chartVarName + ".options.yAxis[i].labels.enabled = false; " + chartVarName + ".options.yAxis[i].title.text = null; " + chartVarName + ".yAxis[i].update();}}} catch (e) {");
+	}
+
+	base.CustomizeChart(chart, properties);
+}
+
+
+//Сode to use a common (left) Y axis:
+public override void CustomizeChart(object chart, Hashtable properties)
+{
+	if (chart is StringBuilder)
+	{
+		StringBuilder sb = (StringBuilder)chart;
+		String strChart = sb.ToString();
+		
+		if (!strChart.Contains("BarChart"))
+			return;
+
+		sb = sb.Replace("yAxis: 1", "");
+	}
+		
+	base.CustomizeChart(chart, properties);
+}
+
+```
+
 
 ### C# (Dundas engine)
 ```csharp
@@ -55,47 +98,7 @@ public override void CustomizeDundasChart(object chart, Hashtable properties, Ty
 }
 
 ```
-### C# (HTML engine)
-//Code to hide the right Y axis:
-```csharp
-public override void CustomizeChart(object chart, Hashtable properties)
-{
-	if (chart is StringBuilder)
-	{
-		StringBuilder sb = (StringBuilder)chart;
-		String strChart = sb.ToString();
 
-		if (!strChart.Contains("BarChart"))
-			return;
-
-		string pattern = @"var\s+(?<chartvarname>BarChart\d+Instance);";
-		string chartVarName = Regex.Match(strChart, pattern).Groups["chartvarname"].Value;
-
-		sb = sb.Replace("} catch (e) {", "var yAxisLength = " + chartVarName + ".yAxis.length; if(yAxisLength > 1){ for(var i = 1; i < yAxisLength; ++i){" + chartVarName + ".options.yAxis[i].labels.enabled = false; " + chartVarName + ".options.yAxis[i].title.text = null; " + chartVarName + ".yAxis[i].update();}}} catch (e) {");
-	}
-
-	base.CustomizeChart(chart, properties);
-}
-
-
-//Сode to use a common (left) Y axis:
-public override void CustomizeChart(object chart, Hashtable properties)
-{
-	if (chart is StringBuilder)
-	{
-		StringBuilder sb = (StringBuilder)chart;
-		String strChart = sb.ToString();
-		
-		if (!strChart.Contains("BarChart"))
-			return;
-
-		sb = sb.Replace("yAxis: 1", "");
-	}
-		
-	base.CustomizeChart(chart, properties);
-}
-
-```
 
 
 ###VB (Dundas Engine)
