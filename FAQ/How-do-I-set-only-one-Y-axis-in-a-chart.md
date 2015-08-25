@@ -14,22 +14,50 @@ If you would like to override this feature and display only one chart, you can u
 
 ### C# (Dundas engine)
 ```csharp
+//Code to hide the right Y axis:
 public override void CustomizeDundasChart(object chart, Hashtable properties, Type chartType)
 {
-    if (chartType.FullName != "Izenda.AdHoc.DundasBarChart")
-        return;
-    Dundas.Charting.WebControl.Chart dchart = chart as Dundas.Charting.WebControl.Chart;
-    if (dchart == null)
-        return;
+	if (chartType.FullName != "Izenda.AdHoc.DundasBarChart")
+		return;
+	
+	Dundas.Charting.WebControl.Chart dchart = chart as Dundas.Charting.WebControl.Chart;
+	if (dchart == null)
+		return;
 
-    if (dchart.Series.Count > 1)
-        dchart.Series[1].YAxisType = Dundas.Charting.WebControl.AxisType.Primary;
+	foreach (Dundas.Charting.WebControl.ChartArea chartArea in dchart.ChartAreas)
+	{
+		chartArea.AxisY2.Enabled = Dundas.Charting.WebControl.AxisEnabled.False;
+	}
+
+	base.CustomizeDundasChart(chart, properties, chartType);
 }
+
+
+//Сode to use a common (left) Y axis:
+public override void CustomizeDundasChart(object chart, Hashtable properties, Type chartType)
+{
+	if (chartType.FullName != "Izenda.AdHoc.DundasBarChart")
+		return;
+		
+	Dundas.Charting.WebControl.Chart dchart = chart as Dundas.Charting.WebControl.Chart;
+	if (dchart == null)
+		return;
+
+	foreach (Dundas.Charting.WebControl.Series series in dchart.Series)
+	{
+		if (series.YAxisType == Dundas.Charting.WebControl.AxisType.Secondary)
+		{
+			series.YAxisType = Dundas.Charting.WebControl.AxisType.Primary;
+		}
+	}
+
+	base.CustomizeDundasChart(chart, properties, chartType);
+}
+
 ```
 ### C# (HTML engine)
-Code to hide the right Y axis:
+//Code to hide the right Y axis:
 ```csharp
-/* HTML charts */
 public override void CustomizeChart(object chart, Hashtable properties)
 {
 	if (chart is StringBuilder)
@@ -40,18 +68,17 @@ public override void CustomizeChart(object chart, Hashtable properties)
 		if (!strChart.Contains("BarChart"))
 			return;
 
-		string pattern = @"var\s+(?BarChart\d+Instance);";
-		string chartVarName = Regex.Match(strChart, pattern).Groups[1].Value;
+		string pattern = @"var\s+(?<chartvarname>BarChart\d+Instance);";
+		string chartVarName = Regex.Match(strChart, pattern).Groups["chartvarname"].Value;
 
 		sb = sb.Replace("} catch (e) {", "var yAxisLength = " + chartVarName + ".yAxis.length; if(yAxisLength > 1){ for(var i = 1; i < yAxisLength; ++i){" + chartVarName + ".options.yAxis[i].labels.enabled = false; " + chartVarName + ".options.yAxis[i].title.text = null; " + chartVarName + ".yAxis[i].update();}}} catch (e) {");
 	}
 
 	base.CustomizeChart(chart, properties);
 }
-```
-Сode to use a common left Y axis:
-```csharp
-/* HTML charts */
+
+
+//Сode to use a common (left) Y axis:
 public override void CustomizeChart(object chart, Hashtable properties)
 {
 	if (chart is StringBuilder)
