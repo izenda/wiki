@@ -106,7 +106,7 @@ public override void CustomizeDundasChart(object chart, Hashtable properties, Ty
 
 ###VB (Dundas Engine)
 ```visualbasic
-//Сode to use a common (left) Y axis:
+`Сode to use a common (left) Y axis:
 Public Overrides Sub CustomizeDundasChart(chart As Object, properties As Hashtable, chartType As Type)
  If chartType.FullName <> "Izenda.AdHoc.DundasBarChart" Then
   Return
@@ -123,7 +123,7 @@ End Sub
 
 
 
-//Code to hide the right Y axis:
+`Code to hide the right Y axis:
 Public Overrides Sub CustomizeDundasChart(chart As Object, properties As Hashtable, chartType As Type)
       If chartType.FullName <> "Izenda.AdHoc.DundasBarChart" Then
         Return
