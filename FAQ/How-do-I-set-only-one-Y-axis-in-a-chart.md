@@ -102,7 +102,31 @@ public override void CustomizeDundasChart(object chart, Hashtable properties, Ty
 
 ```
 
+###VB (HTML Engine)
+```visualbasic
+'Code to hide the right Y axis:
+    Public Overrides Sub CustomizeChart(chart As Object, properties As Hashtable)
+      If TypeOf chart Is StringBuilder Then
+        Dim sb As StringBuilder = DirectCast(chart, StringBuilder)
+        Dim strChart As [String] = sb.ToString()
 
+        If Not strChart.Contains("BarChart") Then
+          Return
+        End If
+
+        Dim pattern As String = "var\s+(?<chartvarname>BarChart\d+Instance);"
+        Dim chartVarName As String = Regex.Match(strChart, pattern).Groups("chartvarname").Value
+
+        sb = sb.Replace("} catch (e) {", (Convert.ToString((Convert.ToString((Convert.ToString((Convert.ToString("var yAxisLength = ") & chartVarName) + ".yAxis.length; if(yAxisLength > 1){ for(var i = 1; i < yAxisLength; ++i){") & chartVarName) + ".options.yAxis[i].labels.enabled = false; ") & chartVarName) + ".options.yAxis[i].title.text = null; ") & chartVarName) + ".yAxis[i].update();}}} catch (e) {")
+      End If
+
+      MyBase.CustomizeChart(chart, properties)
+    End Sub
+
+
+
+
+```
 
 ###VB (Dundas Engine)
 ```visualbasic
