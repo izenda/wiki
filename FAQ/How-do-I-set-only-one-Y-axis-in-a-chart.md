@@ -106,6 +106,7 @@ public override void CustomizeDundasChart(object chart, Hashtable properties, Ty
 
 ###VB (Dundas Engine)
 ```visualbasic
+//Сode to use a common (left) Y axis:
 Public Overrides Sub CustomizeDundasChart(chart As Object, properties As Hashtable, chartType As Type)
  If chartType.FullName <> "Izenda.AdHoc.DundasBarChart" Then
   Return
@@ -119,4 +120,24 @@ Public Overrides Sub CustomizeDundasChart(chart As Object, properties As Hashtab
   dchart.Series(1).YAxisType = Dundas.Charting.WebControl.AxisType.Primary
  End If
 End Sub
+
+
+
+//Code to hide the right Y axis:
+Public Overrides Sub CustomizeDundasChart(chart As Object, properties As Hashtable, chartType As Type)
+      If chartType.FullName <> "Izenda.AdHoc.DundasBarChart" Then
+        Return
+      End If
+	
+      Dim dchart As Dundas.Charting.WebControl.Chart = TryCast(chart, Dundas.Charting.WebControl.Chart)
+      If dchart Is Nothing Then
+        Return
+      End If
+      
+      For Each chartArea As Dundas.Charting.WebControl.ChartArea In dchart.ChartAreas	  
+        chartArea.AxisY2.Enabled = Dundas.Charting.WebControl.AxisEnabled.False
+      Next
+      MyBase.CustomizeDundasChart(chart, properties, chartType)
+
+    End Sub
 ```
