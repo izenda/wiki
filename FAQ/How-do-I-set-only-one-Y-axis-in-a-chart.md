@@ -125,6 +125,21 @@ public override void CustomizeDundasChart(object chart, Hashtable properties, Ty
 
 
 
+'Сode to use a common (left) Y axis:
+    Public Overrides Sub CustomizeChart(chart As Object, properties As Hashtable)
+      If TypeOf chart Is StringBuilder Then
+        Dim sb As StringBuilder = DirectCast(chart, StringBuilder)
+        Dim strChart As [String] = sb.ToString()
+
+        If Not strChart.Contains("BarChart") Then
+          Return
+        End If
+
+        sb = sb.Replace("yAxis: 1", "")
+      End If
+
+      MyBase.CustomizeChart(chart, properties)
+    End Sub
 
 ```
 
