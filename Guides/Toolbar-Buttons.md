@@ -217,7 +217,7 @@ Clicking this will send the current report via email.
 
 ![Results Per Page Button](http://wiki.izenda.us/Guides/Toolbar-Buttons/results.png)
 
-The results per page button set the numbers of results to be displayed on a single page. Clicking the dropdown next to the button allows the user to specify how many records per page they'd like to see.
+The results per page button set the numbers of results to be displayed on a single page. This value is not saved to the report, it is used for user convenience in the browser for large reports. Clicking the dropdown next to the button allows the user to specify how many records per page they'd like to see.
 
 ```html
 <button type="button" class="btn" lang-title="js_ResultsPerPage" title="Results per page" onclick="">
