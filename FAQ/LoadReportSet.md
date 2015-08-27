@@ -11,44 +11,65 @@ This method controls how the CurrentReportSet object is loaded into the applicat
 ###DatabaseAdHocConfig Mode
 
 ```csharp
-    // Method called after reportSet was loaded
-    public override Izenda.AdHoc.ReportSet LoadReportSet(string reportName) {
-      /* BEGIN Database Mode Code Sample */
-      string sql = string.Format("SELECT Xml FROM {0} WHERE Name = '{1}'", AdHocSettings.SavedReportsTable, reportName);
-      object oXml = Izenda.AdHoc.AdHocContext.Driver.GetScalar(sql);
-      if (oXml != DBNull.Value && oXml != null) {
-        Izenda.AdHoc.ReportSet reportSet = new Izenda.AdHoc.ReportSet();
-        reportSet.ReadXml(oXml.ToString());
-        return reportSet;
+    public override ReportSet LoadReportSet(string reportName)
+    {
+      try
+      {
+        string connectionString = @"Persist Security Info=False;Initial Catalog=Northwind;Data Source=LESHA-PC\SQL2012;User ID=dataLogin;Password=dataPassword;Integrated Security=false;";
+        string sql = string.Format("SELECT Xml FROM {0} WHERE Name = '{1}'", AdHocSettings.SavedReportsTable, reportName);
+        using (System.Data.IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
+        {
+          connection.Open();
+          using (System.Data.IDbCommand command = connection.CreateCommand())
+          {
+            command.CommandText = sql;
+            using (System.Data.IDataReader reader = command.ExecuteReader())
+            {
+              if (reader.Read())
+              {
+                ReportSet reportSet = new ReportSet();
+                reportSet.ReadXml(reader["Xml"].ToString());
+                reportSet.OwnerTenantID = new string[] { "_global_" };
+                return reportSet;
+              }
+              else
+                return null;
+            }
+          }
+        }
+      }
+      catch
+      {
       }
       return null;
     }
-    /* END Database Mode Code Sample */
 ```
 
 ###FileSystemAdHocConfig Mode
 
 ```csharp    
-    // Method called after reportSet was loaded
-    public override Izenda.AdHoc.ReportSet LoadReportSet(string reportName) {
-      /* BEGIN Filesystem Mode Code Sample */
-      string fileName = GetFileName(reportName);
-      if (fileName == null)
+     public override ReportSet LoadReportSet(string reportName)
+    {
+      string fileName = System.IO.Path.GetFullPath(System.IO.Path.Combine(ReportPath, reportName + ".xml"));
+      if (!fileName.StartsWith(ReportPath, StringComparison.InvariantCultureIgnoreCase))
         return null;
-
-      FileInfo file = new FileInfo(fileName);
+      System.IO.FileInfo file = new System.IO.FileInfo(fileName);
       if (!file.Exists)
         return null;
-
-      StreamReader reader = file.OpenText();
+      System.IO.StreamReader reader = file.OpenText();
       string xml = reader.ReadToEnd();
       reader.Close();
-
       ReportSet reportSet = new ReportSet();
-      reportSet.ReadXml(xml);
+      try
+      {
+        reportSet.ReadXml(xml);
+      }
+      catch
+      {
+        return null;        
+      }
+      reportSet.OwnerTenantID = new string[] { "_global_" };
       return reportSet;
-
-      /* END Filesystem Mode Code Sample */
     }
 ```
 
@@ -58,40 +79,59 @@ This method controls how the CurrentReportSet object is loaded into the applicat
 
 ```visualbasic
 Public Overrides Function LoadReportSet(reportName As String) As ReportSet
-      'BEGIN Database Mode Code Sample
-      Dim sql As String = String.Format("SELECT Xml FROM {0} WHERE Name = '{1}'", AdHocSettings.SavedReportsTable, reportName)
-      Dim oXml As Object = Izenda.AdHoc.AdHocContext.Driver.GetScalar(sql)
-      If oXml IsNot DBNull.Value AndAlso oXml IsNot Nothing Then
-        Dim ReportSet As ReportSet = New Izenda.AdHoc.ReportSet()
-        ReportSet.ReadXml(oXml.ToString())
-        Return ReportSet
-      End If
+      Try
+        Dim connectionString As String = "Persist Security Info=False;Initial Catalog=Northwind;Data Source=LESHA-PC\SQL2012;User ID=dataLogin;Password=dataPassword;Integrated Security=false;"
+        Dim sql As String = String.Format("SELECT Xml FROM {0} WHERE Name = '{1}'", AdHocSettings.SavedReportsTable, reportName)
+        Using connection As System.Data.IDbConnection = New System.Data.SqlClient.SqlConnection(connectionString)
+          connection.Open()
+          Using command As System.Data.IDbCommand = connection.CreateCommand()
+            command.CommandText = sql
+            Using reader As System.Data.IDataReader = command.ExecuteReader()
+              If reader.Read() Then
+                Dim reportSet As ReportSet = New ReportSet
+                reportSet.ReadXml(reader("Xml").ToString())
+                Dim owners(0) As String
+                owners(0) = "_global_"
+                reportSet.OwnerTenantID = owners
+                Return reportSet
+              Else
+                Return Nothing
+              End If
+            End Using
+          End Using
+        End Using
+      Catch ex As Exception
+      End Try
       Return Nothing
-      'END Database Mode Code Sample
-End Function
+    End Function
 ```
 
 ###FileSystemAdHocConfig Mode
 
 ```visualbasic
 Public Overrides Function LoadReportSet(reportName As String) As ReportSet
-      ' BEGIN Filesystem Mode Code Sample 
-      Dim fileName As String = GetFileName(reportName) 'your method to get 
-      If fileName = Nothing Then Return Nothing
-      
-      Dim file As FileInfo = New FileInfo(fileName)
-      If Not file.Exists Then Return Nothing
-      
-      Dim reader As StreamReader = file.OpenText()
+      Dim fileName As String = System.IO.Path.GetFullPath(System.IO.Path.Combine(ReportPath, reportName + ".xml"))
+      If Not (fileName.StartsWith(ReportPath, StringComparison.InvariantCultureIgnoreCase)) Then
+        Return Nothing
+      End If
+      Dim file As System.IO.FileInfo = New System.IO.FileInfo(fileName)
+      If Not (file.Exists) Then
+        Return Nothing
+      End If
+      Dim reader As System.IO.StreamReader = file.OpenText()
       Dim xml As String = reader.ReadToEnd()
       reader.Close()
-      
-      Dim reportSet As New ReportSet()
-      reportSet.ReadXml(xml)
+      Dim reportSet As ReportSet = New ReportSet()
+      Try
+        reportSet.ReadXml(xml)
+      Catch ex As Exception
+        Return Nothing
+      End Try
+      Dim owners(0) As String
+      owners(0) = "_global_"
+      reportSet.OwnerTenantID = owners
       Return reportSet
-      
-      ' END Filesystem Mode Code Sample
-End Function
+    End Function
 ```
 
 ##Logging Loading Exceptions
