@@ -13,30 +13,45 @@ These examples are basic customized methods of obtaining a list of reports done 
 ###[[DatabaseAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]]
 
 ```csharp
-public override Izenda.AdHoc.ReportInfo[] ListReports() {
-  ArrayList reportNames = new ArrayList();
-  string sql = String.Format("SELECT Name, CreatedDate, ModifiedDate FROM {0} ORDER BY Name",
-  AdHocSettings.SavedReportsTable);
-  System.Data.IDbCommand command = null;
-  try {
-    command = Izenda.AdHoc.AdHocContext.Driver.CreateCommand(sql);
-    System.Data.IDataReader reader = command.ExecuteReader();
-
-    while (reader.Read()) {
-      string reportName = reader["Name"].ToString();
-      DateTime createdDate = (DateTime)reader["CreatedDate"];
-      DateTime modifiedDate = (DateTime)reader["ModifiedDate"];
-      if (reportName != "")
-        reportNames.Add(new Izenda.AdHoc.ReportInfo(reportName, false, createdDate, modifiedDate));
+public override ReportInfo[] ListReports()
+    {
+      try
+      {
+        string connectionString = @"Persist Security Info=False;Initial Catalog=Northwind;Data Source=LESHA-PC\SQL2012;User ID=dataLogin;Password=dataPassword;Integrated Security=false;";
+        string sql = String.Format("SELECT Name, CreatedDate, ModifiedDate FROM {0} ORDER BY Name", AdHocSettings.SavedReportsTable);
+        ArrayList reportNames = new ArrayList();
+        using (System.Data.IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
+        {
+          connection.Open();
+          using (System.Data.IDbCommand command = connection.CreateCommand())
+          {
+            command.CommandText = sql;
+            using (System.Data.IDataReader reader = command.ExecuteReader())
+            {
+              while (reader.Read())
+              {
+                try
+                {
+                  string reportName = reader["Name"].ToString();
+                  DateTime createdDate = (DateTime) reader["CreatedDate"];
+                  DateTime modifiedDate = (DateTime) reader["ModifiedDate"];
+                  if (reportName != "")
+                    reportNames.Add(new ReportInfo(reportName, false, createdDate, modifiedDate, "_global_"));
+                }
+                catch
+                {
+                }
+              }
+            }
+          }
+        }
+        return (ReportInfo[]) reportNames.ToArray(typeof(ReportInfo));
+      }
+      catch
+      {
+      }
+      return new ReportInfo[0];
     }
-  }
-  catch (Exception) { }
-
-  if (command.Connection.State == System.Data.ConnectionState.Open)
-    command.Connection.Close();
-  return (Izenda.AdHoc.ReportInfo[])reportNames.ToArray(typeof(Izenda.AdHoc.ReportInfo));
-}
-
 ```
 
 ####Controlling report access
@@ -50,59 +65,66 @@ In [[Database Mode|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]], yo
 ### [[FileSystemAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]]
 
 ```csharp
-public override ReportInfo[] ListReports() {
-  ArrayList reports = new ArrayList();
-
-  if (AdHocSettings.ReportsPath != null) {
-    DirectoryInfo dir = new DirectoryInfo(AdHocSettings.ReportsPath);
-    if (dir.Exists) {
-      string dirName = Path.GetFullPath(dir.FullName);
-      ArrayList fileArray = new ArrayList();
-      GetAllXmlFiles(dir, fileArray); //your method for obtaining XML files from your file server
-      FileInfo[] files = (FileInfo[])fileArray.ToArray(typeof(FileInfo));
-      foreach (FileInfo file in files) {
-        if (file.Extension == ".xml") {
-          try {
-            StreamReader reader = file.OpenText();
-            reader.Close();
-          }
-          catch (Exception) {
-            continue;
-          }
-          bool readOnly = false;
-          try {
-            StreamWriter writer = file.AppendText();
-            writer.Close();
-          }
-          catch (Exception) {
-            readOnly = true;
-          }
-          string fileName = Path.GetFullPath(file.FullName);
-          string reportName = fileName.Substring(dirName.Length + (dirName.EndsWith("\\") ? 0 : 1));
-          reportName = StringHelper.TrimEnd(reportName, ".xml");
-          reports.Add(new ReportInfo(reportName, readOnly, file.CreationTime,
-          file.LastWriteTime));
-        }//end if
-      }//end foreach
-    }//end if
-  }//end if
-  return (ReportInfo[])reports.ToArray();
-}//end method
-
-private static void GetAllXmlFiles(System.IO.DirectoryInfo dir, ArrayList files)
-{
-    try
+public override ReportInfo[] ListReports()
     {
+      ArrayList reportNames = new ArrayList();
+      if (AdHocSettings.ReportsPath != null)
+      {
+        System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(AdHocSettings.ReportsPath);
+        if (dir.Exists)
+        {
+          string dirName = System.IO.Path.GetFullPath(dir.FullName);
+          ArrayList fileArray = new ArrayList();
+          GetAllXmlFiles(dir, fileArray);
+          System.IO.FileInfo[] files = (System.IO.FileInfo[]) fileArray.ToArray(typeof(System.IO.FileInfo));
+          foreach (System.IO.FileInfo file in files)
+          {
+            if (file.Extension == ".xml")
+            {
+              try
+              {
+                System.IO.StreamReader reader = file.OpenText();
+                reader.Close();
+              }
+              catch (Exception)
+              {
+                continue;
+              }
+              bool readOnly = false;
+              try
+              {
+                System.IO.StreamWriter writer = file.AppendText();
+                writer.Close();
+              }
+              catch (Exception)
+              {
+                readOnly = true;
+              }
+              string fileName = System.IO.Path.GetFullPath(file.FullName);
+              string reportName = fileName.Substring(dirName.Length + (dirName.EndsWith("\\") ? 0 : 1));
+              reportName = StringHelper.TrimEnd(reportName, ".xml");
+              reportNames.Add(new ReportInfo(reportName, readOnly, file.CreationTime, file.LastWriteTime, "_global_"));
+            }
+          }
+        }
+      }
+      return (ReportInfo[]) reportNames.ToArray(typeof(ReportInfo));
+    }
+
+    private static void GetAllXmlFiles(System.IO.DirectoryInfo dir, ArrayList files)
+    {
+      try
+      {
         files.AddRange(dir.GetFiles("*.xml"));
         System.IO.DirectoryInfo[] subDirs = dir.GetDirectories();
         foreach (System.IO.DirectoryInfo subDir in subDirs)
-            if (!subDir.Name.StartsWith("~"))
-                GetAllXmlFiles(subDir, files);
+          if (!subDir.Name.StartsWith("~"))
+            GetAllXmlFiles(subDir, files);
+      }
+      catch
+      {
+      }
     }
-    catch (UnauthorizedAccessException)
-    {
-    }
-}
 ```
 
 ##Sample VB.NET Methods
@@ -110,83 +132,91 @@ private static void GetAllXmlFiles(System.IO.DirectoryInfo dir, ArrayList files)
 ###DatabaseAdHocConfig
 
 ```visualbasic
-Public Class CustomAdHocConfig
-    Inherits Izenda.AdHoc.DatabaseAdHocConfig
-
-    Protected Overrides Function ListReports() As Izenda.AdHoc.ReportInfo()
-        Dim reportNames As New ArrayList()
-        Dim sql As String = String.Format("SELECT Name, CreatedDate, ModifiedDate FROM {0} ORDER BY Name WHERE UserID='{1}'", AdHocSettings.SavedReportsTable, AdHocSettings.CurrentUserName)
-
-        Dim command As IDbCommand = Nothing
-        Try
-            command = Izenda.AdHoc.AdHocContext.Driver.CreateCommand(sql)
-            Dim reader As IDataReader = command.ExecuteReader()
-
-            While reader.Read()
-                Dim reportName As String = reader("Name").ToString()
-                Dim createdDate As DateTime = Convert.ToDateTime(reader("CreatedDate").ToString())
-                Dim modifiedDate As DateTime = Convert.ToDateTime(reader("ModifiedDate").ToString())
-                If reportName.Equals("") Then
-                    reportNames.Add(New Izenda.AdHoc.ReportInfo(reportName, False, createdDate, modifiedDate))
-                End If
-            End While
-        Catch
-        End Try
-
-        If command.Connection.State = System.Data.ConnectionState.Open Then command.Connection.Close()
-        Return DirectCast(reportNames.ToArray(GetType(Izenda.AdHoc.ReportInfo)), Izenda.AdHoc.ReportInfo())
-    End Sub
-End Class
+Public Overrides Function ListReports() As ReportInfo()
+      Try
+        Dim connectionString As String = "Persist Security Info=False;Initial Catalog=Northwind;Data Source=LESHA-PC\SQL2012;User ID=dataLogin;Password=dataPassword;Integrated Security=false;"
+        Dim sql As String = String.Format("SELECT Name, CreatedDate, ModifiedDate FROM {0} ORDER BY Name", AdHocSettings.SavedReportsTable)
+        Dim reportNames As ArrayList = New ArrayList()
+        Using connection As System.Data.IDbConnection = New System.Data.SqlClient.SqlConnection(connectionString)
+          connection.Open()
+          Using command As System.Data.IDbCommand = connection.CreateCommand()
+            command.CommandText = sql
+            Using reader As System.Data.IDataReader = command.ExecuteReader()
+              While reader.Read()
+                Try
+                  Dim reportName As String = reader("Name").ToString()
+                  Dim createdDate As DateTime = DirectCast(reader("CreatedDate"), DateTime)
+                  Dim modifiedDate As DateTime = DirectCast(reader("ModifiedDate"), DateTime)
+                  If reportName <> "" Then
+                    reportNames.Add(New ReportInfo(reportName, False, createdDate, modifiedDate, "_global_"))
+                  End If
+                Catch ex As Exception
+                End Try
+              End While
+            End Using
+          End Using
+        End Using
+        Return DirectCast(reportNames.ToArray(GetType(ReportInfo)), ReportInfo())
+      Catch ex2 As Exception
+      End Try
+      Dim res(0) As ReportInfo
+      Return res
+    End Function
 ```
 
 ###FileSystemAdHocConfig
 
 ```visualbasic
 Public Overrides Function ListReports() As ReportInfo()
-  Dim reports As New ArrayList()
-
-  If AdHocSettings.ReportsPath IsNot Nothing Then
-    Dim dir As DirectoryInfo = New DirectoryInfo(AdHocSettings.ReportsPath)
-    If dir.Exists Then
-      Dim dirName As String = Path.GetFullPath(dir.FullName)
-      Dim fileArray As New ArrayList()
-      GetAllXmlFiles(dir, fileArray)
-      Dim files As FileInfo() = DirectCast(fileArray.ToArray(typeof(FileInfo)), FileInfo())
-      For Each file As FileInfo In files
-        If file.Extension = ".xml" Then
-          Try
-            Dim reader As StreamReader = file.OpenText()
-            reader.Close()
-          Catch e As Exception
-            Continue For
-          End Try
-          Dim readOnly As Boolean = False
-          Try
-            Dim writer As StreamWriter = file.AppendText()
-            writer.Close()
-          catch e As Exception
-            readOnly = True
-          End Try
-          Dim fileName As String = Path.GetFullPath(file.FullName)
-          Dim reportName As String = fileName.Substring(dirName.Length + CStr(IIf((dirName.EndsWith("\\"), 0, 1))))
-          reportName = StringHelper.TrimEnd(reportName, ".xml")
-          reports.Add(New ReportInfo(reportName, readOnly, file.CreationTime, _
-          file.LastWriteTime))
+      Dim reportNames As ArrayList = New ArrayList()
+      If Not (AdHocSettings.ReportsPath Is Nothing) Then
+        Dim dir As System.IO.DirectoryInfo = New System.IO.DirectoryInfo(AdHocSettings.ReportsPath)
+        If dir.Exists Then
+          Dim dirName As String = System.IO.Path.GetFullPath(dir.FullName)
+          Dim fileArray As ArrayList = New ArrayList()
+          GetAllXmlFiles(dir, fileArray)
+          Dim files As System.IO.FileInfo() = DirectCast(fileArray.ToArray(GetType(System.IO.FileInfo)), System.IO.FileInfo())
+          For Each file As System.IO.FileInfo In files
+            If file.Extension = ".xml" Then
+              Try
+                Dim reader As System.IO.StreamReader = file.OpenText()
+                reader.Close()
+              Catch ex As Exception
+                Continue For                
+              End Try
+              Dim ro As Boolean = False
+              Try
+                Dim writer As System.IO.StreamWriter = file.AppendText()
+                writer.Close()
+              Catch ex2 As Exception
+                ro = True
+              End Try
+              Dim fileName As String = System.IO.Path.GetFullPath(file.FullName)
+              Dim reportName As String
+              If dirName.EndsWith("\\") Then
+                reportName = fileName.Substring(dirName.Length)
+              Else
+                reportName = fileName.Substring(dirName.Length + 1)
+              End If
+              reportName = StringHelper.TrimEnd(reportName, ".xml")
+              reportNames.Add(New ReportInfo(reportName, ro, file.CreationTime, file.LastWriteTime, "_global_"))
+            End If
+          Next
         End If
-      Next
-    End If
-  End If
-  Return DirectCast(reports.ToArray(), ReportInfo())
-End Function
-
-Private Shared Sub GetAllXmlFiles(ByVal dir As System.IO.DirectoryInfo, ByRef files As ArrayList)
-    Try
+      End If
+      Return DirectCast(reportNames.ToArray(GetType(ReportInfo)), ReportInfo())
+    End Function
+    
+    Public Sub GetAllXmlFiles(dir As System.IO.DirectoryInfo, files As ArrayList)
+      Try
         files.AddRange(dir.GetFiles("*.xml"))
         Dim subDirs As System.IO.DirectoryInfo() = dir.GetDirectories()
         For Each subDir As System.IO.DirectoryInfo In subDirs
-            If Not subDir.Name.StartsWith("~"))
-                GetAllXmlFiles(subDir, files)
-    Catch uae As UnauthorizedAccessException
-    End Try
-End Sub
+          If Not (subDir.Name.StartsWith("~")) Then
+            GetAllXmlFiles(subDir, files)
+          End If
+        Next
+      Catch ex As Exception
+      End Try
+    End Sub
 ```
