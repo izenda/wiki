@@ -13,13 +13,13 @@
 
 1) Review release notes [here](http://wiki.izenda.us/Release-Notes). Release notes for each release will have notes detailing features, settings, and fixes associated.
 
-1) Set aside any customized files in the entire Izenda deployment - This is typically the global.asax, code-behind files, sometimes individual page code, CSS, HTML or JS.
+2) Set aside any customized files in the entire Izenda deployment - This is typically the global.asax, code-behind files, sometimes individual page code, CSS, HTML or JS.
 
-2) Download an Izenda 'Full Download' that includes all files and pages.
+3) Download an Izenda 'Full Download' that includes all files and pages.
 
-3) In the 'vanilla' kit, enter the connection string and license key into the Global.asax. Launch the 'vanilla' installation to confirm that your license key and connection string are set correctly.
+4) In the 'vanilla' kit, enter the connection string and license key into the Global.asax. Launch the 'vanilla' installation to confirm that your license key and connection string are set correctly.
 
-4) Compare customized files from Step #1 to new updated files and merge over your customizations to the new files, starting with the global.asax and connection info (if contained somewhere besides the global). Move over customizations one at a time, testing each.
+5) Compare customized files from Step #1 to new updated files and merge over your customizations to the new files, starting with the global.asax and connection info (if contained somewhere besides the global). Move over customizations one at a time, testing each.
 
 _See Also:_
 [[How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL]]
