@@ -8,6 +8,9 @@ Responsive Grid is a feature that re-sizes and re-positions report parts in resp
 ##Usage
 This feature is useful when you have multiple windows on your screen concurrently or you are viewing reports on a mobile device and do not want to scroll horizontally.
 
+**_Note: When VG hierarchy is applied, responsive grid feature and column width settings are not available_**
+
+
 ##Remove Responsive Grid
 If you prefer the horizontal scrolling functionality, remove the following code from the ReportViewer-Head.js file.
 
