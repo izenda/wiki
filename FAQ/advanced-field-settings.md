@@ -31,5 +31,5 @@ Advanced field settings provide more granular control over what data is displaye
 |Cell Highlight|Highlights the entire cell for a given range. This follows the same rules as text highlight.|
 |Value Ranges|Lets you set text values for number ranges. (i.e. setting this to 0 to 10:Under will display the text "Under" when it encounters a value between 0 and 10 for that column).|
 |Expression|Allows you to define a customized mathematical or SQL expression to show as the value for the column cells. See more about [[Expressions|http://wiki.izenda.us/Guides/ReportDesign/15.0-Expressions-in-Izenda]]|
-|Expression Type|Allows you to specify the data type of this field. This is most useful when| you are generating output with an expression and need to specify a data type.|
+|Expression Type|Allows you to specify the data type of this field. This is most useful when you are generating output with an expression and need to specify a data type.|
 |Group By Expression|If checked, this field will be included in the group by statement of the query. This is functionally the same as the Group function, except applicable to expression output within a field rather than to the field itself.|
