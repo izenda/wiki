@@ -30,10 +30,10 @@ Usage; code for your Izenda ``global.asax``:
 
 ###Expressions
 
-The use of expressions in a calculated field will cause the SQL server itself to throw a DIV/0 error. This is opposed to arithmetic operators, which will not cause SQL to throw exceptions. In the case of using expressions, you will have to catch possible divide by zero errors in a case statement. One example is detailed below.
+Izenda contains logic to detect when an expression might produce a DIV/0 error. In this case, the denominator will be cast to a value which will be replaced by the safe error DIV/0, as in the example below:
 
 ```sql
 CASE WHEN [OrderID]=0 THEN CAST(2147483647 AS float) ELSE [Freight]/[OrderID]
 ```
 
-Using the number seen in the cast will indicate to Izenda that it should use the DIV/0 format option for that value.
+Using the number seen in the cast will indicate to Izenda that it should use the DIV/0 format option for that value. This is one of the few times that Izenda will modify any code you place in an expression.
