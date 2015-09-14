@@ -1,10 +1,10 @@
-#Izenda Webform Integration Guide
+#Izenda Webform Integration Guide (Sub-directory)
 
 [[_TOC_]]
 
 ##About
 
-This guide is designed to instruct first-time users how to integrate Izenda webform kit with a simple ASP.NET website using Visual Studio Express 2013 for Web. This guide will use an Izenda webform kit and a simple ASP.NET website, which can be created using Visual Studio Express 2013 for Web.  
+This guide is designed to instruct first-time users how to integrate Izenda webform kit with a simple ASP.NET website using Visual Studio Express 2013 for Web. In this integration guide, all Izenda files will be in a sub-directory within the hosting website. This guide will use an Izenda webform kit and a simple ASP.NET website, which can be created using Visual Studio Express 2013 for Web.  
 [Izenda webform kit download link](http://archives.izenda.us/ri/webforms/webforms-cs.zip)
 ##Instructions
 
