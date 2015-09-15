@@ -21,7 +21,7 @@ You can also create a new web site in ASP.NET web forms
 
 ###Step 2. Copy contents of /Bin folder in webform kit to Bin folder of website
 
-![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/1.png)
+![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/2.png)
 
 
 ###Step 3. Copy contents of Global.asax in starter kit to Global.asax of website
