@@ -174,7 +174,7 @@ protected override void OnInit(EventArgs e) {
 
 
 
-###Step 6. Copy < Head > Section from Default.master 
+###Step 6. Copy 'Head' Section from Default.master 
 
 **a.** Copy the below code from < Head > section from Default.master of webform kit to the < Head > section of Site.master
 
