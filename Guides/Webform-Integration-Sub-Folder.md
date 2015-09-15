@@ -174,7 +174,7 @@ protected override void OnInit(EventArgs e) {
 
 
 
-###Step 5. Copy the below code from <Head> section from Default.master from webform kit to the <Head> section of website masterpage
+###Step 6. Copy the below code from <Head> section from Default.master from webform kit to the <Head> section of website masterpage
 
 **a.** Copy the below code from <Head> section from Default.master of webform kit to the <Head> section of Site.master
 
@@ -214,8 +214,22 @@ protected override void OnInit(EventArgs e) {
 
 ```
 
-**b.** Copy the below code from <Head> section from Default.master of webform kit to the <Head> section of Site.master
+**b.** In contents copied at previous step, locate five <link> tags which have following href attribute 
 
+href="Resources/...."   and change them to href="RRR/Resources/...."
+
+
+**c.** At the end <Head> section, insert the below code snippet. If sub folder has different name, replace the index of 'Izenda' below with that name.
+```html
+ <script type="text/javascript">
+     $(document).ready(function HideHeader() {
+       if (window.location.href.indexOf('Izenda') === -1) { 
+         document.getElementById('blueHeader').style.display = 'none';
+       }
+     });
+  </script>
+
+```
 
 **a.** Add 'Reporting'and 'Resources'from \mvc5r3 to project by dragging and dropping them in Solution Explorer as below
 
