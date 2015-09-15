@@ -14,16 +14,14 @@ This guide is designed to instruct first-time users how to integrate Izenda webf
 
 ###Step 1. Open the host website in visual studio
 
+You can also create a new web site in ASP.NET web forms
+
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/1.png)
 
 
 ###Step 2. Copy contents of /Bin folder in webform kit to Bin folder of website
 
-Right click on 'References' under project name in Solution Explorer window, then click 'Add Reference'.
-
-Click the 'Browse' button and browse to \mvc5r3\bin, where Izenda.AdHoc.dll and log4net.dll are. Add them to reference. 
-
-![DLL files](/Guides/MVC-Integration/DLLs.png)
+![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/1.png)
 
 
 ###Step 3. Copy contents of Global.asax in starter kit to Global.asax of website
