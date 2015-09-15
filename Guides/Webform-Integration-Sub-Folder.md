@@ -4,8 +4,10 @@
 
 ##About
 
-This guide is designed to instruct first-time users how to integrate Izenda webform kit with a simple ASP.NET website using Visual Studio Express 2013 for Web. In this integration guide, all Izenda files will be in a sub-directory within the hosting website. This guide will use an Izenda webform kit and a simple ASP.NET website, which can be created using Visual Studio Express 2013 for Web.  
+This guide is designed to instruct first-time users how to integrate Izenda webform kit with a basic ASP.NET website using Visual Studio Express 2013 for Web. In this integration guide, all Izenda files will be placed in a sub-directory within the hosting website. This guide will use an Izenda webform kit and a basic ASP.NET website, which can be created using Visual Studio Express 2013 for Web.  
 [Izenda webform kit download link](http://archives.izenda.us/ri/webforms/webforms-cs.zip)
+
+
 ##Instructions
 
 ###Step 1. Open the host website in visual studio
@@ -22,7 +24,7 @@ Click the 'Browse' button and browse to \mvc5r3\bin, where Izenda.AdHoc.dll and 
 ![DLL files](/Guides/MVC-Integration/DLLs.png)
 
 
-###Step 3. Add IzendaStaticResourcesController.cs and IzendaReportingController.cs to the project
+###Step 3. Copy contents of Global.asax in starter kit to Global.asax of website
 
 IzendaStaticResourcesController.cs and IzendaReportingController.cs are at mvc5r3\Controllers. Add them under Controllers as below (You can add by either 'drag and drop' or 'right click->Add->Existing Item)
 
