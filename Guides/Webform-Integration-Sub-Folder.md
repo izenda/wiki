@@ -24,11 +24,57 @@ You can also create a new web site in ASP.NET web forms
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/2.png)
 
 
-###Step 3. Copy contents of Global.asax in starter kit to Global.asax of website
+###Step 3. Copy contents of Global.asax in webform kit to Global.asax of website
 
-IzendaStaticResourcesController.cs and IzendaReportingController.cs are at mvc5r3\Controllers. Add them under Controllers as below (You can add by either 'drag and drop' or 'right click->Add->Existing Item)
+Copy the code from Global.asax of webform kit to Global.asax of website
 
-![Controllers](/Guides/MVC-Integration/Controllers.png)
+```csharp
+ [Serializable]
+  public class CustomAdHocConfig : FileSystemAdHocConfig {
+    public static void InitializeReporting() {
+      //Check to see if we've already initialized.
+      if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+        return;
+      //Initialize System
+      AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
+      AdHocSettings.SqlServerConnectionString = @"INSERT_CONNECTION_STRING_HERE";
+      AdHocSettings.GenerateThumbnails = true;
+      AdHocSettings.ChartingEngine = ChartingEngine.HtmlChart;
+      AdHocSettings.ShowSimpleModeViewer = true;
+      AdHocSettings.IdentifiersRegex = "^.*[iI][Dd]$";
+      AdHocSettings.TabsCssUrl = "Resources/css/tabs.css";
+      AdHocSettings.ReportCssUrl = "Resources/css/Report.css";
+      AdHocSettings.ShowBetweenDateCalendar = true;
+      AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+      AdHocSettings.ChartingEngine = ChartingEngine.HtmlChart;
+      // AdHocSettings.ShowHtmlButton = true;
+      //AdHocSettings.ShowPDFButton = true;
+      //Initialize User
+      //AdHocSettings.VisibleDataSources=
+      //AdHocSettings.CurrentUserName=
+      //AdHocSettings.HiddenFilters["Field"] = new string [] {"value1","value2"};
+      //Success!
+      HttpContext.Current.Session["ReportingInitialized"] = true;
+
+      AdHocSettings.DashboardDateSliderMode = DashboardDateSliderMode.None;
+
+      AdHocSettings.DashboardViewer = "Dash.aspx";
+      AdHocSettings.DashboardDesignerUrl = "Dash.aspx";
+
+      //EOPDF uses a DLL that converts HTML
+      //AdHocSettings.PdfPrintMode = PdfMode.EOPDF;
+      //PhantomJS PDF uses an EXE on the web server that produces the export
+      AdHocSettings.PdfPrintMode = PdfMode.PhantomJs;
+    }
+    public override void ProcessDataSet(System.Data.DataSet ds, string reportPart) {
+      base.ProcessDataSet(ds, reportPart);
+    }
+    public override void PreExecuteReportSet(ReportSet reportSet) {
+      base.PreExecuteReportSet(reportSet);
+    }
+  }
+
+```
 	
 			
 ###Step 4. Change Namespaces of Controllers 
