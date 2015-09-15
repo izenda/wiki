@@ -26,7 +26,7 @@ You can also create a new web site in ASP.NET web forms
 
 ###Step 3. Copy contents of Global.asax in webform kit to Global.asax of website
 
-Copy the code from Global.asax of webform kit to Global.asax of website
+Copy the below code from Global.asax of webform kit to Global.asax of website
 
 ```csharp
  [Serializable]
@@ -73,6 +73,74 @@ Copy the code from Global.asax of webform kit to Global.asax of website
       base.PreExecuteReportSet(reportSet);
     }
   }
+
+```
+
+Also, add Izenda.Adhoc namespace. now global.asax of website should look like as below
+
+```csharp
+<%@ Application Language="C#" %>
+<%@ Import Namespace="_Sub_Final" %>
+<%@ Import Namespace="System.Web.Optimization" %>
+<%@ Import Namespace="System.Web.Routing" %>
+<%@ Import Namespace="Izenda.AdHoc" %>
+
+
+<script runat="server">
+
+    void Application_Start(object sender, EventArgs e)
+    {
+        RouteConfig.RegisterRoutes(RouteTable.Routes);
+        BundleConfig.RegisterBundles(BundleTable.Bundles);
+    }
+
+
+    [Serializable]
+    public class CustomAdHocConfig : FileSystemAdHocConfig {
+      public static void InitializeReporting() {
+        //Check to see if we've already initialized.
+        if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+          return;
+        //Initialize System
+        AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
+      AdHocSettings.SqlServerConnectionString = @"INSERT_CONNECTION_STRING_HERE";
+        AdHocSettings.GenerateThumbnails = true;
+        AdHocSettings.ChartingEngine = ChartingEngine.HtmlChart;
+        AdHocSettings.ShowSimpleModeViewer = true;
+        AdHocSettings.IdentifiersRegex = "^.*[iI][Dd]$";
+        AdHocSettings.TabsCssUrl = "Resources/css/tabs.css";
+        AdHocSettings.ReportCssUrl = "Resources/css/Report.css";
+        AdHocSettings.ShowBetweenDateCalendar = true;
+        AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+        AdHocSettings.ChartingEngine = ChartingEngine.HtmlChart;
+        // AdHocSettings.ShowHtmlButton = true;
+        //AdHocSettings.ShowPDFButton = true;
+        //Initialize User
+        //AdHocSettings.VisibleDataSources=
+        //AdHocSettings.CurrentUserName=
+        //AdHocSettings.HiddenFilters["Field"] = new string [] {"value1","value2"};
+        //Success!
+        HttpContext.Current.Session["ReportingInitialized"] = true;
+
+        AdHocSettings.DashboardDateSliderMode = DashboardDateSliderMode.None;
+
+        AdHocSettings.DashboardViewer = "Dash.aspx";
+        AdHocSettings.DashboardDesignerUrl = "Dash.aspx";
+
+        //EOPDF uses a DLL that converts HTML
+        //AdHocSettings.PdfPrintMode = PdfMode.EOPDF;
+        //PhantomJS PDF uses an EXE on the web server that produces the export
+        AdHocSettings.PdfPrintMode = PdfMode.PhantomJs;
+      }
+      public override void ProcessDataSet(System.Data.DataSet ds, string reportPart) {
+        base.ProcessDataSet(ds, reportPart);
+      }
+      public override void PreExecuteReportSet(ReportSet reportSet) {
+        base.PreExecuteReportSet(reportSet);
+      }
+    }
+    
+</script>
 
 ```
 	
