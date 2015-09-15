@@ -145,12 +145,30 @@ Also, add Izenda.Adhoc namespace. now global.asax of website should look like as
 ```
 	
 			
-###Step 4. Change Namespaces of Controllers 
+###Step 4. Copy OnInit method from Default.master.cs from starerkit to corresponding file/method of website master page
 
-Change namespaces of IzendaStaticResourcesController.cs and IzendaReportingController.cs to match all other controllers in the application. 
-Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK.Controllers -> ABC.Controllers
+Copy the below 
 
-![Controllers](/Guides/MVC-Integration/Namespace.png)
+```csharp
+
+protected override void OnInit(EventArgs e) {
+    
+    if (!String.IsNullOrEmpty(AdHocSettings.ApplicationHeaderImageUrl)) {
+      rightLogo.Src = AdHocSettings.ApplicationHeaderImageUrl;
+    }
+    if (!AdHocSettings.ShowDesignLinks) {
+      string script = "<script type=\"text/javascript\" language=\"javascript\">";
+      script += "try { $(document).ready(function() {$('.designer-only').hide(); });}catch(e){}";
+      script += " try{ jq$(document).ready(function() {jq$('.designer-only').hide(); });}catch(e){} ";
+      script += "</script>";
+      Page.Header.Controls.Add(new LiteralControl(script));
+    }
+    AdHocSettings.ShowSettingsButtonForNonAdmins = false;
+  }
+
+```
+
+
 
 ###Step 5. Add Reporting and Resources folders to the project
 
