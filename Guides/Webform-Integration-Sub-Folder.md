@@ -174,7 +174,7 @@ protected override void OnInit(EventArgs e) {
 
 
 
-###Step 6. Copy the below code from < Head > section from Default.master from webform kit to the < Head > section of website masterpage
+###Step 6. Copy < Head > Section from Default.master 
 
 **a.** Copy the below code from < Head > section from Default.master of webform kit to the < Head > section of Site.master
 
@@ -216,7 +216,7 @@ protected override void OnInit(EventArgs e) {
 
 **b.** In contents copied at previous step, locate five < link > tags which have following href attribute 
 
-href="Resources/...."   and change them to href="RRR/Resources/...."
+href="Resources/...."   and change them to href="Izenda/Resources/...."
 
 
 **c.** At the end < Head > section, insert the below code snippet. If sub folder has different name, replace the index of 'Izenda' below with that name.
@@ -231,25 +231,74 @@ href="Resources/...."   and change them to href="RRR/Resources/...."
 
 ```
 
-**a.** Add 'Reporting'and 'Resources'from \mvc5r3 to project by dragging and dropping them in Solution Explorer as below
+**d.** Now < Head > section of Site.master should look like as below
+```html
 
-![Controllers](/Guides/MVC-Integration/Resources_Reporting.png)
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
 
-**b.** In Solution Explorer, exclude Dashboards-Body.ascx and Dashboards-Head.ascx from \Resources\html by right click on them and click 'Exclude From Project'
-
-![Controllers](/Guides/MVC-Integration/Exclude.png)
-
-**c.** Copy /Resources folder from the root of the application into the /Reporting folder
-
-**d.** Copy rs.aspx from /Reporting and paste it in /Resources/html as below
-
-![](/Guides/MVC-Integration/rs.png)   
-
-
-**** If Izenda toolbar icons don't appear, check if Reporting folder contains rs.aspx and Resources folder  ****
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 
-###Step 6. Add mvc5r3\Views\Reporting folder 
+
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="alternate" href="" title="Team Blog - RSS" type="application/rss+xml" />
+  <link rel="shortcut icon" href="Izenda/Resources/FromDLL/Resources/ModernImages/report-icon.png" type='image/png' />
+  <link rel="stylesheet" href="Izenda/Resources/css/reset2.css" type="text/css" />
+  <link rel="stylesheet" href="Izenda/Resources/css/print.css" type="text/css" media="print" />
+  <link rel="stylesheet" href="Izenda/Resources/css/fun.css" type="text/css" />
+
+  <asp:ContentPlaceHolder ID="ChangeableHeader" runat="server">
+    <link href="./rs.aspx?css=ModernStyles.bootstrap-responsive" rel="stylesheet" />
+    <link href="./rs.aspx?css=ModernStyles.bootstrap" rel="stylesheet" />
+    <link href="./rs.aspx?css=ModernStyles.bootstrap-modals" rel="stylesheet" />
+    <link href="./rs.aspx?css=ModernStyles.bootstrap-override" rel="stylesheet" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./rs.aspx?js=ModernScripts.jquery-1.7.2.min"></script>
+  </asp:ContentPlaceHolder>
+
+  <link rel="stylesheet" href="Izenda/Resources/css/main.css" type="text/css" />
+  <script type="text/javascript" src="./rs.aspx?js=ModernScripts.bootstrap-dropdown"></script>
+  <script type="text/javascript" src="./rs.aspx?js=ModernScripts.bootstrap-tab"></script>
+  <script type="text/javascript" src="./rs.aspx?js=ModernScripts.bootstrap-transition"></script>
+  <script type="text/javascript" src="./rs.aspx?js=ModernScripts.bootstrap-modal"></script>
+  <script type="text/javascript" src="Resources/js/main.js"></script>
+  <script type="text/javascript">
+    //htmlChartColors = ['#ff0000', '#00ff00', '#0000ff', '#910000', '#1aadce', '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'];
+  </script>
+  <!-- Page header injection -->
+  <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+
+
+   <script type="text/javascript">
+     $(document).ready(function HideHeader() {
+       if (window.location.href.indexOf('Izenda') === -1) {
+         document.getElementById('blueHeader').style.display = 'none';
+       }
+     });
+  </script>
+
+
+</head>
+
+``` 
+
+
+
+###Step 7. Copy < Body > Section from Default.master  
 
 Add the Reporting folder in mvc5r3\Views to the project's Views
 
