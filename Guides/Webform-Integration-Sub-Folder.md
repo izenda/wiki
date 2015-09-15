@@ -145,9 +145,9 @@ Also, add Izenda.Adhoc namespace. now global.asax of website should look like as
 ```
 	
 			
-###Step 4. Copy OnInit method from Default.master.cs from starerkit to corresponding file/method of website master page
+###Step 4. Copy OnInit method from Default.master.cs from webform kit to corresponding file/method of website master page
 
-Copy the below 
+Copy the below method from Default.master.cs of webform kit to Site.master.cs of the website
 
 ```csharp
 
