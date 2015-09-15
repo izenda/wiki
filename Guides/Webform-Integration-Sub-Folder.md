@@ -4,7 +4,7 @@
 
 ##About
 
-This guide is designed to instruct first-time users how to integrate Izenda webform kit into a basic ASP.NET website using Visual Studio Express 2013 for Web. In this integration guide, all Izenda files will be placed in a sub-directory within the hosting website. This guide will use an Izenda webform kit and a basic ASP.NET website, which can be created using Visual Studio Express 2013 for Web.  
+This guide is designed to instruct first-time users how to integrate Izenda webform kit into a basic ASP.NET website using Visual Studio Express 2013 for Web. In this integration guide, all Izenda files will be placed in a sub-directory called 'Izenda' within the hosting website. This guide will use an Izenda webform kit and a basic ASP.NET website, which can be created using Visual Studio Express 2013 for Web.  
 
 [Izenda webform kit download link](http://archives.izenda.us/ri/webforms/webforms-cs.zip)
 
@@ -143,9 +143,13 @@ And add Izenda.Adhoc namespace. now global.asax of website should look like as b
 </script>
 
 ```
-	
+###Step 4. Copy everything except Global.asax, web.config, and Bin folder from webform kit into the sub folder 'Izenda' of website
+
+Copy everything from webform kit except global.asax, web.config and bin folder to sub folder. In this integration guide, the sub folder is named as 'Izenda'
+
+![3](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/3.png)	
 			
-###Step 4. Copy OnInit method from Default.master.cs from webform kit to corresponding file/method of website master page
+###Step 5. Copy OnInit method from Default.master.cs from webform kit to corresponding file/method of website master page
 
 Copy the below method from Default.master.cs of webform kit to Site.master.cs of the website. And add Izenda.AdHoc namespace to Site.master.cs
 
@@ -170,7 +174,9 @@ protected override void OnInit(EventArgs e) {
 
 
 
-###Step 5. Copy the below code from <Head> section from Default.master from webform kit to the <Head> section of website master page
+###Step 5. Copy the below code from <Head> section from Default.master from webform kit to the <Head> section of website masterpage
+
+**a.** Copy the below code from <Head> section from Default.master of webform kit to the <Head> section of Site.master
 
 ```html
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -207,6 +213,8 @@ protected override void OnInit(EventArgs e) {
   <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server"></asp:ContentPlaceHolder>
 
 ```
+
+**b.** Copy the below code from <Head> section from Default.master of webform kit to the <Head> section of Site.master
 
 
 **a.** Add 'Reporting'and 'Resources'from \mvc5r3 to project by dragging and dropping them in Solution Explorer as below
