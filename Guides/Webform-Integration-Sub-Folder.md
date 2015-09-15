@@ -12,7 +12,7 @@ This guide is designed to instruct first-time users how to integrate Izenda webf
 
 ###Step 1. Open the host website in visual studio
 
-![Open the Application](/Guides/MVC-Integration/Open_Application.png)
+![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/1.png)
 
 
 ###Step 2. Copy contents of /Bin folder in webform kit to Bin folder of website
