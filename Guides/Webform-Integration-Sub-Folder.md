@@ -76,7 +76,7 @@ Copy the below code from Global.asax of webform kit to Global.asax of website
 
 ```
 
-Also, add Izenda.Adhoc namespace. now global.asax of website should look like as below
+And add Izenda.Adhoc namespace. now global.asax of website should look like as below
 
 ```csharp
 <%@ Application Language="C#" %>
@@ -147,7 +147,7 @@ Also, add Izenda.Adhoc namespace. now global.asax of website should look like as
 			
 ###Step 4. Copy OnInit method from Default.master.cs from webform kit to corresponding file/method of website master page
 
-Copy the below method from Default.master.cs of webform kit to Site.master.cs of the website
+Copy the below method from Default.master.cs of webform kit to Site.master.cs of the website. And add Izenda.AdHoc namespace to Site.master.cs
 
 ```csharp
 
@@ -170,7 +170,44 @@ protected override void OnInit(EventArgs e) {
 
 
 
-###Step 5. Add Reporting and Resources folders to the project
+###Step 5. Copy the below code from <Head> section from Default.master from webform kit to the <Head> section of website master page
+
+```html
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="alternate" href="" title="Team Blog - RSS" type="application/rss+xml" />
+  <link rel="shortcut icon" href="Resources/FromDLL/Resources/ModernImages/report-icon.png" type='image/png' />
+  <link rel="stylesheet" href="Resources/css/reset2.css" type="text/css" />
+  <link rel="stylesheet" href="Resources/css/print.css" type="text/css" media="print" />
+  <link rel="stylesheet" href="Resources/css/fun.css" type="text/css" />
+
+  <asp:ContentPlaceHolder ID="ChangeableHeader" runat="server">
+    <link href="./rs.aspx?css=ModernStyles.bootstrap-responsive" rel="stylesheet" />
+    <link href="./rs.aspx?css=ModernStyles.bootstrap" rel="stylesheet" />
+    <link href="./rs.aspx?css=ModernStyles.bootstrap-modals" rel="stylesheet" />
+    <link href="./rs.aspx?css=ModernStyles.bootstrap-override" rel="stylesheet" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./rs.aspx?js=ModernScripts.jquery-1.7.2.min"></script>
+  </asp:ContentPlaceHolder>
+
+  <link rel="stylesheet" href="Resources/css/main.css" type="text/css" />
+  <script type="text/javascript" src="./rs.aspx?js=ModernScripts.bootstrap-dropdown"></script>
+  <script type="text/javascript" src="./rs.aspx?js=ModernScripts.bootstrap-tab"></script>
+  <script type="text/javascript" src="./rs.aspx?js=ModernScripts.bootstrap-transition"></script>
+  <script type="text/javascript" src="./rs.aspx?js=ModernScripts.bootstrap-modal"></script>
+  <script type="text/javascript" src="Resources/js/main.js"></script>
+  <script type="text/javascript">
+    //htmlChartColors = ['#ff0000', '#00ff00', '#0000ff', '#910000', '#1aadce', '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'];
+  </script>
+  <!-- Page header injection -->
+  <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+
+```
+
 
 **a.** Add 'Reporting'and 'Resources'from \mvc5r3 to project by dragging and dropping them in Solution Explorer as below
 
