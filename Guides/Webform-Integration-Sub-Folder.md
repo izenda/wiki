@@ -12,19 +12,19 @@ This guide is designed to instruct first-time users how to integrate Izenda webf
 
 ##Instructions
 
-###Step 1. Open the host website in visual studio
+###Step 1. Open the host website in Visual Studio
 
-You can also create a new web site in ASP.NET web forms
+You can also create a new web site in Visual Studio in ASP.NET web forms
 
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/1.png)
 
 
-###Step 2. Copy contents of /Bin folder in webform kit to Bin folder of website
+###Step 2. Copy contents of /Bin folder in webform kit to the Bin folder of host website
 
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/2.png)
 
 
-###Step 3. Copy contents of Global.asax in webform kit to Global.asax of website
+###Step 3. Copy contents of Global.asax in webform kit to Global.asax of the website
 
 Copy the below code from Global.asax of webform kit to Global.asax of website
 
