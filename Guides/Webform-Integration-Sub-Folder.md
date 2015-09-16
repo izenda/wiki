@@ -219,7 +219,7 @@ protected override void OnInit(EventArgs e) {
 href="Resources/...."   and change them to href="Izenda/Resources/...."
 
 
-**c.** At the end < Head > section, insert the below code snippet. If the sub folder has different name, replace the index of 'Izenda' below with that name.
+**c.** At the end < Head > section, insert the below code snippet. If the sub folder has a different name, replace the index of 'Izenda' below with that name.
 ```html
  <script type="text/javascript">
      $(document).ready(function HideHeader() {
