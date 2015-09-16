@@ -164,7 +164,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String|[[HeaderStyle|/API/CodeSamples/HeaderStyle]]|Gets or sets the style for the Izenda.AdHoc.AdHocSettings.JoinedTablesList, Izenda.AdHoc.AdHocSettings.FieldList, and [[Izenda.Web.UI.FilterList|/API/Izenda/Web/UI/Izenda-Web-UI-FilterList]] headers.|font-family: verdana, arial, helvetica, sans-serif; font-size: 11px;color:black;|
 |NameValueCollection|[[HelpText|/API/CodeSamples/HelpText]]| Gets or sets the collection of key-value pairs where the key is the tab name and the value is a hint that will be shown when the mouse is hovered over the appropriate tab. |{}|
 |String[]|[[HiddenCategories|/API/CodeSamples/HiddenCategories]]| Gets or sets which categories are hidden for the current user. |null|
-|String[]|[[HiddenColumns|/API/CodeSamples/HiddenColumns]]| Gets or sets the array of columns that should be hidden in all field dropdowns throughout the application. |null|
+|String[]|[[HiddenColumns|/FAQ/Izenda-API-Tip-Hidden-Columns]]| Gets or sets the array of columns that should be hidden in all field dropdowns throughout the application. |null|
 |HiddenFilterCollection|[[HiddenFilters|/API/CodeSamples/HiddenFilters]]| Gets or sets a list of fields to use as filters that users cannot see or edit. This controls row-level security throughout the tool.  This should be used in all multi-tenant systems and systems where users are restricted to certain records. |{}|
 |List|[[HiddenTimeZones|/API/CodeSamples/HiddenTimeZones]]| Gets or sets the collection of hidden time zones. **(deprecated)**|null|
 |Int32|[[HighChartLabelWidth|/API/CodeSamples/HighChartLabelWidth]]| Gets or sets the value indicating labels max width for highcharts |0|
