@@ -245,9 +245,7 @@ href="Resources/...."   and change them to href="Izenda/Resources/...."
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-
-
-
+<!-- Copied code from Default.master --> 
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -282,7 +280,10 @@ href="Resources/...."   and change them to href="Izenda/Resources/...."
   <!-- Page header injection -->
   <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server"></asp:ContentPlaceHolder>
 
+<!-- Copied code ends -->
 
+
+<!-- The below code makes Izenda code work only when sub folder name 'Izenda' is reached -->
    <script type="text/javascript">
      $(document).ready(function HideHeader() {
        if (window.location.href.indexOf('Izenda') === -1) {
@@ -297,8 +298,112 @@ href="Resources/...."   and change them to href="Izenda/Resources/...."
 ``` 
 
 
-
 ###Step 7. Copy < Body > Section from Default.master  
+
+**a.** Copy the below code from < Body > section from Default.master of webform kit to the < Body > section of Site.master
+
+```html
+
+ <div class="layout container-fluid" style="margin: 0px; padding: 0px;">
+    <div class="header applyStyles" id="whiteHeader">
+      <div class="page" style="font-family: Segoe UI,Tahoma,Verdana,Arial,Helvetica,sans-serif">
+        <div class="left-logo">
+          <img src="Resources/FromDLL/Resources/ModernImages/bi-logo.png" alt="Business intelligence" />
+        </div>
+        <div class="right-logo">
+          <a href="http://izenda.com" style="position: relative; top: 4px;">
+            <img runat="server" class="right-logo" ID="rightLogo" src="Resources/FromDLL/Resources/ModernImages/IzendaNewLogoBlue.png" alt="Izenda Reports" /></a>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+        function insertParam(key, value) {
+            key = escape(key); value = escape(value);
+            var kvp = document.location.search.substr(1).split('&');
+            if (kvp.length == 1 && kvp[0] == '')
+                kvp.length = 0;
+            var i = kvp.length; var x; while (i--) {
+                x = kvp[i].split('=');
+                if (x[0] == key) {
+                    x[1] = value;
+                    kvp[i] = x.join('=');
+                    break;
+                }
+            }
+            if (i < 0) { kvp[kvp.length] = [key, value].join('='); }
+            document.location.search = kvp.join('&');
+        }
+
+        function ShowRlToDbLoading() {
+            document.getElementById('mainContentDiv').style.display = 'none';
+            var dld = document.getElementById('dashLoadingVg');
+            dld.style.height = document.body.scrollHeight + 'px';
+            dld.style.display = '';
+            var limg = document.getElementById('limgDb');
+            var lw = document.getElementById('loadingWordDb');
+            var vSize = document.body.offsetHeight;
+            lw.style.paddingTop = (3 + vSize / 3) + 'px';
+        }
+    </script>
+
+
+    <div class="top-nav applyStyles" id="blueHeader">
+      <div class="page">
+        <ul id="topnav" style="margin: 0px; padding: 0px;">
+          <li class="top-nav-item" style="vertical-align: top;"><a href="ReportList.aspx">Reports</a></li>
+          <li class="top-nav-item" style="vertical-align: top;"><a href="Dashboards.aspx?clear=1" onclick="ShowRlToDbLoading();">Dashboards</a></li>
+          <li class="top-nav-item designer-only btn-group">
+            <a href="ReportDesigner.aspx?clear=1&tab=Data+Sources" style="padding-right: 8px!important;"><span class="plus">+</span> New</a>
+            <button type="button" class="btn dropdown-toggle" style="float: none; vertical-align: top; line-height: 20px; background-color: transparent; border: none !important;" data-toggle="dropdown">
+              <span class="caret" style="margin-top: 8px; vertical-align: top;"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="ReportDesigner.aspx?clear=1&tab=Data+Sources">Report</a></li>
+              <li runat="server" id="irItem"><a href="InstantReport.aspx">Instant Report</a></li>
+              <li><a href="<%=Izenda.AdHoc.AdHocSettings.DashboardDesignerUrl%>?clear=1">Dashboard</a></li>
+            </ul>
+          </li>
+          <% if (Izenda.AdHoc.AdHocSettings.ShowSettingsButton)
+             {
+          %>
+            <li class="top-nav-item" style="float: right;">
+              <a href="Settings.aspx" title="Settings">
+                <img class="icon" src="Resources/FromDLL/Resources/ModernImages/settings.png" alt="Settings" />
+              </a>
+            </li>
+          <% } %>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+
+    <div id="dashLoadingVg" style="text-align: center; width: 100%; height: 100%; top: 130px; left: 0px; background-color: #FFFFFF; z-index: 8000; display: none;">
+      <div id="loadingWordDb" style="font-size: 20px; margin-left: 70px; font-size: 20px; color: #1D5987; font-family: Verdana,Arial,Helvetica,sans-serif; font-weight: normal !important; font-size: 20px; font-style: normal;">Loading...</div>
+      <img id="limgDb" style="margin-left: 70px; margin-top: 40px;" src="Resources/FromDLL/Resources/loading.gif" alt="" />
+    </div>
+    <div class="main-content" id="mainContentDiv">
+      <asp:ContentPlaceHolder ID="PlaceHolder" runat="server"></asp:ContentPlaceHolder>
+    </div>
+
+<div class="footer applyStyles">
+      <div class="line"></div>
+      <div class="page">
+        <p>
+          Copyright 2015 Izenda, Inc.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- For Google analytics -->
+  <asp:ContentPlaceHolder ID="TrackerPlaceHolder" runat="server">
+  </asp:ContentPlaceHolder>
+
+
+```
 
 Add the Reporting folder in mvc5r3\Views to the project's Views
 
