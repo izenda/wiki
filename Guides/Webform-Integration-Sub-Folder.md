@@ -214,12 +214,12 @@ protected override void OnInit(EventArgs e) {
 
 ```
 
-**b.** In contents copied at previous step, locate five < link > tags which have following href attribute 
+**b.** In contents copied at previous step, locate five < link > tags which have the following href attribute 
 
 href="Resources/...."   and change them to href="Izenda/Resources/...."
 
 
-**c.** At the end < Head > section, insert the below code snippet. If sub folder has different name, replace the index of 'Izenda' below with that name.
+**c.** At the end < Head > section, insert the below code snippet. If the sub folder has different name, replace the index of 'Izenda' below with that name.
 ```html
  <script type="text/javascript">
      $(document).ready(function HideHeader() {
