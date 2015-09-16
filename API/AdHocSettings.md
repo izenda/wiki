@@ -197,7 +197,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Int32|[[NumChartTabs|/API/CodeSamples/NumChartTabs]]|Gets or sets the maximum number of Chart tabs displayed on the [[Izenda.Web.UI.AdHocReportDesigner|/API/Izenda/Web/UI/Izenda-Web-UI-AdHocReportDesigner]]. One chart can be added per chart tab.|2|
 |Int32|[[NumSharedDropdowns|/API/CodeSamples/NumSharedDropdowns]]| Gets or sets the maximum number of user/roles a report can be shared with. |3|
 |Boolean|[[OpenCustomUrlInNewWindow|/API/CodeSamples/OpenCustomUrlInNewWindow]]| Gets or sets whether custom URL links will be opened in a new window or the same window.  Custom URLs can be defined in the "Advanced" field options. |True|
-|Int32|[[OracleCommandTimeout|/API/CodeSamples/OracleCommandTimeout]]| Sets the time Izenda Reports will wait for an Oracle command to execute before timing out. |3600|
+|Int32|[[OracleCommandTimeout|/API/CodeSamples/OracleCommandTimeout]]| Sets the time Izenda Reports will wait for an Oracle command to execute before timing out. **(deprecated)** |3600|
 |String|[[OracleConnectionString|/API/CodeSamples/OracleConnectionString]]| Gets or sets the connection string used to connect to an Oracle database. |null|
 |ReportOutputGeneratorCollection|[[OutputTypes|/API/CodeSamples/OutputTypes]]|Gets or sets the registered Izenda.AdHoc.ReportOutputGenerators. These control what formats reports may be exported to.|{SQL, PDF,<br>HTMLREPORT, CSV,<br>BULKCSV, XLS(MIME),<br>DOC, XML,<br>JSON, JSA}|
 |String|[[ParentReportDesignerUrl|/API/CodeSamples/ParentReportDesignerUrl]]| Gets or sets the URL that will be used for links that open the Report Designer page using the "target=_parent" attribute. |String.Empty|
