@@ -298,7 +298,7 @@ href="Resources/...."   and change them to href="Izenda/Resources/...."
 ``` 
 
 
-###Step 7. Copy < Body > Section from Default.master  
+###Step 7. Copy 'Body' Section from Default.master  
 
 **a.** Copy the below code from < Body > section from Default.master of webform kit into the < Body > section of Site.master.
 Place the copied code between < hr / > and < footer >
