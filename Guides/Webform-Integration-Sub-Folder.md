@@ -422,8 +422,20 @@ Place the copied code between < hr / > and < footer >
         </div>
 
 ```
+**c.** As in < Head >, to hide Izenda from the main page when Izenda is not reached, add the below code snippet at the end of < body >
 
-**c.** In order to launch Izenda, add a link to Izenda report list page in the < body > of Site.master as below
+```html
+
+  <script type="text/javascript">
+    $(document).ready(function HideHeader() {
+      if (window.location.href.indexOf('Izenda') === -1) {
+        document.getElementById('whiteHeader').style.display = 'none';
+      }
+    });
+  </script>
+```
+
+**d.** In order to launch Izenda, add a link to Izenda report list page in the < body > of Site.master as below
 
 ```html
 <ul class="nav navbar-nav">
@@ -458,4 +470,4 @@ As we did in the previous step, use 'Find and Replace' tool again as below
 
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/5.png)
 
-###Step 10.  In all izenda .aspx pages update paths to izenda .ascx controls
+###Step 10.  Copy rs.aspx and rs.aspx.cs from webform kit to website root folder
