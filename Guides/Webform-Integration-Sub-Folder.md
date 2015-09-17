@@ -421,7 +421,7 @@ Place the copied code between < hr / > and < footer >
 
 ```
 
-**c.** In the first part of the copied code, to make the right logo and left logo appear correctly, add the sub folder name to src path and runat="server" attribute after 'img' as below
+**c.** (To be added)
 
 
 Add the Reporting folder in mvc5r3\Views to the project's Views
