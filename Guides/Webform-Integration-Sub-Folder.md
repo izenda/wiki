@@ -474,3 +474,44 @@ As we did in the previous step, use 'Find and Replace' tool again as below
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/5.png)
 
 ###Step 10.  Copy rs.aspx and rs.aspx.cs from webform kit to website root folder
+
+###Step 11.  Comment out form tag from ReportDesginer.aspx in Izenda to avoid a form tag conflict
+
+
+```html
+<!-- comment out form tag from ReportDesginer.aspx as below -->
+
+<%--<form id="form1" runat="server">--%>
+
+      <div id="repHeader"></div>
+      <cc1:adhocreportdesigner id="Adhocreportdesigner1" runat="server">
+      </cc1:adhocreportdesigner>
+
+     <%--</form>  --%>
+
+
+```
+
+###Step 12. Change the LicenseKey and ConnnectionString in Global.asax of project
+
+ To get a new trial key, you may contact [sales@izenda.com](mailto:sales@izenda.com).
+
+```csharp
+
+AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";   
+AdHocSettings.SqlServerConnectionString = @"INSERT_CONNECTION_STRING_HERE";
+
+```
+
+
+###Step 13. Launch the website
+
+Launch the website and check if Izenda works fine. At this stage the website should look like as below.
+
+
+![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/7.png)
+
+
+
+
+ 
