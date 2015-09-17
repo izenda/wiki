@@ -10,7 +10,7 @@ This guide is designed to instruct first-time users how to integrate Izenda webf
 
 [Host Website download link](http://archives.izenda.us/ri/webforms/Integration_Demo.zip)
 
-Reference: [Integrating Izenda into a Web Application]http://wiki.izenda.us/Guides/Integrating-Izenda)
+Reference: [Integrating Izenda into a Web Application](http://wiki.izenda.us/Guides/Integrating-Izenda)
 
 ##Instructions
 
