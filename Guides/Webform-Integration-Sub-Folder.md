@@ -145,7 +145,7 @@ And add Izenda.Adhoc namespace. now global.asax of website should look like as b
 ```
 ###Step 4. Copy everything except Global.asax, web.config, and Bin folder from webform kit into the sub folder 'Izenda' of website
 
-Copy everything from webform kit except global.asax, web.config and bin folder to sub folder. In this integration guide, the sub folder is named as 'Izenda'
+Create a folder named 'Izenda' in the website's root folder. Copy everything from webform kit except global.asax, web.config and bin folder to sub folder. In this integration guide, the sub folder is named as 'Izenda'
 
 ![3](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/3.png)	
 			
