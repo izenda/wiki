@@ -389,7 +389,7 @@ Place the copied code between < hr / > and < footer >
     <div class="main-content" id="mainContentDiv">
       <asp:ContentPlaceHolder ID="PlaceHolder" runat="server"></asp:ContentPlaceHolder>
     </div>
-
+<!-- This portion is not needed
 <div class="footer applyStyles">
       <div class="line"></div>
       <div class="page">
@@ -398,6 +398,9 @@ Place the copied code between < hr / > and < footer >
         </p>
       </div>
     </div>
+-->
+
+
 
   </div>
 
