@@ -24,7 +24,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[Using the Izenda Fusion Driver|/Guides/Izenda-AdHoc-Driver]]
 * [[The report lifecycle|/Guides/Report-Lifecycle]]
 * [[MVC Phase I Integration Guide|/Guides/MVC-Integration]]
-* [[Webform Integration Guide|/Guides/Webform_Integration_Sub_Folder]]
+* [[Webform Integration Guide|http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder]]
 
 
 ###C♯/VB.NET Guides
