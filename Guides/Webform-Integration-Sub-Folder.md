@@ -432,3 +432,19 @@ Change MasterPageFile="~/Default.master" to MasterPageFile="~/Site.master" in al
 
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/4.png)
 
+
+###Step 9.  In all izenda .aspx pages update paths to izenda .ascx controls
+
+In all izenda .aspx pages update paths to izenda .ascx controls, for example,
+
+<%@ Register Src="~/Resources/html/ReportViewer-Head.ascx" TagName="ccn1" TagPrefix="ccp1" %>
+
+should be changed to
+
+<%@ Register Src="~/RRR/Resources/html/ReportViewer-Head.ascx" TagName="ccn1" TagPrefix="ccp1" %>
+
+As we did in the previous step, use 'Find and Replace' tool again as below
+
+![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/5.png)
+
+###Step 10.  In all izenda .aspx pages update paths to izenda .ascx controls
