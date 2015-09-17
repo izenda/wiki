@@ -18,6 +18,10 @@ You can also create a new web site in Visual Studio in ASP.NET web forms
 
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/1.png)
 
+The below is how the basic website should look like. 
+
+![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/6.png)
+
 
 ###Step 2. Copy contents of /Bin folder in webform kit to the Bin folder of host website
 
