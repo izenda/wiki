@@ -430,7 +430,8 @@ Place the copied code between < hr / > and < footer >
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
-                     <li><a runat="server" href="~/Izenda/ReportList.aspx">Izenda</a></li>  <!-- link to Izenda -->
+<!-- link to Izenda -->
+                     <li><a runat="server" href="~/Izenda/ReportList.aspx">Izenda</a></li>  
 
 
 ```
