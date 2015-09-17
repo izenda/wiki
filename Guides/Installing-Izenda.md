@@ -138,12 +138,6 @@ Izenda supports the .NET platform (all versions) for both C# and VB.NET. This is
 
 In order to create and save reports, your application will require the ability to read and write to the [[Reports folder|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]] or the [[Stored Reports table|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]] as well as the Izenda.config file. The application runs under the web server's service account. By default, this account is **NT AUTHORITY\NETWORKSERVICE** under Windows 2003 and **ASPNET** under Windows XP. It can be something different if your Administrator has changed it or you are running Microsoft Exchange on the same server. In most cases, it will not have changed.
 
-**Installation Video:**
-
-This video demonstrates a simple install process for Izenda on Windows Server 2008 with IIS 7, connecting to SQL Server 2008 R2. (Redirects to youtube)
-
-[![IIS7 Integration Video](http://wiki.izenda.us/Integration/Tutorials/Installing-Izenda/iis7_installation.png)](https://www.youtube.com/watch?v=4E0npCxLi4o)
-
 ##Installing Izenda On Systems With IIS 7.5 or higher
 
 **Process:**
