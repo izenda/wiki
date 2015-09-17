@@ -406,6 +406,24 @@ Place the copied code between < hr / > and < footer >
 
 ```
 
+**b.** In the first part of the copied code, to make the right logo and left logo appear correctly, add the sub folder name to src path and runat="server" attribute after 'img' as below
+
+```html
+<!-- logos can be customized -->
+
+        <div class="left-logo">
+          <img runat="server" src="Izenda/Resources/FromDLL/Resources/ModernImages/bi-logo.png" alt="Business intelligence" />
+        </div>
+        <div class="right-logo">
+          <a href="http://izenda.com" style="position: relative; top: 4px;">
+            <img runat="server" class="right-logo" ID="rightLogo" src="Izenda/Resources/FromDLL/Resources/ModernImages/IzendaNewLogoBlue.png" alt="Izenda Reports" /></a>
+        </div>
+
+```
+
+**c.** In the first part of the copied code, to make the right logo and left logo appear correctly, add the sub folder name to src path and runat="server" attribute after 'img' as below
+
+
 Add the Reporting folder in mvc5r3\Views to the project's Views
 
 ![Controllers](/Guides/MVC-Integration/VR.png)
