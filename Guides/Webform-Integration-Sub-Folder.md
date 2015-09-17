@@ -426,13 +426,9 @@ Place the copied code between < hr / > and < footer >
 **c.** (To be added)
 
 
-Add the Reporting folder in mvc5r3\Views to the project's Views
+###Step 8. Change MasterPageFile="~/Default.master" to MasterPageFile="~/Site.master"
 
-![Controllers](/Guides/MVC-Integration/VR.png)
+Change MasterPageFile="~/Default.master" to MasterPageFile="~/Site.master" in all Izenda .aspx pages. This can be done easily using Visual Studio's 'Find and Replace' tool as below.
 
-###Step 7. Change MasterPageFile="~/Default.master" to MasterPageFile="~/Site.master"
-
-Change MasterPageFile="~/Default.master" to MasterPageFile="~/Site.master" in all Izenda .aspx pages. This can be done easily using Visual Studio's 'Find and Replace' tool. 
-
- 
+![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/4.png)
 
