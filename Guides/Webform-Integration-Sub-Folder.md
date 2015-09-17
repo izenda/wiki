@@ -18,10 +18,6 @@ You can also create a new web site in Visual Studio in ASP.NET web forms
 
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/1.png)
 
-The below is how the basic website should look like. 
-
-![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/6.png)
-
 
 ###Step 2. Copy contents of /Bin folder in webform kit to the Bin folder of host website
 
@@ -427,7 +423,17 @@ Place the copied code between < hr / > and < footer >
 
 ```
 
-**c.** (To be added)
+**c.** In order to launch Izenda, add a link to Izenda report list page in the < body > of Site.master as below
+
+```html
+<ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/About">About</a></li>
+                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                     <li><a runat="server" href="~/Izenda/ReportList.aspx">Izenda</a></li>  <!-- link to Izenda -->
+
+
+```
 
 
 ###Step 8. Change MasterPageFile="~/Default.master" to MasterPageFile="~/Site.master"
