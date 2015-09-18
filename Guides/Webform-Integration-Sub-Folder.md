@@ -16,7 +16,7 @@ Reference: [Integrating Izenda into a Web Application](http://wiki.izenda.us/Gui
 
 ###Step 1. Open the host website in Visual Studio
 
-You can also create a new web site in Visual Studio in ASP.NET web forms
+You can also create a new web site in Visual Studio in ASP.NET Webforms.
 
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/1.png)
 
@@ -26,9 +26,9 @@ You can also create a new web site in Visual Studio in ASP.NET web forms
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/2.png)
 
 
-###Step 3. Copy contents of Global.asax in webform kit to Global.asax of the website
+###Step 3. Copy contents of Global.asax in Webforms kit to Global.asax of the website
 
-Copy the below code from Global.asax of webform kit to Global.asax of website
+Copy the below code from Global.asax of Webforms kit to Global.asax of website:
 
 ```csharp
  [Serializable]
@@ -78,7 +78,7 @@ Copy the below code from Global.asax of webform kit to Global.asax of website
 
 ```
 
-And add Izenda.Adhoc namespace. now global.asax of website should look like as below
+And add Izenda.Adhoc namespace.  Now, the global.asax of website should look similar to the below:
 
 ```csharp
 <%@ Application Language="C#" %>
@@ -145,15 +145,15 @@ And add Izenda.Adhoc namespace. now global.asax of website should look like as b
 </script>
 
 ```
-###Step 4. Copy everything except Global.asax, web.config, and Bin folder from webform kit into the sub folder 'Izenda' of website
+###Step 4. Copy everything except Global.asax, web.config, and Bin folder from Webforms kit into the sub-folder 'Izenda' of website
 
-Create a folder named 'Izenda' in the website's root folder. Copy everything from webform kit except global.asax, web.config and bin folder to sub folder. In this integration guide, the sub folder is named as 'Izenda'
+Create a folder named 'Izenda' in the website's root folder. Copy everything from Webforms kit except for global.asax, web.config and the bin folder to your sub-folder. In this integration guide, the sub folder is named 'Izenda'.
 
 ![3](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/3.png)	
 			
-###Step 5. Copy OnInit method from Default.master.cs from webform kit to corresponding file/method of website master page
+###Step 5. Copy OnInit method from Default.master.cs from Webforms kit to corresponding file/method of website master page
 
-Copy the below method from Default.master.cs of webform kit to Site.master.cs of the website. And add Izenda.AdHoc namespace to Site.master.cs
+Copy the below method from Default.master.cs of Webforms kit to Site.master.cs of the website, and add Izenda.AdHoc namespace to Site.master.cs.
 
 ```csharp
 
@@ -178,7 +178,7 @@ protected override void OnInit(EventArgs e) {
 
 ###Step 6. Copy 'Head' Section from Default.master 
 
-**a.** Copy the below code from < Head > section from Default.master of webform kit to the < Head > section of Site.master
+**a.** Copy the below code from < Head > section from Default.master of Webforms kit to the < Head > section of Site.master:
 
 ```html
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -216,18 +216,19 @@ protected override void OnInit(EventArgs e) {
 
 ```
 
-**b.** In contents copied at previous step, locate five < link > tags which have the following href attribute 
+**b.** In contents copied at previous step, locate five < link > tags which have the following href attribute :
 
 href="Resources/...."   and change them to href="Izenda/Resources/...."
 
 
-**c.** At the end < Head > section, insert the below code snippet. If the sub folder has a different name, replace the index of 'Izenda' below with that name.
+**c.** At the end < Head > section, insert the below code snippet. If the sub folder has a different name, replace the index of 'Izenda' below with that name.  This Javascript snippet will hide Izenda's navbar unless you are on an Izenda page.
 ```html
 <!-- The below code hides Izenda from the main page -->
 
  <script type="text/javascript">
      $(document).ready(function HideHeader() {
        if (window.location.href.indexOf('Izenda') === -1) { 
+         document.getElementById('whiteHeader').style.display = 'none';
          document.getElementById('blueHeader').style.display = 'none';
        }
      });
@@ -235,7 +236,7 @@ href="Resources/...."   and change them to href="Izenda/Resources/...."
 
 ```
 
-**d.** Now < Head > section of Site.master should look like as below
+**d.** Now < Head > section of Site.master should look like the below:
 ```html
 
 <head runat="server">
@@ -287,10 +288,11 @@ href="Resources/...."   and change them to href="Izenda/Resources/...."
 <!-- Copied code ends -->
 
 
-<!-- The below code makes Izenda code work only when sub folder name 'Izenda' is reached -->
+<!-- The below code makes Izenda's navbar hidden only until sub-folder named 'Izenda' is reached -->
    <script type="text/javascript">
      $(document).ready(function HideHeader() {
        if (window.location.href.indexOf('Izenda') === -1) {
+         document.getElementById('whiteHeader').style.display = 'none';
          document.getElementById('blueHeader').style.display = 'none';
        }
      });
@@ -304,7 +306,7 @@ href="Resources/...."   and change them to href="Izenda/Resources/...."
 
 ###Step 7. Copy 'Body' Section from Default.master  
 
-**a.** Copy the below code from < Body > section from Default.master of webform kit into the < Body > section of Site.master.
+**a.** Copy the below code from < Body > section from Default.master of Webforms kit into the < Body > section of Site.master.
 Place the copied code between < hr / > and < footer >
 
 ```html
@@ -413,10 +415,10 @@ Place the copied code between < hr / > and < footer >
 
 ```
 
-**b.** In the first part of the copied code, to make the right logo and left logo appear correctly, add the sub folder name to src path and runat="server" attribute after 'img' as below
+**b.** In the first part of the copied code, to make the right logo and left logo appear correctly, add the sub folder name to src path and runat="server" attribute after 'img' as below:
 
 ```html
-<!-- logos can be customized -->
+<!-- logos can be customized, or removed entirely -->
 
         <div class="left-logo">
           <img runat="server" src="Izenda/Resources/FromDLL/Resources/ModernImages/bi-logo.png" alt="Business intelligence" />
@@ -427,20 +429,8 @@ Place the copied code between < hr / > and < footer >
         </div>
 
 ```
-**c.** As in < Head >, to hide Izenda from the main page when Izenda is not reached, add the below code snippet at the end of < body >
 
-```html
-
-  <script type="text/javascript">
-    $(document).ready(function HideHeader() {
-      if (window.location.href.indexOf('Izenda') === -1) {
-        document.getElementById('whiteHeader').style.display = 'none';
-      }
-    });
-  </script>
-```
-
-**d.** In order to launch Izenda, add a link to Izenda report list page in the < body > of Site.master as below
+**c.** In order to launch Izenda, add a link to Izenda report list page in the < body > of Site.master as below:
 
 ```html
 <ul class="nav navbar-nav">
@@ -461,21 +451,21 @@ Change MasterPageFile="~/Default.master" to MasterPageFile="~/Site.master" in al
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/4.png)
 
 
-###Step 9.  In all izenda .aspx pages update paths to izenda .ascx controls
+###Step 9.  In all Izenda .aspx pages, update paths to Izenda .ascx controls
 
-In all izenda .aspx pages update paths to izenda .ascx controls, for example,
+For example:
 
 <%@ Register Src="~/Resources/html/ReportViewer-Head.ascx" TagName="ccn1" TagPrefix="ccp1" %>
 
 should be changed to
 
-<%@ Register Src="~/RRR/Resources/html/ReportViewer-Head.ascx" TagName="ccn1" TagPrefix="ccp1" %>
+<%@ Register Src="~/Izenda/Resources/html/ReportViewer-Head.ascx" TagName="ccn1" TagPrefix="ccp1" %>
 
 As we did in the previous step, use 'Find and Replace' tool again as below
 
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/5.png)
 
-###Step 10.  Copy rs.aspx and rs.aspx.cs from webform kit to website root folder
+###Step 10.  Copy rs.aspx and rs.aspx.cs from Webforms kit to website root folder
 
 ###Step 11.  Comment out form tag from ReportDesginer.aspx in Izenda to avoid a form tag conflict
 
@@ -507,8 +497,6 @@ AdHocSettings.SqlServerConnectionString = @"INSERT_CONNECTION_STRING_HERE";
 
 
 ###Step 13. Launch the website
-
-Launch the website and check if Izenda works fine. At this stage the website should look like as below.
 
 
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/7.png)
