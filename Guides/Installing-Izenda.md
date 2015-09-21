@@ -63,7 +63,7 @@ Once you have IIS installed, continue with the following:
 ![Default Web Site](http://kb.izenda.com/Reg/images/screenshots/InstDefaultWebsite.png)
 	
 
-**d.** Right-click on **Default Web Site**, and select **Add Application**. Fill out the **Alias** text box, and name it **Reporting** or whatever name you can remember. Once named, select the **Select** button on the right. Once the drop-down menu appears, select **Classic.NET AppPool** and **OK**.
+**d.** Right-click on **Default Web Site**, and select **Add Application**. Fill out the **Alias** text box, and name it **Reporting** or whatever name you would like. Once named, select the **Select** button on the right. Once the drop-down menu appears, select your preferred application pool and **OK**.
 			
 
 ![Application Pool](http://kb.izenda.com/Reg/images/screenshots/InstAppPool.png)
@@ -132,7 +132,7 @@ Prior to starting, please make sure your system meets the following requirements
 
 **Selecting a language and .NET version:**
 
-Izenda supports the .NET platform (all versions) for both C# and VB.NET. This is important if any code-level integration is needed. Izenda highly recommends selecting .NET 2.0 and C#. The starter kits referenced above are already configured to use .NET 2.0 and C# or VB.NET respectively.
+Izenda supports the .NET platform (all versions) for both C# and VB.NET. This is important if any code-level integration is needed. The starter kits referenced above are already configured to use .NET 2.0 (and higher) and C# or VB.NET respectively.
 
 **Permissions:**
 
@@ -146,7 +146,7 @@ The process to install on systems with IIS version later than 7.0 is the same as
 
 **Permissions:**
 
-IIS 7.5 and higher, the default account is called [[ApplicationPoolIdentity|http://www.iis.net/learn/manage/configuring-security/application-pool-identities]]. You can either allow this account access as opposed to using **NETWORKSERVICE**, or you can change your **DefaultAppPool** identity to **NETWORKSERVICE**. 
+IIS 7.5 and higher, the default account is called [[ApplicationPoolIdentity|http://www.iis.net/learn/manage/configuring-security/application-pool-identities]]. You can either allow this account access as opposed to using **NETWORKSERVICE**, or you can change your **DefaultAppPool** identity to **NETWORKSERVICE**. Only change this if you are encountering issues with the default identity.
 
 **Troubleshooting:**
 
