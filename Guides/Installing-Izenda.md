@@ -63,7 +63,7 @@ Once you have IIS installed, continue with the following:
 ![Default Web Site](http://kb.izenda.com/Reg/images/screenshots/InstDefaultWebsite.png)
 	
 
-**d.** Right-click on **Default Web Site**, and select **Add Application**. Fill out the **Alias** text box, and name it **Reporting** or whatever name you would like. Once named, select the **Select** button on the right. Once the drop-down menu appears, select your preferred application pool and **OK**.
+**d.** Right-click on **Default Web Site**, and select **Add Application**. Fill out the **Alias** text box, and name it **Reporting** or whatever name you would like. Once named, select the **Select** button on the right. Once the drop-down menu appears, select your preferred application pool and **OK**. Izenda can run in 2.0 and 4.0, Classic and Integrated.
 			
 
 ![Application Pool](http://kb.izenda.com/Reg/images/screenshots/InstAppPool.png)
