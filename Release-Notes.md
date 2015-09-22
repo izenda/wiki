@@ -1,5 +1,97 @@
 [[_TOC_]]
 
+# 6.9.0.5 (September 22, 2015)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|18056|Report Design|Optimization|DataSourceDropDownTimeout - Obsolete |
+|19284|Report Design|Optimization|Oracle - Average(Days Old) inconsistent data types causing issue - resolved|
+|19401|Report Viewer|Export|Excel Exports will respect <br> tags on export for wrapping large large text lines|
+|20002|API|Compatibility|Language Packs - Storage/Distribution updated for use in standard kit|
+|20051|Feature||New Setting for use in Extended Functions and Expressions|
+|20131|Feature||FEATURE  - Update to Forms Designer adding Field/Column/Smart Tag and SubReport Dropdowns for Ease of Use in creating forms|
+|20164|UI|Optimization|Gradient header removed still being displayed - resolved|
+|20173|UI|Optimization|Random Color Palette Changes for visualizations resolved|
+|20219|Feature||FEATURE - "Add Repeater" button in forms implemented |
+|20280|Feature||FEATURE - Add Calc Fields for use in Map Charts|
+|20333|API|Compatibility|License key locks - standardized to remove features which should not be locked|
+|20473|API|Compatibility|6.9.0.2 not working on azure with Redis session state provider - resolved|
+|20479|Report Design|Visualization|World Tour Visualization - resolved issue with Country names in mixed cases|
+|20509|API|Export|Resolved issues with "copy these files from filesystem to database" on settings page|
+|20548|Report Viewer|Export|PhantomJS missing print features added - page break after visual groups / pivot columns per exported page - resolved|
+|20594|UI|Optimization|Long String text not being displayed when using Responsive Grid - resolved|
+|20596|Report Design|UI|Cell highlight not respecting VG field in Analysis Grid - resolved|
+|20613|API|Optimization|Hiding buttons in the ReportDesigner breaks button in ReportViewer - resolved|
+|20636|Report Design|Filters|Filter display error showing schema and table resolved|
+|20678|API|Optimization|AdhocSettings.HiddenCategores not working properly - resolved|
+|20692|Report Viewer|Export|Issue resolved using BulkCSV and export from Stored Procs|
+|20711|Dashboards|UI|Pie Charts Sizing Issue - now autosizing for dashboard|
+|20732|API|Compatibility|Rounding issue in Oracle Driver resolved - Added Custom driver for Oracle that can be implemented using 6.9.0.5 and execute this code after AdHocSettings.OracleConnectionString is specified|
+|20749|API|Compatibility|Internet Explorer issue with extra padding in dashboard cells resolved|
+|20760|UI|Optimization|Tables Misspelled in Error  message - resolved|
+|20765|API|Optimization|AdHocSettings.ChartingEngine now set to ChartingEngine.HtmlChart by default|
+|20777|Report Design|Optimization|Report Header/Footer with [date] or [time] fails to render - resolved|
+|20781|Dashboards|UI|UI Change - Dashboard name field showing "report name"|
+|20784|UI|Pivots|Pivot headers for collapsed Visual Groups sections still render when using Visualization - resolved|
+|20785|Report Design|Visualization|Visualizations on Pivoted Reports Hover Over displays incorrect formats|
+|20814|Report Design|Charts|Chart reports not working propertly with HTTPS |
+|20821|Report Design|Filters|Drilldown filter - Doesn't Equal causing subresports to display everything other than item in drilldown key|
+|20857|UI|Filters|String Characters causing issues when used in Filter Values - resolved|
+|20861|API|Optimization|"Data is too heavily clustered" dialog appears even when show value labels is not selected in Report Designer Preview|
+|20889|API|Data Sources|Time Zone Offset for date/time stamp - Offset is from UTC Time NEW SETTING AdHocSettings.ReportTimeStampTimeZoneOffset = (numeric value);|
+|20932|Report Viewer|UI|Filter listing data types in fields resolved|
+|20950|UI|Filters|Popup Filter In SubReport Not Working|
+|20962|Report Viewer|Export|Print Function corrected when using embedded subreport in form|
+|20983|Scheduler|Charts|Charts/Graphs not appearing in email - resolved|
+|20990|API|Optimization|Oracle Database Timeout - Deprecated |
+|21015|Report Design|Charts|Changing Subtotal Function on Chart Skews Charts |
+|21036|API|Optimization|Update report list issue causing infinate loop with AllowVirtualDataSource|
+|21037|API|Compatibility|Resolved Permissions issue with GaugeRadial.png |
+|21039|API|Optimization|Fixed issue with inconsistent code around table/column name when using report set|
+|21046|Dashboards|UI|Problem with visualization's tooltip on Dashboards v2|
+|21056|Report Design|Optimization|Getting error Grouping by the same datetime more than once in different ways |
+|21058|Scheduler|Charts|Charts/Graphs not appearing in email |
+|21059|Report Design|Forms|Empty Format options displayed in Forms editor|
+|21097|Dashboards|Optimization|Using of same report parts in one dashboard should not be allowed|
+|21098|Dashboards|Optimization|Refresh button: refreshing dashboard itself, not content of the tiles |
+|21104|Report Design|Pivots|Pivot Value Functions for min/max, count/distinct for text and number field types|
+|21125|API|Optimization|Add fields using schema name not  alias names  -resolved|
+|21131|UI|Optimization|Sorting columns no longer in the right order - resolved|
+|21134|UI|Optimization|"Show Page Number" and "Show Date and Time" options in Style Tab not working with Header items|
+|21140|Report Design|Filters|Filter disappears when user choose "Isn't Between" as filter condition |
+|21147|Report Design|Auto Chart|Auto Charts Using Count of incorrect item|
+|21157|Dashboards|Visualization|Incorrect size of visualization on Dashboards v2 - resolved|
+|21158|UI|Optimization|Scrollbars do not appear after expanding window to larger size |
+|21159|Dashboards|UI|Dashboards v2 request server with incorrect height of tile - resolved|
+|21160|Dashboards|Visualization|Incorrect Sunburst size on first load inside new Dashboards v2 resolved|
+|21173|Report Design|Pagination|Corrected differences in resources|
+|21174|API|Optimization|Duplicate VisibleDataSources causing Key error - resolved|
+|21183|Dashboards|Visualization|Visualization errors before refresh in Dashboards v2|
+|21185|API|Optimization|Category / Report Name Check - should not echo back unfound report name or category |
+|21187|API|Gauge|Cannot run Reports or Report Parts containing Gauges using sort |
+|21191|API|Optimization|Unable to read beyond the end of stream error using ODATA - resolved|
+|21206|Report Design|Optimization|Error - length cannot be less than zero when using sub report|
+|21210|UI|Visualization|Visualization automatic display of string text error - resolved|
+|21212|API|Compatibility|PostgreSQL Fusion Connections cause error resolved|
+|21215|API|Compatibility|Virtual data sources not working with PostgreSQL  |
+|21221|UI|Charts|Changes to stacked horizontal bar chart - stacked propertey being ignored for horizontal chart|
+|21226|Report Design|Pivots|Pivot Update to allow for header and column to be used as params for drilldown|
+|21227|Scheduler|Optimization|WCF Scheduler Issue - Fix implemented when Izenda is executed in a WCF service|
+|21256|Dashboards|Forms|Forms not working in Dashboard - each form must be reivewed in dashbaord for verification|
+|21313|API|Visualization|Curly Braces causing issues in string when used in Visualization - resolved|
+|21316|API|Optimization|URL Drilldown Capability of Header Link - ""{column}"" feature should work as we expect, for example you can use a custom URL like this - Page.aspx?id={0}&value={column}|
+|21323|API|Compatibility|Issue in Designer while using Izenda as IFRAME|
+|21347|Report Design|Visualization|World tour Failing on mixed case Country names|
+|21370|Report Viewer|Export|Save issue in branch for 6.9.0.5|
+|21374|API|Export|Impossibility to switch to phantomjs pdf generator - reinitializes pdf was removed from ShowPDFButton setter in error|
+|21375|API|Auto Chart|Auto Chart crashes on Record Count metric |
+|21390|Report Design|UI|Reports order in Designer from Style Tab incorrect|
+|21391|UI|Auto Chart|Problem with expand panel on Auto Chart|
+|21392|API|Filters|replaceAll function undefined error in JS causing filter misfunction|
+|21415|API|Charts|Unable to export Pie Charts using seperator to excel|
+|21445|UI|Visualization|Visualization Breadcrumbs not working in Firefox - resolved|
+|21449|UI|Visualization|Visualizations not displayed when adding subtotals - resolved|
+
 # 6.9.0.4 (August 24, 2015)
 
 |Case|Category|Subcategory|Description|
