@@ -2,6 +2,10 @@
 
 [[_TOC_]]
 
+##Word Document Version
+
+The Report Design Guide can be downloaded in .docx format [here](http://wiki.izenda.us/Guides/ReportDesign/ReportDesignGuide6-9A.docx). This document is currently on Revision A, as of August 25, 2015 representing version 6.9.0.1.
+
 ##Preface
 
 Izenda is a reporting and business intelligence platform that connects directly to relational and non-relational data sources.  Through its .NET API, it loosely couples with Microsoft-based applications to integrate with your current security, branding, and navigation.
