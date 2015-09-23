@@ -22,7 +22,7 @@ This means that a ReportSet will not be accessible to the user if their [[Curren
 
 Here is a chart demonstrating accessibility between a user's CurrentUserTenantId and the ReportSet's OwnerTenantId:
 
-![Tenant Table](/Guides/MVC-Integration/Namespace.png)
+![Tenant Table](/FAQ/Questions/reports-and-tenants/tenant_table.PNG)
 
 **Legend:** (+) Accessible (-) Not Accessible
 
