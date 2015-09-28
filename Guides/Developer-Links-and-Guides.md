@@ -42,6 +42,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[Adding Custom Formatting Options in the Report Designer|/FAQ/Questions/Add-Formatting-Options]]
 * [[Login page sample|/Tutorials/CodeSamples/Login-Sample]]
 * [[Implementing custom behavior for the Equals(Popup) dialog|http://wiki.izenda.us/API/CodeSamples/Equals-Popup-Custom-Page]]
+* [[Joining a many-to-many database relationship and hiding the connecting table as a datasource|/FAQ/many-to-many_database_join]]
 
 
 ###Javascript Guides
