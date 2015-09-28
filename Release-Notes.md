@@ -338,7 +338,7 @@
 ## New Features: 
 * **Auto-Gauges** - A new set of four gauges with a modern look and feel.
 * **Dashboards 2.0** - A completely overhauled module which provides greater control over the look and feel of your dashboards. Learn how to install and use Dashboards 2.0 [here](http://wiki.izenda.us/Guides/Dashboards-v2).
-* **PhantomJS Exporter** - An additional exporter emphasizing speed. It uses an EXE on the server instead of a DLL to move processing PDFs to a different thread than the Izenda's regular processing. Read more about it [here](http://wiki.izenda.us/API/CodeSamples/PdfPrintMode#PdfPrintMode).
+* **PhantomJS Exporter** - An additional exporter emphasizing speed. **PhantomJS is not currently compatible with Azure PaaS installs, the EXE will not run in this environment.** It uses an EXE on the server instead of a DLL to move processing PDFs to a different thread than the Izenda's regular processing. Read more about it [here](http://wiki.izenda.us/API/CodeSamples/PdfPrintMode#PdfPrintMode).
 * **Pivoted Analysis Grid** - New functionality offering a better breakdown of data over categories or periods of time
 
 ##Enhancements:
