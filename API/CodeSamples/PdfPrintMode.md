@@ -10,7 +10,7 @@ Gets or sets the value indicating what print mode will be used for printing PDF 
 
 Possible values:
 * EOPDF
-* PhantomJs
+* PhantomJs **(not currently compatible with Azure PaaS installations)**
 
 [Print Modes](http://wiki.izenda.us/FAQ/understanding-izenda-print-modes)
 
