@@ -1,8 +1,8 @@
 ##About
 
-NumChartPerRow takes an integer (int32). User can customize the number of charts per row that a report contains. By default, the number of charts per row is 2, so user can include 2 charts per a row in a report.
-However, by changing NumChartPerRow setting, multiple number of charts can be placed in the same row.
+NumChartPerRow takes an integer (int32). This changes the number of charts per row that a report may contain. By default, the number of charts per row is 2, so you can have two charts side by side in a report. 
 
+**NOTE:** Having multiple charts per row will override the report part order on the Style tab! Two charts side by side cannot have another report part between them!
 ##Example
 
 ```csharp
