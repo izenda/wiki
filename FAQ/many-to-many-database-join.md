@@ -59,6 +59,7 @@ Public Shared Sub InitializeReporting()
   AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
   {...}
   AdHocContext.Driver.AddConstraint("[dbo].[Orders].[ShipName]", "[dbo].[Suppliers].[CompanyName]")
+  AdHocSettings.visibleDataSources = New string() { "[dbo].[Orders]", "[dbo].[Suppliers]" } 'Set our visible data sources to exclude our middle table
   HttpContext.Current.Session("ReportingInitialized") = True
 End Sub
 ```
