@@ -16,18 +16,18 @@ First, we need an instance variable to hold a reference to the driver.
 
 ``` csharp
 Public Class CustomAdHocConfig : FileSystemAdHocConfig
-  private oldDriver As Driver = null;
+  private Driver oldDriver = null;
 
-  {...} 'InitializeReporting, PreExecuteReportSet, etc.
+  {...} //InitializeReporting, PreExecuteReportSet, etc.
 End Class
 ```
 
 ``` visualbasic
 public class CustomAdHocConfig Inherits FileSystemAdHocConfig
 {
-  private oldDriver As Drier = Nothing
+  private oldDriver As Driver = Nothing
 
-  {...} //InitializeReporting, PreExecuteReportSet, etc.
+  {...} 'InitializeReporting, PreExecuteReportSet, etc.
 }
 ```
 
