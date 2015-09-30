@@ -73,7 +73,7 @@ public override void PreExecuteReportSet(ReportSet reportSet) {
   base.PreExecuteReportSet(reportSet);
   oldDriver = AdHocContext.Driver;
   AdHocContext.Driver = new MSSQLDriver(AdHocSettings.SqlServerConnectionString); //Set the specific type of driver we were using before
-  AdHocSettings.VisibleDataSources = new string[] { "[dbo].[Orders]", [dbo].[Suppliers]", "[dbo].[testcon]" }; //testcon is the name of the middle table we want to join with
+  AdHocSettings.VisibleDataSources = new string[] { "[dbo].[Orders]", "[dbo].[Suppliers]", "[dbo].[testcon]" }; //testcon is the name of the middle table we want to join with
   AdHocContext.Driver.AddConstraint("[dbo].[Orders].[OrderID]", "[dbo].[testcon].[ordernum]");
   AdHocContext.Driver.AddConstraint("[dbo].[Suppliers].[SupplierID]", "[dbo].[testcon].[supplier]"); //Add the correct constraints to the driver
   if(reportSet.JoinedTables.Count > 0) //check if we have selected multiple tables
@@ -119,7 +119,7 @@ Public Overrides Sub PreExecuteReportSet(ByVal reportSet As ReportSet)
   MyBase.PreExecuteReportSet(reportSet)
   oldDriver = AdHocContext.Driver
   AdHocContext.Driver = new MSSQLDriver(AdHocSettings.SqlServerConnectionString) 'Set the specific type of driver we were using before
-  AdHocSettings.VisibleDataSources = New string() { "[dbo].[Orders]", [dbo].[Suppliers]", "[dbo].[testcon]" } 'testcon is the name of the middle table we want to join with
+  AdHocSettings.VisibleDataSources = New string() { "[dbo].[Orders]", "[dbo].[Suppliers]", "[dbo].[testcon]" } 'testcon is the name of the middle table we want to join with
   AdHocContext.Driver.AddConstraint("[dbo].[Orders].[OrderID]", "[dbo].[testcon].[ordernum]")
   AdHocContext.Driver.AddConstraint("[dbo].[Suppliers].[SupplierID]", "[dbo].[testcon].[supplier]") 'Add the correct constraints to the driver
   If (reportSet.JoinedTables.Count > 0) Then
