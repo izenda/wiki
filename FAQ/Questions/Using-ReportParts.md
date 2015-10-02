@@ -96,7 +96,7 @@ Pure HTML:
 
 ```html
 <body>
-  <div class="report-part" data-report="Sales" data-part="chart" data-responseserverpath="../rs.aspx"></div>
+  <div class="report-part" data-report="Sales" data-part="chart" data-embedscripts="true" data-responseserverpath="../rs.aspx"></div>
 </body>
 ```
 
