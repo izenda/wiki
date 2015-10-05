@@ -91,7 +91,7 @@ The [[InitializeReporting()|http://wiki.izenda.us/FAQ/InitializeReporting]] meth
 
 *This method should only be used for the trial. Continuing to use the Settings page in Production, especially in tandem with the InitializeReporting(), can cause issues.
 
-Open the website that you just created [http://localhost/reporting](http://localhost/reporting). You will be redirected to the Settings page. Go to the Database tab and fill the License Key and Connection String fields with real data. You should have received your trial License Key via email. If you have not received a key, please contact your account manager with Izenda or [sales@izenda.com](mailto:sales@izenda.com).
+Open the website that you created in the previous step [http://localhost/reporting](http://localhost/reporting). You will be redirected to the Settings page. Go to the Database tab and fill the License Key and Connection String fields with real data. You should have received your trial License Key via email. If you have not received a key, please contact your account manager with Izenda or [sales@izenda.com](mailto:sales@izenda.com).
 	
 ![Set license key and database connection](http://kb.izenda.com/Reg/images/src4_settingsnew.png)
 
