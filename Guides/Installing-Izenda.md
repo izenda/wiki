@@ -81,13 +81,13 @@ Once you have IIS installed, continue with the following:
 
 The license key and database connection can be set in one of two different ways, depending on if you are in the trial phase or in production. We will describe the two below.
 
-####InitializeReporting() in the Global.asax
+####Production - InitializeReporting() in the Global.asax
 
 *If you previously used the Settings page, you will need to migrate your settings to the Global.asax and delete the information in the Settings.aspx file.
 
 The [[InitializeReporting()|http://wiki.izenda.us/FAQ/InitializeReporting]] method is the ideal place to incorporate your settings since it provides you a high level of control over which settings are applied and the scope of their application. You can learn more by learning how to [[customize Izenda settings|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]].
 
-####Settings.aspx
+####Trial - Settings.aspx
 
 *This method should only be used for the trial. Continuing to use the Settings page in Production, especially in tandem with the InitializeReporting(), can cause issues.
 
