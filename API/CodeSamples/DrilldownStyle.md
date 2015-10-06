@@ -15,13 +15,15 @@ Currently, the valid keys are:
 * DetailLinkNewWindow
 * EmbeddedDetail
 * DetailLinkPopup
+* ComboKey
 
 **Default Value**: 
-* {object[4]}
+* {object[5]}
   * {Izenda.AdHoc.DetailFormat}
   * {Izenda.AdHoc.DetailFormat}
   * {Izenda.AdHoc.EmbeddedDetailFormat}
   * {Izenda.AdHoc.DetailLinkPopupFormat}
+  * {Izenda.AdHoc.ComboKeyFormat}
 
 ##Global.asax (C♯)
 
