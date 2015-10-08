@@ -16,7 +16,7 @@ Advanced field settings provide more granular control over what data is displaye
 |Page Break After Field|If 'Page Break After Field' box is checked and this field is also a visual group, then it will trigger a page break in a printed report every time this field has different value.|
 |Multiline Header|'Multiline Header' allows a header to be multi-lined if the length of the header is longer than set width of the column. Each space between words works as a line breaker| 
 |Hide this field|Hides the field from display when report the is ran. Useful for using expressions on multiple fields but when only one of the fields should be displayed.|
-|Separator||
+|Separator|Breaks out Analysis Grid by this field. Functions identically to VG in a normal table. Since VG is used to define the hierarchy of the Analysis Grid, Separator should be used to visually group the Analysis Grid.|
 |Sort (z-a)|Sorts in descending order|
 |Italic|Sets whether the column is shown in italics|
 |Bold|Sets whether the column is shown in bold|
