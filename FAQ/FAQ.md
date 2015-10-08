@@ -124,6 +124,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How to disable Protected Mode in Office 2010|FAQ/disable-protected-mode-office-2010]]
 - [[How to update your legacy deployment to be compatible with Izenda 6.7.0.272+|/FAQ/UpdatingReportDesigner-for-Izenda-6.7.0.272]]
 - [Changes to my CSS aren't applying](http://wiki.izenda.us/FAQ/How-To-Minify-CSS-Files)
+- [[Why a report part cannot be positioned between two charts on one report|/FAQ/Why-Are-My-Charts-Stuck-Together]]
 
 ##Upgrading Izenda
 - [[What's new in the 6.8.0.1 + Reference Implementation?|http://wiki.izenda.us/Whats-new-in-the-6-dot-8-0-dot-1-Reference-Implementation]]
