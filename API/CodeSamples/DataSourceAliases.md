@@ -25,6 +25,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
     AdHocSettings.DataSourceAliases["tblOrders"] = "Order Details"; //The relevant setting
+    AdHocSettings.DataSourceAliases.Add("tblOrders", "Orders Details"); //Additional way to set
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
@@ -56,5 +57,6 @@ End Class
 You can use fully-qualified data source names to allow columns from different tables and schemas with the same name to be aliased differently if you so desire. To do that, simply use bracket notation to specify the schema and table:
 
 ```csharp
-AdHocSettings.FieldAliases.Add("[dbo].[tblOrders]", "Orders Details")
+AdHocSettings.DataSourceAliases["[dbo].[tblOrders]"] = "Order Details";
+AdHocSettings.DataSourceAliases.Add("[dbo].[tblOrders]", "Orders Details");
 ```
