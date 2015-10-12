@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the data source names(aliases) that the user sees in the Report Designer. This can be set globally or on a per-user basis. The key is the name of your column in the database and the value is the alias you wish the user to see. This is useful for localization and when custom fields are used in your application.
+Gets or sets the data source names(aliases) that the user sees in the Report Designer. This can be set globally or on a per-user basis. The key is the name of your table in the database and the value is the alias you wish the user to see. This is useful for localization and when custom fields are used in your application.
 
 Below is a sample displaying syntax in the global.asax file.
 
