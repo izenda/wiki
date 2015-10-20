@@ -1,4 +1,4 @@
-#Izenda Wiki
+<!--#Izenda Wiki
 
 [[_TOC_]]
 
@@ -102,3 +102,4 @@ else
     }
 }
 ```
+-->
