@@ -4,10 +4,10 @@ This wiki serves as the main source of documentation for development teams worki
 
 <br>
 
-Izenda Overview | Install/<br>Maintenance | Best Practices 
-:--:|:---:|:---:
-![](/Home/Overview_Globe.png)|![](/Home/Install_Download.png)|![](/Home/BestPractices_Trophy.png)
-Introduction to the Izenda product|Instructions on installing and updating Izenda|Recommended strategies from the Izenda team
+Izenda Overview | Install/<br>Maintenance <!-- | Best Practices -->
+:--:|:---:<!-- |:---: -->
+[![](/Home/Overview_Globe.png)]|[![](/Home/Install_Download.png)](/Integration/Tutorials)<!-- |![](/Home/BestPractices_Trophy.png) -->
+Introduction to the Izenda product|Instructions on installing and updating Izenda<!-- |Recommended strategies from the Izenda team -->
 
 <br>
 
