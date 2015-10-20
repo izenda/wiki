@@ -54,6 +54,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[Using the GetRenderedReportSet object|http://wiki.izenda.us/API/CodeSamples/Javascript/GetRenderedReportSet]]
 * [[Using the GetFiltersData object|http://wiki.izenda.us/API/CodeSamples/Javascript/GetFiltersData]]
 * [[Implementing Sticky Checkboxes|API/CodeSamples/Javascript/StickyCheckboxes]]
+* [[Customize Visualization|/FAQ/How-Do-I-Customize-A-Visualization]]
 
 ###CSS Guides
 
