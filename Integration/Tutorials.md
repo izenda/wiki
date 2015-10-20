@@ -19,3 +19,7 @@ These tutorials help users to familiarize themselves with the features Izenda of
 ##[[Developer Guides|Guides/Developer Links and Guides]]
 
 These tutorials will assist developers in working with and customizing Izenda Reports.
+
+##[[Upgrade Best Practices|FAQ/Izenda-Update-Best-Practices]]
+
+This tutorial will focus on upgrading Izenda Reports.
