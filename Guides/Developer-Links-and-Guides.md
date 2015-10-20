@@ -36,10 +36,10 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [Enabling Report Sharing?](/FAQ/Questions/How-do-I-enable-basic-report-sharing)
 * [[Layered Subtotaling|Guides/LayeredSubtotaling]]
 * [[Show/Hide Fields in Filters|Guides/Show_Hide Fields in Filters]]
-* [Using Share With Rights and Roles](/API/CodeSamples/)
+* [Using Share With Rights and Roles](/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights)
 * [[Dynamically Creating Reports Via the API|/API/CodeSamples/DynamicReportCreation]]
-* [Switching Databases Via Code](http://www.izenda.com/Site/KB/CodeSamples/Switching-databases-via-code?) 
-* [[Adding Custom Formatting Options in the Report Designer|/FAQ/Questions/Add-Formatting-Options]]
+<!--* [Switching Databases Via Code](http://www.izenda.com/Site/KB/CodeSamples/Switching-databases-via-code?) 
+* [[Adding Custom Formatting Options in the Report Designer|/FAQ/Questions/Add-Formatting-Options]]-->
 * [[Login page sample|/Tutorials/CodeSamples/Login-Sample]]
 * [[Implementing custom behavior for the Equals(Popup) dialog|http://wiki.izenda.us/API/CodeSamples/Equals-Popup-Custom-Page]]
 * [[Joining a many-to-many database relationship and hiding the connecting table as a datasource|/FAQ/many-to-many-database-join]]
