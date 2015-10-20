@@ -1,7 +1,5 @@
 #Izenda API
 
-[[_TOC_]]
-
 ##[[AdHocConfig Class|/API/AdHocConfig]]
 
 The AdHocConfig class is where Izenda Reports will perform all of its initialization and configuration.
