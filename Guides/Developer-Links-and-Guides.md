@@ -19,7 +19,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[Installation Guide|http://wiki.izenda.us/Guides/Installing-Izenda]]
 * [[Security Guide|/Integration/Tutorials/Security]]
 * [[Basic Security Sample|Home#Basic-Login-Scenario]]
-* [[Adding Code|Integration/Tutorials/Customizing-Izenda-Settings]]
+* [[Customizing Izenda Settings|Integration/Tutorials/Customizing-Izenda-Settings]]
 * [[OData|Guides/OData]]
 * [[Using the Izenda Fusion Driver|/Guides/Izenda-AdHoc-Driver]]
 * [[The report lifecycle|/Guides/Report-Lifecycle]]
@@ -62,7 +62,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 
 ###SQL Guides
 
-* [MDX Queries](http://www.izenda.com/Site/KB/CodeSamples/Pulling-Data-From-Analysis-Services-Cubes)
+<!--* [MDX Queries](http://www.izenda.com/Site/KB/CodeSamples/Pulling-Data-From-Analysis-Services-Cubes)-->
 * [[Using Stored Procedures (SPs) In Izenda 6|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
 * [[Adding the FORMS column to the IzendaAdHocReports table|/FAQ/IzendaAdHocReports-table]]
 
