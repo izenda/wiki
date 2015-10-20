@@ -6,7 +6,7 @@ This wiki serves as the main source of documentation for development teams worki
 
 Izenda Overview | Install/<br>Maintenance 
 :--:|:---:
-[![](/Home/Overview_Globe.png)]|[![](/Home/Install_Download.png)](/Integration/Tutorials)
+![](/Home/Overview_Globe.png) (|[![](/Home/Install_Download.png)](/Integration/Tutorials)
 Introduction to the Izenda product|Instructions on installing and updating Izenda
 
 <!-- Commented out Best Practices until we develop a page
@@ -14,6 +14,7 @@ Izenda Overview | Install/<br>Maintenance | Best Practices
 :--:|:---:|:---:
 [![](/Home/Overview_Globe.png)]|[![](/Home/Install_Download.png)](/Integration/Tutorials)|[![](/Home/BestPractices_Trophy.png)]
 Introduction to the Izenda product|Instructions on installing and updating Izenda|Recommended strategies from the Izenda team
+-->
 
 <br>
 
@@ -21,7 +22,7 @@ Customization | Code Reference | FAQ
 :---:|:--:|:---:
 [![](/Home/Customization_Wrench.png)](/Guides/Developer-Links-and-Guides)|[![](/Home/CodeRef_Terminal.png)](http://wiki.izenda.us/API)|[![http://wiki.izenda.us/FAQ/FAQ](/Home/FAQ_QuestionMark.png)](http://wiki.izenda.us/FAQ/FAQ)
 Altering Izenda to meet your company's needs|Technical documentation on Izenda's features, methods, and variables|Frequently asked questions from developers and end users
-->
+
 
 
 <!-- Commented out old home page. Holding on to ensure we don't need it
