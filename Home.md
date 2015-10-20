@@ -13,7 +13,7 @@ Introduction to the Izenda product|Instructions on installing and updating Izend
 
 Customization | Code Reference | FAQ
 :---:|:--:|:---:
-![](/Home/Customization_Wrench.png)|![](/Home/CodeRef_Terminal.png)|![http://wiki.izenda.us/FAQ/FAQ](/Home/FAQ_QuestionMark.png)
+[![](/Home/Customization_Wrench.png)](/Guides/Developer-Links-and-Guides)|[![](/Home/CodeRef_Terminal.png)](http://wiki.izenda.us/API)|[![http://wiki.izenda.us/FAQ/FAQ](/Home/FAQ_QuestionMark.png)](http://wiki.izenda.us/FAQ/FAQ)
 Altering Izenda to meet your company's needs|Technical documentation on Izenda's features, methods, and variables|Frequently asked questions from developers and end users
 -->
 <!--#Izenda Wiki
