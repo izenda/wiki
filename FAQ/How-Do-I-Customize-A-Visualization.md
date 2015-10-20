@@ -79,18 +79,18 @@ To interact with the report, there are four variables in the context where the v
 
 `if (!util.validate("VIS_ID", VIS_FORMJSASTATUS, VIS_CONTEXT, { svg: true, input: function () { return VIS_COLUMNS[0].type == 'DateTime'; }})) return;`
 
-* If validation fail, html template of visualization will be cleared and user will be notified with enumeration of encountered problems. In that case util.validate() will return false, any further code statement should be skipped and execution aborted.
+* If validation fails, HTML template of the visualization will be cleared and user will be notified with enumeration of any problems. In that case util.validate() will return false, any further code statement should be skipped and execution terminated.
 
-To use use full list of available utilities, create an instance of ReportScripting by using its function as constructor, pass visualization id and all four context variables:
+To use the full list of available utilities, create an instance of ReportScripting by using its function as constructor, pass visualization id and all four context variables:
 
 `var vis = new util("VIS_ID", VIS_FORMJSASTATUS, VIS_COLUMNS, VIS_ROWS, VIS_CONTEXT);`
 
-Created object have several privileged methods, which give possibility to build different data structures from plain report table suitable for current needs
+The created object will have several privileged methods, which gives the possibility to build different data structures from a plain report table.
 
-*collectTree - build tree-like structure. Will not return result, which can be found here: vis.items. This method will create clear parent->children structure without any customization.
+* collectTree - builds a tree-like structure. Will not return result, which will be found in vis.items. This method will create a clear parent->children structure without any customization.
 
-* traverseTree - if called after collectTree, will return root object with customized tree structure built from vis.items. This method is recursive and should be called with single parameter - callback function, which accept one "context" parameter { parentNode, node, indexes, level, fi, isLeaf }, which should be updated during callback execution.
+* traverseTree - if called after collectTree, will return root object with customized tree structure built from vis.items. This method is recursive and should be called with single parameter, a callback function, which accepts one "context" parameter { parentNode, node, indexes, level, fi, isLeaf }, which should be updated during callback execution.
 
-* collectMonthlyData - will collect data from the report with three fields: category (GROUP), date (Group (Year & Month)) and one integer value
+* collectMonthlyData - will collect data from the report with three fields: category (GROUP), date (Group (Year & Month)) and one integer value.
 
-* collectGraph - will create oriented graph where first two report fields used as nodes and other integer fields determines as metrics
+* collectGraph - will create oriented graph where first two report fields are used as nodes and the other integer fields determined as metrics.
