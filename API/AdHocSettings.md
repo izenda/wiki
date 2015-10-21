@@ -440,3 +440,4 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String[]|[[VisibleDataSources|/API/CodeSamples/VisibleDataSources]]|Gets or sets the array of datasource names that should be shown in the datasources dropdown on the [[Izenda.Web.UI.AdHocReportDesigner|/API/Izenda/Web/UI/Izenda-Web-UI-AdHocReportDesigner]].|[]|
 |String[]|[[VisibleTables|/API/CodeSamples/VisibleTables]]| Gets or sets the array of table names that should be shown in the datasources dropdown. **(deprecated)**|[]|
 |VisualGroupStyle|[[VisualGroupStyle|/API/CodeSamples/VisualGroupStyle]]| Gets or sets the default Visual Group style that will be used when designing reports. **(deprecated)**|CommaDelimited|
+|String|[[VisualizationBaseUrl|/API/CodeSamples/VisualizationBaseUrl]]| Gets or sets the base URL of the site (used to locate images for Visualizations in multi-tenant applications). |null|
