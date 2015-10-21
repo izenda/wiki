@@ -1,5 +1,88 @@
 [[_TOC_]]
 
+# 6.9.0.6 (October 21, 2015)
+
+##Features
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|19596|Feature|UI|Responsive Grid Control added to Style tab for changing on a report level basis|
+|20203|Feature|UI|Added user-friendly invalid date error message for date based filters|
+|20292|Feature|Filters|Added New option to filters tab for user to select if each filter is required |
+|20726|Feature|Export|Send Deshboard as a Link will now use client side email function allowing user to add message to email|
+|20733|Feature|Export|Added option on style tab to remove headers for CSV exports|
+|20761|Feature|Fusion|Implemented ability to add custom Fusion Connections|
+|20948|Feature|Auto Chart|Implemented change to always show Denominator in the Auto Gauge Round Style.|
+|20974|Feature|Visualization|Introduced setting for visualization base path|
+|21260|Feature|Fusion|Implementation of stored procedures joined from different fusion connections|
+|21311|Feature|UI|New Setting to disable Izenda  automatic divide by zero handling in both regular and subtotal expressions |
+|21317|Feature|Filters|AdHocSettings.AutoOrForRepeatFilters setting implemented|
+|21343|Feature|Filters|Improved style for popup filter on Dashboard 2 - uses modal|
+|21430|Feature|Export|Support Landscape orientation inPhantom PDF export implemented|
+|21450|Feature|UI|Implemented localization of Forms Designer  - English language is complete, all other languages will be released with 6.9.0.7|
+|21519|Feature|UI|Updated Record Count Slider for Dashboard 2 - added increments to slider|
+|21553|Feature|Optimization|Refactored D3.js for ease of client customizations - [Learn How Here](http://wiki.izenda.us/FAQ/How-Do-I-Customize-A-Visualization)|
+
+##Fixes
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|19328|Report Design|Filters|Updated formats for filters viewable in report|
+|20246|Report Design|Forms|Implemented new spellchecker in forms designer|
+|20757|Instant Reports|UI|Corrected borders on Instant Reports|
+|20863|Report Design|Charts|Dundas Map https internal resources loading image error fixed|
+|20864|Report Design|Forms|Fixed overlay style of Forms Designer in Report Designer|
+|20952|Report Design|UI|Implemented target/Max behavior in Round Style fixed|
+|20961|Report Design|UI|Fixed visual notification flag on advanced field options of pivoted columns to show changes|
+|21029|Report Design|Visualization|Fixed Visualizations - Fields hidden in grid should not render in visualizations |
+|21069|Report Design|Visualization|Fixed Visualization subreport popup|
+|21090|Report Viewer|Export|Analysis Grid print to HTML as expanded error resolved|
+|21093|API|Optimization|Altered Setting AdHocSettings.AllowVirtualDataSources to show all when enabled (Without using Visible Data Sources)|
+|21148|Report Design|Charts|Fixed Combo Chart xAxis - Date values not respected|
+|21149|UI|Pivots|Subtotal display (NULL) for Non Interger Date Grouping - fixed|
+|21179|Dashboards|Filters|Dashboard Filter issue resolved using table/column name without respect to UseColumnNameForDashboardCommonFilters setting|
+|21219|Report Viewer|Charts|Fixed Pie Chart Seperator Lables not appearing|
+|21224|API|Optimization|Added user-friendly message when fields are not sorted in Transitions Visualization|
+|21248|UI|Filters|Format dates using AdHocSettings.Culture in the Equals(Select)-like filters fixed|
+|21249|UI|Filters|Hardcoded datetime string patterns replaced with formats specified in AdHocSettings.Culture|
+|21257|API|Fields|Fixed Boolean filter operators not showing in filter options|
+|21273|Report Design|Pivots|Fixed error associated with Advanced Field Options on Pivot Columns|
+|21277|Report Design|Filters|Filters in Designer when additional constraints are used - empty results issue fixed.|
+|21287|API|Analysis Grid|Show error message when invalid Analysis Grid is constructed|
+|21293|Report Design|Export|Properly split table cells in reports separator in the Excel output of footer text|
+|21310|Report Design|Optimization|Fixed funnel highchart size adjusting from div generation|
+|21319|UI|Visualization|Use stand-alone fonts resources in visualizations |
+|21321|Report Design|Expressions|Properly process FieldAliases (Set in Field Alias AdHocSetting) in the Expressions|
+|21371|Report Design|Export|Fixed relative images links in the headers and footers when printing in PDF EO.PEF mode|
+|21381|Report Design|Export|Fixed Chart cropping with PDF exports using EO.PDF mode|
+|21412|Report Design|Optimization|Fixed missing data for last column of reports using VG Hierarchy when one field is hidden|
+|21453|Report Design|Visualization|Optimized scrollSize method for visualization popup subreports.|
+|21458|Dashboards|Optimization|Optimized Dashboard to reduce long-running script errors in some browsers |
+|21459|Report Design|Saving|Fixed duplicating html part of report after saving.|
+|21488|Dashboards|UI|Removed scrollbars in dashboard tiles where not needed|
+|21489|API|Optimization|Fixed misspelling in JavaScript|
+|21491|Report Design|UI|Fixed Analysis Grid not respecting all cell highlighting |
+|21506|API|Optimization|Fixed License for Language Feature - English file availablity |
+|21520|Dashboards|Visualization|Fixed errors in exporting Visualizations in Dashboard2 for PEF / Excel|
+|21526|API|Optimization|Fixed wrong values passed to userConstraintsActions|
+|21558|Report Design|Optimization|Drilldrown filters missing parameter fixed|
+|21559|Dashboards|Charts|Maps not rendering properly in Dashboard 2 - fixed|
+|21560|API|UI|Properly handle div/0 in Subtotals when Expression is used instead of arithmetic |
+|21577|API|Optimization|Advanced Settings lost when new Data Source added to report - fixed|
+|21589|API|Optimization|Fixed Subotal calculations when using Timezone offset feature|
+|21602|API|Optimization|Apply date as an interval feature to the Date filters when Stored Procedure is used as a data source|
+|21626|API|Optimization|Fixed handling Field data type according to the applied Function|
+|21628|Dashboards|UI|Fixed dashboard "folder" menu in toolbar for small resolutions.|
+|21647|Dashboards|UI|Apply Custom CSS from the parent report to the tile in the Dashboard|
+|21683|API|Optimization|Fixed HiddenCategories when using DatabaseAdHocConfig mode for saving reports|
+|21685|API|UI|Return NULL for NULL-valued dates when TimeZoneOffset is applied|
+|21734|Dashboards|UI|Fixed scrollbars for charts in dashboard2|
+|21740|Dashboards|Optimization|Regression Fix for detail report parts not responding  in dashboard |
+|21744|API|Saving|Fixed Report XML truncating when saving reports using DatabaseAdHocConfig|
+|21745|Report Design|Forms|Fixed saving issue with reports containing Forms|
+|21794|Dashboards|Optimization|Regression fix for using HTML/Visualization in dashboard|
+|21800|Report Design|Export|Fixed bulkcsvexport error when using fusion driver|
+|21840|Report Design|Auto Chart|Regression fix for AutoChart not displaying properly |
+
+
 # 6.9.0.5 (September 22, 2015)
 
 |Case|Category|Subcategory|Description|
