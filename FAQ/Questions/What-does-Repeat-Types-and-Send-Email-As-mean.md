@@ -29,7 +29,8 @@ This dropdown determines how the email will be sent out. There are a number of d
 |Type|Effect|
 | ------------- |:-------------:|
 |Link|Email body will contain a HTTP link to the report (Report Viewer). Report body will not be included in the Email.|
-|Embedded|Report will be embedded in the Email body. Please note that client's Email client must support HTML in the body of the Email.|
+|Embedded|Report will be embedded in the Email body. Please note that client's Email client must support HTML in the body of the Email. This style includes images and other resources from the HTML page.|
+|HTML|Report's HTML output only will be embedded in the Email body. Please note that client's Email client must support HTML in the body of the Email. Images and other resources will *not* be included, as they would using the Embedded style.|
 |PDF|Report file in "*.pdf" format will be attached to the Email.|
 |CSV|Report file in "*.csv" format will be attached to the Email.|
 |Excel(XLS)|Report file in "*.xls" format will be attached to the Email.|
