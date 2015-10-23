@@ -6,6 +6,12 @@
 
 Here we will show you how to easily add a new formatting option to the "Formats" dropdown menu on the Fields tab of the Report Designer. These should be handled in your ``InitializeReporting()`` method in your global.asax.
 
+##Exporting to Excel
+
+Excel uses internal formatting and attempts to 'guess' what the proper format for a value should be. This means that sometimes, Excel guesses incorrectly and while the correct value might be exported to Excel, the format will be wrong - for example, .623 instead of 62.3%. In this case, it is necessary to specify the data type group exactly using the full constructor to specify data type:
+
+`AdHocSettings.Formats.Add("{0:P2}", new SimpleFormat("Percent", "{0:P2}", new SqlTypeGroup[] { SqlTypeGroup.Numeric, SqlTypeGroup.Money, SqlTypeGroup.Real }));`
+
 ##Example 1 - Bold
 
 In this example, we will quickly add a new format option to the list called "Bold". New formats added this way will be available for every type of data and will not override the existing built-in formats for each type of data. The symbol {0} acts as a token to represent the data that is returned by the query.
