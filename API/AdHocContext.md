@@ -32,10 +32,7 @@ The Driver object is the single point of entry for all database traffic and must
 * MySQLDriver
 * PostgreSQLDriver
 * OracleDriver
-* OdbcDriver
 * Db2Driver
-* PervasiveSQLDriver
-* SyBaseDriver
 * [[FusionDriver|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]]
   * MySqlFusionDriver
   * OracleFusionDriver
