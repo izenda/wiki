@@ -53,6 +53,7 @@ It is also possible that you may want to pass a query string to Izenda which has
 
 *Note: p1value2 is only valid due to using the "Between" operator and would not be valid when working with other operators.*
 
+*Note2: When the filter operator is "Multiple" then you can specify the respective pxvalue={filtervalue1},{filtervalue2},{filtervaluex} and so on.*
 You can combine filters together and add an output type. Examine this example:
 
 * ReportViewer.aspx?rn=Product+List&p1value=1/1/2005&p1value2=1/1/2008&p2value=USA&output=pdf
