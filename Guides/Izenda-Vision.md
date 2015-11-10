@@ -73,15 +73,6 @@ These terms refer to the types of columns that each visualization reads.
 * Field 1 - **Group** - This field will represent the categories along the X axis, the Y axis, or the slices or items displayed on a proportional chart.
 * Field 2+ - **Metric** - This field will represent the value on the chart. The metric currently being displayed is selectable from a drop-down.
 
-##Bubble Grid 
-
-![Bubble Grid](http://wiki.izenda.us/Guides/Izenda-Vision/Bubble-Grid.png)
-
-* Bubble Grid displays a circle with the area representing the metric field by the group field and the time field.
-* Field 1 - **Group** - This field will represent the categories along the Y axis.
-* Field 2 - **Time** - This field will represent the categories along the X axis. This field must have the function set to Group(Year & Month).
-* Field 3 - **Metric** - This field will represent the value of each bubble.
-
 ##Combo
 
 ![Combo](http://wiki.izenda.us/Guides/Izenda-Vision/Combo.png)
