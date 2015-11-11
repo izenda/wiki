@@ -21,7 +21,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    AdHocSettings.ReportHeaderImageUrl = "www.yoursite.com/reporting/resources/company_logo.png";
+    AdHocSettings.ReportViewerDefaultPreviewResults = -1;  // This could be any integer. -1 means to display 'all'
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
@@ -42,7 +42,7 @@ Public Class CustomAdHocConfig
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
-        AdHocSettings.ReportHeaderImageUrl = "www.yoursite.com/reporting/resources/company_logo.png"
+        AdHocSettings.ReportViewerDefaultPreviewResults = -1   'This could be any integer. -1 means to display 'all'
         HttpContext.Current.Session("ReportingInitialized") = True
     End Sub
 End Class
