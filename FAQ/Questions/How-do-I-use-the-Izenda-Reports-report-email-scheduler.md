@@ -14,7 +14,7 @@ Here are the steps to install the Izenda Scheduler. It is recommended that you p
 2. Click on the **Control Panel** menu option
 3. Navigate to **Scheduled Tasks**
 4. Under Actions menu option select **Create Task...**.
-5. In the General tab, give the Task a Name.
+5. In the General tab, give the Task a Name. Select **Run whether user is logged on or not**. 
 6. Go to the Triggers Tab and select New, Set the triggers for a the new task (daily, weekly, monthly) and the start date for the task. In the Advanced Settings on this tab set the repeat frequency (5 minutes, 30 minutes, etc.). If you must have the Izenda items scheduled run on the exact minute it is scheduled, your task should be set to run every minute. The delivery will only happen when this task is run, so if a report is set to run at 11:30, and the scheduled task is set for 11:35 the 11:30 report will be delivered at 11:35.
 7. Go to the Actions Tab and under Action select "Start a program". In the Program/script window browse to or paste in the full file path of the folder that you installed Izenda Reports and select the Izenda scheduler program ( **IzendaScheduler.exe** ). Example: c:\IzendaReports\reference-implementations\bin\IzendaScheduler.exe. Now in the Add Arguments section you will need to paste the full path to the rs.aspx page for the site, example: (http://localhost/rs.aspx)
 8. If you are not an administrator on the machine you may need to enter the user name and password of an account with sufficient rights to schedule the task (usually administrator) 
