@@ -1,7 +1,7 @@
 [[_TOC_]]
-# 6.9.0.7 (November 24, 2015)
+# 6.9.0.7 (November 2015)
 
-
+**Please note: The 6.9.0.7 maintenance release has been delayed.  The anticipated release date is 11/25/2015.**
 
 # 6.9.0.6 (October 21, 2015)
 
