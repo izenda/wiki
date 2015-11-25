@@ -1,7 +1,101 @@
 [[_TOC_]]
-# 6.9.0.7 (November 2015)
+# 6.9.0.7 (November 25, 2015)
 
-**Please note: The 6.9.0.7 maintenance release has been delayed.  The anticipated release date is 11/25/2015.**
+|Case|Category|SubCategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|21723|API|Saving|Categories with apostrophes in names are causing Visualizations option to disappear in the chart tab of the Report Designer. This was also causing existing reports with Visualizations contained to be unavailable. Resolved.|
+|22127|Scheduler|Export|Implemented support for the following settings system wide for scheduler. AdHocSettings.SmtpPort = ; AdHocSettings.SmtpSecureConnection = true; Previously these were only used from Dashboard 2.0, now these can be used with all standard scheduled items.|
+|21944|API|Fusion|Found with this Fusion Implementation below, some Visible Data Dources were not being displayed: AdHocSettings.VisibleDataSources = new string[] { "central/CustOrderHist" }; FusionDriver fd = new FusionDriver(); fd.AddConnection("central", FusionConnectionType.MsSql, @"Persist Security Info=False;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX;"); AdHocContext.Driver = fd; Resolved and now all Visible Data Sources are showing as Data Sources.|
+|21946|API|Security|Security issue where the connection string used by Izenda was recorded in logs found and fixed.|
+|21964|UI|UI|Changing notice on Settings page to remove "Izenda". New warning text "The settings page is intended for trials and evaluations. For a production environment: All new settings, changes made to existing settings, and tests of settings should be implemented via the API in the global.asax - or wherever you instantiate the AdHocSettings class."|
+|22271|API|UI|Added the following setting to Global file for new Reference Implementations AdHocSettings.ShowModifiedReportMessage = false; Default implementation of this setting is True, but some customers have seen issues with the setting. Turning off by default in Global only until final resolution can be made on cause of false errors. This does not affect anyone upgrading, this will only be seen if downloading new RI.|
+|22276|Dashboards|Browser|Dashboards 2.0 not loading properly in IE9, fixed.|
+|21661|UI|Resources|Added translations for updated RESX files to support localization in v6.9.x.x Dash2.0 UI and FORMS UI.|
+|22055|API|Optimization|Fixed line of code in Driver.cs, line "asStrings.Add(asString, asStrings);" to "asStrings.Add(asString, 0);" as more definitive code reference.|
+|22045|Report Design|Visualization|New Setting On Both Detail and Summary Tabs - "Hide Grid". When this is checked the grid for summary / detail will be hidden in the report. This is useful to hide the detail if you do not want to see it after building a visualization. Hiding a field will remove it from the visualization, but hiding the grid will remove the entire detail / summary report part. Detail/Summary will still appear in Dashboard as available report part, but will not display if selected.|
+|22001|API|Security|When AdHocSettings.ShowDesignLinks = false, all buttons and links to the report designer should be hidden from the user. However, in Dash.aspx, the icon still exists and still links to ReportDesigner.aspx when a tile is reversed to show settings. Fixed|
+|22011|API|Optimization|Incorrect spelling fixed in Class Filter, method Clone, line filter.column = filter.column;|
+|18173|Report Design|Charts|For Bar Chart under "Charts" sort is not working for calculated "Value" field, resolved.|
+|18837|API|Logging|Expanded tool logging hooks to cover more of core functionality. 1) Enum-based logging commands; 2) Logging areas system implemented - turn on/off INFO logging for some particular areas. Example: If you want to know the exact values of the settings - don't wan't to see heavy DB logs: AdHocContext.LogActiveAreas = new List() { LogArea.Settings }; Diagnose an issue on the Dash 2.0 page: AdHocContext.LogActiveAreas = new List() { LogArea.WebService, LogArea.ResponseServer };|
+|21515|API|PostgreSQL|Support for PostgreSQL constraints in the database added. Izenda will find the Foreign key relationships existing in the database and allow the user to select these tables for reporting in simple join mode of the designer and in Instant Reports.|
+|22195|API|Export|When exporting any report to, excel, or open report which has no thumbnail yet, the importCSS method puts a excessive data to logs. Altered amount of data logged for effective troubleshooting with log data.|
+|21629|API|Data Sources|Implemented the ability to give Virtual Data Sources a category in Data Source Categories setting. Sample Implementation below: AdHocSettings.DataSourceCategories["Virtual"] = new string[] { "VDS.*" }; This would list all Virtual Data Sources in a category called Virtual (for both Report Designer Data Sources Tab and Instant Reports)|
+|21570|Report Viewer|Filter|If user adds several filters and selects the same field more than once then the next filters copies the first instance for operator and data. Fixed|
+|21507|Dashboards|UI|Removal of small gap on right side of dashboard tiles. Width of HTML was set to 98% now 100% in table style.|
+|21739|API|Resources|Updated of RESX localization files for support of new UI elements.|
+|21714|Dashboards|Export|While printing Forms from Dashboard the print appeared transparent. Resolve and form now prints as displayed on screen.|
+|19866|Dashboards|Resources|New Dashboard page is now supported using localization for translation to supported languages.|
+|22082|API|Export|Refactored Bulk CSV for optimized output times and less memory usage. 1 million record output to CSV file ranging in 2-3 minutes.|
+|21141|Report Design|Export|In Report Designer Scheduler the year drop down was showing prior years. Now only displays future years for scheduling.|
+|21530|Report Design|Pagination|Fixed inconsistency between Report Preview and Report Viewer when using pagination. When paginating a report with both Summary and Detail, only Summary would display with no additional paging in Report Viewer. Correct behavior was seen in Report Preview.|
+|21322|API|Data Sources|Issue found when using tables with "." in name. Constraints were not loading from the database to allow users to join tables in simple mode of Report Designer and Instant Reports. Resolved.|
+|22049|API|Optimization|Typo fixed in Izenda code causing the following error when using AdHocSettings.SavedReportsTable with MySQL driver "Unknown column '_global_' in 'where clause'"|
+|21291|API|Optimization|Fixed SQL generation error/crash when using AdHocSettings.StrictANSIOuterJoin = false;|
+|22025|Report Design|Filters|Pop Up filter not responding in Report Designer (working as expected in Report Viewer) - fixed|
+|21364|Scheduler|Optimization|Fixed timezone support issue in ScheduleTimeZone.|
+|21496|API|Resources|Adding localization support for: Czech, Danish, Greek, Estonian, Finnish, Hebrew, Croatian, Hungarian, Icelandic, Lithuanian, Latvian, Macedonian, Norwegian, Polish, Romanian, Slovenian, Serbian, Swedish, Turkish & Ukranian.|
+|21440|API|Export|Java Script name was missing while exported to PDF or trying to Print HTML|
+|22009|API|Export|Fix implemented for Bulk CSV exports. Receiving error message "Bulk CSV export is called against odata(or other kind of non-direct) fusion connection which is not supported" when not using Fusion connection.|
+|21939|Report Design|Forms|@Subtotal used in Form reports causing report not to load. Fixed; now loading/formatting properly.|
+|19163|Dashboards|UI|Dashboard ignores color selections on style tab of report designer, corrected.|
+|21784|Report Design|Charts|On Charts Tab in Report Designer, the 3rd column drop downs have no label to indicate the drop down is for Format. Resolved.|
+|21801|Report Design|Export|Issue found when exporting gauges to PDF that were consuming extra memory and exports were not completing. Resolved issue with gauge and now exporting properly.|
+|21804|API|Optimization|Added support for the following settings in the Report Viewer and Dashboard 2.0. Settings to check: - AdHocSettings.AllowInvalidCharacters - AdHocSettings.StripInvalidCharacters Working normally in: - Report Designer - Old Dashboard Designer - Old Report Viewer More info can be found on these settings here in the Izenda wiki http://wiki.izenda.us/API/AdHocSettings|
+|21668|UI|Optimization|When creating a category with an apostrophe in the title is is displayed incorrectly. The apostrophe is not being escaped properly and the category is displayed in the category drop down as a "%27". Resolved.|
+|21878|Report Viewer|Filters|When using "equals field" filter operator filters are not appearing in the report viewer. Resolved.|
+|21380|Dashboards|Export|When exporting Dashboards (v2) to PDF, the exported version does not follow the same order as it appears on screen. Fixed|
+|21284|API|Optimization|Fixed AdHocSettings.ShowHtmlAsCode = true; not being respected.|
+|21758|Report Design|Visualization|Fixes to 'Tree Chart' Visualization logic (aggregation and value listing).|
+|21438|API|Filters|Server side validation added for filter values. Validation added for the following field types: - Date/Time (both mm/dd and dd/mm are validated based on what AdHocSettings.Culture is used. - Numeric - Boolean - GUID User will be given a message stating that Invalid value entered in filters and an example of proper input. Example: Invalid value entered in filters. Field: isnew Value: hhhh Please enter a valid value in Boolean(1-TRUE/0-FALSE) format.|
+|21503|Report Design|Optimization|Fixed rendering errors Field-Value VG type caused by commas in the [Field Description] field values.|
+|21280|API|Optimization|Made Wildcard constraint syntax compatible with BulkConstraints setting. (EX:'*.ID' '*.TableID')|
+|21826|API|Resources|Fixed internal mechanism to refresh localization. This mechanism conflicts with the request-wide settings cache, causing custom aggregate functions to disappear.|
+|21579|UI|Browser|Using Internet Explorer, when adding a new filter or changing an existing filter operator the advanced filter options pop up will not close when clicking the "OK" button. This fix can be implemented without a new DLL using the following code sample: Add the lines below to the beginning of Resources\js\ReportViewerFilters.js file String.prototype.endsWith = function (suffix) { return this.indexOf(suffix, this.length - suffix.length) !== -1; };|
+|22295|Report Design|Pagination|Paging when using a summary was fixed in Case 21530, additional issues found when using MySQL and PostgreSQL. Resolved.|
+|21576|Report Design|Visualization|Report with Heatmaps break subtotals - fixed.|
+|21549|Report Design|Visualization|Fixed 'Sunburst' Visualization logic surrounding breadcrumbs and 'level' navigation.|
+|21625|API|Optimization|Fixed hard-coded relative paths to be more compatible with various integration methods & use-cases.|
+|21656|Report Design|Optimization|When using ODATA connection number of results drop down was not properly working to increase or decrease number of results. Resolved.|
+|22248|Report Design|Gauge|Fixed 'broken report' bug when 'Gauge' format is used.|
+|22251|Report Design|PostgreSQL|Fixed Postgres support for 'Crossfilter' Visualization.|
+|22253|Report Design|Visualization|Fixed 'Time Bubble' help message: "This chart has been set up incorrectly (see Help)."|
+|21798|Report Design|Gauge|Implemented symbolic logic for Gauge support of large numbers. Example - x=0-999 xK = x,000 xM = x,000,000 xB = x,000,000,000 xT = x,000,000,000,000|
+|22304|Report Design|Resources|JS Error appear in report when using Bold/Italic on field settings that are Visually Grouped and Sorted|
+|21706|Report Design|Pivots|Intial issue was " User was getting Pivots column limit error". During retesting found issue with "Calculated cell values" i.e. default description was displayed and unable to delete it|
+|22179|Dashboards|Filters|Fixed broken filter cascading in Dashboards 1.0.|
+|21727|Report Design|Pivots|Using the same field more than once in pivot resulting in system column alias being displayed in the report instead of the actual column name in some pivot columns. Fixed|
+|19444|Report Design|UI|"Collapse/Expand" buttons on Visual Groups to show that the group can be hidden and expanded. This functionality already existed in the product, but was not clear in the UI that it was available. The new arrow buttons will indicate to the user that they can collapse the group.|
+|21196|Report Design|Forms|Fixed 'residual HTML' left by FORMS UI when form is deleted &/or cancelled.|
+|21346|Report Design|UI|Behavior fixed where total box is checked on all fields even though we only added it for one field.|
+|21473|API|Data Sources|Issue found with Table Names containing "&". Fields would not load in designer drop downs and report would not build. Resolved.|
+|21535|UI|Gauge|Though gauge tab has percentage - gauge display does not change (says 0-1 instead of 0-100 for % selection)|
+|21768|Dashboards|UI|Chart Title showing up in Dashboard and appearing as Chart@"ReportName". Resolved|
+|21903|Dashboards|Browser|In the Dashboard URL, if the user deletes anything after "#", user is navigated to blank page.|
+|22079|Dashboards|Visualization|Data was not being properly filtered properly when using a Visualization in Dashboard 1.0, but working properly in Dashboard 2.0, fixed.|
+|21501|UI|Browser|I found that the error is caused by a bug in IE11. The error is in the wrong determination of the number of rows in the table. Fixed by changing method of working with rows table.|
+|22280|Dashboards|Optimization|Fixed spelling issue in dashboard - on reverse side of tile the hover text shows "Select a preport part to add" fixed to state "Select a report part to add".|
+|21906|API|Filters|When setting up ProcessEqualsSelectList to populate a drop down filter, and using auto complete filter operator (@autoCompleteVal), the autocompleted filter value is not updated in the filter collection. This is used in the where clause of any subsequent filters when implementing cascading filter functionality. This value is now retained and can be used for cascading.|
+|21707|API|Data Sources|Database objects with Period "." in Column name displaying literal string "_INTERALDOTCHAR_" in column name in Izenda. This was due to internal literal string replacement in code. Resolved.|
+|21791|Report Design|Export|Implemented new method of rendering dates to excel, which solves a lot of problems/cases like given one with dates formatting in Excel. Previously, when exporting to Excel, Izenda converted datetime values to string (text) of necessary format, and wrote those string values to html file with a mark for Excel that they are dates in some string format. Now when exporting to Excel, it writes to HTML the native for excel numeric value of date, and description of format in which this date should be shown.|
+|21862|UI|Optimization|CSS files were reloading from iis server versus from local cache causing lag time. Change implemented to reduce time to load by ensuring the css is loading from cache when available.|
+|20936|UI|UI|"Limit Outputs to CSV" checkbox in Misc tab of the report designer has been deprecated in the 6.9.0.7 release. It will no longer show on the UI.|
+|21524|Report Design|Forms|When Subreport created using Form designer (with Filter) is embedded with parent report. Subreport Filter is missing|
+|21929|Dashboards|Security|Fixed shared with locks on new dashboards to work the same as reports. Izenda guidelines Full Access: Dashboard is available to the user to view, modify, and save changes to the report. Note that owner user(UserName property of the ReportSet) will not be changed on saving, i.e. the original owner(creator) of the report will stay the same. Read Only Dashboard is available to the user to view, user can modify existing filters' values. Also user can modify(design) the Dashboard but cannot save it, however user could Save As a new Dashboard. View Only: Dashboard is available to the user to view, but not to modify in any way or save changes to the report. Locked: Dashboard is available to the user to view, and user can modify existing filters' values None: Dashboard is unavailable to (hidden from) the user.|
+|21556|UI|Data Sources|Izenda removes underscores contained in column names in Field Descriptions. This behavior was inconsistent in the Report Designer and the Instant Report Designer. Now, underscores are removed in both places.|
+|21779|UI|Expressions|Added "Current Date" (Today) option to the DefaultDate setting. GETDATE() can be used in the expression text boxes.|
+|20980|API|Filter|Fixed error in Report Viewer, when editing the filter operators list, if equals is removed it was still added as default filter operator when new filter is selected in report viewer. Now the first remaining filter operator available will be used as the default if equal operator is removed.|
+|21527|UI|Filter|Corrected Stored Procedure Parameter use as Filters. User cannot add any parameter more than one time in the Report Viewer as this will give an error "Procedure or function ##SP_NAME## has too many arguments specified".|
+|21456|Report Viewer|Filter|Long field names overlap the filter buttons. This has been corrected by truncating the field name using (...) to ensure buttons are clearly available to the end user.|
+|21119|UI|Data Sources|Fixed Stored Procedure parameter support of European date format in equals calendar and equals filter options. Before fix when formatting date in European format (using equals or equals calendar) the report would return no results as date format was not properly converting.|
+|22040|Report Design|Auto Chart|When using a stored procedure to create an AutoChart the chart was not properly exporting to excel after save. Now chart will export before or after saving the report.|
+|22102|Report Design|Auto Chart|When exporting an auto chart that uses a link (links are added via the URL Link field of the advanced field options in the Report Designer), the chart appears correct but the export would only show one value as slice. This has been corrected so HTML/WORD/EXCEL export as shown on screen.|
+|21717|Scheduler|Optimization|New Setting added for offline mode of Scheduler to initialize Visualization folder. AdHocSettings.VisualizationsFolder = @"Add Folder Path Here"; Please Note this MUST BE SET PRIOR TO LICENSE KEY|
+|21814|Report Design|Auto Chart|Fixed long strings from overlapping chart in AutoChart. Long Stings will be truncated using (...) to prevent them from overlaying the chart|
+|21866|Report Design|Auto Chart|When exporting an auto chart that uses a link (links are added via the URL Link field of the advanced field options in the Report Designer), the chart appears correct but the export would only show one value as slice. This has been corrected and PDF exports as shown on screen.|
+|21689|Report Viewer|Forms|When a subreport which is created using "Form Designer" for image field is used, images are not displayed in the parent report.|
+|21891|API|Data Sources|This fix ensures that names of temporary tables in generated sql queries will not have database name/schema nodes that were causing issues with some SQL versions when using Stored Procedures.|
+|21846|API|Export|This interface is used to apply specific formats to excel exports when custom formatters are used in Izenda. Add the following to the formatter class: [Serializable] public class ProportionFormatter : IFormatter, IExcelFormatter { public string GetExcelCellClass { get { return "xls-"; } } ... The following formats are supported xls-text xls-percent xls-date xls-time|
+
 
 # 6.9.0.6 (October 21, 2015)
 
