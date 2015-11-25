@@ -1,6 +1,5 @@
 Welcome to the wiki for Izenda - the real-time data analysis tool that provides self-service BI to organizations. 
 
-**Please note: The 6.9.0.7 maintenance release has been delayed.  The anticipated release date is 11/25/2015.**
 
 This wiki serves as the main source of documentation for development teams working with Izenda, but also includes resources for end-users around report creation. If you are unfamiliar with Izenda, we recommend starting with the Izenda website.
 
