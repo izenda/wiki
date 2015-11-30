@@ -41,7 +41,7 @@
 |21784|Report Design|Charts|On Charts Tab in Report Designer, the 3rd column drop downs have no label to indicate the drop down is for Format. Resolved.|
 |21801|Report Design|Export|Issue found when exporting gauges to PDF that were consuming extra memory and exports were not completing. Resolved issue with gauge and now exporting properly.|
 |21804|API|Optimization|Added support for the following settings in the Report Viewer and Dashboard 2.0. Settings to check: - AdHocSettings.AllowInvalidCharacters - AdHocSettings.StripInvalidCharacters Working normally in: - Report Designer - Old Dashboard Designer - Old Report Viewer More info can be found on these settings here in the Izenda wiki http://wiki.izenda.us/API/AdHocSettings|
-|21668|UI|Optimization|When creating a category with an apostrophe in the title is is displayed incorrectly. The apostrophe is not being escaped properly and the category is displayed in the category drop down as a "%27". Resolved.|
+|21668|UI|Optimization|When creating a category with an apostrophe in the title is is displayed incorrectly. The apostrophe is not being escaped properly and the category is displayed in the category drop down as a "%27". Resolved. Routines to pull category lists unified to avoid inconsistencies between Designer and Viewer.|
 |21878|Report Viewer|Filters|When using "equals field" filter operator filters are not appearing in the report viewer. Resolved.|
 |21380|Dashboards|Export|When exporting Dashboards (v2) to PDF, the exported version does not follow the same order as it appears on screen. Fixed|
 |21284|API|Optimization|Fixed AdHocSettings.ShowHtmlAsCode = true; not being respected.|
