@@ -19,11 +19,9 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[Security Guide|/Integration/Tutorials/Security]]
 * [[Basic Security Sample|Home#Basic-Login-Scenario]]
 * [[Customizing Izenda Settings|Integration/Tutorials/Customizing-Izenda-Settings]]
-* [[OData|Guides/OData]]
 * [[Using the Izenda Fusion Driver|/Guides/Izenda-AdHoc-Driver]]
 * [[The report lifecycle|/Guides/Report-Lifecycle]]
 * [[MVC Phase I Integration Guide|/Guides/MVC-Integration]]
-* [[Webform Integration Guide|http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder]]
 
 
 ###C♯/VB.NET Guides
@@ -61,7 +59,6 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 
 ###SQL Guides
 
-* [MDX Queries](http://www.izenda.com/Site/KB/CodeSamples/Pulling-Data-From-Analysis-Services-Cubes)
 * [[Using Stored Procedures (SPs) In Izenda 6|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
 * [[Adding the FORMS column to the IzendaAdHocReports table|/FAQ/IzendaAdHocReports-table]]
 
