@@ -15,7 +15,6 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 
 ###Quick Reference Guides
 
-* [[IIS7 Installation Video|http://www.izenda.com/site/kb/uploads/media/videos/vistainstallvideo.zip]]
 * [[Installation Guide|http://wiki.izenda.us/Guides/Installing-Izenda]]
 * [[Security Guide|/Integration/Tutorials/Security]]
 * [[Basic Security Sample|Home#Basic-Login-Scenario]]
@@ -38,8 +37,8 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[Show/Hide Fields in Filters|Guides/Show_Hide Fields in Filters]]
 * [Using Share With Rights and Roles](/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights)
 * [[Dynamically Creating Reports Via the API|/API/CodeSamples/DynamicReportCreation]]
-<!--* [Switching Databases Via Code](http://www.izenda.com/Site/KB/CodeSamples/Switching-databases-via-code?) 
-* [[Adding Custom Formatting Options in the Report Designer|/FAQ/Questions/Add-Formatting-Options]]-->
+* [Switching Databases Via Code](http://www.izenda.com/Site/KB/CodeSamples/Switching-databases-via-code?) 
+* [[Adding Custom Formatting Options in the Report Designer|/FAQ/Questions/Add-Formatting-Options]]
 * [[Login page sample|/Tutorials/CodeSamples/Login-Sample]]
 * [[Implementing custom behavior for the Equals(Popup) dialog|http://wiki.izenda.us/API/CodeSamples/Equals-Popup-Custom-Page]]
 * [[Joining a many-to-many database relationship and hiding the connecting table as a datasource|/FAQ/many-to-many-database-join]]
@@ -62,7 +61,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 
 ###SQL Guides
 
-<!--* [MDX Queries](http://www.izenda.com/Site/KB/CodeSamples/Pulling-Data-From-Analysis-Services-Cubes)-->
+* [MDX Queries](http://www.izenda.com/Site/KB/CodeSamples/Pulling-Data-From-Analysis-Services-Cubes)
 * [[Using Stored Procedures (SPs) In Izenda 6|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
 * [[Adding the FORMS column to the IzendaAdHocReports table|/FAQ/IzendaAdHocReports-table]]
 
