@@ -320,9 +320,9 @@
 |20513|Report Design|Optimization|XSS Issues Resolved|
 |20529|Report Design|Forms|Fixed subtotals in forms|
 |20542|Report Design|Optimization|XSS Issues Resolved|
-|20543|API|Security|Security Scan Cryptographic Issues - Remove obsolete feature causing issue|
-|20544|API|Security|Security Scan Directory Traversal resolved|
-|20545|API|Security|Security Scan Information Leakage - XXE issue|
+|20543|API|Security|Security Scan Cryptographic Issues - Remove obsolete feature (Version checker) causing issue. |
+|20544|API|Security|Security Scan Directory Traversal issue noted in static scan due to obsolete feature (RDL export) resolved|
+|20545|API|Security|Security Scan Information Leakage - XXE issue found in static scan. False positive result, but code changes made to avoid findings in the future.|
 |20624|Report Design|Optimization|Resolved AutoGroup Feature Not working in Designer|
 |20630|Dashboards|Optimization|Dashboard event system improvement. |
 |20689|API|Dashboards|MVC4r2 reference Install and new dashboards|
