@@ -52,7 +52,7 @@ Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK
 
 ![Controllers](/Guides/MVC-Integration/Exclude.png)
 
-**c.** Copy /Resources folder from the root of the application into the /Reporting folder. This will create two copies of the Resources folder, one in the root and another under the Reporting folder. (If the folder exists, overwrite the existing folder with the new copy.)
+**c.** Copy /Resources folder from the root of the application into the /Reporting folder. This will create two copies of the Resources folder, one in the root and another under the Reporting folder. (If the folder "/Reporting/Resources" exists, overwrite the existing folder with the new copy.)
 
 ![](/Guides/MVC-Integration/CopyResourcesFolder.png)
    
