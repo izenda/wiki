@@ -1,5 +1,7 @@
 #Creating a custom RS.aspx response
 
+[[_TOC_]]
+
 ##Question
 
 How do I create a server response for a custom javascript function to use in my reporting application?
