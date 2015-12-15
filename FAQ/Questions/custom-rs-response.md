@@ -2,7 +2,7 @@
 
 ##Question
 
-How do I create a server response for a custom procedure to use in my reporting application?
+How do I create a server response for a custom javascript function to use in my reporting application?
 
 ##Answer
 
