@@ -89,11 +89,11 @@ These fields represent the input parameters of the SP, and can not be used as ou
 To assign values to parameters of your SP, you need to select the field from the previous step (the one with "(Param)" at the end of name), then select the "Equals" operator, and type in the value for the parameter. In our example, we used the name "Gourmet" as our filter value. Now the report can be saved and executed. If you were following along, then you should have a datatable with the data [described above](#SampleOutput).
 
 
-##Using the Equals(...) operator with SPs
+##Using extended Equals operators (Equals(Multiple); Equals(Popup); etc) with SPs
 
 Within the Izenda Report Designer are filter options that allow you to select a value from a list instead of typing the value directly. When only using table names as data sources, these work just fine. You just select the field name and AdHoc fetches all values for that field from the data source in the database, groups them, and pulls them into the dropdown control. If SPs are used as data sources, this becomes a bit more complex. This is due to a couple of factors: 
 
-* **Input parameters:** These are denoted with (Param) beside their names and must satisfy the SP's requirements for input. (i.e. having two required input parameters means using two filters whenever the SP is used) **Input parameters can NOT be used with the Equals(...) operator as their possible values cannot be determined.**
+* **Input parameters:** These are denoted with (Param) beside their names and must satisfy the SP's requirements for input. (i.e. having two required input parameters means using two filters whenever the SP is used) **Input parameters can NOT be used with the extended Equals operators as their possible values cannot be determined.**
 * **Output Fields:** These are the fields returned by the SP. Izenda detects what valid values can be selected with the given input parameters. **The list of output values can ONLY be built when all input parameters have defined values.**
 
 In other words, you can only get a list of values for the **output fields** when values for all **input parameters** have been defined.
@@ -104,15 +104,15 @@ We will demonstrate how this works using the **SalesByCategory** SP in the **Nor
     AdHocSettings.VisibleDataSources = new string[] {"SalesByCategory"};
 ```
 
-Also, you need to set the [[AllowEqualsSelectForStoredProcedures|/API/CodeSamples/AllowEqualsSelectForStoredProcedures]] setting to true to allow usage of the Equals(...) operators for Stored Procedures. After this, you will be able to select SalesByCategory as data source, and select Equals(...) operators for its fields. Once you have done so, you should be able to see the below fields available in your "Fields" dropdown on the ReportDesigner.
+Also, you need to set the [[AllowEqualsSelectForStoredProcedures|/API/CodeSamples/AllowEqualsSelectForStoredProcedures]] setting to true to allow usage of the extended Equals operators for Stored Procedures. After this, you will be able to select SalesByCategory as data source, and select extended Equals operators for its fields. Once you have done so, you should be able to see the below fields available in your "Fields" dropdown on the ReportDesigner.
 
 ![Fig. 1: SalesByCategory](http://www.izenda.com/Site/KB/Uploads/Images/dhj3phkc_174gmzpr5fj_b.png)
 
-**CategoryName** and **OrdYear** are input parameters (denoted with **(Param)**) whereas **ProductName** and **TotalPurchase** are output fields. After clicking on the "Filters" tab, we can set pre-defined values for our input parameters using a standard Equals operator, since they will be passed to our SP instead of being used in the query. After doing so, we can use the Equals(...) operators with our output fields. Below, we have used the values "Beverages" and "1997" for our input parameters.
+**CategoryName** and **OrdYear** are input parameters (denoted with **(Param)**) whereas **ProductName** and **TotalPurchase** are output fields. After clicking on the "Filters" tab, we can set pre-defined values for our input parameters using a standard Equals operator, since they will be passed to our SP instead of being used in the query. After doing so, we can use the extended Equals operators with our output fields. Below, we have used the values "Beverages" and "1997" for our input parameters.
 
 ![Fig. 2: Filters Using SPs]()
 
-After this, you can get a list of predefined values for any output fields using the Equals(...) operators. Below, we have selected the **Equals (Multiple)** and **Equals (Select)**
+After this, you can get a list of predefined values for any output fields using the extended Equals operators. Below, we have selected the **Equals (Multiple)** and **Equals (Select)**
 
 ![Fig. 3: Output Fields With SPs]()
 
