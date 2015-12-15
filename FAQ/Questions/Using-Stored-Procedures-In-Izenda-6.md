@@ -93,7 +93,7 @@ To assign values to parameters of your SP, you need to select the field from the
 
 Within the Izenda Report Designer are filter options that allow you to select a value from a list instead of typing the value directly. When only using table names as data sources, these work just fine. You just select the field name and AdHoc fetches all values for that field from the data source in the database, groups them, and pulls them into the dropdown control. If SPs are used as data sources, this becomes a bit more complex. This is due to a couple of factors: 
 
-* **Input parameters:** These are denoted with (Param) beside their names and must satisfy the SP's requirements for input. (i.e. having two required input parameters means using two filters whenever the SP is used) **Input parameters can NOT be used with the extended Equals operators as their possible values cannot be determined.**
+* **Input parameters:** These are denoted with (Param) beside their names and must satisfy the SP's requirements for input. (i.e. having two required input parameters means using two filters whenever the SP is used) **Input parameters can NOT be used with the extended Equals operators as their possible values cannot be pre-determined.**
 * **Output Fields:** These are the fields returned by the SP. Izenda detects what valid values can be selected with the given input parameters. **The list of output values can ONLY be built when all input parameters have defined values.**
 
 In other words, you can only get a list of values for the **output fields** when values for all **input parameters** have been defined.
