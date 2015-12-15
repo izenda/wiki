@@ -27,7 +27,7 @@ Now that you have setup the scheduler, we will need to setup Izenda Reports. The
 
 ###Service-based scheduler
 
-Izenda now also offers the option of using a service-based scheduler. The service based scheduler is also available at our GitHub scheduler repo https://github.com/izenda/custom-scheduler. After running the installer, there will be an executable in the directory you specified in the installer wizard along with a config file called **IzendaService.exe.config**. Here is how to configure the service-based scheduler:
+Izenda now also offers the option of using a service-based scheduler. The MSI installer and service based scheduler is also available at our GitHub scheduler repo https://github.com/izenda/custom-scheduler. After running the installer, there will be an executable in the directory you specified in the installer wizard along with a config file called **IzendaService.exe.config**. Here is how to configure the service-based scheduler:
 
 1. Open **task manager**.
 2. Locate **IzendaService**.
