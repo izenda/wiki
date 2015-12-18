@@ -40,7 +40,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[Login page sample|/Tutorials/CodeSamples/Login-Sample]]
 * [[Implementing custom behavior for the Equals(Popup) dialog|http://wiki.izenda.us/API/CodeSamples/Equals-Popup-Custom-Page]]
 * [[Joining a many-to-many database relationship and hiding the connecting table as a datasource|/FAQ/many-to-many-database-join]]
-
+* [[How can I utilize Izenda's export process for CSV, PDF, or Excel in an application?]]
 
 ###Javascript Guides
 
