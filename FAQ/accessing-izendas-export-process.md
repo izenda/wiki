@@ -26,7 +26,7 @@ foreach (string fileName in Directory.EnumerateFiles(AdHocSettings.ReportsPath))
     {
         message = e.Message;
     }
-    Console.Write(message);
+    Console.WriteLine(message);
 }
 ```
 
@@ -57,6 +57,7 @@ foreach (string fileName in Directory.EnumerateFiles(AdHocSettings.ReportsPath))
     {
         message = e.Message;
     }
+    Console.WriteLine(message);
 }
 
 This method provides a bit better control over the process, since it works with the explicitly defined .NET types within the Izenda framework. The previous method requires knowledge of the specific output type codes used and only works with iTextSharp as the PDF export.
