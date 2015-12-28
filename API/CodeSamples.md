@@ -67,6 +67,7 @@ _**Note:** Some of the items below are listed more than once. This is because th
 * [[Control names change randomly when deployed from development to production|http://wiki.izenda.us/FAQ/Questions/Control-Names-Break-In-Production]]
 * [[Report Designer Page Code Samples|/API/CodeSamples/ReportDesigner]]
 * [[Add and Remove Report Designer Toolbar Buttons|http://wiki.izenda.us/API/CodeSamples/ReportDesigner#Toggling-toolbar-buttons]]
+* [[Showing Side Help in the Desigher|http://wiki.izenda.us/API/CodeSamples/HelpText]]
 
 ##Report Management
 
