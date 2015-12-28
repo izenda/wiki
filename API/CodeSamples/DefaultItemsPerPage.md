@@ -6,6 +6,8 @@
 
 Gets or sets the number of items per page. Lowering the number will decrease the number of results viewed per page. If this number is lower than the number of results, numbers indicating pagination will appear at the bottom of the report and the addition results will go to the next page. One row will be hyper links showing record ranges in denominations of whatever you set your DefaultItemsPerPage to. A second row will allow you to page forward, backward or enter a page number to jump to.
 
+These items will affect all rows in all tables on the report, in other words both the Summary and Fields tab. The Summary and the Fields tables will not be paginated independently.
+
 ![DefaultItemsPerPage](/API/CodeSamples/DefaultItemsPerPage/DefaultItemsPerPage.png)
 
 ##Global.asax (C♯)
