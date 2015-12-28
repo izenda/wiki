@@ -1,4 +1,4 @@
-<!--
+
 [[_TOC_]]
 
 #Introduction
@@ -71,4 +71,3 @@ Language Translations
 Report Summary
 Adding Multiple Charts
 Adding Summary Grid
--->
