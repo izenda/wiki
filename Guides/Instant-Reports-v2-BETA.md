@@ -1,0 +1,27 @@
+<!--
+[[_TOC_]]
+
+#Introduction
+
+Izenda now offers a BETA version of the new Instant Report Page in Angular.js with the platform’s latest update to 6.10.0.1. This beta release is made available to allow a broad user base to evaluate and give us feedback on the future of the Report Designer, but is not recommended for production use at this stage. This is not a fully supported feature however and any product defects will be noted, but not slated for immediately scheduled work.
+ 
+Izenda will be continually making improvements and enhancements to the features and functionality with each maintenance release during the Beta phase. These items will be contained in our general maintenance release so our clients can follow in the progress. 
+The most immediately visible change to Instant Reports is the new screen design and left side navigation bar. These have panels that will open with additional menu items and can collapse giving maximum visibility to the report being designed.
+For the initial BETA version the scope of the designer is limited. There are functions that a user cannot complete in the Instant Report page that they may need to move to the full Report Designer page to complete. A list of these major features are included in this guide. 
+
+Any report created in the new Instant Report page can also be edited in this page. If a new report is created in the new Instant Report page, the application will first open it for editing in the Instant Report page. At any time if the report is edited in the Report Designer it will only open in the full Report Designer for editing. 
+
+#Installation
+The new page is include in all 6.10.0.1 Reference Implementations for download. The new page can be configured for review using the following setting in the global file:
+
+* WebForms
+AdHocSettings.InstantReport = "InstantReportNew.aspx";
+	
+* MVC
+AdHocSettings.InstantReport = "InstantReportNew";
+
+* VB
+AdHocSettings.InstantReport = "InstantReportNew.aspx"
+
+This will change the current Instant Report page to the BETA Instant Report Page when navigating from the New Drop Down menu.
+-->
