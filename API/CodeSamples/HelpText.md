@@ -7,7 +7,7 @@
 Gets or sets the collection of key-value pairs where the key is the tab name and the value is a hint that will be shown when mouse is over the appropriate tab. 
 Can be seen in the ReportDesigner if ShowSideHelp is enabled. 
 
-Note: You can also enable/disable side help by clicking Help button (AdHocSettings.ShowHelpButton should be enabled).
+Note: You can also enable/disable side help by clicking the Help button ([[AdHocSettings.ShowHelpButton|http://wiki.izenda.us/API/CodeSamples/ShowHelpButton]] should be enabled).
 
 ##Global.asax (C♯)
 
@@ -38,7 +38,7 @@ Note: You can also enable/disable side help by clicking Help button (AdHocSettin
     }
 ```
 
-##VisualBasic
+##Global.asax (VB.net)
 
 ```visualbasic
 Public Class CustomAdHocConfig
