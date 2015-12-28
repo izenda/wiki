@@ -27,4 +27,6 @@ This will change the current Instant Report page to the BETA Instant Report Page
 
 ![](/Guides/Instant-Reports-v2-BETA/IRBetaImage.PNG)
 
+#Data
+![](/Guides/Instant-Reports-v2-BETA/ir1.PNG)
 -->
