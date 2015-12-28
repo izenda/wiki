@@ -56,4 +56,19 @@ This will change the current Instant Report page to the BETA Instant Report Page
 ![](/Guides/Instant-Reports-v2-BETA/ir12.PNG)
 ![](/Guides/Instant-Reports-v2-BETA/ir13.PNG)
 ![](/Guides/Instant-Reports-v2-BETA/ir14.PNG)
+
+#Unsupported Features
+
+At this time in the Beta Release of Instant Reports 2.0 the following Report Designing Features are unsupported. We will be building out features as we move forward to a production release.
+
+Advanced Datasource Joining Functionality  
+Pivot Reports
+Only Reports created in Instant Reports 2.0 without any edits in the Report Designer can be opened in Instant Reports. Once a report is edited in the Report Designer, it can no longer be edited with the Instant Report Designer.
+HTML Charts / Dundas Charts
+SQL Query Export
+Forms Design / Edit
+Language Translations
+Report Summary
+Adding Multiple Charts
+Adding Summary Grid
 -->
