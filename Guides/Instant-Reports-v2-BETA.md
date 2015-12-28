@@ -29,4 +29,31 @@ This will change the current Instant Report page to the BETA Instant Report Page
 
 #Data
 ![](/Guides/Instant-Reports-v2-BETA/ir1.PNG)
+![](/Guides/Instant-Reports-v2-BETA/ir2.PNG)
+
+#Charts
+![](/Guides/Instant-Reports-v2-BETA/ir3.PNG)
+
+#Formatting
+![](/Guides/Instant-Reports-v2-BETA/ir4.PNG)
+![](/Guides/Instant-Reports-v2-BETA/ir5.PNG)
+![](/Guides/Instant-Reports-v2-BETA/ir6.PNG)
+
+#Scheduling
+![](/Guides/Instant-Reports-v2-BETA/ir7.PNG)
+
+#Sharing
+![](/Guides/Instant-Reports-v2-BETA/ir8.PNG)
+
+#Toolbar
+![](/Guides/Instant-Reports-v2-BETA/ir9.PNG)
+
+#Filtering
+![](/Guides/Instant-Reports-v2-BETA/ir10.PNG)
+![](/Guides/Instant-Reports-v2-BETA/ir11.PNG)
+
+#Field Settings
+![](/Guides/Instant-Reports-v2-BETA/ir12.PNG)
+![](/Guides/Instant-Reports-v2-BETA/ir13.PNG)
+![](/Guides/Instant-Reports-v2-BETA/ir14.PNG)
 -->
