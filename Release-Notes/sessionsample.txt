@@ -1,0 +1,103 @@
+using AdHoc.DataStorage;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.SessionState;
+
+public class CustomSessionStorage : IDataStorage
+{
+	private HttpSessionState SessionNullable
+	{
+		get
+		{
+			HttpContext context = HttpContext.Current;
+			if (context != null)
+				return context.Session;
+			return null;
+		}
+	}
+
+	private HttpSessionState Session
+	{
+		get
+		{
+			HttpSessionState session = SessionNullable;
+			if (session != null)
+				return session;
+			throw new Exception("Session data storage provider was not available");
+		}
+	}
+
+	public bool ProviderAvailable
+	{
+		get { return SessionNullable != null; }
+	}
+
+	public string ProviderInstanceID
+	{
+		get { return Session.SessionID; }
+	}
+
+	public object Get(string key)
+	{
+		if (Session == null)
+			return null;
+		return Session[key];
+	}
+
+	public void Set(string key, object value)
+	{
+		Session[key] = value;
+	}
+
+	public void Remove(string key)
+	{
+		HttpSessionState session = Session;
+		if (session != null)
+			session.Remove(key);
+	}
+
+	public bool Contains(string key)
+	{
+		return Session[key] != null;
+	}
+
+	public void Clear()
+	{
+		HttpSessionState session = Session;
+		if (session != null)
+			session.Clear();
+	}
+
+	public object this[string key]
+	{
+		get
+		{
+			return Get(key);
+		}
+		set
+		{
+			Set(key, value);
+		}
+	}
+
+	public string[] AllKeys
+	{
+		get
+		{
+			HttpSessionState session = Session;
+			List<string> allKeys = new List<string>();
+			foreach (string key in session.Keys)
+				allKeys.Add(key);
+			return allKeys.ToArray();
+		}
+	}
+
+	public CustomSessionStorage()
+	{
+		HttpSessionState session = SessionNullable;
+		if (session !=null && session.IsCookieless)
+			throw new Exception("CookieLess mode not supported.");
+	}
+}
