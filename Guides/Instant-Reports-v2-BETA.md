@@ -1,4 +1,3 @@
-<!--
 [[_TOC_]]
 
 #Introduction
@@ -80,4 +79,3 @@ At this time in the Beta Release of Instant Reports 2.0 the following Report Des
 *Adding Multiple Charts
 
 *Adding Summary Grid
--->
