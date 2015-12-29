@@ -1,4 +1,58 @@
 [[_TOC_]]
+<!--
+# 6.10.0.1 (December 29, 2015)
+
+##Features
+|Case|Category|SubCategory|Description|
+|:----|:---------------|:---------------|:---------------|
+|FB:22008|Framework|.NET Version Update |**Updated the Izenda .NET framework to 4.0**|
+|FB:13917|Data|Data Sources|Feature - Addition of support for Oracle Stored Procedures. The only stored procedures supported at this time are pipelined functions that return a table-valued object. See [[this documentation|http://docs.oracle.com/cd/B19306_01/appdev.102/b14289/dcitblfns.htm]] for more details on table-valued pipelined functions. Functionally, these work just like MSSQL stored procedures as far as Izenda is concerned. The processes for including them in VisibleDataSources, working with constraints, passing parameters as filters, etc are the same.|
+|FB:21959|Data|Data Sources|Feature - Addition of MySQL Stored Procedure support. The only stored procedures supported at this time MUST be formatted a specific way for Izenda to be able to use them. The connection string must use the MULTI_STATEMENTS=1 identifier. The procedures themselves must use the following syntax: DELIMITER $$ BEGIN DROP TABLE IF EXISTS `[SprocName]_spResult`; /* Izenda-specific code */ CREATE TEMPORARY TABLE `[SprocName]_spResult` AS /* Izenda-specific code */ [The normal sproc body goes here] SELECT * FROM `[SprocName]_spResult`; /* Izenda-specific code */ END$$ DELIMITER ; where [SprocName] is the exact name of your stored procedure without the brackets. Functionally, these work just like MSSQL stored procedures as far as Izenda is concerned. The processes for including them in VisibleDataSources, working with constraints, passing parameters as filters, etc are the same. Be sure to change the DELIMITER to something other than the semicolon or else MySQL will not correctly compile the stored procedure.|
+|FB:22093|API|Cache|Feature - Add support to allow 'InvalidateSchemaCache' to be executed across entire webfarm. New setting implemented, activated through a single setting. If there are two machines "server1" and "server2" in webfarm, for both servers, use the following setting in InitializeReporting:AdHocSettings.WebFarmNodesRsUrls = new string[] { "http://server1/rs.aspx", "http://server2/rs.aspx" }; When invalidate schema cache is used it works across all machines.|
+|FB:19135|API|Session State|Feature - Added IDataStorage interface to allow customization of the storage mechanisms for sessions. Izenda can be configured to use a custom class that implements this interface. Sample use:// This code should be placed before any Izenda calls.AdHocContext.Storage = new CustomSessionStorage(); A code sample was created to illustrate the concepts. Code Sample available [here](http://wiki.izenda.us/Release-Notes/sessionsample.txt)|
+|FB:19705|Report Design|Filters|Feature – Add Filter Alias Prior to this new feature filters must be named the same as the column name or Field Alias set in code. Now to alias filters there are 2 options 1 – Use AdHocSettings.FilterAliases to set the alias for how column names are displayed in the filter selection drop down from code. 2 – User can change the filter name using the new Description field. This can be accessed in the Report designer from the filter tab or from the viewer by clicking the gear icon in the filter. The logic of applying aliases is the following (from the highest priority to the lowest): 1) Defined by the user alias - Description property of the filter 2) AdHocSettings.FilterAliases 3) AdHocSettings.FieldAliases 4) Column name. More information can be found [here](http://wiki.izenda.us/Guides/ReportDesign/5.0-Filters-tab)|
+|FB:19756|API|Caching|Feature - Cache Interface Added the first phase of cache changes to allow easy customization of the caching mechanism(s) used in Izenda. A new cache interface (IPermanentDataCache) was implemented for two Izenda data caches. RenderedResultsCache: the Fusion(HTML) cache DatabaseSchemaCache: used to cache the schema information. With these changes, any caching provider can be used by implementing the IPermanentDataCache interface in a custom class and configuring Izenda to use the custom class. AdHoc.Cache.DataCache.IPermanentDataCache is called "permanent" because for these caches we do not use the "storage" expiration approach. The expiration policy of all objects in the cache can be controlled by custom code. - Custom caches can be specified using AdHocContext.Caches property. Currently DataCacheRepository contain only two caches - RenderedResultsCache and DatabaseSchemaCache but we will expand this list to more different caches. Having one repository will make adding them easier in the future. Here is how you can apply custom class for DB cache: AdHocContext.Caches.DatabaseSchemaCache = new CustomDbSchemaCache(); And here is the same for Fusion cache: AdHocContext.Caches.RenderedResultsCache = new CustomHtmlCache(); Be sure to do this before all other Izenda calls. A sample Redis cache for DB Schema has been created for reference. This was implemented using Redis. Code Sample available [here](http://wiki.izenda.us/Release-Notes/CacheSample.txt)|
+|FB:19815|Instant Reports|New BETA Page|Feature - The new Instant Report Designer page is being released as a *BETA* version in the Izenda 6.10.0.1 release. This beta release is made available to allow a broad user base to evaluate and give us feedback on the future of the Report Designer, but is not recommended for production use at this stage. This is not a fully supported feature however and any product defects will be noted, but not slated for immediately scheduled work.Please review documentation [here](http://wiki.izenda.us/Guides/Instant-Reports-v2-BETA)|
+|FB:21663|Printing|PDF Support In Azure|Addition of new PDF engine - EVO. Provides Azure support via cloud service. There is a known issue with HTML charts and EVO printing that is scheduled for resolution in 6.10.0.2. Learn more on this configuring the cloud service [here](http://wiki.izenda.us/API/CodeSamples/PdfPrintMode#PdfPrintMode)|
+
+##Fixes
+|Case|Category|SubCategory|Description|
+|:----|:---------------|:---------------|:---------------|
+|FB:22308|UI|Language Support|Updated several language files with incremental changes from recent UI changes.|
+|FB:21917|Report Design|Visualization|Reintroducing ArcMap Visualization to stock Visualization pool.|
+|FB:22277|Scheduler|Scheduler|Removed dummy URL references within utility file and replaced with empty string. Supporting use case of offline custom scheduler. Added minor url changes to resolve javascript errors.|
+|FB:21988|Report Design|Virtual Data Source|Fix VirtualDataSources to ignore TOP setting of last viewer save state.|
+|FB:22660|Report Design|Localization|Fixed issue with string sources loading with empty values in localization.|
+|FB:22658|Starter Kit|Instant Report|Updated RI kits for standard deployment|
+|FB:22311|Report Design|Visualization|Transitions visualization labels overlapping each other in the chart. Updated and now are displaying dispersed as expected.|
+|FB:22135|Report Design|Pivots|Oracle Pivots bug resulting in 'Invalid Report Definition' error due to improper string conversion, resolved.|
+|FB:21874|API|Dashboards|Added angular configuration option to show dashboard without list/toolbar.|
+|FB:22512|Data|Data Sources|Oracle CHAR datatype concatenating values in ReportViewer Filter panel. Fixed in \Resources\js\ReportViewerFilters.js file. Replace "if (newVal.length > 1)" with "if (newVal.length > 0)".|
+|FB:22570|API|Language Support|Updated Resources files with additional Language files to be distributed. |
+|FB:22078|API|Hidden Columns|Fix: HiddenColumns - apply to ALL FieldsRegex - apply only to Fields FiltersRegex - apply only to Filters|
+|FB:21806|UI|Report List|Fix/Enhancement: Improved ReportList search behavior. Now when user types in report name, categories are limited to only the ones containing a similar name as search.|
+|FB:21857|Starter Kit|MVC|Fix: Workaround to MVC version routing issues when publishing to IIS as a website directly from VisualStudio. Now a vanilla download should be able to be published directly with no changes.|
+|FB:22168|API|Security|XSS attack security measures conflict with '&' symbol in multi-select filters. Fixed.|
+|FB:22160|Data|Data Sources|Added additional support for MySQL filters with numeric/decimal field types.|
+|FB:21807|Report Design|UI|Fix: Corrected erroneous 'flagging' of advanced field properties panel when new field is added.|
+|FB:22347|Printing|Printing|AutoChart missing from HTML export, resolved|
+|FB:21733|Printing|Printing|Fix: Support of printing/exporting an unsaved dashboard.|
+|FB:21220|Report Design|Charts|Fix: Doughnut Pie-Chart wedges very thin.|
+|FB:22146|Report Design|Gauge|Animation is not disabled for the Gauges visualization when printing. As a result intermittently incorrect data is displayed.|
+|FB:22480|Report Design|Visualization|When using only visualizations on a dashboard, the sub-report linking doesn't honor the filters selected user clicks-through to the sub reports. Fixed|
+|FB:19428|Refactor|Exporting|Fix: Refactor of export code to improve rendering performance and memory performance.|
+|FB:21969|Scheduler|Scheduler|Fix: Scheduler 'embed' option. "rn=" parameter name is missed in the link URL so instead of "ReportViewer.aspx?rn=ReportName" the link uses "ReportViewer.aspx?ReportName" URL now corrected.|
+|FB:22383|Report Design|Filters|Discovered place in code with the inconsistency - Filter.GetConvertedColumnValue - causes filter dates to be converted to US dates when running filters (MM/dd/yyyy)|
+|FB:20529|Report Design|Forms|Removed unused code for @total used in form creation as it was not used. Also it was removed from the Smart Tags drop-down in Forms editor.|
+|FB:22555|Report Design|Filters|Field Comparison Filter not working, displays message “Please enter a valid value in String format" when comparing fields. Resolved|
+|FB:22214|Report Design|Visualization|Visualizations now support fields of Object type.|
+|FB:22655|Report List|Report List|Regression issue found with pivot scroll bars, missing horizontal and vertical scrolling function when creating large pivots resolved.|
+|FB:22637|Report Design|Forms|Removed button "Go To Online Documentation" from within the Features tab of the Settings page. This linked to old Izenda Knowledgebase that will be taken offline.|
+|FB:22711|UI|DashBoard|Dashboard error "An entry with the same keys already exists" when refreshing dashboard. resolved.|
+|FB:22239|Charts|Exporting|Trend and Bar charts are being compressed in HTML and PDF exporting. Resolved|
+|FB:22296|Charts|Visualization|Error when printing to HTML with visualizations, overlapping of visualizations in document. Fixed|
+|FB:22477|UI|Charts|Pie chart with Separator will not render in dashboard when used in report. Fixed|
+-->
 # 6.9.0.7 (November 25, 2015)
 
 |Case|Category|SubCategory|Description|
