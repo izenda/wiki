@@ -1,5 +1,5 @@
 [[_TOC_]]
-<!--
+
 # 6.10.0.1 (December 29, 2015)
 
 ##Features
@@ -52,7 +52,7 @@
 |FB:22239|Charts|Exporting|Trend and Bar charts are being compressed in HTML and PDF exporting. Resolved|
 |FB:22296|Charts|Visualization|Error when printing to HTML with visualizations, overlapping of visualizations in document. Fixed|
 |FB:22477|UI|Charts|Pie chart with Separator will not render in dashboard when used in report. Fixed|
--->
+
 # 6.9.0.7 (November 25, 2015)
 
 |Case|Category|SubCategory|Description|
