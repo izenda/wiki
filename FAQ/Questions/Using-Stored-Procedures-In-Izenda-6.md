@@ -228,3 +228,68 @@ Since Izenda primarily uses metadata to obtain information about schemas, views,
 * Return columns - The stored procedure MUST return the same columns in all cases. It is because the metadata expected when running the stored procedure must comply with the specifications given to it.
 * Temp tables - You can build temp tables with the stored procedure and return that as long as the rules above are followed. Just ensure that the returned value is not null. This allows Izenda to obtain metadata from the empty result set of the stored procedure.
 * Multiple values as one parameter - It is possible to pass multiple values as a single parameter. For instance, you can construct a comma separated list of values and pass that resulting string to the SP. It would then be possible to split the string into its respective parts within your SP.
+
+##Stored Procedures in Oracle
+
+As of Izenda 6.10.0.1, certain types of stored procedures can be used in Izenda with an Oracle database deployment. The criteria for stored procedures in Oracle such as needing the same columns to be returned in all situations is the same as MSSQL but with one additional condition: the stored procedure definition must be a [[table-valued pipeline function|http://docs.oracle.com/cd/B19306_01/appdev.102/b14289/dcitblfns.htm]]. This is the only way that Izenda will be able to detect what returned columns the stored procedure will yield.
+
+Example:
+
+```sql
+create or replace FUNCTION IZ_CUSTORDERSORDERS (CUSTOMER_ID IN VARCHAR2) RETURN IZ_CUSTORDERSORDERS_TB PIPELINED IS
+   RESULT_CUR SYS_REFCURSOR;
+   val_1 Orders.OrderID%TYPE;
+   val_2 Orders.OrderDate%TYPE;
+   val_3 Orders.RequiredDate%TYPE;
+   val_4 Orders.ShippedDate%TYPE;
+BEGIN
+  OPEN RESULT_CUR FOR
+    SELECT OrderID, OrderDate, RequiredDate, ShippedDate
+    FROM Orders
+    WHERE Orders.CustomerID = CUSTOMER_ID
+    ORDER BY OrderID;
+    
+  LOOP 
+    FETCH RESULT_CUR INTO val_1,val_2,val_3,val_4;
+    PIPE ROW(IZ_CUSTORDERSORDERS_TY(val_1,val_2,val_3,val_4));
+    EXIT WHEN RESULT_CUR%NOTFOUND;
+  END LOOP;
+    
+  CLOSE RESULT_CUR;
+  RETURN;
+END;
+```
+
+##Stored Procedures in MySQL
+
+As of Izenda 6.10.0.1, the use of stored procedures is also available in Izenda with a MySql database deployment. The criteria for stored procedures such as needing the same columns to be returned in all situations is the same as MSSQL but there are some additional steps that must be taken for Izenda to properly interact with the stored procedure.
+
+First, the [[MySqlConnectionString|/API/CodeSamples/MySqlConnectionString]] must be updated to include the following:
+
+`MULTI_STATEMENTS=1`
+
+Example:
+
+`Driver={MySQL ODBC 5.2 ANSI Driver};DSN=MySQL;Server=YOUR_SERVER_IP;Port=YOUR_SERVER_PORT;Database=northwind;User=northwind;Password=traders;Option=3;MULTI_STATEMENTS=1`
+
+Second, the stored procedure definition must contain a pattern of statements similar to the example below. Note that any line that does not include `/* Izenda-specific code */` may be substituted for your own code. Any place the stored procedure name appears such as `[sp_name]_spResult` requires the specific string `_spResult` on the end of the identifier to function properly.
+
+Example:
+
+```sql
+DELIMITER $$
+CREATE DEFINER=`northwind`@`%` PROCEDURE `izSales_by_Year`(in Beginning_Date Datetime,in Ending_Date Datetime)
+BEGIN
+	DROP TABLE IF EXISTS `izSales_by_Year_spResult`; /* Izenda-specific code */
+    CREATE TEMPORARY TABLE `izSales_by_Year_spResult` AS /* Izenda-specific code */
+	SELECT Orders.ShippedDate,
+	   Orders.OrderID,
+	  `Order Subtotals`.Subtotal,
+	  ShippedDate AS Year
+	FROM Orders  JOIN `Order Subtotals` ON Orders.OrderID = `Order Subtotals`.OrderID
+	WHERE Orders.ShippedDate Between Beginning_Date And Ending_Date;
+    
+	SELECT * FROM `izSales_by_Year_spResult`; /* Izenda-specific code */
+END$$
+DELIMITER ;
+```
