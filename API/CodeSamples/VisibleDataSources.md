@@ -60,10 +60,9 @@ End Class
 If you would like for all tables, views and stored procedures to be shown you can use the following schema query to populate the visible datasources. 
 
 **IMPORTANT!**
-**Stored Procedures that are not used for reporting must be limited using the where clause in this query. Stored Procedures are run when loading the data source list, so any that are used to drop tables, delete records, etc. should not be included.**
+**Stored Procedures that are not used for reporting must be limited using the where clause in this query. Stored Procedures are run when loading the data source list, so any that are used to drop tables, delete records, etc. should not be included. This will execute all Stored Procedures returned with NULL parameters. This should be used only for trialing and testing purposes.**
   
 **Note:** On initial loading of Izenda with this method, this could take moment to load depending on the number of data sources being loaded. It may give the appearance that the page is stalling. Please wait a few minutes to allow all data sources to be loaded and stored procedures to be run.  Alternatively, set [[AdHocSettings.LazySpMetadataPulling|http://wiki.izenda.us/API/CodeSamples/LazySpMetadataPulling]] equal to true, forcing Izenda to only run stored procedures if and when they are selected as a data source.
-
 ```csharp
 <%@ Import Namespace="System.Data" %>
 
