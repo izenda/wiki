@@ -7,8 +7,8 @@
 **Accepted Values:** Table, view and stored procedure names   
 **Default value:** Empty array  
 **Impacted Features:** Report Design, Report List  
-**Purpose:** Gets or sets the array of names for tables views, and stored procedures that should be shown in the "Data Sources (Tables, Views, and Stored Procedures)" drop-down in the Report Designer in the Data Sources tab.  
-**Usage:** This setting is used to make stored procedures appear in Izenda. Without this setting Izenda will present all Tables and Views by default. It is also used to limit what data sources each user has access to for security reasons.  
+**Purpose:** Gets or sets the array of names for tables views, and stored procedures that should be shown in Data Sources tab of the Report Designer and Instant Reports.  
+**Usage:** This setting is used to make specific tables, views, and stored procedures appear in Izenda. Without this setting Izenda will present all tables and views by default. It is also used to limit what data sources each user has access to for security reasons.  
 **Caveats:** Setting any values in this list will completely override the normally constructed list of tables and views on a per-user basis. Additionally, any reports that use a data source that is hidden from the current user will not be available for a user to access.  
 
 ##Code Samples
