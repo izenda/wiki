@@ -236,6 +236,10 @@ As of Izenda 6.10.0.1, certain types of stored procedures can be used in Izenda 
 Example:
 
 ```sql
+create or replace TYPE IZ_CUSTORDERSORDERS_TY AS OBJECT (OrderID NUMBER, OrderDate TIMESTAMP(6), RequiredDate TIMESTAMP(6), ShippedDate TIMESTAMP(6));
+
+create or replace TYPE IZ_CUSTORDERSORDERS_TB AS TABLE OF IZ_CUSTORDERSORDERS_TY;
+
 create or replace FUNCTION IZ_CUSTORDERSORDERS (CUSTOMER_ID IN VARCHAR2) RETURN IZ_CUSTORDERSORDERS_TB PIPELINED IS
    RESULT_CUR SYS_REFCURSOR;
    val_1 Orders.OrderID%TYPE;
