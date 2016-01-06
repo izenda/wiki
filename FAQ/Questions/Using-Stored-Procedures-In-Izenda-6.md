@@ -40,7 +40,7 @@ GO
 
 You can use SPs in either DatabaseAdHocConfig mode or FileSystemAdHocConfig mode, as long as the SP exists in your database.
 
-When using SPs, use the [[VisibleDataSources|/API/CodeSamples/VisibleDataSources]]] setting to contain the all the SPs, tables, and views that should be available as DataSources. Each of the strings in this list must exactly mirror the name of the SP, table, or view as it appears in your data source.
+When using SPs, use the [[VisibleDataSources|/API/CodeSamples/VisibleDataSources]] setting to contain the all the SPs, tables, and views that should be available as DataSources. Each of the strings in this list must exactly mirror the name of the SP, table, or view as it appears in your data source.
 
 **NOTE:** when the VisibleDataSources property is empty, all tables are visible by default, while all SP are hidden. If VisibleDataSources contains any names, then all tables not included in VisibleDataSources will become hidden. To use them, they must also be included in VisibleDataSources to be used together with SPs. In this code example, the table "DummyTable" is added to VisibleDataSources along with our SP to make it visible and denote the difference in naming between tables and SPs.
 
