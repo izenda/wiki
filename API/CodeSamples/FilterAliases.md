@@ -63,7 +63,7 @@ AdHocSettings.FilterAliases.Add("[dbo].[Orders].[ShipCity]", "DepartureCity");
 
 ![](/Home/2016-01-07-17_49_26-Report-Designer.png)
 
-###Alias Filter Field Names
+##UI Aliasing of Filter Names
 
 The filter field name can be aliased using the Description field. This can be accessed in the Report designer from the filter tab or from the viewer by clicking the gear icon in the filter.
 
