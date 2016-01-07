@@ -65,6 +65,16 @@ These terms refer to the types of columns that each visualization reads.
 
 #Visualization Styles:
 
+##Arc Map
+
+* Arc Map displays a map which ties a single metric at a time to pairs of cities.
+* Field 1 - **Geographic Field** - This field will represent the source city on the map. A line will be drawn from it to the destination city.
+* Field 2 - **Geographic Field** - This field will represent the destination city on the map. A line will be drawn to the destination city from the source city.
+* Field 3+ - **Metric** - These values of one field at a time, selectable from a dropdown, will be displayed on the map.
+**Notes:**
+* *  Metric fields will not graphically display if they are negative. Arc Map currently only supports the continental United States.
+
+
 ##Auto Chart
 
 ![Auto Chart](http://wiki.izenda.us/Guides/Izenda-Vision/Auto-Chart.png)
@@ -161,6 +171,14 @@ Automatic Gauges have four different modes:
 * Field 3 - **Metric** - This field will represent the value of each square.  
 **Notes:**
 * * Matrix can only render so many squares. If you aren't getting enough data on the time based X axis, try filtering out some items from the group based Y axis.
+
+##Projected Map
+
+* Projected Map displays a scalable, zoomable map which ties metrics to individual cities.
+* Field 1 - Geographic Field -  This field will represent lists of cities.
+* Field 2… - Metric - This field will represent the value selectable from a dropdown.
+**Notes:**
+* * Currently only the United States is supported.
 
 ##Sunburst
 
