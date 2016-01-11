@@ -4,9 +4,17 @@
 
 ##About
 
-This list allows the user specify additional SQL functions that should be included in the functions dropdown of the Fields tab. 
+This list allows the user specify additional SQL functions that should be included in the functions dropdown of the Fields tab. You can also enable functions in an [[Expression|http://wiki.izenda.us/API/CodeSamples/ExpressionFunctions]]
 
 Below is a sample global.asax using the ExtendedFunctions setting. The code block will appear within ``<script runat="server"> </script>`` tags within global.asax.
+
+##Best Practices
+
+* If a function will be used ONLY in an Expression, then you should use the ExpressionFunctions setting. Otherwise, use ExtendedFunctions to allow the function to be placed into the dropdown Function list in the report designer.
+
+* You should not use parentheses when you specify a function in ExtendedFunctions or ExpressionFunctions. All we want to do in these settings is list the function name itself, and not call the function.
+
+* When you specify a function in ExtendedFunctions you should use the full function name with schema. When you specify it in ExpressionFunctions short name is sufficient.
 
 ##Global.asax (C♯)
 
