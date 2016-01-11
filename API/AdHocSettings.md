@@ -133,6 +133,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Encoding|[[ExportEncoding|/API/CodeSamples/ExportEncoding]]| Gets or sets the default character encoding type for exporting reports. |Unicode (UTF-8)|
 |TextSharpFontWrapper|[[ExportFont|/API/CodeSamples/ExportFont]]| Gets or sets the font for the PDF and RTF outputs when using the iTextSharp library to generate exports. |(Size:10, Style:0, Color:Black)|
 |Int32|[[ExportLimit|/API/CodeSamples/ExportLimit]]| Gets or sets the maximum number of rows that can be exported at once. |100000|
+|String[]|[[ExpressionFunctions|/API/CodeSamples/ExpressionFunctions]]|Gets or sets the array of additional functions accessible in an Expression|[]|
 |NameValueCollection|[[ExtendedFormats|/API/CodeSamples/ExtendedFormats]]| Gets or sets the collection of additional formats that will be displayed in the ReportDesigner's "Format" dropdown lists. **(deprecated)**|{}|
 |String[]|[[ExtendedFunctions|/API/CodeSamples/ExtendedFunctions]]| Gets or sets the array of additional functions to display in the ReportDesigner's "Function" dropdown lists. |[]|
 |NameDistinctValueCollection|[[FieldAliases|/API/CodeSamples/FieldAliases]]| Gets or sets the collection of key-value pairs where the key is the field name and the value is a field alias. |{}|
