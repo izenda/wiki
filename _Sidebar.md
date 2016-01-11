@@ -16,7 +16,7 @@
 * <a href="http://www.izenda.com/blog" rel="nofollow" target="_blank">Izenda Blog</a>
 * <a href="http://www.izenda.com/company/" rel="nofollow" target="_blank">Company Page</a>
 * [Live Demo](http://izenda.com/demo/ReportList.aspx )
-* [Example Dashboard](http://izenda.com/bi/Dashboards.aspx?rn=Dashboard)
+* [Example Dashboard](http://izenda.com/demo/Dash.aspx#/Sales%20Dashboard)
 * <a href="http://www.izenda.com/izenda-vision/" rel="nofollow" target="_blank">Gallery</a>
 * <a href="http://www.izenda.com/contact-us/" rel="nofollow" target="_blank">Contact Page</a>
 
