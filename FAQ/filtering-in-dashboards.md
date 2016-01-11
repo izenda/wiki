@@ -39,7 +39,7 @@ To apply filters in a dashboard, all reports included in the dashboard must cont
 
 AdHocSettings.UseColumnNameForDashboardCommonFilters = True;
 
-       - Fully Qualified Name (EXample: View.ColumnName)
+       - Fully Qualified Name (Example: View.ColumnName)
 
 AdHocSettings.UseColumnNameForDashboardCommonFilters = False;
 
