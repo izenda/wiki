@@ -2,7 +2,7 @@
 
 To apply filters in a dashboard, all reports included in the dashboard must contain the same filter. 
 
-**New default behavior for Izenda dashboard filtering** (10/31/2013 - DLL v6.6.5052) looks at column names **ONLY** for matching report filters for dashboard filtering purposes.
+**New default behavior for Izenda dashboard filtering** looks at 'fully qualified' column names for matching report filters for dashboard filtering purposes by default.
 
 ---------
 
@@ -37,10 +37,19 @@ To apply filters in a dashboard, all reports included in the dashboard must cont
 
 --------
 
-**The default behavior in _classic_ Izenda is to look at _fully qualified_ column names:**
+AdHocSettings.UseColumnNameForDashboardCommonFilters = True;
+
+       - Fully Qualified Name (EXample: View.ColumnName)
+
+AdHocSettings.UseColumnNameForDashboardCommonFilters = False;
+
+       - Use 'ColumnName' Only
+--------
+
+**The default behavior in _classic_ (Pre v6.6) Izenda is to look at _fully qualified_ column names. During v6.7 the default was to use ColumnName only. The current default value is AdHocSettings.UseColumnNameForDashboardCommonFilters = True;**
 
 _dbo.suppliers.country_ _**IS NOT**_ _dbo.employees.country_ - though they may have many of the same values or the exact same- thus filters do not show up in dashboards at all for the above situation.
 
-To re-enable classic behavior, fully qualified column names for dashboard filtering, in your deployment after upgrading:
+To enable datasource-specific behavior, fully qualified column names for dashboard filtering, in your deployment after upgrading:
 
-``AdHocSettings.UseColumnNameForDashboardCommonFilters = false;``
+``AdHocSettings.UseColumnNameForDashboardCommonFilters = true;``
