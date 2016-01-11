@@ -5,7 +5,7 @@
 ##Features
 |Case|Category|SubCategory|Description|
 |:----|:---------------|:---------------|:---------------|
-|Architecture Update|**Internal**|**Browser Support**|**Izenda 6.10.0.x versions have dropped support for IE8. IE9+ must be used for versions 6.10.0.1 and later.**|
+|**Architecture Update**|**Internal**|**Browser Support**|**Izenda 6.10.0.x versions have dropped support for IE8. IE9+ must be used for versions 6.10.0.1 and later.**|
 |**HF:22762**|**Security**|**License Conflict**|**Hotfix patch to Izenda 6.10.0.1 to resolve a licensing conflict.**|
 |FB:22008|Framework|.NET Version Update |**Updated the Izenda .NET framework to 4.0**|
 |FB:13917|Data|Data Sources|Feature - Addition of support for Oracle Stored Procedures. The only stored procedures supported at this time are pipelined functions that return a table-valued object. See [[this documentation|http://docs.oracle.com/cd/B19306_01/appdev.102/b14289/dcitblfns.htm]] for more details on table-valued pipelined functions. Functionally, these work just like MSSQL stored procedures as far as Izenda is concerned. The processes for including them in VisibleDataSources, working with constraints, passing parameters as filters, etc are the same.|
