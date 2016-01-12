@@ -235,7 +235,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String|[[ReportsPath|/API/CodeSamples/ReportsPath]]|Gets or sets the path of the folder where the application stores its reports when running in [[Izenda.AdHoc.FileSystemAdHocConfig|/API/Izenda/AdHoc/Izenda-AdHoc-FileSystemAdHocConfig]] mode. If the value is null then reports will be stored in the "Reports" subfolder of the application folder.|[drive]:\[ApplicationFolder]\Reports|
 |Boolean|[[ReportsSharedByDefault|/API/CodeSamples/ReportsSharedByDefault]]| Gets or sets whether reports created by users are shared by default. **(deprecated)**|True|
 |StorageMode|[[ReportStorageMode|/API/CodeSamples/ReportStorageMode]]| Defines how reports are stored - in the file system or in the database **(deprecated)**|Filesystem|
-||[[ReportTimeStampTimeZoneOffset|/API/CodeSamples/ReportTimeStampTimeZoneOffset]]|Gets or sets the time zone offset in UTC|0|
+|Int32|[[ReportTimeStampTimeZoneOffset|/API/CodeSamples/ReportTimeStampTimeZoneOffset]]|Gets or sets the time zone offset in UTC|0|
 |ReportTypeCollection|[[ReportTypes|/API/CodeSamples/ReportTypes]]| Gets or sets the list of registered types of reports for use on the dashboard designer. **(deprecated)**|{Detail, Summary,<br>Chart, Gauge}|
 |String|[[ReportViewer|/API/CodeSamples/ReportViewer]]| Gets or sets the URL of the ReportViewer page. |ReportViewer.aspx|
 |Int32|[[ReportViewerDefaultPreviewResults|/API/CodeSamples/ReportViewerDefaultPreviewResults]]| Specifies the default maximum number of results displayed on the report viewer page for all reports. |100|
