@@ -12,7 +12,9 @@ Installation requires a license key. To get a new trial key, you may contact [sa
 
 By downloading software of Izenda LLC, you agree to the [End User License Agreement](http://www.izenda.com/wp-content/uploads/2014/10/IzendaSoftwareLicenseAgreement.pdf). If you do not agree with such terms and conditions, do not download the software.
 
-To start using Izenda Reports Starter Kit you should take a few simple steps. If you need more information about setup process, configuring reports, additional features or special cases please visit our [Knowledge Base](http://www.izenda.com/Site/KB/Integration/94).
+To start using Izenda Reports Starter Kit you should take a few simple steps. 
+<!--If you need more information about setup process, configuring reports, additional features or special cases please visit our [Knowledge Base](http://www.izenda.com/Site/KB/Integration/94).
+-->
 
 ###Step 1. Download the Starter Kit
 
@@ -89,7 +91,7 @@ The [[InitializeReporting()|http://wiki.izenda.us/FAQ/InitializeReporting]] meth
 
 ####Trial - Settings.aspx
 
-*This method should only be used for the trial. Continuing to use the Settings page in Production, especially in tandem with the InitializeReporting(), can cause issues.
+*This method should only be used for the trial. Continuing to use the Settings page in Production, especially in tandem with the InitializeReporting(), can cause conflicts.
 
 Open the website that you created in the previous step [http://localhost/reporting](http://localhost/reporting). You will be redirected to the Settings page. Go to the Database tab and fill the License Key and Connection String fields with real data. You should have received your trial License Key via email. If you have not received a key, please contact your account manager with Izenda or [sales@izenda.com](mailto:sales@izenda.com).
 	
@@ -110,7 +112,7 @@ Select your DataSources at the [[Data Sources|http://wiki.izenda.us/Guides/Repor
 ####Preview and Save report
 
 
-After you select all the data you want to see in report, click **Preview** and see the results immediately. Click **Save** on the tool bar to save your first report report. Categories can be created in the save menu to group reports. Categories self delete when depopulated (empty).
+After you select all the data you want to see in the report, click **Preview** and see the results immediately. Click **Save** on the tool bar to save your first report report. Categories can be created in the save menu to group reports. Categories self delete when depopulated (empty).
 	
 ![Preview and Save Report](http://kb.izenda.com/Reg/images/src6_previewnew.png)
 
@@ -132,11 +134,11 @@ Prior to starting, please make sure your system meets the following requirements
 * Microsoft Internet Information Server (IIS) 6 or higher
 * ASP.NET 2.0 and Higher
 * SQL Server 2000 - 2012, Oracle 9g or higher, MySQL 5 or higher, and a working connection string with proper read permissions to both data and metadata
-* Internet Explorer 6.0 or higher, Firefox 1.5 or higher, Chrome, or Opera
+* Internet Explorer 9.0 or higher, Firefox, Chrome, or Opera
 
 **Selecting a language and .NET version:**
 
-Izenda supports the .NET platform (all versions) for both C# and VB.NET. This is important if any code-level integration is needed. The starter kits referenced above are already configured to use .NET 2.0 (and higher) and C# or VB.NET respectively.
+Izenda supports the .NET platform (all versions) for both C# and VB.NET. This is important if any code-level integration is needed. The starter kits referenced above are already configured to use .NET 2.0 (and higher for versions prior to 6.10.0.1) and .NET 4.0 (and higher for 6.10.0.1 and above) and C# or VB.NET respectively.
 
 **Permissions:**
 
