@@ -59,7 +59,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.FileSystemAdHocConfig
         //Set connection string per-tenant
         AdHocSettings.SqlServerConnectionString = GetConnectionStringByCompany(company);
         //Set the stored reports file folder path per-tenant
-        AdHocSettings.ReportsPath="\\" +  company +  "\\" + GetUserDepartment(AdHocSettings.CurrentUserName);
+        AdHocSettings.ReportsPath = string.Format("\\{0}\\{1}", company, GetUserDepartment(AdHocSettings.CurrentUserName));
         //Set table and view access
         AdHocSettings.VisibleDataSources = GetTables(role); //get the allowed datasources based on role
         //Set all other settings
