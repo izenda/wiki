@@ -127,13 +127,16 @@ Izenda.Fusion.FusionDriver.AddODataConnection("OD", @"http://...aspx");
 You can use the FusionDriver to add multiple indirect database connections to your Driver's context:
 
 ```csharp
-//only for direct connections
+<%@ Import Namespace = "Izenda.Fusion" %>
+//Add the above to your Namespaces. Everything below should be placed within Initialize Reporting.
+
 //AdHocSettings.SqlServerConnectionString = "my_direct_connection_string";
+//Use the above for direct connections
 Izenda.Fusion.FusionDriver fd = new Izenda.Fusion.FusionDriver();
 fd.AddConnection("SqlNW", Izenda.Fusion.FusionConnectionType.MsSql, @"http://url_to_sql_connector.com/provider_endpoint.aspx");
 fd.AddConnection("OD", Izenda.Fusion.FusionConnectionType.OData, @"http://url_to_odata_connector.com/provider_endpoint.aspx");
 fd.AddConnection("OD2", Izenda.Fusion.FusionConnectionType.OData, @"http://url_to_odata_2_connector.com/provider_endpoint.aspx");
-AdHocSettings.AdHocContext.Driver = fd;
+AdHocContext.Driver = fd;
 ```
 
 ####3. Set up additional settings
