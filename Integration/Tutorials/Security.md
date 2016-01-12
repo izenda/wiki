@@ -101,7 +101,7 @@ public static void InitializeReporting()
 	//Set connection string per-tenant  
 	AdHocSettings.SqlServerConnectionString = GetConnectionForUser();  
 	//Set the stored reports file folder path per-tenant  
-	AdHocSettings.ReportsPath="\\"   GetUserCompany()   "\\"     
+	AdHocSettings.ReportsPath= string.Format("\\{0}\\", GetUserCompany());
 	AdHocSettings.CurrentUserTenantId = GetUserDepartment(); //Organizational level security    
         AdHocSettings.CurrentUserRoles = new string[]{GetUserRole()}; //Role based security
 	//Set table and view access  
