@@ -89,7 +89,7 @@ The license key and database connection can be set in one of two different ways,
 
 The [[InitializeReporting()|http://wiki.izenda.us/FAQ/InitializeReporting]] method is the ideal place to incorporate your settings since it provides you a high level of control over which settings are applied and the scope of their application. You can learn more by learning how to [[customize Izenda settings|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]].
 
-####Trial - Settings.aspx
+####Trial - Settings.aspx and Izenda.config
 
 *This method should only be used for the trial. Continuing to use the Settings page in Production, especially in tandem with the InitializeReporting(), can cause conflicts.
 
