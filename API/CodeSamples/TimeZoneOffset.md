@@ -3,7 +3,7 @@
 [[_TOC_]]
 
 ##About
-Sets an hour shift applied to each datetime in an Izenda report, in both data and filters. It is added before a report is executed, but not saved as part of the base report. This allows for all times to be shifted by a specific amount, which can be varied depending on the user or set globally. 
+Sets an hour shift applied to each datetime in an Izenda report, in both data and filters. It is added before a report is executed, but not saved as part of the base report. This allows for all times to be shifted by a specific amount, which can be varied depending on the user or set globally. To change the time zone offset applied to the time stamp of an exported report, use [[Report Time Stamp Time Zone Offset|http://wiki.izenda.us/API/CodeSamples/ReportTimeStampTimeZoneOffset]].
 
 **Default Value:** By default no action is taken. If a TimeZoneOffset is set, then that value will be applied to all datetimes. For example, a TimeZoneOffset of -10 will cause all datetimes to be passed to the database as DATEADD(Hour, -10, [OrderDate])
 ##Global.asax (C#)
