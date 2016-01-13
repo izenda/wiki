@@ -40,7 +40,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How to turn off "Report has been modified and report will be overridden" warning message?|http://wiki.izenda.us/API/CodeSamples/ShowModifiedReportMessage]]
 - [[How can I export reportset without placing it to session?|http://wiki.izenda.us/API/CodeSamples/RedirectExports]]
 - [[How do I customize font sizes?|/FAQ/Common UI Customizations]]
-- [[Is it possible to preset date values in time period filter?|/FAQ/Questions/How-To-Preset-Values-In-Filter]]
+- [[How can I preset date values in time period filter?|/FAQ/Questions/How-To-Preset-Values-In-Filter]]
 
 
 
