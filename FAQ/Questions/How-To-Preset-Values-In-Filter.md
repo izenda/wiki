@@ -45,5 +45,5 @@ You can use hidden filter to make reports pre-filtered whenever they are opened 
 ```
 ##Screenshots
 
-![](http://wiki.izenda.us/API/CodeSamples/ShowSettingsButton/toolbar_showsettingsbutton_false.png)
+![](http://wiki.izenda.us//FAQ/Questions/How-To-Preset-Values-In-Filter/Time_Period.png)
 
