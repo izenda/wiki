@@ -480,7 +480,8 @@ Two top logos have changed as below
 
 ![Test](/Guides/MVC-Integration/Logo_Change2.png)
 
+<!--
 [Izenda MVC Kit Integration Guide Phase II](http://wiki.izenda.us/Guides/MVC-Integration/Phase-II-Draft)
-
+-->
 
  
