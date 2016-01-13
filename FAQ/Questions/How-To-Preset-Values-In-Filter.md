@@ -43,4 +43,7 @@ You can use hidden filter to make reports pre-filtered whenever they are opened 
     }
 
 ```
+##Screenshots
+
+![](http://wiki.izenda.us/API/CodeSamples/ShowSettingsButton/toolbar_showsettingsbutton_false.png)
 
