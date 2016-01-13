@@ -13,6 +13,7 @@ You can use hidden filter to make reports pre-filtered whenever they are opened 
 
 ###Example: Presetting a time period (From a year ago to Today)
 
+###C#
 ```csharp
     public override void PreExecuteReportSet(ReportSet reportSet) 
     {
