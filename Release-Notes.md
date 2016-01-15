@@ -167,7 +167,7 @@
 |20948|Feature|Auto Chart|Implemented change to always show Denominator in the Auto Gauge Round Style.|
 |20974|Feature|Visualization|Introduced setting for visualization base path|
 |21260|Feature|Fusion|Implementation of stored procedures joined from different fusion connections|
-|21311|Feature|UI|New Setting to disable Izenda  automatic divide by zero handling in both regular and subtotal expressions |
+|21311|Feature|UI|New Setting to disable Izenda  automatic divide by zero handling in both regular and subtotal expressions AdHocSettings.UseSafeDivisionInExpressions = false;|
 |21317|Feature|Filters|AdHocSettings.AutoOrForRepeatFilters setting implemented|
 |21343|Feature|Filters|Improved style for popup filter on Dashboard 2 - uses modal|
 |21430|Feature|Export|Support Landscape orientation inPhantom PDF export implemented|
