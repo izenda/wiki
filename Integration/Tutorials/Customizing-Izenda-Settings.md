@@ -96,7 +96,7 @@ For more a more detailed code sample, click any of the headings.
 
 ##How do I add custom code?
 
-To enable a custom configuration, we must put the key and connection string in the ``InitializeReporting()`` method. **If settings have already been set on the **Settings.aspx** page, they should be removed and set via code in the global.asax- otherwise, there could be complications when initializing. When adding custom code for a production integration, we recommend disabling **Settings.aspx** and **Izenda.config** altogether to prevent any conflicts from occurring.** Here is the process flow for enabling custom code: 
+To enable a custom configuration, we must put the key and connection string in the ``InitializeReporting()`` method. **If settings have already been set on the Settings.aspx page, they should be removed and set via code in the global.asax- otherwise, there could be complications when initializing. When adding custom code for a production integration, we recommend disabling Settings.aspx and Izenda.config altogether to prevent any conflicts from occurring.** Here is the process flow for enabling custom code: 
 
   * Navigate via the file system to the root directory of your Izenda Reports installation
   * Open your global.asax file in a text editor or your favorite IDE
