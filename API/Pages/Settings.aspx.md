@@ -7,7 +7,9 @@
 
 Izenda Reports allows basic configuration through its settings page. In this page you will find many options that can be configured with a simple button click. Using your browser, navigate to http://yourwebsiteroot/ApplicationName/settings.aspx to access this page. This page also includes diagnostic tests that you can use to ensure all the processes function before you begin using Izenda Reports. You can also get a full list of settings, their functions, and their default values by reviewing the [[AdHocSettings|http://wiki.izenda.us/API/AdHocSettings]] class. Generally, this page will be hidden from average users.
 
-_**Note:** The primary purpose of this page is to be a diagnostic page and a demonstration for common settings on our demo site. This way people can see what effect certain settings have on the application before committing to writing the InitializeReporting method. **THE SETTINGS PAGE AND IZENDA.CONFIG SHOULD BE ONLY USED IN TRIALS & EVALUATIONS NOT IN PRODUCTION DEPLOYMENTS.**_
+_**Note:** The primary purpose of this page is to be a diagnostic page and a demonstration for common settings on our demo site. This way people can see what effect certain settings have on the application before committing to writing the InitializeReporting method. 
+
+**THE SETTINGS PAGE AND IZENDA.CONFIG SHOULD BE ONLY USED IN TRIALS & EVALUATIONS NOT IN PRODUCTION DEPLOYMENTS.**_
 
 ![The Settings Page](http://wiki.izenda.us/Integration/Tutorials/connect-to-the-database/settings_aspx.png)
 
