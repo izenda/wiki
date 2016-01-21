@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the default color used for alternating items in a table on the default tabular Izenda report layout.
+Gets or sets the default color used for alternating items in a table on the default tabular Izenda report layout. This color will be alternated with the [[DefaultReportItemColor|/API/CodeSamples/DefaultReportItemColor]].
 
 **Default Value:** Gainsboro
 
