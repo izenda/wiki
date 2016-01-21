@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the default color used in the background of cells on the default tabular Izenda layout.
+Gets or sets the default color used in the background of cells on the default tabular Izenda layout. This color will be alternated with the [[DefaultAlternatingItemColor|/API/CodeSamples/DefaultAlternatingItemColor]].
 
 **Default Value:** White
 
