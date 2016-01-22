@@ -4,9 +4,9 @@
 
 There is no single life-cycle of caching in Izenda. There are several caches which act simultaneously and independently on each other, the 'cycle' will always be different depending on your given Izenda usage scenario.
 
-But for each cache individually a life-cycle of course exists and it is rather strict.
+However, each cache has an individual life-cycle that exists and is rather strict.
 
-We describe below caches existing in Izenda, and provide a brief life-cycle for each of them.
+Below is a description of the caches existing in Izenda along with a brief life-cycle for each of them.
 
 ### DatabaseSchema-related caches in Driver class.
 
