@@ -19,14 +19,14 @@ Any upgrades going forward will require to to copy the contents of the Bin folde
 |21930|Report Design|Optimization|Fix: Erroneous long decimal values in Dashboard.|
 |21934|Report Design|Optimization|Fixed long load times as StoredProcedures queried on rpeport load. If following setting is added to Global: AdHocSettings.ValidateExistingReportsInDesigner = false; then Izenda doesn't validate tables/columns in database for existing reports when constructing list of them for reportDesigner (so it still checks if user has access rights to this reportset, tenant, etc. Also it doesn't affect ReportList or anything else except designer). This results in much faster reportDesigner loading, along with no pulling any StoredPProcedure metadata from database for existing reports, though reportDesigner will still show list of subreports, mark datasources which are used in any reports, etc.|
 |21935|Feature|Optimization|Fixed Oracle numeric types mapping bug and added datatype mapping control. EX: AdHocContext.Driver.NativeToInternalTypesMap["NUMBER(18,0)"] = SqlType.TimeStamp;|
-|21963|Report Design|Optimization|Fix: Issue with IR pages not respecting FieldsRegex.|
+|21963|Report Design|Optimization|Fix: Issue with Instant Report pages not respecting FieldsRegex.|
 |22041|Feature|Optimization|Fix: The date in the header will be displayed, even though we didn't select the "Show date and time".|
-|22070|Dashboards|UI|Fixed issue with Dashboard background images not covering top of Dashboard area.|
-|22110|Dashboards|UI|Hover text from individual dashboard tiles is behind other tiles in dashboard making it unreadable.|
+|22070|Dashboards|UI|Fixed issue with Dashboard background images not covering the top of Dashboard area.|
+|22110|Dashboards|UI|Hover text from individual dashboard tiles is behind adjacent tiles in the dashboard.|
 |22131|Report Design|UI|Show Legend Checkbox is implemented.|
-|22140|Feature|Forms|You can now add css to the body of a form itself using the <!--FORMSTYLE--> tag|
+|22140|Feature|Forms|You can now add css to the body of a form itself using the <!--FORMSTYLE--> add CSS here <!--FORMSTYLE--> tag|
 |22157|Dashboards|UI|After re-sizing a tile in the dashboard, scroll bars appear on unaltered tiles and will continue to display until the unaltered tile is selected for re-sizing.|
-|22193|Report Design|Optimization|Refactor of inefficient Pivot queries for enhanced performance.|
+|22193|Report Design|Optimization|Refactored Pivot queries for enhanced performance.|
 |22235|Report Design|Filters|Fix: Issues and inconsistency found in Filters for Fields with NULL or a Blank available as value.|
 |22254|Report Design|Export|CSV files downloaded from Report Viewer and report Designer are having same file size|
 |22260|Report Design|Filters|Fixed issue with filters, where with two different joins of the same table, one aliased, any change you make to one is copied over to the other when you click "update results".|
