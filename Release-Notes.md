@@ -1,5 +1,81 @@
 [[_TOC_]]
 
+# 6.10.0.2 (January 26, 2016)
+
+##Important Note about 6.10.0.2
+The update process has changed for stand alone MVC versions using Izenda's solution file.  
+It is recommended that when upgrading to this version (if you are using a stand alone) to download a new RI.
+Any upgrades going forward will require to to copy the contents of the Bin folder of the upgrade pack into your existing Bin folder and another copy into the new Lib folder.
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|17815|API|Optimization|AdHocSettings.AllowVisualGroups setting is deprecated and will no longer be available.|
+|19792|Report List|Optimization|Enhancement of thumbnail generation process fixing incompatibilities with Azure Web Apps and other scenarios with COM restrictions.|
+|20471|Report Design|Gauge|Applying highlight to calculated field then applied to a gauge breaks the gauge. Fixed.|
+|21106|Report Design|Charts|Fix: The Bezier curves on the Funnel Chart slice labels is off in viewer and Dashboards.|
+|21642|Report Design|Charts|Fix: Legends not showing in pie charts|
+|21816|Report Design|UI|Fix: "..." appears in grid; Error with links in CG fields; Issue with "" in field names.|
+|21885|Report Design|Expressions|When one adds a field, and the adds and expression to that field under advanced settings, that expression is then added to any NEW field of the same name when using either insert field above/insert field below.|
+|21930|Report Design|Optimization|Fix: Erroneous long decimal values in Dashboard.|
+|21934|Report Design|Optimization|Fixed long load times as StoredProcedures queried on rpeport load. If following setting is added to Global: AdHocSettings.ValidateExistingReportsInDesigner = false; then Izenda doesn't validate tables/columns in database for existing reports when constructing list of them for reportDesigner (so it still checks if user has access rights to this reportset, tenant, etc. Also it doesn't affect ReportList or anything else except designer). This results in much faster reportDesigner loading, along with no pulling any StoredPProcedure metadata from database for existing reports, though reportDesigner will still show list of subreports, mark datasources which are used in any reports, etc.|
+|21935|Feature|Optimization|Fixed Oracle numeric types mapping bug and added datatype mapping control. EX: AdHocContext.Driver.NativeToInternalTypesMap["NUMBER(18,0)"] = SqlType.TimeStamp;|
+|21963|Report Design|Optimization|Fix: Issue with IR pages not respecting FieldsRegex.|
+|22041|Feature|Optimization|Fix: The date in the header will be displayed, even though we didn't select the "Show date and time".|
+|22070|Dashboards|UI|Fixed issue with Dashboard background images not covering top of Dashboard area.|
+|22110|Dashboards|UI|Hover text from individual dashboard tiles is behind other tiles in dashboard making it unreadable.|
+|22131|Report Design|UI|Show Legend Checkbox is implemented.|
+|22140|Feature|Forms|You can now add css to the body of a form itself using the <!--FORMSTYLE--> tag|
+|22157|Dashboards|UI|After re-sizing a tile in the dashboard, scroll bars appear on unaltered tiles and will continue to display until the unaltered tile is selected for re-sizing.|
+|22193|Report Design|Optimization|Refactor of inefficient Pivot queries for enhanced performance.|
+|22235|Report Design|Filters|Fix: Issues and inconsistency found in Filters for Fields with NULL or a Blank available as value.|
+|22254|Report Design|Export|CSV files downloaded from Report Viewer and report Designer are having same file size|
+|22260|Report Design|Filters|Fixed issue with filters, where with two different joins of the same table, one aliased, any change you make to one is copied over to the other when you click "update results".|
+|22266|Report Design|Expressions|When Join Alias is added it does not work in the Expression, also table name stops working.|
+|22272|API|Visualization|Fix: Issues with IE9 translucency of the AutoChart tool-tip|
+|22316|Feature|Export|Fixed issue with exporting to CSV always returns an excel spreadsheet with the error "Could not pickup appropriate connection" instead of data. Specifically applies to OData connection with BulkCSV enabled.|
+|22329|Report Design|UI|Adding constraints using the Izenda.AdHoc.AdHocContext.Driver.AddConstraint method caused garbled field headers when using a pivot.|
+|22333|API|Optimization|Updated report name dialog, so now it respects AllowCreateNewCategory setting and don't show "Create New Category" option when AllowCreateNewCategory is false.|
+|22335|Report Design|Gauge|Fix: Autogage does not respect $/100 format|
+|22340|Report Design|Export|Fix: No report found on excel when exporting a report with a subreport on dashboards.|
+|22352|Report Design|Gauge|Fix: The value and Format of Radial Gauge is incomplete when it is previewed.|
+|22353|API|Optimization|Fixed issue with exceeding of url length of GET requests in report designer, replaced all with POST.|
+|22377|API|Export|PhantomJS headers repeating disabled, hiding bug in core PhantomJS tool. EVO PDF engine added as alternative.|
+|22394|API|Optimization|Fix: Made class serializable that wasn't previously. Exception type: SerializationException Exception message: Type 'Izenda.AdHoc.Webservices.SubreportFiltersCollection' in Assembly 'Izenda.AdHoc, Version=6.9.0.6, Culture=neutral,|
+|22401|Report Design|Export|Dates changing to number text after exporting to excel when grouped by year/month in report designer.|
+|22421|Report Viewer|UI|Fix: Issue with viewer sorting behavior when ResponsiveGrid is on and more columns are added than screenwidth can display.|
+|22432|API|UI|Fix spelling error on dashboard scheduler page dashboards says "Recepients" in the email to box. Corrected to show correct spelling "Recipients".|
+|22436|Report Design|Visualization|Changing the selection process for Visualization types on the Report Designer Charts tab from radio button to clicking image or name under the image.|
+|22449|Dashboards|UI|In Dashboard V2 when filter panel is expanded, the mouse over function in the dashboard grid is not correct. The mouse hovers over one grid square but a different gird square is highlighted. Resolved hover over grid item is also the selected one.|
+|22456|Report Design|Filters|Fix to 'Between' filter operator availability and addition of between calendar support to the dashboard.|
+|22508|API|Optimization|Fix loss of timezone offset when certain grouping combinations are used.|
+|22533|Dashboards|UI|Corrected spelling on dashboards|
+|22539|API|Optimization|Separated 'Linear' and 'Logarithmic' gauge scaling|
+|22551|Instant Reports|Saving|Error message displayed to user when attempting to save a report from New DEMO IR page in a new Reference Implementation without a Reports folder. Change made to create folder for user to save report definition.|
+|22585|API|Filters|Fixed a null reference exception when report is opened with filter values passed in a url.|
+|22587|Report Design|Filters|Fixed lost filter logic parameters upon report export.|
+|22598|Report Design|Optimization|Fix: Fields dropdown delays in MVC. Implemented optimization in branch FB-22598, now adding field works ten times faster.|
+|22602|Report Design|Visualization|Heatmap issue with values/labels not exporting to PDF fixed.|
+|22614|Instant Reports|UI|Add "Expose as datasource" option for Virtual Datasources to new DEMO Instant Report page.|
+|22651|API|Optimization|Fix: Broken recognition on multiple constraints containing foreign keys.|
+|22662|Instant Reports|Filters|BETA New Instant Report page added support of Param indicator for filters. This allows the user creating the report the ability to display filters to the report viewer as parameters for changing the report filter values. This ability is based on the sharing rights given to the viewing user.|
+|22676|Instant Reports|Filters|New Instant Report Page added support for filter descriptions. User can change the name of the filter for viewing in the report viewer.|
+|22683|Feature|Visualization|User help information added into base fileset for AutoGauge & Flowchart visualizations.|
+|22701|Instant Reports|UI|Added responsive behavior for reduced screen sizes for New Instant Report page. For mobile all items are moved to left panel and UI elements are are adapted for small screen size.|
+|22712|Dashboards|UI|Fix: Report Parts on dashboard disappear if Show tile options was clicked while the print tile report is open in another window.|
+|22717|Dashboards|Filters|Autocomplete filters from reports are not functioning in Dashboard V2. Data is not displaying when user types in any data to the filter. Resolved.|
+|22748|Report Design|UI|Fixed css style which prevents proper Width value from being applied.|
+|22753|Dashboards|UI|When using setting AdHocSettings.ShowSaveControls = false; the setting is not removed from the Dashboard V2 page. Resolved, setting now disables all save functionality from Dashboard page.|
+|22762|API|Optimization|Izenda License keys were not expired as expected. After the fix testing is done in all the environments i.e. SQL, MySQL, Oracle, PostGress, ODATA, MVC.|
+|22773|Report Design|Visualization|Adding help text for ArcMap and Projected Map in Visualizations area of Report Designer.|
+|22787|API|Optimization|When using tables with "." in name. Constraints were not loading from the database to allow users to join tables in simple mode of Report Designer and Instant Reports. Resolved now tables names with "." are not blocking constraints.|
+|22818|Report Design|Charts|Fix: Y-Axis labels improperly formatted for right-hand Y-Axis values.|
+|22861|Scheduler|Optimization|Fix: Scheduled Dashboard uses 'ReportViewer' link instead of 'Dashboards' link.|
+|22875|API|Optimization|Fix: Minimization of StoredPocedure calls amount when rendering reportSet with several reports.|
+|22922|Feature|UI|Folder structure modified to alleviate issues with helper files being deleted on Clean or Rebuild processes in Visual Studio. New Libs folder now contains a copy of the bin folder (must be kept up-to-date on maintenance release upgrades where bin folder is replaced without a new RI) to keep helper files from being deleted when the project is cleaned.|
+|22945|Report Design|UI|Fixed grid filtering based on Viz drilldowns.|
+|22968|Report Design|UI|Fixed broken HTML charts (HiCharts) in MVC deployments.|
+|23045|Report Design|UI|Regression issue using popup filter. The selection of values in pop up after save causes report to display no records selected.|
+
 # 6.10.0.1 (December 29, 2015)
 
 ##Features
