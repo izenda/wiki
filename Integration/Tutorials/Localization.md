@@ -5,7 +5,7 @@
 
 ###Izenda Language Pack
 
-Izenda provides an add-on localization package capable of localizing the Izenda UI, Field Names as well as the data itself into other languages.
+Izenda provides a localization package capable of localizing the Izenda UI, and Field Names into other languages.
 What version of AdHoc supports the Language Pack?
 
 To use the Language Pack you should have Izenda AdHoc of version 6.4.4314 or higher
