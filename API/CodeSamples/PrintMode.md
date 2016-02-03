@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the value indicating what print mode will be used for printing reports on the ReportDesigner. There are a number of different settings for this property consisting of different combinations of HTML and PDF formats. This setting also controls the legacy ReportViewer toolbar. It currently has no effect on the modern ReportViewer.
+Gets or sets the value indicating what print mode will be used for printing reports on the ReportDesigner. There are a number of different settings for this property consisting of different combinations of HTML and PDF formats. This setting also controls the legacy ReportViewer toolbar. As of Izenda 6.9, it has no effect on the modern ReportViewer.
 
 **Default Value:** PrintMode.Html2PdfAndHtml (PrintMode.PdfAndHtml for version 6.5 and lower)
 
