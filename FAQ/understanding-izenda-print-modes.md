@@ -1,5 +1,7 @@
 #Understanding Izenda Print Modes
 
+**NOTE:** - PrintMode is only used for Izenda 6.8.x.x and lower. Version 6.9 and above uses [[PDFPrintMode|/API/CodeSamples/PdfPrintMode]].
+
 **PDF** - Shows button for printing to PDF via iTextSharp only.
 
 **HTML** - Shows button for printing to HTML only.
