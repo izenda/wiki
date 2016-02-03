@@ -42,7 +42,7 @@ Izenda now also offers the option of using a service-based scheduler. The MSI in
 
 The service-based scheduler is now ready to run and will call the requested URL each time the interval elapses from the time the service was started.
 
-##Enabling scheduling controls in the application
+<!--##Enabling scheduling controls in the application
 
 Next, we must allow the schedule controls to be shown in the Report Designer page. This can be done in one of two ways.
 
@@ -64,8 +64,9 @@ Izenda.AdHoc.AdHocSettings.ShowScheduleControls = true;
 ```
 
 The schedule controls will now be shown in the report designer under the [[Misc tab|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab]].
+-->
 
-##Setup using the Settings.aspx page (Trial/POC)
+##Setting up the scheduler using the Settings.aspx page (Trial/POC)
 
 To use the Settings.aspx page:
 
@@ -74,11 +75,12 @@ To use the Settings.aspx page:
 * Set the "Email From Address" field (e.g. admin@yourdomain.com).
 * Check the "Show Schedule Controls" check box
 * Enter in your SMTP relay server in the "Smtp Server" field (e.g. smtp.yourcompany.com).
+* Click "Save to Izenda.Config" in the upper left-hand corner
 * Open a report you want to schedule in the report designer, click the “Misc” tab of the report. The scheduler controls will be towards the bottom of the page. Enter the email addresses separated by commas. Set the report type and the repeat frequency. You must set the repeat frequency in order to schedule the report.
 * Save the report again.
 * The e-mail scheduler setup is now finished.
 
-##Setup using the Global.asax (Production)
+##Setting up the scheduler using the Global.asax (Production)
 
 To set the settings in the Global.asax:
 
