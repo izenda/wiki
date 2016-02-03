@@ -26,7 +26,6 @@ public class CustomAdHocConfig : FileSystemAdHocConfig {
       AdHocSettings.ReportCssUrl = "Resources/css/Report.css";
       AdHocSettings.ShowBetweenDateCalendar = true;
       AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-      AdHocSettings.PrintMode = PrintMode.Html2PdfAndHtml;
       AdHocSettings.ChartingEngine = ChartingEngine.HtmlChart;  //relevent setting, default in Global.asax
    
 
