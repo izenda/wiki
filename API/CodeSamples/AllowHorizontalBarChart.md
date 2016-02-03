@@ -25,7 +25,6 @@ public class CustomAdHocConfig : FileSystemAdHocConfig {
       AdHocSettings.ReportCssUrl = "Resources/css/Report.css";
       AdHocSettings.ShowBetweenDateCalendar = true;
       AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-      AdHocSettings.PrintMode = PrintMode.Html2PdfAndHtml;
       AdHocSettings.ChartingEngine = ChartingEngine.HtmlChart;
       AdHocSettings.AllowHorizontalBarChart = false;     //relevent setting, setting to false removes horizontal checkbox option for bar chart editor
 ```
