@@ -16,6 +16,17 @@ This is the name specified for the report (e.g. a report named Cost Analysis wou
 **output=[ExportFormat], export=[ExportFormat]**
 This will generate the desired export of the tabular data in the report (e.g. rs.aspx?rn=Cost+Analysis&output=pdf)
 
+Here are the types you can request.
+
+| File Type  |      Expected Identifier      | 
+|----------|-------------|
+| PDF | pdf |
+| CSV | csv | 
+| Word | doc |
+| Excel | xls |
+| JSON | json |
+| XML | xml |
+
 **run_scheduled_reports=[Minutes]**
 Adds the report to the [[Izenda Scheduler|http://wiki.izenda.us/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler]] to be run after the designated period of time (e.g. rs.aspx?rn=Cost+Analysis&run_scheduled_reports=30)
 
@@ -44,3 +55,9 @@ Possible Values
 * getpivotguidata - returns the current report set's pivot data along with field names applicable to the current report set and all possible values for pivoting
 
 *Note: At this time, Izenda supports at most 5 query string parameters*
+
+##Example
+
+Here is a sample of a query in action using some of the concepts described above.
+
+http://izenda.com/demo/rs.aspx?output=doc&rn=Accounting&p1value=Alfreds+Futterkiste
