@@ -155,6 +155,23 @@ _**Note:** Since the chart is rendered after any javascript page events are call
 </div>
 ```
 
+Below is a simple method for resetting the array of colors a chart draws from.
+
+```csharp
+public override void CustomizeChart(object chart, Hashtable properties)
+{
+	string newColors = "['#aa00ff', '#ccdd55', '#11ff44', '#dddeee', '#bababa', '#ccccee', '#fdae6b', '#fdd0a2', '#31a354', '#74c476', '#a1d99b', '#c7e9c0']";
+		
+	StringBuilder csb = (StringBuilder)chart;
+	string content = chart.ToString();
+	content = Regex.Replace(content, @"(?<=colors:\s+)htmlChartColors", newColors);
+	csb.Remove(0, csb.Length);
+	csb.Append(content);
+}
+```
+
 ##VISION
 
 Visualizations must be customized directly within the /Vis directory. Please see the D3 documentation for more information. https://github.com/mbostock/d3/wiki
+
+You can also check the Izenda wiki page for [[customizing a visualization|/FAQ/How-Do-I-Customize-A-Visualization]] for examples.
