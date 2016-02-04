@@ -28,4 +28,4 @@ Allows customization of the process that saves the form attached to a report
 
 ```
 
-_**Note:** The overriden SaveThumbnail method must NOT contain anything which can trigger HttpContext.Current getter call, including reportInfo.FullName.
+**Note:** The overriden SaveThumbnail method must NOT contain anything which can trigger HttpContext.Current getter call, including reportInfo.FullName.
