@@ -4,7 +4,7 @@
 
 ##Preface
 
-This page is about creating a new visualization, or customizing an existing visualization. This page will explain the major statements and components of the javascript that powers a visualization.
+This page is about creating a new visualization, or customizing an existing visualization. This page will explain the major statements and components of the javascript that powers a visualization. If you want to customize a chart instead, check the [[CustomizeChart|/FAQ/CustomizeChart]] method.
 
 ## Setup
 
