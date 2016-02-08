@@ -51,7 +51,7 @@ Any upgrades going forward will require to to copy the contents of the Bin folde
 |22533|Dashboards|UI|Corrected spelling on dashboards|
 |22539|API|Optimization|Separated 'Linear' and 'Logarithmic' gauge scaling|
 |22551|Instant Reports|Saving|Error message displayed to user when attempting to save a report from New DEMO IR page in a new Reference Implementation without a Reports folder. Change made to create folder for user to save report definition.|
-|22585|API|Filters|Fixed a null reference exception when report is opened with filter values passed in a url.|
+|22585|API|Filters|Fixed a null reference exception when report is opened with filter values passed in a URL, also resolving issues where Left Join fails to render a report.|
 |22587|Report Design|Filters|Fixed lost filter logic parameters upon report export.|
 |22598|Report Design|Optimization|Fix: Fields dropdown delays in MVC. Implemented optimization in branch FB-22598, now adding field works ten times faster.|
 |22602|Report Design|Visualization|Heatmap issue with values/labels not exporting to PDF fixed.|
