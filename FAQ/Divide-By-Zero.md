@@ -36,4 +36,4 @@ Izenda contains logic to detect when an expression might produce a DIV/0 error. 
 CASE WHEN [OrderID]=0 THEN CAST(2147483647 AS float) ELSE [Freight]/[OrderID]
 ```
 
-Using the number seen in the cast will indicate to Izenda that it should use the DIV/0 format option for that value. This is one of the few times that Izenda will modify any code you place in an expression.
+Using the number seen in the cast will indicate to Izenda that it should use the DIV/0 format option for that value. This is one of the few times that Izenda will modify any code you place in an expression. You can disable this behavior using AdHocSettings.[[UseSafeDivisionInExpressions|/API/UseSafeDivisionInExpressions]]
