@@ -9,7 +9,7 @@ Gets or sets the value indicating what print mode will be used for printing PDF 
 **Default Value:** PdfMode.EOPDF
 
 Possible values:
-* EOPDF
+* EOPDF **(not currently supported in windows 10)**
 * PhantomJs - Available 6.9 **(not currently compatible with Azure PaaS installations)**
 * EvoPdfAzureCloudService - Available 6.10 **(Uses cloud service which must be configured for use. More information on setting up service can be downloaded [here](http://wiki.izenda.us/API/CodeSamples/PdfPrintMode/Pdf-Exports-in-Azure-Websites.docx))**
 * EvoPdf - Available 6.10
