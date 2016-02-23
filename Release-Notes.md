@@ -1,5 +1,82 @@
 [[_TOC_]]
 
+# 6.10.0.3 (February 23, 2016)
+
+## Features
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|19644|API|Optimization|Added intelligent schema labelling in ReportDesigner 'DataSources' tab, which applies schema names when two DataSources have the same name from two different schemas.|
+|20555|Report Design|Optimization|Added Support of Server Side sorting in the Report Viewer. Setting which controls the behavior is AdHocSettings.SortGridOnServerInViewer. The default value is set to false so the behavior will remain the same for all existing customers. This change only works in the Report Viewer, on other pages default client-side filtering should be utilized by changing the sort on the field in the designer. - All active field settings are shown and user can change the sort on multiple columns. With pure client-side sorting there is no way to apply sorting hierarchy while in this case we can do this so user can cycle asc/desc/none sorting on any column keeping previously saved sort. For instance, you could sort by Country and by City using this new feature while with the old sorting you can sort either by Country or by City. - Applied sorting is respected in exports. - In case of a pagination current page is preserved.|
+|22561|API|Optimization|Added setting for number of recently updated reports to allow client to set a value for how many should be displayed.  The default value for the new setting, AdHocSettings.RecentlyUpdatedCountAtReportList is 10 but any other interger may be used.|
+|22608|Instant Reports|Optimization|Added support for BETA Instant Report page for user to drag new field into the work area between two existing fields on a report. User can drag existing fields around in the report work area to change position as well.|
+|22703|Instant Reports|Optimization|Adding support for creating pivots in the BETA New Instant Report page.|
+|22704|Instant Reports|UI|Rearranged the Field formatting options on the field panel. |
+|22708|Instant Reports|Optimization|Enabled full support of FUSION with DataSourceCategories API for InstantReports 1.0/2.0. FUSION connections and DataSourceCategories now both create hierarchies in IR 1.0/2.0.|
+|23251|Report Design|Expressions|Changed default of vlue of AdHocSettings.ShowModifiedReportMessage to false from true. This feature has been noted to cause issues for some client and the default has been changed until a final resolution can be made to enhance the feature.|
+
+## Fixes
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|18570|UI|Visualization|Fixed an issue where  the Drilldown on Visualization "AutoChart" were not properly drilling down on Ipad and similar smaller mobile and tablet devices.|
+|18933|Report Design|Optimization|Fix of regression bug where if you create a report with a concatenated field, remove & re-add that field from the viewer, it loses its original concatenated value. Also of note, if you edit the report from the same page after this happens, the order of the fields is different.|
+|19948|Report Design|Optimization|Standardized 'Report Visibility' syntax in XML between ReportDesigner and InstantReports.|
+|21403|Feature|Optimization|AdHocSettings.UltimateDbCommandTimeout added. When value is >0 DB request for filling the DataSet is executed asynchronously. If specified time is passed but DataSet is not yet filled then DB command is interrupted and canceled.|
+|21620|Report Design|Optimization|Fixed JavaScript error in Internet Explorer created by Date picker due to change of focus.|
+|21699|API|Optimization|Refactoring of initialization flags enhancing Izenda's compatibility with various webfarm environments.|
+|21755|Dashboards|Visualization|When adding a Visualization to a report part on a dashboard, the sizing element has been removed. The size change cannot be saved in the dashboard as the report part is loaded from the current report format. If a sizing change is needed it should be made in the report and saved there.|
+|22000|API|Optimization|Fixed issue with browser zoom settings overzealously moved the InstantReports preview area to the screen bottom, emulating narrow screen (mobile) behavior on full monitors.|
+|22225|Report Viewer|Export|Fixed an issue with printing to HTML from report viewer where user could only print one time. On second try there is no response when clicking selecting the Print to HTML print option.|
+|22275|API|Export|Reimplemented feature "Limit Outputs to CSV". This allows the report designer to select this option on the Misc tab of the report designer and when the report is viewed in the Report Viewer only CSV and XML export options are shown for export. This is useful in larger report sets where exporting may be very lengthy or where data is needed for export.|
+|22348|API|UI|Fixed issue moving from InstantReports to ReportViewer where 'Area' chart is changed back to 'Column' chart default.|
+|22395|Report Design|Optimization|Fixed issue where reports with the TenatID _global_ would not load in the ReportDesigner when session included AdHocSettings.CurrentTenantID.|
+|22407|Dashboards|Saving|In Dashboard V2 after moving two report parts to different locations in the dashboard, if users clicks 'save dashboard' , then it saves. However, when reloaded, the report parts are back to their original areas.|
+|22444|Instant Reports|UI|Fixed issue with restore default colors button not functioning in InstantReports.|
+|22495|API|Optimization|Fixed serialization issue with 'Izenda.AdHoc.PdfGeneratorBase' error.|
+|22544|Dashboards|Export|Fixed issue with dashboards export to Excel of tables using VGHierarchy style where style was changed before export.|
+|22548|API|Expressions|Feature: Added support for DATETIME and SMALLDATETIME for use in expression field.|
+|22612|API|Optimization|Updating 'Preview Not Available' image for better user friendliness. Preview will now use a standard report image with a watermark as "Sample" until an actual preview is created from opening the report in the Report Viewer.|
+|22626|Report Design|Visualization|Fixed error when choosing PREVIEW in the ReportDesigner if not all information is correctly entered to generate a map in the MAPS tab, causing a SQL error to display in IE.|
+|22634|Report Design|Gauge|When creating a new report using a gauge (from gauge tab)in report designer there is a setting showing how may gauges to display - this is not respected in the dashboard, the limit is respected in the report, but all gauges are displayed in dashboard tile.|
+|22673|API|Optimization|When using a field where the data contains a comma "," as a drill down filter the comma was not properly escaped in code. This resulted in bad data being sent to the subreport and the subreport was not properly filtered. Resolved, now fields containing commas can be used as drill down fields to a subreport without error.|
+|22734|API|Optimization|Reverted changes with unintended consequence of disallowing pathing using both '/' and '\'.|
+|22752|API|Optimization|Added value validation code for 'Records' box in 'Fields' tab of ReportDesigner.|
+|22772|Dashboards|Optimization|Fixed issues with scheduling dashboards where the schedule type could not be changed from 'Embedded'. Also fixes issue where embedded reports do not export in the correct order.|
+|22776|Scheduler|Export|Fixed legacy SchedulerExecuting flag - used to determine whether charts must be rendered to picture. Now Izenda sets this flag automatically when SchedulerOutput.GenerateMessage method is called.|
+|22784|API|Export|CSV export using wrong separator ";" when exporting while using culture set to Spanish. Resolved, now properly using the "," separator.|
+|22802|API|UI|Fixed issue with SubReport headers are displayed under filters section in reports.|
+|22805|API|Optimization|Fixed bug in logic in code which renders report in field|value style if there are hidden fields - previously resulted in "Uncaught SyntaxError: missing ) after argument list" error message.|
+|22817|API|Optimization|Fixed issue where artificial limits on paging (10K rows) and report row limit (100K rows) were forced without settings being active.|
+|22824|Report Design|UI|Resolved issue where chart titles added in the report designer are not showing up in the title section on the dashboard.|
+|22872|Dashboards|UI|Tiles in dashboard using "user-select: none;" css style, but text should be available for copy. This is resolved now and the text from the dashboard tiles can now be copied.|
+|22893|API|UI|Added support for Drilldown key passed to subreport to be an aggregate. Prior to this change values would not be passed to subreport if any aggregate function (sum, count, etc.) was used in the field.|
+|22898|API|Optimization|Setting AdHocSettings.ApplicationHeaderImageUrl not working properly in Webforms VB kit. Issue resolved. Issue can be resolved without this fix by uncommenting the following lines in default.master.vb: 'If (Not String.IsNullOrEmpty(AdHocSettings.ApplicationHeaderImageUrl)) Then ' rightLogo.Src = AdHocSettings.ApplicationHeaderImageUrl 'End If|
+|22932|Instant Reports|Optimization|Fixed issue in InstantReports where 'Search' values were not correctly reducing available options (greying out).|
+|22933|API|Optimization|Fixed issue with internal key values for Arabic and Bulgarian localization where the English values were inappropriately used.|
+|22947|Report Design|Gauge|Fixed an error with 'Count Distinct' function and 'Linear' gauges causing preview error. Also, improved log gauge readability in some situations.|
+|22949|Report Design|Filters|Fix to various 'time period' filters (EX: 'This Week', 'Last Week', 'Today') which had inconsistent/unexpected results.|
+|22953|API|Optimization|Fixed difficulty when using VS2015 with Izenda. VS 2015 creates local applicationHostConfig files, solution is to edit ri.csproj to use: <UseGlobalApplicationHostFile>true</UseGlobalApplicationHostFile>|
+|22962|API|UI|Fixed issue breaking 'italics' style when subtotals are used.|
+|22972|API|Optimization|Beginning with the RI for 6.10.0.3, the AdhocSettings.CurrentUserIsAdmin setting will be put in the global as set to true. This is not a change to the default setting, it is added to make it visible that the default value is true.|
+|22999|Instant Reports|Filters|Build script removed from final build on archives site. This is an internal file used for building the site and is not needed in the reference implementation.|
+|23013|Instant Reports|Filters|Fixed issue with export to PDF of Projection Map where map duplicates and the link is not clickable.|
+|23049|Feature|Visualization|In BETA Instant Reports, reports not saving properly. Issue only seen in complex reports that take a few seconds to save. Optimized save process to speed time and changes made to ensure save process completes.|
+|23053|Instant Reports|UI|When adding a new drilldown report to the BETA Instant Report page the popup style was not loading properly, resolved.|
+|23054|Dashboards|UI|Possibly HTML injection issue. When using a link to access a report in the report designer, if the report name does not exist the report name given in the link should not be displayed on the screen in the designer. Resolved.|
+|23071|Dashboards|Filters|When exporting charts to excel, labels containing dates are exporting as the integer value in excel. Resolved.|
+|23081|Report Design|UI|When joining a table twice in the report designer, the second instance of the of the join does not contain "No Lock". Resolved.|
+|23104|Dashboards|UI|Fixed issue with delay in opening 'Fields' dropdown in report designer. Optimized JS to increase performance significantly.|
+|23109|API|Optimization|Fixed issue when Arithmetic addition checkboxes on the 'Fields' tab were used to sum 3 or more columns consecutively.|
+|23121|Report Design|Visualization|Fixed errors with Dashboard2.0 tiles loading blank, and broken funnel chart loading behavior. (Requires browser cache refresh)|
+|23156|API|Optimization|Izenda.AdHoc.PdfGeneratorBase was not properly made serializable, resolved.|
+|23252|Report Design|Charts|Fixed issue where report name disappears when the cursor is not on the dashboard tile.|
+|23255|Scheduler|Optimization|Name of field disappears from filter description when user changes the field format from the fields tab of the report viewer page. Example - date field selected as filter and changed from 2/1/16 to February 1, 2016 the filter field description is removed from the filter header bar.|
+|23266|API|Optimization|Fixed server error when using the 'PopUp' drilldown style in InstantReports.|
+|23281|Feature|UI|Fixed error with exporting Dashboard Visualization chart parts individually where the links provided for the export were not functional.|
+|23290|Report Design|UI|Using a Visually grouped field on a field with a URL link applied and a style of Field Value, results in JavaScript error. Resolved.|
+|23326|Report Design|UI|Time Bubble chart not displaying in Internet Explorer, showing error "Timebubble visualization Object doesn't support property or method 'isNaN'". Resolved.|
+
 # 6.10.0.2 (January 26, 2016)
 
 ##Important Note about 6.10.0.2
