@@ -56,6 +56,12 @@ This will change the current Instant Report page to the BETA Instant Report Page
 ![](/Guides/Instant-Reports-v2-BETA/ir13.PNG)
 ![](/Guides/Instant-Reports-v2-BETA/ir14.PNG)
 
+<!--#Field Settings - Updated 6.10.0.3
+![](/Guides/Instant-Reports-v2-BETA/ir28.PNG)
+![](/Guides/Instant-Reports-v2-BETA/ir29.PNG)
+![](/Guides/Instant-Reports-v2-BETA/ir30.PNG)
+-->
+
 <!--#Adding a Pivot
 To create a pivot the user must first select at least one column in the report. This will show as the Rows in the Pivot grid. See below:
 ![](/Guides/Instant-Reports-v2-BETA/ir16.png)
