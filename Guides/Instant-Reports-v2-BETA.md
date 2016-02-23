@@ -61,8 +61,8 @@ This will change the current Instant Report page to the BETA Instant Report Page
 ![](/Guides/Instant-Reports-v2-BETA/ir29.PNG)
 ![](/Guides/Instant-Reports-v2-BETA/ir30.PNG)
 -->
-
-<!--#Adding a Pivot
+<!--
+#Adding a Pivot
 To create a pivot the user must first select at least one column in the report. This will show as the Rows in the Pivot grid. See below:
 ![](/Guides/Instant-Reports-v2-BETA/ir16.png)
 
@@ -72,7 +72,7 @@ Next, click on the Edit Pivot Button shown below:
 This will open the Pivots panel to allow the user to select Column and Pivot values.
 ![](/Guides/Instant-Reports-v2-BETA/ir18.png)
 
-Next, add the Pivot column and the grouping style for the column. In the example below we will add a fields called Order Date in the Northwinds Database and chose to group by the year of the order date.
+Next, add the Pivot column and the grouping style for the column. In the example below we will add a field called Order Date in the Northwinds Database and choose to group by the year of the order date.
 ![](/Guides/Instant-Reports-v2-BETA/ir19.png)
 
 Now we want to add our pivoted values. Click on the +Add Cell Value button and a new field selector will be added to the panel.
@@ -88,7 +88,7 @@ Additional values can be added to the pivot by clicking on the +Add Cell Value b
 This panel can be collapsed by clicking the – icon in the top right corner of the Pivot panel shown below.
 ![](/Guides/Instant-Reports-v2-BETA/ir23.png)
 
-Notice you can still see a count of pivoted vales when the panel is collapsed. If you need to edit the Pivot you can click on the Edit Pivot Button again to expand the panel.
+Notice you can still see a count of pivoted values when the panel is collapsed. If you need to edit the Pivot you can click on the Edit Pivot Button again to expand the panel.
 ![](/Guides/Instant-Reports-v2-BETA/ir24.png)
 
 To remove the Pivot you can click the “X” on the top left corner of the Pivot panel header shown below:
