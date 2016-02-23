@@ -51,18 +51,18 @@ This will change the current Instant Report page to the BETA Instant Report Page
 ![](/Guides/Instant-Reports-v2-BETA/ir10.PNG)
 ![](/Guides/Instant-Reports-v2-BETA/ir11.PNG)
 
-#Field Settings 
+#Field Settings - Prior to 6.10.0.3 Release
 ![](/Guides/Instant-Reports-v2-BETA/ir12.PNG)
 ![](/Guides/Instant-Reports-v2-BETA/ir13.PNG)
 ![](/Guides/Instant-Reports-v2-BETA/ir14.PNG)
 
-<!--#Field Settings - Updated 6.10.0.3
+#Field Settings - Updated 6.10.0.3 Release
 ![](/Guides/Instant-Reports-v2-BETA/ir28.PNG)
 ![](/Guides/Instant-Reports-v2-BETA/ir29.PNG)
 ![](/Guides/Instant-Reports-v2-BETA/ir30.PNG)
--->
-<!--
-#Adding a Pivot
+
+
+#Adding a Pivot - Added 6.10.0.3 Release
 To create a pivot the user must first select at least one column in the report. This will show as the Rows in the Pivot grid. See below:
 ![](/Guides/Instant-Reports-v2-BETA/ir16.png)
 
@@ -99,7 +99,7 @@ This will remove the Pivot Column and the Pivot Values from the Pivot panel as s
 
 You can add side totals to the Pivot by clicking the Add side totals check box in the Pivot Panel shown below:
 ![](/Guides/Instant-Reports-v2-BETA/ir27.png)
--->
+
 
 #Unsupported Features
 
@@ -107,7 +107,7 @@ At this time in the Beta Release of Instant Reports 2.0 the following Report Des
 
 *Advanced Datasource Joining Functionality
 
-*Pivot Reports
+
 
 *Only Reports created in Instant Reports 2.0 without any edits in the Report Designer can be opened in Instant Reports. Once a report is edited in the Report Designer, it can no longer be edited with the Instant Report Designer.
 
