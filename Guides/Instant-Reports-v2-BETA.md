@@ -51,15 +51,15 @@ This will change the current Instant Report page to the BETA Instant Report Page
 ![](/Guides/Instant-Reports-v2-BETA/ir10.PNG)
 ![](/Guides/Instant-Reports-v2-BETA/ir11.PNG)
 
-#Field Settings
+#Field Settings 
 ![](/Guides/Instant-Reports-v2-BETA/ir12.PNG)
 ![](/Guides/Instant-Reports-v2-BETA/ir13.PNG)
 ![](/Guides/Instant-Reports-v2-BETA/ir14.PNG)
 
 <!--#Field Settings - Updated 6.10.0.3
-![](/Guides/Instant-Reports-v2-BETA/ir28.png)
-![](/Guides/Instant-Reports-v2-BETA/ir29.png)
-![](/Guides/Instant-Reports-v2-BETA/ir30.png)
+![](/Guides/Instant-Reports-v2-BETA/ir28.PNG)
+![](/Guides/Instant-Reports-v2-BETA/ir29.PNG)
+![](/Guides/Instant-Reports-v2-BETA/ir30.PNG)
 -->
 
 <!--#Adding a Pivot
