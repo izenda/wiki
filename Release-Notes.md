@@ -13,7 +13,7 @@
 |22703|Instant Reports|Optimization|Adding support for creating pivots in the BETA New Instant Report page. [Documentation](http://wiki.izenda.us/Guides/Instant-Reports-v2-BETA#Adding-a-Pivot---Added-6.10.0.3-Release)|
 |22704|Instant Reports|UI|New BETA Instant Report - Rearranged the Field formatting options on the field panel. [Documentation](http://wiki.izenda.us/Guides/Instant-Reports-v2-BETA#Field-Settings---Updated-6.10.0.3-Release)|
 |22708|Instant Reports|Optimization|Enabled full support of FUSION with DataSourceCategories API for InstantReports 1.0/2.0. FUSION connections and DataSourceCategories now both create hierarchies in IR 1.0/2.0.|
-|23251|Report Design|Expressions|Changed default of vlue of AdHocSettings.ShowModifiedReportMessage to false from true. This feature has been noted to cause issues for some client and the default has been changed until a final resolution can be made to enhance the feature.|
+|23251|Report Design|Expressions|Changed default of value of AdHocSettings.ShowModifiedReportMessage to false from true. This feature has been noted to cause issues for some client and the default has been changed until a final resolution can be made to enhance the feature.|
 
 ## Fixes
 
