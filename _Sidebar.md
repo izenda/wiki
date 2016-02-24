@@ -1,6 +1,7 @@
 ![Izenda Logo](http://izenda.com/wp-content/uploads/2014/12/IzendaNewLogoBlueTR.png)
 ---
 * [[Release Notes]]
+* [[Known Issues]]
 * [[Upgrade Best Practices|FAQ/Izenda-Update-Best-Practices]]
 * [[FAQ]]
 * [[Tutorials]]
