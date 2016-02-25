@@ -17,7 +17,7 @@ In order to connect to a MySQL database, you will need to have an ODBC driver in
 To set up your MySql Connection String, use the AdHocSettings property MySqlConnectionString. Make sure the version of the driver in the connection string matches the version installed on your server.
 
 ```csharp
-    Izenda.AdHoc.AdHocSettings.MySqlConnectionString = "Driver={MySQL ODBC 3.51 Driver};Server=localhost;Port=3307;Database=databasename;Uid=username;Pwd=password;pooling=false"; 
+    Izenda.AdHoc.AdHocSettings.MySqlConnectionString = "Driver={MySQL ODBC 5.3 ANSI Driver};Server=localhost;Port=3307;Database=databasename;Uid=username;Pwd=password;pooling=false"; 
 ```
 
 You will have to replace your port number (if different), databasename, 
