@@ -83,7 +83,6 @@ User Id=myUsername;Password=myPassword;"**
 * Izenda Reports requires the [[Microsoft .NET Runtime|http://msdn.microsoft.com/en-us/netframework/default.aspx]]. Download and install if you do not have it already.
 * Izenda Reports requires the [[MySQL Connector/Net v5|http://dev.mysql.com/downloads/connector/net/5.0.html]]. Download and install if you do not have it already.
 * OR if ODBC then Izenda Reports requires the latest version of [[MySQL Connector/ODBC|http://dev.mysql.com/downloads/connector/odbc/]]. Download and install if you do not have it already.
-* Follow the directions to [[setup your web server|http://wiki.izenda.us/Integration/Tutorials/Installing-Izenda#How-to-Install-Izenda-on-Windows-2008-with-IIS-7]].
 * The database must have at least 1 table.
 
 **Instructions:**
