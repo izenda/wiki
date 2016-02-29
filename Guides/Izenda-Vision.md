@@ -32,7 +32,7 @@ Count(Order ID), Year(Order Date), Count(Customer ID), Ship City, Country
 
 ##Drill-downs and Dynamic Filtering
 
-Some visualizations support dynamic filtering and drill-down-like behavior. Currently, a full drill-down - connecting through a visualization to another Izenda report - is not possible. A visualization can exist on a child report, and can exist on a parent report, but no part of the visualization is clickable to activate a downhill. The drill-down terminology in this case means that some visualizations, like heat map and sunburst, can drill-down within themselves. This is more accurately described as dynamic filtering. Dynamic filtering the visualization will also filter the linked summary or detail view.
+Some visualizations support dynamic filtering and drill-down-like behavior. Currently, a full drill-down - connecting through a visualization to another Izenda report - is not possible. A visualization can exist on a child report, and can exist on a parent report, but no part of the visualization is clickable to activate a downhill. The drill-down terminology in this case means that some visualizations, like heat map and sunburst, can drill-down within themselves. This is more accurately described as dynamic filtering. Applying dynamic filtering to the visualization will also filter the linked summary or detail view.
 
 ##Fields labeled with a plus (+) sign
 
