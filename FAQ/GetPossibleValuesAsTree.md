@@ -12,6 +12,7 @@ The filter should be constructed to address a hierarchy - in this case, ShipCoun
 
 In the example photo, notice how we have selected two cities in Oregon, one city in the UK, and all cities in the country of Spain with a single filter.
 
+![Using an Equals(Tree) filter to select multiple values at different levels of a hierarchy.](/FAQ/GetPossibleValuesAsTree/EqualsTreeHowTo.png)
 
 
 ##C♯ Method
