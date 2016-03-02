@@ -6,6 +6,14 @@
 
 The GetPossibleValuesAsTree method is an overridable method in the [[AdHocConfig|/API/AdHocConfig]] class that can change the behavior of the Equals (Tree) filter operator. This option is normally hidden from appearing on the list until it is overridden in your [[CustomAdHocConfig|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]]. The [[Equals (Tree)|http://wiki.izenda.us/Guides/ReportDesign/5.0-Filters-tab#5.3-Operator-Categories]] operator will allow you to select elements based on a hierarchy of values starting with "All", which is the root option. Values can be expanded out from the root option and any number may be selected. 
 
+##Use
+
+The filter should be constructed to address a hierarchy - in this case, ShipCountry -> ShipRegion -> ShipCity. When applied to the lowest level of the hierarchy, you will be able to select indvidual values from a given level of the hierarchy (for example, one city from a region or a country) instead of selecting all values using a single filter, or by using multiple layered filters to isolate multiple combinations of city, region, and country.
+
+In the example photo, notice how we have selected two cities in Oregon, one city in the UK, and all cities in the country of Spain with a single filter.
+
+
+
 ##C♯ Method
 
 In the following example, we will be using the Northwind example database to construct the Equals (Tree) list for the columns ShipCity and ProductName. You may use this snippet to construct an Equals (Tree) list that works for your particular organization.
