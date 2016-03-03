@@ -81,3 +81,21 @@ Server side image generation is provided by PhantomJS, which is maintained by Ar
 The original software is available from https://github.com/ariya/phantomjs
 
 The software is available under BSD 3-clause license https://github.com/ariya/phantomjs/blob/master/LICENSE.BSD
+
+
+##EVO HTML to PDF Converter
+A PDF Converter library with support for Azure Websites.
+
+The original software is available from http://www.evopdf.com
+
+The software is available under a deployment or company License http://www.evopdf.com/buy.aspx
+
+
+##NHunspell 
+Spell checking functionality is provided by the NHunspell library.
+
+The original software is available from https://sourceforge.net/projects/nhunspell/
+
+NHunspell is licensed under: GPL/LGPL/MPL. Free use in commercial applications is permitted according 
+
+to the LGPL and MPL licenses. Your commercial application can link against the NHunspell DLLs.
