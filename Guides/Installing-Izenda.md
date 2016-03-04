@@ -22,18 +22,18 @@ To start using Izenda Reports Starter Kit you should take a few simple steps.
 
 * Non-production, staging, or development server
 * SQL Server, Oracle, MySQL, and PostgreSQL
-* Windows 2003, Windows 2008, Windows 2012, Windows 7, Windows Vista Business or Ultimate
-* Microsoft ASP.NET 2.0 and Higher
-* ASP.NET MVC 4 and 5
+* Windows Server 2003, 2008, 2012, 2016, Windows Vista, Windows 7, Windows 8 and 8.1, and Windows 10
+* Microsoft ASP.NET 4.0 and Higher
+* ASP.NET Web Forms C#, VB, ASP.NET MVC verions 4 and 5
 * Razor Visual Engine 2 and 3
 
 ###Step 2. Unzip the contents
 
 **a.** Unzip webforms-xx.zip into a directory. Once unzipped, copy this directory to **C:\inetpub\wwwroot**, or wherever your websites are located.
 
-**b.** Once this directory is in your C: Drive, name it 'Reporting', i.e. **C:\inetpub\wwwroot\Reporting**
+**b.** Once this directory is in your C: Drive, name it 'Izenda', i.e. **C:\inetpub\wwwroot\Izenda**
 
-![Create Site Folder](http://kb.izenda.com/Reg/images/InstCreateFolderNEW.png)
+![Create Site Folder](http://wiki.izenda.us/Guides/Installing-Izenda/UnzipContents.png)
 
 ###Step 3. Configure website under IIS
 
@@ -41,43 +41,41 @@ Izenda Reports provides an integrated platform for browser-based report customiz
 
 If you don’t have IIS, please see the following:
 
-[Install IIS](http://kb.izenda.com/Site/Pages/IIS-Install.aspx)
-	
-[Install ASP.NET under IIS](http://kb.izenda.com/Site/Pages/ASPNET-Install.aspx)
+[Before Starting Developer Guide](http://www.izenda.com/developer-guide-before-starting)
 	
 Once you have IIS installed, continue with the following:
 
 **a.** To access IIS Manager (click **Start > Control Panel > Administrative Tools > Internet Information Services (IIS) Manager**) and add new application or virtual directory under Default Web Site.
 			
 
-![Open IIS](http://kb.izenda.com/Reg/images/screenshots/InstOpenIIS.png)
+![Open IIS](http://wiki.izenda.us/Guides/Installing-Izenda/OpenIIS.png)
 		
 
 **b.** Select Internet Information Services (IIS) Manager, and open the application.
 			
 
-![Run IIS Manager](http://kb.izenda.com/Reg/images/screenshots/InstRunIIS.png)
+![Run IIS Manager](http://wiki.izenda.us/Guides/Installing-Izenda/OpenIIS2.png)
 
 
 **c.** Within Internet Information Services Manager add a new application or virtual directory under **Default Web Site**. Select drop down arrows, until you see the **Default Web Site**.
 			
 
-![Default Web Site](http://kb.izenda.com/Reg/images/screenshots/InstDefaultWebsite.png)
+![Default Web Site](http://wiki.izenda.us/Guides/Installing-Izenda/OpenIIS3.png)
 	
 
-**d.** Right-click on **Default Web Site**, and select **Add Application**. Fill out the **Alias** text box, and name it **Reporting** or whatever name you would like. Once named, select the **Select** button on the right. Once the drop-down menu appears, select your preferred application pool and **OK**. Izenda can run in 2.0 and 4.0, Classic and Integrated.
+**d.** Right-click on **Default Web Site**, and select **Add Application**. Fill out the **Alias** text box, and name it **Reporting** or whatever name you would like. Once named, select the **Select** button on the right. Once the drop-down menu appears, select your preferred application pool and **OK**. Izenda can run in the default 4.0 Integrated CLR.
 			
 
-![Application Pool](http://kb.izenda.com/Reg/images/screenshots/InstAppPool.png)
+![Application Pool](http://wiki.izenda.us/Guides/Installing-Izenda/OpenIIS4.png)
 
 
-**e.** Create and choose the Physical Path to the **\Reporting\webforms-xx** folder and give your website a name. Select the button with the ellipsis **(…)**, and it will allow you to browse for a folder to house the application. Select your **C:** drive and the **Reporting** folder.
+**e.** Create and choose the Physical Path to the **\Reporting\webforms-xx** folder and give your website a name. Select the button with the ellipsis **(…)**, and it will allow you to browse for a folder to house the application. Select your **C:** drive and the **Izenda** folder.
 			
 
 [Replace 1e. with MVC Screenshot]
 		
 
-**f.** Before continuing, make sure the site folder ( **...\Reporting** ) has full permissions for the **NETWORK SERVICE** user. Make sure the reports folder ( **...Reporting\MVC4Razor2\Reporting\Reports** ) and Web.config ( **...Reporting\MVC4Razor2\Web.config** ) have full permissions for the **NETWORK SERVICE** user also (Right click on **MySite\Reporting folder => Properties => Security => Edit... => Add... => Type "NETWORK SERVICE" and press OK =>  Click 'NETWORK SERVICE' Click 'Allow - Full Control' Click OK=> Click OK)**.
+**f.** Before continuing, make sure the site folder ( **...\Izenda** ) has full permissions for the **NETWORK SERVICE** user. Make sure the reports folder ( **...Izenda\MVC4Razor2\Reporting\Reports** ) and Web.config ( **...Izenda\MVC4Razor2\Web.config** ) have full permissions for the **NETWORK SERVICE** user also (Right click on **MySite\Reporting folder => Properties => Security => Edit... => Add... => Type "NETWORK SERVICE" and press OK =>  Click 'NETWORK SERVICE' Click 'Allow - Full Control' Click OK=> Click OK)**.
 
 ###Step 4. Set license key and database connection
 
@@ -93,35 +91,29 @@ The [[InitializeReporting()|http://wiki.izenda.us/FAQ/InitializeReporting]] meth
 
 **This method should only be used for the trial. Continuing to use the Settings page in Production, especially in tandem with InitializeReporting(), can cause conflicts.**
 
-Open the website that you created in the previous step [http://localhost/reporting](http://localhost/reporting). You will be redirected to the Settings page. Go to the Database tab and fill the License Key and Connection String fields with real data. You should have received your trial License Key via email. If you have not received a key, please contact your account manager with Izenda or [sales@izenda.com](mailto:sales@izenda.com).
+Open the website that you created in the previous step [http://localhost/Izenda](http://localhost/Izenda). You will be redirected to the Settings page. Go to the Database tab and fill the License Key and Connection String fields with real data. You should have received your trial License Key via email. If you have not received a key, please contact your account manager with Izenda or [sales@izenda.com](mailto:sales@izenda.com).
 	
-![Set license key and database connection](http://kb.izenda.com/Reg/images/src4_settingsnew.png)
+![Set license key and database connection](http://wiki.izenda.us/Guides/Installing-Izenda/SettingsPage.png)
 
 ###Step 5. Start using Izenda Reports
 
-Now you are ready to start taking advantage of the opportunities in Izenda’s self-service reporting platform. Open [http://localhost/Reporting/ReportDesigner.aspx](http://localhost/Reporting/ReportDesigner.aspx) and create your first report easily!
+Now you are ready to start taking advantage of the opportunities in Izenda’s self-service reporting platform. Open [http://localhost/Izenda/ReportDesigner.aspx](http://localhost/Izenda/ReportDesigner.aspx) and create your first report easily!
 
 
 Select your DataSources at the [[Data Sources|http://wiki.izenda.us/Guides/ReportDesign/3.0-Data-sources-tab]] tab. Then go to the [[Fields|http://wiki.izenda.us/Guides/ReportDesign/4.0-fields-tab]] tab and select the fields you want to use in the report. There are various options and settings like filters, operators, functions etc. Make sure to check it all out, but for your first report just selecting several fields will be enough.
 		
 -For more information about the report designer features please read our [[user guide|/Guides/ReportDesign]]	
 	
-![Using Izenda Reports](http://kb.izenda.com/Reg/images/src5_designnew.png)
-
 
 ####Preview and Save report
 
 
 After you select all the data you want to see in the report, click **Preview** and see the results immediately. Click **Save** on the tool bar to save your first report report. Categories can be created in the save menu to group reports. Categories self delete when depopulated (empty).
 	
-![Preview and Save Report](http://kb.izenda.com/Reg/images/src6_previewnew.png)
-
 
 ###Troubleshooting
 
 If you encounter any unexpected behaviors or exceptions, simply perform an IISReset, or a refresh of the your Izenda Reports-enabled site. To perform an IIS reset, Click 'START'; type 'cmd' into your search dialogue, right click the program and choose 'Run as Administrator'. In the command prompt type 'iisreset' and hit enter. Be sure to refresh your browser and empty the cache to ensure you see updated pages.
-
-![IISReset](http://kb.izenda.com/Reg/images/iisresetfinal.png)
 
 ##How to Install Izenda on Windows 2008 with IIS 7
 
