@@ -6,6 +6,12 @@
 
 This guide is designed to instruct first-time users how to download, extract, and set up a new instance of Izenda on an IIS server. This tutorial will focus on the webforms-cs version of the RI. Similar methods can be used for our VB and MVC implementations.
 
+##Installation Video
+
+Izenda is delivering some supplemental videos and guides through our [Quick Start](http://www.izenda.com/developer-guide-before-starting) series. An installation video is contained in the [Installation Quick Start](http://www.izenda.com/developer-guide-install) page linked below.
+
+[<img src="http://wiki.izenda.us/Guides/Installing-Izenda/VideoLinkImage.png">](http://www.izenda.com/developer-guide-install)
+
 ##Instructions
 
 Installation requires a license key. To get a new trial key, you may contact [sales@izenda.com](mailto:sales@izenda.com). Or you may try our <a href="http://www.izenda.com/demo-it-yourself/" rel="nofollow" target="_blank">free demo</a>. 
