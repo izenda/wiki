@@ -34,6 +34,7 @@ Izenda Reports supports connecting to multiple data sources simultaneously by us
 
 * You must have a functioning database in order to connect Izenda Reports
 * _**Important!**_ For these steps, the database and NOT the file system must have the following permissions set:
+  * Izenda Reports must have access to the metadata in the database
   * Ensure that the database login can read the tables and views
 * Open your Izenda Reports Global.asax file in your IDE and find the ``InitializeReporting()`` method.
 * Update the [[LicenseKey|http://wiki.izenda.us/API/CodeSamples/LicenseKey]] and [[ConnectionString|http://wiki.izenda.us/API/CodeSamples/SqlServerConnectionString]] 
