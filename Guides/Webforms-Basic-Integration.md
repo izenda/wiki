@@ -1,4 +1,4 @@
-#Izenda Web Forms Kit Integration Guide Phase I 
+#Izenda Web Forms Kit Integration Guide
 
 [[_TOC_]]
 
@@ -23,7 +23,7 @@ Web Forms C# download link](http://archives.izenda.us/ri/webforms/webforms-cs.zi
 
 ![Create a new Web Forms App](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_14_33-New-Web-Site.png)
 
-**c.** Make sure to set your new website's name and folder location. We're going to name our website **NewWebsite**
+**c.** Make sure to set your new website's name and folder location. We're going to name our website **NewWebsite**.
 
 ![Name Your Application](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_26_08-New-Web-Site.png)
 
@@ -31,11 +31,11 @@ Web Forms C# download link](http://archives.izenda.us/ri/webforms/webforms-cs.zi
 
 ![Name Your Application](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_26_37-NewWebsite---Microsoft-Visual-Studio.png)
 
-###Step 2. Add Izenda.AdHoc.dll and log4net.dll to the project’s reference
+###Step 2. Add Izenda files and folders
 
-Right click on 'References' under project name in Solution Explorer window, then click 'Add Reference'.
+Unzip your Izenda webforms-cs folder, and open both the Izenda directory and the NewWebsite's directory.
 
-Click the 'Browse' button and browse to \mvc5r3\bin, where Izenda.AdHoc.dll and log4net.dll are. Add them to reference. 
+Copy Izenda's bin directory into the NewWebsite's directory.
 
 ![DLL files](/Guides/MVC-Integration/DLLs.png)
 
