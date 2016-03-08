@@ -27,6 +27,9 @@ Web Forms C# download link](http://archives.izenda.us/ri/webforms/webforms-cs.zi
 
 ![Name Your Application](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_26_08-New-Web-Site.png)
 
+**d.** Visual Studio will now open the application, and you should see this in your Solution Explorer.
+
+![Name Your Application](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_26_37-NewWebsite---Microsoft-Visual-Studio.png)
 
 ###Step 2. Add Izenda.AdHoc.dll and log4net.dll to the project’s reference
 
