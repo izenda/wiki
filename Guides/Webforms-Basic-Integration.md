@@ -31,6 +31,8 @@ Web Forms C# download link](http://archives.izenda.us/ri/webforms/webforms-cs.zi
 
 ![Name Your Application](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_26_37-NewWebsite---Microsoft-Visual-Studio.png)
 
+**e. Or** Download the application directly. [Download](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/NewWebsite.zip)
+
 ###Step 2. Add Izenda files and folders
 
 Unzip your Izenda webforms-cs folder, and open both the Izenda directory and the NewWebsite's directory.
