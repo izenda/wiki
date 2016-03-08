@@ -13,14 +13,19 @@ This guide will use Izenda Web Forms C# kit and a simple Web Forms application, 
 Web Forms C# download link](http://archives.izenda.us/ri/webforms/webforms-cs.zip)
 ##Instructions
 
-###Step 1. Create a new simple Web Forms application in Visual Studio
+###Step 1. Create a new Web Forms application in Visual Studio
 
+In Visual Studio, select File -> New -> Website.
 
-![Open the Application](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_13_52-Start-Page---Microsoft-Visual-Studio.png)
+![Create a new Website](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_13_52-Start-Page---Microsoft-Visual-Studio.png)
 
-![Open the Application](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_14_33-New-Web-Site.png)
+In the New Website pop-up choose ASP.NET Web Forms Site in Visual C#.
 
-![Open the Application](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_26_08-New-Web-Site.png)
+![Create a new Web Forms App](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_14_33-New-Web-Site.png)
+
+Make sure to set your new website's name and folder location.
+
+![Name Your Application](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_26_08-New-Web-Site.png)
 
 
 ###Step 2. Add Izenda.AdHoc.dll and log4net.dll to the project’s reference
