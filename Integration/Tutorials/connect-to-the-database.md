@@ -35,7 +35,6 @@ Izenda Reports supports connecting to multiple data sources simultaneously by us
 * You must have a functioning database in order to connect Izenda Reports
 * _**Important!**_ For these steps, the database and NOT the file system must have the following permissions set:
   * Ensure that the database login can read the tables and views
-  * Ensure that _"NT AUTHORITY\NETWORK SERVICE"_ account ("ASPNET" on XP) has the access level of "db_owner" permissions to the database which contains the tables and views
 * Open your Izenda Reports Global.asax file in your IDE and find the ``InitializeReporting()`` method.
 * Update the [[LicenseKey|http://wiki.izenda.us/API/CodeSamples/LicenseKey]] and [[ConnectionString|http://wiki.izenda.us/API/CodeSamples/SqlServerConnectionString]] 
   * Sample standard connection string (local database):
@@ -62,7 +61,6 @@ Izenda Reports supports connecting to multiple data sources simultaneously by us
 * _**Important!**_ For these steps, the database and NOT the file system must have the following permissions set:
   * Izenda Reports must have access to the metadata in the database
   * Ensure that the database login can read the tables and views
-  * Ensure that _"NT AUTHORITY\NETWORK SERVICE"_ account ("ASPNET" on XP) has the access level of "db_owner" permissions to the database which contains the tables and views
 * Open your Izenda Reports Global.asax file in your IDE and find the ``InitializeReporting()`` method.
 * Update the [[LicenseKey|http://wiki.izenda.us/API/CodeSamples/LicenseKey]] and [[ConnectionString|http://wiki.izenda.us/API/CodeSamples/OracleConnectionString]] 
   * You can use your [[TNSNames.ora|http://www.orafaq.com/wiki/Tnsnames.ora]] file to create the connection string or you can plug the connection string directly into the OracleConnectionString.
@@ -91,7 +89,6 @@ User Id=myUsername;Password=myPassword;"**
 * _**Important!**_ For these steps, the database and NOT the file system must have the following permissions set:
   * Izenda Reports must have access to the metadata in the database
   * Ensure that the database login can read the tables and views
-  * Ensure that "NT AUTHORITY\NETWORK SERVICE" account ("ASPNET" on XP) has the access level of "db_owner" permissions to the database which contains the tables and views
 * Open your Izenda Reports Global.asax file in your IDE and find the ``InitializeReporting()`` method.
 * Update the [[LicenseKey|http://wiki.izenda.us/API/CodeSamples/LicenseKey]] and [[ConnectionString|http://wiki.izenda.us/API/CodeSamples/MySqlConnectionString]] 
   * Sample standard connection string (using SSL):
