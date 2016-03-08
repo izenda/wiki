@@ -23,7 +23,7 @@ Web Forms C# download link](http://archives.izenda.us/ri/webforms/webforms-cs.zi
 
 ![Create a new Web Forms App](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_14_33-New-Web-Site.png)
 
-**c.** Make sure to set your new website's name and folder location.
+**c.** Make sure to set your new website's name and folder location. We're going to name our website **NewWebsite**
 
 ![Name Your Application](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_26_08-New-Web-Site.png)
 
