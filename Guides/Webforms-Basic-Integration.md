@@ -15,15 +15,15 @@ Web Forms C# download link](http://archives.izenda.us/ri/webforms/webforms-cs.zi
 
 ###Step 1. Create a new Web Forms application in Visual Studio
 
-**a.**In Visual Studio, select File -> New -> Website.
+**a.** In Visual Studio, select File -> New -> Website.
 
 ![Create a new Website](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_13_52-Start-Page---Microsoft-Visual-Studio.png)
 
-**b.**In the New Website pop-up choose ASP.NET Web Forms Site in Visual C#.
+**b.** In the New Website pop-up choose ASP.NET Web Forms Site in Visual C#.
 
 ![Create a new Web Forms App](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_14_33-New-Web-Site.png)
 
-**c.**Make sure to set your new website's name and folder location.
+**c.** Make sure to set your new website's name and folder location.
 
 ![Name Your Application](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_26_08-New-Web-Site.png)
 
