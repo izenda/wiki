@@ -55,8 +55,8 @@ You will get a conflict around the NewtonJSON DLL and its' XML configuration fil
 
 You'll see conflicts for four files:
 
+* Global.asax -This crucial to merge as it contains Izenda's CustomAdHocConfig class and InitializeReporting() method.
 * Web.Config - This will contain basic web application configuration settings.
-* Global.asax -This crucial for InitializeReporting() method and AdHocConfig class.
 * Default.aspx - This file is simply a placeholder in Izenda. It redirects users to the ReportList page.
 * Default.aspx.cs - This is the code file for the above page. It redirects users to the ReportList page.
 
@@ -72,20 +72,19 @@ We will walk through merging Izenda's Web.Config and Global.asax in the next ste
 
 ![Controllers](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_23_05-NewWebsite---Microsoft-Visual-Studio.png)
 
-**b.** Add Izenda's AdHocConfig class into the NewWebsite's Global.asax.
+**b.** Add Izenda's CustomAdHocConfig class.
 
 ![Controllers](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_26_47-NewWebsite---Microsoft-Visual-Studio.png)
 			
-###Step 4. Change Namespaces of Controllers 
+###Step 4. Set Friendly URL Redirect Mode to Off 
 
-Change namespaces of IzendaStaticResourcesController.cs and IzendaReportingController.cs to match all other controllers in the application. 
-Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK.Controllers -> ABC.Controllers
+In order to avoid routing issues, you'll need to set the RedirectMode to off. Open \App_Code\RouteConfig.cs and set the RedirectMode as seen below.
 
-![Controllers](/Guides/MVC-Integration/Namespace.png)
+![Controllers](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_34_37-NewWebsite---Microsoft-Visual-Studio.png)
 
-###Step 5. Add Reporting and Resources folders to the project
+###Step 5. Set Friendly URL Redirect Mode to Off 
 
-**a.** Add 'Reporting'and 'Resources'from \mvc5r3 to project by dragging and dropping them in Solution Explorer as below
+In order to avoid routing issues, set the RedirectMode to off, as seen below.
 
 ![Controllers](/Guides/MVC-Integration/Resources_Reporting.png)
 
