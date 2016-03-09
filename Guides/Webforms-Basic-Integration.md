@@ -66,11 +66,11 @@ Keep NewWebsite's files, and discard the Izenda files. We will walk through merg
 
 ###Step 3. Merging the Global.asax
 
-**a.** Open the Izenda Global.asax and the NewWebsite Global.asax and add the Izenda namespace.
+**a.** Open the Izenda Global.asax and the NewWebsite Global.asax and add the Izenda namespace to NewWebsite's Global.asax.
 
 ![1245125](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_23_05-NewWebsite---Microsoft-Visual-Studio.png)
 
-**b.** Add Izenda's CustomAdHocConfig class.
+**b.** Add Izenda's CustomAdHocConfig class to NewWebsite's Global.asax.
 
 ![125612](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_26_47-NewWebsite---Microsoft-Visual-Studio.png)
 
