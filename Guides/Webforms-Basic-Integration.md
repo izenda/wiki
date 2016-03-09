@@ -33,17 +33,30 @@ This guide will use Izenda Web Forms C# kit and a simple Web Forms application, 
 
 **e.** Alternatively, you can download the application directly from the following link, then open the folder as a Website in Visual Studio. [Download NewWebsite](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/NewWebsite.zip)
 
-###Step 2. Merge Izenda files and folders
+###Step 2. Merge Izenda and NewWebsite files and folders
 
 **a.** Unzip your Izenda webforms-cs folder, and open both the Izenda directory and the NewWebsite's directory.
 
-Copy Izenda's bin directory into the NewWebsite's directory.
+Copy Izenda's bin directory into the NewWebsite's Bin directory.
 
 ![bin files](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_28_44-webforms-cs.png)
 
-**b.** You will get a conflict around the NewtonJSON DLL. Either use the Izenda NewtonJSON dll and xml files or address the conflicting version issues by implement a strategy to use multiple versions of the same DLL. 
+You will get a conflict around the NewtonJSON DLL. Either use the Izenda NewtonJSON dll and xml files or address the conflicting version issues by implement a strategy to use multiple versions of the same DLL. 
 
-![bin files](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_02_26-2-Total-File-Conflicts.png)
+![bin files conflict](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_02_26-2-Total-File-Conflicts.png)
+
+**b.** Copy Izenda's remaining folders and other miscellaneous files, except for the bin and node__modules.
+
+![misc files](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_29_22-webforms-cs.png)
+
+You'll see conflicts for four files. Keep NewWebsite's files, and discard the Izenda files. We will walk through merging Izenda's Web.Config and Global.asax in the next step.
+
+![misc files conflict](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_32_15-4-Total-File-Conflicts.png
+
+* Web.Config - This will contain basic web application configuration settings.
+* Global.asax -This crucial for InitializeReporting() method and AdHocConfig class.
+* Default.aspx - This file is simply a placeholder in Izenda. It redirects users to the ReportList page.
+* Default.aspx.cs - This is the code file for the above page. It redirects users to the ReportList page.
 
 ###Step 3. Add IzendaStaticResourcesController.cs and IzendaReportingController.cs to the project
 
