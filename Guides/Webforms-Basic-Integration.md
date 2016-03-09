@@ -41,7 +41,7 @@ Copy Izenda's bin directory into the NewWebsite's Bin directory.
 
 ![bin files](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_28_44-webforms-cs.png)
 
-You will get a conflict around the NewtonJSON DLL. Either use the Izenda NewtonJSON dll and xml files or address the conflicting version issues by implement a strategy to use multiple versions of the same DLL. 
+You will get a conflict around the NewtonJSON DLL and its' XML configuration file. Either use the Izenda NewtonJSON DLL and XML file or address the conflicting version issues by implement a strategy to use multiple versions of the same DLL. 
 
 ![bin files conflict](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_02_26-2-Total-File-Conflicts.png)
 
