@@ -68,11 +68,11 @@ We will walk through merging Izenda's Web.Config and Global.asax in the next ste
 
 ###Step 3. Merging the Global.asax
 
-**a.** Add the Izenda namespace.
+**a.** Open the Izenda Global.asax and the NewWebsite Global.asax and add the Izenda namespace.
 
 ![Controllers](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_23_05-NewWebsite---Microsoft-Visual-Studio.png)
 
-**b.** Open the Izenda Global.asax and the NewWebsite Global.asax. You'll want to add Izenda's AdHocConfig class into the NewWebsite's Global.asax.
+**b.** Add Izenda's AdHocConfig class into the NewWebsite's Global.asax.
 
 ![Controllers](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_26_47-NewWebsite---Microsoft-Visual-Studio.png)
 			
