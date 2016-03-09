@@ -31,7 +31,11 @@ This guide will use Izenda Web Forms C# kit and a simple Web Forms application, 
 
 ![Name Your Application](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_26_37-NewWebsite---Microsoft-Visual-Studio.png)
 
-**e.** Alternatively, you can download the application directly from the following link, then open the folder as a Website in Visual Studio. [Download NewWebsite](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/NewWebsite.zip)
+**e.** Alternatively, you can download the application directly from the following link.
+
+[Download NewWebsite](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/NewWebsite.zip)
+
+Open the folder as a Website in Visual Studio.
 
 ###Step 2. Merge Izenda and NewWebsite files and folders
 
@@ -62,12 +66,15 @@ Keep NewWebsite's files, and discard the Izenda files.
 
 We will walk through merging Izenda's Web.Config and Global.asax in the next step.
 
-###Step 3. Add IzendaStaticResourcesController.cs and IzendaReportingController.cs to the project
+###Step 3. Merging the Global.asax
 
-IzendaStaticResourcesController.cs and IzendaReportingController.cs are at mvc5r3\Controllers. Add them under Controllers as below (You can add by either 'drag and drop' or 'right click->Add->Existing Item)
+**a.** Add the Izenda namespace.
 
-![Controllers](/Guides/MVC-Integration/Controllers.png)
-	
+![Controllers](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_23_05-NewWebsite---Microsoft-Visual-Studio.png)
+
+**b.** Open the Izenda Global.asax and the NewWebsite Global.asax. You'll want to add Izenda's AdHocConfig class into the NewWebsite's Global.asax.
+
+![Controllers](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_26_47-NewWebsite---Microsoft-Visual-Studio.png)
 			
 ###Step 4. Change Namespaces of Controllers 
 
