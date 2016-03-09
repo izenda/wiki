@@ -55,7 +55,7 @@ You will get a conflict around the NewtonJSON DLL and its' XML configuration fil
 
 You'll see conflicts for four files:
 
-* Global.asax -This crucial to merge as it contains Izenda's CustomAdHocConfig class and InitializeReporting() method.
+* Global.asax -This is crucial to merge as it contains Izenda's CustomAdHocConfig class and InitializeReporting() method.
 * Web.Config - This will contain basic web application configuration settings.
 * Default.aspx - This file is simply a placeholder in Izenda. It redirects users to the ReportList page.
 * Default.aspx.cs - This is the code file for the above page. It redirects users to the ReportList page.
