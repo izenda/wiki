@@ -10,7 +10,7 @@
 This guide is designed to instruct first-time users how to integrate Izenda with simple Web Forms application. 
 This guide will use Izenda Web Forms C# kit and a simple Web Forms application, and Visual Studio 2015. 
 
-Web Forms C# download link](http://archives.izenda.us/ri/webforms/webforms-cs.zip)
+[Web Forms C# download link](http://archives.izenda.us/ri/webforms/webforms-cs.zip)
 ##Instructions
 
 ###Step 1. Create a new Web Forms application in Visual Studio
@@ -31,16 +31,19 @@ Web Forms C# download link](http://archives.izenda.us/ri/webforms/webforms-cs.zi
 
 ![Name Your Application](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_26_37-NewWebsite---Microsoft-Visual-Studio.png)
 
-**e. Or** Download the application directly. [Download](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/NewWebsite.zip)
+**e.** Alternatively, you can download the application directly from the following link, then open the folder as a Website in Visual Studio. [Download NewWebsite](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/NewWebsite.zip)
 
-###Step 2. Add Izenda files and folders
+###Step 2. Merge Izenda files and folders
 
-Unzip your Izenda webforms-cs folder, and open both the Izenda directory and the NewWebsite's directory.
+**a.** Unzip your Izenda webforms-cs folder, and open both the Izenda directory and the NewWebsite's directory.
 
 Copy Izenda's bin directory into the NewWebsite's directory.
 
-![DLL files](/Guides/MVC-Integration/DLLs.png)
+![bin files](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_28_44-webforms-cs.png)
 
+**b.** You will get a conflict around the NewtonJSON DLL. Either use the Izenda NewtonJSON dll and xml files or address the conflicting version issues by implement a strategy to use multiple versions of the same DLL. 
+
+![bin files](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_02_26-2-Total-File-Conflicts.png)
 
 ###Step 3. Add IzendaStaticResourcesController.cs and IzendaReportingController.cs to the project
 
