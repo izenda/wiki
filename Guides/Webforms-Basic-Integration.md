@@ -51,7 +51,7 @@ You will get a conflict around the NewtonJSON DLL. Either use the Izenda NewtonJ
 
 You'll see conflicts for four files. Keep NewWebsite's files, and discard the Izenda files. We will walk through merging Izenda's Web.Config and Global.asax in the next step.
 
-![misc files conflict](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_32_15-4-Total-File-Conflicts.png
+![misc files conflict](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_32_15-4-Total-File-Conflicts.png)
 
 * Web.Config - This will contain basic web application configuration settings.
 * Global.asax -This crucial for InitializeReporting() method and AdHocConfig class.
