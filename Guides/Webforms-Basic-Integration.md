@@ -96,9 +96,9 @@ Past that you'll need to change each Izenda page to point at the Site.Master ins
 
 For each page you'll need to:
 
-*Address CSS and general styling issues.
-*Address redundant Forms tags.
-*Address page level CSS issues.
+* Address CSS and general styling issues.
+* Address redundant Forms tags.
+
 
 
 
