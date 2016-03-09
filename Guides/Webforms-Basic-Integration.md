@@ -49,14 +49,18 @@ You will get a conflict around the NewtonJSON DLL. Either use the Izenda NewtonJ
 
 ![misc files](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_29_22-webforms-cs.png)
 
-You'll see conflicts for four files. Keep NewWebsite's files, and discard the Izenda files. We will walk through merging Izenda's Web.Config and Global.asax in the next step.
-
-![misc files conflict](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_32_15-4-Total-File-Conflicts.png)
+You'll see conflicts for four files:
 
 * Web.Config - This will contain basic web application configuration settings.
 * Global.asax -This crucial for InitializeReporting() method and AdHocConfig class.
 * Default.aspx - This file is simply a placeholder in Izenda. It redirects users to the ReportList page.
 * Default.aspx.cs - This is the code file for the above page. It redirects users to the ReportList page.
+
+Keep NewWebsite's files, and discard the Izenda files. 
+
+![misc files conflict](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_32_15-4-Total-File-Conflicts.png)
+
+We will walk through merging Izenda's Web.Config and Global.asax in the next step.
 
 ###Step 3. Add IzendaStaticResourcesController.cs and IzendaReportingController.cs to the project
 
