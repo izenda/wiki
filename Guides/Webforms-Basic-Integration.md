@@ -60,21 +60,23 @@ You'll see conflicts for four files:
 * Default.aspx - This file is simply a placeholder in Izenda. It redirects users to the ReportList page.
 * Default.aspx.cs - This is the code file for the above page. It redirects users to the ReportList page.
 
-Keep NewWebsite's files, and discard the Izenda files. 
+Keep NewWebsite's files, and discard the Izenda files. We will walk through merging the Global.asax files in the next step.
 
 ![misc files conflict](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_32_15-4-Total-File-Conflicts.png)
-
-We will walk through merging Izenda's Web.Config and Global.asax in the next step.
 
 ###Step 3. Merging the Global.asax
 
 **a.** Open the Izenda Global.asax and the NewWebsite Global.asax and add the Izenda namespace.
 
-![Controllers](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_23_05-NewWebsite---Microsoft-Visual-Studio.png)
+![1245125](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_23_05-NewWebsite---Microsoft-Visual-Studio.png)
 
 **b.** Add Izenda's CustomAdHocConfig class.
 
-![Controllers](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_26_47-NewWebsite---Microsoft-Visual-Studio.png)
+![125612](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_26_47-NewWebsite---Microsoft-Visual-Studio.png)
+
+**c.** If you haven't done so already, empty the contents of your Izenda.config (or leave it out of the merge process entirely) and set your license key and connection string in the InitializeReporting() method.
+
+![534512](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-15_44_50-NewWebsite---Microsoft-Visual-Studio.png)
 			
 ###Step 4. Set Friendly URL Redirect Mode to Off 
 
@@ -82,7 +84,7 @@ In order to avoid routing issues, you'll need to set the RedirectMode to off. Op
 
 ![Controllers](http://wiki.izenda.us/Guides/Webforms-Basic-Integration/2016-03-08-19_34_37-NewWebsite---Microsoft-Visual-Studio.png)
 
-###Step 5. Set Friendly URL Redirect Mode to Off 
+###Step 5. 
 
 In order to avoid routing issues, set the RedirectMode to off, as seen below.
 
