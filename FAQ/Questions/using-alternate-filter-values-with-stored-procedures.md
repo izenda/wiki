@@ -1,4 +1,4 @@
-#Substituting filter values for stored procedures
+#Substituting filter values for other values when using a stored procedure
 
 [[_TOC_]]
 
