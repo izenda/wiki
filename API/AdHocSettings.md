@@ -400,7 +400,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String|[[SqlServerConnectionString|/API/CodeSamples/SqlServerConnectionString]]| Gets or sets the connection string used to connect to an MSSQL database. |null|
 |Boolean|[[StoreCurrentReportSetInApplication|/API/CodeSamples/StoreCurrentReportSetInApplication]]| Gets or sets whether the CurrentReportSet should be stored as an application variable instead of a session variable. |False|
 |Int32|[[StoredProcedureStringLimit|/API/CodeSamples/StoredProcedureStringLimit]]| Gets or sets the maximum length of VARCHAR parameters used by Stored Procedures (-1 for MAX) **(deprecated)**|-1|
-|Boolean|[[StoreImagesToCache|/API/CodeSamples/StoreImagesToCache]]| Gets or sets the value indicating how temporary images should be stored. |True|
+|Boolean|[[StoreImagesToCache|/API/CodeSamples/StoreImagesToCache]]| Gets or sets the value indicating how temporary images should be stored. **(deprecated)** |True|
 |Boolean|[[StrictANSIOuterJoin|/API/CodeSamples/StrictANSIOuterJoin]]| Gets or sets value indicating that strict ANSI/ISO SQL-92 outer join will be used (affects filters applied to joined tables). |True|
 |Boolean|[[StripInvalidCharacters|/API/CodeSamples/StripInvalidCharacters]]| Gets or sets whether invalid characters in report names should be stripped.  Valid characters are any alphanumeric characters, underscores, hyphens, backslashes, single quotes, and whitespace. |True|
 |String|[[SubCalculationFilterRegex|/API/CodeSamples/SubCalculationFilterRegex]]| Gets or sets the regular expression used for subtotal calculation. If the name of a column matches this expression then it will not be considered when calculating subtotals. |ID$&#124;Id$&#124;^id$&#124;_id$|
