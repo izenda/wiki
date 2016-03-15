@@ -10,7 +10,7 @@ When I filter a report with a stored procedure datasource, I want to pass a diff
 
 While we do not provide a simple API to do this, it can be done with some knowledge of our methods. The first step is to set up the Equals(Select) values for your stored procedures. In the example below, we will assume you have read our article on [[using stored procedures in Izenda 6|http://wiki.izenda.us/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]. We will be using a column called "OrderStatus" that returns an integer, and another column called "OrderStatusName" that returns a string.
 
-**Note: ** If you are substituting a value on a table or view instead of a stored procedure, click [[here|/FAQ/passing-alternate-filter-values-with-a-table-or-view]].
+**Note:** If you are substituting a value on a table or view instead of a stored procedure, click [[here|/FAQ/passing-alternate-filter-values-with-a-table-or-view]].
 
 For the ProcessEqualsSelect override, we can put:
 
