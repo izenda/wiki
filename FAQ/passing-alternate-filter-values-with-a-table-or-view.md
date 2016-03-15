@@ -10,7 +10,7 @@ When I filter a report built on a table or view, I want to pass a different valu
 
 Please refer to the included sample code. In this code, we override PostProcessEqualsSelectList in order to populate a filter with a set of paired values. Values from the CompanyName column will be placed in the filter dropdown which users can select, but the corresponding value from CompanyID will be placed in the where clause of the query. 
 
-**Note: ** If you would like to substitute the value of a stored procedure param, click [[here|http://wiki.izenda.us/FAQ/Questions/using-alternate-filter-values-with-stored-procedures]].
+**Note:** If you would like to substitute the value of a stored procedure param, click [[here|/FAQ/Questions/using-alternate-filter-values-with-stored-procedures]].
 
 ```csharp
 public override void PostProcessEqualsSelectList(Column column, List<string> labels, List<string> values)
