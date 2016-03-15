@@ -111,8 +111,8 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ##Settings
 
-- [[How do I hide output types (export formats)?|http://wiki.izenda.us/FAQ/Formatting/How-do-I-hide-Output-Types]]
-- [[How do I control the alignment of text fields or justification in my report's output?|http://wiki.izenda.us/FAQ/Formatting/How-do-I-control-the-alignment-of-text-fields-or-justification-in-report-output]]
+- [[How do I hide output types (export formats)?|/FAQ/Formatting/How-do-I-hide-Output-Types]]
+- [[How do I control the alignment of text fields or justification in my report's output?|/FAQ/Formatting/How-do-I-control-the-alignment-of-text-fields-or-justification-in-report-output]]
 - [[How do I Remove the Copyright Text from Settings (Settings.aspx)?|/FAQ/Questions/Settings/Hiding-Izenda-Copyright-Footer]]
 
 ##Troubleshooting
@@ -127,19 +127,19 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Why do Chart Images not Render in my Report Thumbnails?|FAQ/chart-images-not-rendering]] 
 - [[How to disable Protected Mode in Office 2010|FAQ/disable-protected-mode-office-2010]]
 - [[How to update your legacy deployment to be compatible with Izenda 6.7.0.272+|/FAQ/UpdatingReportDesigner-for-Izenda-6.7.0.272]]
-- [Changes to my CSS aren't applying](http://wiki.izenda.us/FAQ/How-To-Minify-CSS-Files)
+- [Changes to my CSS aren't applying](/FAQ/How-To-Minify-CSS-Files)
 - [[Why a report part cannot be positioned between two charts on one report|/FAQ/Why-Are-My-Charts-Stuck-Together]]
 
 ##Upgrading Izenda
-- [[What's new in the 6.8.0.1 + Reference Implementation?|http://wiki.izenda.us/Whats-new-in-the-6-dot-8-0-dot-1-Reference-Implementation]]
+- [[What's new in the 6.8.0.1 + Reference Implementation?|/Whats-new-in-the-6-dot-8-0-dot-1-Reference-Implementation]]
 - [[How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL]]
 - [[Izenda-Update-Best-Practices]]
 
 ##Misc.
 
-- [[How do I disable the redirect on the Report List if I have no reports?|http://wiki.izenda.us/FAQ/Disabling-ReportList-Redirect]]
-- [[How do I turn off the screen size Responsive Grid?|http://wiki.izenda.us/FAQ/Responsive-Grid#Remove-Responsive-Grid]]
-- [[How do I make Responsive Grid browser aware?|http://wiki.izenda.us/FAQ/Responsive-Grid#Make-Responsive-Grid-Browser-Aware]]
+- [[How do I disable the redirect on the Report List if I have no reports?|/FAQ/Disabling-ReportList-Redirect]]
+- [[How do I turn off the screen size Responsive Grid?|/FAQ/Responsive-Grid#Remove-Responsive-Grid]]
+- [[How do I make Responsive Grid browser aware?|/FAQ/Responsive-Grid#Make-Responsive-Grid-Browser-Aware]]
 - [[How do I get the ReportList information to create my own Report List?|FAQ/getting-reportlist-information]]
 - [[How do I force a user to click on 'Update Results' before showing any data?|FAQ/force-update-results-on-report]]
 - [[How do I upgrade/download a new file-set?|FAQ/Download and Update Resources]]
@@ -147,10 +147,11 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[DatabaseAdHocConfig Table Structure|/FAQ/IzendaAdHocReports-table]]
 - [[How are Thumbnails generated for the Izenda ReportList?|FAQ/thumbnail-generation-for-reportlist]]
 - [[Understanding Izenda Print Modes|FAQ/understanding-izenda-print-modes]]
-- [[What are the query string keys for rs.aspx?|http://wiki.izenda.us/FAQ/Questions/Query-String-Keys-for-rs.aspx]]
+- [[What are the query string keys for rs.aspx?|/FAQ/Questions/Query-String-Keys-for-rs.aspx]]
 - [[How Can I Apply a Hidden Filter Using an Inner Query?|/FAQ/applying-hidden-filter-using-inner-query]]
 - [[How Do I Use Stored Procedures With Izenda Reports?|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
-- [[How do I use alternate filter values with stored procedure parameters versus what I display to the user?|http://wiki.izenda.us/FAQ/Questions/using-alternate-filter-values-with-stored-procedures]]
+[[How do I use alternate filter values with a table or view versus what I display to the user?|/FAQ/passing-alternate-filter-values-with-a-table-or-view]]
+- [[How do I use alternate filter values with stored procedure parameters versus what I display to the user?|/FAQ/Questions/using-alternate-filter-values-with-stored-procedures]]
 - [[How Can I Use a Custom Filter on my Dashboards?|/FAQ/Questions/Adding-custom-filters-to-dashboards]]
 - [[What kinds of caching does Izenda use?|/FAQ/Questions/Caching]]
 - [[I'm seeing a version collision between a third party library referencing Log4Net and Izenda. How do I fix this?|/FAQ/Questions/Log4Net-Collision]]
@@ -159,6 +160,6 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Izenda Caching Lifecycle|/FAQ/Izenda Caching Lifecycle]]
 - [[How to alias joined tables names|/API/CodeSamples/ShowJoinAliasTextboxes]]
 - [[How do I control page breaking inside of an Image?|/FAQ/Questions/Preventing-page-break-in-images]]
-- [How do I toggle word wrapping in the report list?](http://wiki.izenda.us/FAQ/Toggle-Text-Wrapping-on-the-Report-List)
+- [How do I toggle word wrapping in the report list?](/FAQ/Toggle-Text-Wrapping-on-the-Report-List)
 - [[How do I set charts to only have one Y axis?|/FAQ/How-do-I-set-only-one-Y-axis-in-a-chart]]
 - [[How do I write custom code for a visualization?|/FAQ/How-Do-I-Customize-A-Visualization]]
