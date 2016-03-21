@@ -8,6 +8,4 @@ If I want to add page numbers to a report and the 'Show Page Numbers' property o
 
 #Answer
 
-There are two tags you can use in the Page Header or Footer property: [pagenumber] and [totalpages]. When a report is exported to pdf or pdf-to-html print, the current and total page numbers will be calculated and placed in the appropriate tag. You can place either or both tags inside of a style div to control appearance, location, or some other property. 
-
-http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab
+There are two tags you can use in the Page Header or Footer property on the [[Misc tab|/Guides/ReportDesign/9.0-Misc-Tab]]: [pagenumber] and [totalpages]. When a report is exported to pdf or pdf-to-html print, the current and total page numbers will be calculated and placed in the appropriate tag. You can place either or both tags inside of a style div to control appearance, location, or some other property. 
