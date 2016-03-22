@@ -1,6 +1,6 @@
 [[_TOC_]]
 
-<!-- # 6.10.0.4 (March 22, 2016)
+# 6.10.0.4 (March 22, 2016)
 
 ## Fixes
 
@@ -91,7 +91,7 @@
 |23691|Instant Reports|Filters|Fixed: Dash2.0/IR2.0 (BETA) - Issue where report becomes invalid when user tries to filter values created from IR designer.|
 |23724|API|Optimization|Fixed: Discrepancy between very old code and recently added improvements to cultures handling. This conflict caused issues with cultures that change date format and Stored procedure code.|
 |23732|Instant Reports|Filters|Fixed: IR2.0 (BETA) - 'Equals' style operators erroneously showed 'No Results' when 'blank' selected.
-|23759|Report Design|UI|Fixed: Issue with Equals(Calendar) UI where 'Next' and 'Previous' month buttons were not visible.| -->
+|23759|Report Design|UI|Fixed: Issue with Equals(Calendar) UI where 'Next' and 'Previous' month buttons were not visible.|
 
 # 6.10.0.3 (February 23, 2016)
 
