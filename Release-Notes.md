@@ -1,5 +1,98 @@
 [[_TOC_]]
 
+# 6.10.0.4 (March 22, 2016)
+
+## Fixes
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|8453|API|Feature| Izenda Reports - Added labels (EX: SUM, COUNT) that appear on the hover-over of a subtotal.|
+|11189|API|Feature| Addition of commentary to Izenda serialization.|
+|21937|Dashboards|Feature| Dash2.0 - Adding support for Fusion Report Cache timestamp to appear on report tiles in new Dashboard.|
+|22505|Instant Reports|Feature| Dash2.0 - Ability added to easily set default category in Dash2.0 in code. Settings in file: "Resources/components/dashboards/module-definition.js" // dashboard config object: angular.module('izendaDashboard').constant('izendaDashboardConfig', { showDashboardToolbar: true, defaultDashboardCategory: 'Filters', defaultDashboardName: 'dashboard Autocomplete Filter' });|
+|22537|API|Feature| Refactored Datatable class to increase performance on larger data sets. Implemented setting AdHocSettings.ClearManagedMemoryOnRender, this false by default. When set to true .NET Garbage Collector is explicitly called. To take full advantage of these changes in the Datatable class custom formats can be updated to use the following: 1) Replace IFormatter with BaseFormatter 2) Replace all DataTable occurrences with AdHocDataTable 3) Add override key words to the methods, so: - "public Type GetOutputDataType" -> "public override Type GetOutputDataType" - "public object Format" -> "public override object Format" Example below: Original: class CustomDateFormatter : IFormatter, IExcelFormatter { public string GetExcelCellClass { get { return "xls-text"; } } public Type GetOutputDataType(DataTable table, int columnNumber, ReportOutputOptions reportOutputOptions, Field field) { return typeof(string); } public object Format(DataTable table, int rowNumber, int columnNumber, Field field, DataTable originalTable, Field nameField) { var value = table.Rows[rowNumber][columnNumber]; if (value == null || value == DBNull.Value) return ""; return string.Format("{0:dd MMM yyyy}", value); } } Updated: class CustomDateFormatter : BaseFormatter, IExcelFormatter { public string GetExcelCellClass { get { return "xls-text"; } } public override Type GetOutputDataType(AdHocDataTable table, int columnNumber, ReportOutputOptions reportOutputOptions, Field field) { return typeof(string); } public override object Format(AdHocDataTable table, int rowNumber, int columnNumber, Field field, AdHocDataTable originalTable, Field nameField) { var value = table.Rows[rowNumber][columnNumber]; if (value == null || value == DBNull.Value) return ""; return string.Format("{0:dd MMM yyyy}", value); } } All previous implementations of IFormat will still work, but will not take advantage of the optimizations in the new Datatable implementation.|
+|22749|Report Design|Feature| Cell Highlight - 'High' 'Medium' and 'Low' strings can no longer be used to address the upper, middle, and lower thirds of a range in highlighting or value range aliasing. You can use "x% to y%" range syntax to establish custom proportional ranges instead. High, Medium and Low will now function properly as strings.|
+|23025|Instant Reports|Logging|Feature: IR2.0 (BETA) - Support for Filter Regex added to IR2.0.|
+|23039|Scheduler|Logging|Feature: Scheduling - Added ability of configure local SMTP port. Add this method to customadhocconfig: public static System.Net.IPEndPoint BindIPEndPoint(System.Net.ServicePoint servicePoint, System.Net.IPEndPoint remoteEndPoint, int retryCount) { return new System.Net.IPEndPoint(System.Net.IPAddress.Parse("192.168.0.61"), 6666); } Add this setting to InitializeReporting: AdHocSettings.SmtpClientBindIPEndPointDelegate = BindIPEndPoint;|
+|23435|Instant Reports|Feature| IR2.0 (BETA) - added support for setting AdHocSettings.ShowChartTab which can hide the chart menu tab.|
+|23438|Instant Reports|Feature| IR2.0 (BETA) - Adding support for hide grid feature in New Instant Report Designer. User can now create a Visualization from a grid and hide the grid from view in the report.|
+|23642|Instant Reports|Feature| Enabling a feature on new Instant Report page to "Show Filters In Report Description". This option allows the filters to show on the screen and in the printed report.|
+
+
+## Features
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|21656|API|Optimization|Fixed: When using an ODATA connection, the results drop down was not properly working to increase or decrease number of results.|
+|22443|Instant Reports|Optimization|Fixed: In IR2.0, when checked all field headers now become bold.|
+|22500|Instant Reports|UI|Fixed: IR2.0 AutoGauge missing size-adjustment slider.|
+|22607|Instant Reports|Optimization|Feature: IR2.0 (BETA)- 'Expose as Datasource' functionality added to IR2.0. Requires 'AllowVirtualDatasources=true' to be set.|
+|22611|Instant Reports|UI|Feature: IR2.0 (BETA) - Add 'Hide Grid' UI to make tables invisible for Visualization-only report styling.|
+|22615|Instant Reports|Optimization|Fixed: BETA New IR page is not paginating reports properly. The first page appears to limit records properly, but the pagination controls do not appear at the bottom of the screen.|
+|22678|Instant Reports|Visualization|Feature: IR2.0 (BETA) - Help links for visualizations added.|
+|22738|Report Design|Filters|Fixed: Code conflict that could cause null reference exception using a 'GreaterThan: 1' filter.|
+|22855|Report Design|Visualization|Fixed: Grouping in Calendar Visualisation shifting values improperly.|
+|22886|Dashboards|Optimization|Fixed: Issue where certain customizations or report configurations could cause multiple copies of same dashboard pane to erroneously appear upon refresh of a dashboard.|
+|22976|Report Design|Filters|Fixed: When using a Group(week) or Group(year & quarter) function and "Add Subtotals" is selected, some reports will throw an "ORA-01722: invalid number" error in Oracle. On SQL Server, Izenda will display the error "Conversion failed when converting date and/or time from character string".|
+|22992|API|License Key|Fixed: Stack Overflow Exception experienced when reading value 'LicenseKey' from web/config in certain configurations using web.config instead of global API to set license.|
+|22996|API|Optimization|Fixed: Issue with unexpected date behavior using Timezone offset setting and creating a pivot based on date.|
+|23007|API|Optimization|Fixed: Situation when manual schema cache refresh is required when adding a new stored procedure. Schema refresh will not be needed to add a new stored procedure to VisibleDatasources.|
+|23035|Report Design|UI|Fixed: Browser-specific issues with popup drill-down UI rendering.|
+|23056|Report Design|Visualization|Fixed: Calendar Visualization and Auto-Gauge Visualization being cut off in PDF exports.|
+|23059|Report Design|Visualization|Fixed: Issue with values containing a ',' using tree-filter operator corrected.|
+|23066|Dashboards|Filters|Fixed: Dash2.0 - Issue where the filters for dashboard tiles did not apply to the first tile of a report. This occurred when that first tile was a visualization and 'attached to', or built off of, the report summary.|
+|23068|Report Design|Visualization|Fixed: Description text not used for chart labelling|
+|23079|Report Design|Export|Fixed: After export, default preview results value ignored upon report update.|
+|23090|API|Optimization|Fixed: NULL label added to replace erroneous 'column position label' assigned to counted NULL columns.|
+|23102|API|Optimization|Fixed: When a colon is in the description box and a column group is being applied either through advanced field settings or the field@group method, colon also produces a column header.|
+|23115|API|Optimization|Fixed: The error - "The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified." - displayed when doing certain PERS operations with expressions.|
+|23124|API|UI|Fixed: Using a view name containing apostrophes was disallowed by the UI.|
+|23150|Dashboards|Export|Fixed: Issue with dashboards exported to Excel where formatting was lost.|
+|23158|API|Optimization|Fixed: Issue opening Settings.aspx via a mobile browser.|
+|23176|Instant Reports|Data Sources|Fixed: Implemneted LazyLoad behavior for IR1.0/2.0. Stored Procedures will not be called/cached until expanded in IR with LazyLoading enabled. **NOTE: StoredProcedure columns will not be available for 'search' in IR until expanded and column values cached.**|
+|23194|Scheduler|Optimization|Fixed: Applying timezone to UTC caused error - 'The added or subtracted value results in an un-representable DateTime.' - using Izenda setting 'ScheduleTimeZone'.|
+|23208|API|Optimization|Fixed: On-page UI sort of data by clicking column header using alphanumeric order for dates instead of date order.|
+|23224|API|Optimization|Fixed: Legacy JS refactored to allow '&' symbol in the name value of a drilldown.|
+|23227|Report Design|Forms|Fixed: Deploying Izenda using UNC pathing, issues with FORMS product corrected.|
+|23230|Dashboards|UI|Fixed: "Missing color hue rotate" error resolved in dash 2.0 background hue UI.|
+|23231|Dashboards|Filters|Fixed: Dash2.0 - New Dashboard slider fixed so that it can be drug one or many segments.|
+|23234|Instant Reports|Filters|Fixed: "ORA-01036: illegal variable name/number" error when using IR2.0 and Equals(Calendar) and preview results 100.|
+|23235|Instant Reports|Filters|Fixed: IR2.0 displayed 'Invalid Value' error switching between date-entry filter and calendar date filter operators.|
+|23236|Instant Reports|Filters|Fixed: 'Object reference' error displayed when switching from 'Between(Calendar)' to 'Equals Calendar' in IR2.0.|
+|23240|API|Optimization|Fixed: Subcategory creation during report saving using 'Category/Reportname' behaves the same in both Viewer and designer.|
+|23249|API|Caching|Fixed: Conflict in logic that sometimes results in empty name of the file for schema cache, causing cache to be lost, causing frequent long loading times.|
+|23260|API|Optimization|Fixed: Issues with pivots and session state handlers in webfarms resolved.|
+|23282|API|Optimization|Fixed: Changed handling of report SQL generation to better support legacy reports from Izenda 6.7 versions being correctly generated in the latest versions of Izenda with no changes.|
+|23316|Report Design|Export|Fixed: Issue exporting to Excel in the following situation- Field is a Date(Time) type; VG; Export to Excel|
+|23317|Report Design|Visualization|Fixed: Autochart legend now mirrors field order.|
+|23331|Report Design|Filters|Fixed: Issue in the ReportDesigner where datepicker does not open automatically.|
+|23334|Report Viewer|Export|Fixed: Serialized several objects overlooked in the v6.10.x release. Also corrected bug with limited rows being exported for XLS output|
+|23340|API|Optimization|Fixed: Session data storage provider is not available error when HttpContext.Current.Session is null.|
+|23352|Instant Reports|Data Sources|Fixed: When initially selecting a datasource in Instant Reports, the checkbox remains blank and users are unable to create joins off of the tables. The checkbox will now contain a check and users will be able to create joins.|
+|23354|Report Viewer|Export|Fixed: Distorted thumbnails sometimes generated by EVO engine.|
+|23359|API|UI|Fixed: Issue with HiddenCategories and 'CurrentUserName' values in session which can clear or duplicate categories for other users.|
+|23378|API|Optimization|Fixed: Error found in logs that had no effect in UI but did unnecessarily bloat logs.|
+|23433|API|Optimization|Fixed: Issue with serialization of malformed blank reportSet object when preparing response to getReportDashboardConfig request.|
+|23457|API|Optimization|Fixed: Regression issue where initialization logic was broken for MVC4 kit specifically.|
+|23458|API|Data Sources|Fixed: Issue with missing pagination controls on reports generated from Stored Procedures.|
+|23467|API|Optimization|Fixed: System.ArgumentException: Issue where you get 'URI formats are not supported' error when usingAdHocSettings.ImagesPath. Exception is thrown by .net method System.IO.Path.GetFullPath which was added to ImagesPath setting getter in the commit for mentioned above case.|
+|23487|API|Optimization|Fixed: Starter-kit code for vanilla Izenda installs modified so that it will pick 1.12 jquery for <=ie8, and 2.1 for all other cases.|
+|23508|API|Logging|**NOTE: Starting in the next version (v6.10.0.5+) ReportSet.GenerateOutput will be obsolesced. The new best practice is to use the ReportOutputGenerator classes directly.**|
+|23539|Report Viewer|Save|Fixed: Issue where saved formats in a report would be wiped out by making any format changes in the viewer advanced area.|
+|23576|Report Design|Data Sources|Fixed: Database object with " ' " in name causing error in reading visible data sources.|
+|23584|Instant Reports|Data Sources|Fixed: IR2.0 BETA - Instant Reports page the data source columns sorting based on the field name in the database instead of the alias name assigned.|
+|23588|API|Optimization|Fixed: Issue if the logger call is incorrectly designed then unhandled exception may occur.|
+|23595|Report Design|Filters|Fixed: Issue with single empty string value used in filters similar to Equals(Select) in functionality. Example: Empty auto-complete filter generates SQL - WHERE ([dbo].[Orders].[ShipCountry] = N'')|
+|23627|Report Design|Pivot|Fixed: When adding a pivot the row headers are clickable to view the field panel, column headers are not, but after adding a second pivoted column the row headers cannot be clicked to view the field panel.|
+|23629|Instant Reports|UI|Fixed: IR2.0 (BETA) - Issue with menu option for print, the dropdown itself does not show, can't print a report on PDF and HTML.|
+|23631|Instant Reports|Export|**NOTE: New settings in default global.asax. - Set New IR as Instant Report Page - Set AdHocSettings.ShowJoinDropDown = true - Set default PDF print mode to EVO**|
+|23649|Report Design|Save|Erroneous _global_ tenantID saved instead of user tenantID.|
+|23680|API|Data Sources|Fixed: Issue with DB Schema cache causing existing database relationships to not work with any FUSION connection.|
+|23691|Instant Reports|Filters|Fixed: Dash2.0/IR2.0 (BETA) - Issue where report becomes invalid when user tries to filter values created from IR designer.|
+|23724|API|Optimization|Fixed: Discrepancy between very old code and recently added improvements to cultures handling. This conflict caused issues with cultures that change date format and Stored procedure code.|
+|23732|Instant Reports|Filters|Fixed: IR2.0 (BETA) - 'Equals' style operators erroneously showed 'No Results' when 'blank' selected.
+|23759|Report Design|UI|Fixed: Issue with Equals(Calendar) UI where 'Next' and 'Previous' month buttons were not visible.|
+
 # 6.10.0.3 (February 23, 2016)
 
 ## Features
