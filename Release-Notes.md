@@ -86,7 +86,7 @@
 |23627|Report Design|Pivot|Fixed: When adding a pivot the row headers are clickable to view the field panel, column headers are not, but after adding a second pivoted column the row headers cannot be clicked to view the field panel.|
 |23629|Instant Reports|UI|Fixed: IR2.0 (BETA) - Issue with menu option for print, the dropdown itself does not show, can't print a report on PDF and HTML.|
 |23631|Instant Reports|Export|**NOTE: New settings in default global.asax. - Set New IR as Instant Report Page - Set AdHocSettings.ShowJoinDropDown = true - Set default PDF print mode to EVO**|
-|23649|Report Design|Save|Erroneous _global_ tenantID saved instead of user tenantID.|
+|23649|Report Design|Save|Fixed: Erroneous _global_ tenantID saved instead of user tenantID.|
 |23680|API|Data Sources|Fixed: Issue with DB Schema cache causing existing database relationships to not work with any FUSION connection.|
 |23691|Instant Reports|Filters|Fixed: Dash2.0/IR2.0 (BETA) - Issue where report becomes invalid when user tries to filter values created from IR designer.|
 |23724|API|Optimization|Fixed: Discrepancy between very old code and recently added improvements to cultures handling. This conflict caused issues with cultures that change date format and Stored procedure code.|
