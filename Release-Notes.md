@@ -2,7 +2,7 @@
 
 # 6.10.0.4 (March 22, 2016)
 
-## Fixes
+## Features
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
@@ -19,7 +19,7 @@
 |23642|Instant Reports|Feature| Enabling a feature on new Instant Report page to "Show Filters In Report Description". This option allows the filters to show on the screen and in the printed report.|
 
 
-## Features
+## Fixes
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
