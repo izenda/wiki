@@ -2,6 +2,12 @@
 
 # 6.10.0.4 (March 22, 2016)
 
+## **Hotfix (March 24, 2016)**
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|**HF:23784**|VisualGroups|Bug| Fixed: First field in a report, with VG enabled, can disappear when subtotals added and report is previewed.|
+|**HF:23491**|Joins|Bug| Fixed: Issue where if you to add multiple joins to the same table you must save the report in between adding each field in order for additional table joins to appear.|
+
 ## Features
 
 |Case|Category|Subcategory|Description|
