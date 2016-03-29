@@ -39,6 +39,8 @@ foreach (string fileName in Directory.EnumerateFiles(AdHocSettings.ReportsPath))
     Console.WriteLine(message);
 }
 
+```
+
 There are also other classes that are accessible in the same manner and that inherit from the same interface. Simply replace the Html2PdfGenerator with the necessary class to export to different formats. These classes are defined as follows:
 
 * CsvReportOutputGenerator
