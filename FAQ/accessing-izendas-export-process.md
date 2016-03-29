@@ -8,35 +8,14 @@ How can I utilize Izenda's export process for CSV, PDF, or Excel in an applicati
 
 ##Answer
 
-There are multiple methods to use Izenda's export process in your own application for any export format supported by Izenda. Please refer to the code samples below for examples.
+The export process can be invoked by following the code template provided below. The result can be served back to the client computer, to a server filesystem, to a database, or to an email client depending upon the requirements. In the example below, the result is output to the server's filesystem using a directory called "exports" created two levels up from where the program is being executed.
 
-###Method 1: ReportRenderer method
-
-```csharp
-foreach (string fileName in Directory.EnumerateFiles(AdHocSettings.ReportsPath))
-{
-    reportName = fileName.Substring(fileName.LastIndexOf("\\") + 1, fileName.LastIndexOf(".") - fileName.LastIndexOf("\\") - 1);
-    try
-    {
-        ReportRenderer repRndr = new ReportRenderer();
-        byte[] export = repRndr.ExportReportSet(reportName, "PDF");
-        File.WriteAllBytes(string.Format("{0}\\{1}.{2}", outputPath, reportName, "PDF"), export);
-    }
-    catch (Exception e)
-    {
-        message = e.Message;
-    }
-    Console.WriteLine(message);
-}
-```
-
-In order to do this with DatabaseAdHocConfig mode, use a data adapter matching your database system's architecture to access the reports within the table that contains the reports. Just having the report names will enable the system to load the reports and their data.
-
-_*Note:* For PDF exports, this method uses iTextSharp explicitly instead of being dependent upon the [[PdfPrintMode|/API/CodeSamples/PdfPrintMode]] setting._
-
-##Method 2: FileContentGenerator method
+##Using FileContentGenerator
 
 ```csharp
+string outputPath = Path.GetFullPath(string.Format("{0}\\..\\..\\{1}", Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "exports"));
+if (!Directory.Exists(outputPath))
+    Directory.CreateDirectory(outputPath);
 foreach (string fileName in Directory.EnumerateFiles(AdHocSettings.ReportsPath))
 {
     reportName = fileName.Substring(fileName.LastIndexOf("\\"), fileName.LastIndexOf(".") - fileName.LastIndexOf("\\"));
@@ -48,10 +27,10 @@ foreach (string fileName in Directory.EnumerateFiles(AdHocSettings.ReportsPath))
     try
     {
         rs.ReadXml(reportXml);
-        Html2PdfGenerator gen = new Html2PdfGenerator();
-        FileContentGenerator fileGen = gen.GenerateOutput(rs) as FileContentGenerator;
-        File.WriteAllBytes(string.Format("{0}\\{1}.{2}", outputPath, fileGen.OutputFileName, "PDF"), fileGen.Content);
-        message = string.Format("File {0}.pdf written to {1}", fileGen.OutputFileName, outputPath);
+        Izenda.Controls.Html2PdfGenerator gen = new Izenda.Controls.Html2PdfGenerator();
+        Izenda.Controls.FileContentGenerator fileGen = gen.GenerateOutput(rs) as Izenda.Controls.FileContentGenerator;
+        File.WriteAllBytes(string.Format("{0}\\{1}.{2}", outputPath, fileGen.OutputFileName, gen.FileExtension), fileGen.Content);
+        message = string.Format("File {0}.{1} written to {2}", fileGen.OutputFileName, gen.FileExtension, outputPath);
     }
     catch (Exception e)
     {
@@ -60,6 +39,10 @@ foreach (string fileName in Directory.EnumerateFiles(AdHocSettings.ReportsPath))
     Console.WriteLine(message);
 }
 
-This method provides a bit better control over the process, since it works with the explicitly defined .NET types within the Izenda framework. The previous method requires knowledge of the specific output type codes used and only works with iTextSharp as the PDF export.
+There are also other classes that are accessible in the same manner and that inherit from the same interface. Simply replace the Html2PdfGenerator with the necessary class to export to different formats. These classes are defined as follows:
 
-Both methods can have their output file saved anywhere on the server that the code has access to, on a database, sent via email, etc. 
+* CsvReportOutputGenerator
+* BulkCsvReportOutputGenerator
+* XmlReportOutputGenerator
+* ITextSharpPdfGenerator (The Html2PdfGenerator uses EO)
+* SqlReportOutputGenerator
