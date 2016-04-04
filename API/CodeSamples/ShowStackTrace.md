@@ -6,7 +6,7 @@
 
 Gets or sets the value indicating format for showing exceptions. When set to true, errors are represented with the error message and a hyperlink that opens the stack trace in a framed HTML output string. The error message can be [[friendly|/API/CodeSamples/UseFriendlyErrors]] or not, meaning that it displays a more detailed but less technical reason for the error, or the .NET error handling language.
 
-**Default Value:** 
+**Default Value:** True
 
 ##Global.asax (C♯)
 
