@@ -6,7 +6,7 @@
 
 Gets or sets the value indicating whether friendly errors should be shown on exceptions. Friendly errors are represented with a simpler error message. When this is false, errors are described with the default .NET error handling language. To disable error links entirely, use [[ShowStackTrace|/API/CodeSamples/ShowStackTrace]].
 
-**Default Value:** 
+**Default Value:** True
 
 ##Global.asax (C♯)
 
