@@ -4,9 +4,7 @@
 
 ##About
 
-When set to true, errors are represented with the error message and a hyperlink that opens the stack trace in a framed HTML output string. The error message can be [[friendly|/API/CodeSamples/UseFriendlyErrors]] or not, meaning that it displays a more detailed but less technical reason for the error, or the .NET error handling language.
-
-Gets or sets the value indicating format for showing exceptions. Izenda.AdHoc.AdHocSettings.UseFriendlyErrors must be on for this to have an effect.
+Gets or sets the value indicating format for showing exceptions. When set to true, errors are represented with the error message and a hyperlink that opens the stack trace in a framed HTML output string. The error message can be [[friendly|/API/CodeSamples/UseFriendlyErrors]] or not, meaning that it displays a more detailed but less technical reason for the error, or the .NET error handling language.
 
 **Default Value:** 
 
