@@ -28,12 +28,17 @@ Resources/components/dashboard/templates/toolbar.html
 
 Find this element:
 
-<div class="iz-dash-linkspanel-container"
-  ng-show="!toolbarController.isButtonBarVisible">
+```html
+
+<div class="iz-dash-linkspanel-container" ng-show="!toolbarController.isButtonBarVisible">
+
+```
 
 And change it to: 
 
+```html
 <div class="iz-dash-linkspanel-container" ng-show="false">
+```
 
 ###Dashboard Background Image
 
