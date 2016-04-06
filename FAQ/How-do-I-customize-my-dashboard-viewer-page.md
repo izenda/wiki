@@ -18,7 +18,11 @@ Resources/components/dashboard/templates/toolbar.html
 
 Inside of which is the angular component: 
 
+```html
 <div izenda-dashboard-background ... >
+```
+
+There this behavior can be defined as a default for all users.
 
 ###Dashboard Verbose List
 
