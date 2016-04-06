@@ -20,14 +20,14 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[What Is the ProcessDataSet() method?|FAQ/ProcessDataSet]]
 - [[How Do I customize the Report Viewer Filter Order?|Customizing-Report-Viewer-Filter-Order]]
 - [[How Do I Programatically switch databases?|FAQ/switching-databases-via-code]]
-- [[How do I hide the settings page button or aspx page from users?|http://wiki.izenda.us/API/CodeSamples/ShowSettingsButton]]
+- [[How do I hide the settings page button or aspx page from users?|/API/CodeSamples/ShowSettingsButton]]
 - [[How do I integrate with my login page?|FAQ/integrate-login-page]]
-- [[How do I implement Field-Level Security|http://wiki.izenda.us/FAQ/Questions/Applying-Security#Field-Level-Access]]
+- [[How do I implement Field-Level Security|/FAQ/Questions/Applying-Security#Field-Level-Access]]
 - [[Can I Use My Own Database's Functions With Izenda?|FAQ/izenda-and-udfs]]
 - [[How Do I Enable Izenda Vision & HTML Charting?|FAQ/enable-izenda-vision]]
-- [[How do I reset my Fusion Cache via code?|http://wiki.izenda.us/FAQ/Questions/Caching#RefreshAllCachedReports]]
-- [[How do I implement Fully Qualified Hidden Filters?|http://wiki.izenda.us/API/CodeSamples/HiddenFilters#Fully-qualified-filters]]
-- [[How do I change the default print settings?|http://wiki.izenda.us/FAQ/Questions/how-to-change-default-print-settings]]
+- [[How do I reset my Fusion Cache via code?|/FAQ/Questions/Caching#RefreshAllCachedReports]]
+- [[How do I implement Fully Qualified Hidden Filters?|/API/CodeSamples/HiddenFilters#Fully-qualified-filters]]
+- [[How do I change the default print settings?|/FAQ/Questions/how-to-change-default-print-settings]]
 - [[Can I Add Custom Format Options to the Report Designer?|/FAQ/Questions/Add Formatting Options]]
 - [[I'm Getting #DIV/0 In My Report Viewer. How Can I Fix This?|FAQ/Divide By Zero]]
 - [[My control names changed when I deployed from development to production and now I can't access them.|/FAQ/Questions/Control-Names-Break-In-Production]]
@@ -60,9 +60,10 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 - [[My customers are reporting their pages are not formatted with CSS properly. How can I fix this?|http://wiki.izenda.us/FAQ/Formatting/Customer-Loses-CSS-Formatting-or-Fonts-etc-are-not-Correct]]
 - [[How do I override CSS on reporting pages?|http://wiki.izenda.us/FAQ/Questions/Overriding-page-level-css]]
-- [How do I hide Output Types?](http://wiki.izenda.us/FAQ/Formatting/How-do-I-hide-Output-Types)
-- [How do I control the alignment of text fields or justification in report output?](http://wiki.izenda.us/FAQ/Formatting/How-do-I-control-the-alignment-of-text-fields-or-justification-in-report-output)
-- [Why doesn't 'Break Page After Field' work?](http://wiki.izenda.us/FAQ/Formatting/Why-doesnt-break-page-after-field-work)
+- [How do I hide Output Types?](/FAQ/Formatting/How-do-I-hide-Output-Types)
+- [How do I control the alignment of text fields or justification in report output?](/FAQ/Formatting/How-do-I-control-the-alignment-of-text-fields-or-justification-in-report-output)
+- [Why doesn't 'Break Page After Field' work?](/FAQ/Formatting/Why-doesnt-break-page-after-field-work)
+- [[How do I change the appearance of the Dashboard Viewer?|/FAQ/How-do-I-customize-my-dashboard-viewer-page]]
 
 ##Platform
 
