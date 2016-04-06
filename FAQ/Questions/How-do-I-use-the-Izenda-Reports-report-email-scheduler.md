@@ -122,12 +122,12 @@ Scheduled reports only supports per-user security using the Link format.  Schedu
 
 ##Saving Reports to Disk
 
-The Scheduler can be used to save reports to disk, if desired.
+The Scheduler can be used to save reports to disk.
 
 Here are some basic instructions for setting up this functionality with the Scheduler.
 
-* Add your FileScheduler.cs -> \App_Code\
-* SchedulerPage.aspx, SchedulerPage.aspx.cs -> \
+* Add the file [[FileScheduler.cs|/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler/FileScheduler.cs]] to the folder \App_Code\
+* In SchedulerPage.aspx, we will create the SchedulerPage.aspx.cs
 
 From your root, create your SchedulerPage.aspx with code behind, as such:
 
