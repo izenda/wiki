@@ -7,6 +7,7 @@
 * [[The Izenda API|/API/AdHocConfig]]
 * [[The AdHocSettings class|/API/AdHocSettings]]
 * [Developer Links and Guides](/Guides/Developer-Links-and-Guides)
+* [[Known Issues]]
 
 
 ---
