@@ -14,6 +14,10 @@ _*NOTE:* A subreport is not a special type of report! Any report can be a subrep
 
 _*NOTE:* This article will refer to this relationship between reports as both report-subreport as well as parent-child. The language is not technical and does not matter. You could also think of the pair relationship as from-to or high-low._ 
 
+###Blank and Null values
+
+Currently, Izenda subreporting does not support blank or null values. 
+
 ###Subreports on charts
 
 In addition to creating drilldowns for your main report items, you can create subreports for [[pie charts|http://wiki.izenda.us/Guides/ReportDesign/7.0-Chart-tab#7.3-Pie-Selection]] and [[bar charts|http://wiki.izenda.us/Guides/ReportDesign/7.0-Chart-tab#7.5-Bar-Selection]] as well. Currently, these only support a single key value, specified via the Label field. These will work with reports that have one drilldown key defined, but not ones with two keys defined.
