@@ -1,11 +1,9 @@
 #Namespace Izenda's Bootstrap Classes to Avoid Conflicts
 
-**Under Construction**
-
-[[TOC]]
+[[_TOC_]]
 
 ##Introduction
-You will need a CSS pre-processor (SASS or LESS) to accomplish this.
+If your application uses Bootstrap, and you integrate Izenda to use your own master/layout pages, you may need to separate Izenda's Bootstrap classes to avoid CSS conflicts with your own.  You will need a CSS pre-processor (SASS or LESS) to accomplish this; both are available in Visual Studio and support namespacing.
 
 ##Using SASS
 **Step 1 >> To avoid having to change several references throughout the applicaiton, rename main.css (for example, main-no-namespace.css).**
@@ -27,3 +25,10 @@ You will need a CSS pre-processor (SASS or LESS) to accomplish this.
 ![Create Report SASS sheets](/FAQ/bootstrap-namespacing/bootstrapnamespace3.png)
 
 ##Using LESS
+
+LESS uses the same method as SASS for namespacing, but with slightly different syntax for importing in newer versions:
+
+```css
+.izenda-bs {
+    @import (less) url("main-no-namespace.css");
+}
