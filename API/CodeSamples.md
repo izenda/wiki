@@ -115,7 +115,7 @@ _**Note:** Some of the items below are listed more than once. This is because th
 * [[How Can I Archive Reports?|http://wiki.izenda.us/FAQ/ArchiveReportOutput]]
 * [[Overriding AdHocConfig|http://wiki.izenda.us/API/AdHocConfig]]
 * [[Secure https on a load balancer|http://wiki.izenda.us/FAQ/Questions/Secure-https-on-a-load-balancer]]
-* [[How can I add the system date and time into my report?|http://wiki.izenda.us/API/CodeSamples/DataSourceCategories]]
+* [[How can I add the system date and time into my report?|API/CodeSamples/How-can-I-add-the-system-date-and-time-into-my-report]]
 * [[How to post-process data|http://wiki.izenda.us/FAQ/ProcessDataSet]]
 * [[Dynamically Creating Reports Via the API|http://wiki.izenda.us/API/CodeSamples/DynamicReportCreation]]
 * [[Applying Security for Owner of the Report Out of Scheduler|http://wiki.izenda.us/FAQ/Questions/Applying-Security-to-Scheduled-Reports]]
