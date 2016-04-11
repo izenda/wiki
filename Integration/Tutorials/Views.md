@@ -20,6 +20,18 @@ Essentially the product does an analysis of the metadata rather than requiring a
 
 Izenda recommends creating views that use Camel Case (i.e. FirstName) or underscore format (i.e. first_name) to limit how much manual typing a report designer needs to do.
 
+###Forbidden Characters
+
+Tabulation characters cannot be used in tables or views in Izenda. This includes:
+
+- horizontal tabulation (\u0009)
+- vertical tabulation (\u000B)
+- line feed (\u000A)
+- carriage return (\u000D)
+- line separator (\u2028)
+- paragraph separator (\u2029)
+- form feed (\u000C)
+
 ###View Code Samples
 
 **A Basic View**
