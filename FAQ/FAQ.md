@@ -58,6 +58,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ##Formatting
 
+- [[How do I resolve Bootstrap conflicts resulting from Izenda's integration into my application?|http://wiki.izenda.us/FAQ/bootstrap-namespacing]]
 - [[My customers are reporting their pages are not formatted with CSS properly. How can I fix this?|http://wiki.izenda.us/FAQ/Formatting/Customer-Loses-CSS-Formatting-or-Fonts-etc-are-not-Correct]]
 - [[How do I override CSS on reporting pages?|http://wiki.izenda.us/FAQ/Questions/Overriding-page-level-css]]
 - [How do I hide Output Types?](/FAQ/Formatting/How-do-I-hide-Output-Types)
