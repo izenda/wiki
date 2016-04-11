@@ -151,6 +151,27 @@ How to use:
 * Create a report and schedule it. In this case, we need to save to a folder -- so instead of an email recipient, specify the folder in which to save your report.
 * Open the SchedulerPage.aspx page in the browser.
 
+##Clearing scheduler settings on new report save
+
+You can use the following custom code to make sure that when a copy of a report is saved, the scheduler settings are not saved along with the report copy:
+
+```csharp
+
+public override void SaveReportSet(ReportInfo reportInfo, ReportSet reportSet)
+{
+    ReportSet existingReport = LoadFilteredReportSet(reportInfo.FullName);
+    // If this is a new report or SaveAs report
+    if (existingReport == null)
+    {
+        reportSet.Recipients = "";
+        reportSet.RepeatType = RepeatType.None;
+    }
+    
+    // Save report normally
+    base.SaveReportSet(reportInfo, reportSet);
+}
+
+```
 
 ##Overnight batch report processing
 
