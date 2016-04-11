@@ -1,3 +1,0 @@
-**Under Construction**
-
-<!--Rename main.css and Report.css in the /Resources/css directory (for example, main-no-namespace.css and Report-no-namespace.css).  Create two new SASS stylesheets called main.scss and Report.scss.  These will produce main.css and Report.css, which are referenced throughout Izenda.  Naming the files as such will reduce the number of places you will have to change references.  Import the renamed files to their respective SASS sheets under the new namespace.  Add the namespace class to the top level Izenda div.  In the case of our vanilla reference implementations, this will be inside of the body tag in Default.master.  All Izenda pages are rendered within this div.-->
