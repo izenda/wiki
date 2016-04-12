@@ -85,6 +85,7 @@ _**Note:** Some of the items below are listed more than once. This is because th
 * [[Code Sample for Export Button|http://wiki.izenda.us/API/CodeSamples/ReportViewer/Custom-Export-Buttons]]
 * [[Creating Custom Export Buttons on the Report Viewer|http://wiki.izenda.us/API/CodeSamples/ReportViewer/Custom-Export-Buttons]]
 * [[Report Viewer Page Code Samples|http://wiki.izenda.us/FAQ/Questions/hiding-report-viewer-buttons]]
+* [[Collapse Filter Panel on Load|http://wiki.izenda.us/FAQ/Questions/collapse-filter-panel-on-load]]
 
 ##SQL
 
