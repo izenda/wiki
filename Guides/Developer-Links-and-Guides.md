@@ -41,6 +41,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[Implementing custom behavior for the Equals(Popup) dialog|http://wiki.izenda.us/API/CodeSamples/Equals-Popup-Custom-Page]]
 * [[Joining a many-to-many database relationship and hiding the connecting table as a datasource|/FAQ/many-to-many-database-join]]
 * [[How can I utilize Izenda's export process for CSV, PDF, or Excel in an application?|/FAQ/accessing-izendas-export-process]]
+* [[How can I set default report designer options for my users?|/FAQ/Questions/setting-defaults-for-report-designer]]
 
 ###Javascript Guides
 
