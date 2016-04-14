@@ -15,6 +15,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 
 ###Quick Reference Guides
 
+* [Getting Started](http://www.izenda.com/developer-guide-before-starting) 
 * [[Installation Guide|http://wiki.izenda.us/Guides/Installing-Izenda]]
 * [[Security Guide|/Integration/Tutorials/Security]]
 * [[Basic Security Sample|Home#Basic-Login-Scenario]]
