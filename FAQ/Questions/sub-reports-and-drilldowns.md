@@ -108,7 +108,7 @@ Column B, to Subreport, as ComboKey - finds most recent column...
 
 * ddkvalue - this instructs the passed value to be used in a field defined as a drilldown key on the subreport. To pass the first value we set ddkvalue, to pass the second we set ddkvalue2.
 
-* pXvalue - this instructs the passed value to be used in a filter. The filter must be set up ahead of time, it cannot be set dynamically by detecting the field or datatype of the passed value. Izenda supports values being passed into the first 4 filters on any report, numbered on the filter tab from 1 to 4. You cannot pass a value into filter 5 or above.
+* pXvalue - this instructs the passed value to be used in a filter. The filter must be set up ahead of time, it cannot be set dynamically by detecting the field or datatype of the passed value.
 
 * {x} - This allows you to specify the column which passes a value on this record-row. A value of 0 means 'this column', values 1 to X indicate specifically columns 1 or X. If I am passing a value from the first column, I could use either {0} or {1} to relatively indicate 'this column' or absolutely indicate 'the first column'.
 
