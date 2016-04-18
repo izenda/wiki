@@ -3,7 +3,7 @@
 [[_TOC_]]
 
 ##About
-Sets an hour shift applied the timestamp when an Izenda report is exported. This allows for all times to be shifted by a specific amount, which can be varied depending on the user or set globally. To change the time zone offset used in the body of the report, use [[Time Zone Offset|http://wiki.izenda.us/edit/API/CodeSamples/TimeZoneOffset]]
+Sets an hour shift applied the timestamp when an Izenda report is exported. This allows for all times to be shifted by a specific amount, which can be varied depending on the user or set globally. To change the time zone offset used in the body of the report, use [[Time Zone Offset|http://wiki.izenda.us/API/CodeSamples/TimeZoneOffset]]
 
 **Default Value:** By default no action is taken. If a ReportTimeStampTimeZoneOffset is set, then that value will be applied to the timestamp placed on a report when it is exported. This value is relative to UTC, so a timestamp for the United States Eastern timezone is -5. This value does not take daylight savings time or any other regional time variation into account.
 
