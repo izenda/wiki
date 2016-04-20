@@ -1,4 +1,71 @@
 [[_TOC_]]
+<!--
+# 6.10.0.05 (April 20,2016)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|22499|Instant Reports|Export|IR2.0 - When you export IR2.0 report to PDF, add a description, and export again "The report you've designed is invalid." error occurs.|
+|22640|Instant Reports|Optimization|IR2.0 - Printing functions are implemented in New IR page using popup window. This is being blocked in some browsers.|
+|22696|Report Design|Optimization|Fixed situations where field 'Advanced Settings' button could have the 'green check' mark indicating custom settings, when none were set.|
+|22779|API|Optimization|Various IE8 .js compatibility issues.|
+|22883|Dashboards|Filters|Filter values being lost when saving/switching dashboards.|
+|23204|Instant Reports|UI|Fixed legacy report issue where "Each GROUP BY expression must contain at least one column that is not an outer reference." error occurred when loaded after upgrade.|
+|23343|Report Viewer|Export|Animated (transitions/world tour/etc) visualizations cannot be printed to PDF so the user should get a link within the export. Regular visualizations will print to PDF.|
+|23345|Instant Reports|Visualization|In IR2.0 'World Tour' & 'Projected Map' charts showed errors when exported to HTML.|
+|23393|API|Logging|Improved logging of html->image process implemented.|
+|23418|Report Design|Optimization|Fixed functionality of operator "Use Previous Or" described here http://wiki.izenda.us/FAQ/Questions/How-is-Use-Previous-OR-used-in-Filters|
+|23424|API|Optimization|Fixed application crash in case of null key in http request parameters.|
+|23447|Instant Reports|Caching|IR2.0 - When the following two settings are applied to enable caching, the new Instant Report designer will display an error upon initially saving a report, and will only allow reports to be opened with the legacy report designer. AdHocSettings.CacheReports = true; AdHocSettings.DataCacheInterval = 60 * 24 * 30;|
+|23449|Instant Reports|UI|Feature: IR2.0 - Help text for Width in Field Formatting section.|
+|23465|Dashboards|Export|Specific sequence of actions where the tile title and description is not used for tile printing of dashboards.|
+|23470|Report Design|Pivots|When using new server side sort on pivot charts in Report Viewer error received "All Field descriptions must be unique. Make sure the same description is not used twice."|
+|23497|API|Optimization|Even though correct culture is applied in the actual render format caption is incorrect. The reason is that AdHocSettings.Formats collection is stored on the application level.|
+|23500|Dashboards|Export|When emailing dashboards from Izenda, 'Send as Link' fails in both cases. For non-saved dashboard it throws error in browser console as customer described. For existing/saved dashboards it doesn't throw error, but also does nothing at all - no email arrives to mailbox.|
+|23514|API|Optimization|# not currently supported in report titles by default, fails when forced (AllowInvalidCharacters and StripInvalidCharacters).|
+|23515|Dashboards|Optimization|Graphs, Titles missing, Report Parts out of order in scheduled Dashboard email.|
+|23516|Dashboards|UI|The size of the dashboard tiles' text and graphics are not being resized correctly when viewed from an iframe or screen that is too narrow.|
+|23571|Dashboards|Saving|- Put AdHocContext.DisableLogging = true; to initialization. - Create any situation when izenda internally throws and catches exception which is recorded in logs as error (for example try to load/execute report against missing datasource). Site will crash in browser.|
+|23582|API|Optimization|Strings will now be identified using single quotes to differentiate all-number strings more easily from numeric values in highlighting and value ranges. Examples: 1) ALFKI:red; ANTON:green; ANATR:blue; 2) 1:red; 2:green; 3:blue; 3) "ALFKI":red; "ANTON":green; "ANATR":blue; 4) "1":red; "2":green; "3":blue; Current version: 1 - (string)ALFKI, (string)ANTON, (string)ANATR 2 - (number)1, (number)2, (number)3 3 - (string)"ALFKI", (string)"ANTON", (string)"ANATR" 4 - (string)"1", (string)"2", (string)"3" After the fix: 1 - (string)ALFKI, (string)ANTON, (string)ANATR 2 - (number)1, (number)2, (number)3 3 - (string)ALFKI, (string)ANTON, (string)ANATR 4 - (string)1, (string)2, (string)3|
+|23585|Instant Reports|Optimization|Implement the reports from IR opening in simple mode in report designer.|
+|23586|Report Design|Charts|Refactor: Code for chart label spacing. Added label angling instead of label offsets in Autocharts.|
+|23592|API|Caching|Bug discovered when StoreImagesToCache is set to false which breaks exports.|
+|23598|Dashboards|Visualization|Create AdHocSetting to show sizing element in dashboards for visualization. This sizing is temporary and will not save with the dashboards. Any permanent setting changes to sizing must be made in each report.|
+|23653|Report Design|Export|Export to excel and word works fine but if the zoom the chart to 200%, the export fails to download the complete image|
+|23655|Report Viewer|Pagination|Implemented possibility to adjust pagination controls. Video: Sample code which resulted in behavior shown on video: <style type="text/css"> .horrPaginationTable { position:absolute; top:-150px; left:100px; } </style> (should be put to ReportViewer page)|
+|23659|API|Optimization|Resolved issue where the report that was opened last in a new tab/window will be exported (in IE), no mattter which report is currently being viewed.|
+|23666|API|Optimization|Fixed issue when there is multiple values set on the filter (BetweenTwoDates), the filter values are written as xml elements right before the SqlOverrride xml attribute is written. This causes the XmlWriter method to fail because the state of the XmlWriter changes to content when the "Values" elements are added. When the state of the XmlWriter is content, attributes can no longer be added.|
+|23675|Instant Reports|Optimization|IR2.0 - Error message: Cannot read property 'ci' of undefined|
+|23676|Report Design|Filters|Special Characters in Filter create no results when selected from equals select type filters.|
+|23688|Instant Reports|Optimization|IR2.0 - Shows "Object Reference not set to an instance of an object." when you remove the numbers on items per page in format tab|
+|23695|Report Design|Filters|Two issues where only parameters are visible but no columns. This happens only with Date parameters.|
+|23696|Report Design|Filters|InTimePeriod filters do not save to reports when added through the new IR2.0 Report Builder.|
+|23722|API|Optimization|Crashes with "column not found" error when adding constraint, if you: 1) Didn't close browser. 2) Changed constraints configuration in Global. 3) Restarted website and reopened it in existing browser window. Also: MySQL Stored Procedures not getting listed in the Settings Page|
+|23723|Report Design|UI|Fixes to legacy settings to support new UI 'ALL' option in browser row dropdown menus. In case of ReportDesigner, IR2.0 - to use ShowAllInPreview and in case of ReportViewer and Dash2.0 - to use ShowAllInResults|
+|23727|API|Optimization|When AdHocSettings.ShowStackTrace=false; stacktrace link was disabled, but hyperlink text remains.|
+|23734|API|Optimization|Method "ReportSet.GenerateOutput" is used in the ReportRenderer class in the following methods: ExportReportSet(string reportName, string output) ExportReportSet(string reportName, string output, string filters) also the ReportRenderer class has other two methods: RenderReportSet(string reportName) RenderReportSetWithFilters(string reportName, string filters) These have been obsolesced and removed from the Izenda API. For the best practice method to accomplish the same behavior: http://wiki.izenda.us/FAQ/accessing-izendas-export-process|
+|23741|API|Optimization|'Click Link for Details' hyperlink in Izenda error screen the hyperlink doesn't show the standard "hand" cursor when hovering over the link.|
+|23743|Report Design|Optimization|If you change drilldown style from anything to combokey, a visualization can break When you change it back to non-combokey setting, it breaks even further - notice the split metric dropdown.|
+|23770|Report Viewer|UI|We have a report that has a date filter using "In Time Period". When users open this report and change the filter to Between (Calendar), the results come back correctly, but the filter label is wrong.|
+|23782|Report Viewer|UI|Some thumbnails related code still executes despite GenerateThumbnails=false; being set.|
+|23801|Report Design|Gauge|Current reports show "Object reference not set to an instance of an object. Stacktrace: at Izenda.AdHoc.Report.LoadAndFormatData(ReportOutputOptions options)" error in 6.10.0.4.|
+|23814|Instant Reports|UI|IR2.0 - In New Instant Report page adding Visual Grouping disables the header fields from being clickable to access the field settings.|
+|23816|API|Optimization|Functionality added to allow a developer to redirect logging data output from log4net to virtual AdHocConfig method so they can implement writing this log data to any storage suitable with custom code.|
+|23823|Dashboards|Optimization|AdHocSettings.CacheReports = true; AdHocSettings.DataCacheInterval = 60 * 24 * 30; With those settings in place, dashboard presentation mode breaks|
+|23850|Instant Reports|Optimization|Feature: Preparing IR2.0 page for localization.|
+|23865|API|Optimization|AdHocSettings.RedirectExports added back to AdHocSettings.|
+|23882|API|Export|With csv exports the same data is getting repeated row after row for exported csv files. So, if there is a report that has 50 unique rows, CSV export will repeat the first row 50 times.|
+|23899|API|Optimization|Now universal standard set of TimeZones is used everywhere including Daylight Savings Time support. This change should be compatible with the previous versions since offset-based timezones are automatically converted to the new timezones.|
+|23910|Report Design|Gauge|Javascript error in Gauge/Map hover effect.|
+|24026|Instant Reports|Filters|In New IR page autocomplete filter operator not searching for values after first entry.|
+|24030|Dashboards|Filters|Fixed 'Object reference not set' error in webserver|
+|24039|Report Design|Visualization|Visualization improperly interacting with certain pivots.|
+|24048|API|Optimization|Categories being created in wrong location when using \<category name>.|
+|24057|API|Filters|Fixed issue where date filters not always work correctly in Dashboards when AdHocSettings.Culture is not default.|
+|24058|Report Design|Filters|Field based filters (equals field) not working in reports.|
+|24059|Dashboards|Optimization|Use previous or is disabled in dashboard as it cannot be used as a common filter. Each tile can have different logic in the report, so this logic will not be common among all dashboard tiles.|
+|24155|Dashboards|Visualization|Autocharts not working in Dashboard when a report with sub report are loaded|
+24170|Report Viewer|Optimization|Fixed Reference Error when adding field to report in viewer|
+-->
 
 # 6.10.0.4 (March 22, 2016)
 
