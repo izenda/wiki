@@ -130,7 +130,7 @@ Here are some basic instructions for setting up this functionality with the Sche
 * Add the file [[FileScheduler.cs|/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler/FileScheduler.cs]] to the folder \App_Code\
 * In SchedulerPage.aspx, we will create the SchedulerPage.aspx.cs
 
-From your root, create your SchedulerPage.aspx with code behind, as such:
+From your root, create a page called SchedulerPage.aspx with the following SchedulerPage.aspx.cs code behind:
 
 ```csharp
 using System;
