@@ -55,11 +55,11 @@ End Class
 
 AdHocSettings.AllowInvertedGrid = true
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowInvertedGrid/allowinvertedgrid_true.png)
+![](http://wiki.izenda.us//API/CodeSamples/AllowInvertedGrid/allowinvertedgrid_true_2.png)
 
 Results
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowInvertedGrid/allowinvertedgrid_results.png)
+![](http://wiki.izenda.us//API/CodeSamples/AllowInvertedGrid/allowinvertedgrid_results_2.png)
 
 ---
 
