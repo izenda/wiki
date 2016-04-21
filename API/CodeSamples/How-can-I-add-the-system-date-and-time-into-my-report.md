@@ -6,6 +6,8 @@
 
 I have an older version of Izenda. How do I add the system date and time into my report if there is no checkbox on the Style tab?
 
+Note: Versions of Izenda at least 6.9.0.1 will not require this modification.
+
 ##Answer
 
 Place this custom code into your global.asax:
