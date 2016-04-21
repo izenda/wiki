@@ -1,6 +1,6 @@
 [[_TOC_]]
-<!--
-# 6.10.0.05 (April 20,2016)
+
+# 6.10.0.5 (April 21,2016)
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
@@ -64,8 +64,9 @@
 |24058|Report Design|Filters|Field based filters (equals field) not working in reports.|
 |24059|Dashboards|Optimization|Use previous or is disabled in dashboard as it cannot be used as a common filter. Each tile can have different logic in the report, so this logic will not be common among all dashboard tiles.|
 |24155|Dashboards|Visualization|Autocharts not working in Dashboard when a report with sub report are loaded|
-24170|Report Viewer|Optimization|Fixed Reference Error when adding field to report in viewer|
--->
+|24170|Report Viewer|Optimization|Fixed Reference Error when adding field to report in viewer|
+|24174|Report Viewer|Fields|Added Field in Report from Report Viewer Showing as Count or Sum by default. Resolved|
+
 
 # 6.10.0.4 (March 22, 2016)
 
