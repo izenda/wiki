@@ -1,6 +1,6 @@
 #Why did my report disappear?
 
-[[_TOC-]]
+[[_TOC_]]
 
 ##Question
 
