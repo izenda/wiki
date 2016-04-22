@@ -34,6 +34,25 @@ Count(Order ID), Year(Order Date), Count(Customer ID), Ship City, Country
 
 Some visualizations support dynamic filtering and drill-down-like behavior. Currently, a full drill-down - connecting through a visualization to another Izenda report - is not possible. A visualization can exist on a child report, and can exist on a parent report, but no part of the visualization is clickable to activate a downhill. The drill-down terminology in this case means that some visualizations, like heat map and sunburst, can drill-down within themselves. This is more accurately described as dynamic filtering. Applying dynamic filtering to the visualization will also filter the linked summary or detail view.
 
+##Visualization Width
+
+All visualizations have a minimum width, below which an error will be thrown because the vis will not have sufficient space to render properly.  The minimum widths are:
+
+Auto Chart(column, area and pie-donut): 480px or more, depending on the volume of data
+Auto Chart(pie, line-polar, spline-polar): 320px
+Auto Chart(other): 480px
+Combo: 480px or more, depending on the volume of data
+Crossfilter: 480px 
+Heatmap: 480px
+Matrix: 320px or more, depending on the volume of data
+Sunburst: 320px
+Time Bubble: 480px
+Timeline: 480px
+Transitions: 480px
+Tree: 480px
+Waterfall: 480px or more, depending on the volume of data
+World Tour: 240px
+
 ##Fields labeled with a plus (+) sign
 
 Some visualizations can accept an indefinite number of fields as metrics. These fields are noted with a plus sign after the field number order. That is to say, if a visualization requires 3 and only 3 fields, its fields will be listed as 1, 2, 3. However, if a visualization can have multiple fields after the first two fields which define its boundaries, its fields would be listed as 1, 2, 3+. In other words, after the mandatory fields 1 and 2, we could have fields 3, 4, 5, 6 which all serve as additional selectable metrics. Generally only one of these fields will be displayed at a time, but with the option of selecting between them.
