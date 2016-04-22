@@ -38,20 +38,20 @@ Some visualizations support dynamic filtering and drill-down-like behavior. Curr
 
 All visualizations have a minimum width, below which an error will be thrown because the vis will not have sufficient space to render properly.  The minimum widths are:
 
-Auto Chart(column, area and pie-donut): 480px or more, depending on the volume of data
-Auto Chart(pie, line-polar, spline-polar): 320px
-Auto Chart(other): 480px
-Combo: 480px or more, depending on the volume of data
-Crossfilter: 480px 
-Heatmap: 480px
-Matrix: 320px or more, depending on the volume of data
-Sunburst: 320px
-Time Bubble: 480px
-Timeline: 480px
-Transitions: 480px
-Tree: 480px
-Waterfall: 480px or more, depending on the volume of data
-World Tour: 240px
+-Auto Chart(column, area and pie-donut): 480px or more, depending on the volume of data
+-Auto Chart(pie, line-polar, spline-polar): 320px
+-Auto Chart(other): 480px
+-Combo: 480px or more, depending on the volume of data
+-Crossfilter: 480px 
+-Heatmap: 480px
+-Matrix: 320px or more, depending on the volume of data
+-Sunburst: 320px
+-Time Bubble: 480px
+-Timeline: 480px
+-Transitions: 480px
+-Tree: 480px
+-Waterfall: 480px or more, depending on the volume of data
+-World Tour: 240px
 
 ##Fields labeled with a plus (+) sign
 
