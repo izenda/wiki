@@ -35,11 +35,30 @@ Add it before any other call, for example before the connection string, in the i
 
 ###Logging level
 
+There are three default levels of logging: Info, Error, and Fatal
+
+####Info
+
+```xml
+  <level value="Info" /> 
+```
+
+Info logs all events. It will rapidly generate a large log. We recommend Info only when chasing an obscure bug, or to diagnose Izenda's internal workflow.
+
+####Error
+
+```xml
+  <level value="Error" /> 
+```
+
+Error logs non-fatal erroneous behavior. It is useful when looking for undesired or abnormal behavior within Izenda.
+
+####Fatal
 ```xml
   <level value="FATAL" /> 
 ```
 
-The level value change be changed to any of the following; FATAL, INFO, and ALL. These are listed in ascending order of amount of logged output. Set this level appropriately to catch the information you need from the logging. 
+Fatal only logs severe errors that cause crashes or program termination. Very few items are logged at this level.
 
 ###File name
 
