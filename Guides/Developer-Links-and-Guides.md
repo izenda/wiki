@@ -43,6 +43,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[Joining a many-to-many database relationship and hiding the connecting table as a datasource|/FAQ/many-to-many-database-join]]
 * [[How can I utilize Izenda's export process for CSV, PDF, or Excel in an application?|/FAQ/accessing-izendas-export-process]]
 * [[How can I set default report designer options for my users?|/FAQ/Questions/setting-defaults-for-report-designer]]
+* [[Adding line breaks into long string values|/Guides/How-do-I-add-a-line-break-inside-of-a-block-of-text-in-my-database]]
 
 ###Javascript Guides
 
@@ -63,6 +64,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 
 * [[Using Stored Procedures (SPs) In Izenda 6|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
 * [[Adding the FORMS column to the IzendaAdHocReports table|/FAQ/IzendaAdHocReports-table]]
+* [[Adding line breaks into long string values|/Guides/How-do-I-add-a-line-break-inside-of-a-block-of-text-in-my-database]]
 
 ###Misc
 
