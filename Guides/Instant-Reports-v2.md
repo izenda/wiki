@@ -14,7 +14,7 @@ AdHocSettings.InstantReport = "InstantReportNew";
 * VB
 AdHocSettings.InstantReport = "InstantReportNew.aspx"
 
-This will change the current Instant Report page to the BETA Instant Report Page when navigating from the New Drop Down menu.
+This will change the current Instant Report page to the New Instant Report Page when navigating from the New Drop Down menu.
 
 ![](/Guides/Instant-Reports-v2-BETA/IRBetaImage.PNG)
 
