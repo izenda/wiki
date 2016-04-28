@@ -1,6 +1,20 @@
-If you wish to use one of the reports already created as a data source instead of existing tables. Virtual Data Sources can be used with direct database connections and with direct fusion connections against datasources (MsSql, MySql, Oracle, etc.). This feature is NOT compatible with OData datasources.
+[[_TOC_]]
 
-1 -- Set AdHocSettings.AllowVirtualDataSources = true;  
+##Question
+
+What is a virtual data source? How do I create one, and what is it used for?
+
+##Answer
+
+A virtual data source is an Izenda report which can be used as a data source. You can think of it as creating a simulated view, in Izenda. It can be used for multi-level calculated fields
+
+Virtual Data Sources can be used with direct database connections and with direct fusion connections against datasources (MsSql, MySql, Oracle, etc.). This feature is NOT compatible with OData datasources. If your environment is using VisibleDataSources to define or trim datasources, you might also experience difficulty getting virtual data sources to appear in the data source menu. Virtual data sources do not automatically update, they are cached based on the behavior of the underlying report - to update a VDS, you must update the report which is used to construct it. When VDS is enabled, data sources will appear as links on the data source menu. Each link shows a popup that displays the name of every report which is built using that data source. 
+
+###Step 1: Enable Virtualdatasource
+
+To use virtual data sources, you will have to change a setting in the global.asax. Set AdHocSettings.AllowVirtualDataSources = true;  
+
+####Code Sample
 
 ```csharp
 //main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
@@ -21,14 +35,17 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
   }
 ```
 
-2 -- Create a report as usual  
-3 -- In Misc. Tab, near the bottom click the checkbox that says, "Expose as data source."
+###Step 2: Create Report
 
+A virtual data source is simply a typical Izenda report, except the output is used as a table for one or more other reports. Once the virtualdatasources setting is toggled to true, any report you already have or create has the potential to be used as a virtual data source.
+
+
+###Step 3: Enable report as VDS
+On the Misc Tab, above the drilldown key dropdown there is a checkbox labeled "Expose as Datasource". Checking this box then saving the report will cause the report to appear in the data source menu.
 ![Enable VirtualDataSource](http://wiki.izenda.us/Virtualdatasource/AllowVirtualDatasources.png)
+  
+###Step 4: Use VDS in new report
 
-4 -- Make sure to save the report.  
-5 -- Create a new report. The data sources will include the saved report preceded by the folder you saved it under.  You will also notice some Data Sources have become links.  When you select one, a popup will appear, displaying all of the reports that currently use that data source.
+When you create a new report, the data sources menu should include the full report name of the report which you just saved as a VDS. You may now build a report based on the output of the VDS report.
 
 ![VirtualDataSources Screenshot](http://wiki.izenda.us/Virtualdatasource/AVDS.png)
-
-6 -- Continue as usual, except that your column choices will be limited by the columns you chose in the previously saved report.
