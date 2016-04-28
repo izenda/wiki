@@ -114,6 +114,8 @@ Izenda.AdHoc.AdHocSettings.ShowScheduleControls = true;
 To test the settings you just set, you will need to schedule a specific report, then use one of two methods to execute the scheduler.
 
 ###Scheduling a specific report
+* For this testing, you will need to schedule the report to run in the past.
+
 1. Open the report you wish to schedule in the Report Designer.
 2. Navigate to the Misc tab. The scheduler controls will be towards the bottom of the page. 
 3. Enter the e-mail addresses separated by commas, then set the report type and the schedule frequency. 
