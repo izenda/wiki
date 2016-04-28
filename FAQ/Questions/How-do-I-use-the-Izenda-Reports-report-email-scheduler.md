@@ -111,16 +111,32 @@ Izenda.AdHoc.AdHocSettings.ShowScheduleControls = true;
 
 ##Testing the scheduler
 
-To test this, go back to a report you wish to schedule and click on it. Click the Misc tab of the report. The scheduler controls will be towards the bottom of the page. Enter the e-mail addresses separated by commas, then set the report type and the schedule frequency. Save the report again. Now go back to the Report List. Next to the report, you should see the schedule time for the report. Now we can also look at the scheduled tasks on the server.
+To test the settings you just set, you will need to schedule a specific report, then use one of two methods to execute the scheduler.
 
-* In either case, you should receive the link to your scheduled report in your e-mail.
+###Scheduling a specific report
+1. Open the report you wish to schedule in the Report Designer.
+2. Navigate to the Misc tab. The scheduler controls will be towards the bottom of the page. 
+3. Enter the e-mail addresses separated by commas, then set the report type and the schedule frequency. 
+4. Save the report. Save the report again. Now go back to the Report List. 
 
-1. Using the DOS command line, navigate into the Izenda Reports root directory (for example, C:\web\IzendaReports) and run IzendaScheduler.exe "http://yourhost/yourapp/rs.aspx". This should return a list of scheduled reports in the DOS window.
-2. Navigate to the rs.aspx page in the application (for example, http://yourhost/yourapp/rs.aspx). Now add this to the end of the URL, ?run_scheduled_reports=30 (30 equals the frequency in minutes it will run). The url in the browser should read: http://yourhost/yourapp/rs.aspx?run_scheduled_reports=30
+###Executing the scheduler for testing
 
-   * This will return a list of scheduled reports into the browser window. 
-   * In order for this method to work, you must have a report scheduled in the past
+* For both methods, you will need to have a report scheduled to run in the past
+* You should receive the link to your scheduled report in your e-mail.
 
+Using the Command Line
+
+1. Open the DOS command line
+2. Navigate into the Izenda Reports root directory (for example, C:\web\IzendaReports)
+3. Run the line: IzendaScheduler.exe "http://yourhost/yourapp/rs.aspx" 
+4. This will return a list of reports and their next scheduled date and time in the DOS window
+
+Using the rs.aspx Page
+
+1. In your application, navigate to the rs.aspx (ex., http://yourhost/yourapp/rs.aspx)
+2. Add the followingto the end of the URL: ?run_scheduled_reports=30 (30 equals the frequency in minutes it will run)
+3. The url in the browser should read: http://yourhost/yourapp/rs.aspx?run_scheduled_reports=30
+4. This will return a list of reports and their next scheduled date and time in the browser window
 
 ##Security On Scheduled Reports
 
