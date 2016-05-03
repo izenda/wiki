@@ -132,6 +132,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How to update your legacy deployment to be compatible with Izenda 6.7.0.272+|/FAQ/UpdatingReportDesigner-for-Izenda-6.7.0.272]]
 - [Changes to my CSS aren't applying](/FAQ/How-To-Minify-CSS-Files)
 - [[Why a report part cannot be positioned between two charts on one report|/FAQ/Why-Are-My-Charts-Stuck-Together]]
+- [[My export says its missing a css file|/FAQ/Why-does-my-excel-export-say-its-missing-css]]
 
 ##Upgrading Izenda
 - [[What's new in the 6.8.0.1 + Reference Implementation?|/Whats-new-in-the-6-dot-8-0-dot-1-Reference-Implementation]]
