@@ -4,7 +4,7 @@
 
 ##Purpose
 
-There are multiple scenarios where having the filter values set as soon as a report loads can be beneficial. The following examples will show how it is coded for dashboards.
+There are multiple scenarios where having the filter values set as soon as a report loads can be beneficial. For example, reports that have access to large data sets can benefit from faster load times as a fewer number of results will come back immediately. Another benefit is when the report creator wants to hide filters but populate them automatically based on criteria. The following examples will show how it is coded for dashboards.
 <!--
 ##Reports
 -->
