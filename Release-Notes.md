@@ -1,5 +1,79 @@
 [[_TOC_]]
 
+# 6.10.0.6 (May 18, 2016)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|21844|Report Design|Visualization|Feature: Viz - Addition of the ability to move the subreport popup for Visualizations around the screen.|
+|22476|API|Optimization|Asp.net can't pass requests which parameters contain html markup by default, because possible dangerous code could be sent to server. So if column contains value with html markup (for example "test <b>!!!</b>"), drill down link throws exception. Solution is to url-encode drill-down key parameter when placing it into the URL and then decode it on the receiving side.|
+|22677|Instant Reports|Filters|New Refresh added to all filters in New Instant Report page anytime filter logic is applied.|
+|22894|Report Viewer|Export|Repeating headers do not work under the Visual Groups when exported to PDF.|
+|22895|API|Optimization|Inconsistent Invalid License Key error shown in various Izenda pages.|
+|23067|Report Design|Optimization|Add a setting to control Automatic Subreport availability.|
+|23272|Report Design|Visualization|Flowchart Visualization displaying error 'n.getTransformToElement is not a function'.|
+|23315|Report Design|Visualization|Altered functionality of Time bubble. If value of current item equals zero, then its circle will have zero radius and therefore become invisible.|
+|23391|API|Optimization|Refactor Internal method CacheStoredProcedureMetaDataToDisk|
+|23543|Report Design|Export|Issue with multiple CSS classes in Excel.|
+|23652|Report Design|Visualization|Combinations of Visualizations or individual visualizations with grids embedded in FORMS do not export to PDF successfully.|
+|23682|Instant Reports|UI|Change to New IR page, changing button on Field Properties for Advanced Field Properties to Arrow to Expand properties.|
+|23719|Report Design|Visualization|When building a visualization on a summary report part and summary extends across multiple pages, error received when changing page.|
+|23745|Instant Reports|Optimization|Refactoring loading datasources to new Instant Report page to increase loading speed with larger volumes of datasources|
+|23758|API|Optimization|"Object reference not set to an instance of an object." Report designer attempts to find the cached reportset but cannot due to the caching being turned off. AdHocSettings.CacheReports = false|
+|23766|Report Design|Optimization|Adding multi tenant scheduling functionality to standard Izenda scheduler.|
+|23792|Report Design|Export|Export a report as a landscape PDF - the bar chart doesn't stretch to take up the full width of the paper which is causing the labels to stack and be hard to read|
+|23818|Report Design|Charts|Issue with funnel chart labels where certain labels are drawn on the chart instead of to the side of it.|
+|23837|API|Optimization|The Required Filter Message is using the DATABASE Parameter names instead of the Alias|
+|23853|Dashboards|Visualization|Heatmap Visualization not appearing in dashboards when using Mozilla Firefox|
+|23855|API|Filters|Auto-update is not working with the calendar control. You must click update results when a filter needed to be filled out before execution of export to Excel.|
+|23859|API|Saving|A unique report ID is not generated for the new report with and without save override and a new unique ID is not generated for reports created from using Save As on the report viewer.|
+|23873|API|Optimization|Color picker auto-completes color codes after you've typed in about three characters. This forces the user to type the code elsewhere, then copy and paste.|
+|23879|API|Filters|Error in the in time period filter "Last 30 Days" does not include today.|
+|23892|API|Optimization|Javascript error when attempting to add a column to a report after execution via report viewer.|
+|23909|API|Optimization|Izenda.AdHoc.AdHocSettings.SchedulerOutputTypes.Remove("Link"); Izenda.AdHoc.AdHocSettings.SchedulerOutputTypes.Remove("DOC"); Link and Doc types are visible in SendEmailAs dropdown.|
+|23919|API|UI|Bold and italic generate b and i tags, but alignment doesn't have a text tag so it won't generate div.|
+|23920|Instant Reports|Optimization|IR1.0 - Can't change the format of a field in Instant Reports.|
+|23921|API|Optimization|Combokeys breaking embedded drilldowns in FORMS.|
+|23924|Dashboards|Optimization|To address the issue of exporting a dashboard and the description field not rendering in the export.|
+|23953|Report Design|Filters|Using Oracle database the following error returned when using the Equals Field filter operator "ORA-01036: illegal variable name/number"|
+|23959|Dashboards|Optimization|When using a report part in the dashboard that returns no results, nothing is displayed. Changed behavior to show "No Results".|
+|23984|Dashboards|Visualization|Error when dashboard is created by global tenant and viewed by tenant. The Visualizations do not display in dashboard for specific tenant id.|
+|24008|Report Design|Optimization|FEATURE: Autocomplete filter operator changed to display values inside of a pill. This eliminates the current issue of seeing values containing commas as #||#.|
+|24031|Report Design|Optimization|Visualization built from summary report part gets error when changing pages if summary extends to multiple pages.|
+|24035|Report Design|Optimization|Page Break added from menu option when using Form Report not working.|
+|24051|API|Optimization|"print" button stops working after first print attempt when using izpid=<unique id>|
+|24052|Report Design|Optimization|Report loses its visual group settings when using regular CSV mode (not BulkCSV).|
+|24083|Report Design|Filters|Less/Greater than Days Old filter giving errors in Oracle environments.|
+|24090|Report Design|Optimization|When adding a new field to a report in the report viewer and using update results an exception is thrown. "The SQLParameterCollection only accepts non-null SqlParameter type objects. Parameter name:value"|
+|24099|API|Optimization|Error when filtering from stored procedure which returns aggregated field in MySQL.|
+|24109|Report Viewer|UI|Rendering conflict caused visual groups which were collapsed by default (AdHocSettings.ExpandVisualGroupGrids set to false) to rquire two clicks to expand.|
+|24124|API|Filters|When using PostgreSQL along with AdHocSettings.TimeZoneOffset the field function "Group(Week)" displays an error.|
+|24128|Report Design|UI|FEATURE: Added support for Autochart to change line and area charts to stepped line or area. Use gear icon in Autochart after selecting line or area chart to change to stepped.|
+|24136|Report Design|Pivots|Error creating pivot in New Instant Report Designer when user tries to add a pivot cell when column is not selected.|
+|24146|API|Optimization|Added support for joining across different collations. Temp table is used to make collations match.|
+|24156|API|Optimization|Error received "Group by expression must contain at least one column that is not an outer reference", received when Group function is used for the cell value field in a pivot.|
+|24184|API|Filters|Error received when using values containing decimals in filters. Conversion error received "Specified cast is not valid."|
+|24203|API|Saving|Error in ExtendedFormatCollection when serialization is required for storage.|
+|24211|API|Optimization|Some formats not shown in new Instant Report page after save.|
+|24212|Instant Reports|Optimization|Unable to open Report created in New Instant Report page after report is scheduled in scheduler. (Triggering report was edited in Report Designer, any report created in New IR designer cannot be edited in the New IR page after being edited in the Report Designer.)|
+|24223|Instant Reports|Filters|When using European Culture with Equals(Calendar) filter, the month and day values are swapped after clicking "Update Results" if the day is less than 13. (Ex. 12/01/2016, January 12 is changed to 01/12/2016, December 1)|
+|24234|API|Filters|Exports broken in 6.10.0.6 branch: js error occurred when user tried to export report to excel.|
+|24347|Report Design|Export|Scheduler output PDF ignoring PdfPrintMode setting and reverting to default PDF exporter.|
+|24351|Report Design|Optimization|When exporting report with visual group style field value and multi level in HTML, it shows characters like( '>' height='10px'>'>' height='10px'>)|
+|24352|API|Saving|Message displayed "Visualization do not support rendering to image" when exporting charts to PDF.|
+|24356|API|Optimization|Require login allowing access to some pages. No data displayed but redirect should force user to login page. Issue is with initialization process.|
+|24359|Dashboards|Optimization|Popup on Gauges is not working on Report Viewer and Dashboard.|
+|24373|Report Design|Visualization|Incorrect links displaying on Autochart when fields are used as drilldown.|
+|24399|Instant Reports|Optimization|New Instant Report page, restore default colors is not working. No defaults return.|
+|24401|Report Design|Gauge|Popup from AutoGage displaying "Report Not Found" when clicked.|
+|24422|Report Design|Visualization|Regression issue with new Popup Modal from Drill down report. Popup not moveable and not displaying in IE.|
+|24432|Report Design|Optimization|Drill down report showing characters instead of Drill Down value in popup header bar.|
+|24436|API|Pivots|Null Reference Error received when creating a Pivot report and using Subtotals.|
+|24442|Report Design|Visualization|Visualization hover text not working in Chrome or Firefox.|
+|24447|API|Optimization|"Syntax error, unrecognized expression: li[val=]" received when adding AutoChart to Dashboard.|
+|24459|Instant Reports|Optimization||
+|24461|Instant Reports|Optimization||
+
+
 # 6.10.0.5 (April 21, 2016)
 
 |Case|Category|Subcategory|Description|
