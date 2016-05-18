@@ -70,8 +70,8 @@
 |24436|API|Pivots|Null Reference Error received when creating a Pivot report and using Subtotals.|
 |24442|Report Design|Visualization|Visualization hover text not working in Chrome or Firefox.|
 |24447|API|Optimization|"Syntax error, unrecognized expression: li[val=]" received when adding AutoChart to Dashboard.|
-|24459|Instant Reports|Optimization||
-|24461|Instant Reports|Optimization||
+|24459|API|Optimization|"Fixed: When using grid report with popup subreport the popup displays the rs.aspx page instead of data when the setting below is used in the Global AdHocSettings.ApplyAntiXssToReportOutput = true"|
+|24461|Instant Reports|Optimization|"Fixed: Server Error shows when exporting a report with Pivot on CSV on Instant Report"|
 
 
 # 6.10.0.5 (April 21, 2016)
