@@ -50,14 +50,13 @@ Izenda offers various methods of controlling the toolbar buttons and tabs that u
 
 ##Report Designer Tabs
 
-* [[Reports Tab|/API/CodeSamples/ShowReportsTab]]
-* [[Data Sources Tab|http://wiki.izenda.us/API/CodeSamples/ShowDataSourcesTab]]
-* [[Fields Tab|http://wiki.izenda.us/API/CodeSamples/ShowFieldsTab]]
-* [[Summary Tab|http://wiki.izenda.us/API/CodeSamples/ShowSummaryTab]]
-* [[Chart Tab|http://wiki.izenda.us/API/CodeSamples/ShowChartTab]]
-* [[Gauge Tab|http://wiki.izenda.us/API/CodeSamples/ShowGaugeTab]]
-* [[Map Tab|http://wiki.izenda.us/API/CodeSamples/ShowMapTab]]
-* [[Misc Tab|http://wiki.izenda.us/API/CodeSamples/ShowMiscTab]]
-* [[Style Tab|http://wiki.izenda.us/API/CodeSamples/ShowStyleTab]]
+* [[Data Sources Tab|http://wiki.izenda.us/Guides/Toolbar-Buttons#Data-Sources-Tab]]
+* [[Fields Tab|http://wiki.izenda.us/Guides/Toolbar-Buttons#Fields-Tab]]
+* [[Summary Tab|http://wiki.izenda.us/Guides/Toolbar-Buttons#Summary-Tab]]
+* [[Chart Tab|http://wiki.izenda.us/Guides/Toolbar-Buttons#Chart-Tab]]
+* [[Gauge Tab|http://wiki.izenda.us/Guides/Toolbar-Buttons#Gauge-Tab]]
+* [[Map Tab|http://wiki.izenda.us/Guides/Toolbar-Buttons#Map-Tab]]
+* [[Misc Tab|http://wiki.izenda.us/Guides/Toolbar-Buttons#Misc-Tab]]
+* [[Style Tab|http://wiki.izenda.us/Guides/Toolbar-Buttons#Style-Tab]]
 * [[Filters Tab|/API/CodeSamples/ShowFiltersTab]]
-* [[Preview Tab|http://wiki.izenda.us/API/CodeSamples/ShowPreviewTab]]
+* [[Preview Tab|http://wiki.izenda.us/Guides/Toolbar-Buttons#Preview-Tab]]
