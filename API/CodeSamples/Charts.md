@@ -10,6 +10,15 @@ Gets or sets the list of chart types which will appear in the Chart Type dropdow
 
 **NOTE:** Depending on the [[charting engine|http://wiki.izenda.us/API/CodeSamples/ChartingEngine]], the Plot chart may not exist. Plot does not exist in HTMLCharts, but does exist in DundasCharts.
 
+**Note:** To remove Visualizations from the drop down list you can add this sample below as Visualizations are appended based on the license key after the chart collection is complete.
+```csharp
+ public override ReportSet LoadReportSet(ReportInfo reportinfo, DatabaseSchema schema)
+        {
+            AdHocSettings.Charts.Remove("Visualization");
+            return base.LoadReportSet(reportinfo, schema);
+        }
+```
+
 ##Global.asax (C♯)
 
 ```csharp
