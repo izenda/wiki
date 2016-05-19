@@ -438,7 +438,7 @@ AdHocSettings.ShowHelpButton = false;
  
 Tabs in the Report Designer are also controlled from within the core product in your CustomAdHocConfig class. Manipulating these tabs requires the use of properties within the Global.asax. You can review [[this article|http://wiki.izenda.us/FAQ/Hiding-Buttons-and-Tabs#Report-Designer-Tabs]] for concise information on manipulating these tabs, or you can get a detailed view by scrolling down.
 
-**Data Sources**
+###Data Sources Tab
 
 ![Data Sources Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/dstab.png)
 
@@ -448,7 +448,7 @@ The Data Sources tabs allow report designers to add/remove data sources for a re
 AdHocSettings.ShowDataSourcesTab = false;
 ```
 
-**Fields**
+###Fields Tab
 
 ![Fields Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/fields.png)
 
@@ -458,7 +458,7 @@ The fields tab allows the user to add or modify the fields reported on in a repo
 AdHocSettings.ShowFieldsTab = false;
 ```
 
-**Summary**
+###Summary Tab
 
 ![Summary Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/summary.png)
 
@@ -468,7 +468,7 @@ The summary tab allows the user to add or modify a summary section in a report t
 AdHocSettings.ShowSummaryTab = false;
 ```
 
-**Chart**
+###Chart Tab
 
 ![Chart Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/chart.png)
 ![Chart2 Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/chart2.png)
@@ -479,7 +479,7 @@ The chart tab allows the user to add or modify trend, pie, plot, and bar charts 
 AdHocSettings.ShowChartTab = false;
 ```
 
-**Gauge**
+###Gauge Tab
 
 ![Gauge Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/gauge.png)
 
@@ -489,7 +489,7 @@ The gauges tab allows the user to add or modify gauges used in a report through 
 AdHocSettings.ShowGaugeTab = false;
 ```
 
-**Map**
+###Map Tab
 
 ![Map Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/map.png)
 
@@ -499,7 +499,7 @@ The map tab allows the user to add or modify a map to be used in a report throug
 AdHocSettings.ShowMapTab = false;
 ```
 
-**Misc**
+###Misc Tab
 
 ![Misc Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/misc.png)
 
@@ -509,7 +509,7 @@ The misc tab allows the user to set the title, description, header, footer, repo
 AdHocSettings.ShowMiscTab = false;
 ```
 
-**Style**
+###Style Tab
 
 ![Style Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/style.png)
 
@@ -519,7 +519,7 @@ The style tab allows the user to modify the report colors, print options, visual
 AdHocSettings.ShowStyleTab = false;
 ```
 
-**Filters**
+###Filters Tab
 
 ![Filters Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/filters.png)
 
@@ -529,7 +529,7 @@ The filters tab allows the user to add or modify filters used on report data thr
 AdHocSettings.ShowFiltersTab = false;
 ```
 
-**Preview**
+###Preview Tab
 
 ![Preview Tab](http://wiki.izenda.us/Guides/Toolbar-Buttons/preview.png)
 
