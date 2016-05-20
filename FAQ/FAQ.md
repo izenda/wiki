@@ -54,6 +54,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How do I resolve the error: "ExecuteReader requires an open and available Connection. The connection's current state is open."?|http://wiki.izenda.us/FAQ/Questions/ExecuteReader-requires-an-open-and-available-connection]]
 - [[How do I add Read-Write User Access to DB?|http://wiki.izenda.us/FAQ/Questions/ConnectionStringRW]]
 - [[How do I store multiple constraints at application level?|http://wiki.izenda.us/FAQ/Questions/MultipleConstraints]]
+- [[Will Izenda work with a NoSQL database, like MongoDB?|http://wiki.izenda.us/FAQ/Questions/NoSQL-Connectors]]
 
 
 ##Formatting
