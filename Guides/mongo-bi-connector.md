@@ -35,10 +35,9 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
   // Add custom settings after setting the license key and connection string by overriding the ConfigureSettings() method
   public static void InitializeReporting() {
     //Check to see if we've already initialized.
-    if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+    if (AdHocContext.Initialized)
       return;
     AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
-    //Creates a connection to Microsoft SQL Server
     AdHocSettings.PostgreSQLConnectionString = "Server=127.0.0.1;Port=27032;Database=izmongo;User Id=izmongo;Password=***;";  //The relevant setting
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
     HttpContext.Current.Session["ReportingInitialized"] = true;
