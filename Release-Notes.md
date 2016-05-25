@@ -4,6 +4,13 @@
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
+|HF24332|API|Optimization|Error received when attempting to save Settings page to Izenda.config file.|
+|HF24469|Report Design|Pivots|Pivot reports designed in new Instant Reports page cannot be opened in the Instant Report page. Multiple Angular errors received.|
+|HF24472|Instant Reports|Optimization|Popup subreports are not working in the new Instant Report Page. Uncaught reference error received.|
+|HF24474|Dashboards|Optimization|Refreshing Dashboard page 2 times causes the dashboard to become empty with one blank tile.|
+|HF24491|Report Viewer|Filters|Between date filter not working in the Report Viewer. Not properly adding the filter to the query.|
+|HF24502|API|Saving|Using Windows 8 and Internet Explorer 9-11 not allowing reports to be saved from the Report Designer.|
+|HF24509|Report Design|Visualization|Users are not being directed to the Settings page in newly downloaded Izenda Reference Implementations, getting a Null Reference Error instead.|
 |21844|Report Design|Visualization|Feature: Viz - Addition of the ability to move the subreport popup for Visualizations around the screen.|
 |22476|API|Optimization|Asp.net can't pass requests which parameters contain html markup by default, because possible dangerous code could be sent to server. So if column contains value with html markup (for example "test <b>!!!</b>"), drill down link throws exception. Solution is to url-encode drill-down key parameter when placing it into the URL and then decode it on the receiving side.|
 |22677|Instant Reports|Filters|New Refresh added to all filters in New Instant Report page anytime filter logic is applied.|
