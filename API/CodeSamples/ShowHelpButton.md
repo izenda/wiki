@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or set value indicating whether side help should be shown in ReportDesigner. Text in the side help can be filled out using [[AdHocSettings.HelpText|http://wiki.izenda.us/edit/API/CodeSamples/HelpText]]
+Gets or set value indicating whether side help should be shown in ReportDesigner. Text in the side help can be filled out using [[AdHocSettings.HelpText|http://wiki.izenda.us/API/CodeSamples/HelpText]]
 
 ##Global.asax (C♯)
 
