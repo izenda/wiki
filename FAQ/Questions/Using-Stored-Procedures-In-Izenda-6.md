@@ -224,7 +224,7 @@ string currentReportName = HttpContext.Current.Request.QueryString["rn"];
 
 Since Izenda primarily uses metadata to obtain information about schemas, views, and other database objects, the same goes with stored procedures. Therefore, there are some expectations to be followed for these procedures that are to be used with Izenda.
 
-Izenda sends NULL values for all parameters in a stored procedure and expects to receive column headers with no data in return. This allows Izenda to use the headers in the report designer just like a table or view to create reports. Additionally, at times Izenda needs to create a temp table from the StoredProcedure for joining to other tables and views, headers are used to create the temp table. 
+Izenda sends NULL values for all parameters except dates, dates use an empty string, in a stored procedure and expects to receive column headers with no data in return. This allows Izenda to use the headers in the report designer just like a table or view to create reports. Additionally, at times Izenda needs to create a temp table from the StoredProcedure for joining to other tables and views, headers are used to create the temp table. 
 
 * INSERT EXEC - You cannot nest INSERT INTO ... EXEC statements in stored procedures used with Izenda. This is a limitation of SQL server.
 * Return columns - The stored procedure MUST return the same columns in all cases. It is because the metadata expected when running the stored procedure must comply with the specifications given to it.
