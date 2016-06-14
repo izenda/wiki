@@ -1,5 +1,70 @@
 [[_TOC_]]
 
+# 6.10.0.7 (June 14, 2016)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|19079|API|Optimization|Refactor Fusion Driver for better performance|
+|22514|API|Optimization|Added a performance enhancement to greatly increase the speed at which metadata for virtual data sources and stored procedures is pulled and cached.|
+|22814|Report Design|Maps|Expanding support of Izenda Geotable for Lat/Lon, expanding internal geotable, offering high volume additional geotables on GitHub.|
+|23408|API|Optimization|Translations for localization of UI updated. Localization of IR2.0 added.|
+|23460|API|Optimization|Corrected a problem where MSSQL synonyms for data sources wouldn't load the corresponding data source correctly.|
+|23923|Report Design|Filters|Any filter on a calculated field will cause errors in the report when there is also at least one Pivot column.|
+|24021|Report Design|Exports|Corrected a problem where using group(Month Name) for a datetime in a pivot cell would export incorrectly to excel.|
+|24027|Report Design|UI|Adding notification to fields when using server side sorting if field cannot be sorted. "This field cannot be used for sorting, please select another field for sorting."|
+|24041|API|Optimization|Corrected a problem that could occur with a customized LoadReportSet method attempting to access virtual data sources.|
+|24125|Report Design|Exports|Error checking filters from dashboard on PDF export causing error showing "detail report is invalid".|
+|24129|Report Design|Exports|When printing a report to HTML, the new browser tab displayed no longer has the scroll bar to browse the report.|
+|24139|Report Design|Filters|Corrected a problem where the Equals(Checkbox) filter would interpret no selected values in such a way as to always return zero records, rather than behaving as a blank filter with no effect.|
+|24141|Report Design|Scheduler|Adding support for schedule period type "Run Once". Scheduled item will only run one time at the set interval.|
+|24145|API|Optimization|Adding exception when adding the same Alias to two different datasources. This should not be allowed and causes errors in reports.|
+|24166|Report Design|Gauge|The notification for HTML Cache last update is overlapping the data grid.|
+|24182|API|Optimization|Corrected a problem where some formats would not conform correctly to the specified .net culture setting.|
+|24197|Report Design|Charts|When using Legend in the "Top" Position the legend overlaps other data in the Pie Chart.|
+|24198|API|Optimization|Corrected a problem where SQL used to support pagination would be executed under some conditions where pagination is not enabled, which could cause errors when using Fusion.|
+|24201|Report Design|UI|When using only one field in Visual Group style of Field Value the visual group style is not respected.|
+|24214|Report Design|UI|Correct spelling error in dashboard, when pointing cursor to "+" sign Select "peport" part to add is displayed.|
+|24265|Report Design|Charts|Made HighChart backgrounds transparent by default rather than having a white background.|
+|24329|API|Optimization|Made further improvements to multiple joins to the same table while using arithmetic to concatenate strings sourced from multiple joins.|
+|24333|Report Design|UI|Corrected a problem where changing the sort order on a table would not be inherited to any subtotal of that table.|
+|24334|Report Design|Filters|Corrected a problem with equals(Checkbox) filter operator where filter with no selected value would be passed as an empty string instead of no value.|
+|24336|API|Optimization|Made tenantid comparison case insensitive to ensure accurate matching when case sensitive database collation configurations are used.|
+|24350|Report Design|Optimization|Show All option in Preview results missing in Report Viewer.|
+|24364|Report Design|Charts|Corrected a problem where labeling the left or y-axis on a chart would override the label on the chart's hoverover popup.|
+|24380|API|Optimization|Add support for Forced Left Join using Fusion|
+|24388|Report Design|UI|Add support for enter button when saving reports in new Instant Report designer.|
+|24415|Report Design|Exports|Incomplete Data for Heatmap Visualization display when exported to PDF, HTML, Excel.|
+|24416|Report Design|Pivots|Corrected a problem where under some combinations of pivot, visual group, and subtotal the pivot columns per exported page setting would cause an incorrect export.|
+|24417|Report Design|Gauge|Popup Effect on Gauge is not working when user clicks the Gauge, the other effects like Link and Hover are working properly.|
+|24421|Report Design|Charts|Corrected an issue where long string values with no column label would overflow the popup when hovering over the bar of a bar chart.|
+|24429|Report Design|Instant Reports|In the New Instant Report designer we use other default values for the following properties: Label Justification Value Justification Drill-Down Style Which is causing the Advanced field properties to appear used in the legacy report designer when no setting are set.|
+|24438|Report Design|Forms|Setting default format ("...") for numeric fields causes these fields to disappear from forms.|
+|24461|Report Design|Exports|Corrected a problem where a crash would sometimes occur when using a pivot in the Instant Report designer and exporting with bulkCSV.|
+|24465|Report Design|Instant Reports|Error message when saving report in New Instant Report page showing "Dashboard name cannot be empty" instead of "Report name cannot be empty".|
+|24467|Report Design|Instant Reports|In New Instant Report Page when adding a subreport to a field that contains an apostrophe, symbols are showing instead of the apostrophe.|
+|24470|Report Design|Filters|Correct default width of Autocomplete filter box when empty.|
+|24477|API|Subreporting|Combokey qubreport style is added to the DrillDownStyle collection after list is built and cannot be removed from collection using AdHocSettings.DrillDownStyle setting.|
+|24498|Report Design|Subreporting|Corrected a problem where field grouping would not be correctly carried over to an automatically generated subreport, meaning that the internal filtering behavior would not filter as expected.|
+|24516|API|Optimization|Fixed a problem where when AdHocSettings.ShowHtmlAsCode is set to true, some special characters in stored data would cause reports to fail to render.|
+|24519|Report Design|Visualization|Corrected an issue with visualizations where the grid used to power a visualization would be filtered incorrectly when the visualization drills down if one or more individual fields are hidden.|
+|24521|Report Design|Filters|Corrected an issue where adding an empty popup filter in the report viewer would filter out all results rather than acting as a blank filter with no supplied value.|
+|24522|API|Optimization|Corrected a problem where if the VisibleDataSources setting is not populated, Izenda automatically pulls metadata for all stored procedures. The expected behavior should be that none of the stored procedures are loaded in this condition.|
+|24523|Report Design|UI|When using setting AdHocSettings.ApplyAntiXssToReportOutput, error received when using custom URL in Advanced field settings.|
+|24527|Report Design|Exports|"Show Date and Time" from Style tab now appear in Excel export when report is exported by the Scheduler|
+|24544|API|Optimization|Added setting AdHocSettings.ExportEncoding to control the character encoding of an export, preventing extra characters from appearing in the export under some conditions.|
+|24549|Report Design|Exports|Corrected a problem where animated visualizations in a report that has been exported without being saved would not export with a link to view the visualization.|
+|24550|Report Design|Gauge|Corrected a problem where sometimes the linear gauge style would switch from vertical to horizontal after report save or export.|
+|24560|API|Optimization|Restriction created to disallow adding the same datasource to different datasource categories.|
+|24563|Report Design|Filters|Corrected a problem when using equals(Multiple) filter operator, if one value is selected then it is not possible to scroll down to select other filter options.|
+|24584|Dashboards|Optimization|Fixed a problem where dashboards which have not been saved would not track tile locations correctly if the dashboard is refreshed without being saved.|
+|24598|Report Design|Optimization|Made further enhancements to support custom popups due to recent popup behavior changes.|
+|24623|Report Design|Subreporting|Corrected a problem where when AdHocSettings.ApplyAntiXssToReportOutput is enabled, undesired report parts would be passed down and rendered on a subreport.|
+|24638|Report Design|Maps|Corrected a problem where the World map would appear sometimes when the Europe map is selected and the zoom to data feature is enabled.|
+|24666|Report Design|Filters|Corrected a problem where using the Between filter could cause the report to become invalid.|
+|24696|Report Design|Filters|Corrected a problem where saving more than one multiple choice filter with multiple selected values reset those filters to the default no values on report save.|
+
+
+
 # 6.10.0.6 (May 18, 2016)
 
 |Case|Category|Subcategory|Description|
