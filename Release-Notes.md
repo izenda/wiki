@@ -1,5 +1,7 @@
 [[_TOC_]]
 
+<!---
+
 # 6.10.0.7 (June 14, 2016)
 
 |Case|Category|Subcategory|Description|
@@ -63,6 +65,7 @@
 |24666|Report Design|Filters|Corrected a problem where using the Between filter could cause the report to become invalid.|
 |24696|Report Design|Filters|Corrected a problem where saving more than one multiple choice filter with multiple selected values reset those filters to the default no values on report save.|
 
+--->
 
 
 # 6.10.0.6 (May 18, 2016)
