@@ -5,6 +5,7 @@
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
+|HF 24747 |API|Optimization|Corrected a problem where Field Aliases could not be duplicated across data sources.|
 |19079|API|Optimization|Refactor Fusion Driver for better performance|
 |22514|API|Optimization|Added a performance enhancement to greatly increase the speed at which metadata for virtual data sources and stored procedures is pulled and cached.|
 |22814|Report Design|Maps|Expanding support of Izenda Geotable for Lat/Lon, expanding internal geotable, offering high volume additional geotables on GitHub.|
