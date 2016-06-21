@@ -12,7 +12,16 @@ This feature is useful when you have multiple windows on your screen concurrentl
 
 
 ##Remove Responsive Grid
-If you prefer the horizontal scrolling functionality, remove the following code from the ReportViewer-Head.js file.
+
+There are two ways to remove responsive grid from a report - unchecking the setting checkbox or editing the javascript files to permanently disable responsive grid for all reports in an environment.
+
+###Enable Responsive Grid Checkbox
+
+This checkbox can be found on the Style tab. Uncheck it to disable responsive grid.
+
+###Disable Responsive Grid In Code
+
+If you prefer the horizontal scrolling functionality by default, remove the following code from the ReportViewer-Head.js file.
 
 ``<script type="text/javascript" src="./Resources/js/shrinkable-grid.js"></script>``
 
