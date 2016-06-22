@@ -54,9 +54,9 @@ Public Overrides Sub PreExecuteReportSet(ByVal reportSet As ReportSet)
     Dim filtersToCopy As New Dictionary(Of String, Object)()
     For Each filter As Filter In reportSet.Filters
         If filter.Parameter _
-            And filter.dbColumn IsNot Nothing _
-                                And filter.dbColumn.Table.Type = TableType.StoredProcedure _
-                                And filter.dbColumn.Name.StartsWith("PARAM_") _
+        And filter.dbColumn IsNot Nothing _
+        And filter.dbColumn.Table.Type = TableType.StoredProcedure _
+        And filter.dbColumn.Name.StartsWith("PARAM_") _
         And Not filtersToCopy.ContainsKey(filter.dbColumn.Name) Then
             filtersToCopy.Add(filter.dbColumn.Name, filter.Value)
         End If
