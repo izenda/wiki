@@ -44,6 +44,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[How can I utilize Izenda's export process for CSV, PDF, or Excel in an application?|/FAQ/accessing-izendas-export-process]]
 * [[How can I set default report designer options for my users?|/FAQ/Questions/setting-defaults-for-report-designer]]
 * [[Adding line breaks into long string values|/Guides/How-do-I-add-a-line-break-inside-of-a-block-of-text-in-my-database]]
+* [[Re-using the same filter values for multiple filters (Stored procedure parameters)|/FAQ/Questions/reusing-filter-values-for-stored-procedures]]
 
 ###Javascript Guides
 
