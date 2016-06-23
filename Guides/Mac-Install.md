@@ -12,7 +12,7 @@ This tutorial is designed to show a new developer how to load the Izenda Referen
 1. Download [Izenda](http://archives.izenda.us/ri/webforms-cs.zip) and extract the files.
 1. Open the webforms-cs directory which was extracted in the previous step.  Within the webforms-cs directory you will find a file called Global.asax.  Open Global.asax in the text editor of your choice.
 1. Change INSERT_LICENSE_KEY_HERE to your trial key
-1. Change INSERT_CONNECTION_STRING_HERE to Server=66.29.211.132,41433;Database=northwind;User ID=northwind;Password=traders;
+1. Change INSERT_CONNECTION_STRING_HERE to your connection string
 1. Change AdHocSettings.GenerateThumbnails from true to false
 1. Save your changes and close the text editor
 1. Open a terminal window and change directory to the location you extracted webforms-cs
