@@ -77,7 +77,7 @@ End Sub
 
 Here is a screenshot of the expected setup for the filters in a report using two stored procedures with the same parameter(CustomerID) required to enable the report to execute successfully.
 
-![Stored Procedure Filters on CustomerID](/FAQ/Questions/setting-defaults-for-report-designer/sproc_filters.png)
+![Stored Procedure Filters on CustomerID](/FAQ/Questions/reusing-filter-values-for-stored-procedures/sproc_filters_2.png)
 
 The key attributes to take into account are that both filters are for the CustomerID parameter and that the parameter with the value is marked with a checkmark in the box labeled "Param" denoting that the filter will be visible in the report viewer. The other filter will not be visible in the viewer.
 
@@ -85,5 +85,5 @@ The key attributes to take into account are that both filters are for the Custom
 
 On the report viewer, the report will only display a single filter but both filters will pass the validation check to ensure that all stored procedure parameter filters have a value. Keep in mind that this will only work if the columns are named the same. Therefore, attempting to filter on the CustomerID parameter and pass the filter value to another parameter named Customer_ID will not work, even if the parameters are synonymous.
 
-![Stored Procedure report with CustomerID filter](/FAQ/Questions/setting-defaults-for-report-designer/sproc_viewer.png)
+![Stored Procedure report with CustomerID filter](/FAQ/Questions/reusing-filter-values-for-stored-procedures/sproc_viewer_2.png)
 
