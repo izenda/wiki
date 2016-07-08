@@ -19,9 +19,9 @@ With Izenda, you can:
 
 This guide will explain the different variables and methods to implement security and explain common scenarios using working code samples.
 
-##Section 1 - Commonly Used Variables
+##[Section 1 - Commonly Used Variables](http://wiki.izenda.us/Integration/SecurityVariables)
 
-A collection of commonly used variables with short descriptions and use cases.
+A collection of commonly used variables.  
 
 ##Section 2 - Log-in Credentials
 
