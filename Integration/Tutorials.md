@@ -16,6 +16,10 @@ This tutorial will show you how to perform an integration with an existing web a
 
 These tutorials help users to familiarize themselves with the features Izenda offers and how to utilize the Izenda Report Designer's most powerful tools.
 
+##[[Guide to Security|http://wiki.izenda.us/Integration/SecurityDesignGuide]]
+
+This guide will assist you in setting up basic security and provide samples of more advanced security set-ups.
+
 ##[[Developer Guides|Guides/Developer Links and Guides]]
 
 These tutorials will assist developers in working with and customizing Izenda Reports.
