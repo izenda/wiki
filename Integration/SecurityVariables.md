@@ -44,9 +44,17 @@ This will append an equals condition to any report that has the given column nam
 
 ##Feature Restriction
 
+###[ShowDesignLinks](http://wiki.izenda.us/API/CodeSamples/ShowDesignLinks)
+
+This will removel the new button and the ability to save reports.
+
+###[ShowDesignDashboardLink](http://wiki.izenda.us/API/CodeSamples/ShowDesignDashboardLink)
+
+Removes links to the Dashboard Designer
+
 ###ShowNewButton
 
-This will show or hide the expandable New button on the Izenda navigation bar. It will also remove the save and save as Icons.
+This will show or hide the expandable New button on the Izenda navigation bar.
 
 ###[ShowSettingsButton](http://wiki.izenda.us/API/CodeSamples/ShowSettingsButton)
 
