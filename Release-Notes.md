@@ -1,7 +1,6 @@
 [[_TOC_]]
 
-<!--
-# 6.10.0.8 (July 12, 2016)
+ 6.10.0.8 (July 12, 2016)
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
@@ -55,7 +54,6 @@
 |24952|Report Design|Dashboards|Records not defaulting to 100 on the back of Dashboard tiles.|
 |24967|API|Reporting|Error using Link to new window on New IR page while using Fusion connection. Error "Access to column <column name> is not allowed."|
 
--->
 
 # 6.10.0.7 (June 14, 2016)
 
