@@ -12,3 +12,42 @@ Izenda, out of the box, does not come with a log-in mechanism. However, there va
 * When integrated, common information that we recommend be passed to Izenda includes the User Name, Tenant ID, Admin or Not and Roles.
 * The boolean [RequireLogin](http://wiki.izenda.us/API/CodeSamples/RequireLogin) only asserts that the [CurrentUsername](http://wiki.izenda.us/API/CodeSamples/CurrentUserName) is not null or the Izenda default. When it is one of these, the user will be redirected to whatever location is set in the [LoginUrl](http://wiki.izenda.us/API/CodeSamples/LoginUrl) variable.
 * There is a sanity check within the InitializeReporting function to ensure that initializtion is run once. We recommend putting code that sets the user outside of this so that it is run every page change. This will ensure that the user hasn't changed and they will only see whatever data they are allowed to see.
+
+##Example Log-In Logic
+
+```csharp
+bool AuthenticateUser(string userName, string password, out bool isAdmin) {
+          DataSet ds = AdHocContext.Driver.GetDataSet(AdHocContext.Driver.CreateCommand(string.Format("select 1 from employeeLogin where userName = '{0}' and password = '{1}'",userName,password)));
+          isAdmin = false;
+          string validated = ds.Tables[0].Rows[0][0].ToString();
+
+          if (userName.ToLower() == "admin" || userName.ToLower() == "administrator")
+            isAdmin = true;
+          
+          if (validated.Equals("1"))
+            return true;
+          else
+            return false;
+        }
+
+        void Button1_Click(object sender, EventArgs args) {
+		try{
+          loginValidator.IsValid = true;
+          bool isAdmin;
+          if (AuthenticateUser(userNameTextbox.Text, userPassword.Value, out isAdmin)) {
+            HttpContext.Current.Session["UserName"] = userNameTextbox.Text;
+            if (isAdmin)
+              HttpContext.Current.Session["Role"] = "Administrator";
+            else
+              HttpContext.Current.Session["Role"] = "RegularUser";
+            FormsAuthentication.RedirectFromLoginPage(userNameTextbox.Text, false);
+            return;
+          }
+          loginValidator.IsValid = false;
+		}
+		catch(IndexOutOfRangeException e)
+		{
+			return;
+		}
+        }
+```
