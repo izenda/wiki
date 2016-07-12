@@ -23,11 +23,11 @@ This guide will explain the different variables and methods to implement securit
 
 A collection of commonly used variables.  
 
-##Section 2 - Log-in Credentials
+##[Section 2 - Authentication](http://wiki.izenda.us/Integration/Logging-In)
 
-A best practice document with an  example using the a sample Log in page.
+Best practices and tips.
 
-##Section 3 - Getting started
+##Section 3 - Security Basics
 
 A basic security foundation with example code
 
