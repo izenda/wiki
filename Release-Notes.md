@@ -1,5 +1,61 @@
 [[_TOC_]]
 
+<!--
+# 6.10.0.8 (July 12, 2016)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|22122|Report Design|Visualization|Corrected behavir of AutoChart when showing 'blank' (white) bars.|
+|22385|Report Design|Visualization|Enhanced Bubble chart to support more than 31 items/styles in Internet Explorer 9 or older.|
+|22521|User Interface|Instant Reports|Corrected labeling of panels in Instant Report.|
+|22989|API|Settings|'\\' and other category denoting symbols can now be chosen through refactored/fixed 'CategoryCharacter' setting.|
+|23448|API|Exports|Added API to allow post processing of export files. Initial intended use case is for compressing larger files prior to download for faster processing.|
+|24104|Report Design|Dashboards|Corrected a problem where if the user is calculating a field using an expression, and then using that calculated field in a visualization, and then places that visualization on a dashboard, the dashboard tile would fail to render correctly as it could not properly reference the calculated field used to build the visualization.|
+|24372|API|Reporting|Changed internal behavior to correct a rare issue where Izenda would incorrectly identify a reportname when provided with a reportID.|
+|24387|API|Database|Adding support for synonyms inherited from other databases. Current support for synonyms prior to this change will only show if the synonym and source are in the same database.|
+|24405|User Interface|Controls|Corrected numerous Interface/button problems when using Internet Explorer 11 with Windows 7.|
+|24500|Report Design|Data Sources|Corrected a rare problem where similar but not identical data types could cause a mismatch error.|
+|24504|API|Database|Changed internal behavior of TO_DATE() to prevent the '&' ampersand character from throwing invalid queries in Oracle.|
+|24517|Report Design|Culture|Corrected an error that could occur in Excel exports. When culture is switched in Excel, this would sometimes cause Izenda-generated exports to fail to properly match the data type of a field and apply correct formatting.|
+|24532|Report Design|Maps|Changed Map legend rendering to prevent long label strings from overlapping the map itself.|
+|24539|Report Design|Visualization|Corrected a problem where embedded subreports could break visualizations when they are rendered for export.|
+|24551|Report Design|Visualization|Enabled use of Records box on visualizations independent of number of records in underlying query.|
+|24590|User Interface|Controls|You can now add a column to your report in Instant Reports by clicking the checkbox or the column name in the Data Sources view.|
+|24592|User Interface|Controls|When Save dialog is opened, cursor is automatically dropped into the Report Name box rather than requiring user to click in the box.|
+|24595|Report Design|Visualization|Implemented the ability to use a Custom URL field with calendar Visualization.|
+|24625|Report Design|Data Sources|Moved distinct checkbox in Instant Report Designer to Data tab.|
+|24627|User Interface|Notifications|Removed text "Please contact sales@izenda.com" from License Key expiration notification.|
+|24634|Report Design|Subreports|Two fixes: Removed ability to design a report which embeds into itself. Corrected a loading error that happened when a report was a assigned a drilldown key in the Instant Report designer and then opened again in the Instant Report designer.|
+|24644|API|Culture|Corrected a problem where the thread culture would be used to determine the format of a pivot header rather than AdHoc.Culture.|
+|24648|Report Design|Exports|Corrected a problem where exporting a report to .doc format would break subreport links.|
+|24664|Report Design|Gauges|Truncated labels in Gauge visualization to prevent overlap of label and value.|
+|24670|User Interface|Notifications|Clairified error message when using BulkCSV export on a report which lacks data in the Fields tab. BulkCSV only targets the Fields tab, a report with other report parts such as Summary or Chart but no Fields would produce a confusing error message.|
+|24671|Report Design|Visualization|Expanded truncation of long labels in more kinds of visualizations.|
+|24674|User Interface|Filters|Prevented the Autocomplete filter from showing results where it should not show them unless UI accessibility features are enabled.|
+|24690|User Interface|Controls|Fixed an error that would appear if a user clicks on the Smart Tag button in the Form designer rather than the dropdown.|
+|24691|Report Design|Gauges|Corrected an issue where Animated Half Circle gauge style could overlap other report parts.|
+|24703|Report Design|Visualization|Corrected issues with Matrix visualization producing unreadable text if too many values are selected.|
+|24704|API|Enhancement|Added a new setting, OracleDriver.GetStoredProceduresSQL, which allows the use of a custom query to pull metadata for stored procedures.|
+|24709|API|Reporting|Changed how methods are called as when Response.Redirect(...) is called under some circumstances within the MVC controller, current session is lost.|
+|24728|Report Design|Visualization|Fixed some problems where Arcmap visualization would not be editable in Internet Explorer 11.|
+|24739|API|Reporting|Corrected a problem where Izenda could fail to initialize correctly. The given error is " Message: The constructor to deserialize an object of type 'AliasesCollection' was not found."|
+|24741|API|Reporting|Fixed a potential problem where under some circumstances the VisibleDataSources could be populated incorrectly when building the schema cache.|
+|24753|User Interface|Filters|Fixed filter behavior when user selects empty ('') and blank ('blank') values at the same time in a multiple select filter, which could cause incorrect filtering behavior.|
+|24762|API|Enhancement|Added a method to the AdHocConfig to provide programmatic control over the sort order for dashboards on the dash.aspx page.|
+|24780|API|Filters|Fixed the population of time periods when using the In Time Period filter.|
+|24782|User Interface|Controls|Caught some uncaught functions when certain text is entered into the search bar in Instant Reports.|
+|24787|API|Enhancement|Exposed EVO and PhantomJS pdf rendering to permit more extensive and easy customization of various rendering tasks.|
+|24797|User Interface|Filters|Made further fixes to the way empty checkbox filters are treated in the report designer - now it should always treat filters with no values selected as if the filter were not there.|
+|24821|Report Design|Dashboards|Prevented dashboard title or labels from changing when dashboard is refreshed but nothing else changes.|
+|24823|User Interface|Filters|Fixed a problem where under some circumstances popup filter would not consistently display the same filter values.|
+|24827|API|Reporting|Minimized the number of requests made by the chart renderer to prevent charts from failing to print correctly due to requests failing for lack of authenticaiton.|
+|24847|API|Reporting|Expanded compatability with different server collations to minimize impact of case sensitive data source names.|
+|24851|Report Design|Expressions|Enhanced functionality of subtotal expressions and prevented various errors from popping up even though user is correctly using feature.|
+|24886|Report Design|Pivots|Subtotals showing incorrectly when using Sum as subtotal function on pivots|
+|24952|Report Design|Dashboards|Records not defaulting to 100 on the back of Dashboard tiles.|
+|24967|API|Reporting|Error using Link to new window on New IR page while using Fusion connection. Error "Access to column <column name> is not allowed."|
+
+-->
 
 # 6.10.0.7 (June 14, 2016)
 
