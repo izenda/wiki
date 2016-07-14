@@ -4,6 +4,8 @@
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
+|HF25061|Report Design|Pivots|Corrected an error where pivot column headers were being included in the group clause.|
+|HF25062|Report Design|Dashboards|Removed a debug string which would cause the text " a"b " to appear on dashboards.|
 |22122|Report Design|Visualization|Corrected behavir of AutoChart when showing 'blank' (white) bars.|
 |22385|Report Design|Visualization|Enhanced Bubble chart to support more than 31 items/styles in Internet Explorer 9 or older.|
 |22521|User Interface|Instant Reports|Corrected labeling of panels in Instant Report.|
@@ -50,7 +52,7 @@
 |24827|API|Reporting|Minimized the number of requests made by the chart renderer to prevent charts from failing to print correctly due to requests failing for lack of authenticaiton.|
 |24847|API|Reporting|Expanded compatability with different server collations to minimize impact of case sensitive data source names.|
 |24851|Report Design|Expressions|Enhanced functionality of subtotal expressions and prevented various errors from popping up even though user is correctly using feature.|
-|24886|Report Design|Pivots|Subtotals showing incorrectly when using Sum as subtotal function on pivots|
+|24886|Report Design|Pivots|NOTE: This fix was reverted. Subtotals showing incorrectly when using Sum as subtotal function on pivots|
 |24952|Report Design|Dashboards|Records not defaulting to 100 on the back of Dashboard tiles.|
 |24967|API|Reporting|Error using Link to new window on New IR page while using Fusion connection. Error "Access to column <column name> is not allowed."|
 
