@@ -8,3 +8,5 @@ AdHocSettings.HiddenColumns = new string[] { "[Orders].[CustomerID]" };
 AdHocSettings.HiddenColumns = new string[] { "Orders.CustomerID" };
 AdHocSettings.HiddenColumns = new string[] { "CustomerID" };
 ```
+
+When using Izenda Fusion, you must use the full identifier, for example: [db].[schema].[table].[column].
