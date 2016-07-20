@@ -4,8 +4,8 @@
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
-|HF25061|Report Design|Pivots|Corrected an error where pivot column headers were being included in the group clause.|
-|HF25062|Report Design|Dashboards|Removed a debug string which would cause the text " a"b " to appear on dashboards.|
+|HF25061|Report Design|Pivots|Corrected an error where pivot column headers were being included in the group clause. 6/14/16|
+|HF25062|Report Design|Dashboards|Removed a debug string which would cause the text " a"b " to appear on dashboards.6/14/16|
 |22122|Report Design|Visualization|Corrected behavir of AutoChart when showing 'blank' (white) bars.|
 |22385|Report Design|Visualization|Enhanced Bubble chart to support more than 31 items/styles in Internet Explorer 9 or older.|
 |22521|User Interface|Instant Reports|Corrected labeling of panels in Instant Report.|
