@@ -72,3 +72,4 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[Forking the Izenda Resources repository|/Guides/Developers/Forking-resources-in-github]]
 * [[How do I use alternate filter values with stored procedure parameters versus what I display to the user?|http://wiki.izenda.us/FAQ/Questions/using-alternate-filter-values-with-stored-procedures]]
 * [[Creating a custom RS.aspx response|/FAQ/Questions/custom-rs-response]]
+* [[Izenda settings and setting scope|/Guides/izenda-setting-scope]]
