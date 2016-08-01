@@ -1,5 +1,9 @@
 #Izenda settings and settings scope
 
+[[_TOC_]]
+
+##About
+
 Here is a list of settings that are not affected by the [[DefaultScope|/API/CodeSamples/DefaultScope]] setting that normally controls how long settings will be kept in memory.
 
 * [[ExistingDatabaseConstraints|/API/CodeSamples/ExistingDatabaseConstraints]] (follows the paradigm of the [[Driver|/Guides/Izenda-AdHoc-Driver]])
