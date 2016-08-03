@@ -6,7 +6,7 @@
 If your application uses Bootstrap, and you integrate Izenda to use your own master/layout pages, you may need to separate Izenda's Bootstrap classes to avoid CSS conflicts with your own.  You will need a CSS pre-processor (SASS or LESS) to accomplish this; both are available in Visual Studio and support namespacing.
 
 ##Using SASS
-**Step 1 >> To avoid having to change several references throughout the applicaiton, rename main.css (for example, main-no-namespace.css).**
+**Step 1 >> To avoid having to change several references throughout the application, rename main.css (for example, main-no-namespace.css).**
 
 ![Rename CSS files](/FAQ/bootstrap-namespacing/bootstrapnamespace1.png)
 
@@ -16,7 +16,7 @@ If your application uses Bootstrap, and you integrate Izenda to use your own mas
 
 ![Create main SASS sheets](/FAQ/bootstrap-namespacing/bootstrapnamespace2.png)
 
-**Step 4 >> Add the new namespace class (in this case, izenda-bs) to the top-level Izenda div.  In our vanilla reference implementations, all Izenda pages render inside of the first div below the body tag in the Default.master page.**
+**Step 4 >> Add the new namespace class (in this case, izenda-bs) to the top-level Izenda div.  In our vanilla reference implementations, all Izenda pages render inside of the first div below the body tag in the Default.master page. By using the namespace class at the top-level div, this namespace usage will cascade to all other classes within that div, meaning that it will apply to the entire set of reporting pages and create a wall of separation between Izenda's bootstrap CSS and any other bootstrap CSS in the hosting application.**
 
 ![Add new class to top-level div](/FAQ/bootstrap-namespacing/bootstrapnamespace4.png)
 
