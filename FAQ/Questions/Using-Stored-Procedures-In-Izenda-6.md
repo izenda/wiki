@@ -299,3 +299,12 @@ BEGIN
 END$$
 DELIMITER ;
 ```
+##Notes: Some characters are not supported in Izenda field names
+- horizontal tabulation (\u0009)
+- vertical tabulation (\u000B)
+- line feed (\u000A)
+- carriage return (\u000D)
+- line separator (\u2028)
+- paragraph separator (\u2029)
+- form feed (\u000C)
+- "[a].[b]" is not supported as a field name
