@@ -38,6 +38,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String|[[ApplicationHeaderImageUrl|/API/CodeSamples/ApplicationHeaderImageUrl]]| Gets or sets the URL of the logo used at the top of every reporting page. |null|
 |Boolean|[[AutoJoinOnRenderedRows|/API/CodeSamples/AutoJoinOnRenderedRows]]|Gets or sets whether auto-join function should work for server-rendered rows in [[Izenda.AdHoc.AdHocSettings.JoinedTablesList|/API/Izenda/AdHoc/AdHocSettings/Izenda-AdHoc-AdHocSettings-JoinedTablesList]].**(deprecated)**|True|
 |Boolean|[[AutoPostBackOnFilterChange|/API/CodeSamples/AutoPostBackOnFilterChange]]| Gets or sets whether changing filters on a report will cause a postback to occur. |True|
+|Boolean|[[AutoOrForRepeatFilters|/API/AutoOrForRepeatFilters]]|Gets or sets the behavior of filter logic by default. | False|
 |Boolean|[[CacheEqualsSelect|/API/CodeSamples/CacheEqualsSelect]]| Gets or sets whether the value of the "Equals (Select)" filter should be cached. |False|
 |String|[[CacheFolder|/API/CodeSamples/CacheFolder]]| Gets or sets the folder that will be used to store cached data on disk. |[drive]:\Temp\|
 |Boolean|[[CacheQueries|/API/CodeSamples/CacheQueries]]|Gets or sets whether all queries sent to the [[Izenda.AdHoc.Database.Driver|/API/Izenda/AdHoc/Database/Izenda-AdHoc-Database-Driver]] should be cached.|True|
