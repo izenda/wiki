@@ -27,7 +27,7 @@ A collection of commonly used variables.
 
 Best practices and tips.
 
-##Section 3 - Security Basics
+##[Section 3 - Security Basics](http://wiki.izenda.us/Integration/Security-Basics)
 
 A basic security foundation with example code
 
