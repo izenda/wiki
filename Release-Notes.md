@@ -1,6 +1,6 @@
 [[_TOC_]]
 
-# 6.10.0.9 (August 10, 2016)
+<!-- # 6.10.0.9 (August 10, 2016)
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
@@ -46,7 +46,7 @@
 |25311|Report Design|Charts|Result of Arc Map is, "This chart has been set up incorrectly (see Help)."|
 |25344|Dashboards|Visualization|After the user saves the report Transition Visualization does display on presentation mode on dashboard.|
 |25353|Dashboards|UI|Presentation mode retuns blank tiles after user changes the report while on the Presentation mode of Dashboard.|
-|25362|Report Design|Optimization|When using Italic and bold on separator in an analysis grid receiving HTML instead of Field Value.|
+|25362|Report Design|Optimization|When using Italic and bold on separator in an analysis grid receiving HTML instead of Field Value.| -->
 
 
 # 6.10.0.8 (July 12, 2016)
