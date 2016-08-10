@@ -1,56 +1,5 @@
 [[_TOC_]]
 
-<!---  
-#6.10.0.9 (August 10, 2016)
-
-|Case|Category|Subcategory|Description|
-|:----|:-----------|:----------------|:---------------|
-|21189|Dashboards|UI|Updating dashboard Thumbnails to display actual screen representation of tiles.|
-|22808|API|Optimization|Expanding support of Izenda Geotable for Lat/Lon, expanding internal geotable, offering high volume additional geotables on GitHub.|
-|24023|Dashboards|UI|Implemented custom gallery viewer for Dashboards.|
-|24615|Report Design|Visualization|Made improvements to the Maps tab that conform to recent changes made to support map Visualizations. Also we now permit using more than one geographic descriptor (name, coordinates) at the same time.|
-|24714|Report Design|Pivots|Custom Pivot sorting code no longer working after updating version past 6.10.0.5|
-|24726|Report Viewer|Visualization|Changes needed with visualizations, in some cases where custom HTML is added the chart is always slightly larger than the tile space, thus forcing scroll bars to appear when unnecessary.|
-|24734|Report Design|Filters|Cascading doesn't populate correctly if nothing is selected on the first filter in New IR Page.|
-|24764|Report Viewer|UI|Responsive grid feature not working properly with column headers.|
-|24799|Scheduler|Optimization|Fixed issue where leaving the repeat type in the scheduler caused the entire scheduler process to hang.|
-|24904|Report Design|Visualization|When using drill down on visualization and display in new tab showing no framing information. Shows a pop up window style in new tab.|
-|24920|Report Design|Visualization|Changing Sunburst Visualization center Percentage calculation on drilldown to show the total percentage of the slice after drill down.|
-|24933|Scheduler|UI|When scheduling reports as links in email URL contains double slash which prohibits link from being clickable.|
-|24937|Report Design|Visualization|Visualization built from Pivots where values contain whitespace causing %NaN to show in drill down breadcrumb navigation.|
-|24938|Report Design|Pivots|Corrected a problem where a pivot built to display strings in the cells would throw an index error if subtotals are active, as then the tool would attempt to sum null strings.|
-|24960|Dashboards|Optimization|Inconsistency between these methods, and code which prepares filters values data for serialization to json. Causing errors when sending dates to dashboard filters from URL.|
-|24988|API|Optimization|Custom pop up pages no longer responding. Receiving "resources cannot be found" error in popup page.|
-|25002|API|Saving|Saving prevented Forms HTML renderer from encoding characters within the <!--FORMSCRIPT--> tag, which would break some scripts/jquery.|
-|25037|API|Optimization|AntiXss escaping causing issue when using totals on Analysis Grid. Showing extra text strings in totals.|
-|25039|Report Viewer|Filters|Rendering incorrect date formats when exporting from Izenda Form to Excel.|
-|25042|Report Viewer|Visualization|Hover text data colors and type does not properly match to colors in bar version of autochart.|
-|25054|API|UI|Prevented a problem where custom header overrides could result in duplicate headers being generated.|
-|25056|Dashboards|UI|Dashboard report titles are not properly updated if titles are added to report after dashboard is created.|
-|25061|Report Design|Pivots|Corrected an error where pivot column headers were being included in the group clause.|
-|25065|Dashboards|UI|Updating x/y coordinates for old dashboards to avoid overlaps of tiles when upgrading.|
-|25080|Dashboards|Optimization|Fixed the issue where navigating directly to the dashboard would change "\" to "/" every time it is not in the URL parameter resulting in the category list not showing.|
-|25086|Report Design|UI|When using Quick add in the Report Designer with large amounts of column names the popup only displays portions of the list and no ability to scroll or see all of the columns.|
-|25098|Report Design|Saving|When using Report Categories and having no Uncategorized reports causes formatting issues in the Category drop down when saving the report.|
-|25107|Report Viewer|Filters|Passing p values to In time period filter results in user having to update results in report viewer to apply filter.|
-|25111|Report Design|Optimization|Fixed issue where combo keys and embedded sub-reports did not work together.|
-|25132|API|Optimization|Using AdHocSettings.SettingsKey to password protect the Settings page is showing a null reference exception.|
-|25142|API|Filters|When using FilterRegex setting, fields listed in regex are not able to be added to reports in the report viewer from the fields tab.|
-|25189|Instant Reports|Filters|Values using "Equals(List)" as operator, the operator disappeared after saving the report in New IR page.|
-|25190|Report Design|Export|Using VG Hierarchy Visual Group Style, the First column is exporting in the second column leaving the first column empty.|
-|25223|Report Viewer|Charts|Fixed issue where correct chart was not displaying for pop-up sub-reports based on value clicked.|
-|25241|Dashboards|UI|Refreshing unsaved dashboard causing sizing issues with dashboard tiles.|
-|25244|Report Design|Filters|Fixed issue where the ellipses (select all) was missing from the Equals Multiple filter in the Instant Reports designer.|
-|25263|Report Design|Visualization|"Cannot read property 'o' of undefined" / "Cannot read property 'formatter' of undefined" When using several visualizations. The bug is only reproduced when you create a new visualization (when you create a new report). This applies to the following visualizations: World Tour, Sunburst, Arc Map, Projected Map, Heatmap, Auto Chart, Flowchart and Tree.|
-|25269|Report Design|Filters|When adding values in filters using "Equals(Autocomplete)" as operator, other values are being replaced/disappear when adding more.|
-|25303|Report Design|Filters|Using Days Old format on field causing error on report when exported to Excel.|
-|25311|Report Design|Charts|Result of Arc Map is, "This chart has been set up incorrectly (see Help)."|
-|25344|Dashboards|Visualization|After the user saves the report Transition Visualization does display on presentation mode on dashboard.|
-|25353|Dashboards|UI|Presentation mode retuns blank tiles after user changes the report while on the Presentation mode of Dashboard.|
-|25362|Report Design|Optimization|When using Italic and bold on separator in an analysis grid receiving HTML instead of Field Value.| 
---->
-
-
 # 6.10.0.8 (July 12, 2016)
 
 |Case|Category|Subcategory|Description|
