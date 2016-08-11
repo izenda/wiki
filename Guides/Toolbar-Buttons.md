@@ -304,7 +304,7 @@ AdHocSettings.ReportList = "";
 The New Report button begins designing a report from the beginning. To disable the New Report button in the designer, you need to set the ShowNewButton property to false.
 
 ```csharp
-AdHocSettings.ShowNewButtons = false;
+AdHocSettings.ShowNewButton = false;
 ```
 
 **Save**
