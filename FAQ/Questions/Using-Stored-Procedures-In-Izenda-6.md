@@ -299,7 +299,7 @@ BEGIN
 END$$
 DELIMITER ;
 ```
-##Notes: Some characters are not supported in Izenda field names
+##Notes: Some characters are not supported in Izenda field names. This is not an all-inclusive list, but some common items we have seen issues with.
 - horizontal tabulation (\u0009)
 - vertical tabulation (\u000B)
 - line feed (\u000A)
