@@ -9,11 +9,12 @@ The following example shows an example of security that combines report level an
 ##Code Sample
 
 ```csharp
-	[Serializable]
-	public class CustomAdHocConfig : DatabaseAdHocConfig 
-	{
-		public static void InitializeReporting() 
-		{
+
+[Serializable]
+public class CustomAdHocConfig : DatabaseAdHocConfig 
+{
+   public static void InitializeReporting() 
+   {
 
       if (AdHocContext.Initialized) {
         return;
