@@ -51,31 +51,15 @@ public class CustomAdHocConfig : DatabaseAdHocConfig
 	//AdHocSettings.PdfPrintMode = PdfMode.EOPDF;
 	//PhantomJS PDF uses an EXE on the web server that produces the export
 	AdHocSettings.PdfPrintMode = PdfMode.PhantomJs;
-      
-      //Get cookie values from a cookie named Authentication
-      //This assumes there are only 3 values separated by a |
-      //Assuming the first value is username and second is tenant setting it below
-      if(Request.Cookies["Authentication"] != null)
-      {
-        string authVals = Request.Cookies["Authentication"].Value;
-        string[] cookieVals = authVals.Split(new char[] {'|'});
-        AdHocSettings.CurrentUserName = cookieVals[0];
-      }
 
-      //Pull new Datasource from DB based on user name
       //Remember to add <%@ Import Namespace="System.Data" %> to your imports
-      DataSet dsDataSource = AdHocContext.Driver.GetDataSet(AdHocContext.Driver.CreateCommand(string.Format("SELECT agDSN,agSqlServer,XenID FROM Agencies WHERE agID = {0}", AdHocSettings.CurrentUserName)));
+        DataSet tables = AdHocContext.Driver.GetDataSet(AdHocContext.Driver.CreateCommand(
+           string.Format("SELECT roleName FROM EmployeeRoles WHERE EmployeeID = {0}", AdHocSettings.CurrentUserName)));
+        string[] userRoles = new string[tables.Tables[0].Rows.Count];
+        for (int i = 0; i < tables.Tables[0].Rows.Count; i++)
+          userRoles [i] = tables.Tables[0].Rows[i][0].ToString();
       
-      string[] dbResults = new string[ds.Tables[0].Rows.Count];
-      
-      for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
-      results[i] = ds.Tables[0].Rows[i][0].ToString();
-      
-      AdHocSettings.SqlServerConnectionString = "Put Together Connection String";
-
-      //Get and set role from cookie value
-      //Assuming insight is the second value of the cookie
-      AdHocSettings.CurrentUserRoles = new string[] { cookieVals[1] };
+      AdHocSettings.CurrentUserRoles = userRoles ;
       //Set the number of available drop downs for roles in the misc tab of the designer
       //+1 is for the default value of Everyone
       AdHocSettings.NumSharedDropdowns = AdHocSettings.CurrentUserRoles.Length + 1;
