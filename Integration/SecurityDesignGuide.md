@@ -31,6 +31,6 @@ Best practices and tips.
 
 A basic security foundation with example code
 
-##Section 4 - User Types
+##[Section 4 - User Types](http://wiki.izenda.us/Integration/User-Types)
 
 An intermediate code sample showing a case statement based on user role
