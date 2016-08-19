@@ -17,7 +17,7 @@ You can also have disable this security feature in Office (2010 example):
 
 ##Error: My Excel file is completely blank
 
-THis is a problem likely caused by the MS16-088 Security patch for Office, released July 13 2016. This patch contains a fix, KB3170008, which modifies the behavior of .xls files which are derived from MHTML, such as Izenda's Excel output. The problem is that MHTML is not a 'valid' Excel file and thus does not meet the security rules added in KB3170008, which then causes the Izenda output to fail to load without warning.
+This is a problem likely caused by the MS16-088 Security patch for Office, released July 13 2016. This patch contains a fix, KB3170008, which modifies the behavior of .xls files which are derived from MHTML, such as Izenda's Excel output. The problem is that MHTML is not a 'valid' Excel file and thus does not meet the security rules added in KB3170008, which then causes the Izenda output to fail to load without warning.
 
 ###Solution:
 
