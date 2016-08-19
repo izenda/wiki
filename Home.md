@@ -12,10 +12,10 @@ This wiki serves as the main source of documentation for development teams worki
 
 <br>
 
-[Izenda Overview](/Guides/ReportDesign) | [Install/<br>Maintenance](/Integration/Tutorials)
-:--:|:---:
-[![](/Home/Overview_Globe.png)](/Guides/ReportDesign)|[![](/Home/Install_Download.png)](/Integration/Tutorials)
-Introduction to the Izenda product|Instructions on installing and updating Izenda
+[Izenda Overview](/Guides/ReportDesign) | [Install/<br>Maintenance](/Integration/Tutorials)|[[Release Notes]]
+:--:|:---:|:---:
+[![](/Home/Overview_Globe.png)](/Guides/ReportDesign)|[![](/Home/Install_Download.png)](/Integration/Tutorials)|
+Introduction to the Izenda product|Instructions on installing and updating Izenda|Review the changes with each new release
 
 <!-- Commented out Best Practices until we develop a page
 [Izenda Overview](/Guides/ReportDesign) | [Install/<br>Maintenance](/Integration/Tutorials) | Best Practices
