@@ -12,10 +12,52 @@ This wiki serves as the main source of documentation for development teams worki
 
 <br>
 
-[Izenda Overview](/Guides/ReportDesign) | [Install/<br>Maintenance](/Integration/Tutorials)|[[Release Notes]]
-:--:|:---:|:---:
-[![](/Home/Overview_Globe.png)](/Guides/ReportDesign)|[![](/Home/Install_Download.png)](/Integration/Tutorials)|
-Introduction to the Izenda product|Instructions on installing and updating Izenda|Review the changes with each new release
+<table border="1" width="100%">
+   <tr>
+      <th width="33%">
+         <a href="http://http://wiki.izenda.us/Guides/ReportDesign/">
+            Izenda Overview
+         </a>
+      </th>
+      <th width="33%">
+         <a href="http://http://wiki.izenda.us/Integration/Tutorials/">
+            Install/Maintenance 
+         </a>
+      </th>
+      <th width="33%">
+         <a href="http://http://wiki.izenda.us/Release Notes/">
+            Release Notes
+         </a>
+      </th>
+   </tr>
+   <tr>
+      <td align="center">
+         <a href="http://http://wiki.izenda.us/Guides/ReportDesign/">
+            <img src="/Home/Overview_Globe.png" alt="Overview Icon" style="width:128px;height:128px;">
+         </a>
+      </td>
+      <td align="center">
+         <a href="http://http://wiki.izenda.us/Integration/Tutorials/">
+            <img src="/Home/Install_Download.png" alt="Install Icon" style="width:128px;height:128px;">
+         </a>
+      </td>
+      <td align="center">
+         <a href="http://http://wiki.izenda.us/Release Notes/">
+         </a>  
+      </td>
+   </tr>
+   <tr>
+      <td align="center">
+         Introduction to the Izenda product
+      </td>
+      <td align="center">
+         Instructions on installing and updating Izenda
+      </td>
+      <td align="center">
+         Review the changes with each new release
+      </td>
+   </tr>
+</table>
 
 <!-- Commented out Best Practices until we develop a page
 [Izenda Overview](/Guides/ReportDesign) | [Install/<br>Maintenance](/Integration/Tutorials) | Best Practices
@@ -26,11 +68,55 @@ Introduction to the Izenda product|Instructions on installing and updating Izend
 
 <br>
 
-[Customization](/Guides/Developer-Links-and-Guides) | [Code Reference](http://wiki.izenda.us/API) | [FAQ](http://wiki.izenda.us/FAQ/FAQ)
-:---:|:--:|:---:
-[![](/Home/Customization_Wrench.png)](/Guides/Developer-Links-and-Guides)|[![](/Home/CodeRef_Terminal.png)](http://wiki.izenda.us/API)|[![http://wiki.izenda.us/FAQ/FAQ](/Home/FAQ_QuestionMark.png)](http://wiki.izenda.us/FAQ/FAQ)
-Altering Izenda to meet your company's needs|Technical documentation on Izenda's features, methods, and variables|Frequently asked questions from developers and end users
+<table border="1" width="100%">
+   <tr>
+      <th width="33%">
+         <a href="http://http://wiki.izenda.us/Guides/Developer-Links-and-Guides/">
+            Customization
+         </a>
+      </th>
+      <th width="33%">
+         <a href="http://http://wiki.izenda.us/API/">
+            Code Reference
+         </a>
+      </th>
+      <th width="33%">
+         <a href="http://http://wiki.izenda.us/FAQ/FAQ/">
+            FAQ
+         </a>
+      </th>
+   </tr>
+   <tr>
+      <td align="center">
+         <a href="http://http://wiki.izenda.us/Guides/Developer-Links-and-Guides/">
+            <img src="/Home/Customization_Wrench.png" alt="Customization Icon" style="width:128px;height:128px;">
+         </a>
+      </td>
+      <td align="center">
+         <a href="http://http://wiki.izenda.us/API/">
+            <img src="/Home/CodeRef_Terminal.png" alt="Code Reference Icon" style="width:128px;height:128px;">
+         </a>
+      </td>
+      <td align="center">
+         <a href="http://http://wiki.izenda.us/FAQ/FAQ/">
+		             <img src="/Home/FAQ_QuestionMark.png" alt="FAQ" style="width:128px;height:128px;">
+         </a>  
+      </td>
+   </tr>
+   <tr>
+      <td align="center">
+         Altering Izenda to meet your company's needs
+      </td>
+      <td align="center">
+         Technical documentation on Izenda's features, methods, and variables
+      </td>
+      <td align="center">
+         Frequently asked questions from developers and end users
+      </td>
+   </tr>
+</table>
 
+<br>
 
 
 <!-- Commented out old home page. Holding on to ensure we don't need it
