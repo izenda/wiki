@@ -70,7 +70,7 @@ public class CustomAdHocConfig : DatabaseAdHocConfig
 	//the default mode for AdHocSettings.CurrentUserIsAdmin is set to TRUE 
       //You must set it to FALSE for share-with values to take effect
       
-      //Determine user type permissions (in this I'm assuming it's inside of the roles we pulled earlier)
+      //Determine user type permissions
       if (AdHocSettings.CurrentUserRoles.Contains<string>("Admin")) 
       {
         //The following settings allows the user to ignore share with values
