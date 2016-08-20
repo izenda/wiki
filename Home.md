@@ -1,7 +1,7 @@
 ##Announcements
 [![] (/Home/2017UserConference.png)](https://www.izenda.com/embedded-bi-conference)
 
-Join us for our 2017 User Conference January 22-24, 2017 Atlanta, GA
+[Join us for our 2017 User Conference January 22-24, 2017 Atlanta, GA](https://www.izenda.com/embedded-bi-conference)
 
 <br>
 
