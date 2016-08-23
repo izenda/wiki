@@ -57,3 +57,8 @@ End Class
 ##Screenshots
 
 AdHocSettings.ShowAdditionalJoinConditions = true;
+
+![](/API/ShowAdditionalJoinConditions/show-additional-join-conditions.PNG)
+
+AdHocSettings.ShowAdditionalJoinConditions = false;
+![](/API/ShowAdditionalJoinConditions/without-add-join-conditions.PNG)
