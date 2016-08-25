@@ -50,3 +50,7 @@ AND [dbo].[Orders].[ShipCountry]=[dbo].[Invoices].[ShipCountry]
 Please note that the primary key constraint is always the **last** constraint added for that particular data source. I.e. the constraint "[dbo].[Orders].[OrderID]" - "[dbo].[Invoices].[OrderID]" will be the primary key constraint. Only this constraint will be use for auto-joining and all other secondary constrains will be added to the JOIN clause later. 
 
 Also note that currently there is no way to perform this action on the Report Designer. This must be done manually through code.
+
+###NOTE: Adding an invalid constraint will throw an fatal error unless the following setting is configured.
+```csharp
+AdHocSettings.ThrowExceptionOnAddConstraintError = false;
