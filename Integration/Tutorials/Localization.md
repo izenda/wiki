@@ -15,6 +15,7 @@ The following languages are currently supported. More are being added based on c
 * Arabic (ar-SA)
 * German (de-DE)
 * English (en-US)
+* EnglishGB (en-GB)
 * Spanish (es-ES)
 * Canadian French (fr-ca)
 * French (fr-FR)
