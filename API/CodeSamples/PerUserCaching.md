@@ -6,6 +6,8 @@
 
 AdHocSettings.PerUserCaching determines whether or not an individual instance of the DatabaseSchema object is cached in session for each user.  This setting is most commonly used in environments with a load balancer, or web farms, as the session is persistent across all servers (using user affinity).  This is also useful if your users have different sets of visible data sources.
 
+Since Izenda 6.8.0.7, Izenda checks the Database Schema cache available to it against the VisibleDataSources array set in InitializeReporting() to make sure it has every data sources it needs, and will update the cache accordingly, if necessary. This eliminates the need for AdHocSettings.PerUserCaching = true, which tells Izenda to store a separate copy of the database schema cache for each user in session (ideal for load balanced environments to limit database calls).
+
 **Default Value:** False
 
 ##Global.asax (C♯)
