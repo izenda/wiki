@@ -6,8 +6,6 @@
 
 Revealing system data or debugging information helps an adversary learn about the system and form a plan of attack. An information leak occurs when system data or debugging information leaves the program through an output stream or logging function. 
 
-More information regarding information leakage can be found at:  https://www.owasp.org/index.php/Information_Leakage 
-
 Adding the below code to the rs.aspx page will help you control what a user is able to see. The “Prohibited” quotes is where you put the literal information displayed to the end user. 
 
 ##rs.aspx (C♯)
