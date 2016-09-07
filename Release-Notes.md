@@ -1,5 +1,61 @@
 [[_TOC_]]
 
+# 6.10.0.10 (September 7, 2016)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|23824|API|UI|Tenant Field is not properly aliasing when set to show in UI.|
+|24358|API|Optimization|Added additional logging for session availability to assist with diagnosing session issues.|
+|24585|Dashboards|UI|Tile resize handle in the right-bottom corner of tile doesn't react on tile animation.|
+|24615|Report Design|Visualization|Made improvements to the Maps tab that conform to recent changes made to support map Visualizations. Also we now permit using more than one geographic descriptor (name, coordinates) at the same time.|
+|25012|API|Optimization|New Setting for MSSQL use only. AdHocSettings.ForceOptimizeForUnknownMsSql = true; This setting adds the OPTIMIZE FOR UNKNOWN optimizer hint to all SQL queries. This hint directs the query optimizer to use the standard algorithms it has always used as if no parameters values had been passed to the query. In many situations this can speed up query time.|
+|25067|Report Design|Export|Clicking on SQL export generating error when using chart with no separator.|
+|25081|API|Optimization|When using synonym with the same name as the parent object only the synonym will be available in the datasources. Before this, both synonym and parent will be shown effectively showing duplicate datasources.|
+|25103|API|Optimization|Added Setting AdHocSettings.DundasImagesPath to specify a alternate URL for obtaining Dundas Library images.|
+|25129|Report Design|Optimization|Adding ability to use comma character in view/table/column name.|
+|25179|Scheduler|Optimization|Scheduling dashboards as embedded in an emails shows broken images links, not the actual image for charts.|
+|25205|Report Design|Pivots|When creating a pivot using the add field button is not working when using the FireFox browser.|
+|25258|API|Optimization|Removing "Other" option for Expression Type. Removal of this will not effect reports already using this expression type but it will not be available in the dropdown list going forward.|
+|25259|API|Optimization|Made the css for tabs, dashboard-tabs, toolbar configurable in /css rather than hardcoded in rs.aspx.|
+|25292|Report Design|Joining|Adding forced left join errors without schema|
+|25297|Report Design|Filters|Use previous or not working for filters using the same field name for self joined tables.|
+|25314|Report Design|Optimization|When using field value report style, preview report. Return to the Style tab and input limit for number of items per page and preview. Causes report to return no data after page 1.|
+|25328|API|UI|Trimmed extra spaces/lines from appearing in category dropdown on the save dialog.|
+|25329|Dashboards|Optimization|Refactored Dashboard tile loading to prevent lag in browser responsiveness.|
+|25331|Report Design|Expressions|Corrected a problem which would prevent an expression with spaces from executing properly in MySQL.|
+|25333|Report Design|Visualization|Added a more explicit error condition when using World Tour visualization without proper data.|
+|25342|Report Design|Optimization|Prevented a problem which would stop fields from properly displaying when used as smart tags in a report header.|
+|25343|Report Design|Export|Error received "undefined is not an object(evaluating 'dynamicFontSizeCheckbox.prop')" when exporting calendar on HTML, PDF, Excel and Word.|
+|25350|Report Design|Expressions|Fixed a problem where expressions could not track self-joined tables such that a Table might have the Table1 alias.|
+|25356|Report Design|Charts|Adding setting to extend timeout on Chart snapshot for exporting charts. This timeout will extend the current 15 second limit to obtain image of chart prior to time out for exporting. AdHocSettings.ChartToImageTimeout = 200;|
+|25366|Report Design|UI|Corrected an error where the wrong format was being applied to the subtotal of date fields.|
+|25374|API|Optimization|When using ODATA connection and selecting equals select filter type on date field selecting date from drop down returns no results.|
+|25375|API|Optimization|Changed how keys are obtained to prevent some Postgresql errors from appearing when some joins might create duplicate keys.|
+|25377|API|Optimization|Corrected a problem which could prevent functions from being applied properly in Postgresql.|
+|25383|API|Optimization|Corrected an error which prevented expressions from being applied properly in Postgresql.|
+|25384|Dashboards|Optimization|Fixed izpid functionality on New Dashboard and New Instant Report page to prevent two different instances of Izenda on different browser tabs from sharing information when using the izpid. This feature only works with thew Instant Report page and the New Dashboard page.|
+|25390|Report Design|Optimization|Corrected problems with Virtual Datasources. 1 - Tenant Specific, one tenant should not see the Virtual Datasources of another Tenant. 2 - Report security is respected, user A will not see user B virtual datasources unless shared via proper sharing rights. 3 - Schema updates correct to ensure all virtual datasources are added.|
+|25393|API|Optimization|Error received when using @subtotal decorator when using a stored procedure param as a drill down key to call an embedded subreport in a form.|
+|25425|Report Viewer|UI|Added more explicit exception when thumbnail generation fails rather than generic object reference error.|
+|25431|API|Optimization|Prevented a crash when Izenda is trying to access a database synonym which points towards a nonexistent data source or database.|
+|25439|Report Design|Filters|Corrected logic being applied when using autocomplete filters and automatic filter AND setting.|
+|25451|Dashboards|Visualization|Corrected problem which would prevent visualizations from rendering properly in a dashboard tile if that tile is resized.|
+|25452|Dashboards|Optimization|Missing close paren on dashboard code behind file on dashboard.aspx.vb|
+|25472|Report Viewer|Saving|Prevented report guid from appearing in save dialog box instead of report name.|
+|25483|Dashboards|UI|Enhanced dashboards to support a dashboard being visible to a user when some report on that dashboard is not visible.|
+|25489|Report Design|Forms|Made it possible to use value ranges and subtotals at the same time on a form.|
+|25512|API|Optimization|Fixed some static links in the webforms starter kits which would prevent some parts of the user interface from being properly overridden.|
+|25556|Report Viewer|Visualization|Fixed error which would prevent Timeline visualization from rendering properly when using Oracle time data types.|
+|25564|Report Viewer|Filters|Corrected an error that would prevent custom popup filters from applying instead of default popup filter.|
+|25578|Dashboards|Filters|Prevented checkbox, popup, and multiple style filter operators from losing values on a dashboard after the dashboard is refreshed.|
+|25584|Dashboards|Optimization|Using Records Count on back side of dashboard tile not working. Slider disabled.|
+|25585|API|Optimization|Fixed jQuery error on Arcmap visualization that would prevent switching between different metrics, throwing a "cannot read property" error.|
+|25593|Report Viewer|Filters|Between(Calendar) filter operator could disappear after saving the report under some circumstances.|
+|25617|Report Design|Optimization|Corrected error exposing script when a subreport field with a link is used as a visual group header.|
+|25627|Dashboards|Optimization|Error received "Report Not Found" when browsing to report from Dashboard tile. When User opens a existing report (with filter) by selecting from the Dashboard, and add new filter to it. After saving the report in Report Viewer, when User refreshes the Dashboard error is displayed.|
+|25628|Dashboards|Optimization|Found incorrect spelling in Dashboard save notification "successfully" is misspelled.|
+|25642|Instant Reports|Optimization|Issue with invalid character in URL causing Instant Reports and Dashboard page.|
+
 #6.10.0.9 (August 10, 2016)
 
 |Case|Category|Subcategory|Description|
