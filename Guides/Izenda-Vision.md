@@ -8,6 +8,8 @@ Given that visualizations rely on the teamwork between the chart itself and the 
 
 In Izenda terms, a field and a column are the same thing. This documentation will refer to fields and columns interchangeably. To be precise, fields are listed from top to bottom on the Fields tab, and displayed as columns from left to right.
 
+Visualizations do not support subreports, with the exception of Auto Chart. Any subreport set up in the typical fashion on the underlying table which powers a visualization will be respected by the Auto Chart visualization.
+
 ##Field Order
 
 When creating a visualization, you must pay specific attention to the field order. This is the idea that fields, from top to bottom, can be numbered - the first field in the list is 1, the second field is 2, and so on. Likewise, the leftmost column is column 1, the column immediately to the right is column 2, and so on. This field order is critical, as visualizations demand a specific order to fields which dictates not only if they will be used, but how they will be used.
