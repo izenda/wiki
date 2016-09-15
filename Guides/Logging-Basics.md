@@ -67,6 +67,16 @@ Fatal only logs severe errors that cause crashes or program termination. Very fe
 ```
 The value here ends up being the name of the log file output. It is recommended you change the "-FATAL" part if you change your logging level. The output file will be placed in the root level of the application. 
 
+## Logging Specific Sections
+
+It is possible to log the behavior of certain areas, and ignore others. For example, if we wanted to get only the current settings variables:
+
+AdHocContext.LogActiveAreas = new List<LogArea>() { LogArea.Settings };
+
+Or, if you want to diagnose the Dash 2.0 page, then a configuration like this would be useful:
+
+AdHocContext.LogActiveAreas = new List<LogArea>() { LogArea.WebService, LogArea.ResponseServer };
+
 ##More Information
 
 For more information about logging, please visit the [log4net documentation](http://logging.apache.org/log4net/release/features.html).
