@@ -229,7 +229,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig  //Izenda.AdHo
         fusionDriver.AddConnection("OrclNW", Izenda.Fusion.FusionConnectionType.Oracle, @"http://url_to_orcl_connector.com/provider_endpoint.aspx");
                
         // Configure constraints for connections
-        fusionDriver.AddConstraint("SqlNW/Order.Id", "SqlNW/*.OrderID");
+        fusionDriver.AddConstraint("SqlNW/Orders.OrderID", "SqlNW/*.OrderID");
         fusionDriver.AddConstraint("OrclNW/Account.Id", "OrclNW/User.AccountID");
         
         //set the Driver object
