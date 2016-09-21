@@ -68,11 +68,14 @@ The overridden fields can be seen in the Fields tab on the Report Designer after
 To override this method, simply add following method to the MyCustomDriver class:
 
 ```csharp
-public override DataSet GetDataSet(IDbCommand Command)
+public override DataSet GetDataSet(IDbCommand Command, Report report, string reportPart, string uniqueID)
 {
 DataSet result;
-    result = base.GetDataSet(command); //If you want the driver to obtain DataSet and process it before returning
+    result = base.GetDataSet(command, report, reportPart, uniqueID); //If you want the driver to obtain DataSet and process it before returning
 
+    //do this only if you choose not to call the base.GetDataSet method
+    //if (!string.IsNullOrEmpty(uniqueID))
+    //    commandText = commandText.Replace(uniqueID, "");
     //result = new DataSet(); //If you want to implement your own method for obtaining a DataSet.
 
     //more processing....
@@ -86,7 +89,7 @@ You can also see more coding examples [[here|http://wiki.izenda.us/API/CodeSampl
 
 The Izenda Fusion Driver composes data sources from several connections (data providers) into a single data source. This is very similar to how [[SSAS|http://technet.microsoft.com/en-us/library/ms175609(v=sql.90).aspx]] works, but using Fusion you can aggregate data not only from MSSQL databases but from very different data sources. For example, you can get data from the [[OData|Guides/OData]] data provider (i.e. without a direct connection to the database). All you need to do is set up the data sources' connections and you will be able to work with aggregated data as a single data source.
 
-Currently, Izenda Fusion driver supports MSSQL, XML, ODATA, ORACLE, MYSQL, and PostgreSql
+Currently, Izenda Fusion driver supports MSSQL, ODATA (via our [[custom ODATA provider|Guides/OData]]), Oracle, MySQL, and PostgreSql
 
 
 ###Configuring the Izenda Fusion Driver
@@ -110,54 +113,33 @@ AdHocContext.Driver = fusionDriver;
 
 ####2. Add connections to the driver
 
-Now you can add connections to the data sources end points. The end point could be a direct connection to the MSSQL database or it can be an OData connection to the MSSQL or Oracle database.
-
-#####a) Adding a direct and indirect database connection using the Fusion Driver:
-
-You can use the standard SqlServerConnectionString to connect to your database directly and also use the FusionDriver's capabilities to connect to an indirect database connection (like OData) at the same time:
+Now you can add connections to the data sources end points. The end point could be a direct connection to the desired database or it can be an OData connection using our provider. Below is an example of multiple connections being added to a single FusionDriver.
 
 ```csharp
-AdHocSettings.SqlServerConnectionString = "my_first_connection_string";
-Izenda.Fusion.FusionDriver.AddSqlConnection("SqlNW", @"my_second_connection_string");
-Izenda.Fusion.FusionDriver.AddODataConnection("OD", @"http://...aspx");
-```
-
-#####b) Adding multiple indirect data connections. 
-
-You can use the FusionDriver to add multiple indirect database connections to your Driver's context:
-
-```csharp
-<%@ Import Namespace = "Izenda.Fusion" %>
-//Add the above to your Namespaces. Everything below should be placed within Initialize Reporting.
-
-//AdHocSettings.SqlServerConnectionString = "my_direct_connection_string";
-//Use the above for direct connections
-Izenda.Fusion.FusionDriver fd = new Izenda.Fusion.FusionDriver();
-fd.AddConnection("SqlNW", Izenda.Fusion.FusionConnectionType.MsSql, @"http://url_to_sql_connector.com/provider_endpoint.aspx");
+fd.AddConnection("SqlNW", Izenda.Fusion.FusionConnectionType.MsSql, @"YOUR_SQL_CONNECTION_STRING_HERE");
+fd.AddConnection("OracleNW", Izenda.Fusion.FusionConnectionType.Oracle, @"YOUR_ORACLE_CONNECTION_STRING_HERE");
 fd.AddConnection("OD", Izenda.Fusion.FusionConnectionType.OData, @"http://url_to_odata_connector.com/provider_endpoint.aspx");
 fd.AddConnection("OD2", Izenda.Fusion.FusionConnectionType.OData, @"http://url_to_odata_2_connector.com/provider_endpoint.aspx");
 AdHocContext.Driver = fd;
 ```
 
-####3. Set up additional settings
+####3. Using VisibleDataSources and Constraints with Fusion
 
-The Izenda Fusion Driver has several additional settings:
+Two settings that function differently when using a FusionDriver are the VisibleDataSources and DatabaseSchema custom Constraints. Additional considerations need to be taken into account when using these settings.
 
 #####a) VisibleDataSources 
 
-When using a FusionConnection with indirect database connections such as OData, the setup for VisibleDataSources is a little bit different. You will see an example below of setting up VisibleDataSources with indirect connections.
+When using a FusionConnection with VisibleDataSources, it is necessary to specify which database your datasource is from using the alias provided for the specific connection when it was added to the FusionDriver.
 
 ```csharp
-AdHocSettings.VisibleDataSources = new string[] { "Orders", "Customers", "Order Details" };
-
-fusionDriver.FixVisibleDataSources();
+AdHocSettings.VisibleDataSources = new string[] { "SqlNW/Orders", "OracleNW/Customers", "OD/Order Details", "OD2/Products" };
 ```
 
-_**Note:** This does NOT apply to direct database connections. However, calling FixVisibleDataSources with direct database connections will not have any adverse effects on your VisibleDataSources._
+_**Note:** The only exception is when your connection uses a blank alias. Any tables in the VDS collection with no alias will be presumed as coming from the FusionConnection with the blank alias. If no such connection exists, then the datasource will not be available._
 
 #####b) Constraints
 
-This is setup the same as for a single connection except that you are able to specify separate constraints for each connection by using connection aliases. Note that you can use wildcard characters to set up constraints:
+Similarly to how the VDS collection works, constraints must use the alias of the database to which the datasource belongs. Joining across different connections is also a possibility, but will require additional considerations discussed [[below|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#4.-Joining-datasources-from-different-databases]]
 
 **Example 1:** Static context
 
@@ -191,6 +173,23 @@ You can configure the cache yourself by using the following properties and metho
 * **DataCacheExpiration:** Sets the date for cache expiration. All data in the cache older than the specified date will be cleared (removed from the cache). For example, if you want to clear all data more than two days old, you should set: ``AdHocSettings.DataCacheExpiration = DateTime.Now.AddDays(-2);``
 * **CacheReports method:** Indicates that all reports should or should not be cached (enabled by default in later versions of Izenda): ``AdHocSettings.CacheReports = true;``
 * **DataCache Interval:** Sets the number of seconds between cache refreshes. Example: ``AdHocSettings.DataCacheInterval = 60 * 24 * 30;``
+
+####4. Joining datasources from different databases
+
+Using our Fusion Driver, it is possible to join datasources from different databases. This does require additional considerations when setting up the driver and adding connections. In order to implement this ability, the connections must adhere to the following conditions:
+
+* One connection MUST be given a blank alias. This connection will be used as the "default" connection through which queries will be routed.
+* The default connection cannot be an ODATA connection.
+* The default connection MUST use the same database as the type of FusionDriver being instantiated. The FusionDriver class is a MSSQL driver. Additionally there are the FusionDriverMySql, FusionDriverOracle, and FusionDriverPostgreSQL classes for the other supported database architectures. (e.g. if your default connection is using the FusionConnectionType of Oracle, your FusionDriver would need to be an instance of FusionDriverOracle)
+
+Below is an example of what a FusionDriver setup might look like that supports cross-database joining.
+
+```csharp
+Izenda.Fusion.FusionDriverOracle myOracleFD = new Izenda.Fusion.FusionDriverOracle();
+myOracleFD.AddConnection("", Izenda.Fusion.FusionConnectionType.Oracle, @"YOUR_ORACLE_CONNECTION_STRING_HERE");
+myOracleFD.AddConnection("SQLDB", Izenda.Fusion.FusionConnectionType.MSSQL, @"YOUR_MSSQL_CONNECTION_STRING_HERE");
+AdHocContext.Driver = myOracleFD;
+```
 
 ###Sample use
 
