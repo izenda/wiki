@@ -188,7 +188,9 @@ Below is an example of what a FusionDriver setup might look like that supports c
 Izenda.Fusion.FusionDriverOracle myOracleFD = new Izenda.Fusion.FusionDriverOracle();
 myOracleFD.AddConnection("", Izenda.Fusion.FusionConnectionType.Oracle, @"YOUR_ORACLE_CONNECTION_STRING_HERE");
 myOracleFD.AddConnection("SQLDB", Izenda.Fusion.FusionConnectionType.MSSQL, @"YOUR_MSSQL_CONNECTION_STRING_HERE");
+fd.AddConstraint("Orders", "SQLDB/Order Details");
 AdHocContext.Driver = myOracleFD;
+AdHocSettings.VisibleDataSources = new string[] {"Orders", "SQLDB/Order Details"};
 ```
 
 ###Sample use
