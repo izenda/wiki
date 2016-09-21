@@ -245,7 +245,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig  //Izenda.AdHo
         ((DatabaseAdHocConfig)AdHocSettings.AdHocConfig).SavedReportsDriver = new MSSQLDriver(@"your_mssql_direct_database_connection_string");
 
         // Add visible data sources
-        AdHocSettings.VisibleDataSources = new string[] { "SqlNW/Orders", "OracleNW/Customers", "SqlNW/Order Details", "OracleNW/User", "OracleNW/Account" };  
+        AdHocSettings.VisibleDataSources = new string[] { "SqlNW/Orders", "SqlNW/Customers", "SqlNW/Order Details", "OracleNW/User", "OracleNW/Account" };  
     }
 }
 </script>
