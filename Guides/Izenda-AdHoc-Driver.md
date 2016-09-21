@@ -225,8 +225,8 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig  //Izenda.AdHo
         Izenda.Fusion.FusionDriver fusionDriver = new Izenda.Fusion.FusionDriver();
         
         //Initialize the connections on the driver
-        fusionDriver.AddConnection("SqlNW", Izenda.Fusion.FusionConnectionType.MsSql, @"http://url_to_sql_connector.com/provider_endpoint.aspx");
-        fusionDriver.AddConnection("OrclNW", Izenda.Fusion.FusionConnectionType.Oracle, @"http://url_to_orcl_connector.com/provider_endpoint.aspx");
+        fusionDriver.AddConnection("SqlNW", Izenda.Fusion.FusionConnectionType.MsSql, @"YOUR_SQL_CONNECTION_STRING");
+        fusionDriver.AddConnection("OrclNW", Izenda.Fusion.FusionConnectionType.Oracle, @"YOUR_ORACLE_CONNECTION_STRING");
                
         // Configure constraints for connections
         fusionDriver.AddConstraint("SqlNW/Orders.OrderID", "SqlNW/*.OrderID");
