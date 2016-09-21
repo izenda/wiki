@@ -7,15 +7,16 @@
 Izenda reports is designed as a modular system to be easily customizable for usage with any datasources. The ``AdHocContext`` class has a **Driver** property containing an instance of the ``Izenda.AdHoc.Database.Driver`` abstract class, which provides datasource metadata for Izenda AdHoc. All datasource drivers in Izenda AdHoc use this as their base class and layer functionality on top of it.
 
 ![Creating a Custom Driver](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver.png)
+
 **Figure 1:** The standard Izenda Driver model. Datasources are separate and the driver handles the heavy lifting of interacting with the datasources.
 
 ###Customizing the Izenda AdHoc Driver
 
 The ``Izenda.AdHoc.Database.MSSQLDriver`` class implements complete functionality for using MSSQL server as your datasource and also allows you to create inheritors. So the easiest way to create a custom driver working with MSSQL server is to inherit ``Izenda.AdHoc.Database.MSSQLDriver`` and override the functionality you need to work differently. Below are complete instructions detailing how to perform this:
 
-1. Create new project with type of Class library in Visual Studio.![Creating a Custom Driver](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver_2.png)
+1. Create new project with type of Class library in Visual Studio.<br>![Creating a Custom Driver](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver_2.png)
 
-2. Add Izenda.AdHoc.dll to the References in the project.![Adding Izenda AdHoc as a Reference](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver_3_2.png)
+2. Add Izenda.AdHoc.dll to the References in the project.<br>![Adding Izenda AdHoc as a Reference](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver_3_2.png)
 
 3. Create new class and inherit MSSQLDriver:
 ```csharp
@@ -28,8 +29,7 @@ namespace CustomDriver
 }
 ```
 4. Now any metadata drilling functionality can be altered. Here we will implement overriding of two most important methods, assuming that we have a single custom source of data. For our example, we will assume the table **Products** exists with three fields: **Id**, **Name**, and **Price**:
-    
-a) ``GetAllTables()`` returns an array of ``Izenda.AdHoc.Database.Table`` which will be available in the DataSources tab in the ReportDesigner as a list of datasources. Here is a short example of overriding this method:
+  1. ``GetAllTables()`` returns an array of ``Izenda.AdHoc.Database.Table`` which will be available in the DataSources tab in the ReportDesigner as a list of datasources. Here is a short example of overriding this method:
 ```csharp
 public override Table[] GetAllTables()
 {
@@ -38,9 +38,7 @@ public override Table[] GetAllTables()
     return result;
 }
 ```
-
-b) GetColumns returns an array of Izenda.AdHoc.Database.Column for the given table. This array is used as fields list at several tabs in the ReportDesigner. Again, short example of overriding this method:
-
+  2. GetColumns returns an array of Izenda.AdHoc.Database.Column for the given table. This array is used as fields list at several tabs in the ReportDesigner. Again, short example of overriding this method:
 ```csharp
 public override Column[] GetColumns(Table table)
 {
@@ -55,19 +53,14 @@ public override Column[] GetColumns(Table table)
     }
 }
 ```
-
 The overridden fields can be seen in the Fields tab on the Report Designer after selecting the DataSource "Products" at the DataSources tab.
 
 5. Include a reference to your ``CustomDriver`` to your website. To perform this, the following steps should be taken:
-
-a) Compile your ``CustomDriver`` project and copy the assembly to your website's /bin folder, and add the reference just like above.
-
-b) Set ``AdHocContext.Driver = new CustomDriver`` in the ``Session_Start()`` or ``Application_Start()`` method.
+  1. Compile your ``CustomDriver`` project and copy the assembly to your website's /bin folder, and add the reference just like above.
+  2. Set ``AdHocContext.Driver = new CustomDriver`` in the ``Session_Start()`` or ``Application_Start()`` method.
 
 6. You must also override some other methods like ``GetDataSet()``. This method accepts a ``System.Data.IDBCommand`` parameter, and returns the corresponding DataSet. Overriding this method allows you to pre-process the dataset before returning it. You may use ``AdHocContext.CurrentReportSet`` to get additional details of the report. For integrations that will not utilize SQL queries in the command object, ``Izenda.AdHoc.AdHocContext.CurrentReportSet`` may be used to get the report state.
-
 To override this method, simply add following method to the MyCustomDriver class:
-
 ```csharp
 public override DataSet GetDataSet(IDbCommand Command, Report report, string reportPart, string uniqueID)
 {
