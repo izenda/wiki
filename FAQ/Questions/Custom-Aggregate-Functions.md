@@ -15,7 +15,7 @@ Yes, you can use as many custom aggregate functions as you like. Within the AdHo
 The SimpleAggregateFunction class in the AdHoc namespace has multiple overloads that allow for various implicitly named aggregate functions. The parameters are as follows:
 
 * **Overload 1**:
-  * **Function** - This is the SQL that will perform your custom aggregation function. This can get applied to a SELECTed field or to a field in the GROUP BY clause. Specifying a formatting parameter of "{0}" in your SQL string will tell Izenda to use the Inner Query text as a parameter.
+  * **Function** - This is the name of the aggregate function to use. This can get applied to a SELECTed field or to a field in the GROUP BY clause. The corresponding database function must only take a single parameter to operate correctly.
 * **Overload 2**:
   * **Function** - As above.
   * **Caption** - This is the text that will appear in the function dropdown menu on the [[Fields tab|http://wiki.izenda.us/Guides/ReportDesign/4.0-fields-tab]].
@@ -41,12 +41,12 @@ The SimpleAggregateFunction class in the AdHoc namespace has multiple overloads 
 And below is what the resulting function could look like.
 
 ```csharp
-    AdHocSettings.AggregateFunctions["Group By Fiscal Year"] = new SimpleAggregateFunction("DATEPART(yyyy, DATEADD(mm, 3, {0}))", "Group (Fiscal Year)", new SqlTypeGroup[] { SqlTypeGroup.Date, SqlTypeGroup.DateTime }, true, true);
+    AdHocSettings.AggregateFunctions["Group By Absolute Value"] = new SimpleAggregateFunction("ABS", "Group (Absolute Value)", new SqlTypeGroup[] { SqlTypeGroup.Numeric, SqlTypeGroup.Real }, true, true);
 ```
 
 ###Method 2: New class
 
-You may introduce your own custom class to contain your aggregate function. This class simply inherits the IAggregateFunction interface, overriding each of the interface's methods. See the example below for what this could look like.
+You may introduce your own custom class to contain your aggregate function. A custom class is useful for when you are using more complex expressions that require specific conditional formatting of the parameters. This class simply inherits the IAggregateFunction interface, overriding each of the interface's methods. See the example below for what this could look like.
 
 ```csharp
 public class GroupByFiscalYearFunction : IAggregateFunction {
