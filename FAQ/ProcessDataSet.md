@@ -143,3 +143,30 @@ Private Function GetLocalTime(utcTime As DateTime) As DateTime
 	Return utcTime.AddMinutes(DirectCast(HttpContext.Current.Session("IZR_TimeZone"), Integer))
 End Function
 ```
+
+##Example: Fetching a Column Used in a Report
+
+Reports (report parts) can be referenced using the ReportSet.Reports collection. Here is a list of report parts:
+- Detail
+- Summary
+- Chart (Chart2, Chart3, Chart4, Chart5)
+- Gauges
+- Map
+
+``` csharp
+
+public override void ProcessDataSet(DataSet ds, string reportPart)
+{
+    string columnToDecrypt = "[dbo].[Orders].[CustomerID]";
+    if (reportPart == "Gauges" && ds != null && ds.Tables.Count > 0)
+    {
+        ReportSet crs = AdHocContext.CurrentReportSet;
+        if (crs != null && crs.Reports.Contains("Gauges") && crs.Reports["Gauges"] != null && crs.Reports["Gauges"].Fields[0].ColumnName == columnToDecrypt)
+        {
+            // Decrypt ds.Tables[0].Columns[0]
+            // ...
+        }
+    }
+}
+
+```
