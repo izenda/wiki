@@ -1,4 +1,5 @@
-#AggregateFunctions
+We are currently updating this page. Please bear with us as we make these changes.
+<!-- #AggregateFunctions
 
 [[_TOC_]]
 
@@ -54,3 +55,4 @@ End Class
 **The Group By Fiscal Year Function**
 
 ![](/API/CodeSamples/AggregateFunctions/group_by_fiscal_year.png)
+-->
