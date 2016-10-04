@@ -1,5 +1,58 @@
 [[_TOC_]]
 
+<!--
+
+# 6.10.0.11 (October 4, 2016)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|24692|Report Design|Export|When using Bulk CSV export receiving errors when exporting pivoted data with large column headers. Additional issue with parameters when using Oracle with Bulk CSV.|
+|24948|Report Design|Export|Adding Setting for exporting Grids to set number of columns per page on printed export.|
+|25173|Database|Oracle|Issue when using Oracle, COLLATE database_default which is added to query is not compatible with Oracle. Removing from Oracle queries.|
+|25220|API|Angular|Updates to URLs for integrating with Angular2 applications. angular url: http://..../path/to/page/page.aspx#/angular/path angular2 url: http://..../path/to/page/page.aspx/angular/path|
+|25350|Report Design|Expressions|Fixed a problem where expressions could not track self-joined tables such that a Table might have the Table1 alias.|
+|25360|Database|General|Changing query to database for schema data to always include VisibleDatasource to avoid pulling items not required for use in Izenda application.|
+|25385|Report Design|Maps|Added support for unzipped version of map data. These resources will need to be downloaded from the Github repo located here: https://github.com/izenda/GeoData to use the unzipped version.|
+|25387|Report Design|Instant Reports|Resolved issue with moving from New Instant Report page to Report Designer Page. Designer page loaded, but there were no fields selected.|
+|25411|User Interface|Instant Reports|Fixed '\' category character for new IR page. Causing error when loading report to be uncategorized.|
+|25418|User Interface|Report Designer|Issue resolved missing edit button on custom html page introduced by Case 23465, resolved.|
+|25441|Report Design|Dashboards|Subreports contained in Forms are not loading when using in Dashboard.|
+|25454|Report Design|Dashboards|Error when drilling down in chart with unsaved report/dashboard when using automatic as drilldown report.|
+|25467|Report Design|Forms|Fixed bug in base64 encoding in JS which led to the inability to save a form with special symbols.|
+|25473|Report Design|Export|Using Safari, export to Excel is missing from the Report Desinger.|
+|25547|API|Settings|Adding AdHocSetting to remove N' from filter values. AdHocSettings.OmitUnicodeFlagForCharParameters = true;|
+|25550|Report Design|Export|Fixed arithmetic calculated fields not being properly formatted when exported to Excel.|
+|25597|Database|General|Fixed a bug which prevented fields on the second data source of an outer left join from being used properly as a filter.|
+|25603|Report Design|Export|Prevented currency format from causing an invalid string error when used in a chart.|
+|25618|Report Design|Dashboards|Prevented dashboard tiles from rendering improperly in presentation mode.|
+|25619|Report Design|Export|Corrected the days old format such that it will properly export to Excel.|
+|25622|Report Design|Filters|Error found when subreport inherits master report filters, filters on fields with expressions should not be passed to the subreport.|
+|25636|Report Design|Visualization|When using calendar visualization and there are multiple items on one date there is a "+" to view multiple items. When clicking this item there only two items are displayed even when there are more items.|
+|25637|API|User Interface|Cleaned up and minimized the number of Ajax requests in the Izenda UI.|
+|25638|Database|General|Issue found which appears when you specify a column in the format "schema.table.column", this was found internally and not a reported issue.|
+|25648|Report Design|Visualization|Three dots ( . . . ) are displayed instead of the event name in Calendar visualization. Also, found issue with event colors based on the value.|
+|25649|Database|General|Unable to use the auto assigned alias of <TableName2> when creating expressions using multiple instances of one table. System throws error that the field being used is unknown.|
+|25652|Report Design|Filters|Corrected date filters to assume a recent date rather than the earliest date in the data set.|
+|25682|User Interface|Instant Reports|Error when navigating from Instant Report to the Report Designer using the edit (pencil) icon.|
+|25697|User Interface|Dashboards|When resizing tiles in dashboard and presentation mode receiving error "Uncaught TypeError: Cannot read property 'offsetWidth' of null".|
+|25698|User Interface|Dashboards|Scroll appears in dashboards tile when it is not needed.|
+|25723|Report Design|Visualization|After creating report with a visualization that allows you to select a metric (AutoChart, for example) if you select a specific metric in the drop-down metric list (not the "All" pseudo metric). Save the report and then change description of metric field. This will break the visualization.|
+|25733|User Interface|Report Designer|Resolved all <button> element without type attribute specified. The default "type" value could be different for different browsers. Fixed all <button> elements without type.|
+|25736|Report Design|Export|Issue found with IExcelFormatter and exporting some dates. Showing as decimal not date format.|
+|25737|Report Design|Filters|Disabled field comparison for stored procedure parameters.|
+|25741|Backend|Config|Removing unnecessary initialization changes during license key check.|
+|25749|Report Design|Subreports|Subreport does not pop up and does not display on Map after the user saved the report.|
+|25753|Report Design|Instant Reports|In New Instant Reports if you design a report with the Isn't Blank operator and save it, it will carry through the same operator into the Report Viewer. However if you edit that report after viewing it, the Isn't Blank operator will turn into a Blank operator.|
+|25754|Report Design|Dashboards|Subreport won't display while report was on the full screen mode on dashboard.|
+|25761|Report Design|Export|Removed extra lines and carriage return from bottom of .csv exports.|
+|25788|User Interface|Dashboards|Error in dashboard scheduler changing scheduled time from 12 hour format to 24 hour format causing the wrong scheduled time to be saved.|
+|25803|User Interface|Instant Reports|Using AdHocSettings.AllowCreateNewCategory = false, the New Instant Report Page is showing category option and allowing creation.|
+|25851|Report Design|Report Designer|When there are no reports in the Izenda sysetm javascript error occurs on the report list page so the corresponding message is not displayed and the redirection to the designer is not occuring.|
+|25884|Report Design|Dashboards|Report becomes Blank on presentation mode when Exported Report(HTML) was opened on dashboard.|
+|25885|Report Design|Visualization|When adding a subreport to a visualization the linking field on the axis becomes unformatted.|
+
+--->
+
 # 6.10.0.10 (September 7, 2016)
 
 |Case|Category|Subcategory|Description|
