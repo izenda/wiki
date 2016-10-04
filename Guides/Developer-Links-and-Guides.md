@@ -73,3 +73,4 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[How do I use alternate filter values with stored procedure parameters versus what I display to the user?|http://wiki.izenda.us/FAQ/Questions/using-alternate-filter-values-with-stored-procedures]]
 * [[Creating a custom RS.aspx response|/FAQ/Questions/custom-rs-response]]
 * [[Izenda settings and setting scope|/Guides/izenda-setting-scope]]
+* [[Using the izpid URL parameter to segregate user sessions on the same machine|/Guides/Developers/using-the-izpid-parameter]]
