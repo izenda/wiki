@@ -1,7 +1,5 @@
 [[_TOC_]]
 
-<!--
-
 # 6.10.0.11 (October 4, 2016)
 
 |Case|Category|Subcategory|Description|
@@ -51,7 +49,6 @@
 |25884|Report Design|Dashboards|Report becomes Blank on presentation mode when Exported Report(HTML) was opened on dashboard.|
 |25885|Report Design|Visualization|When adding a subreport to a visualization the linking field on the axis becomes unformatted.|
 |25909|Report Design|Export|Fixed error where the text "[object]" would appear in HTML export instead of certain report parts.|
---->
 
 # 6.10.0.10 (September 7, 2016)
 
