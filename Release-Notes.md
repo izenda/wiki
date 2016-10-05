@@ -50,7 +50,7 @@
 |25851|Report Design|Report Designer|When there are no reports in the Izenda sysetm javascript error occurs on the report list page so the corresponding message is not displayed and the redirection to the designer is not occuring.|
 |25884|Report Design|Dashboards|Report becomes Blank on presentation mode when Exported Report(HTML) was opened on dashboard.|
 |25885|Report Design|Visualization|When adding a subreport to a visualization the linking field on the axis becomes unformatted.|
-
+|25909|Report Design|Export|Fixed error where the text "[object]" would appear in HTML export instead of certain report parts.|
 --->
 
 # 6.10.0.10 (September 7, 2016)
