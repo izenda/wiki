@@ -45,6 +45,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[How can I set default report designer options for my users?|/FAQ/Questions/setting-defaults-for-report-designer]]
 * [[Adding line breaks into long string values|/Guides/How-do-I-add-a-line-break-inside-of-a-block-of-text-in-my-database]]
 * [[Re-using the same filter values for multiple filters (Stored procedure parameters)|/FAQ/Questions/reusing-filter-values-for-stored-procedures]]
+* [[Using the izpid URL parameter to segregate user sessions on the same machine|/Guides/Developers/using-the-izpid-parameter]]
 
 ###Javascript Guides
 
@@ -73,4 +74,3 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[How do I use alternate filter values with stored procedure parameters versus what I display to the user?|http://wiki.izenda.us/FAQ/Questions/using-alternate-filter-values-with-stored-procedures]]
 * [[Creating a custom RS.aspx response|/FAQ/Questions/custom-rs-response]]
 * [[Izenda settings and setting scope|/Guides/izenda-setting-scope]]
-* [[Using the izpid URL parameter to segregate user sessions on the same machine|/Guides/Developers/using-the-izpid-parameter]]
