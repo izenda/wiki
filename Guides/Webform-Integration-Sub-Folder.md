@@ -1,7 +1,5 @@
 #Izenda Webforms Integration Guide (Sub-directory)
 
-**UNDER CONSTRUCTION**
-<!--
 [[_TOC_]]
 
 ##About
@@ -13,6 +11,8 @@ This guide is designed to instruct first-time users how to integrate Izenda Webf
 [Host Website download link](http://archives.izenda.us/ri/webforms/Integration_Demo.zip)
 
 Reference: [Integrating Izenda into a Web Application](http://wiki.izenda.us/Guides/Integrating-Izenda)
+
+**PLEASE NOTE**: This guide is not universal, nor does it describe a complete integration. There are many nuanced elements of an integration, including, but not limited to, Visual Studio versions, existing code in your application(s), and server environments. This guide is intended to be a starting point in integrating Izenda, with the understanding that some deviations will likely be necessary.
 
 ##Instructions
 
@@ -503,7 +503,15 @@ AdHocSettings.SqlServerConnectionString = @"INSERT_CONNECTION_STRING_HERE";
 
 ![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/7.png)
 
+##Potential Conflicts
 
--->
+###Bootstrap
+
+If you use your own implementation of Bootstrap, you may encounter conflicts with Izenda's implementation in integration.  The easiest way to resolve this issue is to namespace all of Izenda's Bootstrap classes, using a CSS pre-processor such as SASS or LESS.
+
+Please see our [Bootstrap Namespacing Guide](http://wiki.izenda.us/FAQ/bootstrap-namespacing) for more info. 
+
+
+
 
  
