@@ -10,7 +10,7 @@
 |25220|API|Angular|Updates to URLs for integrating with Angular2 applications. angular url: http://..../path/to/page/page.aspx#/angular/path angular2 url: http://..../path/to/page/page.aspx/angular/path|
 |25350|Report Design|Expressions|Fixed a problem where expressions could not track self-joined tables such that a Table might have the Table1 alias.|
 |25360|Database|General|Changing query to database for schema data to always include VisibleDatasource to avoid pulling items not required for use in Izenda application.|
-|25385|Report Design|Maps|Added support for unzipped version of map data. These resources will need to be downloaded from the Github repo located here: https://github.com/izenda/GeoData to use the unzipped version.|
+|25385|Report Design|Maps|Added support for unzipped version of map data. Due to security concerns this file (geoataalt.zip) can be unzipped in your implementation and used unzipped.|
 |25387|Report Design|Instant Reports|Resolved issue with moving from New Instant Report page to Report Designer Page. Designer page loaded, but there were no fields selected.|
 |25411|User Interface|Instant Reports|Fixed '\' category character for new IR page. Causing error when loading report to be uncategorized.|
 |25418|User Interface|Report Designer|Issue resolved missing edit button on custom html page introduced by Case 23465, resolved.|
