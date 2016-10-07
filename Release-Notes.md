@@ -35,7 +35,7 @@
 |25697|User Interface|Dashboards|When resizing tiles in dashboard and presentation mode receiving error "Uncaught TypeError: Cannot read property 'offsetWidth' of null".|
 |25698|User Interface|Dashboards|Scroll appears in dashboards tile when it is not needed.|
 |25723|Report Design|Visualization|After creating report with a visualization that allows you to select a metric (AutoChart, for example) if you select a specific metric in the drop-down metric list (not the "All" pseudo metric). Save the report and then change description of metric field. This will break the visualization.|
-|25733|User Interface|Report Designer|Resolved all <button> element without type attribute specified. The default "type" value could be different for different browsers. Fixed all <button> elements without type.|
+|25733|User Interface|Report Designer|Resolved all button elements without type attribute specified. The default "type" value could be different for different browsers. Fixed all button elements without type.|
 |25736|Report Design|Export|Issue found with IExcelFormatter and exporting some dates. Showing as decimal not date format.|
 |25737|Report Design|Filters|Disabled field comparison for stored procedure parameters.|
 |25741|Backend|Config|Removing unnecessary initialization changes during license key check.|
