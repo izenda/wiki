@@ -447,7 +447,7 @@ Place the copied code between < hr / > and < footer >
 
 **d.**
 
-If the code copied to site.master at step 7a was placed inside the <form> tag in the site.master, then <form></form> tags should be removed from the following izenda pages:
+If the code copied to site.master at step 7a was placed inside the form tag in the site.master, then the form and /form tags should be removed from the following Izenda pages:
 
 -DashboardDesigner.aspx
 -DashboardViewer.aspx
