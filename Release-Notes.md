@@ -4,8 +4,8 @@
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
-|HF 25952|Report Design|Dashboards|Fixed "refresh tile" button visibility. *(Oct. 10, 2016)*|
-|HF 25959|Database|MySQL|Fixed missing filter on Date/Time columns in ODBC drivers. *(Oct. 10, 2016)*|
+|HF 25952|Report Design|Dashboards|Fixed "refresh tile" button visibility. **(Oct. 10, 2016)**|
+|HF 25959|Database|MySQL|Fixed missing filter on Date/Time columns in ODBC drivers. **(Oct. 10, 2016)**|
 |24692|Report Design|Export|When using Bulk CSV export receiving errors when exporting pivoted data with large column headers. Additional issue with parameters when using Oracle with Bulk CSV.|
 |24948|Report Design|Export|Adding Setting for exporting Grids to set number of columns per page on printed export.|
 |25173|Database|Oracle|Issue when using Oracle, COLLATE database_default which is added to query is not compatible with Oracle. Removing from Oracle queries.|
