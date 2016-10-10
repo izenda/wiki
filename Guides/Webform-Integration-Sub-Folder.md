@@ -228,7 +228,7 @@ href="Resources/...."   and change them to href="Izenda/Resources/...."
 <!-- The below code hides Izenda from the main page -->
 
  <script type="text/javascript">
-     $(document).ready(function HideHeader() {
+     jq$(document).ready(function HideHeader() {
        if (window.location.href.indexOf('Izenda') === -1) { 
          document.getElementById('whiteHeader').style.display = 'none';
          document.getElementById('blueHeader').style.display = 'none';
@@ -444,6 +444,15 @@ Place the copied code between < hr / > and < footer >
 
 
 ```
+
+**d.**
+
+If the code copied to site.master at step 7a was placed inside the <form> tag in the site.master, then <form></form> tags should be removed from the following izenda pages:
+
+-DashboardDesigner.aspx
+-DashboardViewer.aspx
+-ReportDesigner.aspx
+-Settings.aspx
 
 
 ###Step 8. Change MasterPageFile="~/Default.master" to MasterPageFile="~/Site.master"
