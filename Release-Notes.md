@@ -175,7 +175,7 @@
 |24517|Report Design|Culture|Corrected an error that could occur in Excel exports. When culture is switched in Excel, this would sometimes cause Izenda-generated exports to fail to properly match the data type of a field and apply correct formatting.|
 |24532|Report Design|Maps|Changed Map legend rendering to prevent long label strings from overlapping the map itself.|
 |24539|Report Design|Visualization|Corrected a problem where embedded subreports could break visualizations when they are rendered for export.|
-|24551|Report Design|Visualization|Enabled use of Records box on visualizations independent of number of records in underlying query.|
+|24551|Report Design|Visualization|Disabled use of Records box on visualizations. This record limit is based on the grid it is built from.|
 |24590|User Interface|Controls|You can now add a column to your report in Instant Reports by clicking the checkbox or the column name in the Data Sources view.|
 |24592|User Interface|Controls|When Save dialog is opened, cursor is automatically dropped into the Report Name box rather than requiring user to click in the box.|
 |24595|Report Design|Visualization|Implemented the ability to use a Custom URL field with calendar Visualization.|
