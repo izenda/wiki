@@ -11,18 +11,20 @@ _**Note:** For more on caching in Izenda, please see the [[UseCachedFilteredList
 ##Global.asax (C♯)
 
 ```csharp
-public override ReportInfo[] FilteredListReports() {
-      ReportInfo[] reports = ListReports();
-      ArrayList result = new ArrayList();
-      foreach (ReportInfo info in reports) {
+public override ReportInfo[] FilteredListReports()
+{
+    ReportInfo[] reports = ListReports();
+    ArrayList result = new ArrayList();
+    foreach (ReportInfo info in reports)
+    {
         if (info.Category == "Hidden reports")
-          continue;
+            continue;
         ReportSet reportSet = LoadFilteredReportSet(info.Name);
         if (reportSet != null && reportSet.CanBeLoaded)
-          result.Add(info);
-      }
-      return (ReportInfo[])result.ToArray(typeof(ReportInfo));
+            result.Add(info);
     }
+    return (ReportInfo[])result.ToArray(typeof(ReportInfo));
+}
 ```
 
 ##Global.asax (VB.NET)
