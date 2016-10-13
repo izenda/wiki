@@ -1,5 +1,8 @@
 #Izenda Webforms Integration Guide (Sub-directory)
 
+**UNDER CONSTRUCTION**
+<!--
+
 [[_TOC_]]
 
 ##About
@@ -519,6 +522,8 @@ AdHocSettings.SqlServerConnectionString = @"INSERT_CONNECTION_STRING_HERE";
 If you use your own implementation of Bootstrap, you may encounter conflicts with Izenda's implementation in integration.  The easiest way to resolve this issue is to namespace all of Izenda's Bootstrap classes, using a CSS pre-processor such as SASS or LESS.
 
 Please see our [Bootstrap Namespacing Guide](http://wiki.izenda.us/FAQ/bootstrap-namespacing) for more info. 
+
+-->
 
 
 
