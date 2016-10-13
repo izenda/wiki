@@ -4,7 +4,7 @@
 
 ##About
 
-This method returns a list of reports that are guaranteed to be available to the current user, taking into account all [[hidden filters|http://wiki.izenda.us/FAQ/applying-hidden-filter-using-inner-query]] and settings. This method can be overridden in your [[CustomAdHocConfig|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]] class as needed. Here is a sample of what an overridden implementation could look like.
+This method is used on the dashboards page and returns a list of reports that are guaranteed to be available to the current user, taking into account all [[hidden filters|http://wiki.izenda.us/FAQ/applying-hidden-filter-using-inner-query]] and settings. This method can be overridden in your [[CustomAdHocConfig|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]] class as needed. Here is a sample of what an overridden implementation could look like.
 
 _**Note:** For more on caching in Izenda, please see the [[UseCachedFilteredLists|/API/CodeSamples/UseCachedFilteredLists]] setting._
 
@@ -39,3 +39,7 @@ Public Overrides Function FilteredListReports() As ReportInfo()
       Return DirectCast(result.ToArray(GetType(ReportInfo)), ReportInfo())
 End Function
 ```
+
+##See Also
+
+* [[FilteredListReportsDictionary|FAQ/FilteredListReportsDictionary]]
