@@ -4,6 +4,7 @@
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
+|HF 26010|Report Design|Dashboards|Resolved Issue found where filter logic is not applied to report parts used in dashboard. **(Oct. 14, 2016)***
 |HF 25952|Report Design|Dashboards|Fixed "refresh tile" button visibility. **(Oct. 10, 2016)**|
 |HF 25959|Database|MySQL|Fixed missing filter on Date/Time columns in ODBC drivers. **(Oct. 10, 2016)**|
 |24692|Report Design|Export|When using Bulk CSV export receiving errors when exporting pivoted data with large column headers. Additional issue with parameters when using Oracle with Bulk CSV.|
