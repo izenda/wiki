@@ -7,6 +7,7 @@
 |HF 26010|Report Design|Dashboards|Resolved Issue found where filter logic is not applied to report parts used in dashboard. **(Oct. 14, 2016)***
 |HF 25952|Report Design|Dashboards|Fixed "refresh tile" button visibility. **(Oct. 10, 2016)**|
 |HF 25959|Database|MySQL|Fixed missing filter on Date/Time columns in ODBC drivers. **(Oct. 10, 2016)**|
+|25441|Report Design|Dashboards|Subreports contained in Forms are not loading when using in Dashboard. **This change required moving Filters on Dashboards from ReportSet.Reports.Filters to ReportSet.Filters please note this will change behavior of any overrides used in areas like PreExecteReportSet**|
 |24692|Report Design|Export|When using Bulk CSV export receiving errors when exporting pivoted data with large column headers. Additional issue with parameters when using Oracle with Bulk CSV.|
 |24948|Report Design|Export|Adding Setting for exporting Grids to set number of columns per page on printed export.|
 |25173|Database|Oracle|Issue when using Oracle, COLLATE database_default which is added to query is not compatible with Oracle. Removing from Oracle queries.|
@@ -17,7 +18,6 @@
 |25387|Report Design|Instant Reports|Resolved issue with moving from New Instant Report page to Report Designer Page. Designer page loaded, but there were no fields selected.|
 |25411|User Interface|Instant Reports|Fixed '\' category character for new IR page. Causing error when loading report to be uncategorized.|
 |25418|User Interface|Report Designer|Issue resolved missing edit button on custom html page introduced by Case 23465, resolved.|
-|25441|Report Design|Dashboards|Subreports contained in Forms are not loading when using in Dashboard.|
 |25454|Report Design|Dashboards|Error when drilling down in chart with unsaved report/dashboard when using automatic as drilldown report.|
 |25467|Report Design|Forms|Fixed bug in base64 encoding in JS which led to the inability to save a form with special symbols.|
 |25473|Report Design|Export|Using Safari, export to Excel is missing from the Report Desinger.|
