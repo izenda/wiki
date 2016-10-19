@@ -27,7 +27,7 @@ foreach (string fileName in Directory.EnumerateFiles(AdHocSettings.ReportsPath))
     try
     {
         rs.ReadXml(reportXml);
-        Izenda.Controls.Html2PdfGenerator gen = new Izenda.Controls.Html2PdfGenerator();
+        Izenda.AdHoc.Html2PdfGenerator gen = new Izenda.AdHoc.Html2PdfGenerator();
         Izenda.Controls.FileContentGenerator fileGen = gen.GenerateOutput(rs) as Izenda.Controls.FileContentGenerator;
         File.WriteAllBytes(string.Format("{0}\\{1}.{2}", outputPath, fileGen.OutputFileName, gen.FileExtension), fileGen.Content);
         message = string.Format("File {0}.{1} written to {2}", fileGen.OutputFileName, gen.FileExtension, outputPath);
@@ -48,3 +48,5 @@ There are also other classes that are accessible in the same manner and that inh
 * XmlReportOutputGenerator
 * ITextSharpPdfGenerator (The Html2PdfGenerator uses EO)
 * SqlReportOutputGenerator
+
+These classes exist in the Izenda.AdHoc namespace. FileContentGenerator exist in Izenda.Controls.
