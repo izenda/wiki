@@ -6,6 +6,7 @@
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
+|25898|API|Methods|Optimized methods for rendering HTML.|
 |26140|User Interface|Dashboards|Navigation arrows missing from Dashboard when there are too many reports in a category to show them on one row.|
 |25860|Report Design|Filters|Empty value In Time Period filter causing problem when at least one filter is required is used.|
 |25687|Report Design|Printing|Corrected a problem that when a user opens a sub report to a new tab, then goes back and opens a second sub report with different filter criteria to a new tab, if the user then goes to the first sub report tab and prints to HTML, they will get the second sub report printout because of a shared session.|
