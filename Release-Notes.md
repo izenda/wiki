@@ -1,8 +1,6 @@
 [[_TOC_]]
 
-<!-- 
-
-# 6.10.0.12 (November X, 2016)
+# 6.10.0.12 (November 12, 2016)
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
@@ -46,8 +44,6 @@
 |26001|Report Design|Visualization|Fixed an exception which could occur if using a pivot in the fields tab to power a visualization. When doing this, sometimes the X axis label of the visualization woul display the literal field name rather than the alias or description.|
 |26025|API|Methods|Made the flag UseCachedFilteredLists public to allow for scenarios where reports enter the system in non-standard ways where the internal cache updating mechanisms would have no knowledge of the new reports.|
 |26125|API|Methods|When creating instant reports the DefaultVisibilityForNonAdmins and DefaultSharingRights are not added to the XML.|
-
--->
 
 # 6.10.0.11 (October 4, 2016)
 
