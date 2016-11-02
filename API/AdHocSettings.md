@@ -169,6 +169,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String[]|[[HiddenColumns|/FAQ/Izenda-API-Tip-Hidden-Columns]]| Gets or sets the array of columns that should be hidden in all field dropdowns throughout the application. |null|
 |HiddenFilterCollection|[[HiddenFilters|/API/CodeSamples/HiddenFilters]]| Gets or sets a list of fields to use as filters that users cannot see or edit. This controls row-level security throughout the tool.  This should be used in all multi-tenant systems and systems where users are restricted to certain records. |{}|
 |List|[[HiddenTimeZones|/API/CodeSamples/HiddenTimeZones]]| Gets or sets the collection of hidden time zones. **(deprecated)**|null|
+|Boolean|[[HideFiltersWhenLocked|/API/CodeSamples/HideFiltersWhenLocked]]|Gets or sets if filters are shown on the report viewer for a user with the locked permission level|false|
 |Int32|[[HighChartLabelWidth|/API/CodeSamples/HighChartLabelWidth]]| Gets or sets the value indicating labels max width for highcharts |0|
 |String|[[IdentifiersRegex|/API/CodeSamples/IdentifiersRegex]]| Gets or sets the pattern that will be used to apply a default aggregate COUNT function to any fields whose descriptions match the expression. |null|
 |String|[[ImagesPath|/API/CodeSamples/ImagesPath]]| Gets or sets the path of the folder that contains the images used by AdHoc. If the value is null then the built-in images path will be used. |null|
