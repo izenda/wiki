@@ -28,7 +28,8 @@ at Izenda.Web.UI.HtmlReportRenderer.GenerateReportsControl()
 
 Make sure this setting is set:
 
-AdHocSettings.DundasImagesPath
+[[AdHocSettings.DundasImagesPath|API/CodeSamples/DundasImagesPath]]
 
 And point it towards this file:
 
+[[dmi.zip|/FAQ/Cant-load-image-from-url-in-maps/dmi.zip]]
