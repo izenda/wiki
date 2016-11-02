@@ -4,46 +4,46 @@
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
-|25898|API|Methods|Optimized methods for rendering HTML.|
-|26140|User Interface|Dashboards|Navigation arrows missing from Dashboard when there are too many reports in a category to show them on one row.|
-|25860|Report Design|Filters|Empty value In Time Period filter causing problem when at least one filter is required is used.|
-|25687|Report Design|Printing|Corrected a problem that when a user opens a sub report to a new tab, then goes back and opens a second sub report with different filter criteria to a new tab, if the user then goes to the first sub report tab and prints to HTML, they will get the second sub report printout because of a shared session.|
-|25760|Report Design|Exports|Increased font size for PDF exports to improve the look of exported PDF reports.|
-|25700|Configuration|Databases|Corrected a problem causing a failure to load constraints (PK/FK relationships) from database for newly added tables.|
-|25804|Report Design|Subreports|Corrected drilldown reports using popup style showing no results when used in dashboard.|
-|25756|API|Methods|Made following method public allowing users to refresh the cached reportset results when using Fusion Cache. The method takes the report full name (this must include Category and Subcategory if present. Izenda.AdHoc.FusionCache.RefreshReportInCache(reportFullName, true, true); It is recommended that this be used in PreExecuteReportSet, using outside of this method may result in unexpected behavior.|
-|26162|Report Design|Dashboards|Scrollbars appearing in dashboards for charts when there is no scrollbar required|
-|25779|Report Design|Filters|Fixed In Time Period filters not appearing on dashboard when used in report, even if they are a common filter.|
-|26077|Report Design|Visualization|Added more specific error messages for issues around exporting charts/visualizations.|
-|25699|Report Design|Subreports|Fixed @subtotal error occurring if you use a stored procedure parameter as a drill down key to call an embedded subreport in a form.|
-|25763|API|Methods|Added ability for users to override the schema queries in Izenda.|
-|26112|Report Design|Pivots|Fixed error where New IR pivots cannot be created when using more than one datasource in.|
+|25060|Report Design|Dashboards|When adding HTML charts where user has changed the size to a Dashboard(V1 dashboards) sizing is not respected.|
+|25453|API|Methods|New setting added in AdHocSettings, HideFiltersWhenLocked. This will remove the filter block when user is viewing the report in a locked view mode from report viewer.|
+|25460|API|Databases|Multiple constraints are not not being added to queries when using Fusion driver.|
 |25523|API|Databases|When using bracket notation with VisibleDataSources and an Oracle driver, those datasources would not be loaded due to a mismatch between the query looking for patterns with the double quote character as opposed to the bracket character.|
+|25687|Report Design|Printing|Corrected a problem that when a user opens a sub report to a new tab, then goes back and opens a second sub report with different filter criteria to a new tab, if the user then goes to the first sub report tab and prints to HTML, they will get the second sub report printout because of a shared session.|
+|25699|Report Design|Subreports|Fixed @subtotal error occurring if you use a stored procedure parameter as a drill down key to call an embedded subreport in a form.|
+|25700|Configuration|Databases|Corrected a problem causing a failure to load constraints (PK/FK relationships) from database for newly added tables.|
+|25756|API|Methods|Made following method public allowing users to refresh the cached reportset results when using Fusion Cache. The method takes the report full name (this must include Category and Subcategory if present. Izenda.AdHoc.FusionCache.RefreshReportInCache(reportFullName, true, true); It is recommended that this be used in PreExecuteReportSet, using outside of this method may result in unexpected behavior.|
+|25760|Report Design|Exports|Increased font size for PDF exports to improve the look of exported PDF reports.|
+|25763|API|Methods|Added ability for users to override the schema queries in Izenda.|
+|25764|Report Design|Subreports|Using embedded subreport with combokey drilldown key caused error.|
 |25767|API|Databases|Fully qualified datasource names in VisibleDataSources were failing to find datasources when using an Oracle driver and having the UseTablesFromSchemaOnly flag set to true.|
 |25768|API|Databases|Stored procedures in VisibleDataSources would never be obtained when using an Oracle driver and when the UseTablesFromSchemaOnly flag was set to true.|
-|25871|Report Design|Dashboards|Error received on dashboard when base report is deleted from report list.|
+|25779|Report Design|Filters|Fixed In Time Period filters not appearing on dashboard when used in report, even if they are a common filter.|
+|25804|Report Design|Subreports|Corrected drilldown reports using popup style showing no results when used in dashboard.|
+|25845|API|Databases|Null reference exception was found in scenarios where any field with data type corresponding to SqlTypeGroup.Other.|
+|25860|Report Design|Filters|Empty value In Time Period filter causing problem when at least one filter is required is used.|
 |25863|Report Design|Expressions|Using a line break in the Expression text field would cause the javascript parser to fail and resulted in unexpected visual errors on the report designer.|
-|25961|Report Design|Filters|When using advanced tab of the report designer to create any join (more than one table selected), all filers values in the filter tab become pill type entries like an autocomplete instead of plain text entry.|
-|25972|Report Design|Reports|Corrected a bug which prevented pagination from tallying records correctly.|
-|25453|API|Methods|New setting added in AdHocSettings, HideFiltersWhenLocked. This will remove the filter block when user is viewing the report in a locked view mode from report viewer.|
-|26072|Report Design|Exports|After setting a color for table border it is not exported to excel when scheduling a report.|
-|25764|Report Design|Subreports|Using embedded subreport with combokey drilldown key caused error.|
-|25460|API|Databases|Multiple constraints are not not being added to queries when using Fusion driver.|
+|25871|Report Design|Dashboards|Error received on dashboard when base report is deleted from report list.|
+|25898|API|Methods|Optimized methods for rendering HTML.|
+|25957|API|Methods|Added elements to ReportInfoLite() (Report Description, Title, and Drilldownkeys) allowing additional flexibility in the report list for hiding and displaying elements.|
 |25958|Report Design|Subreports|Prevented an error which would occur if a report were designed to use a visually grouped field as a subreport trigger.|
+|25961|Report Design|Filters|When using advanced tab of the report designer to create any join (more than one table selected), all filers values in the filter tab become pill type entries like an autocomplete instead of plain text entry.|
 |25968|API|Filters|An ORA-01036 error would occur when using a DateTime filter with any Equals operator that allows more than one selection (e.g. Multiple, Popup, Checkboxes) and when selecting only a single value from the list.|
+|25972|Report Design|Reports|Corrected a bug which prevented pagination from tallying records correctly.|
 |25993|Report Design|Filters|Filter field properties cannot be opened after filter description is removed.|
 |25994|Report Design|Visualization|World Tour visualization labels are not in proper alignment when filter is added.|
-|26204|Report Design|Visualization|Prevented a bug which would prevent a subreport attached to an auto chart visualization from appearing on the instant report viewer while using Internet Explorer.|
-|26205|Report Design|Dashboards|Prevented a problem where loading a dashboard from a category would sometimes cause dashboard tile functions to be unavailable.|
-|26126|API|Resources|An error in the way base URL detection is handled in MVC kits caused the Instant Reports page to incorrectly redirect to the report designer, report tiles exported on the dashboard to fail, and report tiles opened in the report viewer to throw an error.|
-|26152|Report Design|Dashboards|When user clicks on New and selects Dashboard then clicks on Folder to see reports, but then clicks Dashboard the dashboard is blank. This should give the user a new blank tile to add a report part.|
-|26164|Report Design|Dashboards|Position of popup values for calendar visualization when user switches the position of the report part on a dashboard.|
-|25957|API|Methods|Added elements to ReportInfoLite() (Report Description, Title, and Drilldownkeys) allowing additional flexibility in the report list for hiding and displaying elements.|
-|25060|Report Design|Dashboards|When adding HTML charts where user has changed the size to a Dashboard(V1 dashboards) sizing is not respected.|
-|25845|API|Databases|Null reference exception was found in scenarios where any field with data type corresponding to SqlTypeGroup.Other.|
 |26001|Report Design|Visualization|Fixed an exception which could occur if using a pivot in the fields tab to power a visualization. When doing this, sometimes the X axis label of the visualization woul display the literal field name rather than the alias or description.|
 |26025|API|Methods|Made the flag UseCachedFilteredLists public to allow for scenarios where reports enter the system in non-standard ways where the internal cache updating mechanisms would have no knowledge of the new reports.|
+|26072|Report Design|Exports|After setting a color for table border it is not exported to excel when scheduling a report.|
+|26077|Report Design|Visualization|Added more specific error messages for issues around exporting charts/visualizations.|
+|26112|Report Design|Pivots|Fixed error where New IR pivots cannot be created when using more than one datasource in.|
 |26125|API|Methods|When creating instant reports the DefaultVisibilityForNonAdmins and DefaultSharingRights are not added to the XML.|
+|26126|API|Resources|An error in the way base URL detection is handled in MVC kits caused the Instant Reports page to incorrectly redirect to the report designer, report tiles exported on the dashboard to fail, and report tiles opened in the report viewer to throw an error.|
+|26140|User Interface|Dashboards|Navigation arrows missing from Dashboard when there are too many reports in a category to show them on one row.|
+|26152|Report Design|Dashboards|When user clicks on New and selects Dashboard then clicks on Folder to see reports, but then clicks Dashboard the dashboard is blank. This should give the user a new blank tile to add a report part.|
+|26162|Report Design|Dashboards|Scrollbars appearing in dashboards for charts when there is no scrollbar required|
+|26164|Report Design|Dashboards|Position of popup values for calendar visualization when user switches the position of the report part on a dashboard.|
+|26204|Report Design|Visualization|Prevented a bug which would prevent a subreport attached to an auto chart visualization from appearing on the instant report viewer while using Internet Explorer.|
+|26205|Report Design|Dashboards|Prevented a problem where loading a dashboard from a category would sometimes cause dashboard tile functions to be unavailable.|
 
 # 6.10.0.11 (October 4, 2016)
 
