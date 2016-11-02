@@ -1,6 +1,6 @@
 [[_TOC_]]
 
-# 6.10.0.12 (November 12, 2016)
+# 6.10.0.12 (November 2, 2016)
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
