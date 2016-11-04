@@ -42,7 +42,7 @@ This wiki serves as the main source of documentation for development teams worki
          </a>
       </td>
       <td align="center">
-         <a href="http://wiki.izenda.us/Release Notes">
+         <a href="http://wiki.izenda.us/Release-Notes">
          </a>  
       </td>
    </tr>
