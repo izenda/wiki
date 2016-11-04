@@ -15,34 +15,34 @@ This wiki serves as the main source of documentation for development teams worki
 <table border="1" width="100%">
    <tr>
       <th width="33%">
-         <a href="http://http://wiki.izenda.us/Guides/ReportDesign">
+         <a href="http://wiki.izenda.us/Guides/ReportDesign">
             Izenda Overview
          </a>
       </th>
       <th width="33%">
-         <a href="http://http://wiki.izenda.us/Integration/Tutorials">
+         <a href="http://wiki.izenda.us/Integration/Tutorials">
             Install/Maintenance 
          </a>
       </th>
       <th width="33%">
-         <a href="http://http://wiki.izenda.us/Release Notes">
+         <a href="http://wiki.izenda.us/Release Notes">
             Release Notes
          </a>
       </th>
    </tr>
    <tr>
       <td align="center">
-         <a href="http://http://wiki.izenda.us/Guides/ReportDesign">
+         <a href="http://wiki.izenda.us/Guides/ReportDesign">
             <img src="/Home/Overview_Globe.png" alt="Overview Icon" style="width:128px;height:128px;">
          </a>
       </td>
       <td align="center">
-         <a href="http://http://wiki.izenda.us/Integration/Tutorials">
+         <a href="http://wiki.izenda.us/Integration/Tutorials">
             <img src="/Home/Install_Download.png" alt="Install Icon" style="width:128px;height:128px;">
          </a>
       </td>
       <td align="center">
-         <a href="http://http://wiki.izenda.us/Release Notes">
+         <a href="http://wiki.izenda.us/Release Notes">
          </a>  
       </td>
    </tr>
@@ -71,34 +71,34 @@ Introduction to the Izenda product|Instructions on installing and updating Izend
 <table border="1" width="100%">
    <tr>
       <th width="33%">
-         <a href="http://http://wiki.izenda.us/Guides/Developer-Links-and-Guides">
+         <a href="http://wiki.izenda.us/Guides/Developer-Links-and-Guides">
             Customization
          </a>
       </th>
       <th width="33%">
-         <a href="http://http://wiki.izenda.us/API">
+         <a href="http://wiki.izenda.us/API">
             Code Reference
          </a>
       </th>
       <th width="33%">
-         <a href="http://http://wiki.izenda.us/FAQ/FAQ">
+         <a href="http://wiki.izenda.us/FAQ/FAQ">
             FAQ
          </a>
       </th>
    </tr>
    <tr>
       <td align="center">
-         <a href="http://http://wiki.izenda.us/Guides/Developer-Links-and-Guides">
+         <a href="http://wiki.izenda.us/Guides/Developer-Links-and-Guides">
             <img src="/Home/Customization_Wrench.png" alt="Customization Icon" style="width:128px;height:128px;">
          </a>
       </td>
       <td align="center">
-         <a href="http://http://wiki.izenda.us/API">
+         <a href="http://wiki.izenda.us/API">
             <img src="/Home/CodeRef_Terminal.png" alt="Code Reference Icon" style="width:128px;height:128px;">
          </a>
       </td>
       <td align="center">
-         <a href="http://http://wiki.izenda.us/FAQ/FAQ">
+         <a href="http://wiki.izenda.us/FAQ/FAQ">
 	    <img src="/Home/FAQ_QuestionMark.png" alt="FAQ" style="width:128px;height:128px;">
          </a>  
       </td>
