@@ -25,7 +25,7 @@ This wiki serves as the main source of documentation for development teams worki
          </a>
       </th>
       <th width="33%">
-         <a href="http://wiki.izenda.us/Release Notes">
+         <a href="http://wiki.izenda.us/Release-Notes">
             Release Notes
          </a>
       </th>
