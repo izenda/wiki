@@ -1,3 +1,5 @@
+#6.7 Release Notes Archive
+
 [[_TOC_]]
 
 # 6.7.0.276 (August 22, 2014)
