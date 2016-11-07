@@ -14,6 +14,9 @@ AdHocContext.DisableLogging = true;
 Add it before any other call, for example before the connection string, in the initialization or start event.
 
 ##Basic Configuration
+
+In log4net.xml:
+
 ```xml
 <log4net>    
   <appender name="rollingFile" type="log4net.Appender.RollingFileAppender,log4net">        
