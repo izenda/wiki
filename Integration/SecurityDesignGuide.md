@@ -1,4 +1,4 @@
-#Security Design Guide - Under Construction
+#Security Design Guide
 
 [[_TOC_]]
 
