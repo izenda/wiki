@@ -4,6 +4,7 @@
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
+|HF-25957|API|Methods|Corrected merge issue which was preventing ReportInfoLite from being accessible.|
 |25060|Report Design|Dashboards|When adding HTML charts where user has changed the size to a Dashboard(V1 dashboards) sizing is not respected.|
 |25453|API|Methods|New setting added in AdHocSettings, HideFiltersWhenLocked. This will remove the filter block when user is viewing the report in a locked view mode from report viewer.|
 |25460|API|Databases|Multiple constraints are not not being added to queries when using Fusion driver.|
