@@ -2,6 +2,24 @@
 
 The ``AdHocSettings`` class contains all the settings Izenda uses to control various aspects of the interface and flow of data. Many of the more useful settings are explained in detail in our [[Guide to Report Design|/Guides/ReportDesign]] and [[Developer Guides|/Guides/Developer-Links-and-Guides]]. ")
 
+<!--
+<table border="1" width="100%">
+   <tr>
+      <th width="25%">
+         Datatype
+      </th>
+      <th width="25%">
+         Property name 
+      </th>
+      <th width="25%">
+         Property description
+      </th>
+      <th width="25%">
+         Default Value
+      </th>
+   </tr>
+-->
+
 |Datatype|Property name|Property description|Default Value|
 |:-------|:----------:|:-----------------:|:-----------:|
 |String|[[AddAllFilterRegex|/API/CodeSamples/AddAllFilterRegex]]| Gets or sets the regular expression used for filtering the fields added by clicking "Add All". If the name of a column matches this expression then it will not be added when "Add All" is clicked. |(id&#124;guid)$|
