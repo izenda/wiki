@@ -9,7 +9,7 @@
 **Impacted Features:** Report Design, Data Sources, InitializeReporting()  
 **Purpose:** Gets or sets whether stored procedure metadata will be loaded at the same time as metadata for the rest of the schema. When true, stored procedure metadata will only be pulled when the stored procedure is executed.  
 **Usage:** This setting, when set to true, is used to prevent Izenda from executing all stored procedures in VisibleDataSources on the database at initialization.  
-**Caveats:** Initialization will be quicker when LazySpMetadataPulling is set to true, but individual reports may take longer to load (if the stored procedure has not been executed and cached by Izenda). 
+**Caveats:** Initialization will be quicker when LazySpMetadataPulling is set to true, but individual reports may take longer to load (if the stored procedure has not been executed and cached by Izenda). This setting must be set prior to setting VisibleDataSources in the Settings.
 
 ##Code Samples
 ###Global.asax (C♯)
