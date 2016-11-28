@@ -370,7 +370,7 @@
 |19477|API|Save| Prevent "report has been modified" warning false alarms|
 |19500|API|Optimization|View Results Drop down Not Updating - Made GetNTopSql case-insensitive|
 |19522|Report Design|Optimization|Fixed duplicating columns of stored procedures via OData connection|
-|19557|Report Design|Export|Fixed Sub Report Data not being Exported into CSV or XML files|
+|19557|Report Design|Export|Fixed Sub Report Data not being Exported into CSV files|
 |19568|UI|Optimization|MVC4R2 Kit images fixed with Starter Kit|
 |19638|API|Optimization|Removed ETL Code not used due to security Concern|
 |19653|Report Design|Charts|Fixed labels in barchart when using object type labels.|
