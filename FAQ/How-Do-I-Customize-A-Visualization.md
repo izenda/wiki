@@ -94,3 +94,90 @@ The created object will have several privileged methods, which gives the possibi
 * collectMonthlyData - will collect data from the report with three fields: category (GROUP), date (Group (Year & Month)) and one integer value.
 
 * collectGraph - will create oriented graph where first two report fields are used as nodes and the other integer fields determined as metrics.
+
+##Modifying Existing Visualizations
+
+###Aligning Sunburst to Grid
+
+In Sunburst's View.html, change this:
+
+```jscript
+var g1 = d3.select("#VIS_ID")
+	.append("svg:svg")
+		.attr("width", width)
+		.attr("height", heightWithOffset);
+var g = g1.append("svg:g")
+	.attr("class", "container")
+	.attr("transform", "translate(" + width / 2 + "," + heightWithOffset / 2 + ")");
+g1.append("svg:circle")
+	.attr("r", radius * 0.47)
+	.attr("transform", "translate(" + width / 2 + "," + heightWithOffset / 2 + ")")
+	.style("fill", "#ffffff");
+var g2 = g1.append("svg:g");
+var explanation = g2.append("svg:text")
+	.attr("x", "0")
+	.attr("y", "0")
+	.attr("style", "fill: #666; color: #666; font-size: 2.5em; align: center; pointer-events: none");
+var percentage = explanation.append("tspan")
+	.attr("x", "0")
+	.attr("dy", "0")
+	.attr("text-anchor", "middle")
+	.attr("style", "fill: #666; color: #666; font-size: 30px; align: center; font-family: 'Open Sans', sans-serif;")
+	.text("100%");
+explanation.append("tspan")
+	.attr("x", "0")
+	.attr("dy", "2.5em")
+	.attr("text-anchor", "middle")
+	.attr("style", "fill: #666; color: #666; font-size: 12px; align: center; font-family: 'Open Sans', sans-serif;")
+	.text(expText);
+
+var tw = g2.node().getBBox().width, th = g2.node().getBBox().height,
+	actualRadius = Math.sqrt((tw * tw + th * th) / 4),
+	textScaleFactor = (actualRadius > 0) ? (radius * 0.3 / actualRadius) : 1;
+g2.attr("transform", "translate(" + width / 2 + "," + heightWithOffset / 2 + ") scale(" + textScaleFactor + ")");
+
+```
+
+To this:
+
+```jscript
+ar left = heightWithOffset * 0.5;
+var center = width * 0.5;
+var rigth = width - heightWithOffset * 0.5;
+
+var align = center;
+
+var g1 = d3.select("#VIS_ID")
+	.append("svg:svg")
+		.attr("width", width)
+		.attr("height", heightWithOffset);
+var g = g1.append("svg:g")
+	.attr("class", "container")
+	.attr("transform", "translate(" + align + "," + heightWithOffset / 2 + ")");
+g1.append("svg:circle")
+	.attr("r", radius * 0.47)
+	.attr("transform", "translate(" + align + "," + heightWithOffset / 2 + ")")
+	.style("fill", "#ffffff");
+var g2 = g1.append("svg:g");
+var explanation = g2.append("svg:text")
+	.attr("x", "0")
+	.attr("y", "0")
+	.attr("style", "fill: #666; color: #666; font-size: 2.5em; align: center; pointer-events: none");
+var percentage = explanation.append("tspan")
+	.attr("x", "0")
+	.attr("dy", "0")
+	.attr("text-anchor", "middle")
+	.attr("style", "fill: #666; color: #666; font-size: 30px; align: center; font-family: 'Open Sans', sans-serif;")
+	.text("100%");
+explanation.append("tspan")
+	.attr("x", "0")
+	.attr("dy", "2.5em")
+	.attr("text-anchor", "middle")
+	.attr("style", "fill: #666; color: #666; font-size: 12px; align: center; font-family: 'Open Sans', sans-serif;")
+	.text(expText);
+
+var tw = g2.node().getBBox().width, th = g2.node().getBBox().height,
+	actualRadius = Math.sqrt((tw * tw + th * th) / 4),
+	textScaleFactor = (actualRadius > 0) ? (radius * 0.3 / actualRadius) : 1;
+g2.attr("transform", "translate(" + align + "," + heightWithOffset / 2 + ") scale(" + textScaleFactor + ")");
+```
