@@ -222,9 +222,32 @@ string currentReportName = HttpContext.Current.Request.QueryString["rn"];
 
 ##Best Practices with Izenda
 
-Since Izenda primarily uses metadata to obtain information about schemas, views, and other database objects, the same goes with stored procedures. Therefore, there are some expectations to be followed for these procedures that are to be used with Izenda.
+Izenda primarily uses metadata to obtain information about the schema, views, and other database objects, including stored procedures. Therefore, there are some expectations to be followed for these procedures that are to be used with Izenda.
 
-Izenda sends NULL values for all parameters except dates, dates use an empty string, in a stored procedure and expects to receive column headers with no data in return. This allows Izenda to use the headers in the report designer just like a table or view to create reports. Additionally, at times Izenda needs to create a temp table from the StoredProcedure for joining to other tables and views, headers are used to create the temp table. 
+Izenda sends NULL values for all parameters except dates, dates use an empty string, in a stored procedure and expects to receive column headers with no data in return. This allows Izenda to use the headers in the report designer just like a table or view to create reports. Below is a sample stored procedure that returns only the report headers when NULL values for the parameters parameters are passed from Izenda.
+
+```sql
+CREATE PROCEDURE [dbo].[CustOrdersDetail] @OrderID int
+  AS
+  IF @OrderID IS NULL
+  BEGIN
+    SELECT cast('' as nvarchar) as 'ProductName',
+      cast(0 as float) as 'UnitPrice',
+      cast(0 as int) as 'Quantity',
+      cast(0 as float) as 'Discount',
+      cast(0 as float) as 'ExtendedPrice'
+    RETURN
+  END
+  SELECT ProductName,
+    UnitPrice=ROUND(Od.UnitPrice, 2),
+    Quantity,
+    Discount=CONVERT(int, Discount * 100), 
+    ExtendedPrice=ROUND(CONVERT(money, Quantity * (1 - Discount) * Od.UnitPrice), 2)
+  FROM Products P, [Order Details] Od
+  WHERE Od.ProductID = P.ProductID and Od.OrderID = @OrderID
+```
+
+Additionally, Izenda will occasionally need to create a temp table from the StoredProcedure for joining to other tables and views. The headers obtained when passing NULL parameter values are used to create this temp table. 
 
 * INSERT EXEC - You cannot nest INSERT INTO ... EXEC statements in stored procedures used with Izenda. This is a limitation of SQL server.
 * Return columns - The stored procedure MUST return the same columns in all cases. It is because the metadata expected when running the stored procedure must comply with the specifications given to it.
