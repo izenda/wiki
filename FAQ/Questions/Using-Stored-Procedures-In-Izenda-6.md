@@ -299,7 +299,9 @@ First, the [[MySqlConnectionString|/API/CodeSamples/MySqlConnectionString]] must
 
 Example:
 
-`Driver={MySQL ODBC 5.2 ANSI Driver};DSN=MySQL;Server=YOUR_SERVER_IP;Port=YOUR_SERVER_PORT;Database=northwind;User=northwind;Password=traders;Option=3;MULTI_STATEMENTS=1`
+```csharp
+Driver={MySQL ODBC 5.2 ANSI Driver};DSN=MySQL;Server=YOUR_SERVER_IP;Port=YOUR_SERVER_PORT;Database=northwind;User=northwind;Password=traders;Option=3;MULTI_STATEMENTS=1
+```
 
 Second, the stored procedure definition must contain a pattern of statements similar to the example below. Note that any line that does not include `/* Izenda-specific code */` may be substituted for your own code. Any place the stored procedure name appears such as `[sp_name]_spResult` requires the specific string `_spResult` on the end of the identifier to function properly.
 
