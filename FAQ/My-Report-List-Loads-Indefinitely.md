@@ -6,7 +6,7 @@
 
 My report list takes forever to load, and never actually loads. What is going on?
 
-##ANswer
+##Answer
 
 The infinitely loading ReportList is a server/.NET configuration issue. The culprit is .NET AJAX assembly System.Web.Extensions.
 
