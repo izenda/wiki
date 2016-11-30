@@ -47,21 +47,21 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ##Database
 
-- [[Will My ODBC Connection String Work With Izenda Reports?|http://wiki.izenda.us/FAQ/Database/ODBC-Connection-String]]
-- [[I'm getting SQL type errors when connecting to a MySQL database with an ODBC connection. Will this be corrected?|http://wiki.izenda.us/FAQ/Questions/SQL-Type-Errors-When-Using-ODBC-with-MySQL]]
-- [[Can I inject a customized SQL "Where Clause" or other expression into my queries?|http://wiki.izenda.us/FAQ/Questions/Injecting-where-clause-into-queries]]
+- [[Will My ODBC Connection String Work With Izenda Reports?|/FAQ/Database/ODBC-Connection-String]]
+- [[I'm getting SQL type errors when connecting to a MySQL database with an ODBC connection. Will this be corrected?|/FAQ/Questions/SQL-Type-Errors-When-Using-ODBC-with-MySQL]]
+- [[Can I inject a customized SQL "Where Clause" or other expression into my queries?|/FAQ/Questions/Injecting-where-clause-into-queries]]
 - [[Can you tell me more about SQL connection strings?|https://www.connectionstrings.com/sql-server/]]
-- [[How do I resolve the error: "ExecuteReader requires an open and available Connection. The connection's current state is open."?|http://wiki.izenda.us/FAQ/Questions/ExecuteReader-requires-an-open-and-available-connection]]
-- [[How do I add Read-Write User Access to DB?|http://wiki.izenda.us/FAQ/Questions/ConnectionStringRW]]
-- [[How do I store multiple constraints at application level?|http://wiki.izenda.us/FAQ/Questions/MultipleConstraints]]
-- [[Will Izenda work with a NoSQL database, like MongoDB?|http://wiki.izenda.us/FAQ/Questions/NoSQL-Connectors]]
+- [[How do I resolve the error: "ExecuteReader requires an open and available Connection. The connection's current state is open."?|/FAQ/Questions/ExecuteReader-requires-an-open-and-available-connection]]
+- [[How do I add Read-Write User Access to DB?|/FAQ/Questions/ConnectionStringRW]]
+- [[How do I store multiple constraints at application level?|/FAQ/Questions/MultipleConstraints]]
+- [[Will Izenda work with a NoSQL database, like MongoDB?|/FAQ/Questions/NoSQL-Connectors]]
 
 
 ##Formatting
 
-- [[How do I resolve Bootstrap conflicts resulting from Izenda's integration into my application?|http://wiki.izenda.us/FAQ/bootstrap-namespacing]]
-- [[My customers are reporting their pages are not formatted with CSS properly. How can I fix this?|http://wiki.izenda.us/FAQ/Formatting/Customer-Loses-CSS-Formatting-or-Fonts-etc-are-not-Correct]]
-- [[How do I override CSS on reporting pages?|http://wiki.izenda.us/FAQ/Questions/Overriding-page-level-css]]
+- [[How do I resolve Bootstrap conflicts resulting from Izenda's integration into my application?|/FAQ/bootstrap-namespacing]]
+- [[My customers are reporting their pages are not formatted with CSS properly. How can I fix this?|/FAQ/Formatting/Customer-Loses-CSS-Formatting-or-Fonts-etc-are-not-Correct]]
+- [[How do I override CSS on reporting pages?|/FAQ/Questions/Overriding-page-level-css]]
 - [How do I hide Output Types?](/FAQ/Formatting/How-do-I-hide-Output-Types)
 - [How do I control the alignment of text fields or justification in report output?](/FAQ/Formatting/How-do-I-control-the-alignment-of-text-fields-or-justification-in-report-output)
 - [Why doesn't 'Break Page After Field' work?](/FAQ/Formatting/Why-doesnt-break-page-after-field-work)
@@ -136,6 +136,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Why a report part cannot be positioned between two charts on one report|/FAQ/Why-Are-My-Charts-Stuck-Together]]
 - [[My export says its missing a css file|/FAQ/Why-does-my-excel-export-say-its-missing-css]]
 - [[I'm getting an error about a missing image in Maps|/FAQ/cant-load-image-from-url-in-maps]]
+- [[My report list won't load|/FAQ/My-Report-List-Loads-Indefinitely]]
 
 ##Upgrading Izenda
 - [[What's new in the 6.8.0.1 + Reference Implementation?|/Whats-new-in-the-6-dot-8-0-dot-1-Reference-Implementation]]
