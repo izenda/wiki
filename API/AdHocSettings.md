@@ -66,7 +66,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[CascadeFilterValues|/API/CodeSamples/CascadeFilterValues]]| Gets or sets whether cascading is enabled for filter values. For example, if two filters are defined for country and city, then selecting a value for "Country" will update the "City" filter with values for that country only. |True|
 |Char|[[CategoryCharacter|/API/CodeSamples/CategoryCharacter]]| Gets or sets the character used as a delimiter separating the category from the report name. |null|
 |Boolean|[[ChangParentUrlWhenRedirect|/API/CodeSamples/ChangParentUrlWhenRedirect]]| Gets or sets whether to use different reporting pages than the ones specified by default when redirecting through AdHoc toolbar buttons and links. |False|
-|ChartingEngine|[[ChartingEngine|/API/CodeSamples/ChartingEngine]]| Defines which ChartingEngine will be used (ZedGraph, ComponentArt, Dundas, or HtmlCharts) |DundasChart|
+|ChartingEngine|[[ChartingEngine|/API/CodeSamples/ChartingEngine]]| Defines which ChartingEngine will be used (ZedGraph, ComponentArt, Dundas, or HtmlCharts) |HtmlCharts|
 |Int32|[[ChartLimit|/API/CodeSamples/ChartLimit]]| Gets or sets the limit for the maximum number of labels that can exist on a single chart. |500|
 |ChartCollection|[[Charts|/API/CodeSamples/Charts]]|Gets or sets the collection of available Izenda.AdHoc.Charts.|{Trend, Pie,<br>Plot, Bar,<br>Funnel}|
 |Point|[[ChartSize|/API/CodeSamples/ChartSize]]| Gets or sets the value indicating the maximum length and width of charts. |{X=700,Y=300}|
