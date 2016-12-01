@@ -38,3 +38,8 @@ End Sub 'end method
 ##Limitations
 
 The Email Scheduler in the reporting system does not have a way to provide authentication (login & password) to your SMTP server.  For the email scheduler to send messages to an SMTP server, you would need to provide an open path via the web server's IP address to the SMTP server that would not require authentication. 
+
+
+##Per-user Security On Scheduled Reports
+
+Scheduled reports only supports per-user security using the Link format.  Scheduled attachments will not apply hidden filters normally, but you can apply security through [[PreExecuteReportSet()|/FAQ/PreExecuteReportSet]] based on the security of the report owner.  If per-user security is required, the Link format will require the user to login before seeing the report.
