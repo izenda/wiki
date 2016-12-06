@@ -1,5 +1,59 @@
 [[_TOC_]]
 
+<!--
+
+# 6.10.0.13 (December 6, 2016)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|24690|User Interface|Forms|Fixed an error that would appear if a user clicks on the Smart Tag button in the Form designer rather than the dropdown.|
+|25711|API|Optimization|Cleaned up some unused classes and scripting files (\AdHocReport.js, AdHocReportRenderer.js, AdHocWebservices.js).|
+|25902|User Interface|Printing|Added splash page when a new window is for opened for printing, for browsers that do not support ajax requests while this is open.|
+|25998|API|Optimization|Clarified interaction of Login.aspx and internal authentication processess with the scheduler.|
+|26037|User Interface|Charts|Updated HTML charts to avoid having scroll bars in dashboard tiles. Charts should size within the container.|
+|26070|User Interface|Report Designer|Fixed some missing resources which could cause 404 errors when interacting with some parts of the UI, such as the field position slider.|
+|26081|Report Design|Joins|If user adds a join alias to the first join and it is the same type of alias that is used by Izenda auto aliasing, example "Orders2" for the first instance of the Orders table, the system is not checking that this alias is already used. This causes errors in the join as the alias is duplicated.|
+|26100|Report Design|Subtotals|When using Visual Group and Field Value styling, some subtotals are not correctly calculated.|
+|26128|User Interface|Dashboards|When clicking the edit report button on the back of Dashboard tiles, the user is redirected to the report designer even when the report was created in the Instant Report designer.|
+|26133|Report Design|Report Designer|Unnecessary database query causing error when editing pivots in new Instant Report page.|
+|26135|Report Design|Charts|Fixed error which would prevent datetime formatting from being applied correctly to the separator field of a chart.|
+|26142|Report Design|Subreports|Re-implemented ability to use popup style subreport on one subreport and have another popup defined in that subreport. The first popup will close when the second is opened.|
+|26144|Report Design|Report Designer|Adding support of AdHocSettings.DefaultTable setting in new Instant Report page.|
+|26150|Report Design|Report Designer|Null reference error received when using some grouping functions.|
+|26153|Report Design|Joins|When creating a report with multiple self joins to the same table, if user is not setting the alias, some reports are not saving the join properly.|
+|26155|User Interface|Saving|"Save As" not working properly when report contains an apostrophe.|
+|26170|API|Optimization|Fixed a crash which could result if virtual data sources were enabled, report validation is disabled, lazy stored procedure metadata pulling is true, and visible data sources are set.|
+|26176|Report Design|Report Designer|When using more than one arithmetic function in a report the report becomes corrupted as there appears to be two fields without descriptions.|
+|26178|Report Design|Subreports|When a comma is contained in a field value which is used for subreport drilldown, the drilldown sometimes fails.|
+|26184|Report Design|Filters|Fixed the application of boolean filters to apply correctly during filter refresh.|
+|26196|API|Settings|Obsolete Setting: AdHocSettings.UseDefaultDialogs = true;|
+|26200|User Interface|Report Designer|When using New Instant Report page, if user clicks on a field multiple times quickly the preview is sometimes incorrect|
+|26202|Report Design|Subreports|Additional changes for 26001, when using drilldown in Pivot grid to ensure no further issues based on values in column headers of pivoted data.|
+|26219|Report Design|Filters|Fixed a problem which would cause filters to invalidate or disappear if they were built from fields calculated in virtual data sources.|
+|26254|Report Design|Expressions|Enhanced case statement functionality to ensure that grouping data after case on multiple fields results in one row of data.|
+|26257|API|Settings|When AdHocSettings.SortColumnNames is set to False it does not disable alphabetical sort of fields in the Report Designer or Instant Reports.|
+|26271|API|Optimization|Cleaned up ReportSet.ScheduleUtc to prevent inadvertent changes in timezone from being saved to report xml.|
+|26272|Report Design|Rendering|Changed doc type to prevent pagination from rendering an extra blank page in Internet Explorer.|
+|26276|Report Design|Visualizations|Using the hide grid setting with World Tour visualization, received error "Cannot read property 'o' undefined"|
+|26301|Report Design|Charts|Exported HTML - Pie chart not scaling properly when exporting after scale is increased in settings.|
+|26302|API|Filters|Adding ability to create logic in PreExecuteReportSet to force user to add filter values for specific filters. Example: { if (reportSet.Filters.Count < 2) return; bool f1Set = true; bool f2Set = true; if (ReportSet.Filters[0].Value == null || reportSet.Filters[0].Value == "" || reportSet.Filters[0].Value == "...") f1Set = false; if (ReportSet.Filters[1].Value == null || reportSet.Filters[1].Value == "" || reportSet.Filters[1].Value == "...") f2Set = false; if(!f1Set && !f2Set) reportSet.FiltersNotSpecifieldMsg = "You must set values for at least one of the first two filters." }|
+|26306|Report Design|Report Designer|Corrected problem that would cause numeric fields in the summary grid to drop formatting if they were not on the first page of a pagination.|
+|26334|Report Design|Charts|Some labels of Funnel Auto Chart are being cut off in the New Instant Report page.|
+|26372|User Interface|Saving|New category is not saved when changed while editing report in the new Instant Report page.|
+|26378|API|Settings|Made a change to AdHocSettings.Language to properly set datetimes across culture and language settings when exporting to Excel.|
+|26405|Report Design|Report Designer|In new Instant Reports, Pivot side totals are not properly calculating when pivots have more than 100 columns.|
+|26408|Report Design|Charts|Removed white bar showing up in some large Funnel Charts when long label strings are truncated.|
+|26410|Report Design|Joins|Added quotes to TenantID in query which generates Izenda table in database report storage mode in PostgreSQL.|
+|26411|Report Design|Report Designer|Updating Reference Implementation for MVC kits to default to New Instant Report page.|
+|26413|Report Design|Subreports|When adding a subreport to an X-axis on visualization the null values display as index values instead of null.|
+|26471|Report Design|Visualizations|Prevented time only formats on datetimes from breaking visualization labeling.|
+|26473|Report Design|Report Designer|Updated URL to settings page causing issues in MVC kits.|
+|26478|Report Design|Charts|Corrected an issue which would prevent basic charts from rendering thumbnails correctly as well as appearing in Dashboard presentation mode.|
+|26480|Report Design|Rendering|Clarified rendering logic to eliminate some problems when rendering Izenda within an IFrame.|
+|26486|Report Design|Report Designer|Fixed subtotals sometimes being incorrect in PostGresql.|
+
+-->
+
 # 6.10.0.12 (November 9, 2016)
 
 |Case|Category|Subcategory|Description|
