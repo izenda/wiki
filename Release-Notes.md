@@ -1,7 +1,5 @@
 [[_TOC_]]
 
-<!--
-
 # 6.10.0.13 (December 6, 2016)
 
 |Case|Category|Subcategory|Description|
@@ -52,7 +50,7 @@
 |26480|Report Design|Rendering|Clarified rendering logic to eliminate some problems when rendering Izenda within an IFrame.|
 |26486|Report Design|Report Designer|Fixed subtotals sometimes being incorrect in PostGresql.|
 
--->
+
 
 # 6.10.0.12 (November 9, 2016)
 
