@@ -61,12 +61,12 @@ _**Note:** You can use this as a template and any other format that requires a b
 
 ```csharp
   [Serializable]
-  public class DatesCustomFormatFormatter : IFormatter {
-    public Type GetOutputDataType(DataTable table, int columnNumber, ReportOutputOptions reportOutputOptions, Field field) {
+  public class DatesCustomFormatFormatter : BaseFormatter {
+    public override Type GetOutputDataType(AdHocDataTable table, int columnNumber, ReportOutputOptions reportOutputOptions, Field field) {
       return typeof(string);
     }
 
-    public object Format(DataTable table, int rowNumber, int columnNumber, Field field, DataTable originalTable, Field nameField) {
+    public override object Format(AdHocDataTable table, int rowNumber, int columnNumber, Field field, AdHocDataTable originalTable, Field nameField) {
       object value = table.Rows[rowNumber][columnNumber];
       if (value == null || Convert.IsDBNull(value))
         return null;
@@ -77,7 +77,7 @@ _**Note:** You can use this as a template and any other format that requires a b
     }
   }
 
-  public class DatesCustomFormat : IFormat {
+  public class DatesCustomFormat : BaseFormat {
     private SqlTypeGroupCollection allowedTypeGroups = new SqlTypeGroupCollection();
     public SqlTypeGroupCollection AllowedTypeGroups {
       get { return allowedTypeGroups; }
@@ -97,8 +97,8 @@ _**Note:** You can use this as a template and any other format that requires a b
       get { return true; }
     }
 
-    public IFormatter[] CreateFormatters() {
-      return new IFormatter[] { new DatesCustomFormatFormatter() };
+    public BaseFormatter[] CreateFormatters() {
+      return new BaseFormatter[] { new DatesCustomFormatFormatter() };
     }
 
     public DatesCustomFormat(string name) {
