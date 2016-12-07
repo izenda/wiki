@@ -4,7 +4,7 @@
 
 ##Word Document Version
 
-The Report Design Guide can be downloaded in .docx format [here](http://wiki.izenda.us/Guides/ReportDesign/ReportDesignGuide6-9A.docx). This document is currently on Revision A, as of August 25, 2015 representing version 6.9.0.1.
+The Report Design Guide can be downloaded in .docx format [here](http://wiki.izenda.us/Guides/ReportDesign/ReportDesignGuide6-9b.docx). This document is currently on Revision B, as of December 7, 2016 representing version 6.10.0.1.
 
 ##Preface
 
