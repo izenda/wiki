@@ -7,7 +7,7 @@
 |24690|User Interface|Forms|Fixed an error that would appear if a user clicks on the Smart Tag button in the Form designer rather than the dropdown.|
 |25711|API|Optimization|Cleaned up some unused classes and scripting files (\AdHocReport.js, AdHocReportRenderer.js, AdHocWebservices.js).|
 |25902|User Interface|Printing|Added splash page when a new window is for opened for printing, for browsers that do not support ajax requests while this is open.|
-|25998|API|Optimization|Clarified interaction of Login.aspx and internal authentication processess with the scheduler.|
+|25998|API|Optimization|Implemented basic authentication in the standard scheduler to allow report scheduling when RequireLogin is true. More info [[here|/FAQ/Implementing-Scheduler-Security]]|
 |26037|User Interface|Charts|Updated HTML charts to avoid having scroll bars in dashboard tiles. Charts should size within the container.|
 |26070|User Interface|Report Designer|Fixed some missing resources which could cause 404 errors when interacting with some parts of the UI, such as the field position slider.|
 |26081|Report Design|Joins|If user adds a join alias to the first join and it is the same type of alias that is used by Izenda auto aliasing, example "Orders2" for the first instance of the Orders table, the system is not checking that this alias is already used. This causes errors in the join as the alias is duplicated.|
