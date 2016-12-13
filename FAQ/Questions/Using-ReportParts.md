@@ -43,7 +43,7 @@ The Report string should be the complete name of the report including the catego
 * Gauges
 * Map
 
-Filters can be added in the div as below for the report part. These are numbered based on position number in the report. This filter functionality is limited. At this time it will not support between date filter operators.
+Filters can be added in the javascript example only for the report part. These are numbered based on position number in the report. This filter functionality is limited. At this time it will not support between date filter operators.
 Filters are added using the following format data-filter1="value" data-filter2="value"
 Multiple values can be entered using a comma separated list as data-filter1="value1,value2"
 
