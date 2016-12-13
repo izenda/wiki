@@ -39,3 +39,11 @@ FORM itself.
 [Basic FORMS Creation](http://wiki.izenda.us/Guides/ReportDesign/14.0-Izenda-FORMS#14.2-Basic-FORMS-Reports)  
 [Advanced FORMS Creation](http://wiki.izenda.us/Guides/ReportDesign/14.0-Izenda-FORMS#14.3-Advanced-FORMS-Concepts)  
 [Video Tutorials](http://wiki.izenda.us/Guides/ReportDesign/14.0-Izenda-FORMS#Video-Tutorials)
+
+## Special Note on Fonts
+
+You can add a font selector if you open the file RichEditorPopup.js in Resources\js, locate the line which starts with:
+
+  toolbar: "save cancel insertfile undo redo | style..........
+
+and add to it " | fontselect | fontsizeselect"
