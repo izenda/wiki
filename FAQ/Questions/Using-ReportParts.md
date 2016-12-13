@@ -43,6 +43,10 @@ The Report string should be the complete name of the report including the catego
 * Gauges
 * Map
 
+Filters can be added in the div as below for the report part. These are numbered based on position number in the report. This filter functionality is limited. At this time it will not support between date filter operators.
+Filters are added using the following format data-filter1="value" data-filter2="value"
+Multiple values can be entered using a comma separated list as data-filter1="value1,value2"
+
 ###HTML example
 
 You can also insert ReportParts into a pure HTML page and display it using javascript
@@ -61,7 +65,7 @@ Then you can add HTML like the following to use a ReportPart.
 <body>
   <div style="margin:5px; padding:10px; border: 1px solid gray; background-color: white;">
     <h1>Sales Chart</h1>
-    <div class="report-part" data-report="Sales" data-part="chart"></div>
+    <div class="report-part" data-report="Sales" data-part="chart" data-filter1="Country"></div>
     <h1>Finance Chart</h1>
     <div class="report-part" data-report="Finance" data-part="chart"></div>
     <h1>Accounting Details</h1>
