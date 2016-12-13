@@ -4,7 +4,7 @@
 
 ##About
 
-Sets the number of seconds between cache refreshes for the FUSION (HTML) cache.  If you have the FUSION add-on, enable FUSION (HTML) caching using this setting.  HTML caching will produce a time stamp on your reports and dashboards showing the last time the report was run without the cache.  HTML caching can significantly improve performance, especially if you have database connection or speed issues.
+Sets the number of **minutes** between cache refreshes for the FUSION (HTML) cache.  If you have the FUSION add-on, enable FUSION (HTML) caching using this setting.  HTML caching will produce a time stamp on your reports and dashboards showing the last time the report was run without the cache.  HTML caching can significantly improve performance, especially if you have database connection or speed issues.
 
 **Default Value:** 0
 
