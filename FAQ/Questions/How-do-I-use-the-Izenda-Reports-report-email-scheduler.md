@@ -3,7 +3,7 @@
 [[_TOC_]]
 
 
-For [[advanced scheduler functionality|http://http://wiki.izenda.us/Guides/Advanced-Scheduler-Functionality]]
+For [[advanced scheduler functionality|http://wiki.izenda.us/Guides/Advanced-Scheduler-Functionality]]
 
 ##Izenda Reports Scheduler Setup Instructions
 
