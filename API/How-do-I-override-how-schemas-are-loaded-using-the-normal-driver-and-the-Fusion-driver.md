@@ -4,7 +4,7 @@
 
 ##Question
 
-I would like to override schema loading in my driver.
+When using AdHocSettings.PerUserCaching = true; and the CurrentUserTenantID changes, Izenda reloads the schema. This can be a lengthy process, so overriding the schema load may improve performance. Below are code samples to override this within the driver.
 
 ##Answer
 
