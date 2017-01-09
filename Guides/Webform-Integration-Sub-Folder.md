@@ -8,8 +8,6 @@ This guide is designed to instruct first-time users how to integrate Izenda Webf
 
 [Izenda Webforms kit download link](http://archives.izenda.us/ri/webforms/webforms-cs.zip)
 
-[Host Website download link](http://archives.izenda.us/ri/webforms/Integration_Demo.zip)
-
 Reference: [Integrating Izenda into a Web Application](http://wiki.izenda.us/Guides/Integrating-Izenda)
 
 **PLEASE NOTE**: This guide is not universal, nor does it describe a complete integration. There are many nuanced elements of an integration, including, but not limited to, Visual Studio versions, existing code in your application(s), and server environments. This guide is intended to be a starting point in integrating Izenda, with the understanding that some deviations will likely be necessary.
