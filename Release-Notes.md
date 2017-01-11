@@ -1,7 +1,5 @@
 [[_TOC_]]
 
-<!-- 
-
 # 6.10.0.14 (January 11, 2017)
 
 |Case|Category|Subcategory|Description|
@@ -40,8 +38,6 @@
 |26679|Report Design|Instant Reports|In New Instant Report Designer, Round Style Auto Gauge is not displayed when selected. The grid is displayed instead.|
 |26681|Report Design|Fields|Grid header styles (bold and italic) are not displayed properly in the dashboard when set in the report.|
 |26707|Report Design|Visualizations|When creating a new report and adding a visualization, once previewed and the user saves report and attempts to return to the chart tab, the visualizations are not available to change the selected item.|
-
--->
 
 # 6.10.0.13 (December 6, 2016)
 
