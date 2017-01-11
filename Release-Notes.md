@@ -1,5 +1,49 @@
 [[_TOC_]]
 
+<!-- 
+
+# 6.10.0.14 (January 11, 2017)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|25823|API|Optimization|Using this setting "AdHocSettings.CategoryCharacter = '#'" should not be supported as a character. It can cause issues with URL's within Izenda|
+|26040|Report Design|Data Sources|In some environments visible data sources are not persisting causing reports to be missing on the report list.|
+|26147|User Interface|Filters|Removed underscore from multi-word filter descriptions.|
+|26183|API|Settings|ValidateBeforeSave setting displaying errors which are invalid.|
+|26242|Report Design|Pivots|Nulls are now aggregated together in a pivot instead of being discarded.|
+|26270|Report Design|Visualizations|Added more relative paths to visualizations and other resources to prevent 404s when loading report part components.|
+|26299|User Interface|Dashboards|Added ability to refresh dashboard items in the gallery. Add the following to the global file and these options will appear on the refresh menu in the dashboard. public override Dictionary<string, int> GetAutoRefreshIntervals() { var result = new Dictionary<string, int> { { "Every day", 60 * 60 * 24 }, { "Every hour", 60 * 60}, { "Every minute", 60}, { "Every 5 seconds", 5 } }; return result; }|
+|26311|Report Design|Subreports|Fixed error which would occur if a field comparison filter were used in a popup subreport. The report would fail saying that the filter value could not be found.|
+|26313|Report Design|Dashboards|Prevented a situation where custom css on one dashboard tile could override the css of another tile.|
+|26317|Report Design|Filters|When changing filter operator from equals checkbox to equals multiple the results are blank for the filter values when using "AND" in the filter logic.|
+|26336|Report Design|Data Sources|Fixed problem which prevented left joins from being recognized when using table aliasing on self-join.|
+|26343|Report Design|Visualizations|Corrected a problem with stacked bar charts in auto visualization which would cause the bar elements to render in reverse order from the chart legend.|
+|26357|Report Design|Subreports|Fixed an error preventing popup subreports from displaying from a Form.|
+|26370|Report Design|Filters|Corrected a set of linked bugs relating to grouping by date in filters, dates cascading improperly in filters, as well as dates not properly respecting culture settings.|
+|26371|Report Design|Dashboards|Fixed an error when adding two interactive visualizations to a dashboard and exporting that dashboard to excel, the generated link would return a faulty report instead of the dashboard.|
+|26383|Report Design|Exports|_INTERNALDOTCHAR_ showing on scheduled CSV column headers where a "." exists in the column name.|
+|26395|Report Design|Subreports|Clarified behavior of Auto Chart - Pie, when using the 'Other' slice setting - these other values cannot be used for a subreport or drilling to another level of data on the same report.|
+|26397|Report Design|Exports|When exporting to CSV system generates TMP files and they are not being properly removed from temp directories.|
+|26416|API|Settings|AdHocSettings.ShowDistinct ensure distinct text box is shown or hidden based on the setting and that query will remove distinct setting if datatype does not support this function.|
+|26442|User Interface|Subreports|Custom URL field should not be available for any field if a subreport is already configured for that field.|
+|26454|User Interface|Fields|Fixed a minor driver issue preventing column descriptions from being empty.|
+|26461|Report Design|Visualizations|Calendar Visualization advanced setting options do not work properly in the New Instant Report page.|
+|26479|User Interface|Filters|Fixed left and right arrows on the calendar popup display when filtering datetimes.|
+|26499|User Interface|Instant Reports|In New Instant Reports page disabled settings for a field which not compatible with binary field type. and disabled ability to use groups when user added a binary field to report.|
+|26506|Report Design|Exports|Corrected a problem which would prevent datetimes in non-US culture settings from being exported to Excel properly.|
+|26532|Report Design|Exports|Corrected error when encoding datetimes which would sometimes cause them to be wrapped in bad HTML when exported to Excel.|
+|26540|Report Design|Filters|Corrected a null reference error which could happen when filters are applied to a calculated field which is on a report using a stored procedure joined to a table or view.|
+|26549|API|Optimization|Made further script/resource changes around the handling of IzPid in the webforms-cs kit.|
+|26569|Report Design|Filters|British pound symbol is causing object reference error when used for filtering a expression value.|
+|26614|User Interface|Forms|Adding the style tag in the Form editor would cause it to lock.|
+|26634|Report Design|Charts|HTML bar chart is not saving proper settings created in the report designer. Once saved the settings are removed.|
+|26664|Report Design|Filters|When editing a report with existing filter, operator from last filter is auto added to new filter field.|
+|26679|Report Design|Instant Reports|In New Instant Report Designer, Round Style Auto Gauge is not displayed when selected. The grid is displayed instead.|
+|26681|Report Design|Fields|Grid header styles (bold and italic) are not displayed properly in the dashboard when set in the report.|
+|26707|Report Design|Visualizations|When creating a new report and adding a visualization, once previewed and the user saves report and attempts to return to the chart tab, the visualizations are not available to change the selected item.|
+
+-->
+
 # 6.10.0.13 (December 6, 2016)
 
 |Case|Category|Subcategory|Description|
