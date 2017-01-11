@@ -9,7 +9,6 @@
 |25823|API|Optimization|Using this setting "AdHocSettings.CategoryCharacter = '#'" should not be supported as a character. It can cause issues with URL's within Izenda|
 |26040|Report Design|Data Sources|In some environments visible data sources are not persisting causing reports to be missing on the report list.|
 |26147|User Interface|Filters|Removed underscore from multi-word filter descriptions.|
-|26183|API|Settings|ValidateBeforeSave setting displaying errors which are invalid.|
 |26242|Report Design|Pivots|Nulls are now aggregated together in a pivot instead of being discarded.|
 |26270|Report Design|Visualizations|Added more relative paths to visualizations and other resources to prevent 404s when loading report part components.|
 |26299|User Interface|Dashboards|Added ability to refresh dashboard items in the gallery. Add the following to the global file and these options will appear on the refresh menu in the dashboard. public override Dictionary<string, int> GetAutoRefreshIntervals() { var result = new Dictionary<string, int> { { "Every day", 60 * 60 * 24 }, { "Every hour", 60 * 60}, { "Every minute", 60}, { "Every 5 seconds", 5 } }; return result; }|
