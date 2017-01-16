@@ -47,7 +47,7 @@ void btnLogin_Click(object sender, EventArgs args)
             else
                 HttpContext.Current.Session["Role"] = "RegularUser";
             global_asax.CustomAdHocConfig.InitializeReporting();
-            Page.Title = "Izenda - " + AdHocSettings.CurrentUserName;
+            Page.Title = "Izenda - " + Izenda.AdHoc.AdHocSettings.CurrentUserName;
             Response.Redirect("ReportList.aspx");
             //FormsAuthentication.RedirectFromLoginPage(userNameTextbox.Text, false);
             return;
