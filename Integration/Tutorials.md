@@ -20,6 +20,10 @@ These tutorials help users to familiarize themselves with the features Izenda of
 
 This guide will assist you in setting up basic security and provide samples of more advanced security set-ups.
 
+##[[Guide to The Report Scheduler|http://wiki.izenda.us/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler]]
+
+These tutorials will help users set up and use the scheduler.
+
 ##[[Developer Guides|Guides/Developer Links and Guides]]
 
 These tutorials will assist developers in working with and customizing Izenda Reports.
