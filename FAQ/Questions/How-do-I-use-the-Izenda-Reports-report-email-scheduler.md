@@ -146,4 +146,6 @@ Using the rs.aspx Page
 3. The url in the browser should read: http://yourhost/yourapp/rs.aspx?run_scheduled_reports=30
 4. This will return a list of reports and their next scheduled date and time in the browser window
 
-## NEXT - [Using the Reports Scheduler](http://wiki.izenda.us/FAQ/Questions/What-does-Repeat-Types-and-Send-Email-As-mean)
+## [Advanced Set Up and Scenarios](http://wiki.izenda.us/Guides/Advanced-Scheduler-Functionality)
+
+# To Section 2 - [Using the Reports Scheduler](http://wiki.izenda.us/FAQ/Questions/What-does-Repeat-Types-and-Send-Email-As-mean)
