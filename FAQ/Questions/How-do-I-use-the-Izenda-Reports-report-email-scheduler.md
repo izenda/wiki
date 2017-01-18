@@ -2,6 +2,9 @@
 
 [[_TOC_]]
 
+##Before You Begin
+
+If you are using the setting AdHocSettings.RequireLogIn = true - Please see [Implementing Scheduler Security](http://wiki.izenda.us/FAQ/Implementing-Scheduler-Security) to ensure that the scheduler will be able to access the reporting system.  
 
 For [[advanced scheduler functionality|http://wiki.izenda.us/Guides/Advanced-Scheduler-Functionality]]
 
