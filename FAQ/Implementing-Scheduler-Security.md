@@ -35,6 +35,8 @@ Note: The logic for checking izUser and izPassword from the request MUST precede
 
 An example of the logic used to validate izUser and izPassword might look something like the sample below:
 
+C♯
+
 ```csharp
 public class CustomAdHocConfig : FileSystemAdHocConfig
 {
@@ -60,6 +62,39 @@ public class CustomAdHocConfig : FileSystemAdHocConfig
         AdHocContext.Initialized = true;
     }
 }
+```
+
+Visual Basic:
+
+```visualbasic
+<Serializable()> Public Class CustomAdHocConfig
+    Inherits FileSystemAdHocConfig
+
+    Public Shared Sub InitializeReporting()
+        If AdHocContext.Initialized Then
+            Return
+        End If
+        AdHocSettings.LicenseKey = "SET_LICENSE_KEY_HERE"
+        Dim izUserName As String = String.Empty
+        Dim izPassword As String = String.Empty
+        If Not String.IsNullOrEmpty(HttpContext.Current.Request("izUser")) Then
+            izUserName = HttpContext.Current.Request("izUser")
+        End If
+        If Not String.IsNullOrEmpty(HttpContext.Current.Request("izPassword")) Then
+            izPassword = HttpContext.Current.Request("izPassword")
+        End If
+        If Not String.IsNullOrEmpty(izUserName) AndAlso Not String.IsNullOrEmpty(izPassword) Then
+            If AuthenticateSchedulerUser(izUserName, izPassword) Then ' AuthenticateSchedulerUser Is a Then method that will need To be created specially To handle this Case And returns a Boolean value.
+                AdHocSettings.CurrentUserName = izUserName
+            End If
+        End If
+        AdHocSettings.RequireLogin = True
+        AdHocSettings.AdHocConfig = New CustomAdHocConfig() ' setting this after RequireLogin will force a redirect If AdHocSettings.CurrentUserName has Not been Set. This assumes that different login logic Handles a standard user login.
+        'continue to initialize normally
+        'Check to see if we've already initialized.
+        AdHocContext.Initialized = True
+    End Sub
+End Class
 ```
 
 The above snippet, in conjunction with the Izenda reports scheduler executable included in starter kits after version 6.10.0.12 (6.10.0.13 and above), will allow the scheduler to bypass the normal RequireLogin setting and schedule reports freely and securely while still requiring any other users to login using the standard mechanism. This example can be modified to meet individual business requirements.
