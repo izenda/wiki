@@ -1,20 +1,20 @@
-#How do I use the Izenda Reports report email scheduler?
+#Setting up the Izenda Reports Scheduler
 
 [[_TOC_]]
 
-##Before You Begin
+##Understanding the Scheduler
 
-If you are using the setting AdHocSettings.RequireLogIn = true - Please see [Implementing Scheduler Security](http://wiki.izenda.us/FAQ/Implementing-Scheduler-Security) to ensure that the scheduler will be able to access the reporting system.  
+The Izenda Reports Scheduler at it's core is a simple task that looks at the reports repository at their scheduled execution time. If the scheduled time is in the past, the scheduler sends the report and then updates the time based on the selected frequency.
 
-For [[advanced scheduler functionality|http://wiki.izenda.us/Guides/Advanced-Scheduler-Functionality]]
+There are two ways in which the scheduler works which you can select depending on your preference: the Task Based Scheduler, which is created through Windows Task Manager and the Service Based Scheduler which utilized Windows Services.
 
 ##Izenda Reports Scheduler Setup Instructions
 
-###Task-based scheduler
+###Installing the Task-based scheduler
 
 https://github.com/izenda/custom-scheduler
 
-First, a little background about how the scheduler works. The scheduler requires the use of the Izenda Scheduler executable that is packaged with our [[reference implementation starter kit|http://www.izenda.com/update-your-izenda-version/]]. You then need to add a scheduled task to your system that runs on an interval you specify. The task will execute the Izenda Scheduler to send a command to the response server (rs.aspx) that determines if any reports need to go out. You can specify the URL of your rs.aspx page as a command line parameter when setting up the task as will be discussed below.
+This scheduler requires the use of the Izenda Scheduler executable that is packaged with our [[reference implementation starter kit|http://www.izenda.com/update-your-izenda-version/]]. You then need to add a scheduled task to your system that runs on an interval you specify. The task will execute the Izenda Scheduler to send a command to the response server (rs.aspx) that determines if any reports need to go out. You can specify the URL of your rs.aspx page as a command line parameter when setting up the task as will be discussed below.
 
 Here are the steps to install the Izenda Scheduler. It is recommended that you perform these installation steps on the Web Server on which Izenda Reports is installed. The Windows' Scheduled Task Functionality described is only available on Windows Server operating systems. 
 
@@ -31,9 +31,9 @@ Here are the steps to install the Izenda Scheduler. It is recommended that you p
 
 Now that you have setup the scheduler, we will need to setup Izenda Reports. There are two ways to do this. We recommend using the [[InitializeReporting()|/FAQ/InitializeReporting]] method in your CustomAdHocConfig class to do this.
 
-###Service-based scheduler
+###Installing the Service-based scheduler
 
-Izenda now also offers the option of using a service-based scheduler. The MSI installer and service based scheduler is also available at our GitHub scheduler repo https://github.com/izenda/custom-scheduler. After running the installer, there will be an executable in the directory you specified in the installer wizard along with a config file called **IzendaService.exe.config**. Here is how to configure the service-based scheduler:
+The MSI installer and service based scheduler is available at our GitHub scheduler repo https://github.com/izenda/custom-scheduler. After running the installer, there will be an executable in the directory you specified in the installer wizard along with a config file called **IzendaService.exe.config**. Here is how to configure the service-based scheduler:
 
 1. Open **task manager**.
 2. Locate **IzendaService**.
@@ -145,3 +145,5 @@ Using the rs.aspx Page
 2. Add the followingto the end of the URL: ?run_scheduled_reports=30 (30 equals the frequency in minutes it will run)
 3. The url in the browser should read: http://yourhost/yourapp/rs.aspx?run_scheduled_reports=30
 4. This will return a list of reports and their next scheduled date and time in the browser window
+
+## NEXT - [Using the Reports Scheduler](http://wiki.izenda.us/FAQ/Questions/What-does-Repeat-Types-and-Send-Email-As-mean)
