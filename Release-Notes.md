@@ -1,5 +1,38 @@
 [[_TOC_]]
 
+<!-- 
+
+# 6.10.0.15 (February 8, 2017)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|25889|Report Design|Filters|placeholder|
+|26132|Report Design|Printing|Found and fixed some conditions where landscape printing mode would be ignored.|
+|26183|API|Settings|ValidateBeforeSave setting displaying errors which are invalid.|
+|26273|Report Design|Dashboards|Update behavior of record count in dashboard tiles. This limit should reflect record limit set on report parts set in the report record limits for each report part. This can be altered in the dashboard if user has permissions to flip the tile and access the record count.|
+|26562|API|Compilation|Reduced use of DEBUG compiler flags to reduce memory consumption when using a debug or diagnostic hotfixed dll in a production environment.|
+|26568|Report Design|Data Sources|Prevented data source from being removed from report if all fields are unselected from that data source, when using Instant Reports.|
+|26579|Report Design|Subreports|Removed ability to use combo key within the VG block of an Analysis Grid and cleaned up AG construction methods.|
+|26645|Report Design|Printing|Fixed some errors related to the print menu in dashboards not loading at all or loading slowly.|
+|26659|Report Design|Filters|Manual entry filters lose focus for end user after 1000 milliseconds of inactivity, causing users to reposition the mouse in the text entry box after typing and stopping.|
+|26695|Report Design|Pivots|Fixed crash when using pivot and Izenda claims to "add pivot columns to report before removal of already existing ones was made".|
+|26702|Report Design|Printing|Added ability to page break on split when using a fixed number of columns per printed page, and a low number of records causes multiple sets of columns to appear on the same page.|
+|26704|Report Design|Filters|Made error message more explicit when a filter value is invalid for the data type of a field.|
+|26743|API|Compilation|Cleaned up node_module folders to reduce compilation errors.|
+|26765|Report Design|Saving|Category is lost when reports are saved in the new Instant Report page.|
+|26778|Report Design|Saving|Fixed the error "current report set is not dashboard" which could happen if session data changed or was invalidated during the dashboard save process.|
+|26788|API|Compilation|Cleaned up some internal code for a slight performance boost.|
+|26799|API|Settings|Corrected a problem which prevented MSSQLDriver.GetSqlName from finding aliased fields.|
+|26803|Report Design|Subreports|Prevented values passed via url to a filter from 'sticking' in the filter when a different value is input into filter and then the report is refreshed.|
+|26804|Report Design|Data Sources|Prevented blank fields from appearing in Instant Report designer when using Fusion to connect to multiple databases.|
+|26811|Report Design|Saving|Fixed error which prevented user from changing scheduler time code from AM to PM without setting time also, meaning reports couldn't easily be scheduled for noon.|
+|26874|Report Design|Visualizations|Corrected issue which prevented Calendar visualization from appearing in Instant Reports.|
+|26880|Report Design|Subreports|Corrected a condition which would cause the subreport link of a field on the grid to not be read correctly by the Auto Chart visualization.|
+|26896|Report Design|Charts|Prevented user from selecting Gauge format for a field on the chart object.|
+|26904|API|Settings|Closed obscure loophole which could allow writing to reports without permission.|
+
+-->
+
 # 6.10.0.14 (January 11, 2017)
 
 |Case|Category|Subcategory|Description|
