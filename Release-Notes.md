@@ -2,18 +2,17 @@
 
 <!-- 
 
-# 6.10.0.15 (February 8, 2017)
+# 6.10.0.15 (February 9, 2017)
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
-|25889|Report Design|Filters|placeholder|
+|25889|Report Design|Filters|Corrected some logic which would invalidate filter overrides in dashboards.|
 |26132|Report Design|Printing|Found and fixed some conditions where landscape printing mode would be ignored.|
 |26183|API|Settings|ValidateBeforeSave setting displaying errors which are invalid.|
 |26273|Report Design|Dashboards|Update behavior of record count in dashboard tiles. This limit should reflect record limit set on report parts set in the report record limits for each report part. This can be altered in the dashboard if user has permissions to flip the tile and access the record count.|
 |26562|API|Compilation|Reduced use of DEBUG compiler flags to reduce memory consumption when using a debug or diagnostic hotfixed dll in a production environment.|
 |26568|Report Design|Data Sources|Prevented data source from being removed from report if all fields are unselected from that data source, when using Instant Reports.|
 |26579|Report Design|Subreports|Removed ability to use combo key within the VG block of an Analysis Grid and cleaned up AG construction methods.|
-|26645|Report Design|Printing|Fixed some errors related to the print menu in dashboards not loading at all or loading slowly.|
 |26659|Report Design|Filters|Manual entry filters lose focus for end user after 1000 milliseconds of inactivity, causing users to reposition the mouse in the text entry box after typing and stopping.|
 |26695|Report Design|Pivots|Fixed crash when using pivot and Izenda claims to "add pivot columns to report before removal of already existing ones was made".|
 |26702|Report Design|Printing|Added ability to page break on split when using a fixed number of columns per printed page, and a low number of records causes multiple sets of columns to appear on the same page.|
@@ -30,6 +29,8 @@
 |26880|Report Design|Subreports|Corrected a condition which would cause the subreport link of a field on the grid to not be read correctly by the Auto Chart visualization.|
 |26896|Report Design|Charts|Prevented user from selecting Gauge format for a field on the chart object.|
 |26904|API|Settings|Closed obscure loophole which could allow writing to reports without permission.|
+|26925|Report Design|Charts|Prevents chart label from being 0 or "Undefined" if a subreport is present on the chart.|
+
 
 -->
 
