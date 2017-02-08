@@ -1,10 +1,3 @@
-##Announcements
-[![] (/Home/2017UserConference.png)](https://www.izenda.com/embedded-bi-conference)
-
-[Join us for our 2017 User Conference January 22-24, 2017 Atlanta, GA](https://www.izenda.com/embedded-bi-conference)
-
-<br>
-
 ##Navigation
 Welcome to the wiki for Izenda - the real-time data analysis tool that provides self-service BI to organizations. 
 
