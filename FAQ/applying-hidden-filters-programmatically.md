@@ -54,7 +54,7 @@ public bool FilterCanBeAddedToReport(JoinedTableCollection jts, out Filter newFi
 ```visualbasic
 Public Overrides Sub PreExecuteReportSet(ByVal reportSet As ReportSet)
     If reportSet.IsDashBoard Then
-        Dim myReport As Report = reportSet.Reports(0)
+        Dim myReport As Report = reportSet.Reports(0) 'This report will always represent the dashboard tile currently being handled by the system.
         Dim newFilter As Filter = Nothing
         If FilterCanBeAddedToReport(myReport.JoinedTables, newFilter) Then
             myReport.Filters.Add(newFilter)
@@ -72,7 +72,7 @@ Public Function FilterCanBeAddedToReport(jts As JoinedTableCollection, ByRef new
     newFilter = Nothing
     For Each jt As JoinedTable In jts
         For Each col As Column In AdHocContext.Driver.DatabaseSchema.Tables(jt.DbTable.FullName).Columns.AllValues
-            If col.FullName.ToLower().Contains("Customer_ID".ToLower()) Then
+            If col.FullName.ToLower().Contains("CustomerID".ToLower()) Then 'replace "Customer_ID" with the column name to check for. If there is other criteria that must be met, then add that information into this if statement
                 newFilter = New Filter(col.FullName)
                 newFilter.Hidden = True
                 newFilter.Value = "BONAP"
