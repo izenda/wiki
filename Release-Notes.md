@@ -1,7 +1,5 @@
 [[_TOC_]]
 
-<!-- 
-
 # 6.10.0.15 (February 9, 2017)
 
 |Case|Category|Subcategory|Description|
@@ -30,9 +28,7 @@
 |26896|Report Design|Charts|Prevented user from selecting Gauge format for a field on the chart object.|
 |26904|API|Settings|Closed obscure loophole which could allow writing to reports without permission.|
 |26925|Report Design|Charts|Prevents chart label from being 0 or "Undefined" if a subreport is present on the chart.|
-
-
--->
+|26932|Report Design|Visualization|Fixed ReferenceError caused by Auto Gauge visualization.|
 
 # 6.10.0.14 (January 11, 2017)
 
