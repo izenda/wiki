@@ -47,3 +47,39 @@ public bool FilterCanBeAddedToReport(JoinedTableCollection jts, out Filter newFi
     }
     return toReturn;
 }
+```
+
+##VB.NET Method
+
+```visualbasic
+Public Overrides Sub PreExecuteReportSet(ByVal reportSet As ReportSet)
+    If reportSet.IsDashBoard Then
+        Dim myReport As Report = reportSet.Reports(0)
+        Dim newFilter As Filter = Nothing
+        If FilterCanBeAddedToReport(myReport.JoinedTables, newFilter) Then
+            myReport.Filters.Add(newFilter)
+        End If
+    Else
+        Dim newFilter As Filter = Nothing
+        If (FilterCanBeAddedToReport(reportSet.JoinedTables, newFilter)) Then
+            reportSet.Filters.Add(newFilter)
+        End If
+    End If
+End Sub
+
+Public Function FilterCanBeAddedToReport(jts As JoinedTableCollection, ByRef newFilter As Filter) As Boolean
+    Dim toReturn As Boolean = False
+    newFilter = Nothing
+    For Each jt As JoinedTable In jts
+        For Each col As Column In AdHocContext.Driver.DatabaseSchema.Tables(jt.DbTable.FullName).Columns.AllValues
+            If col.FullName.ToLower().Contains("Customer_ID".ToLower()) Then
+                newFilter = New Filter(col.FullName)
+                newFilter.Hidden = True
+                newFilter.Value = "BONAP"
+                toReturn = True
+            End If
+        Next
+    Next
+    Return toReturn
+End Function
+```
