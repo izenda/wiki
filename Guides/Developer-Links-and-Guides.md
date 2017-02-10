@@ -46,6 +46,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[Adding line breaks into long string values|/Guides/How-do-I-add-a-line-break-inside-of-a-block-of-text-in-my-database]]
 * [[Re-using the same filter values for multiple filters (Stored procedure parameters)|/FAQ/Questions/reusing-filter-values-for-stored-procedures]]
 * [[Using the izpid URL parameter to segregate user sessions on the same machine|/Guides/Developers/using-the-izpid-parameter]]
+* [[Applying hidden filters programmatically|/FAQ/applying-hidden-filters-programmatically]]
 
 ###Javascript Guides
 
