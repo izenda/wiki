@@ -9,7 +9,11 @@ Sometimes a situation arises where using the hidden filters collection will not 
 ```csharp
 public override void PreExecuteReportSet(ReportSet reportSet)
 {
-    if (reportSet.IsDashBoard)
+    bool isRenderingToVisualization = false;
+    try
+    { isRenderingToVisualization = (bool)reportSet.GetVolatileOption("VisualizationRendering"); } //Get the flag for whether this ReportSet is being used as source data for a visualization on a dashboard.
+    catch { }
+    if (reportSet.IsDashBoard && !isRenderingToVisualization)
     {
         Report myReport = reportSet.Reports[0]; //This report will always represent the dashboard tile currently being handled by the system.
         Filter newFilter = null;
@@ -20,6 +24,7 @@ public override void PreExecuteReportSet(ReportSet reportSet)
     }
     else
     {
+        //This case is used for the report viewer and for source data for visualizations on dashboards.
         Filter newFilter = null;
         if (FilterCanBeAddedToReport(reportSet.JoinedTables, out newFilter))
         {
@@ -36,7 +41,7 @@ public bool FilterCanBeAddedToReport(JoinedTableCollection jts, out Filter newFi
     {
         foreach (Column col in AdHocContext.Driver.DatabaseSchema.Tables[jt.DbTable.FullName].Columns.AllValues)
         {
-            if (col.FullName.ToLower().Contains("CustomerID".ToLower())) //replace "Customer_ID" with the column name to check for. If there is other criteria that must be met, then add that information into this if statement
+            if (col.FullName.ToLower().Contains("CustomerID".ToLower())) //replace "Customer_ID" with the column name to check for. If there is other criteria that must be met, then add that information into this if statement.
             {
                 newFilter = new Filter(col.FullName);
                 newFilter.Hidden = true;
@@ -53,13 +58,19 @@ public bool FilterCanBeAddedToReport(JoinedTableCollection jts, out Filter newFi
 
 ```visualbasic
 Public Overrides Sub PreExecuteReportSet(ByVal reportSet As ReportSet)
-    If reportSet.IsDashBoard Then
+    Dim isRenderingToVisualization As Boolean = False
+    Try
+        isRenderingToVisualization = reportSet.GetVolatileOption("VisualizationRendering") 'Get the flag for whether this ReportSet is being used as source data for a visualization on a dashboard.
+    Catch
+    End Try
+    If reportSet.IsDashBoard AndAlso Not isRenderingToVisualization Then
         Dim myReport As Report = reportSet.Reports(0) 'This report will always represent the dashboard tile currently being handled by the system.
         Dim newFilter As Filter = Nothing
         If FilterCanBeAddedToReport(myReport.JoinedTables, newFilter) Then
             myReport.Filters.Add(newFilter)
         End If
     Else
+        'This case is used for the report viewer and for source data for visualizations on dashboards.
         Dim newFilter As Filter = Nothing
         If (FilterCanBeAddedToReport(reportSet.JoinedTables, newFilter)) Then
             reportSet.Filters.Add(newFilter)
@@ -72,7 +83,7 @@ Public Function FilterCanBeAddedToReport(jts As JoinedTableCollection, ByRef new
     newFilter = Nothing
     For Each jt As JoinedTable In jts
         For Each col As Column In AdHocContext.Driver.DatabaseSchema.Tables(jt.DbTable.FullName).Columns.AllValues
-            If col.FullName.ToLower().Contains("CustomerID".ToLower()) Then 'replace "Customer_ID" with the column name to check for. If there is other criteria that must be met, then add that information into this if statement
+            If col.FullName.ToLower().Contains("CustomerID".ToLower()) Then 'replace "Customer_ID" with the column name to check for. If there is other criteria that must be met, then add that information into this if statement.
                 newFilter = New Filter(col.FullName)
                 newFilter.Hidden = True
                 newFilter.Value = "BONAP"
