@@ -182,7 +182,7 @@ Public Class GroupByFiscalYearFunction
 
     Public ReadOnly Property Formatters() As IFormatter() Implements IAggregateFunction.Formatters
         Get
-            Return New IFormatter(0) {}
+            Return New IFormatter() {}
         End Get
     End Property
 
