@@ -1,5 +1,4 @@
-We are currently updating this page. Please bear with us as we make these changes.
-<!-- #AggregateFunctions
+#AggregateFunctions
 
 [[_TOC_]]
 
@@ -23,7 +22,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     //Creates a connection to Microsoft SQL Server
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    AdHocSettings.AggregateFunctions["Group By Fiscal Year"] = new SimpleAggregateFunction("DATEPART(yyyy, DATEADD(mm, 3, {0}))", "Group (Fiscal Year)", new SqlTypeGroup[] { SqlTypeGroup.Date, SqlTypeGroup.DateTime }, true, true); //The relevant setting
+    AdHocSettings.AggregateFunctions["Group By Absolute Value"] = new SimpleAggregateFunction("ABS", "Group (Absolute Value)", new SqlTypeGroup[] { SqlTypeGroup.Numeric, SqlTypeGroup.Real }, true, true); //The relevant setting
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
@@ -44,7 +43,7 @@ Public Class CustomAdHocConfig
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
-        AdHocSettings.AggregateFunctions("Group By Fiscal Year") = new SimpleAggregateFunction("DATEPART(yyyy, DATEADD(mm, 3, {0}))", "Group (Fiscal Year)", new SqlTypeGroup() { SqlTypeGroup.Date, SqlTypeGroup.DateTime }, True, True) 'The relevant setting
+        AdHocSettings.AggregateFunctions("Group By Absolute Value") = New SimpleAggregateFunction("ABS", "Group (Absolute Value)", New SqlTypeGroup() {SqlTypeGroup.Numeric, SqlTypeGroup.Real}, True, True) 'The relevant setting
         HttpContext.Current.Session("ReportingInitialized") = True
     End Sub
 End Class
@@ -52,7 +51,6 @@ End Class
 
 ##Screenshots
 
-**The Group By Fiscal Year Function**
+**The Group By Absolute Value Function**
 
-![](/API/CodeSamples/AggregateFunctions/group_by_fiscal_year.png)
--->
+![](/API/CodeSamples/AggregateFunctions/aggregate_function.png)
