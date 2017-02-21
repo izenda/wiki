@@ -483,8 +483,10 @@ Two top logos have changed as below
 
 ![Test](/Guides/MVC-Integration/Logo_Change2.png)
 
+##Developers notes
+
+Developers will want to use caution when implementing customizations to the standard MVC kit involving asynchronous methods. Due to the way asynchronous methods are handled in ASP.NET MVC, constructs such as SessionState and HttpContext are not available due to the process running in a parallel thread to the main thread. When these are unavailable then the call could result in an HttpException reading "Cannot redirect after HTTP headers have been sent" or something similar. Therefore, it is inadvisable to use asynchronous calls to process MVC actions involving the Izenda product code. For more information on asynchronous calls in ASP.NET MVC, there is a tutorial on it [[here|https://docs.microsoft.com/en-us/aspnet/mvc/overview/performance/using-asynchronous-methods-in-aspnet-mvc-4]]
+
 <!--
 [Izenda MVC Kit Integration Guide Phase II](http://wiki.izenda.us/Guides/MVC-Integration/Phase-II-Draft)
 -->
-
- 
