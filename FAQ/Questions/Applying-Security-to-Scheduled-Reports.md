@@ -11,12 +11,13 @@ This code sample shows how to apply security for the owner of the report when it
 ```csharp
 public override void PreExecuteReportSet(Izenda.AdHoc.ReportSet reportSet)
   {
-    bool scheduler = AdHocSettings.CurrentUserName.Equals("DefaultAdministrator");
-    if (scheduler)
+    bool scheduler = AdHocSettings.CurrentUserName.Equals(AdHocSettings.DefaultUserName); //For the scheduler, the CurrentUserName will be the DefaultUserName as no user has logged in using the normal process.
+    if (scheduler && reportSet.SendEmailAs != SchedulerOutput.SchedulerOutputType.Link.ToString()) //Do not need to perform this step if the report is sent as a link
       {
-        Filter f = new Filter("TenantID");
-        f.Value = LookupTenantIDFromUser(reportSet.UserName); //Write your own implementation of this method
-        reportSet.Filters.AddHidden(f);
+        AdHocSettings.TenantField = "TenantID"; //CurrentUserTenantId is already set from running run_scheduled_reports with tenants=tenant1,tenant2,etc... and TenantField uses CurrentUserTenantId as its value.
+        Filter f = new Filter("Field_Derived_From_User");
+        f.Value = LookupDerivedTenantValue(reportSet.UserName); //Write your own implementation of this method. This will get the value for the field that should be derived from your user (the report owner) inside the tenant being run.
+        reportSet.Filters.AddHidden(f); //add the temporary hidden filter. Normally this would be done during initialization. But since we didn't know the user's login information at initialization then we have to improvise.
       }
   } //end method
 ```
@@ -25,11 +26,12 @@ public override void PreExecuteReportSet(Izenda.AdHoc.ReportSet reportSet)
 
 ```visualbasic
 Public Overrides Sub PreExecuteReportSet(ByVal reportSet As Izenda.AdHoc.ReportSet)
-    Dim scheduler As Boolean = AdHocSettings.CurrentUserName.Equals("DefaultAdministrator")
-    If scheduler Then
-        Dim f As Filter = New Filter("TenantID")
-        f.Value = LookupTenantIDFromUser(reportSet.UserName) 'Write your own implementation of this method
-        reportSet.Filters.AddHidden(f)
+    Dim scheduler As Boolean <> AdHocSettings.CurrentUserName.Equals(AdHocSettings.DefaultUserName) 'For the scheduler, the CurrentUserName will be the DefaultUserName as no user has logged in using the normal process.
+    If scheduler AndAlso reportSet.SendEmailAs = SchedulerOutput.SchedulerOutputType.Link.ToString() Then 'Do not need to perform this step if the report is sent as a link
+        AdHocSettings.TenantField = "TenantID" 'CurrentUserTenantId is already set from running run_scheduled_reports with tenants=tenant1,tenant2,etc... and TenantField uses CurrentUserTenantId as its value.
+        Dim f As Filter = New Filter("Field_Derived_From_User")
+        f.Value = LookupDerivedTenantValue(reportSet.UserName) 'Write your own implementation of this method. This will get the value for the field that should be derived from your user (the report owner) inside the tenant being run.
+        reportSet.Filters.AddHidden(f) 'add the temporary hidden filter. Normally this would be done during initialization. But since we didn't know the user's login information at initialization then we have to improvise.
     End If
 End Sub 'end method
 ```
@@ -42,4 +44,4 @@ The Email Scheduler in the reporting system does not have a way to provide authe
 
 ##Per-user Security On Scheduled Reports
 
-Scheduled reports only supports per-user security using the Link format.  Scheduled attachments will not apply hidden filters normally, but you can apply security through [[PreExecuteReportSet()|/FAQ/PreExecuteReportSet]] based on the security of the report owner.  If per-user security is required, the Link format will require the user to login before seeing the report.
+Scheduled reports only natively supports per-user security using the Link format.  Reports scheduled as attachments will not apply hidden filters normally unless using custom code as above based on the security of the report owner.  If per-user security is required and writing custom code to handle attached reports is too messy, the Link format will require the user to login before seeing the report, thus applying security as normal.
