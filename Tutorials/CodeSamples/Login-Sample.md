@@ -41,11 +41,11 @@ void btnLogin_Click(object sender, EventArgs args)
         loginValidator.IsValid = true;
         bool isAdmin;
         if (AuthenticateUser(userNameTextbox.Text, userPassword.Value, out isAdmin)) {
-            HttpContext.Current.Session["UserName"] = userNameTextbox.Text;
+            AdHocSettings.CurrentUserName = userNameTextbox.Text;
             if (isAdmin)
-                HttpContext.Current.Session["Role"] = "Admin";
+                AdHocSettings.CurrentUserRoles = new string[] { "Admin" };
             else
-                HttpContext.Current.Session["Role"] = "RegularUser";
+                AdHocSettings.CurrentUserRoles = new string[] { "RegularUser" };
             global_asax.CustomAdHocConfig.InitializeReporting();
             Page.Title = "Izenda - " + Izenda.AdHoc.AdHocSettings.CurrentUserName;
             Response.Redirect("ReportList.aspx");
