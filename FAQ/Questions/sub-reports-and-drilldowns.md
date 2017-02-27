@@ -18,6 +18,24 @@ _*NOTE:* This article will refer to this relationship between reports as both re
 
 Currently, Izenda subreporting does not support blank or null values. 
 
+###Group by week aggregate function
+
+The Group(Week) aggregate function does not normally function properly when used as a drilldown key in a report. This is because of the way the data is formatted in the report. In order for the drilldown key to be converted into a proper date to be used a key, the year must be present in the record itself, which Group(Week) does not do by default. To fix this, enable the year for the Group(Week) formatter using the code snippet below:
+
+```csharp
+((WeekFormatter) AdHocSettings.AggregateFunctions[StandardAggregateFunctionType.GROUP_BY_WEEK.ToString()].Formatters[0]).IncludeYear = true;
+```
+
+This will force the value of the Group(Week) function to return the year as well as the week and will enable it to be used as a drilldown key properly.
+
+With IncludeYear = false
+
+* Oct 14 - Oct 20
+
+With IncludeYear = true
+
+* Oct 14 - Oct 20 (1996)
+
 ###Subreports on charts
 
 In addition to creating drilldowns for your main report items, you can create subreports for [[pie charts|http://wiki.izenda.us/Guides/ReportDesign/7.0-Chart-tab#7.3-Pie-Selection]] and [[bar charts|http://wiki.izenda.us/Guides/ReportDesign/7.0-Chart-tab#7.5-Bar-Selection]] as well. Currently, these only support a single key value, specified via the Label field. These will work with reports that have one drilldown key defined, but not ones with two keys defined.
