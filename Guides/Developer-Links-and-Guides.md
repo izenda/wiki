@@ -75,3 +75,4 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[How do I use alternate filter values with stored procedure parameters versus what I display to the user?|http://wiki.izenda.us/FAQ/Questions/using-alternate-filter-values-with-stored-procedures]]
 * [[Creating a custom RS.aspx response|/FAQ/Questions/custom-rs-response]]
 * [[Izenda settings and setting scope|/Guides/izenda-setting-scope]]
+* [Handling the "Group by week" aggregations as drill-down keys](/FAQ/Questions/sub-reports-and-drilldowns#Group-by-week-aggregate-function)
