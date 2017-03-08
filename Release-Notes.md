@@ -1,7 +1,7 @@
 [[_TOC_]]
 
-<!--#6.10.0.16 BREAKING CHANGES--> 
-<!-- 
+#6.10.0.16 BREAKING CHANGES
+ 
 PLEASE NOTE THAT THIS RELEASE REQUIRES DOWNLOADING THE FULL REFERENCE IMPLEMENTATION AS WE ADDED ONE PAGE WHICH MUST BE ADDED TO YOUR IMPLEMENTATION. <br/>
 Please follow the steps below to update your current Izenda version:<br/>
 
@@ -48,7 +48,7 @@ Please follow the steps below to update your current Izenda version:<br/>
 |27086|Report Design|Subtotals|Fixed "outer reference" error when subtotaling a field using an expression which overwrites its output, causing the field to lose reference in the subtotal query.|
 |27149|Report Design|Sorting|Fixed grid sorting error related to ResourcesProviderUrl.|
 
--->
+
 # 6.10.0.15 (February 10, 2017)
 
 |Case|Category|Subcategory|Description|
