@@ -9,6 +9,45 @@ Please follow the steps below to update your current Izenda version:<br/>
 2. Unzip and locate the rp.aspx page. For MVC Kits this is in the Reporting folder. In Webforms and VB this is located in the root of the downloaded folder. 
 5. Copy the new rp.aspx page to all locations in your implementation containing the rs.aspx page (please ensure you search as some implementations have more than one location for this file.
 6. Locate the default.master page in Webforms or VB kit and _SiteLayout.cshtml in MVC kits. Find the following line <script type="text/javascript" src="Resources/js/main.js"></script> (this is CHANGE IS REQUIRED as the main.js file is no longer included in the kit and if this is not replaced there will be errors when you try to run the site) and replace with the following <script type="text/javascript" src="./rp.aspx?js=AdHocQuery"></script>. Find and replace all references to ./rs.aspx wtih ./rp.aspx (this is not required but making these changes will improve the loading speed for resources on the pages - this change removes blocking issues faced with resources loading)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|25750|API|Backend|Changed how resources are loaded to prevent intermittent errors when loading Dashboards related to "current result set is not a Dashboard" error, which seems to happen without pattern or cause.|
+|26111|Report Design|Expressions|Prevented a null reference exception from being thrown in some circumstances when using an expression to calculate a field and not setting an expression type.|
+|26609|API|Backend|Changed back end code to make it easier for filters to identify calculated fields by a guid rather than description string.|
+|26692|Report Design|Subreports|Corrected behavior of stored procedure params when inheriting filters across subreports.|
+|26731|Report Design|Subreports|Ensured parent report filters inherit to embedded subreports.|
+|26758|Report Design|Visual Groups|Fixed page break behavior when visually grouping in Analysis Grid style.|
+|26822|Report Design|Sorting|Corrected discrepancies in sort order between default and user-triggered sort.|
+|26848|Report Design|Pivots|Corrected problems when constructing pivots which caused fields to be hidden in error.|
+|26864|API|Settings|Expanded setting DataSourceLimit to incorporate Instant Reports.|
+|26873|Report Design|Exporting|Fixed some subtotals being dropped from a pivoted analysis grid during excel export.|
+|26877|User Interface|Instant Reports|Added report visibility control to Instant Report toolbar.|
+|26878|User Interface|Categories|Expanded support for custom characters such as # and ^ when creating categories.|
+|26889|API|Backend|Updated angular.js to 1.6.1.|
+|26893|Report Design|Instant Reports|Corrected some conditions under which the Instant Report designer would not properly update field descriptions.|
+|26894|Report Design|Subreports|Corrected issue which would prevent subreports from rendering correctly if a parent report has a filter on a calculated field.|
+|26924|Report Design|Settings|Changed handling of special character encoding in column headers.|
+|26980|Report Design|Settings|Fixed handling of url feature to prevent encoding or modification of strings which could lead to bad links built from data.|
+|26981|API|Backend|Cleaned up creation and deletion of temporary files when using the report scheduler.|
+|26983|API|Backend|Changed internal workings of databaseSchema method to be more responsive to report design modification.|
+|26990|Report Design|Settings|Suppressed help text from being appended to the end of a custom url.|
+|27004|Report Design|Dashboards|Corrected tile bounding and sizing in dashboards to prevent an error which prevents tiles from being extended to the edge of the dashboard page.|
+|27006|API|Backend|Separated resource loading from session state storage to prevent session variables from blocking the loading of resources.|
+|27020|API|Backend|Fixed an error which would happen if you attempted to bundle multiple resources through rs.aspx and one of those resources was empty.|
+|27029|API|Backend|Implemented izu and izp parameters for the service based scheduler. Previously these parameters could only be used with the task based scheduler.|
+|27032|Report Design|Visualizations|Corrected some rendering problems for visualizations when using Safari for Windows.|
+|27034|Report Design|Instant Reports|Corrected preview not displaying in old version of the Instant Reports designer.|
+|27040|User Interface|Instant Reports|Tweaked Instant Report toolbar to not obscure the preview window when minimized or on a small resolution or screen.|
+|27041|User Interface|Filters|Fixed arrows for datetime calendar control if focus is changed unexpectedly.|
+|27046|Report Design|Scheduler|Prevented the "Run Once" scheduler time from resetting the next scheduled datetime in the scheduler to the maximum possible value.|
+|27053|API|Settings|Added setting, CacheExternalResources, which can be set to false to disable the caching of external resources.|
+|27061|API|Settings|Fixed error preventing ArchiveReportOutput not firing for some export types when using SchedulerOutput.|
+|27070|API|Settings|Prevented TimeZoneOffset from being applied to Time portion of a Datetime, also made offset apply to simple Date datatypes.|
+|27078|Report Design|Visualizations|Corrected issue which prevented Auto Chart visualization from rendering if the underlying grid is not aggregated.|
+|27086|Report Design|Subtotals|Fixed "outer reference" error when subtotaling a field using an expression which overwrites its output, causing the field to lose reference in the subtotal query.|
+|27149|Report Design|Sorting|Fixed grid sorting error related to ResourcesProviderUrl.|
+
 -->
 # 6.10.0.15 (February 10, 2017)
 
