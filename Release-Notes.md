@@ -6,9 +6,11 @@ PLEASE NOTE THAT THIS RELEASE REQUIRES DOWNLOADING THE FULL REFERENCE IMPLEMENTA
 Please follow the steps below to update your current Izenda version:<br/>
 
 1. Download the FULL RI <a href="http://archives.izenda.us/ri/">  Downloads RI Link   </a> 
-2. Unzip and locate the rp.aspx page. For MVC Kits this is in the Reporting folder. In Webforms and VB this is located in the root of the downloaded folder. 
-5. Copy the new rp.aspx page to all locations in your implementation containing the rs.aspx page (please ensure you search as some implementations have more than one location for this file.
-6. Locate the default.master page in Webforms or VB kit and _SiteLayout.cshtml in MVC kits. Find the following line <script type="text/javascript" src="Resources/js/main.js"></script> (this is CHANGE IS REQUIRED as the main.js file is no longer included in the kit and if this is not replaced there will be errors when you try to run the site) and replace with the following <script type="text/javascript" src="./rp.aspx?js=AdHocQuery"></script>. Find and replace all references to ./rs.aspx wtih ./rp.aspx (this is not required but making these changes will improve the loading speed for resources on the pages - this change removes blocking issues faced with resources loading)
+2. Unzip and copy the bin and resources to the corresponding website folders as would be done in a standard upgrade.
+3. Locate the rp.aspx page in the extracted folder. For MVC Kits this is in the Reporting folder. In Webforms and VB this is located in the root of the extracted folder. 
+4. Copy the new rp.aspx page to all locations in your implementation containing the rs.aspx page (please ensure you search as some implementations have more than one location for this file.
+5. Locate the default.master page in Webforms or VB kit and _SiteLayout.cshtml in MVC kits. Find the following line `<script type="text/javascript" src="Resources/js/main.js"></script>` and replace with the following: `<script type="text/javascript" src="./rp.aspx?js=AdHocQuery"></script>` (this CHANGE IS REQUIRED as the main.js file is no longer included in the kit, and if this is not replaced there will be errors when you try to run the site).
+6. Find and replace all references to ./rs.aspx wtih ./rp.aspx (this is not required but making these changes will improve the loading speed for resources on the pages - this change removes blocking issues faced with resources loading)
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
