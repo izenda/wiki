@@ -46,7 +46,7 @@ Please follow the steps below to update your current Izenda version:<br/>
 |27046|Report Design|Scheduler|Prevented the "Run Once" scheduler time from resetting the next scheduled datetime in the scheduler to the maximum possible value.|
 |27053|API|Settings|Added setting, CacheExternalResources, which can be set to false to disable the caching of external resources.|
 |27061|API|Settings|Fixed error preventing ArchiveReportOutput not firing for some export types when using SchedulerOutput.|
-|27070|API|Settings|Prevented TimeZoneOffset from being applied to Time portion of a Datetime, also made offset apply to simple Date datatypes.|
+|27070|API|Settings|Prevented TimeZoneOffset from being applied to simple Date or Time datatypes.|
 |27078|Report Design|Visualizations|Corrected issue which prevented Auto Chart visualization from rendering if the underlying grid is not aggregated.|
 |27086|Report Design|Subtotals|Fixed "outer reference" error when subtotaling a field using an expression which overwrites its output, causing the field to lose reference in the subtotal query.|
 |27149|Report Design|Sorting|Fixed grid sorting error related to ResourcesProviderUrl.|
