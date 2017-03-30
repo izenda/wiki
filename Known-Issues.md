@@ -5,34 +5,39 @@
 <!---[Known Issues Report](http://fogbugz.izenda.us/reporting/reportviewer.aspx?rn=Tracking_DO_NOT_EDIT\\KIL\\KnownIssues)-->
 ##Known Issues
 
+This list of issues is tenative and expected to change. Last updated on March 30, 2017.
+
 |Expected Release|Tenative Date|Case|Notes|
 |:----|:-----------|:----------------|:---------------|
-|March 7, 2017|6.10.0.16|25920|Removed dependence on Izenda's rs.aspx from being in the application root folder rather than an Izenda subfolder.|
-|March 7, 2017|6.10.0.16|26111|Prevented a null reference exception from being thrown in some circumstances when using an expression to calculate a field and not setting an expression type.|
-|March 7, 2017|6.10.0.16|26609|Changed back end code to make it easier for filters to identify calculated fields by a guid rather than description string.|
-|March 7, 2017|6.10.0.16|26673|Added support for filterable calculated fields in Instant Reports.|
-|March 7, 2017|6.10.0.16|26692|Corrected behavior of stored procedure params when inheriting filters across subreports.|
-|March 7, 2017|6.10.0.16|26731|Ensured parent report filters inherit to embedded subreports.|
-|March 7, 2017|6.10.0.16|26758|Fixed page break behavior when visually grouping in Analysis Grid style.|
-|March 7, 2017|6.10.0.16|26822|Corrected discrepancies in sort order between default and user-triggered sort.|
-|March 7, 2017|6.10.0.16|26848|Corrected problems when constructing pivots which caused fields to be hidden in error.|
-|March 7, 2017|6.10.0.16|26851|Using VG Hierarchy and Pivot at the same time throws an index exception when exported to PDF.|
-|March 7, 2017|6.10.0.16|26864|Expanded setting DataSourceLimit to incorporate Instant Reports.|
-|March 7, 2017|6.10.0.16|26873|Fixed some subtotals being dropped from a pivoted analysis grid during excel export.|
-|March 7, 2017|6.10.0.16|26877|Added report visibility control to Instant Report toolbar.|
-|March 7, 2017|6.10.0.16|26878|Expanded support for custom characters such as # and ^ when creating categories.|
-|March 7, 2017|6.10.0.16|26889|Updated angular.js to 1.6.1.|
-|March 7, 2017|6.10.0.16|26893|Corrected some conditions under which the Instant Report designer would not properly update field descriptions.|
-|March 7, 2017|6.10.0.16|26894|Corrected issue which would prevent subreports from rendering correctly if a parent report has a filter on a calculated field.|
-|March 7, 2017|6.10.0.16|26924|Changed handling of special character encoding in column headers.|
-|March 7, 2017|6.10.0.16|26926|Corrected page error preventing a column from appearing on the report output if added in the report viewer.|
-|March 7, 2017|6.10.0.16|26962|Consolidated some unused scripts to secure internal methods and increase safety.|
-|March 7, 2017|6.10.0.16|26980|Fixed handling of url feature to prevent encoding or modification of strings which could lead to bad links built from data.|
-|March 7, 2017|6.10.0.16|26981|Cleaned up creation and deletion of temporary files when using the report scheduler.|
-|March 7, 2017|6.10.0.16|26983|Changed internal workings of databaseSchema method to be more responsive to report design modification.|
-|March 7, 2017|6.10.0.16|26990|Suppressed help text from being appended to the end of a custom url.|
-|March 7, 2017|6.10.0.16|27004|Corrected tile bounding and sizing in dashboards to prevent an error which prevents tiles from being extended to the edge of the dashboard page.|
-|March 7, 2017|6.10.0.16|27020|Fixed an error which would happen if you attempted to bundle multiple resources through rs.aspx and one of those resources was empty.|
-|March 7, 2017|6.10.0.16|27034|Corrected preview not displaying in old version of the Instant Reports designer.|
-|March 7, 2017|6.10.0.16|27041|Fixed arrows for datetime calendar control if focus is changed unexpectedly.|
+|6.10.0.17|April 4|25992|Corrected some broken behavior around AdHocSettings.EmbedReportInServerEmail.|
+|6.10.0.17|April 4|26226|Corrected behavior of Hover drilldown style in Gauges tab.|
+|6.10.0.17|April 4|26415|Corrected inconsistency which could allow hidden filters to override tenantid in some cases.|
+|6.10.0.17|April 4|26539|Removed ability to add duplicate tiles to Dashboard.|
+|6.10.0.17|April 4|26591|Optimized memory usage when rendering Visualizations.|
+|6.10.0.17|April 4|26673|Added support for filterable calculated fields in Instant Reports.|
+|6.10.0.17|April 4|26798|Corrected issue which could sometimes prevent field descriptions from loading when using Instant Reports.|
+|6.10.0.17|April 4|26851|Using VG Hierarchy and Pivot at the same time throws an index exception when exported to PDF.|
+|6.10.0.17|April 4|26962|Consolidated some unused scripts to secure internal methods and increase safety.|
+|6.10.0.17|April 4|26975|Corrected oversight which swapped dd/mm date format in date filters for mm/dd even when using a culture token override.|
+|6.10.0.17|April 4|26988|Updated Ajax requests across Izenda to minimize browser hanging.|
+|6.10.0.17|April 4|26992|Improved handling of special characters, spaces, and tabs in filter values when using multi-line populated filter operators.|
+|6.10.0.17|April 4|27073|Modified date filters to prevent first portion of a date range from being set to a later date than the last portion of a date range.|
+|6.10.0.17|April 4|27089|Fixed some gaps which allowed XSS and scripts to run in a report even when ApplyAntiXssToReportOutput = true;|
+|6.10.0.17|April 4|27101|Suppressed internal designation of "field@group" from appearing in a fieldl description in Instant Reports when using a group header.|
+|6.10.0.17|April 4|27108|Corrected "Invalid Column Name" error when joining a virtual data source to a normal data source.|
+|6.10.0.17|April 4|27113|Tweaked error messages in Instant Reports to make them more visible to the user and harder to click past.|
+|6.10.0.17|April 4|27120|Fixed a discrepancy in how the report viewer and report designer handle the "..." ellipsis character in a filter using the equals checkbox operator. This could cause the first value in a filtered list to be missing.|
+|6.10.0.17|April 4|27129|Prevented setting expression type without an expression present.|
+|6.10.0.17|April 4|27158|Corrected csv export error claiming a datasource has an invalid object name when using a stored procedure in a Fusion environment.|
+|6.10.0.17|April 4|27175|Corrected a missing font error in bootstrap.min.css in the 6.10.0.16 reference implementation.|
+|6.10.0.17|April 4|27182|Added ability to recognize and accept secured http connections to scheduler.|
+|6.10.0.17|April 4|27205|Removed extra line added when exporting report with embedded subreport to Excel.|
+|6.10.0.17|April 4|27223|Fixed scheduler error which can change the value of AdHocSettings.ResponseServer.|
+|6.10.0.17|April 4|27224|Corrected error which caused scheduler to override the ResponseServer setting.|
+|6.10.0.17|April 4|27231|Reimplemented how and when UpdateSchemaCache is called in a new session.|
+|6.10.0.17|April 4|27238|Changed how javascript is defined in response to a recent Chrome update (57.0.2987) that can result in odd UI behavior as critical variables are dropped from browser memory.|
+|6.10.0.17|April 4|27256|Cleaned up and made unavailable some incompatible filter operators when selecting a stored procedure parameter in Instant Reports.|
+|6.10.0.17|April 4|27257|Changed when scrollbars display on Dashboards to make them appear less often, especially when unnecessary.|
+|6.10.0.17|April 4|27258|Made friendlier errors in Dashboards when loading an empty title in Gallery mode.|
+|6.10.0.17|April 4|27306|Corrected issue with Instant Reports not passing a value correctly in a datetime filter when moving from report viewing to editing.|
 
