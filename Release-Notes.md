@@ -1,5 +1,51 @@
 [[_TOC_]]
 
+<!--
+
+#6.10.0.17 (April 5, 2017)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|25992|API|Settings|Corrected some broken behavior around AdHocSettings.EmbedReportInServerEmail.|
+|26226|Report Design|Subreports|Corrected behavior of Hover drilldown style in Gauges tab.|
+|26415|API|Hidden Filters|Corrected inconsistency which could allow hidden filters to override tenantid in some cases.|
+|26539|Report Design|Dashboards|Removed ability to add duplicate tiles to Dashboard.|
+|26622|API|Driver|Allowed Fusion driver to accept wildcards in multipart identifier.|
+|26673|Report Design|Filters|Added support for filterable calculated fields in Instant Reports.|
+|26798|Report Design|User Interface|Corrected issue which could sometimes prevent field descriptions from loading when using Instant Reports.|
+|26851|Report Design|Exports|Using VG Hierarchy and Pivot at the same time throws an index exception when exported to PDF.|
+|26912|API|Settings|Expanded TimeZoneOffset setting to apply to In Time Period filter as well.|
+|26962|API|Backend|Consolidated some unused scripts to secure internal methods and increase safety.|
+|26975|Report Design|Filters|Corrected oversight which swapped dd/mm date format in date filters for mm/dd even when using a culture token override.|
+|26988|API|Backend|Updated Ajax requests across Izenda to minimize browser hanging.|
+|26992|Report Design|Filters|Improved handling of special characters, spaces, and tabs in filter values when using multi-line populated filter operators.|
+|27007|Report Design|Filters|Changed behavior of report viewer such that if a calculated field is removed from the report body, any filters based on that field are also removed.|
+|27073|Report Design|Filters|Modified date filters to prevent first portion of a date range from being set to a later date than the last portion of a date range.|
+|27089|API|Settings|Fixed some gaps which allowed XSS and scripts to run in a report even when ApplyAntiXssToReportOutput = true;|
+|27101|Report Design|User Interface|Suppressed internal designation of "field@group" from appearing in a fieldl description in Instant Reports when using a group header.|
+|27108|Report Design|Data Sources|Corrected "Invalid Column Name" error when joining a virtual data source to a normal data source.|
+|27113|Report Design|Instant Reports|Tweaked error messages in Instant Reports to make them more visible to the user and harder to click past.|
+|27120|Report Design|Filters|Fixed a discrepancy in how the report viewer and report designer handle the "..." ellipsis character in a filter using the equals checkbox operator. This could cause the first value in a filtered list to be missing.|
+|27129|Report Design|Expressions|Prevented setting expression type without an expression present.|
+|27158|Report Design|Exports|Corrected csv export error claiming a datasource has an invalid object name when using a stored procedure in a Fusion environment.|
+|27175|Report Design|User Interface|Corrected a missing font error in bootstrap.min.css in the 6.10.0.16 reference implementation.|
+|27182|Report Design|Scheduler|Added ability to recognize and accept secured http connections to scheduler.|
+|27204|API|Settings|Updated comments in code to show AdHocSettings.ShowModifyButton as deprecated. Customers should use AdHocSettings.ShowDesignLinks instead.|
+|27205|Report Design|Exports|Removed extra line added when exporting report with embedded subreport to Excel.|
+|27223|Report Design|Scheduler|Fixed scheduler error which can change the value of AdHocSettings.ResponseServer.|
+|27224|Report Design|Visualizations|Prevented javascript errors from appearing when a current user/tenant setting conflicts with hidden filters.|
+|27231|API|Backend|Reimplemented how and when UpdateSchemaCache is called in a new session.|
+|27238|API|Backend|Changed how javascript is defined in response to a recent Chrome update (57.0.2987) that can result in odd UI behavior as critical variables are dropped from browser memory.|
+|27256|Report Design|Filters|Cleaned up and made unavailable some incompatible filter operators when selecting a stored procedure parameter in Instant Reports.|
+|27258|Report Design|Dashboards|Made friendlier errors in Dashboards when loading an empty title in Gallery mode.|
+|27306|Report Design|Filters|Corrected issue with Instant Reports not passing a value correctly in a datetime filter when moving from report viewing to editing.|
+|27316|Report Design|User Interface|Changed size of value ranges input box on charts tab.|
+|27332|Report Design|Filters|Corrected an issue which prevented some filters from populating correctly if a calculated field were used as the first filter on a report.|
+|27347|API|Backend|Prevented "Response is not available in this context" errors from appearing when Izenda is under heavy load from many users.|
+|27349|Report Design|Exports|Prevented an issue which could cause Instant Reports to fail to produce a PDF export.|
+
+--->
+
 #6.10.0.16 (March 8, 2017) BREAKING CHANGES
  
 PLEASE NOTE THAT THIS RELEASE REQUIRES DOWNLOADING THE FULL REFERENCE IMPLEMENTATION AS WE ADDED ONE PAGE WHICH MUST BE ADDED TO YOUR IMPLEMENTATION. <br/>
