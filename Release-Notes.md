@@ -1,6 +1,5 @@
 [[_TOC_]]
 
-<!--
 
 #6.10.0.17 (April 5, 2017)
 
@@ -44,7 +43,7 @@
 |27347|API|Backend|Prevented "Response is not available in this context" errors from appearing when Izenda is under heavy load from many users.|
 |27349|Report Design|Exports|Prevented an issue which could cause Instant Reports to fail to produce a PDF export.|
 
---->
+
 
 #6.10.0.16 (March 8, 2017) BREAKING CHANGES
  
