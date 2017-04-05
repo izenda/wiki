@@ -14,7 +14,7 @@
 |26798|Report Design|User Interface|Corrected issue which could sometimes prevent field descriptions from loading when using Instant Reports.|
 |26851|Report Design|Exports|Using VG Hierarchy and Pivot at the same time throws an index exception when exported to PDF.|
 |26912|API|Settings|Expanded TimeZoneOffset setting to apply to In Time Period filter as well.|
-|26962|API|Security|Consolidated some unused scripts and updated some JS Methods to improve application secrurity.|
+|26962|API|Security|Consolidated some unused scripts and updated some JS Methods to improve application security.|
 |26975|Report Design|Filters|Corrected oversight which swapped dd/mm date format in date filters for mm/dd even when using a culture token override.|
 |26988|API|Backend|Updated Ajax requests across Izenda to minimize browser hanging.|
 |26992|Report Design|Filters|Improved handling of special characters, spaces, and tabs in filter values when using multi-line populated filter operators.|
