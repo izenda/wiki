@@ -5,39 +5,25 @@
 <!---[Known Issues Report](http://fogbugz.izenda.us/reporting/reportviewer.aspx?rn=Tracking_DO_NOT_EDIT\\KIL\\KnownIssues)-->
 ##Known Issues
 
-This list of issues is tenative and expected to change. Last updated on March 30, 2017.
+This list of issues is tentative and expected to change. Last updated on April 10, 2017.
 
 |Expected Release|Tenative Date|Case|Notes|
 |:----|:-----------|:----------------|:---------------|
-|6.10.0.17|April 4|25992|Corrected some broken behavior around AdHocSettings.EmbedReportInServerEmail.|
-|6.10.0.17|April 4|26226|Corrected behavior of Hover drilldown style in Gauges tab.|
-|6.10.0.17|April 4|26415|Corrected inconsistency which could allow hidden filters to override tenantid in some cases.|
-|6.10.0.17|April 4|26539|Removed ability to add duplicate tiles to Dashboard.|
-|6.10.0.17|April 4|26591|Optimized memory usage when rendering Visualizations.|
-|6.10.0.17|April 4|26673|Added support for filterable calculated fields in Instant Reports.|
-|6.10.0.17|April 4|26798|Corrected issue which could sometimes prevent field descriptions from loading when using Instant Reports.|
-|6.10.0.17|April 4|26851|Using VG Hierarchy and Pivot at the same time throws an index exception when exported to PDF.|
-|6.10.0.17|April 4|26962|Consolidated some unused scripts to secure internal methods and increase safety.|
-|6.10.0.17|April 4|26975|Corrected oversight which swapped dd/mm date format in date filters for mm/dd even when using a culture token override.|
-|6.10.0.17|April 4|26988|Updated Ajax requests across Izenda to minimize browser hanging.|
-|6.10.0.17|April 4|26992|Improved handling of special characters, spaces, and tabs in filter values when using multi-line populated filter operators.|
-|6.10.0.17|April 4|27073|Modified date filters to prevent first portion of a date range from being set to a later date than the last portion of a date range.|
-|6.10.0.17|April 4|27089|Fixed some gaps which allowed XSS and scripts to run in a report even when ApplyAntiXssToReportOutput = true;|
-|6.10.0.17|April 4|27101|Suppressed internal designation of "field@group" from appearing in a fieldl description in Instant Reports when using a group header.|
-|6.10.0.17|April 4|27108|Corrected "Invalid Column Name" error when joining a virtual data source to a normal data source.|
-|6.10.0.17|April 4|27113|Tweaked error messages in Instant Reports to make them more visible to the user and harder to click past.|
-|6.10.0.17|April 4|27120|Fixed a discrepancy in how the report viewer and report designer handle the "..." ellipsis character in a filter using the equals checkbox operator. This could cause the first value in a filtered list to be missing.|
-|6.10.0.17|April 4|27129|Prevented setting expression type without an expression present.|
-|6.10.0.17|April 4|27158|Corrected csv export error claiming a datasource has an invalid object name when using a stored procedure in a Fusion environment.|
-|6.10.0.17|April 4|27175|Corrected a missing font error in bootstrap.min.css in the 6.10.0.16 reference implementation.|
-|6.10.0.17|April 4|27182|Added ability to recognize and accept secured http connections to scheduler.|
-|6.10.0.17|April 4|27205|Removed extra line added when exporting report with embedded subreport to Excel.|
-|6.10.0.17|April 4|27223|Fixed scheduler error which can change the value of AdHocSettings.ResponseServer.|
-|6.10.0.17|April 4|27224|Corrected error which caused scheduler to override the ResponseServer setting.|
-|6.10.0.17|April 4|27231|Reimplemented how and when UpdateSchemaCache is called in a new session.|
-|6.10.0.17|April 4|27238|Changed how javascript is defined in response to a recent Chrome update (57.0.2987) that can result in odd UI behavior as critical variables are dropped from browser memory.|
-|6.10.0.17|April 4|27256|Cleaned up and made unavailable some incompatible filter operators when selecting a stored procedure parameter in Instant Reports.|
-|6.10.0.17|April 4|27257|Changed when scrollbars display on Dashboards to make them appear less often, especially when unnecessary.|
-|6.10.0.17|April 4|27258|Made friendlier errors in Dashboards when loading an empty title in Gallery mode.|
-|6.10.0.17|April 4|27306|Corrected issue with Instant Reports not passing a value correctly in a datetime filter when moving from report viewing to editing.|
+|6.10.0.18|May 2|22876|Using ProcessEqualsSelectList to retrieve a list of filter values with the "Doesn't equal" filter operator returns no results.|
+|6.10.0.18|May 2|25548|Custom Equals(Popup) not appearing|
+|6.10.0.18|May 2|25920|Removed dependence on Izenda's rs.aspx from being in the application root folder rather than an Izenda subfolder.|
+|6.10.0.18|May 2|26591|Optimized memory usage when rendering Visualizations.|
+|6.10.0.18|May 2|26933|If visualization cannot be rendered due to a lack of data, message should be displayed stating "No Data to Display"|
+|6.10.0.18|May 2|27076|Removing AdHocSettings.ToolbarBackgroundImageUrl which is no longer used in application.|
+|6.10.0.18|May 2|27131|Issues with Page Break and Separator on VG Hierarchy and Analysis Grid|
+|6.10.0.18|May 2|27155|In dashboard when "update results" is clicked several times, first time it works fine, and on second time filters disappear (because report suddenly becomes "not-dashboard").|
+|6.10.0.18|May 2|27162|Intermittent Null Reference Error due to not-thread-safe work with dictionaries|
+|6.10.0.18|May 2|27174|Added ability to set "Enable Responsive Grid" setting value for each tile individually: value depends on source report setting value. If source report uses the responsive grid - dashboard tile will it use too.|
+|6.10.0.18|May 2|27257|Changed when scrollbars display on Dashboards to make them appear less often, especially when unnecessary.|
+|6.10.0.18|May 2|27327|Case sensitivity causes issues with some text groupings in Visual Groups.|
+|6.10.0.18|May 2|27330|Changed field alias swap from Total2 to Total for columns in the summary.|
+|6.10.0.18|May 2|27344|When user opens dashboard in the gallery mode for the first time, missing font errors are displayed in browser console.|
+|6.10.0.18|May 2|27370|Receiving JS errors in some pages when navigating from new Instant Reports or New Dashboard page to another page in Izenda before page is fully loaded.|
+|6.10.0.18|May 2|27388|Angular refactoring, unify all parts of the angular code which use $location service.|
+
 
