@@ -96,6 +96,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[Can I run javascript when a user clicks on a report element?|/FAQ/Questions/running-javascript-on-report-elements]]
 - [[How do I use datediff function in expression?|/FAQ/How-to-use-datediff]]
 - [[Why don't page headers appear in HTML print?|/FAQ/page-header-not-showing-up-in-HTML-print]]
+- [[Why can't I use group by week in a subreport action?|/FAQ/Why-cant-I-use-Group-by-Week-on-a-datetime-for-a-subreport-action]]
 
 ##Scheduler
 
