@@ -1,5 +1,46 @@
 [[_TOC_]]
 
+<!--
+#6.10.0.18 (May 2, 2017) IMPORTANT NOTICE FOR AZURE USERS
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|27317|API|Optimization|Upgraded EVO PDF generator to version 7. **Please note if you are using the Azure service you will need to use the 7 version of the service as well which can be found here:** http://www.evopdf.com/azure-html-to-pdf-converter.aspx  **Further instructions are provided for setting this up here on our wiki:** http://wiki.izenda.us/API/CodeSamples/PdfPrintMode/Pdf-Exports-in-Azure-Websites.docx|
+|22876|API|Settings|Using ProcessEqualsSelectList to retrieve a list of filter values with the "Doesn't equals" filter operator returns no results.|
+|25548|Report Design|Filters|Corrected custom Equals(Popup) not appearing.|
+|26591|API|Optimization|Optimized memory usage when rendering Visualizations.|
+|26717|Report Design|Filters|Prevented (calc) fields from appearing in filter dropdown selection when unnecessary, such as when there is no change to a field except for an alias.|
+|26931|Report Design|Dashboards|Allowed ability to set and store dashboard background color in a cookie.|
+|26933|Report Design|Visualization|If visualization cannot be rendered due to a lack of data, message should be displayed stating "No Data to Display"|
+|27076|API|Settings|Removing AdHocSettings.ToolbarBackgroundImageUrl which is no longer used in application.|
+|27131|Report Design|Visual Groups|Issues with Page Break and Separator on VG Hierarchy and Analysis Grid|
+|27155|Report Design|Dashboards|In dashboard when "update results" is clicked several times, after the first time filters disappear because the dashboard loses the 'Is Dashboard' flag.|
+|27162|API|Optimization|Intermittent Null Reference Error due to not-thread-safe work with dictionaries|
+|27174|Report Design|Dashboards|Added ability to set "Enable Responsive Grid" setting value for each tile individually: value depends on source report setting value. If source report uses the responsive grid - dashboard tile will it use too.|
+|27177|API|Drivers|Refactored Fusion driver for OData connections.|
+|27206|API|Optimization|Corrected internal methods used in Calendar.cs to prevent rare index out of range errors.|
+|27257|Report Design|Dashboards|Changed when scrollbars display on Dashboards to make them appear less often, especially when unnecessary.|
+|27277|API|Drivers|Optimized use of AdHocSettings.Driver in Fusion.|
+|27282|Report Design|Scheduler|Corrected problem which would reset the default time zone in the dashboard scheduler.|
+|27296|Report Design|Report List|Corrected an issue preventing the category name from being listed along with the report name on some reports.|
+|27304|API|Drivers|Changed how field aliases are assigned by the Fusion driver to prevent "object reference" errors from appearing when using an expression - the issue is that an alias can be assigned without a field name, causing conflicts where the expression could not distinguish a distinct field.|
+|27327|Report Design|Visual Groups|Case sensitivity causes issues with some text groupings in Visual Groups.|
+|27330|Report Design|Summary|Changed field alias swap from Total2 to Total for columns in the summary.|
+|27344|Report Design|Dashboards|When user opens dashboard in the gallery mode for the first time, missing font errors are displayed in browser console.|
+|27370|Report Design|Dashboards|Receiving JS errors in some pages when navigating from new Instant Reports or New Dashboard page to another page in Izenda before page is fully loaded.|
+|27388|API|Optimization|Angular refactoring, unify all parts of the angular code which use $location service.|
+|27394|API|Optimization|Refactored some methods inside of ReadXml().|
+|27422|Report Design|Subreports|Fixed error preventing reports with long names from being used as a subreport in a form.|
+|27440|Report Design|Scheduler|Added error message when report xml does not have a SendEmailAs property for the scheduler and is scheduled to be run, causing a null reference exception.|
+|27442|Report Design|Settings|Corrected problem preventing header images from being included in a report when designed with the Instant Report designer.|
+|27445|Report Design|Visualization|Corrected error where two copies of the same visualization with different filter settings would have the filter from the first visualization applied to both visualizations in print export.|
+|27453|Report Design|Dashboards|Fixed error in URL handling which prevented dashboard URLs from being emailed properly, and the recipient has to log in to Izenda to view the linked object.|
+|27467|Report Design|Data Sources|Prevented datasources from duplicating when switching from advanced to simple data source selection, and back again. Further fixes are scheduled for 6.10.0.19.|
+|27475|Report Design|Visual Groups|Prevented initial VG value from being dropped when combining a visual group style other than field value with the "show report in field value" checkbox.|
+|27514|Report Design|Dashboards|Dashboards showing extra pages when exporting to PDF|
+|27547|Report Design|Charts|Prevented "vis.safeWrapper is not a function" error from appearing when creating charts in Instant Reports.|
+
+-->
 
 #6.10.0.17 (April 5, 2017)
 
