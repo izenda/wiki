@@ -1,6 +1,6 @@
 [[_TOC_]]
 
-<!--
+
 #6.10.0.18 (May 2, 2017) IMPORTANT NOTICE FOR AZURE USERS
 
 |Case|Category|Subcategory|Description|
@@ -40,7 +40,6 @@
 |27514|Report Design|Dashboards|Dashboards showing extra pages when exporting to PDF|
 |27547|Report Design|Charts|Prevented "vis.safeWrapper is not a function" error from appearing when creating charts in Instant Reports.|
 
--->
 
 #6.10.0.17 (April 5, 2017)
 
