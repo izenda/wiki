@@ -137,3 +137,13 @@ Public Overrides Function CustomizeGuage(value As Double, min As Double, max As 
     Return result
 End Function
 ```
+
+###Samples
+
+Here is the background image used for the above examples:
+
+![](/FAQ/CustomizeGuage/cg.png)
+
+And here is the completely rendered gauge using some sample data:
+
+![](/FAQ/CustomizeGuage/screenshot.png)
