@@ -1,5 +1,7 @@
 #CustomizeGuage
 
+[[_TOC_]]
+
 ##About
 
 This method allows customization of the gauge that is rendered on reports. Since the gauge image returned is static, this override will not work for animated or interactive gauges.
