@@ -138,7 +138,7 @@ Public Overrides Function CustomizeGuage(value As Double, min As Double, max As 
 End Function
 ```
 
-###Samples
+##Samples
 
 Here is the background image used for the above examples:
 
