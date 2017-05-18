@@ -86,7 +86,7 @@ Public Overrides Function CustomizeGuage(value As Double, min As Double, max As 
     myCircularGauge.Size.Width = dashboardGaugeWidth / 2
     myCircularGauge.Size.Height = dashboardGaugeWidth / 2
     myCircularGauge.Scales("Default").Maximum = max
-    myCircularGauge.Scales("Default").Minimum = min < 2 ? 0 : min
+    myCircularGauge.Scales("Default").Minimum = If(min < 2, 0, min)
     myCircularGauge.Scales("Default").StartAngle = 45
     myCircularGauge.Scales("Default").SweepAngle = 270
     myCircularGauge.Pointers("Default").Value = value
