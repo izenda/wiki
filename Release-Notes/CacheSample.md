@@ -1,3 +1,4 @@
+```csharp
 using AdHoc.Cache.DataCache;
 using System;
 using System.Collections.Generic;
@@ -53,3 +54,4 @@ public class CustomDbSchemaCache : IPermanentDataCache
 
 	#endregion
 }
+```
