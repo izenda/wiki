@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the path to the folder for storing temporary files.
+Gets or sets the path to the folder for storing temporary images for Dundas maps.
 
 * Datatype: string
 * Default value: TempFiles
