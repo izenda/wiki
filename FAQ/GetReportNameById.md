@@ -4,7 +4,7 @@
 
 ##About
 
-Provides an override to the process that obtains a report name based on the report ID.
+Provides an override to the process that obtains a report full name including category based on the report ID.
 
 ##C# Exmple
 
