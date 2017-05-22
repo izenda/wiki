@@ -4,7 +4,7 @@
 
 ##About
 
-Provides an override to the process that obtains a report ID based on the report name.
+Provides an override to the process that obtains a report ID based on the full report name including category.
 
 ##C Example
 
