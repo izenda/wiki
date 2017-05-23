@@ -74,3 +74,4 @@ public static void InitializeReporting()
     "server=zag.izenda.com;Database=Northwind;User ID="+ uname +
     ";Password=" + pw + ";Trusted_Connection=False";
 }
+```
