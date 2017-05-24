@@ -6,7 +6,7 @@
 
 This method allows for custom handling of whether specific fields can be used in filters or not. 
 
-Note: Overriding this method with custom behavior will cause certain settings to get ignored, such as HiddenColumns and FiltersRegex.
+Note: Overriding this method with custom behavior will cause certain settings to get ignored, such as [[HiddenColumns|FAQ/Izenda-API-Tip-Hidden-Columns]] and [[FiltersRegex|API/CodeSamples/FiltersRegex]].
 
 ##C♯ Example
 
