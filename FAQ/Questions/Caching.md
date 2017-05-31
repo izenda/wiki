@@ -10,7 +10,7 @@ What kinds of caching does Izenda use? Can I update the cache?
 
 Izenda caches your queries, reports and schema information automatically per browser session. By default, caching is stored in memory and in the temp folder of the server that Izenda is hosted on. 
 
-Since Izenda 6.8.0.7, Izenda checks the Database Schema cache available to it against the VisibleDataSources array set in InitializeReporting() to make sure it has every data sources it needs, and will update the cache accordingly, if necessary.  This eliminates the need for AdHocSettings.PerUserCaching = true, which tells Izenda to store a separate copy of the database schema cache for each user in session (ideal for load balanced environments to limit database calls).
+Since Izenda 6.8.0.7, Izenda checks the Database Schema cache available to it against the VisibleDataSources array set in InitializeReporting() to make sure it has every data sources it needs, and will update the cache accordingly, if necessary.  This eliminates the need for AdHocSettings.PerUserCaching = true, which tells Izenda to store a separate copy of the database schema cache for each user in session. 
 
 Here is a list of the caching methods - and links to their individual articles - that are available in case you wish to manipulate the different caches, although generally the caches will self-update as needed:
 
