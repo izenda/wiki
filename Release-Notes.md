@@ -1,5 +1,7 @@
 [[_TOC_]]
 
+<!---
+
 #6.10.0.19 (June 6, 2017)
 
 |Case|Category|Subcategory|Description|
@@ -31,6 +33,8 @@
 |27745|API|Settings|Ensured that running InvalidateSchemaCache clears all in memory caches as well as disk caches.|
 |27779|API|Error Reporting|Prevented a rare exception which could occur in the language resource files related to the PleaseEnterValidValueFormat string.|
 |27787|Report Design|Exports|Prevented the popup calendar for a customized date field from appearing on a printed (PDF and HTML) export.|
+
+--->
 
 #6.10.0.18 (May 2, 2017) IMPORTANT NOTICE FOR AZURE USERS
 
