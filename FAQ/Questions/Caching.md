@@ -24,7 +24,7 @@ The AdHocConfig.InvalidateFilteredCaches() method will clean up the results cach
 
 ###DataCacheInterval
 
-[[AdHocSettings.DataCacheInterval|http://wiki.izenda.us/API/CodeSamples/DataCacheInterval]] sets the number of seconds between cache refreshes for FUSION (HTML) cache. Example: ``AdHocSettings.DataCacheInterval = 60 * 24 * 30;``
+[[AdHocSettings.DataCacheInterval|http://wiki.izenda.us/API/CodeSamples/DataCacheInterval]] sets the number of minutes between cache refreshes for FUSION (HTML) cache. Example: ``AdHocSettings.DataCacheInterval = 60 * 24 * 30;``
 
 ###InvalidateSchemaCache
 
