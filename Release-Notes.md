@@ -1,5 +1,36 @@
 [[_TOC_]]
 
+#6.10.0.16 (June 6, 2017)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|25071|Report Design|Visualizations|Corrected an issue where expressions with a zero in the denominator would render on visualizations as the max 16 bit int.|
+|26207|Report Design|Visualizations|Corrected an issue where visualizations may not render correctly the first time in IE 10 due to a known error with jQuery.|
+|27102|Report Design|Visualizations|Corrected an issue which would cause Auto Chart labels from not appearing correctly if a subreport using multiple drill down keys (comboKey) were used on the table.|
+|27233|Report Design|Styling|Cleared out some unused CSS from resource files.|
+|27500|API|Optimization|Prevented hyperlinks from being dropped if more than one report part is being displayed on a custom page.|
+|27512|Report Design|Styling|Tweaked CSS of visual groups to maintain consistent padding in the Analysis Grid.|
+|27513|Report Design|Filters|Changed encoding of special characters in URL when being passed through the URL feature from data.|
+|27515|Dashboards|Dashboards|Fixed dashboard filtering behavior when inheriting filters upwards from a subreport being called from a report part on a dashboard.|
+|27529|Data Sources|Data Sources|Deleting a Virtual Data Source now updates the data source cache.|
+|27565|API|Error Reporting|Increased the number of internal exceptions which display a stacktrace along with the exception.|
+|27569|Report Design|Subreports|Corrected change which permitted (broken) pagination behavior in the popup. Pagination of results should be ignored in popup and hover drilldown styles.|
+|27570|Data Sources|Filters|Corrected some cases in which adding a data source using advanced join mode to an already existing report could filter out some values in error.|
+|27590|Report Design|Exports|Corrected the application of formats to values when exporting to Excel and using the "Show Fields/Summary in Field Value" checkbox.|
+|27595|Instant Reports|Exports|Enabled more email output types for the scheduler when using Instant Reports.|
+|27606|Report Design|Categories|Fixed some incorrect behavior when placing subcategories in similarly named categories (subcategory 'Cat/Cat' appears in the 'Cat Cat' category instead of the 'Cat' category).|
+|27613|API|Error Reporting|Improved performance of ajax error notifications in popups.|
+|27619|Report Design|Exports|Corrected some custom formats being output as text instead of numeric (or other specified datatypes) when exporting to Excel.|
+|27623|Report Design|Gauges|Prevented Gauge graphics from not being rendered if a calculated field is being used to generate the Gauge metric value.|
+|27624|Report Design|Styling|Prevented header, description, and footer from being removed from an unsaved report under some rare circumstances.|
+|27649|Report Design|Subreports|Corrected issue related to a datetime, grouped by week, which is being passed as the drilldown key to a subreport. Some days were being placed in the wrong week grouping.|
+|27673|Dashboards|Error Reporting|Fixed a null reference exception which could occur when loading large dashboards.|
+|27690|API|Settings|Added new setting, UseStrictDateTimeFilterParsing, which is a bool that determines if a Between date filter uses time as well as date (true) or just the date portion (false) of a datetime. The default value is false.|
+|27728|Instant Reports|Filters|Corrected Instant Report filter behavior where the second value in a two part filter may sometimes not appear in a popup.|
+|27729|Dashboards|Categories|Fixed some inconsistencies around setting a default category via code on Dashboards.|
+|27745|API|Settings|Ensured that running InvalidateSchemaCache clears all in memory caches as well as disk caches.|
+|27779|API|Error Reporting|Prevented a rare exception which could occur in the language resource files related to the PleaseEnterValidValueFormat string.|
+|27787|Report Design|Exports|Prevented the popup calendar for a customized date field from appearing on a printed (PDF and HTML) export.|
 
 #6.10.0.18 (May 2, 2017) IMPORTANT NOTICE FOR AZURE USERS
 
