@@ -21,7 +21,7 @@
 
 ---
 
-* [Interactive Demo](http://izenda.com/demo/ReportList.aspx )
+* [Interactive Demo](http://demo2.izenda.us/CI/ReportList.aspx )
 * [Example Dashboard](http://izenda.com/demo/Dash.aspx#/Sales%20Dashboard)
 * <a href="http://www.izenda.com/izenda-vision/" rel="nofollow" target="_blank">Visualization Gallery</a>
 
