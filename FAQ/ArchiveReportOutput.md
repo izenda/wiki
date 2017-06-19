@@ -4,7 +4,7 @@
 
 ##About
 
-If you want to archive report output every time reports are executed, you could use the ``ArchiveReportOutput`` method. By overriding this method, you could easily archive any report(save to a file, output through FTP, send through email, etc.) This method runs every time after report execution, so you may need to be selective about when you actually archive a report. In the example below, we will only archive reports made by a particular user. 
+If you want to archive report output every time reports are executed, you could use the ``ArchiveReportOutput`` method. By overriding this method, you could easily archive any report (save to a file, output through FTP, send through email, etc.) The ArchiveReportOutput method is called when any type of export (except HTML) or scheduler runs. This method is called only when the process of executing the report is associated with the file creation process (such as exports to PDF, Word, Excel, etc.). This method is not called when you simply view reports in the Report Viewer or when you call the scheduler with a non-file content generating type such as Link, Embedded or HTML. There isn't a way to configure this to run in the viewer. In the example below, we will only archive reports made by a particular user. 
 
 ##Global.asax (C♯)
 
