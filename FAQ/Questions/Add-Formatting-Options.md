@@ -109,6 +109,24 @@ _**Note:** You can use this as a template and any other format that requires a b
   }
 ```
 
+You must also adhere to the following two rules:
+
+1) Excel-exportable custom datetime formats must be added to AdHocSettings.Formats as an instance of the SimpleFormat class (or as an instance of custom format class), but NOT as just a string with pattern.
+
+2) The same string pattern of custom datetime format must be passed to the format class constructor in "formatString" parameter, and to AdHocSettings.Formats.Add in "key" parameter.
+
+Please see this sample code:
+
+```
+
+  DateTimeFormatInfo fmt = (new CultureInfo("en-gb")).DateTimeFormat;
+  string formatStr = "{0:" + fmt.ShortDatePattern + "}";
+  string formatDesc = fmt.ShortDatePattern + "(ex." + DateTime.Today.ToString(fmt.ShortDatePattern) + ")";
+  SimpleFormat formatObj = new SimpleFormat(formatDesc, formatStr, new SqlTypeGroup[] { SqlTypeGroup.DateTime });
+  AdHocSettings.Formats.Add(formatStr, formatObj);
+
+```
+
 
 ###Results
 
