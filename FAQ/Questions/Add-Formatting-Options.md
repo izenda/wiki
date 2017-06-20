@@ -117,7 +117,7 @@ You must also adhere to the following two rules:
 
 Please see this sample code:
 
-```
+```csharp
 
   DateTimeFormatInfo fmt = (new CultureInfo("en-gb")).DateTimeFormat;
   string formatStr = "{0:" + fmt.ShortDatePattern + "}";
