@@ -48,6 +48,10 @@ And below is what the resulting function could look like.
 
 You may introduce your own custom class to contain your aggregate function. A custom class is useful for when you are using more complex expressions that require specific conditional formatting of the parameters. This class simply inherits the IAggregateFunction interface, overriding each of the interface's methods. See the example below for what this could look like.
 
+*NOTE*: When you use SimpleAggregateFunction constructor you can't specify the function as a format string, you can only specify a function to call and then those string will be generated automatically as <Function>(<Argument>).
+
+So the correct way to specify such function would be this:
+
 ```csharp
 public class GroupByFiscalYearFunction : IAggregateFunction {
     public string GetSQL(string innerExpression, SqlType type) {
