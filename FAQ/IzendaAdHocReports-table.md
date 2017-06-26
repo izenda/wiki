@@ -45,12 +45,12 @@ END;
 CREATE TABLE IzendaAdHocReports (
 	"Name" varchar(255) NOT NULL,
 	"Xml" text,
-	"createddate" date,
-	"modifieddate" date,
-	"tenantid" varchar(255),
-	"izendaadhocreportsid" integer,
-	"reportsourceid" integer,
-	"thumbnail" bytea
+	"CreatedDate" date,
+	"ModifiedDate" date,
+	"TenantID" varchar(255),
+	"IzendaAdHocReportsID" integer,
+	"ReportSourceID" integer,
+	"Thumbnail" blob,
 );
 ```
 
@@ -99,13 +99,12 @@ END;
 CREATE TABLE IzendaAdHocReports (
 	"Name" varchar(255) NOT NULL,
 	"Xml" text,
-	"createddate" date,
-	"modifieddate" date,
-	"tenantid" varchar(255),
-	"izendaadhocreportsid" integer,
-	"form" text,
-	"reportsourceid" integer,
-	"thumbnail" bytea
+	"CreatedDate" date,
+	"ModifiedDate" date,
+	"TenantID" varchar(255),
+	"IzendaAdHocReportsID" integer,
+	"ReportSourceID" integer,
+	"Thumbnail" blob,
 );
 ```
 
