@@ -1,5 +1,50 @@
 [[_TOC_]]
 
+<!--
+
+#6.10.0.20 (July 11, 2017)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|22580|Report Design|Filters|Made further enhancements to filters to support custom datetime formats which are based on Culture token.|
+|25920|Internal|API|Removed dependence on Izenda's rs.aspx from being in the application root folder rather than an Izenda subfolder.|
+|27075|Report Design|Visualizations|Refactored Gauge Visualization to better handle long strings (tooltips implemented) and also updated fonts and styling.|
+|27173|Internal|API|Refactored StaticSharedStorage and made it thread safe.|
+|27436|Internal|Performance|Refactored internal key storage.|
+|27498|Report Design|Joins|Corrected joining engine to prevent joins from being built incorrectly relative to how they appear in the UI control, for example LEFT joins being reversed in the query.|
+|27534|Report Design|Styling|Refactored headers, footers, and image header alignment controls in Instant Reports.|
+|27555|Internal|Query Generation|Solved an issue where in extreme circumstances it was possible for Izenda to reach the SQLServer Expression Limit.|
+|27594|Internal|Query Generation|Corrected error which could cause pivot table to be dropped from query when applying a calculated filter directly to the top level grouping of values outside of the pivot.|
+|27620|Report Design|Charts|Corrected error which permitted calculated numeric fields to be used incorrectly as the x axis value of the trend chart (it should only allow datetimes or datetime-based numerics).|
+|27656|Report Design|Dashboards|Split dashboard tile refresh behavior into two actions - now a user can "Refresh" the data on the dashboard tile or "Sync" the tile's metadata to the source report.|
+|27693|Internal|Report Loading|Prevented error which could occur when loading multiple reportparts on the same page - if the first reportpart fails to load, since it contained necessary scripts, other subsequent reportparts would also fail to load.|
+|27695|Internal|API|Corrected error which could occur when calling GetObjectSchemaSql which returns no records.|
+|27723|Report Design|Dashboards|Added support for long text descriptions on dashboard tiles. Long descriptions will be truncated at a certain limit, but the full text will be displayed in a hovering tooltip.|
+|27724|Internal|Performance|Refactored code to better support Require.js and Angular.js.|
+|27750|Report Design|Exporting|Made export limit setting apply to subtotal query when exporting.|
+|27759|Report Design|Data|Expanded support for stored procedures which only use IN parameters.|
+|27767|Report Design|Charts|Corrected format being lost from pie charts when editing report.|
+|27769|Report Design|Styling|Fixed conflicts between different culture settings if AdHocSettings.Culture conflicts with culture specified in the web.config.|
+|27775|Report Design|Exporting|Corrected an issue related to exporting inverted grids to excel.|
+|27782|Report Design|Performance|Fixed object reference error when attempting to load or execute a report in the Report Viewer, when that same report works correctly in the Report Designer.|
+|27808|Report Design|Filters|Ensured table filtering from Auto Chart visualization activity is reflected in print mode.|
+|27814|Report Design|Subreports|Corrected issue preventing datetimes from being used as a drilldown key if there is a culture token mismatch between parent and child reports.|
+|27818|Report Design|Filters|Fixed popup calendar for custom date using Instant Reports.|
+|27819|Report Design|Exporting|Changed BulkCSV to apply a default format rather than display a blank cell for an unsupported format.|
+|27820|Report Design|Filters|Properly flagged fields calculated via expression as calculated for the purpose of filtering.|
+|27821|Internal|Session|Prevented reports from sharing filter settings and values when more than one report is open in the same browser session and both are refreshed simultaneously.|
+|27823|Report Design|Filters|Fixed object reference error which can arise when a filter with multiple listed numerical values is applied to a calculated field.|
+|27844|Report Design|Expressions|Corrected some errors related to escaping brackets when using the native SQL REPLACE() function.|
+|27880|Internal|Filters|Corrected an error preventing hidden filters from applying to filter population in some circumstances.|
+|27912|Internal|Dashboards|Fixed some dashboard loading problems when dashboards and report parts were being saved with the same name across tenants.|
+|27913|Internal|API|Refactored HttpContext.Current.Items to manage request cache.|
+|27933|Internal|Overrides|Corrected an issue preventing pivot behavior overrides from producing correct output.|
+|27934|Report Design|Visualizations|Fixed placement of 'United Kingdom' and 'Hong Kong' strings in World Tour visualization.|
+|27970|Report Design|Visual Groups|Corrected error which could occur when using visual groups on an unsaved report lacking a report name (rn property).|
+|27982|Internal|Dashboards|Prevented a Null Reference Error which could occur if a dashboard cannot find cached source reports while loading.|
+
+--->
+
 #6.10.0.19 (June 6, 2017)
 
 |Case|Category|Subcategory|Description|
