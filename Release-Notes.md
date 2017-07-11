@@ -1,6 +1,5 @@
 [[_TOC_]]
 
-<!--
 
 #6.10.0.20 (July 11, 2017)
 
@@ -43,7 +42,7 @@
 |27970|Report Design|Visual Groups|Corrected error which could occur when using visual groups on an unsaved report lacking a report name (rn property).|
 |27982|Internal|Dashboards|Prevented a Null Reference Error which could occur if a dashboard cannot find cached source reports while loading.|
 
---->
+
 
 #6.10.0.19 (June 6, 2017)
 
