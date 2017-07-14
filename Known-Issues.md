@@ -7,7 +7,7 @@
 
 This list of issues is tentative and expected to change. Last updated on July 14, 2017.
 
-|Expected Release|Tenative Date|Case|Notes|
+|Expected Release|Tentative Date|Case|Notes|
 |:----|:-----------|:----------------|:---------------|
 |6.20.0.21|August 8|27497|Filter inheritance in subreports was behaving differently in Report Designer and Report Viewer. Now filters inherit consistently across pages.|
 |6.20.0.21|August 8|27692|Corrected issue with indicator bars on legacy maps (not visualizations) displaying incorrect values.|
