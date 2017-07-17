@@ -140,7 +140,7 @@ Dashboards will be displayed as tabs in the window with the active window highli
 
 This menu offers the following menu options are available from the menu button in the top left navigation bar when expanded
 
-![](/Guides/Dashboards-v2/24_25.png)
+![](/Guides/Dashboards-v2/dashboard-toolbar-6-10-0-20.png)
 
 
 |**Appearance**|**Description**|
@@ -148,7 +148,8 @@ This menu offers the following menu options are available from the menu button i
 |![](/Guides/Dashboards-v2/26.png)|Collapse Menu|
 |![](/Guides/Dashboards-v2/27.png)|Presentation Mode – Allows the user to scroll through the Dashboard tiles in a carousel |
 |![](/Guides/Dashboards-v2/28.png)|Create a New Dashboard|
-|![](/Guides/Dashboards-v2/29.png)|Refresh Dashboard|
+|![](/Guides/Dashboards-v2/29.png)|Refresh Tile Data. This button will refresh _data only_ aspects of the tile, meaning the report query will be rerun with current settings and tile data updated.|
+|![](/Guides/Dashboards-v2/dashboard-toolbar-sync-button-6-10-0-20.png)|Refresh Report Metadata. This button will refresh _non-data_ elements of the tile such as style and filter settings.|
 |![](/Guides/Dashboards-v2/30.png)|View Filters – Each report in the dashboard must share the same filter to be displayed |
 |![](/Guides/Dashboards-v2/31.png)|Share Dashboard with other users|
 |![](/Guides/Dashboards-v2/32.png)|Schedule Dashboard - Sends dashboard via email at a scheduled time|
