@@ -38,6 +38,6 @@ This dropdown determines how the email will be sent out. There are a number of d
 
 ###Repeat types and export formats customization
 
-Please note that if you want to customize repeat intervals or export formats (eg. add new interval "Every 10 days") you will have to use the Izenda Custom Scheduler.
+Please note that if you want to customize export formats, you will have to use the Izenda Custom Scheduler.
 
 #To Section 3 - [Scheduler Security](http://wiki.izenda.us/FAQ/Implementing-Scheduler-Security)
