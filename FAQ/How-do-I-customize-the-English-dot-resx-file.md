@@ -1,5 +1,5 @@
 #Customizing verbiage in English.resx
-As of our 6.8 release, the English.resx file is made available to customize the verbiage in it without purchasing the language pack.  However, in order for any edits to the resx file to show up in Izenda, the file must be in Izenda's bin\Resources folder.  If the application does not read a resx file in that location, it will move to the standard resx files in the Izenda DLL.
+As of our 6.8 release, the English.resx file is made available to customize the wording in it without purchasing the language pack.  However, in order for any edits to the resx file to show up in Izenda, the file must be in Izenda's bin\Resources folder.  If the application does not read a resx file in that location, it will move to the standard resx files in the Izenda DLL.
 
 You may need to create the Resources folder inside of the bin folder.  Below are a few screenshots from a use-case, to illustrate the example:
 
