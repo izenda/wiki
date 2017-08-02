@@ -77,7 +77,7 @@ _**Note:** You can use this as a template and any other format that requires a b
     }
   }
 
-  public class DatesCustomFormat : BaseFormat {
+  public class DatesCustomFormat : IFormat {
     private SqlTypeGroupCollection allowedTypeGroups = new SqlTypeGroupCollection();
     public SqlTypeGroupCollection AllowedTypeGroups {
       get { return allowedTypeGroups; }
