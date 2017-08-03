@@ -13,7 +13,6 @@
 * [Product Video](http://www.izenda.com/Site/Video/ProductVideo.aspx)
 * [Izenda Blog](http://www.izenda.com/blog)
 * [Company Page](http://www.izenda.com/company)
-* [Live Demo](http://demo2.izenda.us/bi/ReportListIntro.aspx)
 * [Gallery](http://www.izenda.com/izenda-vision/)
 * [Client List](http://www.izenda.com/case-studies/)
 * [Contact Page](http://www.izenda.com/contact-us/)
