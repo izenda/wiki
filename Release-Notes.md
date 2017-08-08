@@ -1,5 +1,44 @@
 [[_TOC_]]
 
+#6.20.0.21 (August 8, 2017)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|26538|Internal|Dashboards|Various UI and performance enhancements in Dashboards viewer page.|
+|27497|Report Design|Subreports|Filter inheritance in subreports was behaving differently in Report Designer and Report Viewer. Now filters inherit consistently across pages.|
+|27692|Report Design|Maps|Corrected issue with indicator bars on legacy maps (not visualizations) displaying incorrect values.|
+|27734|Internal|Thumbnails|Fixed thumbnail duplication when dashboards belong to "_global_" tenant, which caused performance hits.|
+|27809|Internal|Scheduler|Refactored scheduler to be more stable, performant, and support logging.|
+|27817|Internal|Formats|Expanded support for custom formats for datetimes when using filters in Instant Reports.|
+|27864|Report Design|Dashboards|Added truncation to the titles of dashboard tiles when the tile's width is reduced.|
+|27877|Internal|API|Refactored Driver.InvalidateSchemaCache to dump cache on all machines in a webfarm when called on one of those machines.|
+|27885|Internal|Printing|Refactored PhantomJS to handle page breaks after visual groups.|
+|27901|Internal|Dashboards|Small change to dashboards permitting an override for custom sorting of dashboards by name and category.|
+|27928|Report Design|Filters|Prevented filters from having their description set to 'null' under some conditions.|
+|27930|Instant Reports|Appearance|The following settings were not being respected in Instant Reports v2: HeaderForegroundColor, ItemForegroundColor, ReportHeaderColor, ReportItemColor, ReportAlternatingItemColor, ReportBorderColor.|
+|27962|Internal|Joins|Refactored constraints to prevent duplicate constraints from being created.|
+|27964|Internal|Security|Clarified behavior of TenantField column setting when this field contains a mix of null and non-null values.|
+|27996|Report Design|Dashboards|Made filters update on dashboard tile sync with other report metadata.|
+|28002|Report Design|Visualizations|Modified Timeline Visualization to better support printing and exporting.|
+|28010|Report Design|Formats|Some formats, such as percent of group, consistently display on pivots even with zero/null data.|
+|28011|Report Design|Subreports|Closed some conditions under which popups spawned as subreports of subreports could inherit pagination controls.|
+|28012|User Interface|Refactoring|Slight UI tweak to scheduler controls to make them line up visually.|
+|28014|Internal|Security|Prevented sessionDataStorage.ProviderAvailable from returning false if Izenda is initialized in offline mode.|
+|28063|Internal|Joins|Corrected error which could occur if AdHocContext.Driver is used to set a PostgreSQLDriver and a field is aliased from its literal name.|
+|28064|Internal|Sett|ExportLimit is now applied to the results of a report after printing and updating the report viewer.|
+|28066|Report Design|Joins|Fixed exception when joining a datasource twice on the same report and adding an expression using an alias referencing one of those tables.|
+|28067|Report Design|Dashboards|Prevented dashboard tiles from opening the underlying report when dragging it to certain locations on the dashboard viewer.|
+|28068|Report Design|Charts|Tweaked charts to fit the size of their HTML container when they are isolated as a report part.|
+|28071|Report Design|Filters|Prevented an overflow error which could occur if a report had a filter which referred to a field that does not exist in the database schema cache.|
+|28084|Internal|Security|Refactored AdHocContext.Initialized such that Izenda should not reinitialize when session is null by design.|
+|28091|Internal|Joins|Refactored join code such that HTML entry validation won't trigger on expressions when checking for correct join conditions.|
+|28094|User Interface|Dashboards|Added a dashboard refresh after resizing the browser window to prevent tiles from being "broken" and refusing to update.|
+|28100|Report Design|Visualizations|Prevented JS exception which could be triggered by the use of double NaN strings instead of the literal string "NaN" in charts.|
+|28109|Instant Reports|Appearance|Populated UI color selector in new Instant Reports pages with default Izenda colors.|
+|28110|Report Design|Formats|Added tweak to properly sort currency values when using Culture to change currency format.|
+|28134|Internal|API|Corrected Null Reference Exception in Driver.GetClearSchemaObjectName.|
+|28144|Internal|Dashboards|Refactored dashboard tile loading to further reduce/eliminate "report not found" errors. This is caused by faulty parameters being fed to the 'getcrsreportpartpreview' query.|
+|28177|User Interface|Dashboards|Corrected problem which prevented users from opening a tile's report in report designer from backside of dashboard tile|
 
 #6.10.0.20 (July 11, 2017)
 
