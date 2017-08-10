@@ -2,6 +2,8 @@
 
 #6.20.0.21 (August 8, 2017)
 
+*NOTE: There are extensive changes to the Dashboard UI in this update. Please be sure to flush your browser resource cache if Dashboards appear to be broken or nonfunctional!*
+
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
 |26538|Internal|Dashboards|Various UI and performance enhancements in Dashboards viewer page.|
