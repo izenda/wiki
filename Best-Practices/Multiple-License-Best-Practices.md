@@ -1,5 +1,7 @@
 #Best Practices for Maintaining Multiple License Keys
 
+[[_TOC_]]
+
 ##About
 
 If your company re-distributes individual copies of your product to many different clients and your business model requires a license key for each new client, then it will be necessary to be able to maintain a solution for easily changing license keys without having to re-deploy to a client site. Many different strategies exist for this as Izenda embeds directly into your code, so you have complete control over how you maintain this information. We will go over a few popular options.
