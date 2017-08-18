@@ -12,6 +12,4 @@ Since the license keys are string values, they can be easily encrypted and store
 
 ##web.config
 
-Another way of maintaining multiple license keys is to use encrypted string values in the AppSettings section of the web.config. This will require less database operations but is not maintainable remotely and will at least require replacing the file on every server that needs to be updated. Again, the value will need to be decrypted in the global.asax before assigning the value of the license key.
-
-Ultimately, the strategy that is preferable to you will depend on your unique business practices and needs. 
+Another way of maintaining multiple license keys is to use encrypted string values in the AppSettings section of the web.config. This will require less database operations but is not maintainable remotely and will at least require replacing the file on every server that needs to be updated. The value will need to be decrypted in the global.asax before assigning the value of the license key.
