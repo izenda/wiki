@@ -94,3 +94,11 @@ Public Function FilterCanBeAddedToReport(jts As JoinedTableCollection, ByRef new
     Return toReturn
 End Function
 ```
+
+##Stored Procedure Parameters
+
+The process for applying a hidden stored procedure parameter programmatically is slightly different, as the column name needs to be referenced differently. If you are using the column fullname, then this will be done automatically. But in order to do it manually, here is a snippet that would add a stored procedure parameter as a hidden filter in PreExecuteReportSet. Keep in mind that while a fully-qualified table name is not required, if there is more than one match found, a null reference exception will occur.
+
+```csharp
+reportSet.Filters.AddHidden(new Filter("[dbo].[CustOrderHist].[PARAM_CustomerID]") { Value = "BONAP" });
+```
