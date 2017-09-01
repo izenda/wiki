@@ -5,36 +5,37 @@
 <!---[Known Issues Report](http://fogbugz.izenda.us/reporting/reportviewer.aspx?rn=Tracking_DO_NOT_EDIT\\KIL\\KnownIssues)-->
 ##Known Issues
 
-This list of issues is tentative and expected to change. Last updated on August 2, 2017.
+This list of issues is tentative and expected to change. Last updated on September 1, 2017.
 
 |Expected Release|Tenative Date|Case|Notes|
 |:----|:-----------|:----------------|:---------------|
-|6.10.0.21|August 8|27497|Filter inheritance in subreports was behaving differently in Report Designer and Report Viewer. Now filters inherit consistently across pages.|
-|6.10.0.21|August 8|27692|Corrected issue with indicator bars on legacy maps (not visualizations) displaying incorrect values.|
-|6.10.0.21|August 8|27734|Fixed thumbnail duplication when dashboards belong to "_global_" tenant, which caused performance hits.|
-|6.10.0.21|August 8|27809|Refactored scheduler to be more stable, performant, and support logging.|
-|6.10.0.21|August 8|27817|Expanded support for custom formats for datetimes when using filters in Instant Reports.|
-|6.10.0.21|August 8|27864|Added truncation to the titles of dashboard tiles when the tile's width is reduced.|
-|6.10.0.21|August 8|27877|Refactored Driver.InvalidateSchemaCache to dump cache on all machines in a webfarm when called on one of those machines.|
-|6.10.0.21|August 8|27885|Refactored PhantomJS to handle page breaks after visual groups.|
-|6.10.0.21|August 8|27901|Small change to dashboards permitting an override for custom sorting of dashboards by name and category.|
-|6.10.0.21|August 8|27928|Prevented filters from having their description set to 'null' under some conditions.|
-|6.10.0.21|August 8|27930|The following settings were not being respected in Instant Reports v2: HeaderForegroundColor, ItemForegroundColor, ReportHeaderColor, ReportItemColor, ReportAlternatingItemColor, ReportBorderColor.|
-|6.10.0.21|August 8|27962|Refactored constraints to prevent duplicate constraints from being created.|
-|6.10.0.21|August 8|27996|Made filters update on dashboard tile sync with other report metadata.|
-|6.10.0.21|August 8|28002|Modified Timeline Visualization to better support printing and exporting.|
-|6.10.0.21|August 8|28010|Some formats, such as percent of group, consistently display on pivots even with zero/null data.|
-|6.10.0.21|August 8|28011|Closed some conditions under which popups spawned as subreports of subreports could inherit pagination controls.|
-|6.10.0.21|August 8|28012|Slight UI tweak to scheduler controls to make them line up visually.|
-|6.10.0.21|August 8|28014|Prevented sessionDataStorage.ProviderAvailable from returning false if Izenda is initialized in offline mode.|
-|6.10.0.21|August 8|28064|ExportLimit is now applied to the results of a report after printing and updating the report viewer.|
-|6.10.0.21|August 8|28068|Tweaked charts to fit the size of their HTML container when they are isolated as a report part.|
-|6.10.0.21|August 8|28071|Prevented an overflow error which could occur if a report had a filter which referred to a field that does not exist in the database schema cache.|
-|6.10.0.21|August 8|28084|Refactored AdHocContext.Initialized such that Izenda should not reinitialize when session is null by design.|
-|6.10.0.21|August 8|28091|Refactored join code such that HTML entry validation won't trigger on expressions when checking for correct join conditions.|
-|6.10.0.21|August 8|28109|Populated UI color selector in new Instant Reports pages with default Izenda colors.|
-|6.10.0.21|August 8|28110|Added tweak to properly sort currency values when using Culture to change currency format.|
-|6.10.0.21|August 8|28134|Corrected Null Reference Exception in Driver.GetClearSchemaObjectName.|
+|6.10.0.22|September 12|23613|Error thrown on input of decimal in comparison filter for days old. If user inputs any decimal the system gives object not set to instance of an object error.|
+|6.10.0.22|September 12|27863|Made tile backgrounds in Dashboards more reactive to tile resizing.|
+|6.10.0.22|September 12|27905|Additional refactoring of internal RequireJS.|
+|6.10.0.22|September 12|27938|Expanded ability to export Auto Chart visualization as an image when exporting/printing in HTML.|
+|6.10.0.22|September 12|27959|Refactored internal ReportViewer.js to better handle links in Dashboards.|
+|6.10.0.22|September 12|27960|Added a more explicit warning when a user adds a date which is invalid according to the current Culture setting.|
+|6.10.0.22|September 12|28085|Prevented Forms from being removed from the underlying report in the case of a TenantID disagreement between the Form and report.|
+|6.10.0.22|September 12|28149|Added new setting, AdHocSettings.RasterizedChartWidth, to permit all chart labels to be rendered when a chart is very "wide" and should not be condensed for display or printing.|
+|6.10.0.22|September 12|28159|Small refactoring of HtmlReportRenderer.RenderHeader.|
+|6.10.0.22|September 12|28160|Corrected export behavior for PhantomJS when using offline mode.|
+|6.10.0.22|September 12|28165|Prevented tile Delete icon from being removed when minimizing the Instant Report window.|
+|6.10.0.22|September 12|28184|Corrected drilldown passing behavior which could, if a report is using a filter on the same field as the drilldown key, cause the filter to override the drilldown value.|
+|6.10.0.22|September 12|28187|Prevented filters from being dropped in Instant Report designer when adding fields.|
+|6.10.0.22|September 12|28188|Prevented export related error for the Sunburst visualization.|
+|6.10.0.22|September 12|28193|Added more user friendly errors for the Auto Chart visualization when the underlying table has no metric field.|
+|6.10.0.22|September 12|28196|Filters now respect padding in data such that values which appear similar but are logically different (such as "Test" and " Test") will be handled properly in filters.|
+|6.10.0.22|September 12|28198|Modified behavior of the Remove and Undo buttons when shrinking Dashboard tile to a very small size.|
+|6.10.0.22|September 12|28199|Enhanced "No Reports Found" message in Dashboards to be more user friendly.|
+|6.10.0.22|September 12|28203|Made further enhancements to sizing of report parts and report part metadata when using report parts independently.|
+|6.10.0.22|September 12|28221|Changed Embedded report behavior to ignore drilldownkeys passed in the URL of a subreport being used as both a parent and child. For example, if a report is a subreport of some other report, while also having an embedded subreport itself.|
+|6.10.0.22|September 12|28242|Correctly indexed columns in Instant Reports to prevent hidden columns from still being visible in the advanced settings if you clicked on the column header of an adjacent column.|
+|6.10.0.22|September 12|28247|Izenda now attempts to scale images used in the header or footer when producing a PDF and the image would otherwise extend "off the page".|
+|6.10.0.22|September 12|28263|Refactored use of forward and back slashes for greater ease of use (both should be acceptable for most uses).|
+|6.10.0.22|September 12|28271|Corrected some issues with session provider which could cause data sources to be inaccessible.|
+|6.10.0.22|September 12|28277|Updated PhantomJS.|
+|6.10.0.22|September 12|28288|Corrected some width related issues with Dundas chart rendering.|
+|6.10.0.22|September 12|28290|Corrected some memory leaks caused by static regex objects.|
 
 
 
