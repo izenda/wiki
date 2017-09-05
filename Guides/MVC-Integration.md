@@ -26,10 +26,7 @@ This guide is not universal, nor does it describe a complete integration.  There
 
 Right click on 'References' under project name in Solution Explorer window, then click 'Add Reference'.
 
-Click the 'Browse' button and browse to \mvc5r3\bin, where Izenda.AdHoc.dll and log4net.dll are. Add them to reference. 
-
-![DLL files](/Guides/MVC-Integration/DLLs.png)
-
+Click the 'Browse' button and browse to \mvc5r3\bin, where Izenda.AdHoc.dll is. Add it to reference. 
 
 ###Step 3. Add IzendaStaticResourcesController.cs and IzendaReportingController.cs to the project
 
@@ -47,21 +44,13 @@ Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK
 
 ###Step 5. Add Reporting and Resources folders to the project
 
-**a.** Add 'Reporting'and 'Resources'from \mvc5r3 to project by dragging and dropping them in Solution Explorer as below
+**a.** Add the folders 'Reporting' and 'Resources' from \mvc5r3 to project by dragging and dropping them in Solution Explorer as below. You should also copy or create a 'Reports' folder.
 
 ![Controllers](/Guides/MVC-Integration/Resources_Reporting.png)
 
 **b.** In Solution Explorer, exclude Dashboards-Body.ascx and Dashboards-Head.ascx from \Resources\html by right click on them and click 'Exclude From Project'
 
 ![Controllers](/Guides/MVC-Integration/Exclude.png)
-
-**c.** Copy /Resources folder from the root of the application into the /Reporting folder. This will create two copies of the Resources folder, one in the root and another under the Reporting folder. (If the folder "/Reporting/Resources" exists, overwrite the existing folder with the new copy.)
-
-![](/Guides/MVC-Integration/CopyResourcesFolder.png)
-   
-**d.** Copy rs.aspx from /Reporting and paste it in /Resources/html as below
-
-![](/Guides/MVC-Integration/CopyRSFile.png)   
 
 
 **** If Izenda toolbar icons don't appear, check if Reporting folder contains rs.aspx and Resources folder  ****
@@ -356,6 +345,8 @@ namespace Sample_MVCApp
     {
         protected void Application_Start()
         {
+            RouteTable.Routes.MapPageRoute("rs.aspx", "{*aspx}", "~/Reporting/rs.aspx", false, null, new RouteValueDictionary { { "aspx", new SpecificFileRouterConstraint("aspx", "rs.aspx") } });
+            RouteTable.Routes.MapPageRoute("rp.aspx", "{*aspx}", "~/Reporting/rp.aspx", false, null, new RouteValueDictionary { { "aspx", new SpecificFileRouterConstraint("aspx", "rp.aspx") } });
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
