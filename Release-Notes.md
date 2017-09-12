@@ -34,6 +34,7 @@
 |28242|Report Design|User Interface|Correctly indexed columns in Instant Reports to prevent hidden columns from still being visible in the advanced settings if you clicked on the column header of an adjacent column.|
 |28247|Report Design|Footers|Izenda now attempts to scale images used in the header or footer when producing a PDF and the image would otherwise extend "off the page".|
 |28271|Internal|Data Sources|Corrected some issues with session provider which could cause data sources to be inaccessible.|
+|28273|Internal|Optimization|Closed tag in Dashboard template toolbar which could cause browser errors.|
 |28274|Report Design|User Interface|Fixed error which could cause the function and format to be dropped from a field in the New Instant Report designer.|
 |28277|Internal|Optimization|Updated PhantomJS.|
 |28281|Internal|Exports|Corrected "Izenda is not defined" script error when attempting to export an old dashboard (Dashboard.aspx) page to HTML.|
