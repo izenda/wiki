@@ -8,7 +8,7 @@ Gets or sets the value indicating whether the "Equals (Select)" value should be 
 
 _**Note:** If two different fields in two different tables yield the same results, Izenda will see two different queries and need to cache the results of each query respectively._
 
-**Default Value:** true
+**Default Value:** False
 
 ##Global.asax (C♯)
 
