@@ -1,5 +1,49 @@
 [[_TOC_]]
 
+#6.20.0.22 (September 12, 2017)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|18568|Internal|User Interface|Enabled support for very long report names.|
+|20727|Internal|Logging|Expanded logging around stored procedure behavior.|
+|23613|Report Design|Filters|Error thrown on input of decimal in comparison filter for days old. If user inputs any decimal the system gives object not set to instance of an object error.|
+|26970|Internal|Settings|Corrected persistent "Report Not Found" errors when using ReportID instead of ReportName.|
+|27484|Internal|API|Internal refactoring to deprecate the use of Report.Chart in favor of the "Chart" reportpart type.|
+|27503|Internal|Optimization|Refactored query construction to optimize performance.|
+|27545|Internal|Optimization|Prevented the same report open in different browser tabs from "sharing" settings across tabs.|
+|27601|Internal|Charts|Refactored some date handling in Highcharts to better support localization of string labels of datetimes.|
+|27863|Report Design|Dashboards|Made tile backgrounds in Dashboards more reactive to tile resizing.|
+|27905|Internal|Optimization|Additional refactoring of internal RequireJS.|
+|27938|Report Design|Exports|Expanded ability to export Auto Chart visualization as an image when exporting/printing in HTML.|
+|27959|Internal|Dashboards|Refactored internal ReportViewer.js to better handle links in Dashboards.|
+|27960|Report Design|Filters|Added a more explicit warning when a user adds a date which is invalid according to the current Culture setting.|
+|28149|Internal|Settings|Added new setting, AdHocSettings.RasterizedChartWidth, to permit all chart labels to be rendered when a chart is very "wide" and should not be condensed for display or printing.|
+|28159|Internal|Optimization|Small refactoring of HtmlReportRenderer.RenderHeader.|
+|28160|Report Design|Exports|Corrected export behavior for PhantomJS when using offline mode.|
+|28165|Report Design|User Interface|Prevented tile Delete icon from being removed when minimizing the Instant Report window.|
+|28184|Report Design|Subreports|Corrected drilldown passing behavior which could, if a report is using a filter on the same field as the drilldown key, cause the filter to override the drilldown value.|
+|28187|Report Design|Filters|Prevented filters from being dropped in Instant Report designer when adding fields.|
+|28188|Report Design|Exports|Prevented export related error for the Sunburst visualization.|
+|28193|Report Design|Charts|Added more user friendly errors for the Auto Chart visualization when the underlying table has no metric field.|
+|28196|Report Design|Filters|Filters now respect padding in data such that values which appear similar but are logically different (such as "Test" and " Test") will be handled properly in filters.|
+|28198|Report Design|User Interface|Modified behavior of the Remove and Undo buttons when shrinking Dashboard tile to a very small size.|
+|28199|Report Design|Dashboards|Enhanced "No Reports Found" message in Dashboards to be more user friendly.|
+|28203|Report Design|Charts|Made further enhancements to sizing of report parts and report part metadata when using report parts independently.|
+|28216|Internal|Optimization|Implemented Selenium.|
+|28221|Report Design|Subreports|Changed Embedded report behavior to ignore drilldownkeys passed in the URL of a subreport being used as both a parent and child. For example, if a report is a subreport of some other report, while also having an embedded subreport itself.|
+|28241|Report Design|Exports|Fixed an issue which could cause Excel exports from New Instant Reports to generate a bad format for some fields, causing them to be rendered incorrectly (numerics as text, for example).|
+|28242|Report Design|User Interface|Correctly indexed columns in Instant Reports to prevent hidden columns from still being visible in the advanced settings if you clicked on the column header of an adjacent column.|
+|28247|Report Design|Footers|Izenda now attempts to scale images used in the header or footer when producing a PDF and the image would otherwise extend "off the page".|
+|28271|Internal|Data Sources|Corrected some issues with session provider which could cause data sources to be inaccessible.|
+|28274|Report Design|User Interface|Fixed error which could cause the function and format to be dropped from a field in the New Instant Report designer.|
+|28277|Internal|Optimization|Updated PhantomJS.|
+|28281|Internal|Exports|Corrected "Izenda is not defined" script error when attempting to export an old dashboard (Dashboard.aspx) page to HTML.|
+|28288|Report Design|Charts|Corrected some width related issues with Dundas chart rendering.|
+|28290|Internal|Optimization|Corrected some memory leaks caused by static regex objects.|
+|28303|Internal|Optimization|Refactored the way resources are cached when a Dev license key is being used, to make it easier to debug resource related issues.|
+|28306|Internal|Data Sources|Corrected Izenda error which would not load data sources with a duplicate synonym from another database.|
+|28312|Internal|Optimization|Modified image tags where appropriate so as to not throw unnecessary errors in IE.|
+
 #6.20.0.21 (August 8, 2017)
 
 *NOTE: There are extensive changes to the Dashboard UI in this update. Please be sure to flush your browser resource cache if Dashboards appear to be broken or nonfunctional!*
