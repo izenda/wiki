@@ -24,7 +24,6 @@
 |28165|Report Design|User Interface|Prevented tile Delete icon from being removed when minimizing the Instant Report window.|
 |28184|Report Design|Subreports|Corrected drilldown passing behavior which could, if a report is using a filter on the same field as the drilldown key, cause the filter to override the drilldown value.|
 |28187|Report Design|Filters|Prevented filters from being dropped in Instant Report designer when adding fields.|
-|28188|Report Design|Exports|Prevented export related error for the Sunburst visualization.|
 |28193|Report Design|Charts|Added more user friendly errors for the Auto Chart visualization when the underlying table has no metric field.|
 |28196|Report Design|Filters|Filters now respect padding in data such that values which appear similar but are logically different (such as "Test" and " Test") will be handled properly in filters.|
 |28198|Report Design|User Interface|Modified behavior of the Remove and Undo buttons when shrinking Dashboard tile to a very small size.|
