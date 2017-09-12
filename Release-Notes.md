@@ -30,7 +30,6 @@
 |28198|Report Design|User Interface|Modified behavior of the Remove and Undo buttons when shrinking Dashboard tile to a very small size.|
 |28199|Report Design|Dashboards|Enhanced "No Reports Found" message in Dashboards to be more user friendly.|
 |28203|Report Design|Charts|Made further enhancements to sizing of report parts and report part metadata when using report parts independently.|
-|28216|Internal|Optimization|Implemented Selenium.|
 |28221|Report Design|Subreports|Changed Embedded report behavior to ignore drilldownkeys passed in the URL of a subreport being used as both a parent and child. For example, if a report is a subreport of some other report, while also having an embedded subreport itself.|
 |28241|Report Design|Exports|Fixed an issue which could cause Excel exports from New Instant Reports to generate a bad format for some fields, causing them to be rendered incorrectly (numerics as text, for example).|
 |28242|Report Design|User Interface|Correctly indexed columns in Instant Reports to prevent hidden columns from still being visible in the advanced settings if you clicked on the column header of an adjacent column.|
