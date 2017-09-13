@@ -1,7 +1,6 @@
 [[_TOC_]]
-
-<!--! 
-#6.20.0.22 (September 12, 2017)
+ 
+#6.10.0.22 (September 12, 2017)
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
@@ -43,8 +42,8 @@
 |28303|Internal|Optimization|Refactored the way resources are cached when a Dev license key is being used, to make it easier to debug resource related issues.|
 |28306|Internal|Data Sources|Corrected Izenda error which would not load data sources with a duplicate synonym from another database.|
 |28312|Internal|Optimization|Modified image tags where appropriate so as to not throw unnecessary errors in IE.|
--->
-#6.20.0.21 (August 8, 2017)
+
+#6.10.0.21 (August 8, 2017)
 
 *NOTE: There are extensive changes to the Dashboard UI in this update. Please be sure to flush your browser resource cache if Dashboards appear to be broken or nonfunctional!*
 
