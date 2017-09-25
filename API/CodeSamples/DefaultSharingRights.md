@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the Default Sharing Rights. Defines sharing rights that are assigned to the report by default. The possible values for this are:
+Gets or sets the Default Sharing Rights. Defines sharing rights that are assigned to the report by default. This setting only applies to newly created reports. Already existing reports will not have their sharing rights changed. The possible values for this are:
 
 * "Full Access"
 * "Read Only"
