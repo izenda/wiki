@@ -44,6 +44,10 @@ When using SPs, use the [[VisibleDataSources|/API/CodeSamples/VisibleDataSources
 
 **NOTE:** when the VisibleDataSources property is empty, all tables are visible by default, while all SP are hidden. If VisibleDataSources contains any names, then all tables not included in VisibleDataSources will become hidden. To use them, they must also be included in VisibleDataSources to be used together with SPs. In this code example, the table "DummyTable" is added to VisibleDataSources along with our SP to make it visible and denote the difference in naming between tables and SPs.
 
+##Lazy loading of stored procedures
+
+Since version 6.7.0.275, we have allowed deferment of obtaining stored procedure metadata (the columns returned by executing the stored procedure) until the stored procedure is needed for a report execution or selection as a datasource. This allows for quicker initial load times when the bulk of the database schema is collected and prevents bottlenecks caused by long running stored procedures that may be orders of magnitude more complex in their execution than a table or view. Since Izenda requires a stored procedure to be run before it is able to determine the returned columns and their datatypes, the setting [[LazySpMetadataPulling = true|API/CodeSamples/LazySpMetadataPulling]] helps offload that performance hit to the moment when that data is required.
+
 ##Adding code for filtering the Equals(Select) drop-down.
 
 Stored procedures generate sql for you and override the default queries created by Izenda Reports. Hence, the Equals(Select) drop-down will not be properly filtered because the stored procedure will not reflect the filter. In order to do this, you must populate the drop-down yourself using the "ProcessEqualsSelect" method. 
