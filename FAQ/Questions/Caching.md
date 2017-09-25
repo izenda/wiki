@@ -50,7 +50,7 @@ The [[AdHocSettings.PerUserCaching|http://wiki.izenda.us/API/CodeSamples/PerUser
 
 [[AdHocSettings.CacheSchema|http://wiki.izenda.us/API/CodeSamples/CacheSchema]] (default = true) is a Boolean setting which tells Izenda whether or not the DatabaseSchema object should be cached. By default, it is cached in application memory and on the filesystem. The cache file name is generated using the database connection string and [[VisibleDataSources|API/CodeSamples/VisibleDataSources]].
 
-**Note:** Use PerUserCaching to store the schema in session memory. This will also generate a folder per user on the server using the database connection string, [[CurrentUserName|API/CodeSamples/CurrentUserName]], and [[CurrentUserTenantId|API/CodeSamples/CurrentUserTenantId]] as the hash for the cache folder name.
+**Note:** Use PerUserCaching to store the schema in session memory. This will also generate a folder per user on the server using the database connection string, [[VisibleDataSources|API/CodeSamples/VisibleDataSources]], [[CurrentUserName|API/CodeSamples/CurrentUserName]], and [[CurrentUserTenantId|API/CodeSamples/CurrentUserTenantId]] as the hash for the cache folder name.
 
 ###SchemaCacheTimeout
 
