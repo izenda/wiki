@@ -1,4 +1,40 @@
 [[_TOC_]]
+
+<!--
+
+#6.10.0.23 (October 10, 2017)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|26158|Internal|Optimization|Refactored and optimized internal FiltersData behavior.|
+|27337|User Interface|Exports|Permitted custom behaviors to be added to the toolbar Send Report button.|
+|28098|Internal|Query Generation|Permitted the override of GenerateSQL for complex hidden filters.|
+|28248|Internal|Optimization|Implemented gzip content compression.|
+|28261|User Interface|Controls|Fixed location of dropdown menu in Instant Reports so as to not try to render itself partially offscreen.|
+|28263|User Interface|Controls|Refactored use of forward and back slashes for greater ease of use (both should be acceptable for most uses).|
+|28294|Internal|API|Allowed caching of AdHocSettings.Culture.|
+|28326|User Interface|Controls|Corrected some UI behavior in Firefox that would prevent deleting reports.|
+|28330|User Interface|Controls|Minor tweaks to button color and appearance in the Instant Reports toolbar.|
+|28334|Report Design|Filters|Corrected "Multipart Identifier Could Not Be Bound" error when inheriting a field filter against a field from a datasource which is absent in the joined tables list of subreport.|
+|28338|Report Design|Formatting|Fixed error preventing gradient cell shading from being used inside of a pivot when it is also being used outside of that pivot.|
+|28351|Internal|Routing|Changed URL generation for images so that they load without permissions errors in MVC.|
+|28357|Internal|Routing|Additional optimizations to MVC routing.|
+|28373|Internal|Filters|Fixed an error in filter query construction which could cause unique values to fail to display in a populated filter.|
+|28380|Report Design|Visualizations|Prevented an intermittent javascript error which arose on reports with multiple visualizations.|
+|28391|Report Design|Reports|Corrected extra, empty line from being placed at the bottom of an inverted summary table.|
+|28399|User Interface|Controls|Prevented some UI icons from disappearing in Edge.|
+|28400|Internal|Routing|Optimized routing in the MVC kit.|
+|28404|Report Design|Forms|Changed Form rendering to account for square brackets in field names as well as field values.|
+|28407|User Interface|Fonts|Prevented font loading errors in Edge.|
+|28411|Report Design|Expressions|Fixed an error preventing subtotal expressions from being generated from a stored procedure dataset.|
+|28412|User Interface|Tooltips|Corrected tooltip when hovering over "Add New Filter" in the Report Viewer.|
+|28415|Report Design|Visual Groups|Prevented using inverted grid and field value visual group style at the same time.|
+|28421|Report Design|Dashboards|Fixed the display of chart titles on dashboard tiles.|
+|28428|Report Design|Visualizations|Created some friendlier error messages for visualizations.|
+|28430|Internal|API|Set rp.aspx to always open resources as readonly by default to prevent access errors.|
+|28451|Internal|Query Generation|Prevented bad query code from being generated when a column name contains "PARAM" or "PARAM_".|
+
+--->
  
 #6.10.0.22 (September 12, 2017)
 
