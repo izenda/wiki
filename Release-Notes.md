@@ -1,7 +1,5 @@
 [[_TOC_]]
 
-<!--
-
 #6.10.0.23 (October 10, 2017)
 
 |Case|Category|Subcategory|Description|
@@ -33,8 +31,6 @@
 |28428|Report Design|Visualizations|Created some friendlier error messages for visualizations.|
 |28430|Internal|API|Set rp.aspx to always open resources as readonly by default to prevent access errors.|
 |28451|Internal|Query Generation|Prevented bad query code from being generated when a column name contains "PARAM" or "PARAM_".|
-
---->
  
 #6.10.0.22 (September 12, 2017)
 
