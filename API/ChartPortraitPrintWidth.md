@@ -1,4 +1,4 @@
-#ReplaceMe
+#ChartPortraitPrintWidth
 
 [[_TOC_]]
 
