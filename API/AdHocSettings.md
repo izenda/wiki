@@ -66,9 +66,11 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[CascadeFilterValues|/API/CodeSamples/CascadeFilterValues]]| Gets or sets whether cascading is enabled for filter values. For example, if two filters are defined for country and city, then selecting a value for "Country" will update the "City" filter with values for that country only. |True|
 |Char|[[CategoryCharacter|/API/CodeSamples/CategoryCharacter]]| Gets or sets the character used as a delimiter separating the category from the report name. |null|
 |Boolean|[[ChangParentUrlWhenRedirect|/API/CodeSamples/ChangParentUrlWhenRedirect]]| Gets or sets whether to use different reporting pages than the ones specified by default when redirecting through AdHoc toolbar buttons and links. |False|
-|ChartingEngine|[[ChartingEngine|/API/CodeSamples/ChartingEngine]]| Defines which ChartingEngine will be used (ZedGraph, ComponentArt, Dundas, or HtmlCharts) |DundasCharts|
+|ChartingEngine|[[ChartingEngine|/API/CodeSamples/ChartingEngine]]| Defines which ChartingEngine will be used (ZedGraph, ComponentArt, Dundas, or HtmlCharts) |HtmlCharts|
 |Int32|[[ChartLimit|/API/CodeSamples/ChartLimit]]| Gets or sets the limit for the maximum number of labels that can exist on a single chart. |500|
 |ChartCollection|[[Charts|/API/CodeSamples/Charts]]|Gets or sets the collection of available Izenda.AdHoc.Charts.|{Trend, Pie,<br>Plot, Bar,<br>Funnel}|
+|Int32|[[ChartPortraitPrintHeight|/API/ChartPortraitPrintHeight]]|Gets or sets the height of a rasterized, exported chart image.||
+|Int32|[[ChartPortraitPrintWidth|/API/ChartPortraitPrintWidth]]|Gets or sets the width of a rasterized, exported chart image.||
 |Point|[[ChartSize|/API/CodeSamples/ChartSize]]| Gets or sets the value indicating the maximum length and width of charts. |{X=700,Y=300}|
 |String[]|[[ChartSortFields|/API/CodeSamples/ChartSortFields]]| Gets or sets the fields that will be used to sort data when a chart is used. |null|
 |Int32|[[CheckBoxListColumns|/API/CodeSamples/CheckBoxListColumns]]|Gets or sets the number of checkbox columns displayed in the "Quick add" dialog of the [[Izenda.Web.UI.AdHocReportDesigner|/API/Izenda/Web/UI/Izenda-Web-UI-AdHocReportDesigner]].|2|
