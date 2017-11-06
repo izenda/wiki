@@ -272,6 +272,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String|[[ResponseServer|/API/CodeSamples/ResponseServer]]|Gets or sets the URL of the [[Izenda.AdHoc.ResponseServer|/API/Izenda/AdHoc/Izenda-AdHoc-ResponseServer]] page.|rs.aspx|
 |String|[[ResponseServerWithDelimiter|/API/CodeSamples/ResponseServerWithDelimiter]]|Gets the ResponseServer page with the [[Izenda.AdHoc.AdHocSettings.UrlParametersDelimiter|/API/Izenda/AdHoc/AdHocSettings/Izenda-AdHoc-AdHocSettings-UrlParametersDelimiter]] character at the end.|rs.aspx?|
 |String|[[ResponseServerWithDelimiterFull|/API/CodeSamples/ResponseServerWithDelimiterFull]]|Gets the ResponseServer page with the [[Izenda.AdHoc.AdHocSettings.UrlParametersDelimiter|/API/Izenda/AdHoc/AdHocSettings/Izenda-AdHoc-AdHocSettings-UrlParametersDelimiter]] character at the end.|rs.aspx?|
+|String|[[ResourcesRootFolder|/API/ResourcesRootFolder]]|Sets the folder Izenda will check as the root resource folder.||
 |Int32[]|[[ResultsDropdownValues|/API/CodeSamples/ResultsDropdownValues]]|Gets or sets the list of the values in the "Results" dropdown menu on the [[Izenda.Web.UI.AdHocToolbarNavigation|/API/Izenda/Web/UI/Izenda-Web-UI-AdHocToolbarNavigation]] control.|System.Int32[]|
 |String|[[SavedReportsTable|/API/CodeSamples/SavedReportsTable]]| Gets or sets the table name for saved reports. |IzendaAdHocReports|
 |String|[[SaveReportSetNextUrl|/API/CodeSamples/SaveReportSetNextUrl]]| Gets or sets the URL of the URL that will be loaded after saving a report. |null|
