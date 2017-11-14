@@ -1,5 +1,39 @@
 [[_TOC_]]
 
+<!---
+
+#6.10.0.24 (November 14, 2017)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|27045|Internal|Filters|Corrected some bad SQL generation that could occur when using grouped expressions to calculate a value and some constituent fields to that calculated value are being filtered on.|
+|28300|Internal|Thumbnails|Added support for loading thumbnails with async requests.|
+|28359|Report Design|Reports|Fixed incorrect editor link generated in the report list with extra slashes.|
+|28408|Report Design|Exports|Resolved regression issue with legacy pdf exporting|
+|28409|Report Design|Reports|For every filter ("criteria" node in XML) izenda stores in XML two attributes: Value, and ValueEncoded. Value contains the field value in plain text. ValueEncoded contains the same value in base64-encoded form, and it is used by izenda when filling ReportSet object. If value is altered and encoded value is not the filters are broken and report will not load. Altered process to add encoded values if blank.|
+|28414|Report Design|Summary|Prevented incorrect output which could occur when using Add Delta and Invert at the same time on a summary.|
+|28455|Report Design|Pivots|Sorting on a column with Percentage format isn't displaying properly when used in a pivot grid.|
+|28479|Report Design|Dashboards|Slight alteration to size and position of open dashboard control in dashboard page.|
+|28487|Internal|Logging|Added additional logging for some AdHocSettings (OracleConstraintsQuery and VisualizationsFolder).|
+|28488|Internal|Backend|Updated CurrentUserTenantID to enforce the processing of one value at a time. |
+|28490|Report Design|Exports|Corrected URL generation when producing PDF exports.|
+|28493|Report Design|Dashboards|Error noted when resizing charts in some dashboard tiles.|
+|28495|Internal|Settings|Made linker timestamp visible on rs.aspx page to show dll date.|
+|28496|Report Design|Dashboards|Removed underline displaying in dashboard toolbar.|
+|28502|Report Design|Filters|Missing field name on Filters in Instant Report.|
+|28503|Report Design|Visual Group|Incorrect computation of subtotal in Instant Report when using visual group.|
+|28504|Report Design|Exports|Some Funnel charts are cut off in PDF export.|
+|28508|Report Design|Calculation|Prevented overflow error which could occur when using Oracle and calculating date diffs.|
+|28510|Report Design|Formats|Implemented ability to sort on custom date formats.|
+|28518|Internal|Optimization|Refactored some areas in the Report List, application initializes tabs each time a category is clicked.|
+|28538|Report Design|Forms|Filters smart tag for Forms now displays without needing to explicitly force "Show Filters".|
+|28540|Internal|Optimization|Optimized filter loading for better performance.|
+|28547|Internal|Optimization|Added performance improvements to Report Viewer loading|
+|28559|Report Design|Drilldowns|Corrected behavior of aggregating blank and null strings for drilldowns.|
+|28613|User Interface|Report List|Some categories when clicked in the report list are unresponsive.|
+
+--->
+
 #6.10.0.23 (October 11, 2017)
 
 |Case|Category|Subcategory|Description|
