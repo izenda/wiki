@@ -1,7 +1,5 @@
 [[_TOC_]]
 
-<!---
-
 #6.10.0.24 (November 14, 2017)
 
 |Case|Category|Subcategory|Description|
@@ -31,8 +29,6 @@
 |28547|Internal|Optimization|Added performance improvements to Report Viewer loading|
 |28559|Report Design|Drilldowns|Corrected behavior of aggregating blank and null strings for drilldowns.|
 |28613|User Interface|Report List|Some categories when clicked in the report list are unresponsive.|
-
---->
 
 #6.10.0.23 (October 11, 2017)
 
