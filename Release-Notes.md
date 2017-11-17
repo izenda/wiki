@@ -1,6 +1,8 @@
 [[_TOC_]]
 
-#6.10.0.24 (November 14, 2017)
+#6.10.0.24 (November 14, 2017) IMPORTANT HOTFIX NOTE
+
+There is a small issue in this version where the report list will not load if there are no uncategorized reports. All links still function normally, but the standard behavior in the case of no uncategorized reports is to either load the top alphabetical category, or to open the report designer. Replacing /Resources/js/ReportList.js with [[this|/Release-Notes/izenda-6.10.0.24+28631fix-reportlist.zip]] file will correct this behavior.
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
