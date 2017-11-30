@@ -5,18 +5,18 @@
 <!---[Known Issues Report](http://fogbugz.izenda.us/reporting/reportviewer.aspx?rn=Tracking_DO_NOT_EDIT\\KIL\\KnownIssues)-->
 ##Known Issues
 
-This list of issues is tentative and expected to change. Last updated on September 20, 2017.
+This list of issues is tentative and expected to change. Last updated on November 30, 2017.
 
 |Expected Release|Tenative Date|Case|Notes|
 |:----|:-----------|:----------------|:---------------|
-|6.10.0.23|October 10|27754|Refactored internal datetime handling to prevent some possible issues with Culture datetime translations.|
-|6.10.0.23|October 10|28261|Fixed location of dropdown menu in Instant Reports so as to not try to render itself partially offscreen.|
-|6.10.0.23|October 10|28263|Refactored use of forward and back slashes for greater ease of use (both should be acceptable for most uses).|
-|6.10.0.23|October 10|28294|Allowed caching of AdHocSettings.Culture.|
-|6.10.0.23|October 10|28326|Corrected some UI behavior in Firefox that would prevent deleting reports.|
-|6.10.0.23|October 10|28330|Minor tweaks to button color and appearance in the Instant Reports toolbar.|
-|6.10.0.23|October 10|28334|Corrected "Multipart Identifier Could Not Be Bound" error when inheriting a field filter against a field from a datasource which is absent in the joined tables list of subreport.|
-|6.10.0.23|October 10|28351|Changed URL generation for images so that they load without permissions errors in MVC.|
+|6.10.0.25|December 12|28375|Corrected behavior of clearing pivots in Instant Reports.|
+|6.10.0.25|December 12|28416|Enabled pagination for inverted summary grids.|
+|6.10.0.25|December 12|28423|Fixed population of filter values being pulled from an expression.|
+|6.10.0.25|December 12|28424|Fixed ORA-01036 error when filtering against a datetime in Oracle.|
+|6.10.0.25|December 12|28429|Made Auto Gauge errors more explicit in Instant Reports.|
+|6.10.0.25|December 12|28435|Corrected error preventing CSV files from being exported if the ReportViewer has an HTML Form tag.|
+|6.10.0.25|December 12|28449|Added setting to specify Izenda resource folder so that Izenda does not traverse the file structure outside of this folder.|
+
 
 
 
