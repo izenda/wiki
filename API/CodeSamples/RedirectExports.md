@@ -2,6 +2,8 @@
 
 [[_TOC_]]
 
+Why does my large PDF export fail?
+
 ##About
 
 When exporting reportset, Izenda checks RedirectExports value. If RedirectExports is true, then it returns exported reportset without placing it to session and redirecting response.
