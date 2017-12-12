@@ -1,5 +1,34 @@
 [[_TOC_]]
 
+<!--
+
+#6.10.0.25 (December 12, 2017)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|28375|Report Design|Instant Reports|Corrected behavior of clearing pivots in Instant Reports.|
+|28416|Report Design|Report Designer|Enabled pagination for inverted summary grids.|
+|28423|Report Design|Filters|Fixed population of filter values being pulled from an expression.|
+|28424|Internal|Database|Fixed ORA-01036 error when filtering against a datetime in Oracle.|
+|28429|Report Design|Instant Reports|Made Auto Gauge errors more explicit in Instant Reports.|
+|28435|Report Design|Exports|Corrected error preventing CSV files from being exported if the ReportViewer has an HTML Form tag.|
+|28449|Internal|Settings|Added setting to specify Izenda resource folder so that Izenda does not traverse the file structure outside of this folder.|
+|28554|Internal|Settings|Corrected behavior of disappearing buttons when disabling thumbnail controls using ShowDesignLinks.|
+|28612|Report Design|Report Designer|Enabled hiding visually grouped fields.|
+|28615|Internal|Settings|Corrected issue which prevented the setting of AttachmentName in the scheduler.|
+|28616|Internal|API|Corrected some issues related to overriding ProcessDataSet.|
+|28621|Report Design|Filters|Corrected handling of string values with commas when passing them directly into filters via the url feature.|
+|28626|Report Design|Visualizations|Refactored AutoGauge to be easier to customize.|
+|28631|Internal|User Interface|Fixed error where the reportlist would load endlessly if there were no uncategorized reports.|
+|28657|Report Design|Filters|Made datetimes in filter description match the correctly applied formatting.|
+|28658|Report Design|Subreports|Fixed error which sometimes prevented popup subreports from appearing after a report has been saved and the report has not been reloaded.|
+|28687|Report Design|User Interface|Prevented save dialog from appearing partially offscreen in case of an extremely long category name.|
+|28716|Report Design|Visualizations|Corrected an error which could occur due to the D3 library when using visualizations on dashboards.|
+|28721|Report Design|Dashboards|Corrected error which could occur when resizing a dashboard browser window when that dashboard includes a visualization.|
+|28722|Report Design|Dashboards|Corrected tile positioning on dashboards to stop tiles from overlapping each other if the dashboard browser window is shrunk or minimized.|
+
+-->
+
 #6.10.0.24 (November 14, 2017) IMPORTANT HOTFIX NOTE
 
 There is a small issue in this version where the report list will not load if there are no uncategorized reports. All links still function normally, but the standard behavior in the case of no uncategorized reports is to either load the top alphabetical category, or to open the report designer. Replacing /Resources/js/ReportList.js with [[this|/Release-Notes/izenda-6.10.0.24+28631fix-reportlist.zip]] file will correct this behavior.
