@@ -1,7 +1,5 @@
 [[_TOC_]]
 
-<!--
-
 #6.10.0.25 (December 12, 2017)
 
 |Case|Category|Subcategory|Description|
@@ -26,8 +24,6 @@
 |28716|Report Design|Visualizations|Corrected an error which could occur due to the D3 library when using visualizations on dashboards.|
 |28721|Report Design|Dashboards|Corrected error which could occur when resizing a dashboard browser window when that dashboard includes a visualization.|
 |28722|Report Design|Dashboards|Corrected tile positioning on dashboards to stop tiles from overlapping each other if the dashboard browser window is shrunk or minimized.|
-
--->
 
 #6.10.0.24 (November 14, 2017) IMPORTANT HOTFIX NOTE
 
