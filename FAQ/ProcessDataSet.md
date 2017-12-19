@@ -20,7 +20,7 @@ The first parameter is the System.Data.DataSet retrieved from the database. It i
 
 In addition to manipulating the way your data looks, post-processing can assist with encryption, logging, localization, etc. The ProcessDataSet method will be called after your data has been retrieved from the database, but before it is displayed. This means you can manipulate the data however you want in order to display it as you want. For example, you can replace encrypted data values with decrypted ones. Let's explore post-processing with the ProcessDataSet method further.
 
-##Example: Using post-processing
+###Example: Using post-processing
 
 For example, we want to rename the "CA" region code to "California", but only in the results grid. 
 Without any post-processing we have the following report: 
@@ -85,7 +85,7 @@ When we run our post-processor code we will get the expected result:
 As you can see, "CA" was replaced by "California" in the grid but the chart still displays "CA". 
 Using this approach, you can change data retrieved from the database in many ways.
 
-##Example: Dynamically changing time zones
+###Example: Dynamically changing time zones
 
 This code sample show how to change TimeZone dynamically from the code. This allows you to show relevant Date values according to the current user local time.
 
@@ -144,7 +144,7 @@ Private Function GetLocalTime(utcTime As DateTime) As DateTime
 End Function
 ```
 
-##Example: Fetching a Column Used in a Report
+###Example: Fetching a Column Used in a Report
 
 Reports (report parts) can be referenced using the ReportSet.Reports collection. Here is a list of report parts:
 - Detail
