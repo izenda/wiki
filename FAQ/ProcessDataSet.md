@@ -29,7 +29,7 @@ Without any post-processing we have the following report:
 
 Now let's add some extra code to the CustomAdHocConfig class:
 
-###C♯
+C♯:
 
 ```csharp
 public override void ProcessDataSet(DataSet ds, string reportPart)
@@ -55,7 +55,7 @@ public override void ProcessDataSet(DataSet ds, string reportPart)
 }
 ```
 
-###VB.NET
+VB.NET:
 
 ```visualbasic
 Public Overrides Sub ProcessDataSet(ByVal ds As DataSet, ByVal reportPart As String)
@@ -115,7 +115,7 @@ private static DateTime GetLocalTime(DateTime utcTime)
 }
 ```
 
-###VB.NET:
+VB.NET:
 
 ```visualbasic
 Public Overrides Sub ProcessDataSet(ds As Data.DataSet, reportPart As String)	
@@ -175,7 +175,7 @@ public override void ProcessDataSet(DataSet ds, string reportPart)
 
 Due to the nature of the way the bulk CSV export runs, the above methods will not work for this type of export. In order to handle bulk CSV data, use the ProcessDataRow override instead.
 
-##Example: Using post-processing
+###Example: Using post-processing
 
 C♯:
 
