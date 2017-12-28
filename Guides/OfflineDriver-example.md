@@ -174,7 +174,7 @@ Public Class OfflineDriver
                 dr(cc) = colData(report.Fields(cc).DbColumn.FullName)(i)
             Next
             dt.Rows.Add(dr)
-            Next
+        Next
         Return ds
     End Function
 
