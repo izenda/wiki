@@ -1,5 +1,35 @@
 [[_TOC_]]
 
+#6.10.0.26 (January 16, 2017)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|28148|Internal|Data|Corrected Oracle error which could cause exceptions when using expressions and pivots in the same report.|
+|28371|Dashboards|Scheduler|Fixed dashboard panels being "pushed down" the page when scheduled.|
+|28568|Internal|Optimization|Refactored disk cache for constraints, general optimizations included.|
+|28671|Dashboards|Dashboards|Corrected dashboards sometimes not loading necessary scripts, resulting in a "report not found" error for no apparent reason.|
+|28719|Report Designer|Filters|Corrected "The given key was not present in the dictionary" related filter population error when updating filters.|
+|28723|Dashboards|User Interface|Added truncation to long report names when selecting a report for a dashboard.|
+|28731|Report Designer|Exports|Corrected text scaling issues in PDF export when using VG page break.|
+|28733|Dashboards|Dashboards|Fixed some JS errors that could occurr in dashboards due to babel polyfill library.|
+|28734|Report Designer|Formats|Better supported modifications of datetime formats in Excel which use the am/pm flag.|
+|28745|Internal|Data|Permitted custom drivers to inherit from Driver class.|
+|28749|Report List|User Interface|Corrected element borders for report icons in the report list when using no thumbnails mode.|
+|28754|Report Designer|User Interface|Fixed some UI glitches when zooming the page in and out.|
+|28755|Report Designer|User Interface|Added AdHocSettings.FilterTextAreaHeight to control the height of filter text boxes.|
+|28764|Report Designer|Exports|Corrected encoding of spaces in XML export.|
+|28778|Report Designer|User Interface|Fixed incorrect display of functions for a field based on wrong datatype in Chrome.|
+|28784|Report Designer|Forms|Fixed XSS security removing <script> tags from Forms when unnecessary.|
+|28792|Report List|User Interface|Corrected report searching on the report list to account for categories.|
+|28793|Report Designer|User Interface|Corrected error notification display to prevent a loading loop in the case of multiple errors.|
+|28796|Internal|Data|Corrected column population in custom drivers which override GetAllTables and GetColumns, which end up returning no columns.|
+|28797|Report Designer|Filters|Corrected behavior of time portion of datetime in filter value display. This will address 'missing' time values in filters.|
+|28807|Report Designer|User Interface|Prevented field functions from being blanked out in a saved report on a field using an expression.|
+|28813|Report Designer|Forms|Corrected use of popup subreports in forms.|
+|28817|Internal|Scheduler|Permitted customization of scheduler output using AdHocSettings.SchedulerOutputTypes.|
+|28841|Internal|Data|Permitted ASPX implementation of independent reportparts.|
+|28863|Internal|Settings|Prevented NullReferenceError when AdHocSettings.CacheSchema = false;.|
+
 #6.10.0.25 (December 12, 2017)
 
 |Case|Category|Subcategory|Description|
