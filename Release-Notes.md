@@ -13,7 +13,6 @@
 |28731|Report Designer|Exports|Corrected text scaling issues in PDF export when using VG page break.|
 |28733|Dashboards|Dashboards|Fixed some JS errors that could occurr in dashboards due to babel polyfill library.|
 |28734|Report Designer|Formats|Better supported modifications of datetime formats in Excel which use the am/pm flag.|
-|28745|Internal|Data|Permitted custom drivers to inherit from Driver class.|
 |28749|Report List|User Interface|Corrected element borders for report icons in the report list when using no thumbnails mode.|
 |28754|Report Designer|User Interface|Fixed some UI glitches when zooming the page in and out.|
 |28755|Report Designer|User Interface|Added AdHocSettings.FilterTextAreaHeight to control the height of filter text boxes.|
