@@ -470,3 +470,5 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String[]|[[VisibleTables|/API/CodeSamples/VisibleTables]]| Gets or sets the array of table names that should be shown in the datasources dropdown. **(deprecated)**|[]|
 |VisualGroupStyle|[[VisualGroupStyle|/API/CodeSamples/VisualGroupStyle]]| Gets or sets the default Visual Group style that will be used when designing reports. **(deprecated)**|CommaDelimited|
 |String|[[VisualizationBaseUrl|/API/CodeSamples/VisualizationBaseUrl]]| Gets or sets the base URL of the site (used to locate images for Visualizations in multi-tenant applications). |null|
+|String|[[VisualizationsFolder|/API/CodeSamples/VisualizationsFolder]]| Gets or sets full path to the Visualizations folder |String.Empty|
+|String[]|[[WebFarmNodesRsUrls|/API/CodeSamples/WebFarmNodesRsUrls]]| Gets or sets response server urls of other machines in webfarm |null|
