@@ -6,10 +6,10 @@
 **Data Type:** string  
 **Accepted Values:** URL locations   
 **Default value:** string.Empty  
-**Impacted Features:** Report Designer Chart Tab 
-**Purpose:** Gets or sets the base URL of the site in image references for Visualizations on the Chart tab of the Report Designer.  
-**Usage:** This setting is used to ensure that the image files are located by the application for Visualizations on the Chart tab of the Report Designer.  A typical use case is a multi-tenant application, where the Izenda URL changes based on tenant (i.e. tenant alpha sees URL "http://www.mysite.com/alpha/ReportList" and tenant beta sees "http://www.mysite.com/beta/ReportList").
-**Caveats:** This setting should not be used in the typical integration.  Only use when Visualization images do not appear in the Chart tab of the Report Designer (see screenshots below).  
+**Impacted Features:** Report Designer Chart Tab   
+**Purpose:** Gets or sets the base URL of the site in image references for Visualizations on the Chart tab of the Report Designer    
+**Usage:** This setting is used to ensure that the image files are located by the application for Visualizations on the Chart tab of the Report Designer.  A typical use case is a multi-tenant application, where the Izenda URL changes based on tenant (i.e. tenant alpha sees URL "http://www.mysite.com/alpha/ReportList" and tenant beta sees "http://www.mysite.com/beta/ReportList")    
+**Caveats:** This setting should not be used in the typical integration.  Only use when Visualization images do not appear in the Chart tab of the Report Designer (see screenshots below) 
 
 ##Code Samples
 ###Global.asax (C♯)
