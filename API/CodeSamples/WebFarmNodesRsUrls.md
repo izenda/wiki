@@ -7,7 +7,7 @@
 **Data Type:** string array    
 **Accepted Values:** URL locations   
 **Default value:** null   
-**Impacted Features:** Website infrastructure and url navigation    
+**Impacted Features:** schema, filtered list, and query cache invalidation for webfarms using multiple URLs   
 **Purpose:** Gets or sets response server urls of other machines in webfarm    
 **Usage:** This setting is used to ensure that Izenda is aware of all rs.aspx URLs when issuing server commands such as invalidating the server's schema cache on the filesystem.    
 **Caveats:** This setting is only to be used when the webfarm in question uses different URLs for routing and does not ensure that caches will be successfully invalidated if load balancing with a single website URL is used as there is no way to know strictly through the URL what machine is being accessed. Other measures need to be taken to ensure schema cache invalidation successfully occurs in that scenario.
