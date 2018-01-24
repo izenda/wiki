@@ -78,6 +78,8 @@ End Sub
 
 ![](http://wiki.izenda.us//FAQ/Questions/How-To-Preset-Values-In-Filter/Time_Period.png)
 
+***Note: The filter is displayed here for demonstration purposes. In this scenario, the filter would be hidden from user input***
+
 ##Example: Allowing the user to modify the filter value
 
 The above example does not allow the user to change the filter value as the filter is hidden. In order to allow a preset value that responds to user input, a different approach is required. First, we have to know when the report is first being accessed by a user. This can be tricky since Izenda does not track when a report is first being accessed versus subsequent requests to render the report with different filter values. Since the CustomAdHocConfig usually exists in the global.asax, checking if the request is a postback is not possible, so we have to use some other method. For the following example, imagine we have a report with the following:
