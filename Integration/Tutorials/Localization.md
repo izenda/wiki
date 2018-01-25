@@ -21,7 +21,6 @@ The following languages are currently supported. More are being added based on c
 * Danish (da-DK)
 * Dutch (nl-NL)
 * English (en-US)
-* EnglishGB (en-GB)
 * Estonian (et-EE)
 * Finnish (fi-FI)
 * French (fr-FR)
