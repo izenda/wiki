@@ -62,7 +62,7 @@ The overridden fields can be seen in the Fields tab on the Report Designer after
 6. You must also override some other methods like ``GetDataSet()``. This method accepts a ``System.Data.IDBCommand`` parameter, and returns the corresponding DataSet. Overriding this method allows you to pre-process the dataset before returning it. You may use ``AdHocContext.CurrentReportSet`` to get additional details of the report. For integrations that will not utilize SQL queries in the command object, ``Izenda.AdHoc.AdHocContext.CurrentReportSet`` may be used to get the report state.
 To override this method, simply add following method to the MyCustomDriver class:
 ```csharp
-public override DataSet GetDataSet(IDbCommand Command, Report report, string reportPart, string uniqueID)
+protected override DataSet GetDataSet(IDbCommand Command, Report report, string reportPart, string uniqueID)
 {
 DataSet result;
     result = base.GetDataSet(command, report, reportPart, uniqueID); //If you want the driver to obtain DataSet and process it before returning
