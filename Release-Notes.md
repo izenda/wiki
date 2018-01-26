@@ -367,7 +367,8 @@ There is a small issue in this version where the report list will not load if th
 PLEASE NOTE THAT THIS RELEASE REQUIRES DOWNLOADING THE FULL REFERENCE IMPLEMENTATION AS WE ADDED ONE PAGE WHICH MUST BE ADDED TO YOUR IMPLEMENTATION. <br/>
 Please follow the steps below to update your current Izenda version:<br/>
 
-1. Download the FULL RI <a href="http://archives.izenda.us/ri/">  Downloads RI Link   </a> 
+1.A Download the FULL RI <a href="http://archives.izenda.us/ri/">  Downloads RI Link   </a>
+1.B If you are upgrading from an older version of Izenda and do not want to download the full RI, you can use the RI as a reference. The important thing here is to update your resource links per this example: link rel = "stylesheet" type = "text / css" href = "./ rp.aspx? extres = components.vendor.bootstrap.css.bootstrap.min.css" 
 2. Unzip and copy the bin and resources to the corresponding website folders as would be done in a standard upgrade.
 3. Locate the rp.aspx page in the extracted folder. For MVC Kits this is in the Reporting folder. In Webforms and VB this is located in the root of the extracted folder. 
 4. Copy the new rp.aspx page to all locations in your implementation containing the rs.aspx page (please ensure you search as some implementations have more than one location for this file.
