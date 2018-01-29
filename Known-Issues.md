@@ -5,17 +5,14 @@
 <!---[Known Issues Report](http://fogbugz.izenda.us/reporting/reportviewer.aspx?rn=Tracking_DO_NOT_EDIT\\KIL\\KnownIssues)-->
 ##Known Issues
 
-This list of issues is tentative and expected to change. Last updated on November 30, 2017.
+This list of issues is tentative and expected to change. Last updated on January 29, 2018.
 
 |Expected Release|Tenative Date|Case|Notes|
 |:----|:-----------|:----------------|:---------------|
-|6.10.0.25|December 12|28375|Corrected behavior of clearing pivots in Instant Reports.|
-|6.10.0.25|December 12|28416|Enabled pagination for inverted summary grids.|
-|6.10.0.25|December 12|28423|Fixed population of filter values being pulled from an expression.|
-|6.10.0.25|December 12|28424|Fixed ORA-01036 error when filtering against a datetime in Oracle.|
-|6.10.0.25|December 12|28429|Made Auto Gauge errors more explicit in Instant Reports.|
-|6.10.0.25|December 12|28435|Corrected error preventing CSV files from being exported if the ReportViewer has an HTML Form tag.|
-|6.10.0.25|December 12|28449|Added setting to specify Izenda resource folder so that Izenda does not traverse the file structure outside of this folder.|
+|6.10.0.27|Feb 13, 2017|28673|Enhanced functionality of ForceResourceRequestsUniqueUrls to lower the number of hoops users have to jump through when this setting is first enabled.|
+|6.10.0.27|Feb 13, 2017|28725|Prevented extra visualization refreshes when visualizations are used on a dashboard which is being resized.|
+|6.10.0.27|Feb 13, 2017|28745|Permitted custom drivers to inherit from Driver class.|
+
 
 
 
