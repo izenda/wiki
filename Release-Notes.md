@@ -18,7 +18,7 @@
 |28755|Internal|Settings|Added AdHocSettings.FilterTextAreaHeight to control the height of filter text boxes.|
 |28764|Report Design|Exports|Corrected encoding of spaces in XML export.|
 |28778|User Interface|Report Design|Fixed incorrect display of functions for a field based on wrong datatype in Chrome.|
-|28784|Internal|Optimization|Fixed XSS security removing <script> tags from Forms when unnecessary.|
+|28784|Internal|Optimization|Fixed XSS security removing script tags from Forms when unnecessary.|
 |28792|User Interface|Report List|Corrected report searching on the report list to account for categories.|
 |28793|User Interface|Report Viewer|Corrected error notification display to prevent a loading loop in the case of multiple errors.|
 |28796|Internal|Data |Corrected column population in custom drivers which override GetAllTables and GetColumns, which end up returning no columns.|
