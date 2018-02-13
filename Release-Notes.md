@@ -1,6 +1,5 @@
 [[_TOC_]]
 
-<!--
 #6.10.0.27 (February 13, 2018)
 
 |Case|Category|Subcategory|Description|
@@ -29,8 +28,6 @@
 |28817|Internal|Settings|Permitted customization of scheduler output using AdHocSettings.SchedulerOutputTypes.|
 |28841|Internal|Settings|Permitted ASPX implementation of independent reportparts.|
 |28863|Internal|Settings|Prevented NullReferenceError when AdHocSettings.CacheSchema = false;.|
-
--->
 
 #6.10.0.26 (January 16, 2018)
 
