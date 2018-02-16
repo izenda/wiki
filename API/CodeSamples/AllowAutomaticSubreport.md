@@ -2,6 +2,8 @@
 
 [[_TOC_]]
 
+##About
+
 Gets or sets whether (Automatic) subreport option is available. The option appears under the advanced field options on the fields tab of the report designer page. If this is set to true, the option will appear in the dropdown as the second menu option with the default option being an ellipsis (...). If this is set to false, the option will not appear.
 
 ##Global.asax (C♯)
