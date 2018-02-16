@@ -47,7 +47,3 @@ Public Class CustomAdHocConfig
     End Sub
 End Class
 ```
-
-##Example Video
-
-http://www.screencast.com/users/IzendaReports/folders/Default/media/7bea4b20-1289-414b-8176-0edc97647c54
