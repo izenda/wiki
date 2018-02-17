@@ -4,7 +4,7 @@
 
 ##About
 
-This setting applies to whether the various types of resource files loaded via the resource provider page will be cached to the application's static memory or re-loaded from their respective sources each time. When enabled, all resources will be cached in static memory after loading from their sources for the first request. When disabled, the files will be re-loaded from their sources each time a request is made. Browser caching is not affected by this setting.
+Gets or sets whether resources like css/js/html/fonts should be cached in application memory. This setting is application-wide. This setting applies to whether the various types of resource files loaded via the resource provider page will be cached to the application's static memory or re-loaded from their respective sources each time. When enabled, all resources will be cached in static memory after loading from their sources for the first request. When disabled, the files will be re-loaded from their sources each time a request is made. Browser caching is not affected by this setting.
 
 **Default Value:** true
 
