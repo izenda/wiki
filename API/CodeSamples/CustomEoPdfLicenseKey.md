@@ -4,7 +4,7 @@
 
 ##About
 
-Sets custom license key for currently being used eopdf assembly. This setting is application-wide. If your application has a different version of EO than Izenda, this can be used to initialize the assembly's license key to your company's purchased version.
+Sets custom license key for currently being used eopdf assembly. This setting is application-wide. If your application has a different version of EO than Izenda, this can be used to initialize the assembly's license key to your company's purchased version. If you switch licenses after loading your website, then an IIS reset (or other web hosting application's equivalent) would be required to recognize the new key.
 
 **Default Value:** true
 
