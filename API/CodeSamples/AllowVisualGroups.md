@@ -20,13 +20,13 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
   // Add custom settings after setting the license key and connection string by overriding the ConfigureSettings() method
   public static void InitializeReporting() {
     //Check to see if we've already initialized.
-    if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+    if (AdHocContext.Initialized)
       return;
     AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
     AdHocSettings.AllowVisualGroups = true; //The relevant setting
-    HttpContext.Current.Session["ReportingInitialized"] = true;
+    AdHocContext.Initialized = true;
   }
 }
 ```
@@ -41,14 +41,14 @@ Public Class CustomAdHocConfig
 
     Shared Sub InitializeReporting()
         'Check to see if we've already initialized
-        If HttpContext.Current.Session Is Nothing OrElse HttpContext.Current.Session("ReportingInitialized") IsNot Nothing Then
+        If AdHocContext.Initialized Then
             Return
         'Initialize System
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
         AdHocSettings.AllowVisualGroups = True 'The relevant setting
-        HttpContext.Current.Session("ReportingInitialized") = True
+        AdHocContext.Initialized = True
     End Sub
 End Class
 ```
