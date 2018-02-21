@@ -4,7 +4,7 @@
 
 ##About
 
-_**Obsolete:** Use file dashboard-tabs.css in Resources to alter dashboards tabs background image url._
+_**Obsolete:** Use file dashboard-tabs.css in Resources to alter dashboards tabs background image url. As of version 6.10.0.10, this setting will always return an empty string._
 
 Gets or sets the URL of the background image used for tabs on the "Dashboards" page.
 
