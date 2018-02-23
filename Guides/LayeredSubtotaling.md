@@ -8,7 +8,7 @@ Layered subtotaling is a customized way to display subtotals that will aggregate
 
 ##Example
 
-![Custom Layered Subtotaling](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_layered_subtotaling.png)
+![Custom Layered Subtotaling](/Guides/LayeredSubtotaling/custom_layered_subtotaling_2.PNG)
 
 In this example, the data would be aggregated based on [ShipCountry] normally. The subtotal of all countries' freight would be totaled up. With layered subtotaling, we can get subtotals for drilldowns (such as the subtotal of [ShipRegion] ([ShipCountry] drills down to [ShipRegion]&#41;&#41; in one report. This allows not only each [ShipCountry] field value to be totaled up, but it also allows us to see each [ShipRegion]'s total.
 
