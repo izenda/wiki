@@ -20,6 +20,10 @@ Here is a sample global.asax to implement layered subtotaling in your own applic
 LayeredSubtotaling myLayeredSubtotaling = new LayeredSubtotaling(VisualGroupStyle.LineDelimitedWithLabels);
 ```
 
+```visualbasic
+Dim myLayeredSubtotaling As New LayeredSubtotaling(VisualGroupStyle.LineDelimitedWithLabels)
+```
+
 ###C♯
 
 ```csharp
