@@ -4,30 +4,27 @@
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
-|28148|Internal|Data|Corrected Oracle error which could cause exceptions when using expressions and pivots in the same report.|
-|28371|Report Design|Dashboards|Fixed dashboard panels being "pushed down" the page when scheduled.|
-|28568|Internal|Optimization|Refactored disk cache for constraints, general optimizations included.|
-|28671|Report Design|Dashboards|Corrected dashboards sometimes not loading necessary scripts, resulting in a "report not found" error for no apparent reason.|
-|28719|Report Design|Filters|Corrected "The given key was not present in the dictionary" related filter population error when updating filters.|
-|28723|Report Design|Dashboards|Added truncation to long report names when selecting a report for a dashboard.|
-|28731|Report Design|Exports|Corrected text scaling issues in PDF export when using VG page break.|
-|28733|Report Design|Dashboards|Fixed some JS errors that could occurr in dashboards due to babel polyfill library.|
-|28734|Report Design|Exports|Better supported modifications of datetime formats in Excel which use the am/pm flag.|
-|28749|User Interface|Report List|Corrected element borders for report icons in the report list when using no thumbnails mode.|
-|28754|User Interface|Report Viewer|Fixed some UI glitches when zooming the page in and out.|
-|28755|Internal|Settings|Added AdHocSettings.FilterTextAreaHeight to control the height of filter text boxes.|
-|28764|Report Design|Exports|Corrected encoding of spaces in XML export.|
-|28778|User Interface|Report Design|Fixed incorrect display of functions for a field based on wrong datatype in Chrome.|
-|28784|Internal|Optimization|Fixed XSS security removing script tags from Forms when unnecessary.|
-|28792|User Interface|Report List|Corrected report searching on the report list to account for categories.|
-|28793|User Interface|Report Viewer|Corrected error notification display to prevent a loading loop in the case of multiple errors.|
-|28796|Internal|Data |Corrected column population in custom drivers which override GetAllTables and GetColumns, which end up returning no columns.|
-|28797|Report Design|Filters|Corrected behavior of time portion of datetime in filter value display. This will address 'missing' time values in filters.|
-|28807|User Interface|User Interface|Prevented field functions from being blanked out in a saved report on a field using an expression.|
-|28813|Report Design|Forms|Corrected use of popup subreports in forms.|
-|28817|Internal|Settings|Permitted customization of scheduler output using AdHocSettings.SchedulerOutputTypes.|
-|28841|Internal|Settings|Permitted ASPX implementation of independent reportparts.|
-|28863|Internal|Settings|Prevented NullReferenceError when AdHocSettings.CacheSchema = false;.|
+|28481|Internal|Resources|Ensured that saving an image will always generate the same hash.|
+|28587|Internal|Resources|Corrected image metadata problem which could lead to images being removed from emailed reports.|
+|28673|Internal|Settings|Enhanced functionality of ForceResourceRequestsUniqueUrls to lower the number of hoops users have to jump through when this setting is first enabled.|
+|28703|Instant Reports|Data|Corrected issues when saving Instant Reports which have a field with a default format, which can sometimes be set against type.|
+|28745|Internal|Data|Permitted custom drivers to inherit from Driver class.|
+|28809|Report Design|Data|Corrected some problems with arithmetic calculation of fields when applied to aggregated data.|
+|28835|Report Design|Scheduler|Prevented issue where saving a report in the scheduler too soon after the new year will cause the report to skip ahead a year.|
+|28844|Internal|Localization|Prevented value ranges on charts from being rendered incorrectly during non-English localization.|
+|28845|Internal|Localization|Made equals filter in Instant Reports respect AdHocSettings.Language.|
+|28847|Internal|Data|Enabled use of weekday datepart in SQL functions.|
+|28851|Internal|Localization|Corrected some missing localization strings.|
+|28875|Internal|Settings|Corrected chart failing to render in cases where ResourcesProviderWithDelimiter passes an incorrect value.|
+|28892|Report Design|Rendering|Made it so that dashboard tile borders appear during a resize and not just after.|
+|28901|Internal|Error Handling|Deescalated priority of column/table not found errors in some conditions to prevent application level error notifications.|
+|28915|Internal|Internal|Eliminated need for .net 3.5 framework dependencies.|
+|28936|Report Design|Data|Corrected join issues which can occur using table aliases.|
+|28941|Report Design|Subreports|Corrected behavior of nested popup subreports.|
+|28942|Report Design|Exports|Corrected some chart rendering errors on export to Word and PDF.|
+|28951|Instant Reports|Data|Corrected saving of datetime formats in Instant Reports.|
+|28963|Report Design|Data|Corrected object reference error which could occur when exporting a report to excel which has a default '...' format applied to a datetime.|
+|28964|Report Design|Visual Group|Corrected arithmetic concatenation of strings in visual group.|
 
 #6.10.0.26 (January 16, 2018)
 
