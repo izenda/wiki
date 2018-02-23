@@ -45,7 +45,12 @@ public class CustomAdHocConfig : FileSystemAdHocConfig
 
     public override string PerformCustomRendering(string initialHtml)
     {
-        return myLayeredSubtotaling.PerformCustomRendering(initialHtml);
+        string outputHtml = myLayeredSubtotaling.PerformCustomRendering(initialHtml);
+
+        //Uncomment the following lines if you need to manually clean things up after processing
+        //LayeredSubtotaling.CleanUpDeltas();
+        //myLayeredSubtotaling.ResetStep();
+        return outputHtml;
     }
 }
 
@@ -56,12 +61,20 @@ public class LayeredSubtotaling
 {
     public bool hasSubtotals = false;
     static Dictionary<string, List<object>> deltas = new Dictionary<string, List<object>>();
-    bool firstPass = true;
-    VisualGroupStyle targetVGStyle;
+    VisualGroupStyle _targetVGStyle;
+    ReportSetRenderingStep currentStep;
+
+    enum ReportSetRenderingStep
+    {
+        ReportTableStep = 0,
+        FullCountStep = 1,
+        TotalsStep = 2
+    }
 
     public LayeredSubtotaling(VisualGroupStyle targetVGStyle)
     {
         _targetVGStyle = targetVGStyle;
+        currentStep = ReportSetRenderingStep.ReportTableStep;
     }
 
     /// <summary>
@@ -69,7 +82,11 @@ public class LayeredSubtotaling
     /// </summary>
     public void DoSubtotalingForVG(System.Data.DataSet ds, string reportPart)
     {
-        if (firstPass && !String.IsNullOrEmpty(reportPart))
+        //Nothing to do. This isn't a report data set
+        if (String.IsNullOrEmpty(reportPart))
+            return;
+        //We only want to do the main processing when we have the actual data
+        if (currentStep == ReportSetRenderingStep.ReportTableStep)
         {
             string header, where;
             List<object> dataColumns = new List<object>();
@@ -139,11 +156,12 @@ public class LayeredSubtotaling
             }
         }
 
-        // If subtotaling is enabled, toggle first pass so the subtotal loop does wipe out custom totals. 
+        // If subtotaling Is enabled, there are three times during report execution when ProcessDataSet is called, otherwise it is called twice
+        // We can cycle through the enum values to ensure every execution works properly
         if (hasSubtotals)
-        {
-            firstPass = !firstPass;
-        }
+            currentStep = (ReportSetRenderingStep)(((int)(currentStep + 1)) % 3);
+        else
+            currentStep = (ReportSetRenderingStep)(((int)(currentStep + 1)) % 2);
     }
 
     /// <summary>
@@ -233,6 +251,22 @@ public class LayeredSubtotaling
     }
 
     /// <summary>
+    /// If we need to, we can clear out the deltas manually to free up memory
+    /// </summary>
+    public static void CleanUpDeltas()
+    {
+        deltas.Clear();
+    }
+
+    /// <summary>
+    /// Just in case something misfires, we can reset the rendering step manually
+    /// </summary>
+    public void ResetStep()
+    {
+        currentStep = ReportSetRenderingStep.ReportTableStep;
+    }
+
+    /// <summary>
     /// PrintFinalDeltas is called to in the case of level 1 delta changes. It makes sure all deltas get printed out,
     /// not just the level 1.
     /// </summary>
@@ -314,7 +348,12 @@ Public Class CustomAdHocConfig
     End Sub
 
     Public Overrides Function PerformCustomRendering(initialHtml As String) As String
-        Return myLayeredSubtotaling.PerformCustomRendering(initialHtml)
+        Dim outputHtml = myLayeredSubtotaling.PerformCustomRendering(initialHtml)
+
+        'Uncomment the following lines if you need to manually clean things up after processing
+        'LayeredSubtotaling.CleanUpDeltas()
+        'myLayeredSubtotaling.ResetStep()
+        Return outputHtml
     End Function
 End Class
 
@@ -324,18 +363,30 @@ End Class
 Public Class LayeredSubtotaling
     Public hasSubtotals As Boolean = False
     Shared deltas As New Dictionary(Of String, List(Of Object))()
-    Dim firstPass As Boolean = True
     Dim _targetVGStyle As VisualGroupStyle
+    Dim currentStep As ReportSetRenderingStep
+
+    Enum ReportSetRenderingStep
+        ReportTableStep = 0
+        FullCountStep = 1
+        TotalsStep = 2
+    End Enum
 
     Sub New(targetVGStyle As VisualGroupStyle)
         _targetVGStyle = targetVGStyle
+        currentStep = ReportSetRenderingStep.ReportTableStep
     End Sub
 
     ' <summary>
     ' Overrides base version to support custom totaling of various deltas in the report. 
     ' </summary>
     Public Sub DoSubtotalingForVG(ds As DataSet, reportPart As String)
-        If firstPass AndAlso Not String.IsNullOrEmpty(reportPart) Then
+        ' Nothing to do. This isn't a report data set
+        If String.IsNullOrEmpty(reportPart) Then
+            Return
+        End If
+        ' We only want to do the main processing when we have the actual data
+        If currentStep = ReportSetRenderingStep.ReportTableStep Then
             Dim header, where As String
             Dim dataColumns As New List(Of Object)()
             Dim dataHeaders As New Dictionary(Of String, String)()
@@ -359,14 +410,15 @@ Public Class LayeredSubtotaling
                                     'Otherwise, add the item, separated by a comma.
                                     header += ", " & row(column).ToString()
                                     where += " AND [" & column.ToString() & "] = '" & row(column) & "'"
-
-                                    'If the header Is already in the list, ignore it And move on.
-                                    If (Not dataHeaders.ContainsKey(header)) Then
-                                        dataHeaders.Add(header, where)
-                                    End If
                                 End If
-                                'Otherwise this Is a data column And add it to that data structure. 
+
+                                'If the header Is already in the list, ignore it And move on.
+                                If (Not dataHeaders.ContainsKey(header)) Then
+                                    dataHeaders.Add(header, where)
+                                End If
+
                             ElseIf Not dataColumns.Contains(column) AndAlso row(column).GetType() IsNot GetType(DBNull) Then
+                                'Otherwise this Is a data column And add it to that data structure. 
                                 dataColumns.Add(column)
                             End If
                         Next
@@ -389,9 +441,12 @@ Public Class LayeredSubtotaling
                 Next
             End If
         End If
-        ' If subtotaling Is enabled, toggle first pass so the subtotal loop does wipe out custom totals. 
+        ' If subtotaling Is enabled, there are three times during report execution when ProcessDataSet is called, otherwise it is called twice
+        ' We can cycle through the enum values to ensure every execution works properly
         If hasSubtotals Then
-            firstPass = Not firstPass
+            currentStep = DirectCast((currentStep + 1) Mod 3, ReportSetRenderingStep)
+        Else
+            currentStep = DirectCast((currentStep + 1) Mod 2, ReportSetRenderingStep)
         End If
     End Sub
 
@@ -468,6 +523,20 @@ Public Class LayeredSubtotaling
         End If
         Return initialHtml
     End Function
+
+    ' <summary>
+    ' If we need to, we can clear out the deltas manually to free up memory
+    ' </summary>
+    Public Shared Sub CleanUpDeltas()
+        deltas.Clear()
+    End Sub
+
+    ' <summary>
+    ' Just in case something misfires, we can reset the rendering step manually
+    ' </summary>
+    Public Sub ResetStep()
+        currentStep = ReportSetRenderingStep.ReportTableStep
+    End Sub
 
     ' <summary>
     ' PrintFinalDeltas Is called to in the case of level 1 delta changes. It makes sure all deltas get printed out,
