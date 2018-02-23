@@ -310,11 +310,11 @@ Public Class CustomAdHocConfig
     End Sub
 
     Public Overrides Sub ProcessDataSet(ByVal ds As DataSet, ByVal reportPart As String)
-        myLayeredSubtotaling.DoSubtotalingForVG(ds, reportPart, VisualGroupStyle.LineDelimitedWithLabels)
+        myLayeredSubtotaling.DoSubtotalingForVG(ds, reportPart)
     End Sub
 
     Public Overrides Function PerformCustomRendering(initialHtml As String) As String
-        Return myLayeredSubtotaling.PerformCustomRendering(initialHtml, VisualGroupStyle.LineDelimitedWithLabels)
+        Return myLayeredSubtotaling.PerformCustomRendering(initialHtml)
     End Function
 End Class
 
