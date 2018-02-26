@@ -10,7 +10,9 @@
 **Impacted Features:** schema, filtered list, and query cache invalidation for webfarms using multiple URLs   
 **Purpose:** Gets or sets response server urls of other machines in webfarm    
 **Usage:** This setting is used to ensure that Izenda is aware of all rs.aspx URLs when issuing server commands such as invalidating the server's schema cache on the filesystem.    
-**Caveats:** This setting is only to be used when the webfarm in question uses different URLs for routing and does not ensure that caches will be successfully invalidated if load balancing with a single website URL is used as there is no way to know strictly through the URL what machine is being accessed. Other measures need to be taken to ensure schema cache invalidation successfully occurs in that scenario.
+**Notes:** This setting is only to be used when the webfarm in question uses different URLs for routing, and does not ensure that caches will be successfully invalidated if load balancing with a single website URL is used. There is no way to know strictly through the URL what machine is being accessed. Other measures need to be taken to ensure schema cache invalidation successfully occurs in that scenario. On every machine in the webfarm, just assign an array of strings with urls of ResponseServer pages of every machine in webfarm, like this:
+
+  AdHocSettings.WebFarmNodesRsUrls = new string[] { "http://192.168.0.10/mysite/rs.aspx", "http://192.168.0.11/mysite/rs.aspx", "http://192.168.0.12/mysite/rs.aspx" };
 
 ##Code Samples
 ###Global.asax (C♯)
