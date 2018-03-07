@@ -1,6 +1,8 @@
 [[_TOC_]]
 
-#6.10.0.27 (February 13, 2018)
+#6.10.0.27 (February 13, 2018) IMPORTANT NOTE
+
+**NOTE:** Any installations of this build prior to March 7, 2018 have a critical error fixed in case 29079. Expressions which use a less than or greater than comparison will become corrupted if the report is saved.
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
@@ -26,7 +28,9 @@
 |28963|Report Design|Data|Corrected object reference error which could occur when exporting a report to excel which has a default '...' format applied to a datetime.|
 |28964|Report Design|Visual Group|Corrected arithmetic concatenation of strings in visual group.|
 
-#6.10.0.26 (January 16, 2018)
+#6.10.0.26 (January 16, 2018) IMPORTANT NOTE
+
+**NOTE:** Any installations of this build prior to March 7, 2018 have a critical error fixed in case 29079. Expressions which use a less than or greater than comparison will become corrupted if the report is saved.
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
