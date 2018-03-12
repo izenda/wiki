@@ -47,7 +47,7 @@ Public Class CustomAdHocConfig
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
         AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
         Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
-        AdHocSettings.HiddenTimeZones = New List(Of Double) { -6D, -5D, -4D, -3D } 'The relevant setting
+        AdHocSettings.HiddenTimeZones = New List(Of Double)(New Double() {-6D, -5D, -4D, -3D}) 'The relevant setting
         AdHocContext.Initialized = True
     End Sub
 End Class
