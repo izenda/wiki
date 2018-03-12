@@ -6,7 +6,7 @@
 
 Gets or sets whether the Report Viewer will be locked or not. A locked Report Viewer means no filters or fields can be changed.
 
-_**Note:** Typically it is a better practice to use report sharing options to lock specific reports.
+_**Note:** Typically it is a better practice to use report sharing options to lock specific reports._
 
 **Default Value:** False
 
