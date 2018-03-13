@@ -1,7 +1,5 @@
 [[_TOC_]]
 
-<!---
-
 #6.10.0.28 (March 13, 2018)
 
 |Case|Category|Subcategory|Description|
@@ -25,8 +23,6 @@
 |29057|Internal|Settings|Corrected text description for EmbedReportInServerEmail setting.|
 |29062|Report Design|Pivots|Corrected use of Group(Week) function in pivot so that it does not provide faulty output.|
 |29085|Internal|Settings|Expanded diagnostic and logging ability around report exporting.|
-
---->
 
 #6.10.0.27 (February 13, 2018) IMPORTANT NOTE
 
