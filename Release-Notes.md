@@ -1,5 +1,33 @@
 [[_TOC_]]
 
+<!---
+
+#6.10.0.28 (March 13, 2018)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|28707|Report Design|Scheduler|Prevented error causing schedule changes to not always save or update when a report is successfully scheduled.|
+|28725|Dashboard|Visualization|Prevented extra visualization refreshes when visualizations are used on a dashboard which is being resized.|
+|28857|Report Design|Subreports|Corrected error with using combokey to call an embedded subreport.|
+|28921|Report Design|Data|Prevented Distinct from being disabled when a report is saved with an invalid column name.|
+|28962|Report Design|Instant Report|Corrected error which prevented calculated fields from populating filters in instant report.|
+|28970|Report Design|Filters|Trimmed out some unnecessary filter query activity when cascading filters are disabled.|
+|28974|Report Design|Visual Groups|Refactored AntiXSS protection to permit additional characters to be used in visual group.|
+|28980|Report Design|Instant Report|Corrected issue with calendar selector filter in instant reports.|
+|28983|Dashboard|Gauges|Corrected animated half circle gauge style conflicting with modern dashboards.|
+|28985|Report Design|Pivots|Corrected issue where subtotals would not properly appear on pivots.|
+|28992|Report Design|User Interface|Prevented some UI glitches when resizing screen.|
+|29006|Report Design|Pivots|Changed behavior of clear pivot button so that it does not retain old data when pivot is re-added.|
+|29008|Report Design|Settings|Prevented being able to input 0 for "Items Per Page" value.|
+|29010|Report Design|Subreports|Fixed some issues around printing and rendering embedded subreports.|
+|29026|Internal|Report Parts|Further overhauled report parts and resource caching to enhance performance when using individual report parts.|
+|29043|Report Design|Subreports|Corrected behavior of subreports in auto chart when using instant reports.|
+|29057|Internal|Settings|Corrected text description for EmbedReportInServerEmail setting.|
+|29062|Report Design|Pivots|Corrected use of Group(Week) function in pivot so that it does not provide faulty output.|
+|29085|Internal|Settings|Expanded diagnostic and logging ability around report exporting.|
+
+--->
+
 #6.10.0.27 (February 13, 2018) IMPORTANT NOTE
 
 **NOTE:** Any installations of this build prior to March 7, 2018 have a critical error fixed in case 29079. Expressions which use a less than or greater than comparison will become corrupted if the report is saved.
