@@ -1,6 +1,8 @@
 [[_TOC_]]
 
-#6.10.0.28 (March 13, 2018)
+#6.10.0.28 (March 13, 2018) IMPORTANT NOTE
+
+**NOTE:** Any installations of this build prior to March 14, 2018 have a critical error fixed in case 29107. This fixes an error which prevents Izenda deployments based on MySQL from updating beyond version 6.10.0.25. The error thrown is an Incorrect Database Name error on saving a new report. 
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
@@ -26,7 +28,7 @@
 
 #6.10.0.27 (February 13, 2018) IMPORTANT NOTE
 
-**NOTE:** Any installations of this build prior to March 7, 2018 have a critical error fixed in case 29079. Expressions which use a less than or greater than comparison will become corrupted if the report is saved.
+**NOTE:** Any installations of this build prior to March 14, 2018 have a critical error fixed in case 29107. This fixes an error which prevents Izenda deployments based on MySQL from updating beyond version 6.10.0.25. The error thrown is an Incorrect Database Name error on saving a new report. Any installations of this build prior to March 7, 2018 have a critical error fixed in case 29079. Expressions which use a less than or greater than comparison will become corrupted if the report is saved.
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
@@ -54,7 +56,7 @@
 
 #6.10.0.26 (January 16, 2018) IMPORTANT NOTE
 
-**NOTE:** Any installations of this build prior to March 7, 2018 have a critical error fixed in case 29079. Expressions which use a less than or greater than comparison will become corrupted if the report is saved.
+**NOTE:** Any installations of this build prior to March 14, 2018 have a critical error fixed in case 29107. This fixes an error which prevents Izenda deployments based on MySQL from updating beyond version 6.10.0.25. The error thrown is an Incorrect Database Name error on saving a new report. Any installations of this build prior to March 7, 2018 have a critical error fixed in case 29079. Expressions which use a less than or greater than comparison will become corrupted if the report is saved.
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
