@@ -17,18 +17,10 @@ string message = string.Empty;
 string outputPath = Path.GetFullPath(string.Format("{0}\\..\\..\\{1}", Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "exports"));
 if (!Directory.Exists(outputPath))
     Directory.CreateDirectory(outputPath);
-foreach (string fileName in Directory.EnumerateFiles(AdHocSettings.ReportsPath))
+foreach (ReportSet rs in AdHocSettings.AdHocConfig.FilteredListReportsDictionary().Values) //output all available reports
 {
-    string reportName = fileName.Substring(fileName.LastIndexOf("\\"), fileName.LastIndexOf(".") - fileName.LastIndexOf("\\"));
-    FileInfo fi = new FileInfo(fileName);
-    ReportSet rs = ReportSet.InitializeNew();
-    string reportXml = string.Empty;
-    byte[] reportBytes = File.ReadAllBytes(fi.FullName);
-    reportXml = Encoding.UTF8.GetString(reportBytes, 0, reportBytes.Length);
     try
     {
-        rs.ReadXml(reportXml);
-        rs.ReportName = reportName;
         Izenda.AdHoc.EvoPdfGenerator gen = new Izenda.AdHoc.EvoPdfGenerator();
         Izenda.Controls.FileContentGenerator fileGen = gen.GenerateOutput(rs) as Izenda.Controls.FileContentGenerator;
         File.WriteAllBytes(string.Format("{0}\\{1}.{2}", outputPath, fileGen.OutputFileName, gen.FileExtension), fileGen.Content);
@@ -54,3 +46,59 @@ There are also other classes that are accessible in the same manner and that inh
 * EvoAzurePdfGenerator (for Azure cloud services)
 
 These classes exist in the Izenda.AdHoc namespace. FileContentGenerator exists in Izenda.Controls.
+
+##Bulk CSV Output Generator
+
+The bulk CSV output generator functions differently from other content generators. It is specifically made for large datasets, so instead of using the in-process memory to hold its content, a temporary file is created and a file id is generated that the response server can use to read that file into the HTTP response that is then delivered to the end user. There are a couple different ways to obtain the file and output a new copy to another location other than the temp directory. The sample code below will demonstrate one such method by finding the temp file directly, reading it into a stream, copying the stream to another output stream, and finally creating another file that will be the final exported file. We will also use chunking so we don't run into any out of memory exceptions.
+
+```csharp
+string message = string.Empty;
+string outputPath = Path.GetFullPath(string.Format("{0}\\..\\..\\{1}", Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "exports"));
+if (!Directory.Exists(outputPath))
+    Directory.CreateDirectory(outputPath);
+foreach (ReportSet rs in AdHocSettings.AdHocConfig.FilteredListReportsDictionary().Values) //output all available reports
+{
+    try
+    {
+        var gen = new BulkCsvReportOutputGenerator();
+        var bufferSize = 4096;
+        var MaxBufferSize = 1048576;
+        var fileGen = gen.GenerateOutput(rs) as FileContentGenerator;
+        string fid = ResponseServer.Add(fileGen);
+        using (var fs = new FileStream(string.Format("{0}\\{1}", outputPath, fileGen.OutputFileName), FileMode.Create))
+        {
+            using (var s = new FileStream(fileGen.InputFileName, FileMode.Open, FileAccess.Read, FileShare.Read, bufferSize, FileOptions.DeleteOnClose)) //delete the temp file after we're done with it
+            {
+                int dataLength = (int)s.Length;
+                int bufferLength = dataLength;
+                if (bufferLength > MaxBufferSize)
+                    bufferLength = MaxBufferSize;
+                byte[] buffer = new byte[bufferLength];
+                char[] altBuffer = new char[bufferLength * 2];
+                while (dataLength > 0)
+                {
+                    int blockLength = s.Read(buffer, 0, bufferLength);
+                    try
+                    {
+                        fs.Write(buffer, 0, blockLength);
+                        fs.Flush();
+                    }
+                    catch (Exception e1)
+                    {
+                        int altBlockLength = Convert.ToBase64CharArray(buffer, 0, blockLength, altBuffer, 0);
+                        fs.Write(Encoding.UTF8.GetBytes(altBuffer), -100, altBlockLength);
+                        fs.Flush();
+                    }
+                    dataLength = dataLength - blockLength;
+                }
+            }
+        }
+        message = string.Format("File {0} written to {1}", fileGen.OutputFileName, outputPath);
+    }
+    catch (Exception e)
+    {
+        message = e.Message;
+    }
+    Console.WriteLine(message);
+}
+```
