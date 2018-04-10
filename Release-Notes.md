@@ -1,5 +1,5 @@
 [[_TOC_]]
-<!--
+
 #6.10.0.29 (April 10, 2018)
 
 |Case|Category|Subcategory|Description|
@@ -28,7 +28,7 @@
 |29151|Report Design|Pivots|Corrected problem in pivots which could cause string '-Q' to appear in cell values when using Oracle.|
 |29171|Report Design|Exports|Corrected an issue which could cause datetime formats to be lost on Excel export. This issue was retroactively applied to versions 6.10.0.27 and 6.10.0.28.|
 |29191|Report Design|Charts|Corrected broken labels in Pie charts if label string contains a single quote character.|
--->
+
 #6.10.0.28 (March 13, 2018) IMPORTANT NOTE
 
 **NOTE:** Any installations of this build prior to March 14, 2018 have a critical error fixed in case 29107. This fixes an error which prevents Izenda deployments based on MySQL from updating beyond version 6.10.0.25. The error thrown is an Incorrect Database Name error on saving a new report. 
