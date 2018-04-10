@@ -1,5 +1,34 @@
 [[_TOC_]]
+<!--
+#6.10.0.29 (April 10, 2018)
 
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|28066|Report Design|Data Sources|Fixed exception when joining a datasource twice on the same report and adding an expression using an alias referencing one of those tables.|
+|28908|Internal|Methods|Refactored ReportCollection class.|
+|28931|Report Design|Styling|Corrected CSS not being applied to forms without first saving the report.|
+|28947|Report Design|Expressions|Corrected proper escaping of angle brackets in expressions to prevent corruption of the expression in value testing or output.|
+|28956|Report Design|Exports|Corrected some conditions in which externally hosted images would fail to be included in PDF export.|
+|29025|Internal|Methods|Refactored authentication code.|
+|29064|Internal|Data Sources|Refactored data source name links associated with virtual data source setting to prevent incorrect and faulty behavior when clicked.|
+|29089|Internal|Data Sources|Prevented 'Invalid Cast' error related to filters on fields using the UInt16, UInt32 or UInt64 datatype and using the ODBCDriver. This fix breaks backwards compatibility for virtual data sources, which must be manually opened and resaved to correct their functioning.|
+|29095|Internal|Data Sources|Corrected faulty behavior around drilling down on a 'date' type field in Oracle.|
+|29103|Report Design|Filters|Ensured reduction of unnecessary activity when cascading filters are disabled.|
+|29107|Internal|Data Sources|Prevented MySQL error when using stock MySQLDriver which throws "Incorrect Database Name". This fix was retroactively applied to 6.10.0.27 and 6.10.0.28.|
+|29110|Internal|Scheduling|Enhanced handling of invalid times when a time does not exist due to timezone shifts.|
+|29118|Report Design|Visualizations|Provided a more user friendly error message when embedded subreports are used on a grid which feeds data to a visualization which is not compatible with embedded subreports.|
+|29120|Report Design|Filters|Re-enabled use of passing some values, including blanks and nulls, as stored procedure parameters via specific filter operators.|
+|29123|Report Design|Charts|Prevented 'zero chart results' from appearing in error when using a calculated field to build a chart.|
+|29124|Report Design|Pagination|Corrected problem which would cause additional records to appear (more than requested in preview) when paginating report parts.|
+|29126|Internal|Methods|Corrected issues which sometimes cause SchemaCacheTimeout to never function properly.|
+|29129|Report Design|Charts|Increased speed of rendering gauge formats.|
+|29133|Report Design|Filters|Corrected issue where sometimes filters were not saved in Instant Reports when cascading filters are disabled.|
+|29138|Report Design|Styling|Made further improvements to case 27885 to prevent word wrapping issues, as well as permit word wrapping in exports.|
+|29142|Internal|Data Sources|Corrected datatype cast error which could arise when using some column formats with pagination.|
+|29151|Report Design|Pivots|Corrected problem in pivots which could cause string '-Q' to appear in cell values when using Oracle.|
+|29171|Report Design|Exports|Corrected an issue which could cause datetime formats to be lost on Excel export. This issue was retroactively applied to versions 6.10.0.27 and 6.10.0.28.|
+|29191|Report Design|Charts|Corrected broken labels in Pie charts if label string contains a single quote character.|
+-->
 #6.10.0.28 (March 13, 2018) IMPORTANT NOTE
 
 **NOTE:** Any installations of this build prior to March 14, 2018 have a critical error fixed in case 29107. This fixes an error which prevents Izenda deployments based on MySQL from updating beyond version 6.10.0.25. The error thrown is an Incorrect Database Name error on saving a new report. 
