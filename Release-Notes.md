@@ -4,6 +4,7 @@
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
+|29212|Report Design|Dashboards|Prevented "Failed to load dashboard layout" error under some conditions, such as the source report being changed. This change was hotfixed on April 16, 2018.|
 |28066|Report Design|Data Sources|Fixed exception when joining a datasource twice on the same report and adding an expression using an alias referencing one of those tables.|
 |28908|Internal|Methods|Refactored ReportCollection class.|
 |28931|Report Design|Styling|Corrected CSS not being applied to forms without first saving the report.|
