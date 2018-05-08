@@ -1,5 +1,23 @@
 [[_TOC_]]
 
+#6.10.0.30 (May 8, 2018)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|27266|Report Design|Filters|Expanded (blank) filter selection to detect empty strings as well as null values.|
+|28655|Report Design|Visual Groups|Enhanced rendering behavior of hidden fields within visual groups to prevent mysterious commas, layout issues, or exceptions.|
+|29125|Report Design|Toolbar|Ensured consistent behavior between results control on page and number of rendered records.|
+|29200|Report Design|Visual Groups|Prevented AlternativeItem styling from being reset after Analysis Grid is disabled.|
+|29201|Report Design|Visual Groups|Prevented Null Reference Exception when using Analysis Grid with insufficient data.|
+|29202|Report Design|Visual Groups|Cleaned up table styles on Analysis Grid.|
+|29212|Report Design|Dashboards|Prevented "Failed to load dashboard layout" error under some conditions, such as the source report being changed.|
+|29229|Report Design|Filters|Prevented reloading of filter values when users delete or remove a filter.|
+|29240|Report Design|Dashboards|Enhanced UI around the "Send PDF" functionality on Dashboards.|
+|29243|Report Design|Pivots|Removed some functions from being eligible for pivot columns since their behavior inherently overlaps with pivots.|
+|29256|Report Design|Filters|Fixed popup behavior of Autocomplete filter to be uniform across data types.|
+|29276|Internal|Drivers|Enhanced support for filtering against calculated fields when using MySqlDriver.|
+|29292|Report Design|Pivots|Ensured pivots would not break in the event that identical column headers could be generated from data.|
+
 #6.10.0.29 (April 10, 2018)
 
 |Case|Category|Subcategory|Description|
