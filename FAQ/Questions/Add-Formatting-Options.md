@@ -6,6 +6,16 @@
 
 Here we will show you how to easily add a new formatting option to the "Formats" dropdown menu on the Fields tab of the Report Designer. These should be handled in your ``InitializeReporting()`` method in your global.asax.
 
+##Update since version 6.10.0.4
+
+As of version 6.10.0.4, the best practice for custom formatters has changed:
+
+1) Replace IFormatter with BaseFormatter
+2) Replace all DataTable occurrences with AdHocDataTable
+3) Add override key words to the methods, so:
+- "public Type GetOutputDataType" -> "public override Type GetOutputDataType"
+- "public object Format" -> "public override object Format"
+
 ##Exporting to Excel
 
 Excel uses internal formatting and attempts to 'guess' what the proper format for a value should be. This means that sometimes, Excel guesses incorrectly and while the correct value might be exported to Excel, the format will be wrong - for example, .623 instead of 62.3%. In this case, it is necessary to specify the data type group exactly using the full constructor to specify data type:
@@ -127,6 +137,60 @@ Please see this sample code:
 
 ```
 
+##Example 5 - Running total
+
+```csharp
+
+AdHocSettings.Formats.Add("RowNumber", new RowNumberFormat());
+
+public class RowNumberFormat : IFormat
+{
+	public SqlTypeGroupCollection AllowedTypeGroups
+	{
+		get { return null; }
+	}
+
+	public SqlTypeGroupCollection DisallowedTypeGroups
+	{
+		get { return null; }
+	}
+
+	public string Name
+	{
+		get { return "RowNumber"; }
+	}
+
+	public bool Visible
+	{
+		get { return true; }
+	}
+
+	public SqlTypeGroup DefaultFor
+	{
+		get { return SqlTypeGroup.None; }
+	}
+
+	public IFormatter[] CreateFormatters()
+	{
+		return new IFormatter[] { new RowNumberFormatter() };
+	}
+}
+
+
+public class RowNumberFormatter : BaseFormatter
+{
+	public override Type GetOutputDataType(AdHocDataTable table, int columnNumber, ReportOutputOptions reportOutputOptions, Field field)
+	{
+		return table.Columns[columnNumber].DataType;
+	}
+
+	public override object Format(AdHocDataTable table, int rowNumber, int columnNumber, Field field, AdHocDataTable originalTable, Field nameField)
+	{
+		return rowNumber + 1;
+	}
+}
+
+```
 
 ###Results
 
