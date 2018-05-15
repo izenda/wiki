@@ -10,6 +10,10 @@ This is a simple authentication function you can place in your Login page (Login
 
 Normally, logins should be pulled from the database, active directory, or whatever system your organization uses for storing user info. We also support using your company's existing login page in place of our example login page. If nothing is available, here is a simple method to provide basic authentication. Also included is the callback function used by **btnLogin**'s "OnClick" property.
 
+In the global, you will need to define:
+
+AdHocSettings.SharedWithValues = new string[] { "Administrator", "Regular User" };
+
 ```csharp
 Bool AuthenticateUser(string userName, string password, out bool isAdmin)
 {            
@@ -39,21 +43,21 @@ Bool AuthenticateUser(string userName, string password, out bool isAdmin)
 void btnLogin_Click(object sender, EventArgs args) 
 {
         loginValidator.IsValid = true;
-        bool isAdmin;
-        if (AuthenticateUser(userNameTextbox.Text, userPassword.Value, out isAdmin)) {
-            AdHocSettings.CurrentUserName = userNameTextbox.Text;
-            if (isAdmin)
-                AdHocSettings.CurrentUserRoles = new string[] { "Admin" };
-            else
-                AdHocSettings.CurrentUserRoles = new string[] { "RegularUser" };
-            global_asax.CustomAdHocConfig.InitializeReporting();
-            Page.Title = "Izenda - " + Izenda.AdHoc.AdHocSettings.CurrentUserName;
-            Response.Redirect("ReportList.aspx");
-            //FormsAuthentication.RedirectFromLoginPage(userNameTextbox.Text, false);
-            return;
-        }
-        else
-            loginValidator.IsValid = false; 
+bool isAdmin;
+if (AuthenticateUser(userNameTextbox.Text, userPassword.Value, out isAdmin)) {
+  Izenda.AdHoc.AdHocSettings.CurrentUserName = userNameTextbox.Text;
+  if (isAdmin)
+  {
+    Izenda.AdHoc.AdHocSettings.CurrentUserIsAdmin = true;
+    Izenda.AdHoc.AdHocSettings.CurrentUserRoles = new string[] { "Administrator" };
+  }
+  else
+    Izenda.AdHoc.AdHocSettings.CurrentUserRoles = new string[] { "Regular User" };
+  global_asax.CustomAdHocConfig.InitializeReporting();
+  FormsAuthentication.RedirectFromLoginPage(userNameTextbox.Text, false);
+  return;
+}
+loginValidator.IsValid = false;
 }
 ```
 
