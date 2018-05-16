@@ -25,7 +25,7 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
     AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
     Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
-    AdHocSettings.ParentReportDesignerUrl= "ParentReportDesigner.aspx"; //The relevant setting
+    AdHocSettings.ParentReportDesignerUrl = "ParentReportDesigner.aspx"; //The relevant setting
     AdHocContext.Initialized = true;
   }
 }
