@@ -6,7 +6,7 @@
 
 Gets or sets the URL that will be used for links that open the Report Designer page using the "target=_parent" attribute. Useful for working with iframes.
 
-_**Note:** This setting only takes effect if [[http://wiki.izenda.us/API/CodeSamples/ChangParentUrlWhenRedirect|ChangeParentUrlWhenRedirect]] is true._
+_**Note:** This setting only takes effect if [[ChangeParentUrlWhenRedirect|http://wiki.izenda.us/API/CodeSamples/ChangParentUrlWhenRedirect]] is true._
 
 **Default Value:** String.Empty
 
