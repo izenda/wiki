@@ -137,7 +137,7 @@ Please see this sample code:
 
 ```
 
-##Example 5 - Running total
+##Example 5 - Incrementing Row Numbers
 
 ```csharp
 
