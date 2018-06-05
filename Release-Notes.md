@@ -1,6 +1,6 @@
 [[_TOC_]]
 
-<!---
+
 
 #6.10.0.31 (June 5, 2018)
 
@@ -32,7 +32,7 @@
 |29398|Report Design|Filters|Prevented server 500 error when filter value is set to '...' ellipsis.|
 |29408|Report Design|Exports|Prevented pivot column splitting on page print from also invalidating column superheaders.|
 
---->
+
 
 #6.10.0.30 (May 8, 2018)
 
