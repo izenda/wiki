@@ -1,5 +1,39 @@
 [[_TOC_]]
 
+<!---
+
+#6.10.0.31 (June 5, 2018)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|28555|Report Design|User Interface|Corrected label when using Percent of Group (Rounded) format on a Pie chart.|
+|29117|Internal|Drivers|Implemented use of LazySPMetadataPulling when using the Fusion driver.|
+|29146|Internal|Data Sources|Refactored schema extraction and caching to be more efficient.|
+|29180|Internal|Settings|Enhanced support of AdHocSettings.ResourcesProvider to better handle multiuser environments and the embedding of specific report parts.|
+|29195|Internal|Data Sources|Added support for database collation in different languages.|
+|29215|Internal|Data Sources|Streamlined and consolidated the number of requests made when working with simple/advanced data source join mode to increase performance on large databases.|
+|29235|Internal|Data Sources|Corrected 42000 error in MySql when attempting to perform numeric calculations in an expression.|
+|29241|Internal|Drivers|Added support for direct connection when using MySql and Fusion driver together.|
+|29247|Report Design|Filters|Corrected date division when using Week grouping to construct a pivot and Time Period filter.|
+|29254|Report Design|Exports|Prevented culling of subtotals from Analysis Grid when exported to Excel.|
+|29255|Report Design|Exports|Fixed table layout and formatting when exporting to Word.|
+|29293|Internal|Filters|Fixed invalid cast problem when using a hidden filter against a field with datatype int64.|
+|29317|Internal|Performance|Cleaned up code to improve performance in IIS.|
+|29321|Report Design|Formatting|Prevented subtotal records from being included as an item for pagination purposes.|
+|29324|Report Design|Instant Reports|Prevented Instant Report splash screen from being disabled in some circumstances when using Internet Explorer.|
+|29326|Report Design|Performance|Refactored HTTP requests to prevent crashes in rare situations where bad output may be generated via an incorrect ID.|
+|29331|Report Design|Report Design|Fixed some functions being culled from the Maps tab in IE11.|
+|29355|Report Design|Formatting|Cleaned up all indents and borders when formatting the Analysis Grid.|
+|29376|Report Design|Performance|Prevented conversion error when using Average(Days Old) function in a Trend chart.|
+|29378|Report Design|Visualizations|Enhanced Visualization behavior to prevent attempting to execute a Visualization with no data.|
+|29379|Report Design|Instant Reports|Cleaned up text artifacts in Instant Reports when using a small screen resolution.|
+|29383|Report Design|Subreports|Fixed some errors in drilldowns when there are uncommon characters used in the drilldownkey value.|
+|29395|Internal|Data Sources|Prevented crash which could occur if setting AliasTable for a datasource and not TableJoinAlias.|
+|29398|Report Design|Filters|Prevented server 500 error when filter value is set to '...' ellipsis.|
+|29408|Report Design|Exports|Prevented pivot column splitting on page print from also invalidating column superheaders.|
+
+--->
+
 #6.10.0.30 (May 8, 2018)
 
 |Case|Category|Subcategory|Description|
