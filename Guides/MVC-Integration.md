@@ -30,17 +30,21 @@ Right click on 'References' under project name in Solution Explorer window, then
 
 Click the 'Browse' button and browse to \mvc5r3\bin, where Izenda.AdHoc.dll is. Add it to reference. 
 
-###Step 3. Add IzendaStaticResourcesController.cs and IzendaReportingController.cs to the project
+###Step 3. Add IzendaReportingController.cs to the project
 
-IzendaStaticResourcesController.cs and IzendaReportingController.cs are at mvc5r3\Controllers. Add them under Controllers as below (You can add by either 'drag and drop' or 'right click->Add->Existing Item)
+IzendaReportingController.cs is in mvc5r3\Controllers. Add it under Controllers as below (You can add by either 'drag and drop' or 'right click->Add->Existing Item)
+
+Note: 6.9 integrations also include IzendaStaticResourcesController.cs. This is not necessary in 6.10
 
 ![Controllers](/Guides/MVC-Integration/Controllers.png)
 	
 			
 ###Step 4. Change Namespaces of Controllers 
 
-Change namespaces of IzendaStaticResourcesController.cs and IzendaReportingController.cs to match all other controllers in the application. 
+Change namespace of IzendaReportingController.cs to match all other controllers in the application. 
 Ex) if the namespace is in other controller file is ABC.Controllers, then MVC3SK.Controllers -> ABC.Controllers
+
+Note: 6.9 integrations also include IzendaStaticResourcesController.cs. This is not necessary in 6.10
 
 ![Controllers](/Guides/MVC-Integration/Namespace.png)
 
@@ -170,253 +174,8 @@ Add _sitelayout from mvc5r3\Views\Shared to project’s Views\Shared
 ```
 
 
-###Step 9. Copy constraints classes from Global.asax.cs
 
-
-**a.** Copy below two constraints from Global.asax.cs of mvc5r3
-```csharp
-
-//IRouteConstraint
-public class SpecificFileRouterConstraint : IRouteConstraint {
-    private string extensionToBeRouted = null;
-    private string fileToBeRouted = null;
-
-    public bool Match(HttpContextBase httpContext, Route route, string parameterName, RouteValueDictionary values, RouteDirection routeDirection) {
-      return !String.IsNullOrEmpty(extensionToBeRouted) && !String.IsNullOrEmpty(fileToBeRouted) && values[extensionToBeRouted] != null && values[extensionToBeRouted].ToString().ToLower().Contains(fileToBeRouted);
-    }
-
-    public SpecificFileRouterConstraint() { }
-
-    public SpecificFileRouterConstraint(string extension, string fileName) {
-      extensionToBeRouted = extension.ToLower();
-      fileToBeRouted = fileName.ToLower();
-    }
-  }
-
-
-
-
-//IRouteConstraint
-public class IzendaResourceConstraint : IRouteConstraint {
-    private string extensionToBeRouted = null;
-
-    public bool Match(HttpContextBase httpContext, Route route, string parameterName, RouteValueDictionary values, RouteDirection routeDirection) {
-      if (String.IsNullOrEmpty(extensionToBeRouted) || values[extensionToBeRouted] == null) {
-        return false;
-      }
-      string requestUrl = values[extensionToBeRouted].ToString().ToLower();
-      bool result = false;
-      if (extensionToBeRouted == "js") {
-        result = result || requestUrl.Contains("reportviewerfilters.js");
-        result = result || requestUrl.Contains("reportlist.js");
-        result = result || requestUrl.Contains("data-sources.js");
-        result = result || requestUrl.Contains("data-sources-preview.js");
-        result = result || requestUrl.Contains("charts.js");
-        result = result || requestUrl.Contains("datasources-search.js");
-        result = result || requestUrl.Contains("jquery-1.6.1.min.js");
-        result = result || requestUrl.Contains("jquery-ui-1.8.13.custom.min.js");
-        result = result || requestUrl.Contains("elrte.full.js");
-        result = result || requestUrl.Contains("elrte.ru.js");
-        result = result || requestUrl.Contains("fieldproperties.js");
-        result = result || requestUrl.Contains("shrinkable-grid.js");
-      }
-      if (extensionToBeRouted == "css") {
-        result = result || requestUrl.Contains("tabs.css");
-        result = result || requestUrl.Contains("report.css");
-        result = result || requestUrl.Contains("filters.css");
-        result = result || requestUrl.Contains("base.css");
-        result = result || requestUrl.Contains("report-list-modal.css");
-        result = result || requestUrl.Contains("data-sources.css");
-        result = result || requestUrl.Contains("charts.css");
-        result = result || requestUrl.Contains("jquery-ui-1.8.13.custom.css");
-        result = result || requestUrl.Contains("elrte.min.css");
-        result = result || requestUrl.Contains("elrte-inner.css");
-        result = result || requestUrl.Contains("shrinkable-grid.css");
-      }
-      if (extensionToBeRouted == "png") {
-        result = result || requestUrl.Contains("elrtebg.png");
-        result = result || requestUrl.Contains("elrte-toolbar.png");
-      }
-      if (extensionToBeRouted == "gif") {
-        result = result || requestUrl.Contains("elrte/images/pixel.gif");
-      }
-      return result;
-    }
-
-    public IzendaResourceConstraint() { }
-
-    public IzendaResourceConstraint(string extension) {
-      extensionToBeRouted = extension.ToLower();
-    }
-  }
-
-```
-
-**b.** Paste it above MVCapplication class in Global.asax.cs of project
-
-```csharp
-
-namespace Sample_MVCApp
-{
-    public class SpecificFileRouterConstraint : IRouteConstraint
-    {
-        private string extensionToBeRouted = null;
-        private string fileToBeRouted = null;
-
-        public bool Match(HttpContextBase httpContext, Route route, string parameterName, RouteValueDictionary values, RouteDirection routeDirection)
-        {
-            return !String.IsNullOrEmpty(extensionToBeRouted) && !String.IsNullOrEmpty(fileToBeRouted) && values[extensionToBeRouted] != null && values[extensionToBeRouted].ToString().ToLower().Contains(fileToBeRouted);
-        }
-
-        public SpecificFileRouterConstraint() { }
-
-        public SpecificFileRouterConstraint(string extension, string fileName)
-        {
-            extensionToBeRouted = extension.ToLower();
-            fileToBeRouted = fileName.ToLower();
-        }
-    }
-
-    public class IzendaResourceConstraint : IRouteConstraint
-    {
-        private string extensionToBeRouted = null;
-
-        public bool Match(HttpContextBase httpContext, Route route, string parameterName, RouteValueDictionary values, RouteDirection routeDirection)
-        {
-            if (String.IsNullOrEmpty(extensionToBeRouted) || values[extensionToBeRouted] == null)
-            {
-                return false;
-            }
-            string requestUrl = values[extensionToBeRouted].ToString().ToLower();
-            bool result = false;
-            if (extensionToBeRouted == "js")
-            {
-                result = result || requestUrl.Contains("reportviewerfilters.js");
-                result = result || requestUrl.Contains("reportlist.js");
-                result = result || requestUrl.Contains("data-sources.js");
-                result = result || requestUrl.Contains("data-sources-preview.js");
-                result = result || requestUrl.Contains("charts.js");
-                result = result || requestUrl.Contains("datasources-search.js");
-                result = result || requestUrl.Contains("jquery-1.6.1.min.js");
-                result = result || requestUrl.Contains("jquery-ui-1.8.13.custom.min.js");
-                result = result || requestUrl.Contains("elrte.full.js");
-                result = result || requestUrl.Contains("elrte.ru.js");
-                result = result || requestUrl.Contains("fieldproperties.js");
-                result = result || requestUrl.Contains("shrinkable-grid.js");
-            }
-            if (extensionToBeRouted == "css")
-            {
-                result = result || requestUrl.Contains("tabs.css");
-                result = result || requestUrl.Contains("report.css");
-                result = result || requestUrl.Contains("filters.css");
-                result = result || requestUrl.Contains("base.css");
-                result = result || requestUrl.Contains("report-list-modal.css");
-                result = result || requestUrl.Contains("data-sources.css");
-                result = result || requestUrl.Contains("charts.css");
-                result = result || requestUrl.Contains("jquery-ui-1.8.13.custom.css");
-                result = result || requestUrl.Contains("elrte.min.css");
-                result = result || requestUrl.Contains("elrte-inner.css");
-                result = result || requestUrl.Contains("shrinkable-grid.css");
-            }
-            if (extensionToBeRouted == "png")
-            {
-                result = result || requestUrl.Contains("elrtebg.png");
-                result = result || requestUrl.Contains("elrte-toolbar.png");
-            }
-            if (extensionToBeRouted == "gif")
-            {
-                result = result || requestUrl.Contains("elrte/images/pixel.gif");
-            }
-            return result;
-        }
-
-        public IzendaResourceConstraint() { }
-
-        public IzendaResourceConstraint(string extension)
-        {
-            extensionToBeRouted = extension.ToLower();
-        }
-    }
-
-
-
-    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
-    // visit http://go.microsoft.com/?LinkId=9394801
-
-    public class MvcApplication : System.Web.HttpApplication
-    {
-        protected void Application_Start()
-        {
-            RouteTable.Routes.MapPageRoute("rs.aspx", "{*aspx}", "~/Reporting/rs.aspx", false, null, new RouteValueDictionary { { "aspx", new SpecificFileRouterConstraint("aspx", "rs.aspx") } });
-            RouteTable.Routes.MapPageRoute("rp.aspx", "{*aspx}", "~/Reporting/rp.aspx", false, null, new RouteValueDictionary { { "aspx", new SpecificFileRouterConstraint("aspx", "rp.aspx") } });
-            AreaRegistration.RegisterAllAreas();
-
-            WebApiConfig.Register(GlobalConfiguration.Configuration);
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
-            AuthConfig.RegisterAuth();
-        }
-    }
-}
-
-
-```
-
-
-###Step 10. Copy over RegisterRoutes in MvcApplication
-
-**a.** Copy the below class from Global.asax.cs of mvc5r3
-
-```csharp
-public static void RegisterRoutes(RouteCollection routes) {
-      routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-      routes.MapRoute("IzendaResources", "Reporting/Resources/{*resource}", new { controller = "IzendaStaticResources", action = "Index" });
-      routes.MapRoute("IzendaJsResources", "{*js}", new { controller = "IzendaStaticResources", action = "Index" }, new { irc = new IzendaResourceConstraint("js") });
-      routes.MapRoute("IzendaCssResources", "{*css}",	new { controller = "IzendaStaticResources", action = "Index" },	new { irc = new IzendaResourceConstraint("css") });
-      routes.MapRoute("IzendaPngResources", "{*png}", new { controller = "IzendaStaticResources", action = "Index" }, new { irc = new IzendaResourceConstraint("png") });
-      routes.MapRoute("IzendaGifResources", "{*gif}", new { controller = "IzendaStaticResources", action = "Index" }, new { irc = new IzendaResourceConstraint("gif") });
-      routes.MapRoute("IzendaReporting", "{controller}/{action}/{id}", new { controller = "Reporting", id = UrlParameter.Optional });
-      routes.MapRoute("StarterKitDefault", "{controller}/{action}/{id}", new { controller = "Reporting", action = "ReportList", id = UrlParameter.Optional });
-      routes.MapRoute("HomeDefault", "{*pathInfo}", new { controller = "Home", action = "Index", id = UrlParameter.Optional });
-    }
-```
-
-**b.** Paste it inside MvcApplication class of tproject’s Global.asax.cs
-
-```csharp
-public class MvcApplication : System.Web.HttpApplication
-    {
-
-        public static void RegisterRoutes(RouteCollection routes)
-        {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.MapRoute("IzendaResources", "Reporting/Resources/{*resource}", new { controller = "IzendaStaticResources", action = "Index" });
-            routes.MapRoute("IzendaJsResources", "{*js}", new { controller = "IzendaStaticResources", action = "Index" }, new { irc = new IzendaResourceConstraint("js") });
-            routes.MapRoute("IzendaCssResources", "{*css}", new { controller = "IzendaStaticResources", action = "Index" }, new { irc = new IzendaResourceConstraint("css") });
-            routes.MapRoute("IzendaPngResources", "{*png}", new { controller = "IzendaStaticResources", action = "Index" }, new { irc = new IzendaResourceConstraint("png") });
-            routes.MapRoute("IzendaGifResources", "{*gif}", new { controller = "IzendaStaticResources", action = "Index" }, new { irc = new IzendaResourceConstraint("gif") });
-            routes.MapRoute("IzendaReporting", "{controller}/{action}/{id}", new { controller = "Reporting", id = UrlParameter.Optional });
-            routes.MapRoute("StarterKitDefault", "{controller}/{action}/{id}", new { controller = "Reporting", action = "ReportList", id = UrlParameter.Optional });
-            routes.MapRoute("HomeDefault", "{*pathInfo}", new { controller = "Home", action = "Index", id = UrlParameter.Optional });
-        }
-
-        protected void Application_Start()
-        {
-            AreaRegistration.RegisterAllAreas();
-
-            WebApiConfig.Register(GlobalConfiguration.Configuration);
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
-            AuthConfig.RegisterAuth();
-        }
-    }
-
-```
-
-
-###Step 11. Change the LicenseKey and ConnnectionString in Global.asax of project
+###Step 9. Change the LicenseKey and ConnnectionString in Global.asax of project
 
  To get a new trial key, you may contact [sales@izenda.com](mailto:sales@izenda.com).
 
@@ -427,9 +186,9 @@ AdHocSettings.SqlServerConnectionString = @"INSERT_CONNECTION_STRING_HERE";
 
 ```
 
-###Step 12. Run it!
+###Step 10. Run it!
 
-After Step#11, the Sample_MVCApp should build and work without a problem. To see if Izenda is integrated with this web application,
+After Step#9, the Sample_MVCApp should build and work without a problem. To see if Izenda is integrated with this web application,
 
 **a.** Open _Layout.cshtml in Views\Shared\ in Solution Explorer
 
@@ -447,7 +206,7 @@ After Step#11, the Sample_MVCApp should build and work without a problem. To see
 ![Test](/Guides/MVC-Integration/Test.PNG)
 
 
-###Step 13. Change the Logo 
+###Step 11. Change the Logo 
 
 **a.** Open _SiteLayout.cshtml in Views\Shared\ in Solution Explorer
 
