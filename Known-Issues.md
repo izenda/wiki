@@ -9,7 +9,7 @@ This list of issues is tentative and expected to change.
 
 |Expected Release|Tenative Date|Case|Notes|
 |:----|:-----------|:----------------|:---------------|
-|6.10.0.32|July 3, 2018|29154|Enhanced uniformity among reporttype values.|
+|6.10.0.32|July 3, 2018|29154|Enhanced uniformity among report type values.|
 |6.10.0.32|July 3, 2018|29232|Prevented odd output when applying a filter to a 'decimal' field datatype in MySql.|
 |6.10.0.32|July 3, 2018|29299|Enhanced performance related to loading records in report viewer.|
 |6.10.0.32|July 3, 2018|29303|Enabled native OData within Oracle driver.|
