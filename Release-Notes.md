@@ -1,5 +1,41 @@
 [[_TOC_]]
 
+<!--
+
+#6.10.0.32 (July 3, 2017)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|22038|Internal|Driver|Enabled native OData within Oracle driver.|
+|29222|Internal|Data|Optimized performance of VisibleDataSources when using tables and stored procedures at the same time.|
+|29277|Internal|Data|Corrected some filter issues which could arise when using ODBC and filtering against fields with certain datatypes such as unsigned bigint. The error thrown is "Specified Cast not Valid."|
+|29299|Internal|Data|Enhanced performance related to loading records in report viewer.|
+|29318|Internal|Setting|Added setting AdjustSeparatorsInEqualsListValues which permits disabling of automatic delimiter detection in the Equals(List) filter operator.|
+|29342|Internal|Data|Prevented "item with the same key has already been added" error from appearing when using hidden filters.|
+|29348|Report Design|Report Design|Corrected the Text and Cell highlight features to better handle characters like commas and periods within long strings which are being aliased.|
+|29353|Report Design|Expressions|Prevented errors which could occur if expressions were trying to find a field with an alias attached.|
+|29414|Report Design|Filters|Permitted overrides to first day of the week in the Izenda Calendar object.|
+|29417|Internal|Data|Increased performance when listing stored procedures in Oracle.|
+|29418|Internal|Data|Corrected issue related to Fusion aliasing against a full stored procedure name when using Oracle.|
+|29426|Report Design|Dashboards|Refactored old style Dashboards to better support Visualizations.|
+|29428|Report Design|Filters|Minor UI enhancements around filters to make graphical and rendered elements line up neatly.|
+|29429|Report Design|Filters|UI enhancements made around the Show Filters In Report Description option, to make shown filters more responsive to empty/blank/null filter values.|
+|29438|Report Design|Filters|Corrected error which prevented filter logic from appearing in the designer if additions are made to the ReportDesignerUrl string.|
+|29447|Report Design|Instant Reports|Added support for pivot column splitting to Instant Report designer.|
+|29448|Report Design|Exports|Corrected a label formatting error which would occur on PDF export if there are split columns on a report with a single column.|
+|29460|Report Design|Report Design|Prevented 'Create New Category' from sometimes being automatically selected when clicking the 'Save As' button.|
+|29461|Report Design|Report Design|Corrected redirect error which could occur when attempting to send a link to a report via email from within the ReportDesigner.|
+|29484|Report Design|Subreports|Corrected application of distinct records when using Automatic subreports. Distinct was being ignored in this scenario.|
+|29507|Report Design|Gauges|Corrected Animated Half Circle gauge behavior to prevent graphical/rendering issues.|
+|29512|Report Design|Scheduler|Corrected scheduler from populating the year control starting with year 1.|
+|29518|Report Design|Instant Reports|Enforced sanitation of some input values on instant reports, such as pagination controls.|
+|29521|Report Design|Report Design|Corrected subtotal rendering when using a pivot with an attached analysis grid visual group style.|
+|29531|Report Design|Gauges|Corrected issue where animated half circle gauge style would have values duplicated unnecessarily.|
+|29533|Report Design|Filters|Corrected tooltip on filter control in the report viewer to properly display field name.|
+|29538|Internal|Exports|Standardized request header casing to prevent exporting behavior failures in Edge browser.|
+|29555|Report Design|Localization|Corrected caching issue preventing resources from appearing as properly localized.|
+
+-->
 
 
 #6.10.0.31 (June 5, 2018)
