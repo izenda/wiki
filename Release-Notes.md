@@ -6,7 +6,7 @@
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
-|22038|Internal|Driver|Enabled native OData within Oracle driver.|
+|22038|Internal|Driver|Enabled option to use native Oracle.DataAccess.Client within Oracle driver. Must enable this setting using AdHocSettings.UseNativeOracleClient = true|
 |29222|Internal|Data|Optimized performance of VisibleDataSources when using tables and stored procedures at the same time.|
 |29277|Internal|Data|Corrected some filter issues which could arise when using ODBC and filtering against fields with certain datatypes such as unsigned bigint. The error thrown is "Specified Cast not Valid."|
 |29299|Internal|Data|Enhanced performance related to loading records in report viewer.|
