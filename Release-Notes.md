@@ -4,11 +4,11 @@
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
-|22038|Internal|Driver|Enabled option to use native Oracle.DataAccess.Client within Oracle driver. Must enable this setting using AdHocSettings.UseNativeOracleClient = true|
+|22038|Internal|Driver|Enabled option to use native Oracle.DataAccess.Client within Oracle driver. Must enable this setting using AdHocSettings.[[UseNativeOracleClient|/API/CodeSamples/UseNativeOracleClient]] = true|
 |29222|Internal|Data|Optimized performance of VisibleDataSources when using tables and stored procedures at the same time.|
 |29277|Internal|Data|Corrected some filter issues which could arise when using ODBC and filtering against fields with certain datatypes such as unsigned bigint. The error thrown is "Specified Cast not Valid."|
 |29299|Internal|Data|Enhanced performance related to loading records in report viewer.|
-|29318|Internal|Setting|Added setting AdjustSeparatorsInEqualsListValues which permits disabling of automatic delimiter detection in the Equals(List) filter operator.|
+|29318|Internal|Setting|Added setting [[AdjustSeparatorsInEqualsListValues|/API/CodeSamples/AdjustSeparatorsInEqualsListValues]] which permits disabling of automatic delimiter detection in the Equals(List) filter operator.|
 |29342|Internal|Data|Prevented "item with the same key has already been added" error from appearing when using hidden filters.|
 |29348|Report Design|Report Design|Corrected the Text and Cell highlight features to better handle characters like commas and periods within long strings which are being aliased.|
 |29353|Report Design|Expressions|Prevented errors which could occur if expressions were trying to find a field with an alias attached.|
