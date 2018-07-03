@@ -1,7 +1,5 @@
 [[_TOC_]]
 
-<!--
-
 #6.10.0.32 (July 3, 2017)
 
 |Case|Category|Subcategory|Description|
@@ -34,9 +32,6 @@
 |29533|Report Design|Filters|Corrected tooltip on filter control in the report viewer to properly display field name.|
 |29538|Internal|Exports|Standardized request header casing to prevent exporting behavior failures in Edge browser.|
 |29555|Report Design|Localization|Corrected caching issue preventing resources from appearing as properly localized.|
-
--->
-
 
 #6.10.0.31 (June 5, 2018)
 
