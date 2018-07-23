@@ -27,7 +27,7 @@ Sets the time Izenda Reports will wait for an Oracle command to execute before t
 ```csharp
 AdHocSettings.OracleCommandTimeout = 5000;
 ```
-##Preview Timeout
+##[Preview Timeout](http://wiki.izenda.us/API/CodeSamples/PreviewTimeout)
 
 Sets the minumum time Izenda Reports will wait for a MS SQL command to execute before timing out.
 
@@ -41,16 +41,16 @@ Gets or sets the time span for schema caching.
 ```csharp
 Izenda.AdHoc.AdHocSettings.SchemaCacheTimeout = new TimeSpan(0, 0, 5, 0);
 ```
-##SQL Command
+##[SQL Command](http://wiki.izenda.us/API/CodeSamples/SqlCommandTimeout)
 
 Gets or sets the wait time in seconds for database command dropdown values loading.
 
 ```csharp
 AdHocSettings.SqlCommandTimeout = 1000;
 ```
-##Data Source Drop Down
+##[Data Source Drop Down](http://wiki.izenda.us/API/CodeSamples/DataSourceDropDownTimeout)
 
-Gets or sets the timeout between starting loading dropdown values (in the DataSources dropdown at the Data Sources tab in the ReportDesigner) from server and redirecting to About page.
+Gets or sets the timeout between starting loading dropdown values (in the DataSources dropdown at the Data Sources tab in the ReportDesigner) from server and redirecting to About page. This setting is deprecated.
 
 ```csharp
 AdHocSettings.DataSourceDropDownTimeout = 10;
