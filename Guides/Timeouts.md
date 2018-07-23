@@ -5,7 +5,7 @@
 *  All timeouts are in number of seconds. 
 ** All implementations should be added to the Global.asax file.
 
-##Equals Drop Down
+##[Equals Drop Down](http://wiki.izenda.us/API/CodeSamples/EqualsDropDownTimeout)
 
 This setting allows the user to increase the database query time for building the drop down selection options at the Filters tab in the Report Designer. If you have a large or unoptimized database increasing this setting can help with proper reporting performance.
 
@@ -15,14 +15,14 @@ AdHocSettings.EqualsDropDownTimeout = 1000;
 
 ##[Equals Select](http://wiki.izenda.us/API/CodeSamples/EqualsSelectTimeout) 
 
-This setting allows the user to increase the database query time for building the drop down selection options at the Filters tab in the Report Designer. If you have a large or unoptimized database increasing this setting can help with proper reporting performance.
+This setting allows the user to increase the database query time for building the drop down selection options at the Filters tab in the Report Designer. If you have a large or unoptimized database increasing this setting can help with proper reporting performance. This setting is deprecated.
 
 ```csharp
 AdHocSettings.EqualsSelectTimeout = 1000
 ```
-##Oracle Command
+##[Oracle Command](http://wiki.izenda.us/API/CodeSamples/OracleCommandTimeout)
 
-Sets the time Izenda Reports will wait for an Oracle command to execute before timing out.
+Sets the time Izenda Reports will wait for an Oracle command to execute before timing out. This setting is deprecated.
 
 ```csharp
 AdHocSettings.OracleCommandTimeout = 5000;
@@ -34,7 +34,7 @@ Sets the minumum time Izenda Reports will wait for a MS SQL command to execute b
 ```csharp
 AdHocSettings.PreviewTimeout = 500;
 ```
-##Schema Cache
+##[Schema Cache](http://wiki.izenda.us/API/CodeSamples/SchemaCacheTimeout)
 
 Gets or sets the time span for schema caching.
 
@@ -54,4 +54,12 @@ Gets or sets the timeout between starting loading dropdown values (in the DataSo
 
 ```csharp
 AdHocSettings.DataSourceDropDownTimeout = 10;
+```
+
+##[UltimateDbCommandTimeout](http://wiki.izenda.us/API/CodeSamples/UltimateDbCommandTimeout)
+
+Gets or sets a timeout that overrides all other timeouts.
+
+```csharp
+AdHocSettings.UltimateDbCommandTimeout = 10;
 ```
