@@ -27,7 +27,6 @@ This list of issues is tentative and expected to change.
 |6.10.0.33|August 7|29585|Made Help header label translatable.|
 |6.10.0.33|August 7|29588|Corrected pivot related error when using an aliased table.|
 |6.10.0.33|August 7|29600|Corrected pagination controls to be consistent in operation between visible and non-visible increments.|
-|6.10.0.33|August 7|29604|internal|
 |6.10.0.33|August 7|29605|Corrected data vulnerability in log4net usage which could expose directory info in error logs.|
 |6.10.0.33|August 7|29606|Prevented 'Report Not Found' error when there is a special character in the category name of a report.|
 |6.10.0.33|August 7|29625|Optimized GetSQL calls on aggregate functions to better handle custom code overrides.|
