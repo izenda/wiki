@@ -16,6 +16,7 @@ This list of issues is tentative and expected to change.
 |6.10.0.33|August 7|29380|Corrected visual based formats such as "Visual Square" and "Heat Map" to display properly when show when ShowHtmlAsCode and ApplyAntiXssToReportOutput are both true.|
 |6.10.0.33|August 7|29481|Corrected resource inclusion in exports when Izenda tries to download some resource such as an image to include it in the export but is not successful.|
 |6.10.0.33|August 7|29482|Refactored InitDefaultValues to instead use default value initialization on a per-setting basis.|
+|6.10.0.33|August 7|29498|Optimized logging by disabling some rarely used logging areas.|
 |6.10.0.33|August 7|29537|Ensured that visualization record count when the visualization is on a dashboard conforms to local record count settings.|
 |6.10.0.33|August 7|29544|Reduced number of calls to PullTables and PullSp when one or more values in VisibleDataSources is invalid.|
 |6.10.0.33|August 7|29549|Added tickmark next to current value of preview records in Instant Reports 2.0.|
@@ -25,9 +26,16 @@ This list of issues is tentative and expected to change.
 |6.10.0.33|August 7|29574|Corrected filter error which prevented changing operators in report viewer.|
 |6.10.0.33|August 7|29585|Made Help header label translatable.|
 |6.10.0.33|August 7|29588|Corrected pivot related error when using an aliased table.|
+|6.10.0.33|August 7|29600|Corrected pagination controls to be consistent in operation between visible and non-visible increments.|
+|6.10.0.33|August 7|29604|internal|
 |6.10.0.33|August 7|29605|Corrected data vulnerability in log4net usage which could expose directory info in error logs.|
 |6.10.0.33|August 7|29606|Prevented 'Report Not Found' error when there is a special character in the category name of a report.|
 |6.10.0.33|August 7|29625|Optimized GetSQL calls on aggregate functions to better handle custom code overrides.|
+|6.10.0.33|August 7|29667|Prevented crash when a pivot is being generated on the fields tab without any other fields outside of the pivot.|
+|6.10.0.33|August 7|29670|Prevented rare error which could cause AdHocConfig object to be split into two non-synchronized objects.|
+|6.10.0.33|August 7|29675|Ensured that cache is refreshed after "lazy loading" of stored procedure columns.|
+|6.10.0.33|August 7|29690|Corrected scripted event handlers to work better in Internet Explorer.|
+
 
 
 
