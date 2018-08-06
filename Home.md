@@ -1,5 +1,5 @@
 ##Navigation
-Welcome to the wiki for Izenda - the real-time data analysis tool that provides self-service BI to organizations. 
+Welcome to the wiki for Izenda - the real-time data analysis tool that provides self-service BI to organizations 
 
 This wiki serves as the main source of documentation for development teams working with Izenda, but also includes resources for end-users around report creation. If you are unfamiliar with Izenda, we recommend starting with the Izenda website.
 
