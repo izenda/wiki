@@ -1,6 +1,49 @@
 [[_TOC_]]
 
-#6.10.0.32 (July 3, 2017)
+<!---
+
+#6.10.0.33 (August 8, 2018)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|29154|Report Design|Internal|Enhanced uniformity among reporttype values to prevent possible problems when internally referring to report parts.|
+|29350|Settings|Optimization|Optimized validation of connection string and implemented a friendlier error message.|
+|29482|Settings|Optimization|Refactored InitDefaultValues to instead use default value initialization on a per-setting basis.|
+|29498|Settings|Optimization|Optimized logging by disabling some rarely used logging areas.|
+|29544|Internal|Optimization|Reduced number of calls to PullTables and PullSp when one or more values in VisibleDataSources is invalid.|
+|29584|Report Design|Pivots|Refactored SQL generation around pivots to prevent errors related to grouped Datetime fields, which would not cause problems in SQL 2008 or 2012 but does cause problems in SQL 2014.|
+|29625|Report Design|Functions|Optimized GetSQL calls on aggregate functions to better handle custom code overrides.|
+|29670|Settings|Internal|Prevented rare error which could cause AdHocConfig object to be split into two non-synchronized objects.|
+|29675|Internal|Data|Ensured that cache is refreshed after "lazy loading" of stored procedure columns.|
+|29550|Report Design|Subreports|Corrected handling of automatic subreport links when they are attached to a visual group header.|
+|29565|Report Design|Subreports|Fixed popup windows so that they properly display in automatic subreports.|
+|29380|Report Design|Formats|Corrected visual based formats such as "Visual Square" and "Heat Map" to display properly when show when ShowHtmlAsCode and ApplyAntiXssToReportOutput are both true.|
+|29239|Report Design|Pivots|Corrected ODBC error related to "Number of parameter markers is not equal" when using a Group by Datetime function as a pivot header.|
+|29339|Report Design|Functions|Cleaned up possible functions in subtotal function list to apply properly by data type.|
+|29344|Report Design|Maps|Prevented map shading from disappearing when city or location bars are also mapped on that area.|
+|29573|Report Design|Filters|Corrected filter error preventing filters using calculated fields from being properly passed to dashboards.|
+|29669|Report Design|Filters|Corrected issue where filters would not appear when using the legacy style ReportViewer if a report did not use the Fields tab.|
+|29481|Internal|Resources|Corrected resource inclusion in exports when Izenda tries to download some resource such as an image to include it in the export but is not successful.|
+|29577|Report Design|Pagination|Fixed issue related to subtotal generation producing an extra row in table pagination. This error presents as an "index out of range" error in ProcessPagination.|
+|29569|Internal|Resources|Prevented error related to a false value of File.Exists() when trying to load resources and Izenda can't locate the correct /Resources folder.|
+|29574|Report Design|Filters|Corrected filter error which prevented changing operators in report viewer.|
+|29605|Report Design|Data|Corrected data vulnerability in log4net usage which could expose directory info in error logs.|
+|29585|Report Design|Translations|Made Help header label translatable.|
+|29588|Report Design|Pivots|Corrected pivot related error when using an aliased table.|
+|29600|Report Design|Pagination|Corrected pagination controls to be consistent in operation between visible and non-visible increments.|
+|29667|Report Design|Pivots|Prevented crash when a pivot is being generated on the fields tab without any other fields outside of the pivot.|
+|29612|Internal|Resources|Refactored and optimized scripts, particularly FieldList.js.|
+|29620|Report Design|Translations|Corrected some Japanese related translation strings.|
+|29606|Report Design|Report Names|Prevented 'Report Not Found' error when there is a special character in the category name of a report.|
+|29373|Internal|Internal|Prevented NRE exception from appearing in get_ReportHeaderColor() in get_Report.|
+|29690|Internal|Resources|Corrected scripted event handlers to work better in Internet Explorer.|
+|29549|Report Design|Instant Reports|Added tickmark next to current value of preview records in Instant Reports 2.0.|
+|29453|Report Design|Dashboards|Corrected Dashboard error claiming "incorrect syntax near '='" when the Dashboard filters against a calculated field and a report part has a pivot.|
+|29537|Report Design|Dashboards|Ensured that visualization record count when the visualization is on a dashboard conforms to local record count settings.|
+
+--->
+
+#6.10.0.32 (July 3, 2018)
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
