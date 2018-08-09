@@ -1,6 +1,5 @@
 [[_TOC_]]
 
-<!---
 
 #6.10.0.33 (August 8, 2018)
 
@@ -43,7 +42,7 @@
 |29675|Internal|Data|Ensured that cache is refreshed after "lazy loading" of stored procedure columns.|
 |29690|Internal|Resources|Corrected scripted event handlers to work better in Internet Explorer.|
 
---->
+
 
 #6.10.0.32 (July 3, 2018)
 
