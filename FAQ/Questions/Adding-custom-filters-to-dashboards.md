@@ -5,6 +5,22 @@
 ##About
 To apply filters in a dashboard, all reports included in the dashboard must contain the same filter. 
 
+Filters in dashboards are inherited upwards from reports which contribute a report part to that dashboard. Any filter which ALL reports have in common will be sent to the dashboard, where a control will appear in the filters pane. Otherwise, the control will not appear, the filter will still be in place for that report part, but it will not be available to be changed from the dashboard.
+
+Here is an example. Let's say I have reports 1, 2, and 3.
+
+Report 1 has filters on the fields DS1.FieldA, DS1.FieldB, and DS1.FieldC. 
+
+Report 2 has filters on the fields DS1.FieldA, DS2.FieldB, and DS1.FieldC
+
+Report 3 has filters on the fields DS2.FieldA, and DS1.FieldC
+
+All of these filters will be applied to their constituent report parts. So, the report part from Report 1 will have filters for DS1.FA, DS1.FB, and DS1.FC. 
+
+However, the dashboard as a whole will only have a filter control for DS1.FC, as this is the only combination of Table.Field which all reports have in common.
+
+There is a setting which allows us to pay attention to the qualified Table.Field name, or just the Field name. If the setting AdHocSettings.UseColumnNameForDashboardCommonFilters is set to False, then the filter FieldA will also show up on the dashboard - in Report 1 and 2, FieldA comes from DataSource1, and in Report 3 it comes from DataSource2. 
+
 **The new default behavior for Izenda dashboard filtering** looks at 'fully qualified' column names for matching report filters for dashboard filtering purposes by default.
 
 ##Example
