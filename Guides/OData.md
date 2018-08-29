@@ -26,3 +26,9 @@ Make the following changes to **Global.asax**
 ##Using odata with the Izenda FUSION driver
 
 To find out more about how to use the oData provider with Izenda FUSION, you can read [[this article|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]].
+
+##Certificate Errors
+
+If you are using an OData website as data source, and you are using HTTPS protocol, and you have no valid certificate on the OData website, and causes a "Remote Certificate Invalid" error, you can resolve the problem by placing the following line of code to InitializeReporting():
+
+  System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
