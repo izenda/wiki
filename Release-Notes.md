@@ -1,5 +1,46 @@
 [[_TOC_]]
 
+<!---
+
+#6.10.0.4 (September 4, 2018)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|28853|Report Design|Subreports|Prevented page break rendering within embedded subreports.|
+|29449|Report Design|Exports|Prevented pivoted table header from rendering on the wrong page when using EvoPdf.|
+|29664|Report Design|Exports|Corrected potential crash and or system hang when scheduling an exported PDF and Izenda tries to pre-process generated HTML before feeding it to PDF converter.|
+|29677|Internal|Data|Optimized handling of composite constraints.|
+|29682|Internal|Data|Better handled checks for use of more obscure browsers such as Netscape and Opera.|
+|29683|Internal|Localization|Corrected HTML strings containing Hebrew to be more easily customized and translatable.|
+|29689|Internal|Data|Optimized behavior of InitializeCombinedConstraints and bulk adding/processing of user defined constraints.|
+|29697|Report Design|User Interface|Corrected an issue where icons would not be properly displayed on the Instant Reports interface on a duplicated field.|
+|29699|Report Design|User Interface|Tweaked field highlighting in Instant Reports to be more high contrast and visible.|
+|29706|Report Design|Exports|Ensured correct use of CSS resources when exporting a visualization.|
+|29707|Report Design|User Interface|Improved modal opening/closing in Dashboards and Instant Reports.|
+|29708|Report Design|Filters|Made further enhancements to the display of calculated fields in filters in the report viewer.|
+|29716|Report Design|Maps|Made Zoom to Data on Maps more effective at locating and zooming to the proper area.|
+|29717|Internal|Data|Fixed error where Distinct checkbox in report designer would be disabled by default if AdHocSettings.CacheSchema = false.|
+|29722|Report Design|Filters|Prevented use of OR in report filter logic from passing incomplete sets of filter values to a dashboard filter.|
+|29730|Report Design|Subreports|Prevented object reference error when attempting a drilldown when the parent and child reports are in different culture settings.|
+|29735|Internal|Functions|Corrected Group(Week) function in MySql to properly handle edge cases where weeks may span between years.|
+|29740|Report Design|Dashboards|Optimized how often FilteredListReportsDictionary is called for dashboard tiles.|
+|29741|Internal|Data|Optimized sequential loading of requests to prevent a lock in application cache.|
+|29742|Internal|Errors|Further enhancements to add more informative error messages.|
+|29748|Internal|Data|Modified internal datatypes to prevent mysterious rounding when performing numerical calculations via expressions in MySQL.|
+|29752|Report Design|Dashboards|Made slight tweaks to make it easier to navigate in dashboard gallery mode when there is only one tile in the gallery.|
+|29753|Report Design|Exports|Cleaned up display of visual group headers with embedded reports when exporting to PDF.|
+|29754|Report Design|User Interface|Corrected UI alignments in filters in Instant Reports.|
+|29755|Report Design|Dashboards|Corrected issue which would cause filters to fail to inherit correctly to a dashboard, if the filter is based on a calculated field which is calculated in a report part which is not being sent to the dashboard. For example, if the filter is calculated on a field in the summary report part, and the detail report part is passed to the dashboard.|
+|29765|Report Design|User Interface|Prevented clipping of tooltip when hovering over pivoted collection of values on auto chart visualization from within a dashboard tile.|
+|29772|Internal|Reporting|Properly escaped backslashes in report urls for reports within categories.|
+|29774|Report Design|Charts|Fixed formatting on right side axis for line value on basic bar chart.|
+|29777|Report Design|Charts|Corrected missing fields in Advanced options when switching from Funnel chart to another basic chart type.|
+|29785|Internal|Localization|Further fixed translations in UI labeling in Report Viewer.|
+|29795|Report Design|User Interface|Fixed Highlight Code option in Form designer such that it does not badly format visible code.|
+|29800|Internal|Functions|Ensured standardized behavior of functions across different DB standards when regarding rounding of highly precise numbers.|
+
+--->
+
 
 #6.10.0.33 (August 8, 2018)
 
