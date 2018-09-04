@@ -1,8 +1,8 @@
 [[_TOC_]]
 
-<!---
 
-#6.10.0.4 (September 4, 2018)
+
+#6.10.0.34 (September 4, 2018)
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
@@ -39,7 +39,7 @@
 |29795|Report Design|User Interface|Fixed Highlight Code option in Form designer such that it does not badly format visible code.|
 |29800|Internal|Functions|Ensured standardized behavior of functions across different DB standards when regarding rounding of highly precise numbers.|
 
---->
+
 
 
 #6.10.0.33 (August 8, 2018)
