@@ -7,7 +7,11 @@
 
 This list of issues is tentative and expected to change. 
 
-There are no current known issues tested and cleared for release.
+|Expected Release|Tenative Date|Case|Notes|
+|:----|:-----------|:----------------|:---------------|
+|6.10.0.35|October 2|29721|Fixed some situations where user defined constraints could be ignored in Advanced data source mode.|
+|6.10.0.35|October 2|29311|Optimized Angular directives.|
+
 
 
 
