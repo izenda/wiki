@@ -139,6 +139,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[My export says its missing a css file|/FAQ/Why-does-my-excel-export-say-its-missing-css]]
 - [[I'm getting an error about a missing image in Maps|/FAQ/cant-load-image-from-url-in-maps]]
 - [[My report list won't load|/FAQ/My-Report-List-Loads-Indefinitely]]
+- [[My date formats are broken in Excel when I open a file in a computer with a different culture setting|/FAQ/My-date-formats-are-broken-in-Excel-when-I-open-a-file-in-a-computer-with-a-different-culture-setting]]
 
 ##Upgrading Izenda
 - [[What's new in the 6.8.0.1 + Reference Implementation?|/Whats-new-in-the-6-dot-8-0-dot-1-Reference-Implementation]]
