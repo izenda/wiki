@@ -130,6 +130,28 @@ If ready HTML was not found in storage, it allows full necessary reportSet proce
 
 This cache is mainly implemented in ResponseServer. It caches images/css/js files queried by user (browser), if StoreImagesToCache is enabled.
 
+### Caching with multiple users
+
+Izenda's schema caching system works as following:
+
+1) There is a persistent cache on disk.
+
+2) There is an application-wide schema object in static memory in server process.
+
+Both 1 and 2 above are shared across site users.
+
+3) When VisibleDatasources gets some array of names assigned, the following occurs:
+
+a) Izenda runs through the assigned array of datasource names, and throws away all those which are already present in schema object in static memory (thus are already available in system for reporting purposes).
+
+b) The remaining datasource names must be added to the in-memory schema object. Izenda runs through these remaining datasources, and tries to find schema data for each of them in disk cache.
+
+If schema data is found in disk cache for a given datasource, then it gets filled with that data, added to in-memory schema object (becoming available in system for reporting), and discarded from the array of assigned datasources.
+
+c) The remaining datasources are not present in schema object in-memory, and also don't have schema data in disk cache, so Izenda must pull their data from DB. Izenda generates a temporary table with names of these datasources (starting with "#datasources_"), and runs several SQL queries to pull schema data for them from DB. Then Izenda fills the in-memory schema object with this data and also stores this data to schema cache.
+
+So if in the future after server restart, some of these datasources are assigned to VisibleDatasources, Izenda will take their data from disk cache without hitting DB.
+
 ### Additional Information
 
 There are a bunch of other tiny local caches within Izenda, which don't interact with users/developers directly, and are not regulated by any settings/conditions. Actually they often represent just a private non-persistent variable or collection in some class, so aren't worth mentioning in detail.
