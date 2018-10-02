@@ -1,7 +1,5 @@
 [[_TOC_]]
 
-<!---
-
 #6.10.0.35 (October 2, 2018)
 
 |Case|Category|Subcategory|Description|
@@ -27,8 +25,6 @@
 |29887|Report Design|Pivots|Corrected object reference which could occur when using subtotal and sidetotal at the same time in a pivot. This fix has been retroactively applied.|
 |29747|Report Design|User Interface|Added extra checks to prevent rare NRE error in Search.|
 |29828|Internal|Settings|Added AdHocSettings.PreventCSVInjection setting. When true, this will prevent injection of strings which resemble Excel formulas.|
-
---->
 
 #6.10.0.34 (September 4, 2018)
 
