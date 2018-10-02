@@ -1,6 +1,34 @@
 [[_TOC_]]
 
+<!---
 
+#6.10.0.35 (October 2, 2018)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|29721|Report Design|Data|Fixed some situations where user defined constraints could be ignored in Advanced data source mode.|
+|29799|Internal|Performance|Refactored dropdown generation on page to render faster.|
+|29816|Report Design|Subreports|Refactored formatting of values used as drilldown keys.|
+|29830|Report Design|Filters|Corrected datatype error in filters which would cause reports to filter incorrectly as numerical values would be rounded such that equivalency matches always return false.|
+|29838|Report Design|Data|Fixed crash bug if a report runs against an OData connection using Fusion with no Default connection.|
+|29857|Report Design|Tables|Modified SubCalculationFilterRegex so as to not ignore fields with some variation of ID in the name. Now this setting is blank by default and can be overridden to ignore some values.|
+|29873|Report Design|Subreports|Additional fixes for drilldownkey encoding.|
+|29888|Report Design|Tables|Fixed error where changes to Records box would be ignored in a report with a Visualization.|
+|29891|Report Design|Subreports|Corrected some drilldown errors which could occur if characters in the drilldownkey were not properly escaped.|
+|29892|Report Design|Pivots|Prevented error where columns would not be found in the Group clause if they are automatic subreports generated from a pivot.|
+|29808|Internal|Performance|Replaced strings with StandardAggregateFunctionType enums where possible.|
+|29220|Report Design|User Interface|Enhanced report lists category handling by refactoring cookies. Now category status and last selected category are saved on a per-user basis.|
+|29233|Report Design|Subreports|Prevented column access errors for Automatic subreports when using MySql.|
+|29302|Report Design|Filters|Optimized Equals(Autocomplete) for numerics in MSSQL to generate less queries.|
+|29483|Report Design|Subreports|Corrected automatic subreport generation to work better when based on a field using an expression.|
+|29852|Report Design|Performance|Optimized Value Range feature to perform faster and also correct an error where value aliasing fails to work properly on XML export.|
+|29785|Report Design|User Interface|Further fixed translations in UI labeling in Report Viewer.|
+|29617|Report Design|Performance|Refactored column handling to correct logic of empty column values.|
+|29887|Report Design|Pivots|Corrected object reference which could occur when using subtotal and sidetotal at the same time in a pivot. This fix has been retroactively applied.|
+|29747|Report Design|User Interface|Added extra checks to prevent rare NRE error in Search.|
+|29828|Internal|Settings|Added AdHocSettings.PreventCSVInjection setting. When true, this will prevent injection of strings which resemble Excel formulas.|
+
+--->
 
 #6.10.0.34 (September 4, 2018)
 
