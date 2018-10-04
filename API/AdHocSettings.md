@@ -233,6 +233,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Int32|[[PivotFieldLimit|/API/CodeSamples/PivotFieldLimit]]|Gets or sets the limit of pivot columns allowed in a single report.|100|
 |String|[[PostgreSQLConnectionString|/API/CodeSamples/PostgreSQLConnectionString]]|Gets or sets the connection string used to connect to a Postgres database.|String.Empty|
 |Boolean|[[PredefineConstraintsInReportSet|/API/CodeSamples/PredefineConstraintsInReportSet]]||False|
+|Boolean|[[PreventCSVInjection|/API/CodeSamples/PreventCSVInjection]]|Prevents some strings from being interpreted as macros or formulas when exported to Excel.|false|
 |Int32|[[PreviewColumnLimit|/API/CodeSamples/PreviewColumnLimit]]|Gets or set value indicating number of columns to show in preview|100|
 |String|[[PreviewColumnLimitMessage|/API/CodeSamples/PreviewColumnLimitMessage]]| Gets or sets the message that appears when the column limit is reached or exceeded on the Preview tab of the Izenda.Web.UI.AdHocReportDesigner. |Reports with more than 100 fields must be exported to CSV.  Please check CSV Export to view data.|
 |Int32|[[PreviewTimeout|/API/CodeSamples/PreviewTimeout]]| Gets or sets the System.Data.IDbCommand.CommandTimeout for SQL commands. Note: Will not work for Oracle connections |0|
@@ -438,7 +439,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[StoreImagesToCache|/API/CodeSamples/StoreImagesToCache]]|Gets or sets the value indicating how temporary images should be stored.|True|
 |Boolean|[[StrictANSIOuterJoin|/API/CodeSamples/StrictANSIOuterJoin]]|Gets or sets value indicating that strict ANSI/ISO SQL-92 outer join will be used (affects filters applied to joined tables).|True|
 |Boolean|[[StripInvalidCharacters|/API/CodeSamples/StripInvalidCharacters]]|Gets or sets whether invalid characters in report names should be stripped.             Valid characters are any alphanumeric characters, underscores, hyphens, backslashes, single quotes, and whitespace.|True|
-|String|[[SubCalculationFilterRegex|/API/CodeSamples/SubCalculationFilterRegex]]|Gets or sets the regular expression used for subtotal calculation.            If the name of a column matches this expression then it will not be considered when calculating subtotals.|ID$&#124;Id$&#124;^id$&#124;_id$|
+|String|[[SubCalculationFilterRegex|/API/CodeSamples/SubCalculationFilterRegex]]|Gets or sets the regular expression used for subtotal calculation.            If the name of a column matches this expression then it will not be considered when calculating subtotals.|blank|
 |String|[[TabBackgroundImageUrl|/API/CodeSamples/TabBackgroundImageUrl]]| Gets or sets the URL of the background image used for the tabs on the Izenda.Web.UI.AdHocReportDesigner. **(deprecated)**|String.Empty|
 |AliasesCollection|[[TableAliases|/API/CodeSamples/TableAliases]]|Gets or sets the collection of key-value pairs where the key is the table name and            the value is a table alias.**(deprecated)**|null|
 |Unit|[[TableDropDownWidth|/API/CodeSamples/TableDropDownWidth]]| Gets or sets the width of the dropdowns on the Advanced mode of the DataSources Tab of the Izenda.Web.UI.AdHocReportDesigner. |190px|
