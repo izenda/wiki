@@ -2,6 +2,10 @@
 
 [[_TOC_]]
 
+###When are scheduled reports executed?
+
+Reports are executed when the scheduler runs, if the report is set to a time at or before the moment of scheduler execution. If a report is set to run at 10:25 AM, and the scheduler executes at 10:30 AM, then all reports scheduled before this time of execution, including our report at 10:25 AM, will be executed.
+
 ###What are "Repeat Types"?
 
 Repeat Types exist in the "Misc" section of ReportDesigner.aspx and are simply expressions that reflect how often the email should be sent.
