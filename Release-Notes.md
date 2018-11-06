@@ -1,5 +1,36 @@
 [[_TOC_]]
 
+<!---
+#6.10.0.36 (November 6, 2018)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|26891|Report Design|Visualizations|Fixed overflow tag on popup containers on Visualization to prevent cropping.|
+|28253|Report Design|Visualizations|Corrected shading bug for Flowchart visualization when rendering in Edge.|
+|29311|Internal|Optimization|Optimized Angular directives.|
+|29557|Report Design|Gauges|Refactored Gauge report part to prevent some display errors.|
+|29646|Report Design|Gauges|Corrected needle behavior when using the pop up function of the animated half circle gauge style.|
+|29647|Report Design|Subreports|Prevented extra tags and rows from being appended to the end of a report when a form is embedded within a form.|
+|29681|Report Design|Subreports|Corrected broken markup when embedding a subreport within a field value style visual group.|
+|29698|Report Design|Instant Reports|Tweaked display and behavior of field formatting buttons in Instant Reports.|
+|29766|Report Design|Visualizations|Enhanced handling of Autogauge visualizations to better handle single column datasets.|
+|29801|Internal|Optimization|Refactored FilterList.js.|
+|29890|Internal|Optimization|Prevented writing SMTP passwords to logs, for security reasons.|
+|29894|Report Design|Subreports|Prevented automatic subreports from being used with Maps.|
+|29908|Report List|Categories|Enhanced report list category behavior refactor to include subcategories as well.|
+|29917|Report Design|Interface|Corrected issue caused when clicking export controls with expired session which could lead to infinite "loading" icon instead of immediate redirection to login screen.|
+|29935|Internal|Optimization|Added serialization attribute to redis session handler class.|
+|29939|Internal|Optimization|Optimized driver performance to prevent GetDataSet from being called too often.|
+|29947|Report Design|Visual Groups|Corrected discrepancy where some rows could not be formatted when visual groups are used.|
+|29952|Report Design|Filters|Corrected behavior of cascading filters when selecting single value after having selected multiple values.|
+|29958|Report Design|Pagination|Corrected error resulting in a reset of grid styles when changing pages.|
+|29965|Report Design|Instant Reports|Corrected height and usage of height spacing in Instant Reports.|
+|29988|Report Design|Charts|Corrected chart legend building to use user culture rather than system culture.|
+|29989|Report Design|Formats|Corrected categorization and display of Days Old format.|
+|30000|Report Design|Interface|Corrected behavior of report refresh button when using mobile view.|
+
+--->
+
 #6.10.0.35 (October 2, 2018)
 
 |Case|Category|Subcategory|Description|
