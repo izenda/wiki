@@ -1,6 +1,5 @@
 [[_TOC_]]
 
-<!---
 #6.10.0.36 (November 6, 2018)
 
 |Case|Category|Subcategory|Description|
@@ -28,8 +27,6 @@
 |29988|Report Design|Charts|Corrected chart legend building to use user culture rather than system culture.|
 |29989|Report Design|Formats|Corrected categorization and display of Days Old format.|
 |30000|Report Design|Interface|Corrected behavior of report refresh button when using mobile view.|
-
---->
 
 #6.10.0.35 (October 2, 2018)
 
