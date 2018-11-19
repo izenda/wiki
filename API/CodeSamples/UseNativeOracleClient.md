@@ -21,9 +21,9 @@ public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
     if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
       return;
     AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
-    AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
-    Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
     AdHocSettings.UseNativeOracleClient = True; //The relevant setting
+    AdHocSettings.OracleConnectionString = "INSERT_CONNECTION_STRING_HERE";
+    Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
     HttpContext.Current.Session["ReportingInitialized"] = true;
   }
 }
@@ -42,9 +42,9 @@ Public Class CustomAdHocConfig
             Return
         'Initialize System
         AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
-        AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
-        Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
         AdHocSettings.UseNativeOracleClient = True 'The relevant setting
+        AdHocSettings.OracleConnectionString = "INSERT_CONNECTION_STRING_HERE"
+        Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
         HttpContext.Current.Session("ReportingInitialized") = True
     End Sub
 End Class
