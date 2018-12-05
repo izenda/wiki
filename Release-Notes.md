@@ -1,5 +1,32 @@
 [[_TOC_]]
 
+<!--
+
+#6.10.0.37 (December 4, 2018)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|29295|Report Designer|Reports|Prevented hidden columns from disappearing from the designer and breaking the report when saving.|
+|29936|Instant Reports|User Interface|Upgraded Angular in Instant Reports.|
+|29957|Report Designer|Subtotals|Made subreport calculations and behavior consistent when changing number of preview records.|
+|29961|Report Designer|Subtotals|Made subtotal behavior consistent when using pagination.|
+|29966|Internal|Caching|Refactored caching code of temp tables to increase stored procedure performance.|
+|29980|Report Designer|Subreports|Made behavior of embedded subreports consistent when subreports are using various visual group styles.|
+|29981|Instant Reports|Filters|Corrected rare bug which could prevent date entry in Instant reports.|
+|29991|Report Designer|Visual Groups|Corrected sorting and field order behavior caused by disabling a visual group.|
+|29993|Report Designer|Subtotals|Changed subtotal behavior to better account for display of partial tables when using pagination.|
+|30007|Dashboards|User Interface|Removed 'Refresh Report' button in dashboards after refactor of dashboard caching and refresh behavior.|
+|30051|Report Designer|Exports|Prevented 'Invalid Object Name' error in CSV export when using a Fusion driver with aliased datasources.|
+|30055|Dashboards|Reports|Corrected behavior of dashboard tiles when the source report of a dashboard report part is deleted.|
+|30070|Report Designer|Filters|Corrected potential faulty filter output when using DoesNotEqualsMultiple filters on an Oracle database.|
+|30089|Instant Reports|User Interface|Fixed footer styling of UI elements in Instant Reports.|
+|30098|Dashboards|Reports|Fixed null reference exception in dashboards when creating a new dashboard when a prior report part with hidden columns was created.|
+|30100|Report Designer|Subtotals|Refactored subtotal behavior and added new setting, AdHocSettings.ShowActualSubtotals. The default value is false, and this retains old behavior. When true, when visual groups are enabled, subtotals are calculated for visible records and not all records.|
+|30101|Instant Reports|Filters|Prevented Between(Calendar) filter operator in Instant Reports from pulling current date.|
+|30107|Report Designer|User Interface|Corrected some script and resource positioning issues in IE11.|
+
+ -->
+
 #6.10.0.36 (November 6, 2018)
 
 |Case|Category|Subcategory|Description|
