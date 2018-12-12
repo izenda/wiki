@@ -293,7 +293,8 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[ServiceMode|/API/CodeSamples/ServiceMode]]|Gets or set value indication service mode**(deprecated)**|False|
 |String|[[SettingsKey|/API/CodeSamples/SettingsKey]]|Gets or sets the password used to access the Settings page.|String.Empty|
 |String|[[SettingsPageUrl|/API/CodeSamples/SettingsPageUrl]]| Gets or sets the URL of the Izenda.AdHoc.Settings page. |Settings.aspx|
-|String[]|[[SharedWithValues|/API/CodeSamples/SharedWithValues]]| Gets or sets the users or roles available in the "Share With" dropdown on the Misc tab of the Izenda.Web.UI.AdHocReportDesigner. |String.Empty|
+|String|[[SharedWithValues|/API/CodeSamples/SharedWithValues]]| Gets or sets the users or roles available in the "Share With" dropdown on the Misc tab of the Izenda.Web.UI.AdHocReportDesigner. |String.Empty|
+|Boolean|[[ShowActualSubtotals|/API/CodeSamples/ShowActualSubtotals]]|Gets or sets the behavior when calculating subtotals against preview results.|False|
 |Boolean|[[ShowAddAll|/API/CodeSamples/ShowAddAll]]| Gets or sets the value indicating whether the "AddAll" button and dropdown should be shown on the Fields Tab of the Izenda.Web.UI.AdHocReportDesigner. |False|
 |Boolean|[[ShowAddFieldInReportViewer|/API/CodeSamples/ShowAddFieldInReportViewer]]| Gets or sets the value indicating whether the "Add Field" dropdown lists are shown on the classic Izenda.AdHoc.AdHocSettings.ReportViewer. **(deprecated)**|True|
 |Boolean|[[ShowAdditionalJoinConditions|/API/CodeSamples/ShowAdditionalJoinConditions]]|Gets or sets the value indicating whether to show additional Join conditions controls|False|
