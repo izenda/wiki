@@ -1,8 +1,6 @@
 [[_TOC_]]
 
-<!--
-
-#6.10.0.37 (December 4, 2018)
+#6.10.0.37 (December 20, 2018)
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
@@ -24,8 +22,6 @@
 |30100|Report Designer|Subtotals|Refactored subtotal behavior and added new setting, AdHocSettings.ShowActualSubtotals. The default value is false, and this retains old behavior. When true, when visual groups are enabled, subtotals are calculated for visible records and not all records.|
 |30101|Instant Reports|Filters|Prevented Between(Calendar) filter operator in Instant Reports from pulling current date.|
 |30107|Report Designer|User Interface|Corrected some script and resource positioning issues in IE11.|
-
- -->
 
 #6.10.0.36 (November 6, 2018)
 
