@@ -26,6 +26,59 @@ This would achieve the color scheme from the example image above.
 
 *Note:* you will need a recent copy of the Izenda core product. This ability was added in 6.7.0.264, and can be downloaded [[here|http://www.izenda.com/update-your-izenda-version/]]
 
+You can also use more complex code:
+
+```csharp
+public override void CustomizeChart(object chart)
+{
+	var chartContent = chart.ToString();
+	int startIndex = chartContent.IndexOf("id='") + 4,
+		endIndex = chartContent.IndexOf("'", startIndex);
+	var chartid = chartContent.Substring(startIndex, endIndex - startIndex);
+	var scriptContent = @"
+		jq$(document).ready(function () {
+			var colors = Highcharts.getOptions().colors; // you can use any colors here (array of colors)
+
+			window.izenda = (window.izenda || {});
+			window.izenda.customcolors = (window.izenda.customcolors || {});
+			window.izenda.customcolors.u = (window.izenda.customcolors.u || {});
+			window.izenda.customcolors.i = (window.izenda.customcolors.i || 0);
+
+			function getColorByName(name) {
+				if (!window.izenda.customcolors.u[name]) {
+					window.izenda.customcolors.u[name] = colors[window.izenda.customcolors.i % colors.length];
+					window.izenda.customcolors.i++;
+				}
+				return window.izenda.customcolors.u[name];
+
+				/*
+					// or you can use something like this:
+					if(name == 'Company A')
+						return '#FF0000';
+					if(name == 'Company B')
+						return '#00FF00';
+					// ...
+				*/
+			}
+			var chartid = jq$('#" + chartid + @"').data('highchartsChart');
+			var chart = Highcharts.charts[chartid];
+			if (jq$(chart.container).is(':visible')) {
+				jq$.each(chart.series, function (i, group) {
+					jq$.each(group.data, function (i, item) {
+						item.color = getColorByName(item.name);
+						item.connector.stroke = item.color;
+						item.connector.element.style.stroke = item.color;
+					});
+					group.redraw();
+				});
+			}
+		});";
+
+	System.Text.StringBuilder csb = (System.Text.StringBuilder)chart;
+	csb.Append("<script>" + scriptContent + "</" + "script>");
+}
+```
+
 #Visualizations
 
 Visualizations use the D3 javascript library (http://d3js.org/), which means that to customize the colors used in a specific visualization you must modify that feature's base code. There is no global setting to change the colors used in a visualization, as each visualization has its own independent codebase.
