@@ -3,6 +3,8 @@ Welcome to the wiki for Izenda - the real-time data analysis tool that provides 
 
 This wiki serves as the main source of documentation for development teams working with Izenda, but also includes resources for end-users around report creation. If you are unfamiliar with Izenda, we recommend starting with the Izenda website.
 
+**This documentation is for the legacy Izenda 6 product. Documentation for the new Izenda 7 product can be found at [[https://www.izenda.com/docs/|https://www.izenda.com/docs/]]**
+
 <br>
 
 <table border="1" width="100%">
