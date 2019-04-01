@@ -1,5 +1,26 @@
 [[_TOC_]]
 
+#6.10.0.38 (April 1, 2019)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|29970|Dashboards|Filters|Corrected situation where incorrect application of culture in dashboard filters results in day/month instead of month/day datetime processing.|
+|30109|Report Designer|Filters|Prevented incorrect display of fields which are not aggregated from being shown as calculated fields when populating a filter.|
+|30127|Report Designer|Exports|Refactored export code to more reliably detect relative paths to resources to ensure they are not being excluded from report exports.|
+|30138|Dashboards|Filters|Corrected placement of date and month components in some datetime dashboard filters being incorrect in culture settings which track datetimes as MM/DD instead of DD/MM.|
+|30140|Report Designer|Visualizations|Fixed auto chart visualization to better display bar labels when there are too many objects to label.|
+|30145|Internal|Internal|Removed some old code which could cause scripting errors from MVC starter kits.|
+|30151|Report Designer|Subreports|Added display of category name next to the report name when calling a report as a subreport.|
+|30175|Report Viewer|Internal|Modified obsolete attribute as applied to legacy Report Viewer control to prevent false errors and exceptions.|
+|30182|Dashboards|Dasboards|Prevented issues around loading resources into a new dashboard when creating dashboards in Firefox.|
+|30188|Internal|Settings|Made the ReportDesignerURL setting care less if it is defined in https and some users access it via http links.|
+|30191|Report Designer|Filters|Corrected error which prevented passing an In Time Period filter to a hidden filter when calling a report and passing filters through the URL.|
+|30198|Report Designer|Pivots|Made additional fixes to the commit from case 30122 to correct more situations where subtotals are incorrect in pivots.|
+|30199|Report Designer|Filters|Corrected filter dropdown errors when selecting a filter value using Internet Explorer.|
+|30219|Dashboards|Dasboards|Prevented some errors related to dashboard tile movement and resizing when using Internet Explorer.|
+|30221|Report Designer|Filters|Reverted some of the changes made in case 29830 to prevent issues related to filtering on calculated fields.|
+|30247|Dashboards|Filters|Changed dashboard filters to more reliably accept filter values passed through the url as pNvalue.|
+
 #6.10.0.37 (December 20, 2018)
 
 |Case|Category|Subcategory|Description|
