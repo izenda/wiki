@@ -20,13 +20,6 @@
 * <a href="http://www.izenda.com/contact-us/" rel="nofollow" target="_blank">Contact Us</a>
 
 ---
-
-* [Interactive Demo](http://demo2.izenda.us/CI/ReportList.aspx )
-* [Example Dashboard](http://izenda.com/demo/Dash.aspx#/Sales%20Dashboard)
-* <a href="http://www.izenda.com/izenda-vision/" rel="nofollow" target="_blank">Visualization Gallery</a>
-
----
-
 * [Guide To Report Design](/Guides/ReportDesign)
 * [Making Custom Forms Video](http://www.youtube.com/watch?v=5b2axJlgdFs) 
 
