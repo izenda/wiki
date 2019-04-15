@@ -4,7 +4,9 @@
 
 ##About
 
-**Default Value:** 100
+Gets or sets the list of the values in the "Results" dropdown menu on the Izenda.Web.UI.AdHocToolbarNavigation control.
+
+**Default Value:** 1, 10, 100, 1000
 
 ##Global.asax (C♯)
 
