@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets whether percentages of the total value of all gauages should be displayed on gauges.
+Gets or sets whether percentages of the total value of all gauges should be displayed on gauges.
 
 **Default Value:** 
 
