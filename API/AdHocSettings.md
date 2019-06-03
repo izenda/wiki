@@ -344,7 +344,7 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |Boolean|[[ShowFiltersInReportViewer|/API/CodeSamples/ShowFiltersInReportViewer]]| Gets or sets whether filters should be shown in the classic Izenda.AdHoc.AdHocSettings.ReportViewer. **(deprecated)**|True|
 |Boolean|[[ShowFiltersTab|/API/CodeSamples/ShowFiltersTab]]| Gets or sets whether the Filters Tab is displayed on the Izenda.Web.UI.AdHocReportDesigner. |True|
 |Boolean|[[ShowFunctions|/API/CodeSamples/ShowFunctions]]| Gets or sets whether functions should be shown on the fields tab of the Izenda.Web.UI.AdHocReportDesigner. |True|
-|Boolean|[[ShowGaugePercentage|/API/CodeSamples/ShowGaugePercentage]]|Gets or sets whether percentages of the total value of all gauages should be displayed on gauges.|False|
+|Boolean|[[ShowGaugePercentage|/API/CodeSamples/ShowGaugePercentage]]|Gets or sets whether percentages of the total value of all gauges should be displayed on gauges.|False|
 |Boolean|[[ShowGaugeTab|/API/CodeSamples/ShowGaugeTab]]| Gets or sets whether the Gauge Tab should be displayed on the Izenda.Web.UI.AdHocReportDesigner. |True|
 |Boolean|[[ShowGoButton|/API/CodeSamples/ShowGoButton]]| Gets or sets the value indicating whether the "Go" button should be shown  on the Izenda.Web.UI.AdHocToolbarNavigation control. |False|
 |Boolean|[[ShowGradientBackground|/API/CodeSamples/ShowGradientBackground]]| Gets or sets whether data grid items will use a gradient background. The base color used depends on which color is selected for grid item background colors on the Style tab of the Izenda.Web.UI.AdHocReportDesigner. |False|
