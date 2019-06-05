@@ -1,4 +1,4 @@
-##Updating within a point release / Performing a 'Maintenance Update' (Ex: 6.9.0.1-> 6.9.0.3)
+##Updating within a point release / Performing a 'Maintenance Update' (Ex: 6.10.0.1-> 6.10.0.15)
 
 1) Review release notes [here](http://wiki.izenda.us/Release-Notes). Release notes for each maintenance release will have notes detailing changes, settings, and fixes associated.
 
@@ -9,7 +9,7 @@
 4) Compare the customized files from Step #1 to new updated files and copy your customizations to new files one at a time, testing each.
 
 
-##Upgrading across point releases (Ex: 6.8.0.1-> 6.9.0.3)
+##Upgrading across point releases (Ex: 6.9.0.6-> 6.10.0.1)
 
 1) Review release notes [here](http://wiki.izenda.us/Release-Notes). Release notes for each release will have notes detailing features, settings, and fixes associated.
 
