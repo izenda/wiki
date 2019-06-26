@@ -1,5 +1,20 @@
 [[_TOC_]]
 
+#6.10.0.39 (June 26, 2019)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|30297|Report Design|Subreports|Modified visualization rendering to be easier to use when embedding the time line visualization as a subreport.|
+|30316|Report Design|Dashboards|Prevented the "Cant save empty dashboard" error when saving a Dashboard which has an empty reportset but no tiles.|
+|30320|Report Design|Charts|Corrected error preventing the sort order in a chart from being saved, where the error behavior is to default to reverse sort order on the value.|
+|30399|Internal|Exporting|Fixed a problem where the print button would only work once in some version of Internet Explorer unless the page is reloaded.|
+|30455|Report Design|CSS|Modified ReportList CSS so that reports do not look selected on touchscreen devices.|
+|30464|Report Design|Formatting|Refactored text/cell highlighting code to better handle the order in which ranges are defined.|
+|30475|Internal|Data|Prevented issue where in some circumstances Fusion would duplicate data in the report caching layer, causing the error "Could not recognize [fieldname]. Use fully qualified name for it."|
+|30484|Internal|Dashboards|Prevented a rare dashboard error which throws System.ThrowHelper.ThrowInvalidOperationException when loading a dashboard.|
+|30486|Report Design|Filters|Corrected an issue where multivalue filter operators like Equals(Select) and Equals(Multiple) would break other filters when selected.|
+|30529|Report Design|Formatting|Corrected some faulty Dutch language translation.|
+
 #6.10.0.38 (April 1, 2019)
 
 |Case|Category|Subcategory|Description|
