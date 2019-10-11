@@ -1,5 +1,25 @@
 [[_TOC_]]
 
+#6.10.0.40 (October 11, 2019)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|30169|Internal|Internal|Optimized SQL parameter processing when generating cache key, which boosts performance and also prevents a rare error where HTML attachments to scheduled reports could be duplicated and send incorrect information.|
+|30519|Internal|Internal|Refactored how often Izenda invalidates its internal report cache to speed performance.|
+|30527|Report Design|Dashboards|Brought new tile creation permissions into conformity with report behavior when using dashboards. Now users who have 'view only' or 'locked' rights will not be able to add tiles to a dashboard.|
+|30530|Report Design|Exports|Made two changes to image embedding in reports to provide more reliable image inclusion when exporting a report. First, Izenda will directly check a disk location for an image if it fails to load the image via a network call. Second, we added an additional function call to embed images embedding call in the Excel exporting routine.|
+|30542|Report Design|Visual Groups|Corrected subtotal generation between visual groups when the string used to define a visual group is only different because of a leading or trailing space. "Test" and "Test " would generate two different visual groups, with combined subtotal rows.|
+|30544|Report Design|Exports|Corrected an error where customized chart colors defined via CSS would not be carried over to HTML printing.|
+|30549|Report Design|Charts|Fixed gauge needles being off center from the remainder of the rendered gauge if the column width were adjusted after initial render.|
+|30573|Report Design|Dashboards|Extended the use of AdHocSettings.ShowDesignDashboardLinks to prevent users with this flag set from creating new dashboards.|
+|30589|Report Design|Instant Reports|Charts were visible in Instant Reports even if a license key lacks the +VISION module. This is now corrected so that the Chart tab is not visible under this condition, as chart generation in Instant Reports requires access to Visualizations to work properly.|
+|30590|Report Design|Visual Groups|Corrected broken markup for Field|Value visual group style.|
+|30599|Report Design|Visualizations|Made the error message for visualizations configurable when the specific error of the same date being used as the start and end of a date range causes a report to be considered invalid.|
+|30609|User Interface|User Interface|Fixed some subcategories being incorrectly regarded as empty and non-interactive.|
+|ILS-70|Internal|Filters|Found and fixed an error when trying to apply hidden filters when using the Fusion driver. If schema is specified but DB name is not specified in the hidden filter key, the hidden filter will not be applied correctly. |
+|ILS-75|Internal|Exports|Permitted override of XmlReportOutputGenerator to remap hardcoded tags.|
+
+
 #6.10.0.39 (June 26, 2019)
 
 |Case|Category|Subcategory|Description|
