@@ -4,7 +4,7 @@
 
 ##About
 
-ConnectionStringRW is one of the Izenda Driver's properties, which enables users to have Read-Write access permission to Database.
+ConnectionStringRW is one of the Izenda Driver's properties, which enables users to have Read-Write access permission to a Database.
 Below is a sample global.asax using the ConnectionStringRW setting. The code block will appear within <script runat="server"> </script> tags within global.asax
 
 ##Global.asax (C♯)
@@ -77,12 +77,8 @@ FusionDriver fd = new FusionDriver();
     - Create/Save/Delete ReportSets in Reports table in Database mode
 
 
-[Here](http://www.screencast.com/users/IzendaReports/folders/Temporary/media/9a2e633c-bbc7-4c47-9425-8df36d36e368) is the video explaining how to create ReadOnly connection string in MSSQL 
-
-[Here](http://www.screencast.com/users/IzendaReports/folders/Temporary/media/a04a117c-89d1-40f3-8053-55d0d7586d1a) is video demonstrating how installation works when Driver.ConnectionStringRW is assigned for read-write operations, and Driver.ConnectionString has ReadOnly access: 
-
 ##Usage
-ConnectionStringRW can be used always. General case is just safety improvement - if user specifies ConnectionStringRW, and uses read-only DB account for usual Driver.ConnectionString - he can be 100% sure that users will not be able to modify anything in DB by any means - like using SQL injections. Just because everything which user can input - goes to DB via read-only connection string.
+ConnectionStringRW can always be used. The general case is as a safety improvement - if your site specifies ConnectionStringRW, and uses read-only DB account for usual Driver.ConnectionString, you can be sure that users will not be able to modify anything in DB by any means such as SQL injections.
 
 ##
 
