@@ -61,7 +61,7 @@ foreach (ReportInfo info in reports)
 ```
 
 As it iterates, you can print out the report name as a hyperlink that links to the Report Designer page. You can also do this via javascript or add buttons and functionality as you desire.
-
+<!---
 **Report List code sample with no asp objects**
 
 This code sample utilizes no asp objects and prints out a simple list of reports with the format of the name or cat/name in a list on the page.
@@ -80,6 +80,7 @@ This code sample utilizes asp controls and prints out a list of reports using th
 
 * [[ReportListFull.zip|http://www.izenda.com/Site/downloads/ReportListFull.zip]]
 
+--->
 ###6.7 And Later
 
 Newer versions of the demo site that are distributed on the Izenda site include a different page structure that leverages jQuery technologies and can be customized by modifying the javascript. It is pre-built to perform necessary functions that leverage the page structure and naming conventions. However, since it is open for editing, you can see how the Report List is built. As such, there will not be any code samples included here.
