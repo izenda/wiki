@@ -13,7 +13,7 @@
 |30549|Report Design|Charts|Fixed gauge needles being off center from the remainder of the rendered gauge if the column width were adjusted after initial render.|
 |30573|Report Design|Dashboards|Extended the use of AdHocSettings.ShowDesignDashboardLinks to prevent users with this flag set from creating new dashboards.|
 |30589|Report Design|Instant Reports|Charts were visible in Instant Reports even if a license key lacks the +VISION module. This is now corrected so that the Chart tab is not visible under this condition, as chart generation in Instant Reports requires access to Visualizations to work properly.|
-|30590|Report Design|Visual Groups|Corrected broken markup for Field|Value visual group style.|
+|30590|Report Design|Visual Groups|Corrected broken markup for Field Value visual group style.|
 |30599|Report Design|Visualizations|Made the error message for visualizations configurable when the specific error of the same date being used as the start and end of a date range causes a report to be considered invalid.|
 |30609|User Interface|User Interface|Fixed some subcategories being incorrectly regarded as empty and non-interactive.|
 |ILS-70|Internal|Filters|Found and fixed an error when trying to apply hidden filters when using the Fusion driver. If schema is specified but DB name is not specified in the hidden filter key, the hidden filter will not be applied correctly. |
