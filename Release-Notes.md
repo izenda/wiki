@@ -1,5 +1,22 @@
 [[_TOC_]]
 
+#6.10.0.41 (January 24, 2020)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|ILS-82|Internal|Scheduling|Refactored Offline Scheduler code to better handle batch processing of reports scheduled for export.|
+|ILS-160|Report Design|Exporting|Corrected date formatting in Excel export of a dashboard which includes visualization report parts.|
+|ILS-161|Internal|Settings|Prevented datetime offset adjustments from being applied twice when a report is used as a virtual data source.|
+|ILS-175|Internal|Settings|Corrected the safe divide by zero feature to properly work in subtotal expressions when an Analysis Grid visual group style is applied.|
+|ILS-186|Report Design|User Interface|Fixed incorrect display of time between generated sql and the time shown on the filter display for the time datepart of a datetime field.|
+|ILS-203|Internal|Settings|Exposed the API call Driver.RefreshVirtualDataSources(); which allows for programmatic refresh of all virtual data source reports.|
+|ILS-214|Internal|Report Designer|Prevented Instant Report designer from generating a new ReportID on report save, to prevent inability to use SaveReportSet against a variable ReportID.|
+|ILS-227|Internal|Query Generation|Modified query generation to properly handle fieldnames which include a period character.|
+|ILS-266|Internal|Settings|Made the date smart tag account for datetime offset via the ReportTimeStampTimeZoneOffset setting.|
+|ILS-286|Report Design|Filters|Modified Use Previous OR legacy filter parameter to properly account for non visible filters.|
+|ILS-299|Internal|Settings|Made Utility.InitFakeHttpContext work properly on a multi-threaded system.|
+
+
 #6.10.0.40 (October 11, 2019)
 
 |Case|Category|Subcategory|Description|
