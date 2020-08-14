@@ -1,5 +1,19 @@
 [[_TOC_]]
 
+#6.10.0.42 (August 07, 2020)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|ILS-282|Report Design|Gauges|Corrected an issue which prevented display of negative numeric values in gauges.|
+|ILS-373|Report Design|Pivots|Fixed a situation where sometimes the pivot control could be removed from the designer page if the pivot were using a calculated field and the report was created prior to version 6.10.0.41.|
+|ILS-410|Report Design|Formatting|Pagination prevented the cell highlight, text highlight, and value range features from applying to pages beyond the first. |
+|ILS-421|Report Design|Subtotals|When a subtotal is calculated on a datetime subject to timezone shifting, this caused an error in subtotal generation if the same datetime were used in a visual group. The groups per subreport|
+|ILS-465|Report Design|Maps|Default settings of indicator bar definition in the user interface on the Maps tab was being set to incorrect values, which would prevent saving the report.|
+|ILS-537|Dashboards|Email|Prevented an error which could happen if an email of a dashboard were sent directly from the report viewer. The error can be thrown even if the email operation completes successfully.|
+|ILS-556|Settings|Export|Added two new settings, PdfPageSize and PdfPageMargin, which allow for control over page size properties when exporting to PDF.|
+|ILS-565|Internal|Encoding|Changed escaping behavior of characters in chart titles by making XssHtmlEncode less strict on these string inputs.|
+|ILS-596|Internal|Functions|Made the internal function GetTopLevelAlias public so that it can be overridden for custom filter display behavior.|
+
 #6.10.0.41 (January 24, 2020)
 
 |Case|Category|Subcategory|Description|
