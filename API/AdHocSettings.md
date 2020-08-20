@@ -228,8 +228,8 @@ The ``AdHocSettings`` class contains all the settings Izenda uses to control var
 |String|[[ParentReportListUrl|/API/CodeSamples/ParentReportListUrl]]|Gets or sets the URL that will be used for links that open the Report List page using the "target=_parent" attribute.|String.Empty|
 |String|[[ParentReportViewerUrl|/API/CodeSamples/ParentReportViewerUrl]]|Gets or sets the URL that will be used for links that open the Report Viewer page using the "target=_parent" attribute.|String.Empty|
 |String|[[ParentSettingsUrl|/API/CodeSamples/ParentSettingsUrl]]|Gets or sets the URL that will be used for links that open the Settings page using the "target=_parent" attribute.|String.Empty|
-|String|[[PdfPageMargin|/API/CodeSamples/PdfPageMargin]]|Gets or sets the margins for the pages on PDF export.||
-|String|[[PdfPageSize|/API/CodeSamples/PdfPageSize]]|Gets or sets the paper size on PDF export.||
+|String|[[PdfPageMargin|/API/CodeSamples/PdfPageMargin]]|Gets or sets the margins for the pages on PDF export.|PdfPageMargin(30, 30, 30, 30)|
+|String|[[PdfPageSize|/API/CodeSamples/PdfPageSize]]|Gets or sets the paper size on PDF export.|PdfPageSize.A4|
 |PdfMode|[[PdfPrintMode|/API/CodeSamples/PdfPrintMode]]|Gets or sets the default PDF generation mode. This only has an effect when PrintMode is using one of the Html2Pdf modes.|EOPDF|
 |Boolean|[[PerUserCaching|/API/CodeSamples/PerUserCaching]]| Gets or sets whether the Izenda.AdHoc.Database.Driver.DatabaseSchema should be cached according to CurrentUserName and CurrentUserTenantID. |False|
 |Int32|[[PivotFieldLimit|/API/CodeSamples/PivotFieldLimit]]|Gets or sets the limit of pivot columns allowed in a single report.|100|
