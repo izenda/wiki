@@ -1,15 +1,56 @@
-#Open Custom URL In New Window
+#OpenCustomURLInNewWindow
 
 [[_TOC_]]
 
-##Usage
+##About
+
 OpenCustomURLInNewWindow controls whether or not the on-click action associated with the custom URL feature on the [advanced field settings](http://wiki.izenda.us/FAQ/advanced-field-settings) opens the link in a new browser tab or the current browser tab.
 
 This setting is a boolean. It defaults to True.
 
-true = Opens link in new browser tab.
-false = Opens link in current browser tab.
+**Default Value:** True
+
+##Global.asax (C♯)
 
 ```csharp
-AdHocSettings.OpenCustomUrlInNewWindow = false;
+//main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
+public class CustomAdHocConfig : Izenda.AdHoc.DatabaseAdHocConfig
+{
+  // Configure settings
+  // Add custom settings after setting the license key and connection string by overriding the ConfigureSettings() method
+  public static void InitializeReporting() {
+    //Check to see if we've already initialized.
+    if (HttpContext.Current.Session == null || HttpContext.Current.Session["ReportingInitialized"] != null)
+      return;
+    AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE";
+    AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE";
+    Izenda.AdHoc.AdHocSettings.AdHocConfig = new CustomAdHocConfig();
+    AdHocSettings.OpenCustomURLInNewWindow = false; //The relevant setting
+    HttpContext.Current.Session["ReportingInitialized"] = true;
+  }
+}
+```
+
+##Global.asax (VB.NET)
+
+```visualbasic
+'main class: inherits DatabaseAdHocConfig or FileSystemAdHocConfig
+Public Class CustomAdHocConfig
+    Inherits Izenda.AdHoc.DatabaseAdHocConfig
+
+    Shared Sub InitializeReporting()
+        'Check to see if we've already initialized
+        If HttpContext.Current.Session Is Nothing OrElse HttpContext.Current.Session("ReportingInitialized") IsNot Nothing Then
+            Return
+        'Initialize System
+        AdHocSettings.LicenseKey = "INSERT_LICENSE_KEY_HERE"
+        AdHocSettings.SqlServerConnectionString = "INSERT_CONNECTION_STRING_HERE"
+        Izenda.AdHoc.AdHocSettings.AdHocConfig = New CustomAdHocConfig()
+        AdHocSettings.OpenCustomURLInNewWindow = false 'The relevant setting
+        HttpContext.Current.Session("ReportingInitialized") = True
+    End Sub
+End Class
+```
+
+
 ```
