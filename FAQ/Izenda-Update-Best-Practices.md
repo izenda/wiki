@@ -23,3 +23,39 @@
 
 _See Also:_
 [[How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL]]
+
+##Upgrading Beyond Version 6.10.0.16
+
+1A) Download the FULL RI Downloads RI Link from (http://archives.izenda.us)[http://archives.izenda.us]
+
+1B) If you are upgrading from an older version of Izenda and do not want to download the full RI, you can use the RI as a reference. 
+
+It is critical to update your resource links per this example: 
+
+link rel = "stylesheet" type = "text / css" href = "./ rp.aspx? extres = components.vendor.bootstrap.css.bootstrap.min.css" 
+
+2) Unzip and copy the bin and resources to the corresponding website folders as would be done in a standard upgrade. 
+
+3) Locate the rp.aspx page in the extracted folder. For MVC Kits this is in the Reporting folder. In Webforms and VB this is located in the root of the extracted folder. 
+
+4) Copy the new rp.aspx page to all locations in your implementation containing the rs.aspx page (please ensure you search as some implementations have more than one location for this file. 
+
+5) Locate the default.master page in Webforms or VB kit and _SiteLayout.cshtml in MVC kits. Find the following line:
+
+<script type="text/javascript" src="Resources/js/main.js"></script> 
+
+Replace with the following: 
+
+<script type="text/javascript" src="./rp.aspx?js=AdHocQuery"></script> 
+
+This is REQUIRED as the main.js file is no longer included in the kit, and if this is not replaced there will be errors when you try to run the site.
+
+6) Find and replace all references to ./rs.aspx wtih ./rp.aspx (this is not required but making these changes will improve the loading speed for resources on the pages - this change removes blocking issues faced with resources loading) 
+
+7) Replace:
+
+<link rel="stylesheet" href="Resources/css/main.css" type="text/css" /> 
+
+With the following:
+
+<link rel="stylesheet" href="./rp.aspx?extres=css.main.css" type="text/css" />
