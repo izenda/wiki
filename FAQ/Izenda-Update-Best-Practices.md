@@ -54,8 +54,8 @@ This is REQUIRED as the main.js file is no longer included in the kit, and if th
 
 7) Replace:
 
-<link rel="stylesheet" href="Resources/css/main.css" type="text/css" /> 
+link rel="stylesheet" href="Resources/css/main.css" type="text/css" /
 
 With the following:
 
-<link rel="stylesheet" href="./rp.aspx?extres=css.main.css" type="text/css" />
+link rel="stylesheet" href="./rp.aspx?extres=css.main.css" type="text/css" /
