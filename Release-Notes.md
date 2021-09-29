@@ -1,5 +1,26 @@
 [[_TOC_]]
 
+#6.10.0.43 (September 15, 2021)
+
+|Case|Category|Subcategory|Description|
+|:----|:-----------|:----------------|:---------------|
+|ILS-1429|Settings|Exports|Corrected an error where the first page of a printed report would be blank if the 'Show Date and Time' report setting was true.|
+|ILS-1416|Report Design|Internal|Prevented Index Out Of Range error when using pagination.|
+|ILS-1360|Report Design|Filters|Fixed loss of filter values on Between Date filter. This could happen when moving between tabs in the report designer without saving the report, or when modifying the functions applied to any field on the report. This error happens in versions greater than 6.10.0.36.|
+|ILS-1358|Updates|Internal|Fixed false "Function Not Allowed" error which could appear if there was no space between the name of a custom function call and the parenthesis for parameter input. This error appears when using ExpressionFunctions to add custom functions to the expression whitelist.|
+|ILS-1287|Updates|Internal|Escaped apostrophe to prevent an error in tile-component.ts on dashboard loading. If a data string contains an apostrophe, this can cause the remaining report to break HTML rendering.|
+|ILS-1182|Settings|Exports|Corrected the AdHocSetting ExportEncoding to apply to all exports, not just scheduled exports.|
+|ILS-1132|User Interface|Internal|Prevented raw HTML from being displayed in tooltips.|
+|ILS-889|Updates|Internal|Included updated scheduler code with basic version. If you have deployed the Izenda 6 Series custom scheduler with any updated code received from Izenda, then this fix is already included in the code you received.|
+|ILS-804|Updates|Internal|Closed an XSS scripting vulnerability in datasources-search.js|
+|ILS-800|Report Design|Expressions|Expressions are sometimes unable to find aliased fields when using the Fusion driver. We corrected an issue preventing this from working correctly.|
+|ILS-797|Settings|Internal|Added setting AdHocSetting.UseQuotesInCSV which when true, removes quotes from CSV exports.|
+|ILS-757|Report Design|Reports|Corrected a 'Specified cast is not valid' error which can occur when using datetime fields using the Group(Year) datepart within a pivot.|
+|ILS-746|Report Design|Subreports|Made behavior of calling subreports in forms using the double bracket method pass the same set of filters as the single bracket method.|
+|ILS-617|Updates|Internal|Updated Highcharts to version 8.1.2. Updated jQuery used on export from 1.9.1. to 3.5.1, and updated jquaery used on InstantReports and Dashboards from 3.3.1 to 3.5.1.|
+|ILS-217|Settings|Internal|Added ability to call Utility.UpdateDashboardParts which will force dashboard tile updates at arbitrary points in code.|
+
+
 #6.10.0.42 (August 07, 2020)
 
 |Case|Category|Subcategory|Description|
