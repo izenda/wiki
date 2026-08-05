@@ -65,7 +65,7 @@ If you would like for all tables, views and stored procedures to be shown you ca
 **After updating your data source, and the updated tables are not visible in the data source tab, then try to click 'Update Schema' in settings.aspx. Then, the updated will be visible in date source tab.**  
 
 
-**Note:** On initial loading of Izenda with this method, this could take moment to load depending on the number of data sources being loaded. It may give the appearance that the page is stalling. Please wait a few minutes to allow all data sources to be loaded and stored procedures to be run.  Alternatively, set [[AdHocSettings.LazySpMetadataPulling|http://wiki.izenda.us/API/CodeSamples/LazySpMetadataPulling]] equal to true, forcing Izenda to only run stored procedures if and when they are selected as a data source.
+**Note:** On initial loading of Izenda with this method, this could take moment to load depending on the number of data sources being loaded. It may give the appearance that the page is stalling. Please wait a few minutes to allow all data sources to be loaded and stored procedures to be run.  Alternatively, set [[AdHocSettings.LazySpMetadataPulling|http://wiki.izenda.com/API/CodeSamples/LazySpMetadataPulling]] equal to true, forcing Izenda to only run stored procedures if and when they are selected as a data source.
 ```csharp
 <%@ Import Namespace="System.Data" %>
 

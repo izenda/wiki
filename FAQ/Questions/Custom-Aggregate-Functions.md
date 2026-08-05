@@ -8,7 +8,7 @@ Can I define my own grouping and aggregate functions in Izenda? If so, how?
 
 ##Answer
 
-Yes, you can use as many custom aggregate functions as you like. Within the AdHocSettings class exists a collection called [[AggregateFunctions|http://wiki.izenda.us/API/CodeSamples/AggregateFunctions]] that can be used to implement your own custom aggregate functions. For a detailed description of this item, click the above link. We will demonstrate other techniques of adding a custom function to this list below.
+Yes, you can use as many custom aggregate functions as you like. Within the AdHocSettings class exists a collection called [[AggregateFunctions|http://wiki.izenda.com/API/CodeSamples/AggregateFunctions]] that can be used to implement your own custom aggregate functions. For a detailed description of this item, click the above link. We will demonstrate other techniques of adding a custom function to this list below.
 
 ###Method 1: SimpleAggregateFunction
 
@@ -18,7 +18,7 @@ The SimpleAggregateFunction class in the AdHoc namespace has multiple overloads 
   * **Function** - This is the name of the aggregate function to use. This can get applied to a SELECTed field or to a field in the GROUP BY clause. The corresponding database function must only take a single parameter to operate correctly.
 * **Overload 2**:
   * **Function** - As above.
-  * **Caption** - This is the text that will appear in the function dropdown menu on the [[Fields tab|http://wiki.izenda.us/Guides/ReportDesign/4.0-fields-tab]].
+  * **Caption** - This is the text that will appear in the function dropdown menu on the [[Fields tab|http://wiki.izenda.com/Guides/ReportDesign/4.0-fields-tab]].
 * **Overload 3**:
   * **Function** - As above.
   * **Caption** - As above.

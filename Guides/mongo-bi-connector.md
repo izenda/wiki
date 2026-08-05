@@ -22,7 +22,7 @@ Once you have installed the Connector for BI and opened the appropriate ports, y
 
 - Server=(host name);Port=(port - MongoDB default is 27032);Database=(same as username);User Id=(username created during setup for BI Connector);Password=(created during setup for BI Connector);
 
-You can add the connection string via [[AdHocSettings.PostgreSQLConnectionString|http://wiki.izenda.us/Integration/Tutorials/connect-to-the-database#PostgreSQL-9+]], or via [[Fusion connection|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]].
+You can add the connection string via [[AdHocSettings.PostgreSQLConnectionString|http://wiki.izenda.com/Integration/Tutorials/connect-to-the-database#PostgreSQL-9+]], or via [[Fusion connection|http://wiki.izenda.com/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]].
 
 ##Code Samples
 **Global.asax (C♯)**

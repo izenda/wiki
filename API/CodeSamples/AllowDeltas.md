@@ -54,9 +54,9 @@ End Class
 
 AdHocSettings.AllowDeltas = true
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowDeltas/AllowDeltas_true.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowDeltas/AllowDeltas_true.png)
 
 AdHocSettings.AllowDeltas = false
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowDeltas/AllowDeltas_false.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowDeltas/AllowDeltas_false.png)
 

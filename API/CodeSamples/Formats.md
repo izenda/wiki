@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the list of available formats to apply to fields. This affects the Formats dropdown on the [[Fields tab|http://wiki.izenda.us/Guides/ReportDesign/4.0-fields-tab]] of the Report Designer. 
+Gets or sets the list of available formats to apply to fields. This affects the Formats dropdown on the [[Fields tab|http://wiki.izenda.com/Guides/ReportDesign/4.0-fields-tab]] of the Report Designer. 
 
 _**Note:** You could use Formats to add new custom formats. Read more [[here|/FAQ/Questions/Add-Formatting-Options]]_
 
@@ -56,4 +56,4 @@ End Class
 
 AdHocSettings.Formats.Add("Scientific", "{0:E}");
 
-![](http://wiki.izenda.us/FAQ/Questions/Add-Formatting-Options/extended_formats.png)
+![](http://wiki.izenda.com/FAQ/Questions/Add-Formatting-Options/extended_formats.png)

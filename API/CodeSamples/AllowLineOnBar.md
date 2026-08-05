@@ -53,18 +53,18 @@ End Class
 
 AdHocSettings.AllowLineOnBar = true
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowLineOnBar/allowlineonbar_true.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowLineOnBar/allowlineonbar_true.png)
 
 Results
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowLineOnBar/allowlineonbar_results_true.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowLineOnBar/allowlineonbar_results_true.png)
 
 ---
 
 AdHocSettings.AllowLineOnBar = false
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowLineOnBar/allowlineonbar_false.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowLineOnBar/allowlineonbar_false.png)
 
 Results
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowLineOnBar/allowlineonbar_results_false.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowLineOnBar/allowlineonbar_results_false.png)

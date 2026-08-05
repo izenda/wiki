@@ -22,23 +22,23 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How Do I Programatically switch databases?|FAQ/switching-databases-via-code]]
 - [[How do I hide the settings page button or aspx page from users?|/API/CodeSamples/ShowSettingsButton]]
 - [[How do I integrate with my login page?|FAQ/integrate-login-page]]
-- [[How do I implement Field-Level Security|http://wiki.izenda.us/FAQ/Questions/Applying-Security#Field-Level-Access]]
+- [[How do I implement Field-Level Security|http://wiki.izenda.com/FAQ/Questions/Applying-Security#Field-Level-Access]]
 - [[Can I Use My Own Database's Functions With Izenda?|FAQ/izenda-and-udfs]]
 - [[How Do I Enable Izenda Vision & HTML Charting?|FAQ/enable-izenda-vision]]
-- [[How do I reset my Fusion Cache via code?|http://wiki.izenda.us/FAQ/Questions/Caching#RefreshAllCachedReports]]
-- [[How do I implement Fully Qualified Hidden Filters?|http://wiki.izenda.us/API/CodeSamples/HiddenFilters#Fully-qualified-filters]]
+- [[How do I reset my Fusion Cache via code?|http://wiki.izenda.com/FAQ/Questions/Caching#RefreshAllCachedReports]]
+- [[How do I implement Fully Qualified Hidden Filters?|http://wiki.izenda.com/API/CodeSamples/HiddenFilters#Fully-qualified-filters]]
 - [[How do I change the default print settings?|/FAQ/Questions/how-to-change-default-print-settings]]
 - [[Can I Add Custom Format Options to the Report Designer?|/FAQ/Questions/Add Formatting Options]]
 - [[I'm Getting #DIV/0 In My Report Viewer. How Can I Fix This?|FAQ/Divide By Zero]]
 - [[My control names changed when I deployed from development to production and now I can't access them.|/FAQ/Questions/Control-Names-Break-In-Production]]
-- [[Can I define my own grouping and aggregate functions in Izenda? If so, how?|http://wiki.izenda.us/FAQ/Questions/Custom-Aggregate-Functions]]
-- [[How can I set up auditing so that whenever a user accesses or exports report data, an audit is performed?|http://wiki.izenda.us/FAQ/Questions/Auditing-When-Accessing-Reports]]
-- [[How can I export columns that are normally hidden?|http://wiki.izenda.us/FAQ/Questions/exporting-hidden-columns]]
+- [[Can I define my own grouping and aggregate functions in Izenda? If so, how?|http://wiki.izenda.com/FAQ/Questions/Custom-Aggregate-Functions]]
+- [[How can I set up auditing so that whenever a user accesses or exports report data, an audit is performed?|http://wiki.izenda.com/FAQ/Questions/Auditing-When-Accessing-Reports]]
+- [[How can I export columns that are normally hidden?|http://wiki.izenda.com/FAQ/Questions/exporting-hidden-columns]]
 - [[How can I add a new time period to the list of time period filter options?|/FAQ/Questions/Adding-Custom-Time-Periods]]
 - [[How can I change default data precision setting?|/FAQ/Questions/Changing-Data-Precision]]
 - [[Is there a way to store a pre-built string or object at the application level?|/FAQ/Questions/Storing-Custom-Constraints]]
-- [[How to turn off "Report has been modified and report will be overridden" warning message?|http://wiki.izenda.us/API/CodeSamples/ShowModifiedReportMessage]]
-- [[How can I export reportset without placing it to session?|http://wiki.izenda.us/API/CodeSamples/RedirectExports]]
+- [[How to turn off "Report has been modified and report will be overridden" warning message?|http://wiki.izenda.com/API/CodeSamples/ShowModifiedReportMessage]]
+- [[How can I export reportset without placing it to session?|http://wiki.izenda.com/API/CodeSamples/RedirectExports]]
 - [[How do I customize font sizes?|/FAQ/Common UI Customizations]]
 - [[How can I preset date values in time period filter?|/FAQ/Questions/How-To-Preset-Values-In-Filter]]
 
@@ -69,12 +69,12 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ##Platform
 
-- [[What browsers does Izenda Reports support?|http://wiki.izenda.us/FAQ/Platform/What-browsers-does-Izenda-Reports-Support]]
+- [[What browsers does Izenda Reports support?|http://wiki.izenda.com/FAQ/Platform/What-browsers-does-Izenda-Reports-Support]]
 - [[Where can I find information about the company?|http://www.izenda.com/company/]]
 - [[What do other customers say about Izenda?|http://www.izenda.com/case-studies/]]
 - [[What product features does Izenda offer?|http://www.izenda.com/products/]]
 - [[What benefits does Izenda offer?|http://www.izenda.com/why-choose-izenda]]
-- [[How does Izenda perform on large databases?|http://wiki.izenda.us/FAQ/Performance]]
+- [[How does Izenda perform on large databases?|http://wiki.izenda.com/FAQ/Performance]]
 - [[How do I use ReportParts?|/FAQ/Questions/Using ReportParts]]
 
 ##Report Design
@@ -87,9 +87,9 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How does filtering in dashboards work?|FAQ/filtering-in-dashboards]]
 - [[What CSS will be Included in My Report?|FAQ/css-in-reports]]
 - [[How Do I Use a Blank Column in My Exports?|Guides/Blank-Column-in-Export]]
-- [[How Do I Display Filter Names in My Reports?|http://wiki.izenda.us/Guides/ReportDesign/5.0-Filters-tab#5.6-Other-Filter-Features]]
-- [[How Do I Hide the Report List Button On the Report Viewer?|http://wiki.izenda.us/FAQ/Questions/Hiding-report-list-button]]
-- [[Can I change the report title dynamically?|http://wiki.izenda.us/FAQ/Questions/Dynamically-change-report-title]]
+- [[How Do I Display Filter Names in My Reports?|http://wiki.izenda.com/Guides/ReportDesign/5.0-Filters-tab#5.6-Other-Filter-Features]]
+- [[How Do I Hide the Report List Button On the Report Viewer?|http://wiki.izenda.com/FAQ/Questions/Hiding-report-list-button]]
+- [[Can I change the report title dynamically?|http://wiki.izenda.com/FAQ/Questions/Dynamically-change-report-title]]
 - [[How do sub-reports and drilldowns work?|/FAQ/Questions/sub-reports-and-drilldowns]]
 - [[How do allow text wrapping on headers?|/API/CodeSamples/AllowMultilineHeaders]]
 - [[How do I set the column width for each individual field?|/FAQ/advanced-field-settings]]
@@ -101,7 +101,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 
 ##Scheduler
 
-- [[How do I use the Izenda Scheduler?|http://wiki.izenda.us/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler#Overnight-batch-report-processing]]
+- [[How do I use the Izenda Scheduler?|http://wiki.izenda.com/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler#Overnight-batch-report-processing]]
 
 ##Security
 
@@ -110,8 +110,8 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How do I use Windows Active Directory for security?| FAQ/windows-active-directory-security]]
 - [[How Do I Apply Security to Scheduled Reports?|/FAQ/Questions/Applying-Security-to-Scheduled-Reports]]
 - [[How Can I Authenticate Against a Hash Sent Via Query String?|/FAQ/Questions/Authenticating-via-hash]]
-- [[How Can I Prevent Other Users From Overwriting My Reports?|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights]]
-- [[How Do I Mask Specified Field Values?|http://wiki.izenda.us/FAQ/Questions/Applying-Security#Field-Value-Concealing]]
+- [[How Can I Prevent Other Users From Overwriting My Reports?|http://wiki.izenda.com/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights]]
+- [[How Do I Mask Specified Field Values?|http://wiki.izenda.com/FAQ/Questions/Applying-Security#Field-Value-Concealing]]
 - [[How Do I Prevent Information Leaks?|FAQ/Preventing-information-leaks]]
 - [[How Do I Enable And Test SSL In Izenda?|/FAQ/SSL-in-Izenda]]
 
@@ -163,7 +163,7 @@ All training materials are available on the Izenda Reports site at no charge. Th
 - [[How Do I Use Stored Procedures With Izenda Reports?|/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]]
 - [[How do I use alternate filter values with a table or view versus what I display to the user?|/FAQ/passing-alternate-filter-values-with-a-table-or-view]]
 - [[How do I use alternate filter values with stored procedure parameters versus what I display to the user?|/FAQ/Questions/using-alternate-filter-values-with-stored-procedures]]
-- [[What kinds of caching does Izenda use?|/FAQ/Questions/Caching]]
+- [[What kinds of caching does izenda.come?|/FAQ/Questions/Caching]]
 - [[I'm seeing a version collision between a third party library referencing Log4Net and Izenda. How do I fix this?|/FAQ/Questions/Log4Net-Collision]]
 - [How do I customize the English.resx file?](/FAQ/How-do-i-customize-the-English-dot-resx-file)
 - [[Is Izenda 508 Compliant?|/FAQ/Questions/Section508-compliance]]

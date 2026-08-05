@@ -4,7 +4,7 @@
 
 ##About
 
-This list allows the user specify additional SQL functions that should be included in the functions dropdown of the Fields tab. You can also enable functions in an [[Expression|http://wiki.izenda.us/API/CodeSamples/ExpressionFunctions]]
+This list allows the user specify additional SQL functions that should be included in the functions dropdown of the Fields tab. You can also enable functions in an [[Expression|http://wiki.izenda.com/API/CodeSamples/ExpressionFunctions]]
 
 Below is a sample global.asax using the ExtendedFunctions setting. The code block will appear within ``<script runat="server"> </script>`` tags within global.asax.
 

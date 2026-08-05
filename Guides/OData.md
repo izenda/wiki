@@ -6,7 +6,7 @@
 * [MSDN Open Data Article](http://msdn.microsoft.com/en-us/data/hh237663.aspx)
 
 ## OData Provider
-[The OData Provider](http://archives.izenda.us/ri/odata/odata-provider.zip) is required to fully utilize Izenda's capabilities over OData out of the box.  It exposes your database(s) over OData.
+[The OData Provider](http://archives.izenda.com/ri/odata/odata-provider.zip) is required to fully utilize Izenda's capabilities over OData out of the box.  It exposes your database(s) over OData.
 
 Make the following changes to **WebService.aspx.cs**
 
@@ -15,7 +15,7 @@ Make the following changes to **WebService.aspx.cs**
 
 ## webforms-cs-odata
 
-[webforms-cs-odata](http://archives.izenda.us/ri/odata/odata-provider.zip) is a reference implementation of Izenda configured to use Izenda's OData provider.
+[webforms-cs-odata](http://archives.izenda.com/ri/odata/odata-provider.zip) is a reference implementation of Izenda configured to use Izenda's OData provider.
 
 Make the following changes to **Global.asax**
 
@@ -25,7 +25,7 @@ Make the following changes to **Global.asax**
 
 ##Using odata with the Izenda FUSION driver
 
-To find out more about how to use the oData provider with Izenda FUSION, you can read [[this article|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]].
+To find out more about how to use the oData provider with Izenda FUSION, you can read [[this article|http://wiki.izenda.com/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]].
 
 ##Certificate Errors
 

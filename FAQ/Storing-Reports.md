@@ -79,7 +79,7 @@ Public Class CustomAdHocConfig Inherits Izenda.AdHoc.DatabaseAdHocConfig
 
 ###Setting the Saved Reports Table
 
-This is the most essential setting to specify when using Database Mode. However, it is not required. If it is not specified, Izenda will create and use a table called "[[IzendaAdHocReports|http://wiki.izenda.us/FAQ/IzendaAdHocReports-table]]".
+This is the most essential setting to specify when using Database Mode. However, it is not required. If it is not specified, Izenda will create and use a table called "[[IzendaAdHocReports|http://wiki.izenda.com/FAQ/IzendaAdHocReports-table]]".
 ```csharp
 //C#
 public static void InitializeReporting()

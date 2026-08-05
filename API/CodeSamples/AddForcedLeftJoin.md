@@ -74,11 +74,11 @@ AdHocContext.Driver.AddForcedLeftJoin("Orders");
 
 You can join tables in two ways on the Report Designer: manually using Advanced mode, and automatically using check-boxes.
 
-**[[Advanced mode|http://wiki.izenda.us/Guides/ReportDesign/3.0-Data-sources-tab#3.3-Advanced-Mode]]:** In this case, you will be able to specify the join order and conditions. make sure that the join order corresponds to the order that you specified when you invoked the AddForcedLeftJoin method.
+**[[Advanced mode|http://wiki.izenda.com/Guides/ReportDesign/3.0-Data-sources-tab#3.3-Advanced-Mode]]:** In this case, you will be able to specify the join order and conditions. make sure that the join order corresponds to the order that you specified when you invoked the AddForcedLeftJoin method.
 
 Below is an example of how to join tables using Advanced mode:
  
-![](http://wiki.izenda.us/API/CodeSamples/AddForcedLeftJoin/addforcedleftjoin_2.png)
+![](http://wiki.izenda.com/API/CodeSamples/AddForcedLeftJoin/addforcedleftjoin_2.png)
 
 **[[Simple (check-box) mode|/API/CodeSamples/ShowDataSourcesAsCheckboxes]]:** In this case, tables will be joined using existing database constraints. If your database does not use constraints or the constraints you need do not exist, you will have to [[create them|/API/CodeSamples/AddConstraint]]. In our example database, the constraints are already present. So we will go ahead and call AddForcedLeftJoin.
 
@@ -88,7 +88,7 @@ AdHocContext.Driver.AddForcedLeftJoin("Orders", "Order Details");
 
 Next we will select our tables in the Report Designer
 
-![](http://wiki.izenda.us/API/CodeSamples/AddForcedLeftJoin/addforcedleftjoin.png)
+![](http://wiki.izenda.com/API/CodeSamples/AddForcedLeftJoin/addforcedleftjoin.png)
 
 _**Note:** You need to pay even more attention to the constraints in case you use the single-parameter overload of the AddForcedLeftJoin method. 
 

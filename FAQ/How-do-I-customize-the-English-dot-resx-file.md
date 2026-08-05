@@ -3,6 +3,6 @@ As of our 6.8 release, the English.resx file is made available to customize the 
 
 You may need to create the Resources folder inside of the bin folder.  Below are a few screenshots from a use-case, to illustrate the example:
 
-![Edited resx file in correct location](http://fogbugz.izenda.us/default.asp?pg=pgDownload&pgType=pgFile&ixBugEvent=193062&ixAttachment=28261&sTicket=&sFileName=generated_10763425.png)
+![Edited resx file in correct location](http://fogbugz.izenda.com/default.asp?pg=pgDownload&pgType=pgFile&ixBugEvent=193062&ixAttachment=28261&sTicket=&sFileName=generated_10763425.png)
 
-![Custom verbiage appearing in Izenda](http://fogbugz.izenda.us/default.asp?pg=pgDownload&pgType=pgFile&ixBugEvent=193062&ixAttachment=28262&sTicket=&sFileName=generated_33590646.png)
+![Custom verbiage appearing in Izenda](http://fogbugz.izenda.com/default.asp?pg=pgDownload&pgType=pgFile&ixBugEvent=193062&ixAttachment=28262&sTicket=&sFileName=generated_33590646.png)

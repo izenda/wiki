@@ -1,6 +1,6 @@
 #Adding Fixed Unit Convesions
 
-Functions are added to Izenda through the extended functions API code. You can learn more about UDFs (User Defined Functions) [[here|http://wiki.izenda.us/FAQ/izenda-and-udfs]].
+Functions are added to Izenda through the extended functions API code. You can learn more about UDFs (User Defined Functions) [[here|http://wiki.izenda.com/FAQ/izenda-and-udfs]].
 
 These functions are available in the 'Functions' drop-down. They can also be used in an expression by clicking the gear to the right side of the field.
 

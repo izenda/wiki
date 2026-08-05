@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets a list of aspx pages and column names used to link the Equals(Popup) window to an aspx page. The page runs inside an iframe and uses two methods to pass values from the application to the custom page and back. To learn more about the custom aspx page, you can [[visit this link|http://wiki.izenda.us/API/CodeSamples/Equals-Popup-Custom-Page]].
+Gets or sets a list of aspx pages and column names used to link the Equals(Popup) window to an aspx page. The page runs inside an iframe and uses two methods to pass values from the application to the custom page and back. To learn more about the custom aspx page, you can [[visit this link|http://wiki.izenda.com/API/CodeSamples/Equals-Popup-Custom-Page]].
 
 ##Global.asax (C#)
 

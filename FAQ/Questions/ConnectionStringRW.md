@@ -60,7 +60,7 @@ FusionDriver fd = new FusionDriver();
 
 ##How ConnectionStringRW works
 
-1) If ConnectionStringRW is not assigned, Izenda uses Driver.ConnectionString for all operations against DB
+1) If ConnectionStringRW is not assigned, izenda.comes Driver.ConnectionString for all operations against DB
 
 2) If ConnectionStringRW is also assigned, then Izenda will
 

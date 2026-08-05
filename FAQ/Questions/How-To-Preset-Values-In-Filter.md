@@ -76,7 +76,7 @@ End Sub
 ```
 ###Screenshots
 
-![](http://wiki.izenda.us//FAQ/Questions/How-To-Preset-Values-In-Filter/Time_Period.png)
+![](http://wiki.izenda.com//FAQ/Questions/How-To-Preset-Values-In-Filter/Time_Period.png)
 
 ***Note: The filter is displayed here for demonstration purposes. In this scenario, the filter would be hidden from user input***
 

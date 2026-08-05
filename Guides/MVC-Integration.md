@@ -5,17 +5,17 @@
 ##About
 
 **IF UPGRADING:** Please be sure to follow our upgrade best practices:
-**http://wiki.izenda.us/FAQ/Izenda-Update-Best-Practices**
+**http://wiki.izenda.com/FAQ/Izenda-Update-Best-Practices**
 
 **ALSO PLEASE NOTE:** Developers will want to use caution when implementing customizations to the standard MVC kit involving asynchronous methods. Due to the way asynchronous methods are handled in ASP.NET MVC, constructs such as SessionState and HttpContext are not available due to the process running in a parallel thread to the main thread. When these are unavailable then the call could result in an HttpException reading "Cannot redirect after HTTP headers have been sent" or something similar. Therefore, it is inadvisable to use asynchronous calls to process MVC actions involving the Izenda product code. For more information on asynchronous calls in ASP.NET MVC, there is a tutorial on it here
 
 This guide is designed to instruct first-time users how to integrate Izenda with simple MVC application. 
-This guide will use Izenda mvc5r3 kit, a simple MVC application, which is downloadable at [http://wiki.izenda.us/Guides/MVC-Integration/Sample_MVCApp.zip](http://wiki.izenda.us/Guides/MVC-Integration/Sample_MVCApp.zip), and Visual Studio Express 2013 for Web. 
+This guide will use Izenda mvc5r3 kit, a simple MVC application, which is downloadable at [http://wiki.izenda.com/Guides/MVC-Integration/Sample_MVCApp.zip](http://wiki.izenda.com/Guides/MVC-Integration/Sample_MVCApp.zip), and Visual Studio Express 2013 for Web. 
 
 **PLEASE NOTE**
 This guide is not universal, nor does it describe a complete integration.  There are many nuanced elements of an integration, including, but not limited to, Visual Studio versions, existing code in your application(s), and server environments.  This guide is intended to be a starting point in integrating Izenda, with the understanding that some deviations will likely be necessary.
 
-[mvc5r3 download link](http://archives.izenda.us/ri/mvc/mvc5r3/)
+[mvc5r3 download link](http://archives.izenda.com/ri/mvc/mvc5r3/)
 ##Instructions
 
 ###Step 1. Open the simple MVC application in Visual Studio
@@ -240,5 +240,5 @@ Two top logos have changed as below
 Developers will want to use caution when implementing customizations to the standard MVC kit involving asynchronous methods. Due to the way asynchronous methods are handled in ASP.NET MVC, constructs such as SessionState and HttpContext are not available due to the process running in a parallel thread to the main thread. When these are unavailable then the call could result in an HttpException reading "Cannot redirect after HTTP headers have been sent" or something similar. Therefore, it is inadvisable to use asynchronous calls to process MVC actions involving the Izenda product code. For more information on asynchronous calls in ASP.NET MVC, there is a tutorial on it [[here|https://docs.microsoft.com/en-us/aspnet/mvc/overview/performance/using-asynchronous-methods-in-aspnet-mvc-4]]
 
 <!--
-[Izenda MVC Kit Integration Guide Phase II](http://wiki.izenda.us/Guides/MVC-Integration/Phase-II-Draft)
+[Izenda MVC Kit Integration Guide Phase II](http://wiki.izenda.com/Guides/MVC-Integration/Phase-II-Draft)
 -->

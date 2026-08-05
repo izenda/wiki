@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets whether to show the [[TenantField|/API/CodeSamples/TenantField]] throughout the reporting pages. When false, this hides the field identified in the [[TenantField|/API/CodeSamples/TenantField]] property from appearing in all **Field** dropdowns on the [[Report Designer|http://wiki.izenda.us/Guides/ReportDesign]]. This setting is used in conjunction with [[CurrentUserTenantId|/API/CodeSamples/CurrentUserTenantId]] and [[TenantField|/API/CodeSamples/TenantField]]. 
+Gets or sets whether to show the [[TenantField|/API/CodeSamples/TenantField]] throughout the reporting pages. When false, this hides the field identified in the [[TenantField|/API/CodeSamples/TenantField]] property from appearing in all **Field** dropdowns on the [[Report Designer|http://wiki.izenda.com/Guides/ReportDesign]]. This setting is used in conjunction with [[CurrentUserTenantId|/API/CodeSamples/CurrentUserTenantId]] and [[TenantField|/API/CodeSamples/TenantField]]. 
 
 **Default value:** true
 

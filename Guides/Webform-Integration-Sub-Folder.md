@@ -6,9 +6,9 @@
 
 This guide is designed to instruct first-time users how to integrate Izenda Webforms kit into a basic ASP.NET website using Visual Studio Express 2013 for Web. In this integration guide, all Izenda files will be placed in a sub-directory called 'Izenda' within the hosting website. This guide will use an Izenda Webforms kit 6.9.0.4 and a basic ASP.NET website, which can be created using Visual Studio Express 2013 for Web.    
 
-[Izenda Webforms kit download link](http://archives.izenda.us/ri/webforms/webforms-cs.zip)
+[Izenda Webforms kit download link](http://archives.izenda.com/ri/webforms/webforms-cs.zip)
 
-Reference: [Integrating Izenda into a Web Application](http://wiki.izenda.us/Guides/Integrating-Izenda)
+Reference: [Integrating Izenda into a Web Application](http://wiki.izenda.com/Guides/Integrating-Izenda)
 
 **PLEASE NOTE**: This guide is not universal, nor does it describe a complete integration. There are many nuanced elements of an integration, including, but not limited to, Visual Studio versions, existing code in your application(s), and server environments. This guide is intended to be a starting point in integrating Izenda, with the understanding that some deviations will likely be necessary.
 
@@ -18,12 +18,12 @@ Reference: [Integrating Izenda into a Web Application](http://wiki.izenda.us/Gui
 
 You can also create a new web site in Visual Studio in ASP.NET Webforms.
 
-![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/1.png)
+![1](http://wiki.izenda.com/Guides/Webform-Integration-Sub-Folder/1.png)
 
 
 ###Step 2. Copy contents of /Bin folder in Webforms kit to the Bin folder of host website
 
-![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/2.png)
+![1](http://wiki.izenda.com/Guides/Webform-Integration-Sub-Folder/2.png)
 
 
 ###Step 3. Copy contents of Global.asax in Webforms kit to Global.asax of the website
@@ -149,7 +149,7 @@ And add Izenda.Adhoc namespace.  Now, the global.asax of website should look sim
 
 Create a folder named 'Izenda' in the website's root folder. Copy everything from Webforms kit except for global.asax, web.config and the bin folder to your sub-folder. In this integration guide, the sub folder is named 'Izenda'.
 
-![3](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/3.png)	
+![3](http://wiki.izenda.com/Guides/Webform-Integration-Sub-Folder/3.png)	
 			
 ###Step 5. Copy OnInit method from Default.master.cs from Webforms kit to corresponding file/method of website master page
 
@@ -457,7 +457,7 @@ If the code copied to site.master at step 7a was placed inside the form tag in t
 
 Change MasterPageFile="~/Default.master" to MasterPageFile="~/Site.master" in all Izenda .aspx pages. This can be done easily using Visual Studio's 'Find and Replace' tool as below.
 
-![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/4.png)
+![1](http://wiki.izenda.com/Guides/Webform-Integration-Sub-Folder/4.png)
 
 
 ###Step 9.  In all Izenda .aspx pages, update paths to Izenda .ascx controls
@@ -472,7 +472,7 @@ should be changed to
 
 As we did in the previous step, use 'Find and Replace' tool again as below
 
-![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/5.png)
+![1](http://wiki.izenda.com/Guides/Webform-Integration-Sub-Folder/5.png)
 
 ###Step 10.  Copy rs.aspx and rs.aspx.cs from Webforms kit to website root folder
 
@@ -508,7 +508,7 @@ AdHocSettings.SqlServerConnectionString = @"INSERT_CONNECTION_STRING_HERE";
 ###Step 13. Launch the website
 
 
-![1](http://wiki.izenda.us/Guides/Webform-Integration-Sub-Folder/7.png)
+![1](http://wiki.izenda.com/Guides/Webform-Integration-Sub-Folder/7.png)
 
 ##Potential Conflicts
 
@@ -516,7 +516,7 @@ AdHocSettings.SqlServerConnectionString = @"INSERT_CONNECTION_STRING_HERE";
 
 If you use your own implementation of Bootstrap, you may encounter conflicts with Izenda's implementation in integration.  The easiest way to resolve this issue is to namespace all of Izenda's Bootstrap classes, using a CSS pre-processor such as SASS or LESS.
 
-Please see our [Bootstrap Namespacing Guide](http://wiki.izenda.us/FAQ/bootstrap-namespacing) for more info. 
+Please see our [Bootstrap Namespacing Guide](http://wiki.izenda.com/FAQ/bootstrap-namespacing) for more info. 
 
 
 

@@ -56,7 +56,7 @@ End Class
 
 ##Screenshots
 
-![](http://wiki.izenda.us/API/CodeSamples/SettingsKey/settings_key.png)
+![](http://wiki.izenda.com/API/CodeSamples/SettingsKey/settings_key.png)
 
 ##Related Articles
 

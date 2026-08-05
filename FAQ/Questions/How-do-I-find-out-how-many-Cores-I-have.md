@@ -16,7 +16,7 @@ In order to discover how many Cores you have:
 
 Visual Example
 
-![](http://wiki.izenda.us/FAQ/FAQ/CPU's-Example.png)
+![](http://wiki.izenda.com/FAQ/FAQ/CPU's-Example.png)
 ##Processor sockets
 
 * Windows Platforms:

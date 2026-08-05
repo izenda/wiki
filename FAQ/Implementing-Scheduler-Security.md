@@ -25,7 +25,7 @@ The values for izUser and izPassword can then be handled in your InitializeRepor
 
 Figure 1: The scheduler request and response model
 
-![Scheduler request and response model](http://wiki.izenda.us//FAQ/Implementing-Scheduler-Security/izenda_scheduler_validation.png)
+![Scheduler request and response model](http://wiki.izenda.com//FAQ/Implementing-Scheduler-Security/izenda_scheduler_validation.png)
 
 As demonstrated in the above graphic, custom code is required to handle the values passed into the site.
 

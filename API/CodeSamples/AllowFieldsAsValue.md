@@ -56,8 +56,8 @@ End Class
 
 AdHocSettings.AllowFieldsAsValue = true
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowFieldsAsValue/allowfieldsasvalue_true.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowFieldsAsValue/allowfieldsasvalue_true.png)
 
 AdHocSettings.AllowFieldsAsValue = false
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowFieldsAsValue/allowfieldsasvalue_false.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowFieldsAsValue/allowfieldsasvalue_false.png)

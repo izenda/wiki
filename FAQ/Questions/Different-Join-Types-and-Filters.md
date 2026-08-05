@@ -59,7 +59,7 @@ FULL OUTER JOIN [dbo].[Invoices] ON [dbo].[Invoices].[CustomerID]=[dbo].[Orders]
 
 ##Filters in WHERE
 
-If you specify a [[filter|http://wiki.izenda.us/Guides/ReportDesign/5.0-Filters-tab]] for the column in first(left) table in JOIN clause, all filters will be applied as usual (i.e. all filters will be in the WHERE clause):
+If you specify a [[filter|http://wiki.izenda.com/Guides/ReportDesign/5.0-Filters-tab]] for the column in first(left) table in JOIN clause, all filters will be applied as usual (i.e. all filters will be in the WHERE clause):
 
 ```sql
 SELECT

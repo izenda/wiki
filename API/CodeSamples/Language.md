@@ -130,4 +130,4 @@ In the above example, CurrentUserTenantID will be set to a company ID (such as A
 
 ####Arabic
 
-![](http://wiki.izenda.us/Localization/resources_rtl_1.png)
+![](http://wiki.izenda.com/Localization/resources_rtl_1.png)

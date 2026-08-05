@@ -10,7 +10,7 @@ Customizing the chart colors allows you to inject a bit of your own branding, or
 
 This image depicts a pie chart with custom colors set to Blue, Red, Yellow and Green. 
 
-![Pie chart with custom colors](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/colors.png)
+![Pie chart with custom colors](http://wiki.izenda.com/Guides/Developer-Links-and-Guides/colors.png)
 
 ##Implementation
 

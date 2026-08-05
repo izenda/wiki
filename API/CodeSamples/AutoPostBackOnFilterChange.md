@@ -57,8 +57,8 @@ End Class
 
 AdHocSettings.AutoPostBackOnFilterChange = true
 
-![](http://wiki.izenda.us//API/CodeSamples/AutoPostBackOnFilterChange/AutoPostBackOnFilterChange_true.gif)
+![](http://wiki.izenda.com//API/CodeSamples/AutoPostBackOnFilterChange/AutoPostBackOnFilterChange_true.gif)
 
 AdHocSettings.AutoPostBackOnFilterChange = false
 
-![](http://wiki.izenda.us//API/CodeSamples/AutoPostBackOnFilterChange/AutoPostBackOnFilterChange_false.gif)
+![](http://wiki.izenda.com//API/CodeSamples/AutoPostBackOnFilterChange/AutoPostBackOnFilterChange_false.gif)

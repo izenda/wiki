@@ -1,6 +1,6 @@
 ##Updating within a point release / Performing a 'Maintenance Update' (Ex: 6.10.0.1-> 6.10.0.15)
 
-1) Review release notes [here](http://wiki.izenda.us/Release-Notes). Release notes for each maintenance release will have notes detailing changes, settings, and fixes associated.
+1) Review release notes [here](http://wiki.izenda.com/Release-Notes). Release notes for each maintenance release will have notes detailing changes, settings, and fixes associated.
 
 2) Set aside any customized files in /Resources - This is typically CSS, but could be HTML or JS.
 
@@ -11,7 +11,7 @@
 
 ##Upgrading across point releases (Ex: 6.9.0.6-> 6.10.0.1)
 
-1) Review release notes [here](http://wiki.izenda.us/Release-Notes). Release notes for each release will have notes detailing features, settings, and fixes associated.
+1) Review release notes [here](http://wiki.izenda.com/Release-Notes). Release notes for each release will have notes detailing features, settings, and fixes associated.
 
 2) Set aside any customized files in the entire Izenda deployment - This is typically the global.asax, code-behind files, sometimes individual page code, CSS, HTML or JS.
 
@@ -26,7 +26,7 @@ _See Also:_
 
 ##Upgrading Beyond Version 6.10.0.16
 
-1A) Download the FULL RI Downloads RI Link from (http://archives.izenda.us)[http://archives.izenda.us]
+1A) Download the FULL RI Downloads RI Link from (http://archives.izenda.com)[http://archives.izenda.com]
 
 1B) If you are upgrading from an older version of Izenda and do not want to download the full RI, you can use the RI as a reference. 
 

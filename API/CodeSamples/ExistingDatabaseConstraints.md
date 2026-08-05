@@ -4,7 +4,7 @@
 
 ##About
 
-Gets database constraints from your database connection. To set database constraints programatically, use [[AddConstraint|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#b)-Constraints]] or [[AddForcedLeftJoin|/API/CodeSamples/AddForcedLeftJoin]]
+Gets database constraints from your database connection. To set database constraints programatically, use [[AddConstraint|http://wiki.izenda.com/Guides/Izenda-AdHoc-Driver#b)-Constraints]] or [[AddForcedLeftJoin|/API/CodeSamples/AddForcedLeftJoin]]
 
 **Default Value:** depends on your database configuration
 

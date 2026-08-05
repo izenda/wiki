@@ -63,4 +63,4 @@ End Class
 
 **Missing Images**
 
-![Missing Visualization Images](http://fogbugz.izenda.us/default.asp?pg=pgDownload&pgType=pgFile&ixBugEvent=289238&ixAttachment=44189&sTicket=&sFileName=image.png)
+![Missing Visualization Images](http://fogbugz.izenda.com/default.asp?pg=pgDownload&pgType=pgFile&ixBugEvent=289238&ixAttachment=44189&sTicket=&sFileName=image.png)

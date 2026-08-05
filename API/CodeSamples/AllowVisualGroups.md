@@ -6,7 +6,7 @@
 
 _**Obsolete:** As of Izenda 6, this setting is not recommended for use._
 
-Gets or sets the value indicating whether visual groups are allowed. When this is enabled, the "VG" checkbox on the fields tab will be displayed. You can learn more about visual groups through [[this link|http://wiki.izenda.us/Guides/ReportDesign/10.0-Style-tab#10.5-Visual-Group-Styles]].
+Gets or sets the value indicating whether visual groups are allowed. When this is enabled, the "VG" checkbox on the fields tab will be displayed. You can learn more about visual groups through [[this link|http://wiki.izenda.com/Guides/ReportDesign/10.0-Style-tab#10.5-Visual-Group-Styles]].
 
 **Default Value:** true
 
@@ -57,8 +57,8 @@ End Class
 
 AdHocSettings.AllowVisualGroups = true
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowVisualGroups/allowvisualgroups_true.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowVisualGroups/allowvisualgroups_true.png)
 
 AdHocSettings.AllowVisualGroups = false
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowVisualGroups/allowvisualgroups_false.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowVisualGroups/allowvisualgroups_false.png)

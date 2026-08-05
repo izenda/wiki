@@ -70,7 +70,7 @@ Next, we must allow the schedule controls to be shown in the Report Designer pag
 Izenda.AdHoc.AdHocSettings.ShowScheduleControls = true;
 ```
 
-The schedule controls will now be shown in the report designer under the [[Misc tab|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab]].
+The schedule controls will now be shown in the report designer under the [[Misc tab|http://wiki.izenda.com/Guides/ReportDesign/9.0-Misc-Tab]].
 -->
 
 ##Setting up the scheduler using the Settings.aspx page (Trial/POC)
@@ -148,6 +148,6 @@ Using the rs.aspx Page
 
 ## Advanced Set Up and Scenarios
 
-[Click here](http://wiki.izenda.us/Guides/Advanced-Scheduler-Functionality) to learn about advanced scheduler topics such as saving scheduled exports to the server and more.
+[Click here](http://wiki.izenda.com/Guides/Advanced-Scheduler-Functionality) to learn about advanced scheduler topics such as saving scheduled exports to the server and more.
 
-# To Section 2 - [Using the Reports Scheduler](http://wiki.izenda.us/FAQ/Questions/What-does-Repeat-Types-and-Send-Email-As-mean)
+# To Section 2 - [Using the Reports Scheduler](http://wiki.izenda.com/FAQ/Questions/What-does-Repeat-Types-and-Send-Email-As-mean)

@@ -83,11 +83,11 @@ public partial class Settings : System.Web.UI.Page {
 
 AdHocSettings.ShowSettingsButton = false
 
-![](http://wiki.izenda.us/API/CodeSamples/ShowSettingsButton/toolbar_showsettingsbutton_false.png)
+![](http://wiki.izenda.com/API/CodeSamples/ShowSettingsButton/toolbar_showsettingsbutton_false.png)
 
 AdHocSettings.ShowSettingsButton = true
 
-![](http://wiki.izenda.us/API/CodeSamples/ShowSettingsButton/toolbar_showsettingsbutton_true.png)
+![](http://wiki.izenda.com/API/CodeSamples/ShowSettingsButton/toolbar_showsettingsbutton_true.png)
 
 ##Related Articles
 

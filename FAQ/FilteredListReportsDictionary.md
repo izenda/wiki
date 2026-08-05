@@ -4,7 +4,7 @@
 
 ##About
 
-This method is used on the report list page and returns a list of reports that are guaranteed to be available to the current user, taking into account all [[hidden filters|http://wiki.izenda.us/FAQ/applying-hidden-filter-using-inner-query]] and settings. This method can be overridden in your [[CustomAdHocConfig|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]] class as needed. Here is a sample of what an overridden implementation could look like.
+This method is used on the report list page and returns a list of reports that are guaranteed to be available to the current user, taking into account all [[hidden filters|http://wiki.izenda.com/FAQ/applying-hidden-filter-using-inner-query]] and settings. This method can be overridden in your [[CustomAdHocConfig|http://wiki.izenda.com/Integration/Tutorials/Customizing-Izenda-Settings]] class as needed. Here is a sample of what an overridden implementation could look like.
 
 ##Global.asax (C♯)
 

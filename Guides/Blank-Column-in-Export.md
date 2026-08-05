@@ -9,10 +9,10 @@ You can create reports that have a blank column in them using Izenda Reports. Th
 
 Here is the CSV output of a report that has one blank column:
 
-![Export with a blank column](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/blank-column-csv.png)
+![Export with a blank column](http://wiki.izenda.com/Guides/Developer-Links-and-Guides/blank-column-csv.png)
 
 ##Implementation
 
 To add a blank column to your export, you simply have to set the Description of the field in the Fields Tab to "BLANK", then click on the gear icon to the far right of the field and set the Expression to ''.
 
-![Export with a blank column](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/Blank-Column.png)
+![Export with a blank column](http://wiki.izenda.com/Guides/Developer-Links-and-Guides/Blank-Column.png)

@@ -15,7 +15,7 @@ Possible values:
 * Pdf
 * Html2Pdf
 
-[Print Modes](http://wiki.izenda.us/FAQ/understanding-izenda-print-modes)
+[Print Modes](http://wiki.izenda.com/FAQ/understanding-izenda-print-modes)
 
 ##Global.asax (C♯)
 

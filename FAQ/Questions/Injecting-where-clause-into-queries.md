@@ -18,8 +18,8 @@ There are 2 basic ways to address this problem.
 
 **Method 1:**
 
-In your filter, select **[[Use Previous Or|http://wiki.izenda.us/FAQ/Questions/How-is-Use-Previous-OR-used-in-Filters]]** to bring in payments. 
+In your filter, select **[[Use Previous Or|http://wiki.izenda.com/FAQ/Questions/How-is-Use-Previous-OR-used-in-Filters]]** to bring in payments. 
 
 **Method 2:**
 
-You can also use the SQL Override property in the [[PreExecuteReportSet|]] method to inject a 'Where' clause.  Please see the hidden filter with Sql Override section in [[this article|http://wiki.izenda.us/FAQ/applying-hidden-filter-using-inner-query]].
+You can also use the SQL Override property in the [[PreExecuteReportSet|]] method to inject a 'Where' clause.  Please see the hidden filter with Sql Override section in [[this article|http://wiki.izenda.com/FAQ/applying-hidden-filter-using-inner-query]].

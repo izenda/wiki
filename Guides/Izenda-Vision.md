@@ -98,7 +98,7 @@ These terms refer to the types of columns that each visualization reads.
 
 ##Auto Chart
 
-![Auto Chart](http://wiki.izenda.us/Guides/Izenda-Vision/Auto-Chart.png)
+![Auto Chart](http://wiki.izenda.com/Guides/Izenda-Vision/Auto-Chart.png)
 
 * Auto Chart permits the generation of many simple chart types. Some of these charts display a single metric at a time, others display multiple metrics at one time.
 * Field 1 - **Group** - This field will represent the categories along the X axis, the Y axis, or the slices or items displayed on a proportional chart.
@@ -106,7 +106,7 @@ These terms refer to the types of columns that each visualization reads.
 
 ##Combo
 
-![Combo](http://wiki.izenda.us/Guides/Izenda-Vision/Combo.png)
+![Combo](http://wiki.izenda.com/Guides/Izenda-Vision/Combo.png)
 
 * Combo displays metrics with a series of bars and lines on the same graph. Each metric gets its own Y axis, with the X axis determined by the single group field. The first half of the metric fields will be displayed with bars, the second half with lines.
 * Field 1 - **Group** - This field will represent the categories along the X axis.
@@ -116,7 +116,7 @@ These terms refer to the types of columns that each visualization reads.
 
 ##Crossfilter
 
-![Crossfilter](http://wiki.izenda.us/Guides/Izenda-Vision/Crossfilter.png)
+![Crossfilter](http://wiki.izenda.com/Guides/Izenda-Vision/Crossfilter.png)
 
 * Crossfilter displays multiple charts, one for the datetime grouping field and one for each metric. Clicking and dragging on any chart will establish a range, which acts as a filter on all other charts. You can also drag the range itself to move it without changing its size. This chart is useful for finding clusters of data within other data, for example we have less orders in June vs. August but they are worth more money.
 * Field 1? - **Datetime** - This field will represent the time factor by which other metrics can be filtered. Range of values is displayed on the X axis and count of values is displayed on the Y axis.
@@ -176,7 +176,7 @@ Automatic Gauges have four different modes:
 
 ##Heat Map
 
-![Heat Map](http://wiki.izenda.us/Guides/Izenda-Vision/Heat-Map.png)
+![Heat Map](http://wiki.izenda.com/Guides/Izenda-Vision/Heat-Map.png)
 
 * Heat Map displays a tree-like hierarchy of squares, each of which proportionally represents the aggregate metric at each level of the hierarchy.
 * Field 1... - **Group** - This field represents the hierarchical levels which structure the heat map.
@@ -184,7 +184,7 @@ Automatic Gauges have four different modes:
 
 ##Matrix
 
-![Matrix](http://wiki.izenda.us/Guides/Izenda-Vision/Matrix.png)
+![Matrix](http://wiki.izenda.com/Guides/Izenda-Vision/Matrix.png)
 
 * Matrix displays a series of squares, arranged by group and time, in the style of a pivot. The squares are shaded according to each metric value.
 * Field 1 - **Group** -  This field will represent the categories along the Y axis.
@@ -203,7 +203,7 @@ Automatic Gauges have four different modes:
 
 ##Sunburst
 
-![Sunburst](http://wiki.izenda.us/Guides/Izenda-Vision/Sunburst3.png)
+![Sunburst](http://wiki.izenda.com/Guides/Izenda-Vision/Sunburst3.png)
 
 * Sunburst displays a tree-like hierarchy of items layered in a circular arrangement, each of which proportionally represents the aggregate metric at each level of the hierarchy. The layers from inner to outer represent each level of the hierarchy. Larger groups are displayed from the 12 o’clock position clockwise.
 * Field 1... - **Group** - This field represents the hierarchical levels which structure the heat map.
@@ -211,7 +211,7 @@ Automatic Gauges have four different modes:
 
 ##Time Bubble
 
-![Time Bubble](http://wiki.izenda.us/Guides/Izenda-Vision/Time-Bubble.png)
+![Time Bubble](http://wiki.izenda.com/Guides/Izenda-Vision/Time-Bubble.png)
 
 * Time Bubble is a multidimensional graph which displays circles which change in size and position over time. Mousing over the time label at the bottom right of the chart will move forward and backward in time.
 * Field 1 - **Group** - This field will represent each circle. 
@@ -222,7 +222,7 @@ Automatic Gauges have four different modes:
 
 ##Timeline
 
-![Timeline](http://wiki.izenda.us/Guides/Izenda-Vision/Timeline.png)
+![Timeline](http://wiki.izenda.com/Guides/Izenda-Vision/Timeline.png)
 
 * Timeline displays a single metric between two points in time. The length of each item represents the distance between your start and end times.
 * Field 1 - **Group** - This field represents the Y axis.
@@ -234,7 +234,7 @@ Automatic Gauges have four different modes:
 
 ##Transitions
 
-![Transitions](http://wiki.izenda.us/Guides/Izenda-Vision/Transitions.png)
+![Transitions](http://wiki.izenda.com/Guides/Izenda-Vision/Transitions.png)
 
 * Transitions displays multiple common graph styles in a fixed cycle.
 * Field 1 - **Group** - This field represents categories on the Y axis or slices of proportional charts.
@@ -246,7 +246,7 @@ Automatic Gauges have four different modes:
 
 ##Tree
 
-![Tree](http://wiki.izenda.us/Guides/Izenda-Vision/Tree2.png)
+![Tree](http://wiki.izenda.com/Guides/Izenda-Vision/Tree2.png)
 
 * Tree displays a tree design with a set of linked nodes.  Each node in a tree has zero or more child nodes.  
 * Field 1... **Group** - This group represents the hierarchical levels which structure the tree.
@@ -254,7 +254,7 @@ Automatic Gauges have four different modes:
 
 ##Waterfall
 
-![Waterfall](http://wiki.izenda.us/Guides/Izenda-Vision/Waterfall.png)
+![Waterfall](http://wiki.izenda.com/Guides/Izenda-Vision/Waterfall.png)
 
 * Waterfall displays a bar chart with a built in pareto function - that is, the bottom of each bar begins at the top of the previous bar.
 * Field 1 - **Group** - This field represents each bar along the X axis.
@@ -262,7 +262,7 @@ Automatic Gauges have four different modes:
 
 ##World Tour
 
-![WorldTour](http://wiki.izenda.us/Guides/Izenda-Vision/World-Tour.png)
+![WorldTour](http://wiki.izenda.com/Guides/Izenda-Vision/World-Tour.png)
 
 * World Tour displays countries and a single metric associated with that country.
 * Field 1 - **Geographical Field** - This field represents the country.

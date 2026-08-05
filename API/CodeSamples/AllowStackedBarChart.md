@@ -55,18 +55,18 @@ End Class
 
 AdHocSettings.AllowStackedBarChart = true
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowStackedBarChart/allowstackedbarchart_true.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowStackedBarChart/allowstackedbarchart_true.png)
 
 Results
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowStackedBarChart/allowstackedbarchart_true_results.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowStackedBarChart/allowstackedbarchart_true_results.png)
 
 ---
 
 AdHocSettings.AllowStackedBarChart = false
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowStackedBarChart/allowstackedbarchart_false.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowStackedBarChart/allowstackedbarchart_false.png)
 
 Results
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowStackedBarChart/allowstackedbarchart_false_results.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowStackedBarChart/allowstackedbarchart_false_results.png)

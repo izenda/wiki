@@ -10,7 +10,7 @@ Reports are executed when the scheduler runs, if the report is set to a time at 
 
 Repeat Types exist in the "Misc" section of ReportDesigner.aspx and are simply expressions that reflect how often the email should be sent.
 
-![Repeat Types & Send Email As](http://wiki.izenda.us/FAQ/FAQ/RepeatType_And_Link.png)
+![Repeat Types & Send Email As](http://wiki.izenda.com/FAQ/FAQ/RepeatType_And_Link.png)
 
 |Type|Effect|
 |-------------|-------------|
@@ -44,4 +44,4 @@ This dropdown determines how the email will be sent out. There are a number of d
 
 Please note that if you want to customize export formats, you will have to use the Izenda Custom Scheduler.
 
-#To Section 3 - [Scheduler Security](http://wiki.izenda.us/FAQ/Implementing-Scheduler-Security)
+#To Section 3 - [Scheduler Security](http://wiki.izenda.com/FAQ/Implementing-Scheduler-Security)

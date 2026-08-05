@@ -4,13 +4,13 @@
 
 ##About
 
-The ListReports method allows you to dynamically alter the list of reports that Izenda uses on the Report List page. Below are examples of logic you could use with this method.
+The ListReports method allows you to dynamically alter the list of reports that izenda.comes on the Report List page. Below are examples of logic you could use with this method.
 
 ##Sample C♯ Methods
 
 These examples are basic customized methods of obtaining a list of reports done using the different methods that Izenda supports.
 
-###[[DatabaseAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]]
+###[[DatabaseAdHocConfig|http://wiki.izenda.com/FAQ/Storing-Reports#Database-Mode]]
 
 ```csharp
 public override ReportInfo[] ListReports()
@@ -56,13 +56,13 @@ public override ReportInfo[] ListReports()
 
 ####Controlling report access
 
-In [[Database Mode|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]], you can override the [[SaveReportSet|/FAQ/SaveReportSet]] method to include [[CurrentUserName|/API/CodeSamples/CurrentUserName]] in the data saved to the [[SavedReportsTable|/API/CodeSample/SavedReportsTable]] and then structure a query like the following:
+In [[Database Mode|http://wiki.izenda.com/FAQ/Storing-Reports#Database-Mode]], you can override the [[SaveReportSet|/FAQ/SaveReportSet]] method to include [[CurrentUserName|/API/CodeSamples/CurrentUserName]] in the data saved to the [[SavedReportsTable|/API/CodeSample/SavedReportsTable]] and then structure a query like the following:
 
 ```csharp
     String.Format("SELECT Name, CreatedDate, ModifiedDate FROM {0} ORDER BY Name WHERE UserID='{1}'", AdHocSettings.SavedReportsTable, AdHocSettings.CurrentUserName)
 ```
 
-### [[FileSystemAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]]
+### [[FileSystemAdHocConfig|http://wiki.izenda.com/FAQ/Storing-Reports#File-System-Mode]]
 
 ```csharp
 public override ReportInfo[] ListReports()

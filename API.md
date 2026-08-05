@@ -6,7 +6,7 @@ The AdHocConfig class is where Izenda Reports will perform all of its initializa
 
 ##[[AdHocSettings Class|/API/AdHocSettings]]
 
-The AdHocSettings class contains all the settings Izenda uses to control various aspects of the interface and flow of data.
+The AdHocSettings class contains all the settings izenda.comes to control various aspects of the interface and flow of data.
 
 ##[[Code Samples|/API/CodeSamples]]
 

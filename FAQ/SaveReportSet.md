@@ -4,7 +4,7 @@
 
 ##About
 
-This method is used to define how your reports are stored. By default, using [[DatabaseAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]] will save your reports in the [[SavedReportsTable|http://wiki.izenda.us/API/CodeSamples/SavedReportsTable]] and using [[FileSystemAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]] will save them to the Reports folder on your server's file system. You can redefine that behavior by overriding this method in your [[CustomAdHocConfig|http://wiki.izenda.us/API/AdHocConfig]] class.
+This method is used to define how your reports are stored. By default, using [[DatabaseAdHocConfig|http://wiki.izenda.com/FAQ/Storing-Reports#Database-Mode]] will save your reports in the [[SavedReportsTable|http://wiki.izenda.com/API/CodeSamples/SavedReportsTable]] and using [[FileSystemAdHocConfig|http://wiki.izenda.com/FAQ/Storing-Reports#File-System-Mode]] will save them to the Reports folder on your server's file system. You can redefine that behavior by overriding this method in your [[CustomAdHocConfig|http://wiki.izenda.com/API/AdHocConfig]] class.
 
 ##Sample C Methods
 

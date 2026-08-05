@@ -7,12 +7,12 @@ Izenda Reports fully integrates with the security of existing ASP.NET applicatio
 Type of security|Example|Implementation Details
 ----------------|-------|----------------------
 [Login](#Login-Security) |Users must login before gaining access to reports.|[[RequireLogin|/API/CodeSamples/RequireLogin]] <br> [[CurrentUserName|/API/CodeSamples/CurrentUserName]] <br> [[CurrentUserIsAdmin|/API/CodeSamples/CurrentUserIsAdmin]] <br> [[Your Login Page Integration|/FAQ/integrate-login-page]] |
-[Data Sources](#Data-Sources)|A specific user can only see certain data sources.|[[RequireLogin|/API/CodeSamples/RequireLogin]] <br> [Basic Report Sharing](http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights) <br> [[VisibleDataSources|/API/CodeSamples/VisibleDataSources]] <br> [Database Security](http://wiki.izenda.us/Integration/Tutorials/connect-to-the-database#Per-user-database-connections) |
-[User Driven Report Sharing](#User-Driven-Report-Sharing)|A user can save a report and decide if they want other users to see this report. They can also mark a report read-only meaning it can be viewed but not saved over.|[Basic Report Sharing](http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights) <br> [[CurrentUserIsAdmin|/API/CodeSamples/CurrentUserIsAdmin]] <br> [[ReportsPath|/API/CodeSamples/ReportsPath]] |
+[Data Sources](#Data-Sources)|A specific user can only see certain data sources.|[[RequireLogin|/API/CodeSamples/RequireLogin]] <br> [Basic Report Sharing](http://wiki.izenda.com/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights) <br> [[VisibleDataSources|/API/CodeSamples/VisibleDataSources]] <br> [Database Security](http://wiki.izenda.com/Integration/Tutorials/connect-to-the-database#Per-user-database-connections) |
+[User Driven Report Sharing](#User-Driven-Report-Sharing)|A user can save a report and decide if they want other users to see this report. They can also mark a report read-only meaning it can be viewed but not saved over.|[Basic Report Sharing](http://wiki.izenda.com/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights) <br> [[CurrentUserIsAdmin|/API/CodeSamples/CurrentUserIsAdmin]] <br> [[ReportsPath|/API/CodeSamples/ReportsPath]] |
 [Custom Report Control](#Custom-Report-Control)|Different departments can see different base reports.|[[VisibleDataSources hides reports for non-accessible datasources|/API/CodeSamples/VisibleDataSources]] <br>[[The ListReports method may be overridden|/FAQ/ListReports]] <br>[[Storing Reports|]]<br> [[ReportsPath|/API/CodeSamples/ReportsPath]] |
 [Overwriting and Deleting Reports](#Overwriting-and-Deleting-Reports)|Users can load shared or base reports, but should not be able to delete them or overwrite them.|[[AllowOverwritingReports|/API/CodeSamples/AllowOverwritingReports]] <br>[[AllowDeletingReports|/API/CodeSamples/AllowDeletingReports]] <br>[[CurrentUserIsAdmin|/API/CodeSamples/CurrentUserIsAdmin]]<br>
 [Altering Capabilities by Role](#Altering-Capabilities-by-Role)|Only power users should see the modify report button on the report viewer. Others will only access the report viewer.|[[ShowDesignLinks|/API/CodeSamples/ShowDesignLinks]] <br> [[AllowOverwritingReports|/API/CodeSamples/AllowOverwritingReports]] [[ShowSettingsButton|/API/CodeSamples/ShowSettingsButton]]
-[Field/Record or Tenant Level Security](#Field/Record-or-Tenant-Level-Security)|Salespeople look at the same report but see different data based on their territory and credentials. In a multi-tenant environment, reports and data for each customer, group, or tenant should be isolated.|[[PreExecuteReportSet - Hidden Filters|/FAQ/applying-hidden-filter-using-inner-query]] <br>[[ProcessEqualsSelectList|/FAQ/ProcessEqualsSelectList]] <br>[Field & Record Level Security](http://wiki.izenda.us/FAQ/Questions/Applying-Security#Field-Level-Access)
+[Field/Record or Tenant Level Security](#Field/Record-or-Tenant-Level-Security)|Salespeople look at the same report but see different data based on their territory and credentials. In a multi-tenant environment, reports and data for each customer, group, or tenant should be isolated.|[[PreExecuteReportSet - Hidden Filters|/FAQ/applying-hidden-filter-using-inner-query]] <br>[[ProcessEqualsSelectList|/FAQ/ProcessEqualsSelectList]] <br>[Field & Record Level Security](http://wiki.izenda.com/FAQ/Questions/Applying-Security#Field-Level-Access)
 
 ###Login Security
 
@@ -57,7 +57,7 @@ global_asax.CustomAdHocConfig.InitializeReporting();
 
 ###User Driven Report Sharing
 
-You can learn more about sharing reports and controlling accessibility [[here|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights]].
+You can learn more about sharing reports and controlling accessibility [[here|http://wiki.izenda.com/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights]].
 
 ###Custom Report Control
 
@@ -144,7 +144,7 @@ public static void InitializeReporting()
 In order to make sure a URL doesn't allow JavaScript injection, you must make sure that in your web.config that a page element has the **validateRequest** attribute set to true as you see 
 
 Request Validation Source: [MSDN Request Validation](http://msdn.microsoft.com/en-us/library/hh882339%28v=vs.110%29.aspx)
-Modified Webconfig Source: http://archives.izenda.us/ri/webforms-cs.zip
+Modified Webconfig Source: http://archives.izenda.com/ri/webforms-cs.zip
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -171,4 +171,4 @@ Modified Webconfig Source: http://archives.izenda.us/ri/webforms-cs.zip
 
 ###Determining user privileges
 
-Another consideration to take into account when setting up security with Izenda is to use a restricted database user account in your connection string. Every relational DBMS supported by Izenda uses some kind of database server security model, and we encourage our customers to take full advantage of that. Restricting access to create or delete tables, restricting which schemas are able to be viewed, and which stored procedures can be executed are important considerations in any instance where a new entry point is introduced to a secure or sensitive system.
+Another consideration to take into account when setting up security with Izenda is to use a restricted database user account in your connection string. Every relational DBMS supported by izenda.comes some kind of database server security model, and we encourage our customers to take full advantage of that. Restricting access to create or delete tables, restricting which schemas are able to be viewed, and which stored procedures can be executed are important considerations in any instance where a new entry point is introduced to a secure or sensitive system.

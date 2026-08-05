@@ -54,8 +54,8 @@ End Class
 
 AdHocSettings.AllowDeletingReports = true
 
-![](http://wiki.izenda.us/API/CodeSamples/AllowDeletingReports/allowdeletingreports_true.png)
+![](http://wiki.izenda.com/API/CodeSamples/AllowDeletingReports/allowdeletingreports_true.png)
 
 AdHocSettings.AllowDeletingReports = false
 
-![](http://wiki.izenda.us/API/CodeSamples/AllowDeletingReports/allowdeletingreports_false.png)
+![](http://wiki.izenda.com/API/CodeSamples/AllowDeletingReports/allowdeletingreports_false.png)

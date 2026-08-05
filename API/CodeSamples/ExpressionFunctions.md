@@ -4,7 +4,7 @@
 
 ##About
 
-This list allows the user specify additional SQL functions that should be accessible in an [[Expression|http://wiki.izenda.us/Guides/ReportDesign/15.0-Expressions-in-Izenda]]. This setting can be used at the same time as [[Extended Functions|http://wiki.izenda.us/API/CodeSamples/ExtendedFunctions]].
+This list allows the user specify additional SQL functions that should be accessible in an [[Expression|http://wiki.izenda.com/Guides/ReportDesign/15.0-Expressions-in-Izenda]]. This setting can be used at the same time as [[Extended Functions|http://wiki.izenda.com/API/CodeSamples/ExtendedFunctions]].
 
 Below is a sample global.asax using the ExpressionFunctions setting. The code block will appear within ``<script runat="server"> </script>`` tags within global.asax.
 

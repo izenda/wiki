@@ -4,7 +4,7 @@
 
 ##About
 
-This allows you to assign sets of data sources to different categories. When [[ShowDataSourcesAsCheckBoxes|/API/CodeSamples/ShowDataSourcesAsCheckBoxes]] is enabled, the [[Data Sources tab|http://wiki.izenda.us/Guides/ReportDesign/3.0-Data-sources-tab]] will display each category in bold below the Recent Data Sources dropdown and all data sources contained in that category will be displayed under that category. Otherwise, this setting has no effect.
+This allows you to assign sets of data sources to different categories. When [[ShowDataSourcesAsCheckBoxes|/API/CodeSamples/ShowDataSourcesAsCheckBoxes]] is enabled, the [[Data Sources tab|http://wiki.izenda.com/Guides/ReportDesign/3.0-Data-sources-tab]] will display each category in bold below the Recent Data Sources dropdown and all data sources contained in that category will be displayed under that category. Otherwise, this setting has no effect.
 
 **Default Value:** Empty list
 
@@ -59,4 +59,4 @@ AdHocSettings.DataSourceCategories["Employees"] = new string[] { "Employees", "T
 AdHocSettings.DataSourceCategories["Orders"] = new string[] { "Orders", "Order Details" };
 ```
 
-![](http://wiki.izenda.us/API/CodeSamples/DataSourceCategories/datasourcecategories.png)
+![](http://wiki.izenda.com/API/CodeSamples/DataSourceCategories/datasourcecategories.png)

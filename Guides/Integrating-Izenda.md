@@ -16,15 +16,15 @@ If you have your own global.asax, you can put your CustomAdHocConfig class insid
 
 ##Default.master
 
-Izenda uses a masterpage in order to display the common elements such as the logo and the blue banner that contains the options to design new reports and dashboards. If you're already using a masterpage in your project, you may need to make some decisions about how you want Izenda to display in your application. If you want your masterpage elements to be displayed on your reporting pages, you can modify your masterpage to include the placeholders for the Izenda reporting pages. You can see more about how to customize individual pages by visiting the links below.
+izenda.comes a masterpage in order to display the common elements such as the logo and the blue banner that contains the options to design new reports and dashboards. If you're already using a masterpage in your project, you may need to make some decisions about how you want Izenda to display in your application. If you want your masterpage elements to be displayed on your reporting pages, you can modify your masterpage to include the placeholders for the Izenda reporting pages. You can see more about how to customize individual pages by visiting the links below.
 
-* [[Report List|http://wiki.izenda.us/API/CodeSamples/ReportList/custom-report-list]]
+* [[Report List|http://wiki.izenda.com/API/CodeSamples/ReportList/custom-report-list]]
 * [[Report Viewer|]]
 * [[Report Designer|]]
 * [[Dashboard Viewer|]]
 * [[Dashboard Designer|]]
 * [[Instant Reports|]]
-* [[Settings|http://wiki.izenda.us/API/CodeSamples/Settings/Customizing-Settings-aspx]]
+* [[Settings|http://wiki.izenda.com/API/CodeSamples/Settings/Customizing-Settings-aspx]]
 
 ##Calling InitializeReporting
 
