@@ -6,7 +6,7 @@
 
 Gets or sets the value indicating whether the DatabaseSchema object should be cached. 
 This feature can be very useful if you have problems with performance in your database or slow connection to it. 
-You will need to update the schema in Izenda periodically (several options in our [[Caching|http://wiki.izenda.us/FAQ/Questions/Caching]] article) if any schema changes are made to the database dynamically (i.e. user-created fields, tables, etc) for reports to produce the latest results.
+You will need to update the schema in Izenda periodically (several options in our [[Caching|http://wiki.izenda.com/FAQ/Questions/Caching]] article) if any schema changes are made to the database dynamically (i.e. user-created fields, tables, etc) for reports to produce the latest results.
 
 By default, the DatabaseSchema object is cached in memory.
 

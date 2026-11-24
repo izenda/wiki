@@ -65,7 +65,7 @@ You can use this example as a template for other date formats as well.
 
 In this example, we show how to create a custom formatter. This example is for formatting a time period.
 
-You may use the DatesCustomFormatFormatter below as a reference. This will get inserted into your global.asax below your [[CustomAdHocConfig|http://wiki.izenda.us/API/AdHocConfig]] class definition. You can implement this custom format in your [[InitializeReporting()|http://wiki.izenda.us/FAQ/InitializeReporting]] method by creating a new DatesCustomFormat in the AdHocSettings.[[Formats|http://wiki.izenda.us/API/CodeSamples/Formats]] collection.
+You may use the DatesCustomFormatFormatter below as a reference. This will get inserted into your global.asax below your [[CustomAdHocConfig|http://wiki.izenda.com/API/AdHocConfig]] class definition. You can implement this custom format in your [[InitializeReporting()|http://wiki.izenda.com/FAQ/InitializeReporting]] method by creating a new DatesCustomFormat in the AdHocSettings.[[Formats|http://wiki.izenda.com/API/CodeSamples/Formats]] collection.
 
 _**Note:** You can use this as a template and any other format that requires a bit more work than a simple format like in the above examples can be easily implemented by changing the **Format** method and what **allowedTypeGroups** are in the collection._
 
@@ -196,7 +196,7 @@ public class RowNumberFormatter : BaseFormatter
 
 The results of the above custom formatter are displayed here. The column "Ship Time" is the time difference between the Required Date and the Order Date.
 
-![](http://wiki.izenda.us/FAQ/Questions/Add-Formatting-Options/custom_format_object.png)
+![](http://wiki.izenda.com/FAQ/Questions/Add-Formatting-Options/custom_format_object.png)
 
 
 _**Note:** By default, custom format applied dates are treated as text. If you want to sort the column with custom date format applied as date, then make sure to check the 'Sort' check box in the fields tab which enables SQL level sorting. With 'Sort' check box checked, custom format dates can be sorted as date.

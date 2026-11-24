@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the physical path to the folder on the server where reports will be stored. This setting is only applicable when running in [[FileSystemAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]] mode.
+Gets or sets the physical path to the folder on the server where reports will be stored. This setting is only applicable when running in [[FileSystemAdHocConfig|http://wiki.izenda.com/FAQ/Storing-Reports#File-System-Mode]] mode.
 
 **Default Value:** [drive]:[ApplicationFolder]\Reports
 

@@ -11,7 +11,7 @@ There are three ways to get this functionality. Method 1, using filters, is the 
 
 ###Method 1 - Filters
 
-If you are using filters in the report you want to force this functionality on, you can use the [[Filter tab|http://wiki.izenda.us/Guides/ReportDesign/5.0-Filters-tab#Require-[blank]-Parameters-in-Viewer]] controls to require a user to enter the filter parameters before ever displaying data. 
+If you are using filters in the report you want to force this functionality on, you can use the [[Filter tab|http://wiki.izenda.com/Guides/ReportDesign/5.0-Filters-tab#Require-[blank]-Parameters-in-Viewer]] controls to require a user to enter the filter parameters before ever displaying data. 
 
 ###Method 2 - Modifying _ReportViewer.js_
 

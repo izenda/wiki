@@ -54,11 +54,11 @@ End Class
 
 A sample report definition. Note the chart's "line value" field value.
 
-![](http://wiki.izenda.us/API/CodeSamples/ChartSortFields/chart_sort_fields_report_def.png)
+![](http://wiki.izenda.com/API/CodeSamples/ChartSortFields/chart_sort_fields_report_def.png)
 
 AdHocSettings.ChartSortFields = {"*", "ShipCountry"}
 
-![](http://wiki.izenda.us/API/CodeSamples/ChartSortFields/chart_sort_fields_set.png)
+![](http://wiki.izenda.com/API/CodeSamples/ChartSortFields/chart_sort_fields_set.png)
 
 ###Query Results
 
@@ -75,7 +75,7 @@ ORDER BY SUM([dbo].[Orders].[Freight]) DESC, COUNT([dbo].[Orders].[ShipCountry])
 
 AdHocSettings.ChartSortFields = null
 
-![](http://wiki.izenda.us/API/CodeSamples/ChartSortFields/chart_sort_fields_empty.png)
+![](http://wiki.izenda.com/API/CodeSamples/ChartSortFields/chart_sort_fields_empty.png)
 
 ###Query Results
 

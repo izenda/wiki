@@ -12,6 +12,6 @@
 
 **HTML2PDF and HTML** - Shows buttons for printing to HTML and to PDF via EO.dll.
 
-[Code Sample](http://wiki.izenda.us/API/CodeSamples/PrintMode)
+[Code Sample](http://wiki.izenda.com/API/CodeSamples/PrintMode)
 
-[Larger PDF exports should use PhantomJS (not EO)](http://wiki.izenda.us/API/CodeSamples/PdfPrintMode)
+[Larger PDF exports should use PhantomJS (not EO)](http://wiki.izenda.com/API/CodeSamples/PdfPrintMode)

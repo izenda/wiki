@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the name of the database table that will be used to store reports when running in [[DatabaseAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]] mode. The table will be created on the database specified with the [[connection string|http://wiki.izenda.us/Integration/Tutorials/connect-to-the-database]] unless a [[SavedReportsDriver|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#c)-Saving-Reports-with-Fusion]] is also specified. In that case, the table will be created using the connection specified by that driver. The [[SavedReportsDriver|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#c)-Saving-Reports-with-Fusion]] requires [[Fusion|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]] to be able to use. The table will be created with the following structure:
+Gets or sets the name of the database table that will be used to store reports when running in [[DatabaseAdHocConfig|http://wiki.izenda.com/FAQ/Storing-Reports#Database-Mode]] mode. The table will be created on the database specified with the [[connection string|http://wiki.izenda.com/Integration/Tutorials/connect-to-the-database]] unless a [[SavedReportsDriver|http://wiki.izenda.com/Guides/Izenda-AdHoc-Driver#c)-Saving-Reports-with-Fusion]] is also specified. In that case, the table will be created using the connection specified by that driver. The [[SavedReportsDriver|http://wiki.izenda.com/Guides/Izenda-AdHoc-Driver#c)-Saving-Reports-with-Fusion]] requires [[Fusion|http://wiki.izenda.com/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]] to be able to use. The table will be created with the following structure:
 
 Name: [[SavedReportsTable|/API/CodeSamples/SavedReportsTable]]
 

@@ -4,7 +4,7 @@
 
 ##About
 
-When using _DatabaseAdHocConfig_, Izenda reports saves report definitions to the database. By default, this is the table name that Izenda uses. You can use [[SavedReportsTable|/API/CodeSamples/SavedReportsTable]] to specify a different table name. Izenda will create the table for you, but in the event that something fails, here is the SQL script that will generate the table.
+When using _DatabaseAdHocConfig_, Izenda reports saves report definitions to the database. By default, this is the table name that izenda.comes. You can use [[SavedReportsTable|/API/CodeSamples/SavedReportsTable]] to specify a different table name. Izenda will create the table for you, but in the event that something fails, here is the SQL script that will generate the table.
 
 ##MSSQL Table Script
 

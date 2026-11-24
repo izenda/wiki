@@ -12,7 +12,7 @@ This guide is designed to instruct first-time users how to download, extract, an
 
 Izenda is delivering some supplemental videos and guides through our [Quick Start](http://www.izenda.com/developer-guide-before-starting) series. An installation video is contained in the [Installation Quick Start](http://www.izenda.com/developer-guide-install) page linked below.
 
-[<img src="http://wiki.izenda.us/Guides/Installing-Izenda/VideoLinkImage.png">](http://www.izenda.com/developer-guide-install)
+[<img src="http://wiki.izenda.com/Guides/Installing-Izenda/VideoLinkImage.png">](http://www.izenda.com/developer-guide-install)
 
 -->
 
@@ -43,7 +43,7 @@ To start using Izenda Reports Starter Kit you should take a few simple steps.
 
 **b.** Once this directory is in your C: Drive, name it 'Izenda', i.e. **C:\inetpub\wwwroot\Izenda**
 
-![Create Site Folder](http://wiki.izenda.us/Guides/Installing-Izenda/UnzipContents.png)
+![Create Site Folder](http://wiki.izenda.com/Guides/Installing-Izenda/UnzipContents.png)
 
 ###Step 3. Configure website under IIS
 
@@ -58,25 +58,25 @@ Once you have IIS installed, continue with the following:
 **a.** To access IIS Manager (click **Start > Control Panel > Administrative Tools > Internet Information Services (IIS) Manager**) and add new application or virtual directory under Default Web Site.
 			
 
-![Open IIS](http://wiki.izenda.us/Guides/Installing-Izenda/OpenIIS.png)
+![Open IIS](http://wiki.izenda.com/Guides/Installing-Izenda/OpenIIS.png)
 		
 
 **b.** Select Internet Information Services (IIS) Manager, and open the application.
 			
 
-![Run IIS Manager](http://wiki.izenda.us/Guides/Installing-Izenda/OpenIIS2.png)
+![Run IIS Manager](http://wiki.izenda.com/Guides/Installing-Izenda/OpenIIS2.png)
 
 
 **c.** Within Internet Information Services Manager add a new application or virtual directory under **Default Web Site**. Select drop down arrows, until you see the **Default Web Site**.
 			
 
-![Default Web Site](http://wiki.izenda.us/Guides/Installing-Izenda/OpenIIS3.png)
+![Default Web Site](http://wiki.izenda.com/Guides/Installing-Izenda/OpenIIS3.png)
 	
 
 **d.** Right-click on **Default Web Site**, and select **Add Application**. Fill out the **Alias** text box, and name it **Reporting** or whatever name you would like. Once named, select the **Select** button on the right. Once the drop-down menu appears, select your preferred application pool and **OK**. Izenda can run in the default 4.0 Integrated CLR.
 			
 
-![Application Pool](http://wiki.izenda.us/Guides/Installing-Izenda/OpenIIS4.png)
+![Application Pool](http://wiki.izenda.com/Guides/Installing-Izenda/OpenIIS4.png)
 
 
 **e.** Create and choose the Physical Path to the **\Reporting\webforms-xx** folder and give your website a name. Select the button with the ellipsis **(…)**, and it will allow you to browse for a folder to house the application. Select your **C:** drive and the **Izenda** folder.
@@ -95,7 +95,7 @@ The license key and database connection can be set in one of two different ways,
 
 *If you previously used the Settings page, you will need to migrate your settings to the Global.asax and delete the information in the Settings.aspx file.
 
-The [[InitializeReporting()|http://wiki.izenda.us/FAQ/InitializeReporting]] method is the ideal place to incorporate your settings since it provides you a high level of control over which settings are applied and the scope of their application. You can learn more by learning how to [[customize Izenda settings|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]].
+The [[InitializeReporting()|http://wiki.izenda.com/FAQ/InitializeReporting]] method is the ideal place to incorporate your settings since it provides you a high level of control over which settings are applied and the scope of their application. You can learn more by learning how to [[customize Izenda settings|http://wiki.izenda.com/Integration/Tutorials/Customizing-Izenda-Settings]].
 
 ####Trial - Settings.aspx and Izenda.config
 
@@ -103,14 +103,14 @@ The [[InitializeReporting()|http://wiki.izenda.us/FAQ/InitializeReporting]] meth
 
 Open the website that you created in the previous step [http://localhost/Izenda](http://localhost/Izenda). You will be redirected to the Settings page. Go to the Database tab and fill the License Key and Connection String fields with real data. You should have received your trial License Key via email. If you have not received a key, please contact your account manager with Izenda or [sales@izenda.com](mailto:sales@izenda.com).
 	
-![Set license key and database connection](http://wiki.izenda.us/Guides/Installing-Izenda/SettingsPage.png)
+![Set license key and database connection](http://wiki.izenda.com/Guides/Installing-Izenda/SettingsPage.png)
 
 ###Step 5. Start using Izenda Reports
 
 Now you are ready to start taking advantage of the opportunities in Izenda’s self-service reporting platform. Open [http://localhost/Izenda/ReportDesigner.aspx](http://localhost/Izenda/ReportDesigner.aspx) and create your first report easily!
 
 
-Select your DataSources at the [[Data Sources|http://wiki.izenda.us/Guides/ReportDesign/3.0-Data-sources-tab]] tab. Then go to the [[Fields|http://wiki.izenda.us/Guides/ReportDesign/4.0-fields-tab]] tab and select the fields you want to use in the report. There are various options and settings like filters, operators, functions etc. Make sure to check it all out, but for your first report just selecting several fields will be enough.
+Select your DataSources at the [[Data Sources|http://wiki.izenda.com/Guides/ReportDesign/3.0-Data-sources-tab]] tab. Then go to the [[Fields|http://wiki.izenda.com/Guides/ReportDesign/4.0-fields-tab]] tab and select the fields you want to use in the report. There are various options and settings like filters, operators, functions etc. Make sure to check it all out, but for your first report just selecting several fields will be enough.
 		
 -For more information about the report designer features please read our [[user guide|/Guides/ReportDesign]]	
 	
@@ -144,7 +144,7 @@ Izenda supports the .NET platform (all versions) for both C# and VB.NET. This is
 
 **Permissions:**
 
-In order to create and save reports, your application will require the ability to read and write to the [[Reports folder|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]] or the [[Stored Reports table|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]] as well as the Izenda.config file. The application runs under the web server's service account. By default, this account is **NT AUTHORITY\NETWORKSERVICE** under Windows 2003 and **ASPNET** under Windows XP. It can be something different if your Administrator has changed it or you are running Microsoft Exchange on the same server. In most cases, it will not have changed.
+In order to create and save reports, your application will require the ability to read and write to the [[Reports folder|http://wiki.izenda.com/FAQ/Storing-Reports#File-System-Mode]] or the [[Stored Reports table|http://wiki.izenda.com/FAQ/Storing-Reports#Database-Mode]] as well as the Izenda.config file. The application runs under the web server's service account. By default, this account is **NT AUTHORITY\NETWORKSERVICE** under Windows 2003 and **ASPNET** under Windows XP. It can be something different if your Administrator has changed it or you are running Microsoft Exchange on the same server. In most cases, it will not have changed.
 
 ##Installing Izenda On Systems With IIS 7.5 or higher
 

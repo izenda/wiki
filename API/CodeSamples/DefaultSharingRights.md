@@ -12,7 +12,7 @@ Gets or sets the Default Sharing Rights. Defines sharing rights that are assigne
 * "Locked"
 * "None"
 
-Setting this will change what is displayed in the "Rights" dropdown menu on the [[Misc tab|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights]] of the report designer to the value specified. This can save your users the trouble of having to switch from the default value.
+Setting this will change what is displayed in the "Rights" dropdown menu on the [[Misc tab|http://wiki.izenda.com/Guides/ReportDesign/9.0-Misc-Tab#9.1-Share-With-&-Rights]] of the report designer to the value specified. This can save your users the trouble of having to switch from the default value.
 
 **Default value**: Null
 

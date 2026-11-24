@@ -56,7 +56,7 @@ End Class
 
 Field "Quantity" compared to field "ExtendedPrice" with alias "Sales" (less than arithmetic) (average operator)
 
-![](http://wiki.izenda.us/API/CodeSamples/AllowComparativeArithmetic/AllowComparativeArithmetic_lt2.png)
+![](http://wiki.izenda.com/API/CodeSamples/AllowComparativeArithmetic/AllowComparativeArithmetic_lt2.png)
 
 CASE WHEN ([dbo].[Invoices].[ExtendedPrice]<AVG(CAST([dbo].[Invoices].[Quantity] AS float))) THEN 1 ELSE 0 END AS 'Sales'
 
@@ -64,7 +64,7 @@ CASE WHEN ([dbo].[Invoices].[ExtendedPrice]<AVG(CAST([dbo].[Invoices].[Quantity]
 
 Field "Quantity" compared to field "ExtendedPrice" with alias "Sales" (equals arithmetic) (group operator)
 
-![](http://wiki.izenda.us/API/CodeSamples/AllowComparativeArithmetic/AllowComparativeArithmetic_eq.png)
+![](http://wiki.izenda.com/API/CodeSamples/AllowComparativeArithmetic/AllowComparativeArithmetic_eq.png)
 
 CASE WHEN ([dbo].[Invoices].[ExtendedPrice]=[dbo].[Invoices].[Quantity]) THEN 1 ELSE 0 END AS 'Sales'
 
@@ -72,6 +72,6 @@ CASE WHEN ([dbo].[Invoices].[ExtendedPrice]=[dbo].[Invoices].[Quantity]) THEN 1 
 
 Field "Quantity" compared to field "ExtendedPrice" with alias "Sales" (greater than arithmetic) (sum operator)
 
-![](http://wiki.izenda.us/API/CodeSamples/AllowComparativeArithmetic/AllowComparativeArithmetic_gt.png)
+![](http://wiki.izenda.com/API/CodeSamples/AllowComparativeArithmetic/AllowComparativeArithmetic_gt.png)
 
 CASE WHEN ([dbo].[Invoices].[ExtendedPrice]>SUM([dbo].[Invoices].[Quantity])) THEN 1 ELSE 0 END AS 'Sales'

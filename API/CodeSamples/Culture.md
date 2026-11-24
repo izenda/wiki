@@ -14,7 +14,7 @@ See links below:
 
 [[Language|/API/CodeSamples/Language]]
 
-[[Izenda Language Pack|http://wiki.izenda.us/Integration/Tutorials/Localization]]
+[[Izenda Language Pack|http://wiki.izenda.com/Integration/Tutorials/Localization]]
 
 [[A list of valid culture codes|http://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx]]
 

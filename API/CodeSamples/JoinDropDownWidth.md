@@ -6,7 +6,7 @@
 
 Gets or sets the width in pixels of the join drop down in advanced mode on the data sources tab.
 
-**NOTE:** [http://wiki.izenda.us/API/CodeSamples/ShowJoinDropDown](ShowJoinDropDown) must be set to True.
+**NOTE:** [http://wiki.izenda.com/API/CodeSamples/ShowJoinDropDown](ShowJoinDropDown) must be set to True.
 
 **Default Value:** 100
 

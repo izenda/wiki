@@ -28,7 +28,7 @@ Here are the types you can request.
 | XML | xml |
 
 **run_scheduled_reports=[Minutes]**
-Adds the report to the [[Izenda Scheduler|http://wiki.izenda.us/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler]] to be run after the designated period of time (e.g. rs.aspx?rn=Cost+Analysis&run_scheduled_reports=30)
+Adds the report to the [[Izenda Scheduler|http://wiki.izenda.com/FAQ/Questions/How-do-I-use-the-Izenda-Reports-report-email-scheduler]] to be run after the designated period of time (e.g. rs.aspx?rn=Cost+Analysis&run_scheduled_reports=30)
 
 _**Note:** The Izenda Scheduler must be configured in order for this parameter to have any effect._
 

@@ -4,13 +4,13 @@
 
 ##Preface
 
-The DeleteReportSet method is used to delete reports from your storage system. This method can be overridden in your [[CustomAdHocConfig|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]] class. 
+The DeleteReportSet method is used to delete reports from your storage system. This method can be overridden in your [[CustomAdHocConfig|http://wiki.izenda.com/Integration/Tutorials/Customizing-Izenda-Settings]] class. 
 
 ##Usage
-If you have overwritten [SaveReportSet()](http://wiki.izenda.us/FAQ/SaveReportSet) to change the location where reports are saved, it is necessary to use this override to indicate where the deletion will occur.
+If you have overwritten [SaveReportSet()](http://wiki.izenda.com/FAQ/SaveReportSet) to change the location where reports are saved, it is necessary to use this override to indicate where the deletion will occur.
 
 ##Examples
-The code samples below demonstrate method of overriding the method to implement custom functionality using both [[DatabaseAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]] and [[FileSystemAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]].
+The code samples below demonstrate method of overriding the method to implement custom functionality using both [[DatabaseAdHocConfig|http://wiki.izenda.com/FAQ/Storing-Reports#Database-Mode]] and [[FileSystemAdHocConfig|http://wiki.izenda.com/FAQ/Storing-Reports#File-System-Mode]].
 
 ### C# DatabaseAdHocConfig Sample
 

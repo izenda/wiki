@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the number of seconds that Izenda will wait for query results from the database when populating an equals filter. Increasing this limit can help mitigate [timeouts](http://wiki.izenda.us/Guides/Timeouts) on slow or unoptimized connections, for debug purposes.
+Gets or sets the number of seconds that Izenda will wait for query results from the database when populating an equals filter. Increasing this limit can help mitigate [timeouts](http://wiki.izenda.com/Guides/Timeouts) on slow or unoptimized connections, for debug purposes.
 
 **Default Value:** 60
 

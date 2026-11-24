@@ -10,34 +10,34 @@ This wiki serves as the main source of documentation for development teams worki
 <table border="1" width="100%">
    <tr>
       <th width="33%">
-         <a href="http://wiki.izenda.us/Guides/ReportDesign">
+         <a href="http://wiki.izenda.com/Guides/ReportDesign">
             Izenda Overview
          </a>
       </th>
       <th width="33%">
-         <a href="http://wiki.izenda.us/Integration/Tutorials">
+         <a href="http://wiki.izenda.com/Integration/Tutorials">
             Install/Maintenance 
          </a>
       </th>
       <th width="33%">
-         <a href="http://wiki.izenda.us/Release-Notes">
+         <a href="http://wiki.izenda.com/Release-Notes">
             Release Notes
          </a>
       </th>
    </tr>
    <tr>
       <td align="center">
-         <a href="http://wiki.izenda.us/Guides/ReportDesign">
+         <a href="http://wiki.izenda.com/Guides/ReportDesign">
             <img src="/Home/Overview_Globe.png" alt="Overview Icon" style="width:128px;height:128px;">
          </a>
       </td>
       <td align="center">
-         <a href="http://wiki.izenda.us/Integration/Tutorials">
+         <a href="http://wiki.izenda.com/Integration/Tutorials">
             <img src="/Home/Install_Download.png" alt="Install Icon" style="width:128px;height:128px;">
          </a>
       </td>
       <td align="center">
-         <a href="http://wiki.izenda.us/Release-Notes">
+         <a href="http://wiki.izenda.com/Release-Notes">
          </a>  
       </td>
    </tr>
@@ -66,34 +66,34 @@ Introduction to the Izenda product|Instructions on installing and updating Izend
 <table border="1" width="100%">
    <tr>
       <th width="33%">
-         <a href="http://wiki.izenda.us/Guides/Developer-Links-and-Guides">
+         <a href="http://wiki.izenda.com/Guides/Developer-Links-and-Guides">
             Customization
          </a>
       </th>
       <th width="33%">
-         <a href="http://wiki.izenda.us/API">
+         <a href="http://wiki.izenda.com/API">
             Code Reference
          </a>
       </th>
       <th width="33%">
-         <a href="http://wiki.izenda.us/FAQ/FAQ">
+         <a href="http://wiki.izenda.com/FAQ/FAQ">
             FAQ
          </a>
       </th>
    </tr>
    <tr>
       <td align="center">
-         <a href="http://wiki.izenda.us/Guides/Developer-Links-and-Guides">
+         <a href="http://wiki.izenda.com/Guides/Developer-Links-and-Guides">
             <img src="/Home/Customization_Wrench.png" alt="Customization Icon" style="width:128px;height:128px;">
          </a>
       </td>
       <td align="center">
-         <a href="http://wiki.izenda.us/API">
+         <a href="http://wiki.izenda.com/API">
             <img src="/Home/CodeRef_Terminal.png" alt="Code Reference Icon" style="width:128px;height:128px;">
          </a>
       </td>
       <td align="center">
-         <a href="http://wiki.izenda.us/FAQ/FAQ">
+         <a href="http://wiki.izenda.com/FAQ/FAQ">
 	    <img src="/Home/FAQ_QuestionMark.png" alt="FAQ" style="width:128px;height:128px;">
          </a>  
       </td>
@@ -133,7 +133,7 @@ To integrate Izenda into your own website, you will first need a development env
 
 ###[[Configuring Settings|Integration/Tutorials/Customizing-Izenda-Settings]]
 
-The Izenda Reports API contains specific settings that alter the behavior of the tool on a per-user basis. Settings can be applied through the Settings.aspx page (please see important information on [[settings|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings#The-Settings.aspx-page]] page - this is typically only used for trials and evaluations) or via a [[CustomAdHocConfig|http://wiki.izenda.us/Integration/Tutorials/Customizing-Izenda-Settings]] class. Your global.asax should contain a definition for this that inherits from either FileSystemAdHocConfig or DatabaseAdHocConfig. Examples of important settings include the [[license key|/API/CodeSamples/LicenseKey]], the [[connection string|/API/CodeSamples/SqlServerConnectionString]], and the [[user name|/API/CodeSamples/CurrentUserName]]. 
+The Izenda Reports API contains specific settings that alter the behavior of the tool on a per-user basis. Settings can be applied through the Settings.aspx page (please see important information on [[settings|http://wiki.izenda.com/Integration/Tutorials/Customizing-Izenda-Settings#The-Settings.aspx-page]] page - this is typically only used for trials and evaluations) or via a [[CustomAdHocConfig|http://wiki.izenda.com/Integration/Tutorials/Customizing-Izenda-Settings]] class. Your global.asax should contain a definition for this that inherits from either FileSystemAdHocConfig or DatabaseAdHocConfig. Examples of important settings include the [[license key|/API/CodeSamples/LicenseKey]], the [[connection string|/API/CodeSamples/SqlServerConnectionString]], and the [[user name|/API/CodeSamples/CurrentUserName]]. 
 
 ###[[Creating Views|Integration/Tutorials/Views]]
 

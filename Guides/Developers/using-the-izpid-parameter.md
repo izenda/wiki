@@ -53,7 +53,7 @@ public static void InitializeReporting()
 }
 ```
 
-The [[StaticSharedStorage|http://wiki.izenda.us/FAQ/Questions/Caching#StaticSharedStorage]] will be discussed in the next section as it pertains to the izpid. The other statements that changed will enable izpid-aware re-initialization for a user. Since ASP.NET's session storage persists for the length of time the user is active on the site, different session variables will be needed in order to re-initialize AdHocSettings. The settings will persist as long as the StaticSharedStorage.ConfigId property does not change. If it changes, then InitializeReporting will run again and that configId will have its own unique set of values. No additional logical considerations will be required to ensure that user settings are re-initialized independently of universal settings.
+The [[StaticSharedStorage|http://wiki.izenda.com/FAQ/Questions/Caching#StaticSharedStorage]] will be discussed in the next section as it pertains to the izpid. The other statements that changed will enable izpid-aware re-initialization for a user. Since ASP.NET's session storage persists for the length of time the user is active on the site, different session variables will be needed in order to re-initialize AdHocSettings. The settings will persist as long as the StaticSharedStorage.ConfigId property does not change. If it changes, then InitializeReporting will run again and that configId will have its own unique set of values. No additional logical considerations will be required to ensure that user settings are re-initialized independently of universal settings.
 
 ###StaticSharedStorage.Activate
 

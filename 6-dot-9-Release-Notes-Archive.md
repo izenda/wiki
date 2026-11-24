@@ -43,7 +43,7 @@
 |19163|Dashboards|UI|Dashboard ignores color selections on style tab of report designer, corrected.|
 |21784|Report Design|Charts|On Charts Tab in Report Designer, the 3rd column drop downs have no label to indicate the drop down is for Format. Resolved.|
 |21801|Report Design|Export|Issue found when exporting gauges to PDF that were consuming extra memory and exports were not completing. Resolved issue with gauge and now exporting properly.|
-|21804|API|Optimization|Added support for the following settings in the Report Viewer and Dashboard 2.0. Settings to check: - AdHocSettings.AllowInvalidCharacters - AdHocSettings.StripInvalidCharacters Working normally in: - Report Designer - Old Dashboard Designer - Old Report Viewer More info can be found on these settings here in the Izenda wiki http://wiki.izenda.us/API/AdHocSettings|
+|21804|API|Optimization|Added support for the following settings in the Report Viewer and Dashboard 2.0. Settings to check: - AdHocSettings.AllowInvalidCharacters - AdHocSettings.StripInvalidCharacters Working normally in: - Report Designer - Old Dashboard Designer - Old Report Viewer More info can be found on these settings here in the Izenda wiki http://wiki.izenda.com/API/AdHocSettings|
 |21668|UI|Optimization|When creating a category with an apostrophe in the title is is displayed incorrectly. The apostrophe is not being escaped properly and the category is displayed in the category drop down as a "%27". Resolved. Routines to pull category lists unified to avoid inconsistencies between Designer and Viewer.|
 |21878|Report Viewer|Filters|When using "equals field" filter operator filters are not appearing in the report viewer. Resolved.|
 |21380|Dashboards|Export|When exporting Dashboards (v2) to PDF, the exported version does not follow the same order as it appears on screen. Fixed|
@@ -120,7 +120,7 @@
 |21430|Feature|Export|Support Landscape orientation inPhantom PDF export implemented|
 |21450|Feature|UI|Implemented localization of Forms Designer  - English language is complete, all other languages will be released with 6.9.0.7|
 |21519|Feature|UI|Updated Record Count Slider for Dashboard 2 - added increments to slider|
-|21553|Feature|Optimization|Refactored D3.js for ease of client customizations - [Learn How Here](http://wiki.izenda.us/FAQ/How-Do-I-Customize-A-Visualization)|
+|21553|Feature|Optimization|Refactored D3.js for ease of client customizations - [Learn How Here](http://wiki.izenda.com/FAQ/How-Do-I-Customize-A-Visualization)|
 
 ##Fixes
 |Case|Category|Subcategory|Description|
@@ -435,7 +435,7 @@
 
 # 6.9.0.2 (June 23, 2015)
 
-**NOTE** Advanced joins has been enhanced to allow multiple join conditions. [Read more here.](http://wiki.izenda.us/API/ShowAdditionalJoinConditions)
+**NOTE** Advanced joins has been enhanced to allow multiple join conditions. [Read more here.](http://wiki.izenda.com/API/ShowAdditionalJoinConditions)
 
 |Case|Category|Subcategory|Description|
 |:----|:-----------|:----------------|:---------------|
@@ -466,7 +466,7 @@
 |FB:19405|Report Design|Saving|Concurrency and the ShowModifiedReportMessage|
 |FB:19420|API|Fusion|Fixed FusionDriver when it generates SQL for report built against tables from different databases from the same db server. Previously it modified on demand the Schema property of certain Tables from DatabaseSchema to add database names to fully qualified tables/columns names in generated SQL. Now it doesn't modify on demand, instead now FusionDriver always uses all Tables/Columns with database name added to Schema property (which means it now always uses fully qualified Tables/Columns name with database name included)|
 |FB:19441|UI|Optimization| Enable PopUp drill down interactivity by adding Close button to the dialog|
-|FB:19472|API|Joining|Added additional constraints operator - now user can select multiple conditions on the join - see article on [ShowAdditionalJoinConditions](http://wiki.izenda.us/API/ShowAdditionalJoinConditions) for more information|
+|FB:19472|API|Joining|Added additional constraints operator - now user can select multiple conditions on the join - see article on [ShowAdditionalJoinConditions](http://wiki.izenda.com/API/ShowAdditionalJoinConditions) for more information|
 |FB:19497|UI|Optimization|Removed Obsolete Warning Messages|
 |FB:19519|Scheduler|Optimization| Modified the scheduler to use the report name as the attachment name|
 |FB:19528|API|Optimization|Removed unused method from Driver|
@@ -520,12 +520,12 @@
 
 ## New Features: 
 * **Auto-Gauges** - A new set of four gauges with a modern look and feel.
-* **Dashboards 2.0** - A completely overhauled module which provides greater control over the look and feel of your dashboards. Learn how to install and use Dashboards 2.0 [here](http://wiki.izenda.us/Guides/Dashboards-v2).
-* **PhantomJS Exporter** - An additional exporter emphasizing speed. **PhantomJS is not currently compatible with Azure PaaS installs, the EXE will not run in this environment.** It uses an EXE on the server instead of a DLL to move processing PDFs to a different thread than the Izenda's regular processing. Read more about it [here](http://wiki.izenda.us/API/CodeSamples/PdfPrintMode#PdfPrintMode).
+* **Dashboards 2.0** - A completely overhauled module which provides greater control over the look and feel of your dashboards. Learn how to install and use Dashboards 2.0 [here](http://wiki.izenda.com/Guides/Dashboards-v2).
+* **PhantomJS Exporter** - An additional exporter emphasizing speed. **PhantomJS is not currently compatible with Azure PaaS installs, the EXE will not run in this environment.** It uses an EXE on the server instead of a DLL to move processing PDFs to a different thread than the Izenda's regular processing. Read more about it [here](http://wiki.izenda.com/API/CodeSamples/PdfPrintMode#PdfPrintMode).
 * **Pivoted Analysis Grid** - New functionality offering a better breakdown of data over categories or periods of time
 
 ##Enhancements:
-* **Virtual Data Sources** - A convenient way to use an existing report as a data source. Click [here](http://wiki.izenda.us/Virtualdatasource) for more information.
+* **Virtual Data Sources** - A convenient way to use an existing report as a data source. Click [here](http://wiki.izenda.com/Virtualdatasource) for more information.
 
 
 ## Fixes:

@@ -33,7 +33,7 @@ The Driver object is the single point of entry for all database traffic and must
 * PostgreSQLDriver
 * OracleDriver
 * Db2Driver
-* [[FusionDriver|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]]
+* [[FusionDriver|http://wiki.izenda.com/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]]
   * MySqlFusionDriver
   * OracleFusionDriver
   * PostgreSqlFusionDriver
@@ -47,7 +47,7 @@ AdHocContext.Driver = new MSSQLDriver();
 
 The default value is a new MSSQLDriver.
 
-_**Note:** You should refrain from using the **.Driver** property when working with requests to the database in custom methods, such as with [[ProcessDataSet|http://wiki.izenda.us/FAQ/ProcessDataSet]]. This can interfere with how Izenda works internally and cause various portions of the application to stop functioning correctly._
+_**Note:** You should refrain from using the **.Driver** property when working with requests to the database in custom methods, such as with [[ProcessDataSet|http://wiki.izenda.com/FAQ/ProcessDataSet]]. This can interfere with how Izenda works internally and cause various portions of the application to stop functioning correctly._
 
 ##SchedulerExecuting
 

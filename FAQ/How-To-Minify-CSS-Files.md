@@ -4,7 +4,7 @@
 
 ##Introduction
 
-Izenda uses a host of minified files for performance improvement. When making updates the the .CSS files or occasionally when updating, the minified versions (.min.css) of the CSS files will need to be updated or generated. This can be done using Grunt.
+izenda.comes a host of minified files for performance improvement. When making updates the the .CSS files or occasionally when updating, the minified versions (.min.css) of the CSS files will need to be updated or generated. This can be done using Grunt.
 
 ## Instructions
 

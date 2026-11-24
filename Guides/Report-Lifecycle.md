@@ -10,15 +10,15 @@ The Izenda reports API has a various methods and properties that can be overridd
 
 This outlines the call structure when accessing the report list page as it pertains to reports and API hooks.
 
-1. **[[InitializeReporting|http://wiki.izenda.us/FAQ/InitializeReporting]]:** The first call must be to InitializeReporting before other API calls are made. This sets the groundwork for all reporting operations. It is recommended that all pages using Izenda reports call this method in the code-behind.
+1. **[[InitializeReporting|http://wiki.izenda.com/FAQ/InitializeReporting]]:** The first call must be to InitializeReporting before other API calls are made. This sets the groundwork for all reporting operations. It is recommended that all pages using Izenda reports call this method in the code-behind.
 2. **[[ReportListConfig|/API/CodeSamples/Javascript/ReportListConfig]] (webServer):** GetReportListConfig is an ajax call launched by the report list that is necessary to be called before the report list can be initialized.
 3. **[[ReportListDataLite|/API/CodeSamples/Javascript/ReportListDataLite]] (webServer):** ReportListDataLite is an ajax call launched after the configuration is obtained by the report list and returns a JSON formatted object to the javascript callback specified.
-4. **[[FilteredListReportsDictionary|http://wiki.izenda.us/FAQ/FilteredListReports]]:** FilteredListReportsDictionary is called upon requesting the report list data above and can be manipulated in global.asax. This will also get the database schema from the cache or cache it if it's not cached.
-5. **[[ListReports|http://wiki.izenda.us/FAQ/ListReports]]:** The ListReports method returns a broader range of reports and can also be manipulated in global.asax. This method performs differently depending on if you use DatabaseAdHocConfig or FileSystemAdHocConfig. This will iterate through each report and perform the following operations:
+4. **[[FilteredListReportsDictionary|http://wiki.izenda.com/FAQ/FilteredListReports]]:** FilteredListReportsDictionary is called upon requesting the report list data above and can be manipulated in global.asax. This will also get the database schema from the cache or cache it if it's not cached.
+5. **[[ListReports|http://wiki.izenda.com/FAQ/ListReports]]:** The ListReports method returns a broader range of reports and can also be manipulated in global.asax. This method performs differently depending on if you use DatabaseAdHocConfig or FileSystemAdHocConfig. This will iterate through each report and perform the following operations:
   1. **[[GetReportNameById|/FAQ/GetReportNameById]]:** This will simply return the report name based on the ID of the report. This will run for each report before any other steps below are run.
   2. **[[ClearCachedReportSet|/FAQ/ClearCachedReportSet]]:** The cache is cleared in preparation for the new set of reports.
   3. **[[PreLoadReportSet|/FAQ/PreLoadReportSet]]:** Here you can implement auditing or other pre-load operations.
-  4. **[[LoadReportSet|http://wiki.izenda.us/FAQ/LoadReportSet]]:** It is at this point that XML definitions are read for each report and the ReportInfo is returned. If you want to perform your own processing of the report. Note that your customizations will only be kept if you perform them after ``base.LoadReportSet`` is called (if it's called).
+  4. **[[LoadReportSet|http://wiki.izenda.com/FAQ/LoadReportSet]]:** It is at this point that XML definitions are read for each report and the ReportInfo is returned. If you want to perform your own processing of the report. Note that your customizations will only be kept if you perform them after ``base.LoadReportSet`` is called (if it's called).
   5. **[[PostLoadReportSet|/FAQ/PostLoadReportSet]]:** Alternately, you can perform any post-processing you wish to do in the PostLoadReportSet method. These three methods will always be called when fetching report definitions.
   6. **Caching:** Caching occurs at this point (turned on by default) so the definitions will not have to be loaded again.
   7. **Thumbnails:** The cached reports are accessed and thumbnails are loaded if [[GenerateThumbnails|/API/CodeSamples/GenerateThumbnails]] is on.
@@ -29,7 +29,7 @@ This outlines the call structure when accessing the report designer page as it p
 
 ###New
 
-1. **[[InitializeReporting|http://wiki.izenda.us/FAQ/InitializeReporting]]:** This should be called via the OnPreInit function in the page's code behind file, like all Izenda reports pages (except rs.aspx).
+1. **[[InitializeReporting|http://wiki.izenda.com/FAQ/InitializeReporting]]:** This should be called via the OnPreInit function in the page's code behind file, like all Izenda reports pages (except rs.aspx).
 2. **[[FilteredListReportsDictionary|/FAQ/FilteredListReportsDictionary]]:** This will perform the same operation as in the report list.
 3. **[[ListReports|]]:** If this is the first call to ListReports, or the cache was recently invalidated, this will obtain the reports as before. Otherwise it will skip the individual processing of reports in favor of the cache.
 4. **[[GetReportNameById|/FAQ/GetReportNameById]]:** Called like above.
@@ -37,7 +37,7 @@ This outlines the call structure when accessing the report designer page as it p
 
 ###Edit
 
-1. **[[InitializeReporting|http://wiki.izenda.us/FAQ/InitializeReporting]]:** This should be called via the OnPreInit function in the page's code behind file, like all Izenda reports pages (except rs.aspx).
+1. **[[InitializeReporting|http://wiki.izenda.com/FAQ/InitializeReporting]]:** This should be called via the OnPreInit function in the page's code behind file, like all Izenda reports pages (except rs.aspx).
 2. **[[PreLoadReportSet|/FAQ/PreLoadReportSet]]:** You can implement auditing or other custom pre-loading operations here.
 3. **[[LoadReportSet|/FAQ/LoadReportSet]]:** Loads the report definition from XML. If you want changes to stick after making them, call base.LoadReportSet before you perform changes or do not call base.LoadReportSet at all.
 4. **[[PostLoadReportSet|/FAQ/PostLoadReportSet]]:** You can perform post-processing of the report set here. This is the recommended point of direct modification.
@@ -51,9 +51,9 @@ This outlines the call structure when accessing the report designer page as it p
 
 This outlines the call structure when accessing the report viewer page as it pertains to reports and API hooks.
 
-1. **[[InitializeReporting|http://wiki.izenda.us/FAQ/InitializeReporting]]:** This is called by default again whenever you access a reporting page.
-2. **[[ReportViewerConfig|http://wiki.izenda.us/API/CodeSamples/Javascript/ReportViewerConfig]]: (webServer)** This is an AJAX command sent by javascript and returns JSON formatted data related to the report viewer configuration.
-3. **[[GetRenderedReportSet|http://wiki.izenda.us/API/CodeSamples/Javascript/GetRenderedReportSet]]: (webServer)** This AJAX command will get the current report set being loaded by the viewer and return the object to the callback method
+1. **[[InitializeReporting|http://wiki.izenda.com/FAQ/InitializeReporting]]:** This is called by default again whenever you access a reporting page.
+2. **[[ReportViewerConfig|http://wiki.izenda.com/API/CodeSamples/Javascript/ReportViewerConfig]]: (webServer)** This is an AJAX command sent by javascript and returns JSON formatted data related to the report viewer configuration.
+3. **[[GetRenderedReportSet|http://wiki.izenda.com/API/CodeSamples/Javascript/GetRenderedReportSet]]: (webServer)** This AJAX command will get the current report set being loaded by the viewer and return the object to the callback method
   1. **Detail Report:** The following steps apply to the detail report(The reportPart specified is "Detail").
   2. **[[GetReportNameById|/FAQ/GetReportNameById]]:**
   3. **[[PreLoadReportSet|/FAQ/PreLoadReportSet]]:** This is run every time a report is viewed before the report set is loaded from the XML definition. You can perform various pre-processing operations based on the report name.

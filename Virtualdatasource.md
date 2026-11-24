@@ -42,10 +42,10 @@ A virtual data source is simply a typical Izenda report, except the output is us
 
 ###Step 3: Enable report as VDS
 On the Misc Tab, above the drilldown key dropdown there is a checkbox labeled "Expose as Datasource". Checking this box then saving the report will cause the report to appear in the data source menu.
-![Enable VirtualDataSource](http://wiki.izenda.us/Virtualdatasource/AllowVirtualDatasources.png)
+![Enable VirtualDataSource](http://wiki.izenda.com/Virtualdatasource/AllowVirtualDatasources.png)
   
 ###Step 4: Use VDS in new report
 
 When you create a new report, the data sources menu should include the full report name of the report which you just saved as a VDS. You may now build a report based on the output of the VDS report.
 
-![VirtualDataSources Screenshot](http://wiki.izenda.us/Virtualdatasource/AVDS.png)
+![VirtualDataSources Screenshot](http://wiki.izenda.com/Virtualdatasource/AVDS.png)

@@ -4,7 +4,7 @@
 
 ##About
 
-Provides a list of additional and hidden time zones for the scheduler controls on the [[Misc tab|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab]] of the report designer.
+Provides a list of additional and hidden time zones for the scheduler controls on the [[Misc tab|http://wiki.izenda.com/Guides/ReportDesign/9.0-Misc-Tab]] of the report designer.
 
 **Default Value:** new SchedulerTimeZoneCollection
 

@@ -6,7 +6,7 @@
 
 Here are two useful links to our downloads page and our installation guide.
 
- [Download Izenda Here](http://www.izenda.com/update-your-izenda-version/) | [Installation Guide](http://wiki.izenda.us/Guides/Installing-Izenda)
+ [Download Izenda Here](http://www.izenda.com/update-your-izenda-version/) | [Installation Guide](http://wiki.izenda.com/Guides/Installing-Izenda)
 
 
 ##Developer Guides
@@ -15,7 +15,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 
 ###Quick Reference Guides
 
-* [[Installation Guide|http://wiki.izenda.us/Guides/Installing-Izenda]]
+* [[Installation Guide|http://wiki.izenda.com/Guides/Installing-Izenda]]
 * [[Security Guide|/Integration/Tutorials/Security]]
 * [[Basic Security Sample|Home#Basic-Login-Scenario]]
 * [[Customizing Izenda Settings|Integration/Tutorials/Customizing-Izenda-Settings]]
@@ -37,7 +37,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 * [[Dynamically Creating Reports Via the API|/API/CodeSamples/DynamicReportCreation]]
 * [[Adding Custom Formatting Options in the Report Designer|/FAQ/Questions/Add-Formatting-Options]]
 * [[Login page sample|/Tutorials/CodeSamples/Login-Sample]]
-* [[Implementing custom behavior for the Equals(Popup) dialog|http://wiki.izenda.us/API/CodeSamples/Equals-Popup-Custom-Page]]
+* [[Implementing custom behavior for the Equals(Popup) dialog|http://wiki.izenda.com/API/CodeSamples/Equals-Popup-Custom-Page]]
 * [[Joining a many-to-many database relationship and hiding the connecting table as a datasource|/FAQ/many-to-many-database-join]]
 * [[How can I utilize Izenda's export process for CSV, PDF, or Excel in an application?|/FAQ/accessing-izendas-export-process]]
 * [[How can I set default report designer options for my users?|/FAQ/Questions/setting-defaults-for-report-designer]]
@@ -49,11 +49,11 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 ###Javascript Guides
 
 * [[Customize Chart Colors|Guides/Customize-Chart-Colors]]
-* [[Using the ReportViewerConfig object|http://wiki.izenda.us/API/CodeSamples/Javascript/ReportViewerConfig]]
-* [[Using the ReportListDataLite object|http://wiki.izenda.us/API/CodeSamples/Javascript/ReportListDataLite]]
-* [[Using the ReportListConfig object|http://wiki.izenda.us/API/CodeSamples/Javascript/ReportListConfig]]
-* [[Using the GetRenderedReportSet object|http://wiki.izenda.us/API/CodeSamples/Javascript/GetRenderedReportSet]]
-* [[Using the GetFiltersData object|http://wiki.izenda.us/API/CodeSamples/Javascript/GetFiltersData]]
+* [[Using the ReportViewerConfig object|http://wiki.izenda.com/API/CodeSamples/Javascript/ReportViewerConfig]]
+* [[Using the ReportListDataLite object|http://wiki.izenda.com/API/CodeSamples/Javascript/ReportListDataLite]]
+* [[Using the ReportListConfig object|http://wiki.izenda.com/API/CodeSamples/Javascript/ReportListConfig]]
+* [[Using the GetRenderedReportSet object|http://wiki.izenda.com/API/CodeSamples/Javascript/GetRenderedReportSet]]
+* [[Using the GetFiltersData object|http://wiki.izenda.com/API/CodeSamples/Javascript/GetFiltersData]]
 * [[Implementing Sticky Checkboxes|API/CodeSamples/Javascript/StickyCheckboxes]]
 * [[Customize Visualization|/FAQ/How-Do-I-Customize-A-Visualization]]
 
@@ -70,7 +70,7 @@ Here we will provide programming resources, code snippets, and setup tutorials f
 ###Misc
 
 * [[Forking the Izenda Resources repository|/Guides/Developers/Forking-resources-in-github]]
-* [[How do I use alternate filter values with stored procedure parameters versus what I display to the user?|http://wiki.izenda.us/FAQ/Questions/using-alternate-filter-values-with-stored-procedures]]
+* [[How do I use alternate filter values with stored procedure parameters versus what I display to the user?|http://wiki.izenda.com/FAQ/Questions/using-alternate-filter-values-with-stored-procedures]]
 * [[Creating a custom RS.aspx response|/FAQ/Questions/custom-rs-response]]
 * [[Izenda settings and setting scope|/Guides/izenda-setting-scope]]
 * [Handling the "Group by week" aggregations as drill-down keys](/FAQ/Questions/sub-reports-and-drilldowns#Group-by-week-aggregate-function)

@@ -4,7 +4,7 @@
 
 ##About
 
-OpenCustomURLInNewWindow controls whether or not the on-click action associated with the custom URL feature on the [advanced field settings](http://wiki.izenda.us/FAQ/advanced-field-settings) opens the link in a new browser tab or the current browser tab.
+OpenCustomURLInNewWindow controls whether or not the on-click action associated with the custom URL feature on the [advanced field settings](http://wiki.izenda.com/FAQ/advanced-field-settings) opens the link in a new browser tab or the current browser tab.
 
 This setting is a boolean. It defaults to True.
 

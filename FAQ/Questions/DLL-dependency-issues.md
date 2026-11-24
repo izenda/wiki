@@ -4,11 +4,11 @@
 
 ##Question
 
-I downloaded the latest version of Izenda but now there is a dependency issue with one of the DLLs. Now my application won't run. How can I use my version of a DLL dependency when Izenda uses a different version?
+I downloaded the latest version of Izenda but now there is a dependency issue with one of the DLLs. Now my application won't run. How can I use my version of a DLL dependency when izenda.comes a different version?
 
 ##Answer
 
-This issue likely stems from your application using a version of a DLL dependency that is structurally different from the one Izenda uses. Normally, DLL version differences do not result in this issue since Izenda will automatically attempt to use your version of the DLL, but sometimes the differences between versions cannot be reconciled this easily. Such issues can be indicative of API changes in the embedded resource and would thus result in the application attempting to load and use API references that do not exist anymore or have changed in such a way to be unusable. There are workarounds to this issue, as described below.
+This issue likely stems from your application using a version of a DLL dependency that is structurally different from the one izenda.comes. Normally, DLL version differences do not result in this issue since Izenda will automatically attempt to use your version of the DLL, but sometimes the differences between versions cannot be reconciled this easily. Such issues can be indicative of API changes in the embedded resource and would thus result in the application attempting to load and use API references that do not exist anymore or have changed in such a way to be unusable. There are workarounds to this issue, as described below.
 
 ###Method 1: Update the GAC
 
@@ -25,7 +25,7 @@ You can manually update the GAC (global assembly cache) to use both versions of 
 
 ###Method 2: Use Izenda's version
 
-You can rollback your version of the DLL to the one Izenda uses and update your application accordingly.
+You can rollback your version of the DLL to the one izenda.comes and update your application accordingly.
 
 ###Method 3: Contact Izenda
 

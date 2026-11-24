@@ -8,7 +8,7 @@ How do subreports and drilldowns work? What are the options for subreports?
 
 ##Answer
 
-Subreports are simply regular reports with one extra step. Their defining trait is the presence of a drilldown key. This is a key field that will be used by any other report, acting as a parent report, to send information to the subreport. This is done on the [[Misc tab|http://wiki.izenda.us/Guides/ReportDesign/9.0-Misc-Tab#9.2-Drill-Downs]] of the report designer. There is also a short example of how to create a basic sub-report and link it to the main report at that link. The [[Advanced Field Settings|http://wiki.izenda.us/Guides/ReportDesign/4.0-fields-tab#4.8-Advanced-Field-Settings-Button]] box is where you link a main report to a subreport.
+Subreports are simply regular reports with one extra step. Their defining trait is the presence of a drilldown key. This is a key field that will be used by any other report, acting as a parent report, to send information to the subreport. This is done on the [[Misc tab|http://wiki.izenda.com/Guides/ReportDesign/9.0-Misc-Tab#9.2-Drill-Downs]] of the report designer. There is also a short example of how to create a basic sub-report and link it to the main report at that link. The [[Advanced Field Settings|http://wiki.izenda.com/Guides/ReportDesign/4.0-fields-tab#4.8-Advanced-Field-Settings-Button]] box is where you link a main report to a subreport.
 
 _*NOTE:* A subreport is not a special type of report! Any report can be a subreport if it has a drilldown key defined. Subreports can have their own subreports in turn. A report with a drilldown key defined might not have any reports that drilldown into it. The only distinction is that if a report has a drilldown key, it can be accessed as a subreport by any other report._
 
@@ -38,21 +38,21 @@ With IncludeYear = true
 
 ###Subreports on charts
 
-In addition to creating drilldowns for your main report items, you can create subreports for [[pie charts|http://wiki.izenda.us/Guides/ReportDesign/7.0-Chart-tab#7.3-Pie-Selection]] and [[bar charts|http://wiki.izenda.us/Guides/ReportDesign/7.0-Chart-tab#7.5-Bar-Selection]] as well. Currently, these only support a single key value, specified via the Label field. These will work with reports that have one drilldown key defined, but not ones with two keys defined.
+In addition to creating drilldowns for your main report items, you can create subreports for [[pie charts|http://wiki.izenda.com/Guides/ReportDesign/7.0-Chart-tab#7.3-Pie-Selection]] and [[bar charts|http://wiki.izenda.com/Guides/ReportDesign/7.0-Chart-tab#7.5-Bar-Selection]] as well. Currently, these only support a single key value, specified via the Label field. These will work with reports that have one drilldown key defined, but not ones with two keys defined.
 
 _**Note:** Bar charts and pie charts do not support drilldown effects. They will always have the "Link" effect._
 
 ###Subreports on maps
 
-You can also create a drilldown on the [[Maps tab|http://wiki.izenda.us/Guides/ReportDesign/13.0-Izenda-Maps#13.2-Maps-features]] that will trigger using the specified effect. You can learn more about the maps feature at the link above.
+You can also create a drilldown on the [[Maps tab|http://wiki.izenda.com/Guides/ReportDesign/13.0-Izenda-Maps#13.2-Maps-features]] that will trigger using the specified effect. You can learn more about the maps feature at the link above.
 
 ###Subreports on gauges
 
-Gauges can also accept subreports and will use the Name field in order to select the appropriate drilldown key. See the [[Gauge tab|http://wiki.izenda.us/Guides/ReportDesign/8.0-Gauge-tab#8.4-Gauges-with-Drill-Down-Effects]] for more. You can have a drilldown effect defined here as well. Again, creating a subreport on a gauge is just like anywhere else. They currently only accept one drilldown key as well.
+Gauges can also accept subreports and will use the Name field in order to select the appropriate drilldown key. See the [[Gauge tab|http://wiki.izenda.com/Guides/ReportDesign/8.0-Gauge-tab#8.4-Gauges-with-Drill-Down-Effects]] for more. You can have a drilldown effect defined here as well. Again, creating a subreport on a gauge is just like anywhere else. They currently only accept one drilldown key as well.
 
 ###Subreports on forms
 
-Finally, you can also choose to use subreports in a Forms report. You can see the [[Izenda Forms|http://wiki.izenda.us/Guides/ReportDesign/14.0-Izenda-FORMS#14.3-Advanced-FORMS-Concepts]] section for more information about this feature. Drilldowns are defined in two ways, described in the article above. Subreports that you specify in the form with a declaration such as "[subreports/top products by state]" do not get a drilldown key and will be treated as a stand-alone report. You can reference the column alias in order to use drilldown key driven subreports.
+Finally, you can also choose to use subreports in a Forms report. You can see the [[Izenda Forms|http://wiki.izenda.com/Guides/ReportDesign/14.0-Izenda-FORMS#14.3-Advanced-FORMS-Concepts]] section for more information about this feature. Drilldowns are defined in two ways, described in the article above. Subreports that you specify in the form with a declaration such as "[subreports/top products by state]" do not get a drilldown key and will be treated as a stand-alone report. You can reference the column alias in order to use drilldown key driven subreports.
 
 ###Using a URL instead of a subreport
 

@@ -14,4 +14,4 @@ While Izenda requires a .NET connection string to access any of the four databas
 
 Please see our tutorial on setting up MongoDB's BI Connector to work with Izenda:
 
-[[Connecting Izenda to MongoDB for Reporting|http://wiki.izenda.us/Guides/mongo-bi-connector]]
+[[Connecting Izenda to MongoDB for Reporting|http://wiki.izenda.com/Guides/mongo-bi-connector]]

@@ -4,7 +4,7 @@
 # 6.8.0.8 (April 21, 2015)
 
 
-**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
+**[Important Update Notes for 6.8](http://wiki.izenda.com/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
 
 Note: The Visualizations help text contains a link directing the user to the Visualization feature page on the Izenda Wiki. If you would like to remove this like, you can modify the Doc.html files within the Resources/Vis folder for each chart type.
 
@@ -81,7 +81,7 @@ Note: The Visualizations help text contains a link directing the user to the Vis
 # 6.8.0.7 (March 24, 2015)
 
 
-**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
+**[Important Update Notes for 6.8](http://wiki.izenda.com/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
 
 Note: The Visualizations help text contains a link directing the user to the Visualization feature page on the Izenda Wiki. If you would like to remove this link, you can modify the Doc.html files within the Resources/Vis folder for each chart type.
 
@@ -154,7 +154,7 @@ Note: The Visualizations help text contains a link directing the user to the Vis
 # 6.8.0.6 (February 25, 2015)
 
 
-**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
+**[Important Update Notes for 6.8](http://wiki.izenda.com/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
 
 * **HF-18699: Predefined Constraints Not Being Recognized - Download links updated 2/26/2015**
 * FB-13156: Show friendly error when Analysis Grid report is designed incorrectly
@@ -205,7 +205,7 @@ Note: The Visualizations help text contains a link directing the user to the Vis
 # 6.8.0.5 (January 29, 2015)
 
 
-**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
+**[Important Update Notes for 6.8](http://wiki.izenda.com/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
 
 * FB-15635: Fixed chart name position for pie charts
 * FB-15913: Fixed "Print HTML" and "HTML-powered PDF" for visualizations ("Auto Chart", "Sunburst", "Heatmap"). Fixed a bug of printing inconsistent data (Chart and Table).
@@ -246,7 +246,7 @@ Note: The Visualizations help text contains a link directing the user to the Vis
 
 # 6.8.0.4 (January 8, 2015)
 
-**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
+**[Important Update Notes for 6.8](http://wiki.izenda.com/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
 
 * FB-13507: Moved forms out of sessions, switched to new form designer, moved templates out of sessins, fixed issue with forms being modified concurrently
 * FB-13832: Fix of null reference exception for two different users with the same tenantid and optimize report list loading
@@ -288,7 +288,7 @@ Note: The Visualizations help text contains a link directing the user to the Vis
 
 # 6.8.0.3 (December 17, 2014)
 
-**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
+**[Important Update Notes for 6.8](http://wiki.izenda.com/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
 
 * FB-15865: Fixed bulk CSV output for reports with custom ProcessDataSet results
 * FB-17715: Probable fix of null reference exception
@@ -344,7 +344,7 @@ Note: The Visualizations help text contains a link directing the user to the Vis
 
 # 6.8.0.2 (November 25, 2014)
 
-**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
+**[Important Update Notes for 6.8](http://wiki.izenda.com/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
  
 * FB-10702: Language Pack GUI Updated
 * FB-13603: Disable VG automatically if report contain Form
@@ -421,7 +421,7 @@ Note: The Visualizations help text contains a link directing the user to the Vis
 
 # 6.8.0.1 (October 31, 2014)
 
-**[Important Update Notes for 6.8](http://wiki.izenda.us/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
+**[Important Update Notes for 6.8](http://wiki.izenda.com/How-do-I-upgrade-my-6-7-RI-with-a-6-8-DLL)**
 
 ##Features: 
 * FB-13936: Pure HTML Report Parts

@@ -4,7 +4,7 @@
 
 ##Introduction
 
-Izenda Reports lets business users generate simple custom reports without involving SQL experts or developers. Izenda Reports is an agile reporting solution for ASP.NET and can be installed in about an hour. These are the installation instructions for different database versions, if you have a question about the installation process, please contact us. If you have not already downloaded Izenda Reports, you can [[review this article|http://wiki.izenda.us/Integration/Tutorials/Installing-Izenda]] and [request a trial license key](mailto:sales@izenda.com).
+Izenda Reports lets business users generate simple custom reports without involving SQL experts or developers. Izenda Reports is an agile reporting solution for ASP.NET and can be installed in about an hour. These are the installation instructions for different database versions, if you have a question about the installation process, please contact us. If you have not already downloaded Izenda Reports, you can [[review this article|http://wiki.izenda.com/Integration/Tutorials/Installing-Izenda]] and [request a trial license key](mailto:sales@izenda.com).
 
 ##Supported Databases
 
@@ -17,11 +17,11 @@ Izenda Reports lets business users generate simple custom reports without involv
 * OData (requires FUSION add-on)
 * Web Services and EAV  (with custom implementation)
 
-[[Izenda Fusion|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]] (additional module) delivers dynamic real-time analytics from **multiple databases** and applications without having to do periodic ETL into a data warehouse. Also, support for other database architectures is possible. Please speak to our sales team for more information.
+[[Izenda Fusion|http://wiki.izenda.com/Guides/Izenda-AdHoc-Driver#Izenda-Fusion-Driver]] (additional module) delivers dynamic real-time analytics from **multiple databases** and applications without having to do periodic ETL into a data warehouse. Also, support for other database architectures is possible. Please speak to our sales team for more information.
 
 ##Connecting to multiple data sources
 
-Izenda Reports supports connecting to multiple data sources simultaneously by using views. Views are the simplest and most secure way to connect to many different data sources in order to build reports. For specific examples of how to apply and use views, [[click here|http://wiki.izenda.us/Integration/Tutorials/Views]].
+Izenda Reports supports connecting to multiple data sources simultaneously by using views. Views are the simplest and most secure way to connect to many different data sources in order to build reports. For specific examples of how to apply and use views, [[click here|http://wiki.izenda.com/Integration/Tutorials/Views]].
 
 ##Microsoft SQL Server 2000/2005/2008/2012/2014/2016 Setup
 
@@ -35,7 +35,7 @@ Izenda Reports supports connecting to multiple data sources simultaneously by us
 * You must have a functioning database in order to connect Izenda Reports
 * _**Important!**_ Ensure that the database login can read the tables and views
 * Open your Izenda Reports Global.asax file in your IDE and find the ``InitializeReporting()`` method.
-* Update the [[LicenseKey|http://wiki.izenda.us/API/CodeSamples/LicenseKey]] and [[ConnectionString|http://wiki.izenda.us/API/CodeSamples/SqlServerConnectionString]] 
+* Update the [[LicenseKey|http://wiki.izenda.com/API/CodeSamples/LicenseKey]] and [[ConnectionString|http://wiki.izenda.com/API/CodeSamples/SqlServerConnectionString]] 
   * Sample standard connection string (local database):
     * **"Server=myAddress;Database=mydb;User ID=myUsername;Password=myPassword;"**
   * Sample non-trusted connection string (remote database):
@@ -59,7 +59,7 @@ Izenda Reports supports connecting to multiple data sources simultaneously by us
 * You must have a functioning database in order to connect Izenda Reports
 * _**Important!**_ Ensure that the database login can read the tables and views
 * Open your Izenda Reports Global.asax file in your IDE and find the ``InitializeReporting()`` method.
-* Update the [[LicenseKey|http://wiki.izenda.us/API/CodeSamples/LicenseKey]] and [[ConnectionString|http://wiki.izenda.us/API/CodeSamples/OracleConnectionString]] 
+* Update the [[LicenseKey|http://wiki.izenda.com/API/CodeSamples/LicenseKey]] and [[ConnectionString|http://wiki.izenda.com/API/CodeSamples/OracleConnectionString]] 
   * You can use your [[TNSNames.ora|http://www.orafaq.com/wiki/Tnsnames.ora]] file to create the connection string or you can plug the connection string directly into the OracleConnectionString.
   * Sample standard connection string (using TNS):
     * **"Data Source=TORCL;User Id=myUsername;Password=myPassword;"**
@@ -85,7 +85,7 @@ User Id=myUsername;Password=myPassword;"**
 * You must have a functioning database in order to connect Izenda Reports
 * _**Important!**_ Ensure that the database login can read the tables and views
 * Open your Izenda Reports Global.asax file in your IDE and find the ``InitializeReporting()`` method.
-* Update the [[LicenseKey|http://wiki.izenda.us/API/CodeSamples/LicenseKey]] and [[ConnectionString|http://wiki.izenda.us/API/CodeSamples/MySqlConnectionString]] 
+* Update the [[LicenseKey|http://wiki.izenda.com/API/CodeSamples/LicenseKey]] and [[ConnectionString|http://wiki.izenda.com/API/CodeSamples/MySqlConnectionString]] 
   * Sample standard connection string (using SSL):
     * **"Driver={MySQL ODBC 5.3 ANSI Driver};Server=myServerAddress;Database=myDataBase;User=myUsername;Password=myPassword;sslca=c:\cacert.pem;sslcert=c:\client-cert.pem;sslkey=c:\client-key.pem;sslverify=1;Option=3;"**
   * Other sample connection strings: https://www.connectionstrings.com/mysql/
@@ -149,7 +149,7 @@ End Class
 
 **Parts of a Connection String**
 
-Izenda uses a third party .NET data provider to connect to PostgreSQL instances, called Npgsql.  There are certain patterns that are recognized as settings within the connection string for Npgsql, such as the User ID and Password, and the structure of the connection string differs from other ODBC, JDBC, and OLE DB providers for PostgreSQL databases.  You can read more about the parts of the Npgsql PostgreSQL connection string [[here|https://github.com/npgsql/npgsql/wiki/User-Manual#connection-string-parametersx]]. Here are the essential parts of the connection string:
+izenda.comes a third party .NET data provider to connect to PostgreSQL instances, called Npgsql.  There are certain patterns that are recognized as settings within the connection string for Npgsql, such as the User ID and Password, and the structure of the connection string differs from other ODBC, JDBC, and OLE DB providers for PostgreSQL databases.  You can read more about the parts of the Npgsql PostgreSQL connection string [[here|https://github.com/npgsql/npgsql/wiki/User-Manual#connection-string-parametersx]]. Here are the essential parts of the connection string:
 
 * **Server** - Address/Name of PostgreSQL Server.
 * **Port** - Port to connect to.  Default is 5432.

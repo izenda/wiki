@@ -53,8 +53,8 @@ End Class
 
 AdHocSettings.AllowMultilineHeaders = true
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowMultilineHeaders/allowmultilineheaders_true.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowMultilineHeaders/allowmultilineheaders_true.png)
 
 AdHocSettings.AllowMultilineHeaders = false
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowMultilineHeaders/allowmultilineheaders_false.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowMultilineHeaders/allowmultilineheaders_false.png)

@@ -19,18 +19,18 @@ With Izenda, you can:
 
 This guide will explain the different variables and methods to implement security and explain common scenarios using working code samples.
 
-##[Section 1 - Commonly Used Variables](http://wiki.izenda.us/Integration/SecurityVariables)
+##[Section 1 - Commonly Used Variables](http://wiki.izenda.com/Integration/SecurityVariables)
 
 A collection of commonly used variables.  
 
-##[Section 2 - Authentication](http://wiki.izenda.us/Integration/Logging-In)
+##[Section 2 - Authentication](http://wiki.izenda.com/Integration/Logging-In)
 
 Best practices and tips.
 
-##[Section 3 - Security Basics](http://wiki.izenda.us/Integration/Security-Basics)
+##[Section 3 - Security Basics](http://wiki.izenda.com/Integration/Security-Basics)
 
 A basic security foundation with example code
 
-##[Section 4 - User Types](http://wiki.izenda.us/Integration/User-Types)
+##[Section 4 - User Types](http://wiki.izenda.com/Integration/User-Types)
 
 An intermediate code sample showing a case statement based on user role

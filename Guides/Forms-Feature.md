@@ -36,9 +36,9 @@ FORM itself.
 
 ##Forms Tutorials
 
-[Basic FORMS Creation](http://wiki.izenda.us/Guides/ReportDesign/14.0-Izenda-FORMS#14.2-Basic-FORMS-Reports)  
-[Advanced FORMS Creation](http://wiki.izenda.us/Guides/ReportDesign/14.0-Izenda-FORMS#14.3-Advanced-FORMS-Concepts)  
-[Video Tutorials](http://wiki.izenda.us/Guides/ReportDesign/14.0-Izenda-FORMS#Video-Tutorials)
+[Basic FORMS Creation](http://wiki.izenda.com/Guides/ReportDesign/14.0-Izenda-FORMS#14.2-Basic-FORMS-Reports)  
+[Advanced FORMS Creation](http://wiki.izenda.com/Guides/ReportDesign/14.0-Izenda-FORMS#14.3-Advanced-FORMS-Concepts)  
+[Video Tutorials](http://wiki.izenda.com/Guides/ReportDesign/14.0-Izenda-FORMS#Video-Tutorials)
 
 ## Special Note on Fonts
 

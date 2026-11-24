@@ -56,7 +56,7 @@ The Izenda localization capability is built on top of Microsoft’s .NET localiz
 
 **What Is “Resources”?**
 
-For localization, Izenda uses .Net managed resources Files (\*.resx), which are standard resources for .Net. Resource files are XML-formatted text files, so you can edit it in an XML editor or even any plain text editor.
+For localization, izenda.comes .Net managed resources Files (\*.resx), which are standard resources for .Net. Resource files are XML-formatted text files, so you can edit it in an XML editor or even any plain text editor.
 
 **How Do I Install The Language Pack?**
 
@@ -69,9 +69,9 @@ Installing the Izenda Language Pack consists of **two** steps:
 
 The language pack consists of a set of \*.resx files inside “Resources” folder. You should copy this folder **to the “bin” folder of your website**(Izenda.AdHoc.dll should be in that folder). It's easy to find it, just locate the folder where Izenda.AdHoc.dll is.
 
-![](http://wiki.izenda.us/Localization/resources_folder_1.png)
+![](http://wiki.izenda.com/Localization/resources_folder_1.png)
 
-![](http://wiki.izenda.us/Localization/resources_folder_2.png)
+![](http://wiki.izenda.com/Localization/resources_folder_2.png)
 
 Here is a step-by-step list of actions you need to perform to accomplish this:
   1. Locate the “bin” directory inside the folder with your website. It should contain file named “Izenda.AdHoc.dll”.
@@ -158,7 +158,7 @@ Now you should add some code to the master page code behind file. Since you may 
 
 The result is below:
 
-![](http://wiki.izenda.us/Localization/resources_rtl_1.png)
+![](http://wiki.izenda.com/Localization/resources_rtl_1.png)
 ###What Needs To Be Installed on The Server and Browser?
 
 The Microsoft Language must be installed on the server as well as the browser for the fonts to display properly. Please [download the language file](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=507d4589-ca97-4c5a-9c0f-bb9a3c68cc49) from Microsoft’s web site. The Izenda Localization Pack assumes that the server and user have the proper resources installed.

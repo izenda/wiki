@@ -6,7 +6,7 @@
 
 Izenda reports is designed as a modular system to be easily customizable for usage with any datasources. The ``AdHocContext`` class has a **Driver** property containing an instance of the ``Izenda.AdHoc.Database.Driver`` abstract class, which provides datasource metadata for Izenda AdHoc. All datasource drivers in Izenda AdHoc use this as their base class and layer functionality on top of it.
 
-![Creating a Custom Driver](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver.png)
+![Creating a Custom Driver](http://wiki.izenda.com/Guides/Developer-Links-and-Guides/custom_fusion_driver.png)
 
 **Figure 1:** The standard Izenda Driver model. Datasources are separate and the driver handles the heavy lifting of interacting with the datasources.
 
@@ -14,9 +14,9 @@ Izenda reports is designed as a modular system to be easily customizable for usa
 
 The ``Izenda.AdHoc.Database.MSSQLDriver`` class implements complete functionality for using MSSQL server as your datasource and also allows you to create inheritors. So the easiest way to create a custom driver working with MSSQL server is to inherit ``Izenda.AdHoc.Database.MSSQLDriver`` and override the functionality you need to work differently. Below are complete instructions detailing how to perform this:
 
-1. Create new project with type of Class library in Visual Studio.<br>![Creating a Custom Driver](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver_2.png)
+1. Create new project with type of Class library in Visual Studio.<br>![Creating a Custom Driver](http://wiki.izenda.com/Guides/Developer-Links-and-Guides/custom_fusion_driver_2.png)
 
-2. Add Izenda.AdHoc.dll to the References in the project.<br>![Adding Izenda AdHoc as a Reference](http://wiki.izenda.us/Guides/Developer-Links-and-Guides/custom_fusion_driver_3_2.png)
+2. Add Izenda.AdHoc.dll to the References in the project.<br>![Adding Izenda AdHoc as a Reference](http://wiki.izenda.com/Guides/Developer-Links-and-Guides/custom_fusion_driver_3_2.png)
 
 3. Create new class and inherit MSSQLDriver:
 ```csharp
@@ -77,7 +77,7 @@ DataSet result;
 }
 ```
 
-You can also see more coding examples [[here|http://wiki.izenda.us/API/CodeSamples]].
+You can also see more coding examples [[here|http://wiki.izenda.com/API/CodeSamples]].
 
 ##Izenda Fusion Driver
 
@@ -133,7 +133,7 @@ _**Note:** The only exception is when your connection uses a blank alias. Any ta
 
 #####b) Constraints
 
-Similarly to how the VDS collection works, constraints must use the alias of the database to which the datasource belongs. Joining across different connections is also a possibility, but will require additional considerations discussed [[below|http://wiki.izenda.us/Guides/Izenda-AdHoc-Driver#4.-Joining-datasources-from-different-databases]]
+Similarly to how the VDS collection works, constraints must use the alias of the database to which the datasource belongs. Joining across different connections is also a possibility, but will require additional considerations discussed [[below|http://wiki.izenda.com/Guides/Izenda-AdHoc-Driver#4.-Joining-datasources-from-different-databases]]
 
 **Example 1:** Static context
 
@@ -193,7 +193,7 @@ Now that we have covered the basics of setting up the Fusion driver, below is a 
 
 ####SQL/Oracle/MySql data connection
 
-The following example describes the process for initializing a FusionDriver connection when you have direct access to a SQL/Oracle/MySQL database where you want to store your reports. This database **does not** have to be the same database you obtain your schema from. Your CustomAdHocConfig class can inherit from either [[DatabaseAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#Database-Mode]] or [[FileSystemAdHocConfig|http://wiki.izenda.us/FAQ/Storing-Reports#File-System-Mode]] in this case:
+The following example describes the process for initializing a FusionDriver connection when you have direct access to a SQL/Oracle/MySQL database where you want to store your reports. This database **does not** have to be the same database you obtain your schema from. Your CustomAdHocConfig class can inherit from either [[DatabaseAdHocConfig|http://wiki.izenda.com/FAQ/Storing-Reports#Database-Mode]] or [[FileSystemAdHocConfig|http://wiki.izenda.com/FAQ/Storing-Reports#File-System-Mode]] in this case:
 
 ```csharp
 <%@ Application Language="C#" %>
@@ -390,4 +390,4 @@ AdHocContext.Driver = new CustomFusionDriver();
 
 ###Implementing OAuth2 Security
 
-Optionally, you can use your CustomFusionDriver to authenticate users using the [[OAuth2 spec|http://oauth.net/2/]] standards. You can find out more information about the customizations that need to exist in your CustomFusionDriver [[from this link|http://wiki.izenda.us/FAQ/windows-active-directory-security#Authenticating-Over-OData]]
+Optionally, you can use your CustomFusionDriver to authenticate users using the [[OAuth2 spec|http://oauth.net/2/]] standards. You can find out more information about the customizations that need to exist in your CustomFusionDriver [[from this link|http://wiki.izenda.com/FAQ/windows-active-directory-security#Authenticating-Over-OData]]

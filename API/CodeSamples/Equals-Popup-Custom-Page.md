@@ -17,8 +17,8 @@ To implement custom filters page you need to perform following steps:
 
     `AdHocSettings.EqualsPopupDestinations["MyCustomFilter"] = new string[] { "Col1", "Col2", "ProductName", "CategoryName" };`
 
-3. Get the CustomFiltersTemplate page (.aspx and .aspx.cs files), [[which you can download here|http://wiki.izenda.us/API/CodeSamples/Equals-Popup-Custom-Page/CustomFilterTemplate.zip]], and rename it to MyCustomFilter. Then you can paste it into the CustomFilters folder. Below is a screenshot demonstrating this with the default template name.                                                  
-![](http://wiki.izenda.us/API/CodeSamples/Equals-Popup-Custom-Page/customfilters-1.png)
+3. Get the CustomFiltersTemplate page (.aspx and .aspx.cs files), [[which you can download here|http://wiki.izenda.com/API/CodeSamples/Equals-Popup-Custom-Page/CustomFilterTemplate.zip]], and rename it to MyCustomFilter. Then you can paste it into the CustomFilters folder. Below is a screenshot demonstrating this with the default template name.                                                  
+![](http://wiki.izenda.com/API/CodeSamples/Equals-Popup-Custom-Page/customfilters-1.png)
 4. In the MyCustomFilter.aspx page, add necessary controls between following lines:
 ```html
     <!--Here is block with custom controls-->
@@ -42,4 +42,4 @@ To implement custom filters page you need to perform following steps:
     }
 ```
 7. Launch Izenda Reports, go to the Report Designer - Filters tab, select one of the fields assigned to your custom filtering page, select the Equals(PopUp) operator, and click the "..." button. You should see the custom aspx page popup and start being able to select values for your filter. Below is a screenshot of the results of the CustomFilterTemplate.
-![](http://wiki.izenda.us/API/CodeSamples/Equals-Popup-Custom-Page/equals_popup_page.png)
+![](http://wiki.izenda.com/API/CodeSamples/Equals-Popup-Custom-Page/equals_popup_page.png)

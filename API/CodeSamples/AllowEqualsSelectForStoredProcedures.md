@@ -4,7 +4,7 @@
 
 ##About
 
-Gets or sets the value indicating whether Equals(Select) or Equals(Multiple) filters are allowed for stored procedures. This setting works in conjunction with several other areas of Izenda's API and more information can be found in [[this article|http://wiki.izenda.us/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]].
+Gets or sets the value indicating whether Equals(Select) or Equals(Multiple) filters are allowed for stored procedures. This setting works in conjunction with several other areas of Izenda's API and more information can be found in [[this article|http://wiki.izenda.com/FAQ/Questions/Using-Stored-Procedures-In-Izenda-6]].
 
 **Default Value:** false
 
@@ -56,8 +56,8 @@ End Class
 
 AdHocSettings.AllowEqualsSelectForStoredProcedures = true
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowEqualsSelectForStoredProcedures/allowequalsselect_true.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowEqualsSelectForStoredProcedures/allowequalsselect_true.png)
 
 AdHocSettings.AllowEqualsSelectForStoredProcedures = false
 
-![](http://wiki.izenda.us//API/CodeSamples/AllowEqualsSelectForStoredProcedures/allowequalsselect_false.png)
+![](http://wiki.izenda.com//API/CodeSamples/AllowEqualsSelectForStoredProcedures/allowequalsselect_false.png)

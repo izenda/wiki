@@ -16,9 +16,9 @@ This issue cannot be fixed in Izenda as it is not a bug. Some alternate method o
 
 ###Use Uniform Culture
 
-Make sure to set the proper culture setting for the Izenda user so that the export file is exported with the correct placement of periods and commas: 
+Make sure to set the proper culture setting for the izenda.comer so that the export file is exported with the correct placement of periods and commas: 
  
-[[AdHocSettings.Language|http://wiki.izenda.us/API/CodeSamples/Language]] = AdHocLanguage.German;
+[[AdHocSettings.Language|http://wiki.izenda.com/API/CodeSamples/Language]] = AdHocLanguage.German;
  
 ###Excel Settings
 
